@@ -14,6 +14,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
+from . import schemas
 from .store import Store
 
 BODY_EXCERPT = 700
@@ -46,25 +47,16 @@ def build_sample(store: Store, config: dict, per_segment: int = 20,
     return sample
 
 
-class LabelError(ValueError):
-    pass
+LabelError = schemas.SchemaError
 
 
 def load_labels(path: str | Path, sample: list[dict]) -> dict[str, dict]:
-    """Read judge labels and check they cover the sample exactly and follow the rubric."""
+    """Read judge labels; check each against the schema and that they cover the sample exactly."""
     labels: dict[str, dict] = {}
-    with open(path) as f:
-        for n, line in enumerate(f, 1):
-            if not line.strip():
-                continue
-            lab = json.loads(line)
-            if lab.get("on_segment") not in ("y", "n") or lab.get("need") not in ("y", "n"):
-                raise LabelError(f"line {n}: on_segment/need must be 'y' or 'n'")
-            if lab["need"] == "y" and lab["on_segment"] == "n":
-                raise LabelError(f"line {n}: need=y requires on_segment=y")
-            if lab["id"] in labels:
-                raise LabelError(f"line {n}: duplicate id {lab['id']}")
-            labels[lab["id"]] = lab
+    for lab in schemas.load_jsonl(path, schemas.RelevanceLabel):
+        if lab.id in labels:
+            raise LabelError(f"duplicate id {lab.id}")
+        labels[lab.id] = lab.model_dump()
     expected = {s["id"] for s in sample}
     missing, extra = expected - labels.keys(), labels.keys() - expected
     if missing or extra:

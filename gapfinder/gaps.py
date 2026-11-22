@@ -6,25 +6,15 @@ import math
 from datetime import datetime, timezone
 
 import numpy as np
+from scipy.stats import rankdata
 
 
 def percentile_rank(values: list[float]) -> list[float]:
-    """Rank in [0, 1]; ties share the average rank. A single value ranks 0.5."""
+    """Rank in [0, 1]; ties share the average rank (scipy). A single value ranks 0.5."""
     n = len(values)
     if n == 1:
         return [0.5]
-    order = sorted(range(n), key=lambda i: values[i])
-    ranks = [0.0] * n
-    i = 0
-    while i < n:
-        j = i
-        while j + 1 < n and values[order[j + 1]] == values[order[i]]:
-            j += 1
-        avg = (i + j) / 2 / (n - 1)
-        for k in range(i, j + 1):
-            ranks[order[k]] = avg
-        i = j + 1
-    return ranks
+    return [float(r) for r in (rankdata(values, method="average") - 1) / (n - 1)]
 
 
 def top_k_similar(centroid: np.ndarray, matrix: np.ndarray, k: int) -> tuple[float, list[int]]:

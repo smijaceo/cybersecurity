@@ -216,6 +216,20 @@ def cmd_market_prepare(args) -> int:
     return 0
 
 
+def cmd_market_merge(args) -> int:
+    from . import analysis
+
+    market_input = json.loads((args.out_dir / "market-research-input.json").read_text())
+    try:
+        n = analysis.merge_market_parts(args.out_dir / "market-research-parts", market_input,
+                                        args.out_dir / "market-research.jsonl")
+    except ValueError as exc:
+        log.error("market research: %s", exc)
+        return 2
+    print(f"merged {n} themes -> {args.out_dir}/market-research.jsonl")
+    return 0
+
+
 def cmd_gaps(args) -> int:
     from datetime import date
 
@@ -316,6 +330,10 @@ def main(argv: list[str] | None = None) -> int:
     mp = sub.add_parser("market-prepare", help="input for the paid-market researcher agents")
     mp.add_argument("--out-dir", type=Path, default=DEFAULT_PHASE2)
     mp.set_defaults(func=cmd_market_prepare)
+
+    mm = sub.add_parser("market-merge", help="validate and combine market research part files")
+    mm.add_argument("--out-dir", type=Path, default=DEFAULT_PHASE2)
+    mm.set_defaults(func=cmd_market_merge)
 
     gp = sub.add_parser("gaps", help="score named themes and write the gap report")
     gp.add_argument("--out-dir", type=Path, default=DEFAULT_PHASE2)

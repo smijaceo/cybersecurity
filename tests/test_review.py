@@ -50,7 +50,7 @@ def test_evaluate_pass_and_fail(tmp_path):
 
 @pytest.mark.parametrize("rows, msg", [
     ([{"id": "1", "on_segment": "n", "need": "y"}], "need=y requires"),
-    ([{"id": "1", "on_segment": "maybe", "need": "n"}], "must be"),
+    ([{"id": "1", "on_segment": "maybe", "need": "n"}], "on_segment"),
     ([], "1 missing"),
 ])
 def test_load_labels_rejects_bad_input(tmp_path, rows, msg):

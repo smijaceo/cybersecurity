@@ -24,7 +24,7 @@ def test_load_names_validates(tmp_path):
         analysis.load_names(write(tmp_path / "n.jsonl", [name(0)]), {0, 1})
     bad = name(0)
     del bad["search_query"]
-    with pytest.raises(ValueError, match="missing search_query"):
+    with pytest.raises(ValueError, match="search_query"):
         analysis.load_names(write(tmp_path / "n.jsonl", [bad]), {0})
 
 
@@ -41,7 +41,7 @@ def test_load_threat_accepts_valid(tmp_path):
 
 @pytest.mark.parametrize("row, msg", [
     ({"theme_id": 0, "techniques": ["T9"], "threat_relevance": 2}, "candidates"),  # not its candidate
-    ({"theme_id": 0, "techniques": [], "threat_relevance": 5}, "0-3"),
+    ({"theme_id": 0, "techniques": [], "threat_relevance": 5}, "threat_relevance"),
     ({"theme_id": 7, "techniques": [], "threat_relevance": 1}, "unknown theme"),
 ])
 def test_load_threat_rejects(tmp_path, row, msg):
@@ -76,14 +76,31 @@ def test_load_market_accepts_valid(tmp_path):
 
 
 @pytest.mark.parametrize("over, msg", [
-    ({"crowdedness": 4}, "crowdedness must be 0-3"),
+    ({"crowdedness": 4}, "crowdedness"),
     ({"bundling_risk": "maybe"}, "bundling_risk"),
-    ({"wtp_sources": []}, "source URLs"),
-    ({"paid_market_gaps": [{"gap": "g", "evidence": "trust me"}]}, "evidence URL"),
+    ({"wtp_sources": []}, "wtp_sources"),
+    ({"wtp_sources": ["see above"]}, "must be URLs"),
+    ({"paid_market_gaps": [{"gap": "g", "evidence": "trust me"}]}, "evidence"),
     ({"vendors": [{"name": "V", "url": "u", "offering": "o", "pricing": "p", "segment": "s",
-                   "source": "none"}]}, "no source URL"),
-    ({"extra": 1}, "keys"),
+                   "source": "none"}]}, "source"),
+    ({"extra": 1}, "extra"),
 ])
 def test_load_market_rejects(tmp_path, over, msg):
     with pytest.raises(ValueError, match=msg):
         analysis.load_market(write(tmp_path / "m.jsonl", [market(**over)]), [{"theme_id": 0}])
+
+
+def test_merge_market_parts_orders_and_checks_coverage(tmp_path):
+    parts = tmp_path / "parts"
+    parts.mkdir()
+    write(parts / "b.jsonl", [market(5)])
+    write(parts / "a.jsonl", [market(2)])
+    out = tmp_path / "m.jsonl"
+    inp = [{"theme_id": 5}, {"theme_id": 2}]
+    assert analysis.merge_market_parts(parts, inp, out) == 2
+    assert [json.loads(l)["theme_id"] for l in out.read_text().splitlines()] == [5, 2]
+    with pytest.raises(ValueError, match="no market research for themes \\[9\\]"):
+        analysis.merge_market_parts(parts, inp + [{"theme_id": 9}], out)
+    write(parts / "c.jsonl", [market(2)])
+    with pytest.raises(ValueError, match="researched twice"):
+        analysis.merge_market_parts(parts, inp, out)

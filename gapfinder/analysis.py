@@ -18,7 +18,7 @@ import re
 from datetime import date
 from pathlib import Path
 
-from . import embed, gaps, refdata, themes
+from . import embed, gaps, refdata, schemas, themes
 from .collectors.base import Collector
 from .store import Store
 
@@ -52,17 +52,7 @@ def build_themes(store: Store, out_dir: Path) -> dict:
 
 
 def load_names(path: Path, theme_ids: set[int]) -> dict[int, dict]:
-    names = {}
-    for n, line in enumerate(path.read_text().splitlines(), 1):
-        if not line.strip():
-            continue
-        d = json.loads(line)
-        for key in ("theme_id", "name", "need", "search_query", "coherent"):
-            if key not in d:
-                raise ValueError(f"line {n}: missing {key}")
-        if d["coherent"] not in ("y", "n"):
-            raise ValueError(f"line {n}: coherent must be y or n")
-        names[int(d["theme_id"])] = d
+    names = {n.theme_id: n.model_dump() for n in schemas.load_jsonl(path, schemas.ThemeName)}
     if set(names) != theme_ids:
         raise ValueError(f"names cover {sorted(names)}, themes are {sorted(theme_ids)}")
     return names
@@ -95,19 +85,13 @@ def build_threat_input(theme_list: list[dict], names: dict[int, dict], config: d
 def load_threat(path: Path, threat_input: list[dict]) -> dict[int, dict]:
     expected = {i["theme_id"]: {c["id"] for c in i["candidates"]} for i in threat_input}
     out = {}
-    for n, line in enumerate(path.read_text().splitlines(), 1):
-        if not line.strip():
-            continue
-        d = json.loads(line)
-        tid = int(d["theme_id"])
-        if tid not in expected:
-            raise ValueError(f"line {n}: unknown theme {tid}")
-        if d.get("threat_relevance") not in (0, 1, 2, 3):
-            raise ValueError(f"line {n}: threat_relevance must be 0-3")
-        bad = set(d.get("techniques", [])) - expected[tid]
-        if bad or len(d.get("techniques", [])) > 3:
-            raise ValueError(f"line {n}: techniques must be <= 3 of the candidates; got {bad or d['techniques']}")
-        out[tid] = d
+    for m in schemas.load_jsonl(path, schemas.ThreatMapping):
+        if m.theme_id not in expected:
+            raise ValueError(f"unknown theme {m.theme_id}")
+        bad = set(m.techniques) - expected[m.theme_id]
+        if bad:
+            raise ValueError(f"theme {m.theme_id}: techniques must be among its candidates; got {sorted(bad)}")
+        out[m.theme_id] = m.model_dump()
     if set(out) != set(expected):
         raise ValueError(f"threat mapping covers {sorted(out)}, expected {sorted(expected)}")
     return out
@@ -149,48 +133,35 @@ def build_market_input(theme_list: list[dict], names: dict[int, dict], store: St
     return items
 
 
-MARKET_KEYS = {"theme_id", "vendors", "crowdedness", "paid_market_gaps", "willingness_to_pay",
-               "wtp_evidence", "wtp_sources", "bundling_risk", "bundling_note", "summary"}
-
-
-def _is_url(u) -> bool:
-    return isinstance(u, str) and u.startswith(("http://", "https://"))
-
-
 def load_market(path: Path, market_input: list[dict]) -> dict[int, dict]:
-    """Validate the market researcher's output against the rubric."""
+    """Validate market research (schema per line) and that it covers exactly the input themes."""
     expected = {i["theme_id"] for i in market_input}
     out = {}
-    for n, line in enumerate(path.read_text().splitlines(), 1):
-        if not line.strip():
-            continue
-        d = json.loads(line)
-        where = f"line {n} (theme {d.get('theme_id')})"
-        if set(d) != MARKET_KEYS:
-            raise ValueError(f"{where}: keys {sorted(set(d) ^ MARKET_KEYS)} wrong")
-        if d["theme_id"] not in expected:
-            raise ValueError(f"{where}: unknown theme")
-        for k in ("crowdedness", "willingness_to_pay"):
-            if d[k] not in (0, 1, 2, 3):
-                raise ValueError(f"{where}: {k} must be 0-3")
-        if d["bundling_risk"] not in ("low", "medium", "high"):
-            raise ValueError(f"{where}: bundling_risk must be low/medium/high")
-        if len(d["vendors"]) > 8 or len(d["paid_market_gaps"]) > 4:
-            raise ValueError(f"{where}: too many vendors or gaps")
-        for v in d["vendors"]:
-            if not {"name", "url", "offering", "pricing", "segment", "source"} <= set(v):
-                raise ValueError(f"{where}: vendor {v.get('name')} missing fields")
-            if not _is_url(v["source"]):
-                raise ValueError(f"{where}: vendor {v['name']} has no source URL")
-        for g in d["paid_market_gaps"]:
-            if not _is_url(g.get("evidence")):
-                raise ValueError(f"{where}: paid-market gap without evidence URL")
-        if not d["wtp_sources"] or not all(_is_url(u) for u in d["wtp_sources"]):
-            raise ValueError(f"{where}: willingness to pay needs source URLs")
-        out[d["theme_id"]] = d
+    for m in schemas.load_jsonl(path, schemas.MarketResearch):
+        if m.theme_id not in expected:
+            raise ValueError(f"unknown theme {m.theme_id}")
+        if m.theme_id in out:
+            raise ValueError(f"theme {m.theme_id} appears twice")
+        out[m.theme_id] = m.model_dump()
     if set(out) != expected:
         raise ValueError(f"market research covers {sorted(out)}, expected {sorted(expected)}")
     return out
+
+
+def merge_market_parts(parts_dir: Path, market_input: list[dict], out_path: Path) -> int:
+    """Combine researchers' part files into one file in input order, validating everything."""
+    rows: dict[int, dict] = {}
+    for part in sorted(parts_dir.glob("*.jsonl")):
+        for m in schemas.load_jsonl(part, schemas.MarketResearch):
+            if m.theme_id in rows:
+                raise ValueError(f"theme {m.theme_id} researched twice (again in {part.name})")
+            rows[m.theme_id] = m.model_dump()
+    order = [i["theme_id"] for i in market_input]
+    missing = [t for t in order if t not in rows]
+    if missing:
+        raise ValueError(f"no market research for themes {missing}")
+    out_path.write_text("".join(json.dumps(rows[t]) + "\n" for t in order))
+    return len(order)
 
 
 class NvdCounter(Collector):

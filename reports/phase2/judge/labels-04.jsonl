@@ -1,0 +1,180 @@
+{"id": "github:6476334793", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:5437831867", "on_segment": "n", "need": "n", "reason": "General news digest"}
+{"id": "github:4701860233", "on_segment": "y", "need": "n", "reason": "Suggests referencing a tool in docs; no gap stated"}
+{"id": "github:6075263075", "on_segment": "n", "need": "n", "reason": "General tooling research for beginner workflow"}
+{"id": "github:4272465998", "on_segment": "n", "need": "n", "reason": "Ecosystem activity digest"}
+{"id": "github:2859229141", "on_segment": "y", "need": "y", "reason": "Wants detection of secrets pushed to repo"}
+{"id": "github:6273245526", "on_segment": "y", "need": "y", "reason": "Unpinned live Semgrep packs make release gate fragile"}
+{"id": "github:4788837270", "on_segment": "y", "need": "y", "reason": "Seeks better scanners for supply-chain, secrets, SAST gaps"}
+{"id": "github:5498584229", "on_segment": "y", "need": "y", "reason": "Requests check for tokens persisted in git configs"}
+{"id": "github:4891887777", "on_segment": "n", "need": "n", "reason": "Benchmark failure taxonomy report"}
+{"id": "github:5662944745", "on_segment": "n", "need": "n", "reason": "Benchmark failure taxonomy report"}
+{"id": "github:3305509374", "on_segment": "n", "need": "n", "reason": "Deployment automation, not security-focused"}
+{"id": "github:3634184922", "on_segment": "y", "need": "y", "reason": "Secret scanning missed leaked key; seeks better tooling"}
+{"id": "github:4466092795", "on_segment": "y", "need": "y", "reason": "Feature request: secret manager connector to avoid env secrets"}
+{"id": "github:4789122101", "on_segment": "y", "need": "y", "reason": "Wants historical secret scanning with verification"}
+{"id": "github:6308755268", "on_segment": "y", "need": "y", "reason": "Gap: no security review during PR development"}
+{"id": "github:4466092630", "on_segment": "y", "need": "y", "reason": "Feature request: Vault connector instead of env-var secrets"}
+{"id": "github:4094131529", "on_segment": "n", "need": "n", "reason": "Product release announcement"}
+{"id": "github:3988518004", "on_segment": "n", "need": "n", "reason": "Product release announcement"}
+{"id": "github:4304026062", "on_segment": "y", "need": "n", "reason": "Procedural task to scrub secrets; no tool gap"}
+{"id": "github:4094145805", "on_segment": "n", "need": "n", "reason": "Product release announcement"}
+{"id": "github:4094340553", "on_segment": "n", "need": "n", "reason": "Product release announcement"}
+{"id": "github:3988534108", "on_segment": "n", "need": "n", "reason": "Product release announcement"}
+{"id": "github:3169982247", "on_segment": "n", "need": "n", "reason": "Workflow documentation task"}
+{"id": "github:4368237105", "on_segment": "n", "need": "n", "reason": "AI agent context product requirements"}
+{"id": "github:3992145531", "on_segment": "n", "need": "n", "reason": "General CI/CD test assessment"}
+{"id": "github:5159234886", "on_segment": "n", "need": "n", "reason": "Personal interview preparation notes"}
+{"id": "github:1030340108", "on_segment": "y", "need": "y", "reason": "Wants detectable key format for secret scanning"}
+{"id": "github:5033754669", "on_segment": "y", "need": "n", "reason": "Scanner bug report, not missing capability"}
+{"id": "github:5108158134", "on_segment": "n", "need": "n", "reason": "Weekly news digest"}
+{"id": "github:4242813680", "on_segment": "n", "need": "n", "reason": "Documentation overhaul"}
+{"id": "github:6431643486", "on_segment": "y", "need": "y", "reason": "Nothing binds SBOM to release artifacts; wants attestations"}
+{"id": "github:2176553733", "on_segment": "y", "need": "y", "reason": "Asks whether tool exists for CPE database conversion"}
+{"id": "github:5530886981", "on_segment": "y", "need": "y", "reason": "SBOM generation failures silently go unnoticed"}
+{"id": "github:5280710858", "on_segment": "y", "need": "y", "reason": "Cannot verify advertised SBOM attestations; usability gap"}
+{"id": "github:5007430786", "on_segment": "y", "need": "y", "reason": "SBOM lacks source binding for verification"}
+{"id": "github:1484898098", "on_segment": "y", "need": "y", "reason": "Feature request for combined SBOM/scanner tool support"}
+{"id": "github:5914284408", "on_segment": "n", "need": "n", "reason": "Container image distribution request"}
+{"id": "github:4960641987", "on_segment": "y", "need": "y", "reason": "Proposes attestable capability metadata for untrusted agent tools"}
+{"id": "github:5205183887", "on_segment": "n", "need": "n", "reason": "Generic governance handbook template"}
+{"id": "github:4002347264", "on_segment": "y", "need": "y", "reason": "Seeks package-level diff between images; capability gap"}
+{"id": "github:5814271507", "on_segment": "y", "need": "y", "reason": "Hard to determine FOSS origin for security, compliance"}
+{"id": "github:3434495390", "on_segment": "y", "need": "n", "reason": "SBOM tool path bug, not missing capability"}
+{"id": "github:3781788192", "on_segment": "n", "need": "n", "reason": "Generic governance handbook template"}
+{"id": "github:5988879453", "on_segment": "y", "need": "n", "reason": "Release pipeline setup task, no gap stated"}
+{"id": "github:3781810232", "on_segment": "n", "need": "n", "reason": "Generic governance handbook template"}
+{"id": "github:5998421041", "on_segment": "y", "need": "y", "reason": "Wants signing isolated from tests for pipeline hardening"}
+{"id": "github:5658121527", "on_segment": "y", "need": "n", "reason": "Automated CVE triage report"}
+{"id": "github:4541933423", "on_segment": "y", "need": "y", "reason": "Single mirror dependency is supply-chain availability risk"}
+{"id": "github:4971174379", "on_segment": "n", "need": "n", "reason": "Code formatting and CI tooling rebuild"}
+{"id": "github:5754495929", "on_segment": "n", "need": "n", "reason": "News digest"}
+{"id": "github:3793471948", "on_segment": "n", "need": "n", "reason": "CI cost optimization, not security"}
+{"id": "github:2281873632", "on_segment": "n", "need": "n", "reason": "Game mod bug"}
+{"id": "github:6471210265", "on_segment": "n", "need": "n", "reason": "Seeking co-maintainer"}
+{"id": "github:5833626278", "on_segment": "y", "need": "y", "reason": "Scanner misses vulnerabilities for derived distros"}
+{"id": "github:6294291994", "on_segment": "y", "need": "n", "reason": "Internal naming issue in SBOM identifiers"}
+{"id": "github:2558873061", "on_segment": "y", "need": "n", "reason": "Package missing license file; minor"}
+{"id": "github:5998462446", "on_segment": "y", "need": "y", "reason": "Scanners unreliably read SBOMs from some generators"}
+{"id": "github:4578932476", "on_segment": "n", "need": "n", "reason": "Career skills article"}
+{"id": "github:6434782177", "on_segment": "y", "need": "n", "reason": "Documentation inaccuracy in signing policy"}
+{"id": "github:1181156510", "on_segment": "y", "need": "n", "reason": "Architecture spec text, no gap"}
+{"id": "github:5010460946", "on_segment": "n", "need": "n", "reason": "README dependency inaccuracy"}
+{"id": "github:5006290548", "on_segment": "y", "need": "y", "reason": "Scanner lacks lockfile versions and .NET manifest support"}
+{"id": "github:6108429045", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability finding"}
+{"id": "github:4553563378", "on_segment": "y", "need": "y", "reason": "No dependency vulnerability gate in CI"}
+{"id": "github:6150224367", "on_segment": "y", "need": "n", "reason": "Blog brainstorming opinion piece"}
+{"id": "github:6461895601", "on_segment": "n", "need": "n", "reason": "Ecosystem activity digest"}
+{"id": "github:5479380973", "on_segment": "n", "need": "n", "reason": "AI agent hook installation fix"}
+{"id": "github:5328630144", "on_segment": "y", "need": "y", "reason": "Feature request: view outdated and vulnerable dependencies"}
+{"id": "github:6539280347", "on_segment": "n", "need": "n", "reason": "AI tools news digest"}
+{"id": "github:4954670045", "on_segment": "n", "need": "n", "reason": "Ecosystem activity digest"}
+{"id": "github:2244164231", "on_segment": "n", "need": "n", "reason": "arXiv paper listing"}
+{"id": "github:472834595", "on_segment": "y", "need": "n", "reason": "Library bug with vulnerable dependency, no tool gap"}
+{"id": "github:6122170890", "on_segment": "n", "need": "n", "reason": "Code audit methodology, not segment topics"}
+{"id": "github:5250892596", "on_segment": "n", "need": "n", "reason": "Unrelated code dump"}
+{"id": "github:6151840693", "on_segment": "n", "need": "n", "reason": "Architecture decision register"}
+{"id": "github:5126547797", "on_segment": "n", "need": "n", "reason": "AI tools news digest"}
+{"id": "github:3837314151", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:3833028983", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:3809641378", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:1433942425", "on_segment": "y", "need": "n", "reason": "Asks maintainer to update vulnerable dependency"}
+{"id": "github:6229668477", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:4935938961", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:5975147525", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:4437771197", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:2909095703", "on_segment": "n", "need": "n", "reason": "Go packaging dependency control, not security"}
+{"id": "github:5983596498", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:5618521252", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:1750981061", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:3955299659", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:5313910413", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:4791141275", "on_segment": "y", "need": "y", "reason": "Unpinned transitive deps and floating image; reproducibility gap"}
+{"id": "github:3955232557", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:2447274359", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:3877924300", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:5983453627", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:3877956457", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:4333721039", "on_segment": "y", "need": "n", "reason": "Security news about library CVEs"}
+{"id": "github:6089569482", "on_segment": "n", "need": "n", "reason": "Library proxy bug"}
+{"id": "github:6272335500", "on_segment": "n", "need": "n", "reason": "Build task migration"}
+{"id": "github:5983612983", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:3846531729", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability alert"}
+{"id": "github:6461895449", "on_segment": "n", "need": "n", "reason": "AI tools news digest"}
+{"id": "github:5162063492", "on_segment": "n", "need": "n", "reason": "AI tools news digest"}
+{"id": "github:4713101529", "on_segment": "n", "need": "n", "reason": "AI tools news digest"}
+{"id": "github:5295970011", "on_segment": "n", "need": "n", "reason": "AI tools news digest"}
+{"id": "github:5380459275", "on_segment": "n", "need": "n", "reason": "AI tools news digest"}
+{"id": "github:5147276875", "on_segment": "n", "need": "n", "reason": "Ecosystem activity digest"}
+{"id": "github:5146518788", "on_segment": "n", "need": "n", "reason": "Ecosystem activity digest"}
+{"id": "github:4688589331", "on_segment": "n", "need": "n", "reason": "AI tools news digest"}
+{"id": "github:5041743247", "on_segment": "y", "need": "y", "reason": "Lacks automated supply-chain security posture assessment"}
+{"id": "github:4970257902", "on_segment": "n", "need": "n", "reason": "Package manager fork roadmap"}
+{"id": "github:4450680403", "on_segment": "y", "need": "y", "reason": "Wants secrets decrypted without plaintext on disk"}
+{"id": "github:3932365096", "on_segment": "y", "need": "y", "reason": "CI token rotation is manual, no programmatic way"}
+{"id": "github:6272275207", "on_segment": "n", "need": "n", "reason": "Architecture documentation"}
+{"id": "github:4127806740", "on_segment": "y", "need": "y", "reason": "Feature request: validate GitOps AppProject permission misconfigurations"}
+{"id": "github:4936394191", "on_segment": "y", "need": "n", "reason": "DevSecOps opinion essay"}
+{"id": "github:6106388640", "on_segment": "n", "need": "n", "reason": "Documentation task"}
+{"id": "github:4129693067", "on_segment": "n", "need": "n", "reason": "Documentation task"}
+{"id": "github:2822736175", "on_segment": "n", "need": "n", "reason": "Company listicle"}
+{"id": "github:5355579201", "on_segment": "n", "need": "n", "reason": "Personal interview preparation notes"}
+{"id": "github:4571969753", "on_segment": "n", "need": "n", "reason": "Memory debugging tool roadmap"}
+{"id": "github:4033235618", "on_segment": "n", "need": "n", "reason": "Hiring post"}
+{"id": "github:6439590189", "on_segment": "n", "need": "n", "reason": "UI ecosystem digest"}
+{"id": "github:4950660968", "on_segment": "y", "need": "n", "reason": "Supply-chain developer news digest"}
+{"id": "github:5198782380", "on_segment": "n", "need": "n", "reason": "Ecosystem activity digest"}
+{"id": "github:5842015872", "on_segment": "n", "need": "n", "reason": "Ecosystem activity digest"}
+{"id": "github:4289527399", "on_segment": "y", "need": "n", "reason": "Dependabot alert dismissal record"}
+{"id": "github:4982965800", "on_segment": "n", "need": "n", "reason": "AI trends report"}
+{"id": "github:4720169575", "on_segment": "n", "need": "n", "reason": "Ecosystem activity digest"}
+{"id": "github:5166665057", "on_segment": "n", "need": "n", "reason": "AI tools news digest"}
+{"id": "github:2502685317", "on_segment": "n", "need": "n", "reason": "Meetup notes"}
+{"id": "github:734940201", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:824527523", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:802567574", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:682270520", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:3686769466", "on_segment": "n", "need": "n", "reason": "Spam account selling"}
+{"id": "github:3689981890", "on_segment": "n", "need": "n", "reason": "Spam account selling"}
+{"id": "github:4177966559", "on_segment": "n", "need": "n", "reason": "Generic AI business article"}
+{"id": "github:3406922759", "on_segment": "n", "need": "n", "reason": "Single vulnerability scanner finding"}
+{"id": "github:3402511387", "on_segment": "n", "need": "n", "reason": "Single vulnerability scanner finding"}
+{"id": "github:3338102082", "on_segment": "n", "need": "n", "reason": "Single vulnerability scanner finding"}
+{"id": "github:3318480773", "on_segment": "n", "need": "n", "reason": "Single vulnerability scanner finding"}
+{"id": "github:3316879277", "on_segment": "n", "need": "n", "reason": "Single vulnerability scanner finding"}
+{"id": "github:3482638924", "on_segment": "n", "need": "n", "reason": "Physical home security article"}
+{"id": "github:2969075348", "on_segment": "y", "need": "y", "reason": "Existing vulnerability tools fall short for companies"}
+{"id": "github:2968840674", "on_segment": "y", "need": "y", "reason": "Existing vulnerability tools fall short for companies"}
+{"id": "github:3676370557", "on_segment": "n", "need": "n", "reason": "Spam software keys"}
+{"id": "github:3737414909", "on_segment": "n", "need": "n", "reason": "Spam software keys"}
+{"id": "github:3080775711", "on_segment": "n", "need": "n", "reason": "Repo description"}
+{"id": "github:4852191708", "on_segment": "n", "need": "n", "reason": "Generic network security guide"}
+{"id": "github:1693326885", "on_segment": "n", "need": "n", "reason": "Security news feed"}
+{"id": "github:1693327285", "on_segment": "n", "need": "n", "reason": "Security news feed"}
+{"id": "github:4868600990", "on_segment": "n", "need": "n", "reason": "Automated writing-style proposal"}
+{"id": "github:4814318526", "on_segment": "n", "need": "n", "reason": "Automated writing-style proposal"}
+{"id": "github:4763520983", "on_segment": "n", "need": "n", "reason": "Automated writing-style proposal"}
+{"id": "github:4711878478", "on_segment": "n", "need": "n", "reason": "Automated writing-style proposal"}
+{"id": "github:4655924412", "on_segment": "n", "need": "n", "reason": "Automated writing-style proposal"}
+{"id": "github:1693325237", "on_segment": "n", "need": "n", "reason": "Security news feed"}
+{"id": "github:952406244", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:830892877", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:2493515652", "on_segment": "n", "need": "n", "reason": "Integration question, not small-team security ops"}
+{"id": "github:5626418910", "on_segment": "n", "need": "n", "reason": "Plugin hook for kanban"}
+{"id": "github:4332959622", "on_segment": "n", "need": "n", "reason": "Admin log viewer, not security ops"}
+{"id": "github:5293747741", "on_segment": "n", "need": "n", "reason": "AI tool audit trail design"}
+{"id": "github:5293353074", "on_segment": "n", "need": "n", "reason": "AI tool audit trail design"}
+{"id": "github:2553969315", "on_segment": "n", "need": "n", "reason": "Security news feed"}
+{"id": "github:2553968840", "on_segment": "n", "need": "n", "reason": "Security news feed"}
+{"id": "github:4853471234", "on_segment": "n", "need": "n", "reason": "Ecosystem activity digest"}
+{"id": "github:4029808210", "on_segment": "n", "need": "n", "reason": "Compliance logging for single product"}
+{"id": "github:4815429459", "on_segment": "n", "need": "n", "reason": "AI tools news digest"}
+{"id": "github:2292523316", "on_segment": "y", "need": "y", "reason": "Wants automated honeypot feed blocking in SIEM"}
+{"id": "github:2553969239", "on_segment": "n", "need": "n", "reason": "Security news feed"}
+{"id": "github:6380258056", "on_segment": "n", "need": "n", "reason": "Product audit log feature, not small-team ops"}
+{"id": "github:1593908586", "on_segment": "y", "need": "y", "reason": "Requests free SIEM alternative component"}
+{"id": "github:6495175008", "on_segment": "n", "need": "n", "reason": "Code refactor for redaction lists"}
+{"id": "github:3507325345", "on_segment": "y", "need": "y", "reason": "Manual triage of hundreds of SIEM alerts daily"}
+{"id": "github:3357903809", "on_segment": "y", "need": "n", "reason": "Product pitch announcement"}
+{"id": "github:932920065", "on_segment": "n", "need": "n", "reason": "arXiv paper listing"}
+{"id": "github:932795753", "on_segment": "n", "need": "n", "reason": "arXiv paper listing"}

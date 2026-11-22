@@ -1,0 +1,180 @@
+{"id": "github:1176169518", "on_segment": "y", "need": "n", "reason": "Routine vulnerable-dependency bump request, no tooling gap"}
+{"id": "github:3327355925", "on_segment": "y", "need": "y", "reason": "Feature request: clearer error in dependency scanner"}
+{"id": "hn:21566335", "on_segment": "y", "need": "n", "reason": "IAM linter launch post"}
+{"id": "hn:21836168", "on_segment": "y", "need": "n", "reason": "Article about Kubernetes security tools"}
+{"id": "github:1514516532", "on_segment": "n", "need": "n", "reason": "Booking app feature list, unrelated"}
+{"id": "hn:40079897", "on_segment": "y", "need": "n", "reason": "SSO tax article title, no stated need"}
+{"id": "github:712995700", "on_segment": "n", "need": "n", "reason": "Lambda alias Terraform feature, not security"}
+{"id": "github:1197790710", "on_segment": "n", "need": "n", "reason": "CDK pipeline bug, not a security gap"}
+{"id": "github:3116948599", "on_segment": "y", "need": "y", "reason": "SBOM tool lacks uv.lock support"}
+{"id": "github:3310052367", "on_segment": "y", "need": "y", "reason": "Cosign gaps verifying attestations via referrers API"}
+{"id": "github:2733236490", "on_segment": "y", "need": "y", "reason": "SBOM assembly limitation, feature requested"}
+{"id": "github:4216482618", "on_segment": "n", "need": "n", "reason": "OpenSearch OAuth auth proposal, not supply chain"}
+{"id": "hn:36076140", "on_segment": "y", "need": "n", "reason": "Vulnerability writeup, news"}
+{"id": "hn:32227594", "on_segment": "y", "need": "y", "reason": "Asks which open-source SBOM tools exist and accuracy"}
+{"id": "stackexchange:security:44046", "on_segment": "n", "need": "n", "reason": "Generic SIEM vs forensics question, no small team"}
+{"id": "github:3379574681", "on_segment": "y", "need": "y", "reason": "Requests SCIM provisioning support"}
+{"id": "hn:36494074", "on_segment": "y", "need": "n", "reason": "Opinion essay on SSO tax"}
+{"id": "github:924419770", "on_segment": "n", "need": "n", "reason": "Terraform datasource performance regression"}
+{"id": "github:3532878306", "on_segment": "n", "need": "n", "reason": "Documentation structure analysis"}
+{"id": "github:2851022119", "on_segment": "n", "need": "n", "reason": "Docker Desktop error"}
+{"id": "github:1642032199", "on_segment": "y", "need": "y", "reason": "Requests SBOM generation from vcpkg"}
+{"id": "github:1879696596", "on_segment": "y", "need": "y", "reason": "Feature request for SBOM comparison tool"}
+{"id": "github:1011855831", "on_segment": "n", "need": "n", "reason": "Go module graph feature, no security framing"}
+{"id": "github:1077727061", "on_segment": "y", "need": "n", "reason": "Routine log4j dependency bump request"}
+{"id": "github:4109619238", "on_segment": "n", "need": "n", "reason": "CI env var feature, not security"}
+{"id": "hn:41988812", "on_segment": "y", "need": "n", "reason": "Opinion piece on IAM Identity Center"}
+{"id": "hn:26231763", "on_segment": "y", "need": "n", "reason": "Product launch announcement"}
+{"id": "hn:20718505", "on_segment": "y", "need": "n", "reason": "Best-practices guide"}
+{"id": "hn:18597396", "on_segment": "y", "need": "n", "reason": "Security vulnerability news"}
+{"id": "hn:25026039", "on_segment": "n", "need": "n", "reason": "Generic SIEM logging guide"}
+{"id": "hn:24423524", "on_segment": "n", "need": "n", "reason": "Funding news, not small-team need"}
+{"id": "hn:23991701", "on_segment": "n", "need": "n", "reason": "Audit log guide"}
+{"id": "stackexchange:security:249704", "on_segment": "n", "need": "n", "reason": "Conceptual SIEM question"}
+{"id": "stackexchange:security:180693", "on_segment": "n", "need": "n", "reason": "Large enterprise SIEM design question"}
+{"id": "github:5746458049", "on_segment": "y", "need": "n", "reason": "Okta provider bug, not missing capability"}
+{"id": "github:2074473280", "on_segment": "y", "need": "y", "reason": "CSPM integration lacks ingestion feedback"}
+{"id": "github:445737252", "on_segment": "n", "need": "n", "reason": "Website certificate mismatch"}
+{"id": "github:3958582140", "on_segment": "n", "need": "n", "reason": "EKS infrastructure feature, not security"}
+{"id": "github:367617125", "on_segment": "n", "need": "n", "reason": "Kubernetes storage capacity feature"}
+{"id": "github:2275030660", "on_segment": "y", "need": "y", "reason": "Can't audit whether pod traffic is encrypted"}
+{"id": "github:690244528", "on_segment": "y", "need": "n", "reason": "Project onboarding proposal, not a stated gap"}
+{"id": "github:4829122268", "on_segment": "n", "need": "n", "reason": "CVE record governance, not tooling"}
+{"id": "github:4263962037", "on_segment": "n", "need": "n", "reason": "AWX deployment discussion"}
+{"id": "hn:45225310", "on_segment": "y", "need": "n", "reason": "Article on Kubernetes security"}
+{"id": "hn:28064668", "on_segment": "y", "need": "n", "reason": "Partnership announcement"}
+{"id": "hn:12366967", "on_segment": "y", "need": "n", "reason": "Vulnerability news"}
+{"id": "stackexchange:security:270947", "on_segment": "y", "need": "n", "reason": "How-it-works question about PassRole"}
+{"id": "github:5970788746", "on_segment": "n", "need": "n", "reason": "Internal CI secrets cleanup task"}
+{"id": "github:429504224", "on_segment": "y", "need": "y", "reason": "Manual provisioning, requests SCIM"}
+{"id": "github:4258117649", "on_segment": "n", "need": "n", "reason": "Dashboard migration tool proposal"}
+{"id": "github:371364692", "on_segment": "n", "need": "n", "reason": "CLI profile bug"}
+{"id": "github:2529016486", "on_segment": "n", "need": "n", "reason": "Terraform OIDC resource feature"}
+{"id": "github:4263976764", "on_segment": "n", "need": "n", "reason": "App authorization plugin, not cloud IAM"}
+{"id": "github:2936739447", "on_segment": "n", "need": "n", "reason": "SDK credential provider support"}
+{"id": "github:3741429886", "on_segment": "n", "need": "n", "reason": "Ingress controller retirement notice"}
+{"id": "github:3835479540", "on_segment": "y", "need": "y", "reason": "Can't disable public IPs on nodes"}
+{"id": "github:1560737110", "on_segment": "n", "need": "n", "reason": "Registry dependency removal"}
+{"id": "github:5840372586", "on_segment": "n", "need": "n", "reason": "Agent behavior fix, unrelated"}
+{"id": "github:5096243270", "on_segment": "n", "need": "n", "reason": "Documentation error"}
+{"id": "github:4957633423", "on_segment": "n", "need": "n", "reason": "Release tracking issue"}
+{"id": "github:1983446008", "on_segment": "y", "need": "y", "reason": "License output unusable for SBOM needs"}
+{"id": "github:2202104313", "on_segment": "y", "need": "y", "reason": "Struggles to produce SBOM and CVE scan for C/C++"}
+{"id": "github:4092506147", "on_segment": "n", "need": "n", "reason": "Dependency bloat, not security"}
+{"id": "github:483271660", "on_segment": "n", "need": "n", "reason": "Internal SIEM field mapping"}
+{"id": "github:1851657043", "on_segment": "n", "need": "n", "reason": "Enterprise SIEM enrichment feature, no small team"}
+{"id": "github:976559629", "on_segment": "n", "need": "n", "reason": "STIX version support"}
+{"id": "hn:26540623", "on_segment": "y", "need": "n", "reason": "IAM best-practices article"}
+{"id": "hn:21075926", "on_segment": "y", "need": "n", "reason": "Kubernetes security guide"}
+{"id": "hn:49883733", "on_segment": "y", "need": "n", "reason": "Opinion essay on SBOMs"}
+{"id": "hn:32542452", "on_segment": "n", "need": "n", "reason": "DNS-based SIEM idea, not small-team"}
+{"id": "stackexchange:security:179868", "on_segment": "n", "need": "n", "reason": "Conceptual terms question"}
+{"id": "github:1832901612", "on_segment": "y", "need": "y", "reason": "Requests access request and tracking workflow"}
+{"id": "github:2176626760", "on_segment": "n", "need": "n", "reason": "Chat archive feature"}
+{"id": "github:5514102691", "on_segment": "n", "need": "n", "reason": "Business project execution issue"}
+{"id": "github:2570621544", "on_segment": "y", "need": "y", "reason": "Cannot enable SCIM via API, docs unclear"}
+{"id": "github:4616402789", "on_segment": "y", "need": "y", "reason": "CSPM tool lacks Linode coverage"}
+{"id": "github:6164886799", "on_segment": "n", "need": "n", "reason": "Release review notes"}
+{"id": "github:295677106", "on_segment": "n", "need": "n", "reason": "AppSync auth how-to"}
+{"id": "github:3282791139", "on_segment": "n", "need": "n", "reason": "Kafka SASL feature"}
+{"id": "github:215114483", "on_segment": "n", "need": "n", "reason": "Terraform data source request"}
+{"id": "github:2352711598", "on_segment": "n", "need": "n", "reason": "Agent startup bug"}
+{"id": "github:1269203613", "on_segment": "y", "need": "y", "reason": "Needs Pod Security Standards compliance support"}
+{"id": "github:1409675436", "on_segment": "n", "need": "n", "reason": "Metrics rollup issue"}
+{"id": "github:1261675134", "on_segment": "n", "need": "n", "reason": "Storage migration question"}
+{"id": "github:2588619393", "on_segment": "y", "need": "y", "reason": "Only hardcoded credentials supported, needs secret injection"}
+{"id": "github:4874096848", "on_segment": "y", "need": "y", "reason": "SBOM tool lacks BSI TR-03183 compliance"}
+{"id": "github:2349100431", "on_segment": "y", "need": "y", "reason": "SBOM missing purl, scanners can't match"}
+{"id": "github:4297231324", "on_segment": "y", "need": "y", "reason": "Requests CycloneDX 1.7 support"}
+{"id": "github:458782916", "on_segment": "y", "need": "y", "reason": "Pain points with Snyk as CI check"}
+{"id": "github:1977291903", "on_segment": "y", "need": "y", "reason": "SBOM lacks dependency hierarchy for vuln analysis"}
+{"id": "github:320398167", "on_segment": "y", "need": "n", "reason": "Routine vulnerable-dependency report"}
+{"id": "github:5124298236", "on_segment": "n", "need": "n", "reason": "Internal refactor epic"}
+{"id": "hn:32006571", "on_segment": "y", "need": "n", "reason": "Product announcement"}
+{"id": "hn:21688235", "on_segment": "y", "need": "n", "reason": "Product announcement"}
+{"id": "hn:12210932", "on_segment": "y", "need": "n", "reason": "Reference resource"}
+{"id": "hn:18598008", "on_segment": "y", "need": "n", "reason": "Vulnerability explainer"}
+{"id": "hn:25129238", "on_segment": "y", "need": "n", "reason": "Certification announcement"}
+{"id": "hn:24710366", "on_segment": "n", "need": "n", "reason": "Personal SIEM blog"}
+{"id": "hn:47014479", "on_segment": "y", "need": "n", "reason": "Product launch for startups"}
+{"id": "hn:33899951", "on_segment": "y", "need": "n", "reason": "Product launch for startups"}
+{"id": "stackexchange:security:123539", "on_segment": "n", "need": "n", "reason": "Enterprise SIEM alert question"}
+{"id": "stackexchange:security:19867", "on_segment": "n", "need": "n", "reason": "SIEM database design question"}
+{"id": "github:3754925424", "on_segment": "n", "need": "n", "reason": "Agent tooling bug"}
+{"id": "github:2200732848", "on_segment": "y", "need": "y", "reason": "SCIM server lacks schema validation"}
+{"id": "github:4427822478", "on_segment": "y", "need": "y", "reason": "External IdP users can't generate API keys"}
+{"id": "github:5289860026", "on_segment": "y", "need": "y", "reason": "Per-project membership makes offboarding error-prone"}
+{"id": "github:5131262133", "on_segment": "y", "need": "y", "reason": "Requests SAML SSO instead of shared key"}
+{"id": "github:6525490029", "on_segment": "y", "need": "n", "reason": "Internal identity architecture plan"}
+{"id": "github:5434339119", "on_segment": "n", "need": "n", "reason": "Internal benchmark task"}
+{"id": "github:5575620379", "on_segment": "n", "need": "n", "reason": "Vendor integration proposal"}
+{"id": "github:2198230819", "on_segment": "y", "need": "y", "reason": "Access policies duplicated across ingresses"}
+{"id": "github:3269581365", "on_segment": "y", "need": "y", "reason": "SBOM data not queryable for fleet audits"}
+{"id": "github:3792379594", "on_segment": "n", "need": "n", "reason": "Container file event error"}
+{"id": "github:2177926573", "on_segment": "n", "need": "n", "reason": "Game bug"}
+{"id": "github:832458840", "on_segment": "y", "need": "n", "reason": "Routine vulnerable-dependency bump request"}
+{"id": "github:3062492349", "on_segment": "n", "need": "n", "reason": "Default admin password, not dependency risk subject"}
+{"id": "github:2453077076", "on_segment": "y", "need": "n", "reason": "Routine transitive CVE report"}
+{"id": "github:1118328282", "on_segment": "y", "need": "y", "reason": "Wants standard for dependency advisory impact"}
+{"id": "github:3713058531", "on_segment": "y", "need": "n", "reason": "Routine vulnerable-dependency report"}
+{"id": "github:5113184569", "on_segment": "y", "need": "y", "reason": "Requests signing fingerprints and checksums for releases"}
+{"id": "github:1432819661", "on_segment": "n", "need": "n", "reason": "SIEM alerting how-to question"}
+{"id": "hn:20587193", "on_segment": "y", "need": "n", "reason": "Breach analysis article"}
+{"id": "hn:23889177", "on_segment": "y", "need": "n", "reason": "Tool launch post"}
+{"id": "hn:11254803", "on_segment": "y", "need": "n", "reason": "Tutorial article"}
+{"id": "hn:32121730", "on_segment": "y", "need": "n", "reason": "Open-source release news"}
+{"id": "stackexchange:security:245529", "on_segment": "y", "need": "y", "reason": "Vuln scan noise from JS libraries, unclear triage"}
+{"id": "stackexchange:security:223241", "on_segment": "n", "need": "n", "reason": "Enterprise scanner-SIEM integration question"}
+{"id": "stackexchange:security:128929", "on_segment": "n", "need": "n", "reason": "Enterprise Azure logging question"}
+{"id": "stackexchange:security:130810", "on_segment": "n", "need": "n", "reason": "SOC alert configuration question"}
+{"id": "stackexchange:security:269640", "on_segment": "n", "need": "n", "reason": "Conceptual exfiltration logging question"}
+{"id": "stackexchange:security:83385", "on_segment": "n", "need": "n", "reason": "Personal pentest lab"}
+{"id": "hn:42372596", "on_segment": "y", "need": "n", "reason": "SSO tax article title"}
+{"id": "hn:41442171", "on_segment": "y", "need": "n", "reason": "SSO tax article title"}
+{"id": "stackexchange:security:206445", "on_segment": "y", "need": "n", "reason": "Conceptual PIM vs PAM question"}
+{"id": "github:3050585993", "on_segment": "n", "need": "n", "reason": "Database connection error"}
+{"id": "github:3171681158", "on_segment": "n", "need": "n", "reason": "Telemetry detector improvement"}
+{"id": "github:1056775990", "on_segment": "n", "need": "n", "reason": "Region enablement feature"}
+{"id": "github:2804635362", "on_segment": "y", "need": "y", "reason": "Requests seccomp hardening default"}
+{"id": "github:4632120970", "on_segment": "n", "need": "n", "reason": "Security group rule limit, networking"}
+{"id": "github:5561851538", "on_segment": "y", "need": "n", "reason": "Internal task to configure scanners"}
+{"id": "github:2230687682", "on_segment": "y", "need": "y", "reason": "SBOM tool runs unsafe commands on binaries"}
+{"id": "github:1587952625", "on_segment": "y", "need": "y", "reason": "SBOM scorecard identifier logic suggestion"}
+{"id": "github:4763618244", "on_segment": "n", "need": "n", "reason": "Maintenance status question"}
+{"id": "github:1486825021", "on_segment": "n", "need": "n", "reason": "CNCF sandbox application"}
+{"id": "github:5432972422", "on_segment": "n", "need": "n", "reason": "Internal review backlog"}
+{"id": "github:6523320136", "on_segment": "y", "need": "n", "reason": "Fuzzing CI performance bug"}
+{"id": "github:4422413519", "on_segment": "y", "need": "n", "reason": "Question about transitive dependency vulnerabilities"}
+{"id": "github:4826299360", "on_segment": "y", "need": "n", "reason": "Routine vulnerable-dependency removal request"}
+{"id": "github:5040853209", "on_segment": "y", "need": "y", "reason": "Published devDeps cause audit tool noise"}
+{"id": "github:3236152669", "on_segment": "y", "need": "n", "reason": "Best-practice guidance"}
+{"id": "github:5080226705", "on_segment": "y", "need": "y", "reason": "Security scanner lacks markdown CI report"}
+{"id": "github:3953030324", "on_segment": "n", "need": "n", "reason": "Exporter component donation"}
+{"id": "github:4398376902", "on_segment": "n", "need": "n", "reason": "AI agent governance proposal"}
+{"id": "github:3707772545", "on_segment": "y", "need": "y", "reason": "Honeypot alerts lack severity, noisy"}
+{"id": "github:582620458", "on_segment": "n", "need": "n", "reason": "Failing test"}
+{"id": "github:533780150", "on_segment": "n", "need": "n", "reason": "Correlation rules question, no small-team context"}
+{"id": "hn:28074485", "on_segment": "y", "need": "n", "reason": "CSPM launch"}
+{"id": "hn:28070302", "on_segment": "y", "need": "n", "reason": "CSPM launch"}
+{"id": "hn:26608440", "on_segment": "y", "need": "n", "reason": "Curated resource list"}
+{"id": "hn:20627450", "on_segment": "y", "need": "n", "reason": "Audit release announcement"}
+{"id": "hn:48647802", "on_segment": "y", "need": "n", "reason": "Opinion essay"}
+{"id": "hn:48174478", "on_segment": "y", "need": "n", "reason": "Article on EDR vendor practices"}
+{"id": "hn:31742314", "on_segment": "y", "need": "n", "reason": "Tutorial"}
+{"id": "hn:29002414", "on_segment": "y", "need": "n", "reason": "Service launch"}
+{"id": "hn:42898103", "on_segment": "y", "need": "n", "reason": "SIEM product launch"}
+{"id": "stackexchange:security:225611", "on_segment": "y", "need": "n", "reason": "IAM policy how-to question"}
+{"id": "github:5196362385", "on_segment": "n", "need": "n", "reason": "Approval action bug"}
+{"id": "github:3930551363", "on_segment": "n", "need": "n", "reason": "Private repo install feature"}
+{"id": "github:3168106337", "on_segment": "y", "need": "y", "reason": "Only long-lived service account keys supported"}
+{"id": "github:2394932544", "on_segment": "y", "need": "y", "reason": "Lacks SCIM outbound provisioning"}
+{"id": "github:6419542413", "on_segment": "y", "need": "n", "reason": "Internal IdP integration research"}
+{"id": "hn:42977309", "on_segment": "y", "need": "n", "reason": "Opinion essay on SSO tax"}
+{"id": "hn:37599084", "on_segment": "y", "need": "n", "reason": "Article on SSO tax cost"}
+{"id": "hn:32927242", "on_segment": "y", "need": "n", "reason": "Article on SSO tax backlash"}
+{"id": "github:780827546", "on_segment": "y", "need": "y", "reason": "IAM role permissions too broad, wants granular list"}
+{"id": "github:1029192887", "on_segment": "n", "need": "n", "reason": "Docs gap on app configuration"}
+{"id": "github:1165034832", "on_segment": "n", "need": "n", "reason": "DataSync bug"}
+{"id": "github:1359912880", "on_segment": "n", "need": "n", "reason": "Helm chart version update"}
+{"id": "github:3959060405", "on_segment": "y", "need": "y", "reason": "RBAC requires overbroad cluster-wide secret access"}
+{"id": "github:1952792836", "on_segment": "n", "need": "n", "reason": "SSH connection bug"}

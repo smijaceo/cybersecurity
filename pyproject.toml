@@ -3,7 +3,22 @@ name = "gapfinder"
 version = "0.1.0"
 description = "Find unmet needs in the cybersecurity tools market and stress-test product ideas against critic agents."
 requires-python = ">=3.11"
-dependencies = ["requests>=2.31", "PyYAML>=6.0"]
+dependencies = [
+    "requests>=2.31",
+    "PyYAML>=6.0",
+    "numpy>=1.24",
+    "scikit-learn>=1.3",
+    "hdbscan>=0.8.33",
+    "umap-learn>=0.5.5",
+    "pandas>=2.0",
+    "plotly>=5.0",
+    "tqdm>=4.60",
+    "model2vec>=0.4",
+]
+
+# bertopic is installed with --no-deps: its sentence-transformers dependency pulls in
+# PyTorch (several GB). We use the model2vec backend instead (decision D9).
+# See README / environment setup script.
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]

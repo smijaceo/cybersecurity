@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "github:4003464335",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 1,
+  "title": "refactor(smart_scan): redesign Smart Scan as orchestrator \u2014 discovery as module, streaming executor",
+  "body": "## Background Smart Scan and Service Discovery were built piecemeal \u2014 discovery first, Smart Scan bolted on afterward. The result is a dependency inversion, a data roundtrip through disk, and an executor that is fundamentally incompatible with the TUI goal. This issue defines the target architecture before that debt compounds further. This is a v1.0.0 prerequisite. The TUI (Issue #125) cannot be b",
+  "url": "https://github.com/ColonelPanicX/StratusScanCLI-AWS/issues/137"
+ },
+ {
+  "id": "github:1517408556",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Intrinsics in keys of a map (suggestion: Fn::KvFromMap, Fn::MapFromKv)",
+  "body": "### Community Note * Please vote on this issue by adding a \ud83d\udc4d [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) to the original issue to help the community and maintainers prioritize this request * Please do not leave \"+1\" or \"me too\" comments, they generate extra noise for issue followers and do not help prioritize the request * If you are intereste",
+  "url": "https://github.com/aws-cloudformation/cfn-language-discussion/issues/107"
+ },
+ {
+  "id": "github:208115247",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Looking for credentials via iam-role",
+  "body": "Please consider adding a feature that would allow looking for credentials via iam-role as standart aws cli do.",
+  "url": "https://github.com/alext29/go-priam/issues/2"
+ },
+ {
+  "id": "github:4166298079",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Growth: AI Agent Official Integration Depth Analyzer \u2014 Measure Quality of Official Integrations (CLI, VS Code, Docker, K8s, Terraform) Beyond Plugin Count",
+  "body": "## Problem/Opportunity Current integration trackers focus on **quantity** (how many plugins, how many IDE extensions) but not **depth** or **officiality**. An AI builder evaluating frameworks needs to know: - Does this framework have an **official** VS Code extension (maintained by core team) vs. a community plugin? - Is there an **official** CLI tool with active maintenance? - Are there **officia",
+  "url": "https://github.com/pingcap/ossinsight/issues/2616"
+ },
+ {
+  "id": "github:3590803714",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Add reference architecture for deploying Zitadel Chats on AWS EKS",
+  "body": "## Description The Zitadel Chats repository currently lacks reference examples or documentation for deploying the application on managed Kubernetes services such as Amazon EKS and Google GKE. This gap makes it harder for teams to understand the recommended setup and best practices for production-grade deployments. A reference architecture for AWS (EKS) should be created to demonstrate how Zitadel ",
+  "url": "https://github.com/zitadel/zitadel-charts/issues/483"
+ },
+ {
+  "id": "github:6314332868",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Release oci-seccomp-bpf-hook-1.3.0-2.el10 ALSA-2026:97328",
+  "body": "oci-seccomp-bpf-hook security, bug fix, and enhancement update Severity: Important Description OCI Hook to generate seccomp json files based on EBF syscalls used by container oci-seccomp-bpf-hook provides a library for applications looking to use the Container Pod concept popularized by Kubernetes. Security Fix(es): * net: golang: Go net package: Denial of Service via long CNAME response in Lookup",
+  "url": "https://github.com/AlmaLinux/updates/issues/4164"
+ },
+ {
+  "id": "github:6046033598",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Release oci-seccomp-bpf-hook-1.2.11-3.el10_2 ALSA-2026:89752",
+  "body": "oci-seccomp-bpf-hook security update Severity: Important Description OCI Hook to generate seccomp json files based on EBF syscalls used by container oci-seccomp-bpf-hook provides a library for applications looking to use the Container Pod concept popularized by Kubernetes. Security Fix(es): * net/[http:](http:) golang: Go net/[http:](http:) Unencrypted HTTP/2 connections vulnerable to Denial of Se",
+  "url": "https://github.com/AlmaLinux/updates/issues/3987"
+ },
+ {
+  "id": "github:5240761680",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[NVIDIA] Senior Software Engineer, Fleet Intelligence Backend",
+  "body": "# Senior Software Engineer, Fleet Intelligence Backend at NVIDIA ## Job Details - **Company:** NVIDIA - **Role:** Senior Software Engineer, Fleet Intelligence Backend - **Location:** Seattle, WA - **Salary:** Not specified - **Source:** linkedin - **Apply URL:** https://www.linkedin.com/jobs/view/4457199245 ## Job Description Today, we\u2019re tapping into the unlimited potential of AI to define the ne",
+  "url": "https://github.com/menil/gitemployed-example/issues/8"
+ },
+ {
+  "id": "github:3763213559",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Remote Fulltime - AI company - Backend Lead - $5000",
+  "body": "**Lead BE Engineer [based in HCM]** _Help build the future of AI-powered design. Our product is an AI-powered design platform that helps creative and marketing teams produce brand-consistent content such as social posts, ads, and emails at speed and scale. We\u2019re building the next generation of creative tools where AI and design merge to help teams move faster, stay on brand, and think more creativ",
+  "url": "https://github.com/awesome-jobs/vietnam/issues/4866"
+ },
+ {
+  "id": "github:3970378161",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Add Cordum \u2014 open-source alternative for AI agent orchestration",
+  "body": "## Project - **Name:** Cordum - **Repository:** [github.com/cordum-io/cordum](https://github.com/cordum-io/cordum) - **Alternative to:** LangGraph Cloud, CrewAI Enterprise, Amazon Bedrock Agents (orchestration layer) ## Description Cordum is a self-hostable agent orchestration platform \u2014 the open-source alternative to managed AI agent orchestration services: - **Safety kernel** \u2014 policy evaluation",
+  "url": "https://github.com/RunaCapital/awesome-oss-alternatives/issues/277"
+ },
+ {
+  "id": "github:4255595364",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Professionalize Repository Structure & Documentation",
+  "body": "## Objective Elevate the structure and standards of the Studio Or\u00e9e project to a fully professional level, improving maintainability, scalability, and onboarding for new contributors/clients. --- ### \ud83d\udea9 Key Tasks #### 1. Documentation - **Comprehensive README**: Add clear usage, install, dev, test, and deployment instructions; include screenshots and project goals. - **CONTRIBUTING.md**: Create or ",
+  "url": "https://github.com/Ritoche1/QrcodePdf_list_generator/issues/44"
+ },
+ {
+  "id": "github:6210921454",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Forked PRs always fail secret scans",
+  "body": "## Is your feature request related to a problem? When fork PRs are opened, the secrets scanning never finishes making it hard to merge PRs. For example: `Waiting for secret scan to complete for commit e1957ca.` ## Proposed solution We need to fix secret scanning for forked PRs. ## Alternatives considered None. ## Additional context Does not happen for non-forked PRs.",
+  "url": "https://github.com/cvs-health/flag-controller/issues/34"
+ },
+ {
+  "id": "github:6282851819",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Research-grade audit: evaluation validity, CI security, scorer oracle tests & v0.5+ roadmap",
+  "body": "# Research-quality audit and v0.5+ hardening roadmap **Scope:** [ai-research](https://github.com/alxnko/ai-research) audited at main `2cd5be29ebdd2b2653797d8e929ab0857df23591` (2026-11-09). **No v0.4, EXP-2 prompt, task, runner or scorer changes during the registered 36-attempt EXP-2.** All experiments complete on frozen artifacts before implementing this backlog. User's laptop-local runs are not ",
+  "url": "https://github.com/alxnko/ai-research/issues/7"
+ },
+ {
+  "id": "github:3877605807",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Add Trivy for IaC/container scanning; reassess Grype against the deployed stack",
+  "body": "Narrowed. The evaluation in the comment below stands and should not be re-run - it is thorough and its comparison of Trivy against Grype is sound. What has changed is the baseline it was measured against. ## Amendment to the original verdict The evaluation concluded \"use both\": Trivy as the primary scanner, Grype as a secondary layer for its EPSS/KEV risk scoring. That verdict did not account for ",
+  "url": "https://github.com/DiamondLightSource/smartem-devtools/issues/155"
+ },
+ {
+  "id": "github:4746683006",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Explore container security scanning signals for update candidates",
+  "body": "## Problem WUDup can plan container image updates, but it does not currently tell users whether an update candidate has reported security issues. Before adding security-oriented update delay behavior, we should decide whether this repository can reliably flag containers with relevant vulnerability or advisory signals. ## Research questions - Which data sources are viable for container security sig",
+  "url": "https://github.com/magrhino/wudup/issues/410"
+ },
+ {
+  "id": "github:5041451504",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Learning topic: The detect-secrets CI gate \u2014 plugin/filter pipeline and the pragma-vs-baseline design",
+  "body": "## Overview Every push and PR to `main` runs a dedicated `secrets` job in CI (`.github/workflows/ci.yml`) that executes `pre-commit run detect-secrets --all-files` and blocks merge on failure. This repo has deliberately configured detect-secrets in an unusual way: `.secrets.baseline` is checked in but its `results` map is *permanently empty* \u2014 known false positives are marked inline at the source ",
+  "url": "https://github.com/JohnFattore/FattoreStreet/issues/171"
+ },
+ {
+  "id": "github:4837502450",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Add Codex PR workflow guardrails and local quality gates",
+  "body": "## Summary Add repository-level guardrails and local quality gates so that Codex can safely implement issues, push branches, and create PRs with much shorter instructions. The goal is to move recurring instructions out of ChatGPT prompts and into the repository. After this issue, a normal Codex instruction should be as short as: ```md Implement Issue #123. Follow AGENTS.md, the issue body, and the",
+  "url": "https://github.com/Chasoso/tableau-chat-extension/issues/233"
+ },
+ {
+  "id": "github:4314882080",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "\ud83c\udf10 Global Tech Briefing - 2026-04-23",
+  "body": "# \ud83c\udf10 Global Tech Intelligence Briefing - 2026-04-23 **Date:** 2026-04-23 **Generated At:** 09:14 **Data Sources:** Hacker News, GitHub Trending, ArXiv --- ## \ud83d\udcf0 Hacker News (Top Stories) ### 1. [I am building a cloud](https://crawshaw.io/blog/building-a-cloud) \ud83d\udd25 309 | \ud83d\udd52 2026-04-23 04:44 \ud83d\udcd6 Summary: Here's an analysis of the provided article, focusing on technical insights and practical e... Here's an",
+  "url": "https://github.com/AtomChen0425/Global_Trends/issues/66"
+ },
+ {
+  "id": "github:5085924927",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Template customisation, deployment topology rework, and CI/CD honesty",
+  "body": "> **Status: delivered.** Shipped as #33 (agent config and conventions), #34 (docs/CI honesty and fork safety), #35 (two topologies), #36 (APP_NAME and make init), #37 (make check). This body has been updated to match what was actually built \u2014 see \"Changes since the original spec\" at the end for what moved and why. ## Problem Statement The skeleton was right \u2014 build-once promotion, immutable `:sha`",
+  "url": "https://github.com/aj006600/fullstack-github-template/issues/32"
+ },
+ {
+  "id": "github:2913536700",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[java] cdxgen fails to generate an sbom while a commercial tool does",
+  "body": "Received a report that cdxgen fails to generate an SBOM for a repository, while a commercial tool works and produces results. Although reports like these are not unusual, what intrigued me was that this particular project fails to build correctly (*), has no lock files (thanks, Maven!), and yet the commercial tool displays an SBOM with numerous components (around 250) and a dependency tree. How? T",
+  "url": "https://github.com/cdxgen/cdxgen/issues/1677"
+ },
+ {
+  "id": "github:2186376927",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Trivy Operator Sbom Reports on Dependency track visualisation based on Container",
+  "body": "I would like to analyze the SBOM reports generated by the Trivy operator in Dependency Track. However, I am encountering difficulty in associating these reports with their respective containers, as the information indicating the source container is not readily apparent within the Dependency Track tool. Please let me know is there a way to visualise the reports on dependency track which is generate",
+  "url": "https://github.com/takumakume/sbomreport-to-dependencytrack/issues/11"
+ },
+ {
+  "id": "github:5099539474",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Findings that fire once per line inflate counts; add an occurrences model instead of deduping (measured: naive dedupe hides 3 of 4 secrets)",
+  "body": "Split out of #768. #768's immediate fix (SC1017 -> INFO) stops one rule distorting severity, but it does not address the general shape: **a rule that fires once per line produces N findings for what a human reads as one problem.** The obvious fix \u2014 collapse findings sharing `(tool, ruleId, file)` \u2014 was measured on a real scan and **is not safe**. ## Measurement: Juice Shop, `fast` profile, 234 fin",
+  "url": "https://github.com/jimmy058910/jmo-security-repo/issues/770"
+ },
+ {
+  "id": "github:6276289820",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "OPN-0006: Migrate the repo task surface to just and retire Makefiles and ad-hoc scripts",
+  "body": "Legacy ID: OPN-0006 - Created: 2026-08-28T19:05:00Z - Updated: 2026-08-29T14:04:00Z - Original status: Done - Legacy type: chore - Board file: `backlog/tasks/opn-0006 - Migrate-the-repo-task-surface-to-just-and-retire-Makefiles-and-ad-hoc-scripts.md` ## Description Fleet-wide migration of the repo task surface from `make` + ad-hoc shell to a single top-level `justfile`, per the frozen fleet justfi",
+  "url": "https://github.com/rknightion/opnsense2otel/issues/931"
+ },
+ {
+  "id": "github:5610492843",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Security triage review: 2026-09-28 (part 1/6)",
+  "body": "Automated Flatcar security-triage review batch `36386759587`, part 1 of 6. ## Run metadata - Analyzed (advisory) repository: `flatcar/security-triage` - Review repository: `flatcar/security-triage` - Workflow run: https://github.com/flatcar/security-triage/actions/runs/36386759587 - Commit: `497a3b79ec135bce0ecbf9ae4d2e6c58aa9d5090` - Generated at: 2026-09-28T06:45:04.404389+00:00 - Discovery repo",
+  "url": "https://github.com/flatcar/security-triage/issues/423"
+ },
+ {
+  "id": "github:5005708152",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "SBOM/CVE gate scans amd64 only, but images publish amd64 + arm64",
+  "body": "## Problem `.github/workflows/build-and-push-images.yml` publishes multi-arch images: ```yaml platforms: linux/amd64,linux/arm64 ``` `.github/workflows/sbom-and-scan.yml` builds with `load: true` and no `platforms:` key, so it builds **only the runner's native architecture \u2014 amd64**. The arm64 variants that ship to users are never scanned for vulnerabilities or licence violations, and no SBOM is p",
+  "url": "https://github.com/actyze/dashboard/issues/250"
+ },
+ {
+  "id": "github:5118609118",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "refactor(ci): simplify dependency-vuln-gate change detection",
+  "body": "## Summary Simplify `.github/workflows/dependency-vuln-gate.yml` so the pre-merge SBOM/grype gate stays honest relative to the release publish scan without maintaining a large, fragile dependency-manifest allowlist. Prefer always scanning (or a tiny repo-specific filter) over enumerating every package-manager lockfile shape. ## Problem #1667 / #1675 added a pre-merge mirror of the release `sbom` j",
+  "url": "https://github.com/lgtm-hq/py-lintro/issues/2001"
+ },
+ {
+  "id": "github:5206804249",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Security & enterprise-readiness follow-ups (tracking)",
+  "body": "## Summary Tracking issue for a holistic security / enterprise-readiness review of Areev, done conversationally and grounded directly against the code (not just the docs). Filed as individual issues so each can be picked up, scoped, and closed independently; this issue exists to keep them visible as a set. Two framings drove the review: 1. **Is the current security posture actually what the docs c",
+  "url": "https://github.com/AreevAI/areev/issues/83"
+ },
+ {
+  "id": "github:5420790641",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[software-development-practices:nist-ssdf] github/gh-aw-firewall repository guidance",
+  "body": "Advisory only: this repository-observable review is non-binding and does not prove security, compliance, certification, endorsement, or SSDF conformance. The repository already demonstrates several strong SSDF-aligned controls, including pinned GitHub Actions, CodeQL, dependency auditing, Dependabot, signed release images, and SBOM attestation. The highest-confidence gap I found is that pull reque",
+  "url": "https://github.com/githubnext/gh-cao/issues/9427"
+ },
+ {
+  "id": "github:4092135983",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "research(P2): Oneleet/CISO-assistant security compliance tooling",
+  "body": "## Security Compliance Automation **Priority:** P2 (research \u2014 not on publication gate pathway) ### Context Academic project that could transition to commercial use. Need security compliance tooling that scales from free (academic) to enterprise. ### Options - **CISO Assistant** (github.com/intuitem/ciso-assistant-community): Open-source, free, can run as GitHub Action - **Oneleet**: Professional ",
+  "url": "https://github.com/petteriTeikari/vascadia/issues/850"
+ },
+ {
+  "id": "github:5127105111",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "\u4ea4\u4ed8 PlatPulse Phase 1 \u591a Node \u76d1\u63a7 MVP\uff08\u5305\u542b\u5fc5\u8981\u7684 Phase 0 \u57fa\u7840\uff09",
+  "body": "## Problem Statement PlatPulse \u5f53\u524d\u4ecd\u662f\u8bbe\u8ba1\u57fa\u7ebf\uff0c\u5c1a\u6ca1\u6709\u53ef\u8fd0\u884c\u7684 Rust workspace\u3001Agent\u3001Server \u6216 WebUI\u3002PlatON \u8282\u70b9\u8fd0\u7ef4\u4eba\u5458\u56e0\u6b64\u8fd8\u4e0d\u80fd\u628a\u4e00\u53f0 Host \u4e0a\u591a\u4e2a\u72ec\u7acb PlatON Node \u7684 Host\u3001process\u3001RPC\u3001sync\u3001consensus\u3001block \u4e0e transaction \u89c2\u6d4b\u53ef\u9760\u5730\u6c47\u805a\u5230\u4e00\u4e2a Server\uff0c\u4e5f\u4e0d\u80fd\u901a\u8fc7\u9ed8\u8ba4\u79c1\u6709\u3001\u540c\u65f6\u9002\u914d\u684c\u9762\u4e0e\u79fb\u52a8\u7aef\u7684\u754c\u9762\u67e5\u770b\u8fd9\u4e9b\u72b6\u6001\u3002 \u8fd9\u4e2a\u9996\u4e2a\u53ef\u7528\u7248\u672c\u7684\u96be\u70b9\u4e0d\u53ea\u662f\u201c\u91c7\u96c6\u5e76\u663e\u793a\u6570\u636e\u201d\u3002\u5982\u679c\u4e00\u5f00\u59cb\u6ca1\u6709\u5efa\u7acb\u6b63\u786e\u8fb9\u754c\uff0c\u7cfb\u7edf\u5f88\u5bb9\u6613\u628a\u591a\u4e2a Node \u7684\u94fe\u72b6\u6001\u5408\u5e76\u5230 Agent \u7ea7\u3001\u5728 Collector \u5931\u8d25\u65f6\u6e05\u7a7a last-good\u3001\u5728\u91cd\u8bd5\u6216\u91cd\u540c\u6b65\u65f6\u91cd\u590d\u7d2f\u8ba1\u5386\u53f2\u3001\u5728 Agent/Server \u91cd\u542f\u540e\u7834\u574f identity/sequence\u3001\u628a private Node \u6cc4\u9732\u5230",
+  "url": "https://github.com/mowind/PlatPulse/issues/1"
+ },
+ {
+  "id": "github:3942474388",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[CI/CD Assessment] CI/CD Pipelines and Integration Tests Gap Assessment",
+  "body": "## \ud83d\udcca Current CI/CD Pipeline Status The repository has a **mature and comprehensive CI/CD infrastructure** with 15 traditional workflows and 27+ agentic workflows. The system demonstrates good coverage across build verification, testing, security scanning, and code quality checks. **Health Summary:** - \u2705 **15 traditional workflows** (build, test, lint, security scans) - \u2705 **27+ agentic workflows** ",
+  "url": "https://github.com/github/gh-aw-firewall/issues/859"
+ },
+ {
+  "id": "github:5341417650",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Credits are missing in recent releases",
+  "body": "We are in process of upgrade from 0.83.0 to 0.115.0 and noticed that nw.Window.open(\"chrome://credits/\") no longer provides actual credits. This is how it looked in older versions: And this is how it looks now: What we are really trying to do is to generate some BOM documents as part of our build process, i.e. using something like CycloneDX or SPDX (https://www.interlynk.io/resources/cyclonedx-vs-",
+  "url": "https://github.com/nwjs/nw.js/issues/8384"
+ },
+ {
+  "id": "github:1786445700",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Cannot get name/version from",
+  "body": "Receiving the above error after running: .\\cheque-windows.386-v0.1.8.exe -cheque-scan --export-sbom It appears to be failing to generate the name/version information, but it matches the dependencies i'd expect to see. What is cheque looking for, is there a way around this error?",
+  "url": "https://github.com/sonatype-nexus-community/cheque/issues/45"
+ },
+ {
+  "id": "github:1147183086",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Feature]: Embed and have the ability to display SBOM information in enarx binary.",
+  "body": "### Is there an existing issue for this? - [X] I have searched the existing issues ### Description It would be useful to embed the SBOM information during the build process and provide the user with a way to display that information using either: - `enarx --sbom [--format= ]` - `enarx --versions --all [--format= ]` ### Acceptance Criteria - [ ] Generate SBOM information prior to commencing build -",
+  "url": "https://github.com/enarx/enarx/issues/1450"
+ },
+ {
+  "id": "github:3716844467",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Fix releasing with go releaser",
+  "body": "Here is example, we can remove cosign ``` name: Release on: push: branches: # Changed from tags to branches - main # Permissions required for the workflow steps permissions: contents: write # To create releases, upload artifacts, and allow semantic-release to push tags/commits packages: write # To push Docker images to GHCR id-token: write # needed for keyless signing attestations: write # needed ",
+  "url": "https://github.com/Belphemur/CBZOptimizer/issues/147"
+ },
+ {
+  "id": "github:6326524583",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[SIEP] Machine-readable support period: link to a CLE (ECMA-428) document",
+  "body": "### Proposal Summary Add an optional `repository.release.support-period` list that points to machine-readable documents giving each release's end-of-support date, keyed by the component's PURL, such as a Common Lifecycle Enumeration (CLE, ECMA-428) document, next to the prose [`project.documentation.support-policy`](https://github.com/ossf/security-insights/blob/main/spec/schema.md#projectdocument",
+  "url": "https://github.com/ossf/security-insights/issues/227"
+ },
+ {
+  "id": "github:5064185975",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "dependency-check silently falls back to a stale, unrefreshed vulnerability DB when NVD_API_KEY is u\u2026 (dependency_check.py)",
+  "body": "**Location:** `skill/scripts/tools/dependency_check.py:25` **Severity (impact if true):** LOW **Evidence:** `advisor_confirmed` **Confidence:** POSSIBLE **Found by:** agent:panel_review \u00b7 model: claude-sonnet-5 ## What was found When `NVD_API_KEY` is unset, `invoke()` appends `--noupdate`, relying entirely on 'a pre-seeded DB inside the image or on the host' (per the adapter's own comment). Neithe",
+  "url": "https://github.com/panopticon-scanner/panopticon/issues/93"
+ },
+ {
+  "id": "github:4417229703",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "llama_index-0.14.12-py3-none-any.whl: 8 vulnerabilities (highest severity is: 7.5)",
+  "body": "Vulnerable Library - llama_index-0.14.12-py3-none-any.whl Sample Path to Dependency File: /02_REFS_PROTOTYPES/ten-framework/ai_agents/agents/ten_packages/extension/file_chunker/requirements.txt Path to vulnerable library: /tmp/ws-ua_20250722110617_FPIECS/python_LERNXC/202507221129061/env/lib/python3.9/site-packages/banks-2.2.0.dist-info,/tmp/ws-ua_20260118032923_OOLFYI/python_DDQYST/20260118034352",
+  "url": "https://github.com/AReid987/aigency-v1.0.0/issues/252"
+ },
+ {
+  "id": "github:5867375891",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[software-development-practices:nist-ssdf] github/gh-aw-mcpg repository guidance",
+  "body": "This repository already shows several strong SSDF-aligned controls, but the highest-confidence repository-observable gap is the absence of an active security analysis gate for Go code and dependency changes in pull requests and releases. **Action:** Assign this issue to Copilot to add a PR-time security analysis gate for `github/gh-aw-mcpg` and consider this accepted when clean pull requests pass,",
+  "url": "https://github.com/githubnext/gh-cao/issues/18113"
+ },
+ {
+  "id": "github:4013594670",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[CI/CD Assessment] CI/CD Pipeline Assessment: Gaps and Recommendations",
+  "body": "## \ud83d\udcca Current CI/CD Pipeline Status This repository has a **mature and well-structured CI/CD pipeline** with 44 standard YAML workflows and 28 compiled agentic Markdown workflows (total: 72 workflow files). The pipeline covers building, testing, security scanning, and AI-powered quality gates. **Pipeline Health**: The pipeline is active and recently expanded (PR #1048 added non-chroot integration t",
+  "url": "https://github.com/github/gh-aw-firewall/issues/1134"
+ },
+ {
+  "id": "github:3634476141",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "langroid-0.1.226-py3-none-any.whl: 74 vulnerabilities (highest severity is: 10.0) reachable - autoclosed",
+  "body": "Vulnerable Library - langroid-0.1.226-py3-none-any.whl Harness LLMs with Multi-Agent Programming Library home page: https://files.pythonhosted.org/packages/7e/61/befa4947e17a3d51ea9104161a87539d3c712f1f8423cc79b16baf1f7b10/langroid-0.1.226-py3-none-any.whl Path to dependency file: /examples/docqa/streamlit-app/requirements.txt Path to vulnerable library: /tmp/ws-ua_20260309120600_AZFDTT/python_HDT",
+  "url": "https://github.com/Yuliya65/Langroid/issues/5"
+ },
+ {
+  "id": "github:1752624275",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Vulnerability in http-cache-semantics dependency",
+  "body": "Hello, Thank you for this tool. There is a high security vulnerability in http-cache-semantics <4.1.1 and for an unknown reason using an \"overrides\" in the root package.json file of the CDK project doesn't force the update the package.",
+  "url": "https://github.com/cdklabs/cdk-ecr-deployment/issues/233"
+ },
+ {
+  "id": "github:2129624551",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Evaluate RUSTSEC-2024-0013 for our operators",
+  "body": "We use the built crate, which pulls in libgit2 which has a vulnerability against it - issue details can be found at the bottom. The fix is to simply update built to the latest version. Unfortunately, 0.7 contains a breaking change, because the Option struct was removed, which could previously used to configure the crate. This should now be done via feature flags instead - but for an option that we",
+  "url": "https://github.com/stackabletech/issues/issues/526"
+ },
+ {
+  "id": "github:3361490891",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Research and evaluate Trivy + Semgrep as open-source replacements for Snyk SAST",
+  "body": "# Research and evaluate Trivy + Semgrep as open-source replacements for Snyk SAST **Project:** Retro Text Transformer **Epic:** Security Tooling Migration **Story Points:** 3 **Time Estimate:** 5-6 hours **Risk Level:** Low ## Description Research and evaluate the feasibility of replacing Snyk with a combination of Trivy and Semgrep as open-source SAST alternatives. This evaluation will determine ",
+  "url": "https://github.com/masriamir/py-txt-trnsfrm/issues/49"
+ },
+ {
+  "id": "github:5069863552",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Security] [CRITICAL] Upgrade Log4j-core to 2.17.1+ to remediate CVE-2021-45046 remote code execution",
+  "body": "> [!NOTE] > This issue was generated by the SRX Security Agent. **Severity:** CRITICAL **Type:** Java ## Problem Description CVE-2021-45046 is a critical remote code execution vulnerability in Apache Log4j 2.15.0 used in non-default configurations. The vulnerability allows attackers to execute arbitrary code by crafting malicious JNDI lookup strings in log messages. With an EPSS score of 0.99977 (",
+  "url": "https://github.com/newrelic-copilot/FuzzyService/issues/97"
+ },
+ {
+  "id": "github:2333255146",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Vulnerable dependencies found in latest version",
+  "body": "**Describe the bug** Package is using old versions of child dependencies, which have vulnerability of very high severity. One of the package is tough-cookie whose version used is V3.0.1 which is vulnerable , and Its minimum version that needs to be upgraded is to V4.1.3 **To Reproduce** Steps to reproduce the behavior: 1. Install the npm package 2. Observe the package-lock.json file with the child",
+  "url": "https://github.com/nhn/tui.image-editor/issues/922"
+ },
+ {
+  "id": "github:1277210329",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Move away from jimp",
+  "body": "jimp was last updated roughly 2 years ago, and recently, there's been a security vulnerability found in one of it's dependencies. according to [this conversation](https://github.com/oliver-moran/jimp/issues/1079) on their repo, the author needs new maintainers. vector (at least, originally) uses image processing to color and/or rotate icon images which makes assets a bit easier to set up. iirc, ea",
+  "url": "https://github.com/sharkaccino/vector-bot/issues/11"
+ },
+ {
+  "id": "github:5528278884",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Manual update ready for review \u2014 2026-09-21",
+  "body": "An automated update to the Superpowers + GStack manual is ready for review. **PR:** https://github.com/Paretofilm/superpowers-gstack/pull/87 ## GStack updated **New version:** v1.87.4.0 (a6b3a57) ### Commits ``` # Changelog ## [1.87.4.0] - 2026-09-16 **Failed checks stay failed.** **Health scores show what actually ran.** `/health` now keeps each checker's exit status and counts diagnostics from i",
+  "url": "https://github.com/Paretofilm/superpowers-gstack/issues/88"
+ },
+ {
+  "id": "github:3424745175",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Implement dependency and container vulnerability scanning across all services",
+  "body": "## Objective Add automated security vulnerability scanning for open source dependencies and container images across all Figure Collector services. ## Current State - \u2705 SAST with SonarCloud - \u274c No dependency vulnerability scanning - \u274c No container image scanning - \u274c No automated PRs for security updates ## Proposed Solution (Free/Low-Cost) ### 1. GitHub Dependabot (FREE) - Automated dependency upda",
+  "url": "https://github.com/rpgoldberg/figure-collector-infra/issues/5"
+ },
+ {
+  "id": "github:2947023408",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Next stable release",
+  "body": "Hi team, when is the next stable release planned? I am looking for a stable version that does not depend on \"prompt\" due to vulnerability in its transitive dependency \"revaludator\".",
+  "url": "https://github.com/db-migrate/node-db-migrate/issues/837"
+ },
+ {
+  "id": "github:4426269995",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Security: Add HSTS header and remove unsafe-inline from CSP in frontend nginx.conf",
+  "body": "## Summary Harden the Vue 3 frontend nginx configuration with two critical security headers: `Strict-Transport-Security` (HSTS) and a refined Content Security Policy that eliminates `unsafe-inline` from `script-src`. This is a direct follow-up from the security roadmap and ensures the frontend container is production-ready and resistant to protocol downgrade and XSS injection attacks. ## Business ",
+  "url": "https://github.com/ludovit-scholtz/capitalism/issues/432"
+ },
+ {
+  "id": "github:3754811270",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Add support for Azure Managed Identity authentication with Service Bus in ARM template",
+  "body": "Title: Add support for Azure Managed Identity authentication with Service Bus in ARM template Body: Currently, the ARM template provisions Service Bus access using connection strings, which requires storing and managing secrets. To align with best practices for secure, passwordless authentication, it would be great to add support for Azure Managed Identity as an alternative authentication method. ",
+  "url": "https://github.com/Alan-Jowett/CoPilot-For-Consensus/issues/525"
+ },
+ {
+  "id": "github:3882545718",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Add Module Authoring Patterns and Security Gap Documentation to terraform.instructions.md (2026-02-01 Part 4)",
+  "body": "# Add Module Authoring Patterns and Security Gap Documentation to terraform.instructions.md ## Summary The `terraform.instructions.md` file has gaps in module authoring patterns and security documentation that affect users building reusable modules and secure CI/CD pipelines. This issue addresses missing guidance on provider configuration for modules, module-level dependencies, and sensitive data ",
+  "url": "https://github.com/franklesniak/copilot-repo-template/issues/314"
+ },
+ {
+  "id": "github:3572227319",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Port Existing \"Verse\" repo to new NextJS \"ReVerse\" repo",
+  "body": "We have an existing application at https://github.com/nihilok/Verse which is built using React and Python, which we'd like to port in its entirety to this repo which is full-stack NextJS. While porting over, we can make some improvements; the main thing will be making use of the users/authentication/rbac model we have in this new app to segregate user insights and chats by user, and (eventually) a",
+  "url": "https://github.com/nihilok/ReVerse/issues/1"
+ },
+ {
+  "id": "github:3243201521",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Add JSON output format option to test command for structured test results",
+  "body": "### Describe the ideal solution Add a `--output-format` option to the `test` command that allows users to specify either \"text\" (default) or \"json\" output format. When JSON format is selected, the command should output a structured JSON response containing: - Summary statistics (total tests, passed, failed, invalid, skipped) - Detailed test results with individual test outcomes, function results, ",
+  "url": "https://github.com/panther-labs/panther_analysis_tool/issues/634"
+ },
+ {
+  "id": "github:4392297376",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Feature Request: AI-Driven \"Staging Demo\" Environments via Automated PR Generation & Infrastructure Orchestration",
+  "body": "*** ### Feature Request: AI-Driven \"Staging Demo\" Environments via Automated PR Generation & Infrastructure Orchestration **Is your feature request related to a problem? Please describe.** Product Managers, Solutions Architects, and Engineers often need to spin up on-demand \"staging demo\" environments with specific feature changes for customers. Currently, this requires manual intervention. We nee",
+  "url": "https://github.com/forge-sdlc/forge/issues/28"
+ },
+ {
+  "id": "github:4548883283",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[P1] Add Kubernetes Deployment Guide with Manifests and Helm Charts",
+  "body": "Labels: documentation, P1, infrastructure, kubernetes, devops Bug Description No documentation exists for deploying XDC nodes on Kubernetes, a standard requirement for production infrastructure in modern cloud-native environments. DevOps teams cannot implement containerized XDC deployments without creating configurations from scratch. Competitor Benchmark: - Ethereum: Kubernetes deployment guides ",
+  "url": "https://github.com/OpenScanAI/XDCDocs/issues/141"
+ },
+ {
+  "id": "github:4610893874",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-06-08",
+  "body": "# AI CLI Tools Community Digest 2026-06-08 > Generated: 2026-06-08 07:18 UTC | Tools covered: 9 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCod",
+  "url": "https://github.com/bianzhilong2-ctrl/agents-radar/issues/23"
+ },
+ {
+  "id": "github:3088719476",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[OPEN PROPOSAL] NexsoQurity:Decentralized AI powered wallet security platform",
+  "body": "# AR.IO Foundation Open Grant Proposal **Project Name:** NexsoQurity ![Image](https://github.com/user-attachments/assets/fdafa45d-7f31-43dd-bb5a-eefaad0e9df6) **Team/Individual Name:** Nexsosphere Technologies **Contact Information:** nexsosphere.technologies@gmail.com **ARIO Payment Address:** Umb4RzWSU2ZktbRQPmfKQ_QLe28iGf57UPzycyXVqd0 **Total Funding Amount Requested:** $25,000 **Focus Area(s):",
+  "url": "https://github.com/ar-io/ar-io-grants/issues/22"
+ },
+ {
+  "id": "github:4623410335",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "\u7a0d\u540e\u9605\u8bfb\uff1aRunning an AI-native engineering org | Claude",
+  "body": "## \u6765\u6e90 - \u539f\u6587: https://claude.com/blog/running-an-ai-native-engineering-org - \u5185\u5bb9\u6765\u6e90: https://claude.com/blog/running-an-ai-native-engineering-org - \u6dfb\u52a0\u65f6\u95f4: 2026-06-04T18:51:23+08:00 - \u72b6\u6001: \u672a\u8bfb - Safari \u6458\u8981: How the Claude Code engineering team\u2019s processes and structure changed once agentic coding became the default way of working. ## \u5185\u5bb9 [ ](https://claude.com) - Meet Claude Products - [ Claude ](/product/o",
+  "url": "https://github.com/FeeiCN/FEEI.CN/issues/146"
+ },
+ {
+  "id": "github:294206221",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Arctic Wolf Networks - Entry Level Software Developer, Web Services Team - Waterloo",
+  "body": "### Location - Waterloo, Ontario ## What You'll Do - Work with team members to deliver customer-facing and internal services. - Participate in the full software development life cycle. - Build well-designed, testable, efficient, secure code. - Produce specifications and determine operational feasibility. - Integrate software components into a fully functional software system. - Document and mainta",
+  "url": "https://github.com/TechnologyMasters/jobs/issues/58"
+ },
+ {
+  "id": "github:3988531114",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[forcepoint_web.logs] Add capability to receive Forcepoint logs over syslog",
+  "body": "### Integration Name Forcepoint Web Security [forcepoint_web] ### Dataset Name forcepoint_web.logs ### Integration Version 1.13.0 ### Agent Version 9.2.5 ### OS Version and Architecture Elastic ECE ### User Goal In the docs https://www.elastic.co/docs/reference/integrations/forcepoint_web there is a link which gives a 404 => https://www.websense.com/content/support/library/web/hosted/admin_guide/s",
+  "url": "https://github.com/elastic/integrations/issues/17570"
+ },
+ {
+  "id": "github:4981622236",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Every tool must be audited by construction, not by remembering to add a scope",
+  "body": "Part of #6, and the cross-repo form of rustpanosmcp#55. ## Observed On a fresh install, an authenticated `tools/call` for panos's `list_devices` produced **no** audit event \u2014 only an HTTP access line. `get_panos_config` on the same server produced a full one. junos's `get_router_list`, the direct analogue of `list_devices`, is audited. So the two servers disagree about which tools are worth auditi",
+  "url": "https://github.com/mechubsec/mecmcp/issues/32"
+ },
+ {
+  "id": "github:1239395072",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Dsiem-Tools",
+  "body": "Hi Guys, I've been exploring this SIEM for a while and I only found that there is only a Dsiem UI web interface to show the alarm list. Is there any other page that Dsiem have to manage all the configurations by GUI? I found the dsiem-tools on the download page and is there a GUI web face for that ? so we can easily manage the directive tuning for the events or tickets? Regards, Aywa cc : @mmta @r",
+  "url": "https://github.com/defenxor/dsiem/issues/404"
+ },
+ {
+  "id": "github:788889963",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Remove link to the IRC channel on the website!",
+  "body": "### Is your feature request related to a problem? Please describe. We currently link to the #codeforiati IRC channel on the [get involved page](https://codeforiati.org/get-involved/), but we don\u2019t use it. I don\u2019t think I\u2019m going to start using it, so I don\u2019t think we should link to it. Additionally, we link to [IATI Discuss](https://discuss.iatistandard.org/latest), which is now read-only. We shou",
+  "url": "https://github.com/codeforIATI/codeforiati.github.io/issues/49"
+ },
+ {
+  "id": "github:5652363834",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "strategy: validate agent execution assurance thesis",
+  "body": "## Status CANDIDATE / EVIDENCE-BOUND / NO PUBLIC REPOSITIONING / NO PRODUCTION CHANGE Date: 2026-09-30 ## Objective Test whether RUMBO can converge existing work into a differentiated **AI agent execution assurance** layer rather than competing as a generic agent-security, IAM, MCP gateway, or CRM vendor. ## Reconciled thesis The defensible wedge is not generic \"control plane for agents\". Microsof",
+  "url": "https://github.com/RUMBO-IA/Rumbo/issues/166"
+ },
+ {
+  "id": "github:4569516673",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[REVIEW] detection-engineering: add backend conversion and field-mapping gates",
+  "body": "## Skill Being Reviewed **Skill name:** `detection-engineering` **Skill path:** `skills/secops/detection-engineering/` ## False Positive Analysis **Benign rule that can look production-ready before backend validation:** ```yaml title: Suspicious PowerShell Encoded Command Execution logsource: category: process_creation product: windows detection: selection: Image|endswith: '\\powershell.exe' Comman",
+  "url": "https://github.com/UnitOneAI/SecuritySkills/issues/73"
+ },
+ {
+  "id": "github:5111481955",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Architecture][Operations]: Separate startup, liveness, readiness, draining, and deep diagnostics",
+  "body": "## Summary Jacobian has process supervision and a strong authenticated deployment smoke, but it has no cheap, typed operational-health contract that distinguishes: - **startup** \u2014 the process has not yet finished configuration, state, migration, credential, catalog, or ownership initialization; - **liveness** \u2014 the process/event loop is making progress and should not be restarted; - **readiness** ",
+  "url": "https://github.com/morluto/jacobian/issues/1100"
+ },
+ {
+  "id": "github:6523777180",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[New Service] SandBase Sandbox",
+  "body": "Disclosure: I am David Li, founder of SandBase (AXIOMCLOUD PTE. LTD.). This proposal is only for the hosted SandBase Sandbox, not a generic \u201cSandBase platform\u201d entry. It is distinct from the already-listed [SandBase CLI](https://github.com/haoruilee/awesome-agent-native-services/blob/main/services/tool-access-and-integration/sandbase-cli.md) (#103) and [SandBase Harness](https://github.com/haoruil",
+  "url": "https://github.com/haoruilee/awesome-agent-native-services/issues/362"
+ },
+ {
+  "id": "github:3111538374",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[ResponseOps][Alerting] Support RuleOverrides at the individual rule level",
+  "body": "Currently its not possible to enable timeout for a single rule given that the ruleTypeOverrides is based on rule TYPE, NOT individual rule ID. For example the type for Zscaler alert is: \"alertTypeId\": \"siem.newTermsRule\". However, there are several rules using this same type. Documentation link - https://www.elastic.co/guide/en/kibana/current/alerting-production-considerations.html#_rules_that_run",
+  "url": "https://github.com/elastic/kibana/issues/222275"
+ },
+ {
+  "id": "github:1952388360",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "High Availability Wazuh-Opensearch in Kubernetes",
+  "body": "Version: 4.4.5 Environment: Kubernetes self managed Hello, I am renewing certs in wazuh kubernetes for opensearch and trying to provide HA to Opensearch from wazuh cluster, URL etc... Everything works under \"demo\" domain and custom domain but I am having problem trying to provide HA to Opensearch Cluster. Therefore I generated a LB service for 9200 and add new Certs with SAN cert domains Basically",
+  "url": "https://github.com/wazuh/wazuh-kubernetes/issues/491"
+ },
+ {
+  "id": "github:4379846194",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Audit-log table: chronological-by-addition ordering \u2014 alphabetise or group by target type",
+  "body": "## Summary `docs/user-manual/audit-log.md`'s \"Logged actions\" table is implicitly chronological \u2014 every PR appends rows at the bottom. The table is currently ~30 rows and growing. For SIEM operators looking up an action by name, scanning a chronologically-ordered table is harder than scanning an alphabetised one. The table also doesn't group related actions together (e.g., `policy.*`, `guaranteed_",
+  "url": "https://github.com/DevNullLtd/Yuzu/issues/858"
+ },
+ {
+  "id": "github:1317521808",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "patterns/{ecs-v1,legacy}/grok-patterns: SYSLOGFACILITY pattern is misleading",
+  "body": "While looking into a [test case for a PR in elastic/beats](https://github.com/elastic/beats/pull/32025/files#diff-8b97ff559004e7bec55c4e4c88d8b33fda6069a2dc60497be1412c8115827dca) (not actually a binary file, just a file with null line termination, relevant diff quoted here for convenience): ```diff - Aug 14 2019 14:02:38 platformSettingEdit.cgi: siem-management: admin@10.0.255.31, Devices > Platf",
+  "url": "https://github.com/logstash-plugins/logstash-patterns-core/issues/315"
+ },
+ {
+  "id": "github:3925895639",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Sec Compliance: SOC 2",
+  "body": "## \ud83d\ude80 Feature Summary SOC 2 compliance module that enables organizations to implement, monitor, and demonstrate adherence to the Trust Services Criteria (Security, Availability, Processing Integrity, Confidentiality, Privacy). Provides automated control mapping, audit evidence collection, and real-time reporting for internal and external audits. - [ ] AWS: Sec Compliance: SOC 2 - [ ] Azure: Sec Com",
+  "url": "https://github.com/niagaros/repo/issues/102"
+ },
+ {
+  "id": "hn:46730535",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "AI-Powered CSPM Tools Are Transforming Cloud Compliance",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=46730535"
+ },
+ {
+  "id": "hn:37454434",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Nextdoor's Cloud Security Posture Management (CSPM) Evaluation Matrix",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=37454434"
+ },
+ {
+  "id": "hn:35776975",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "CSPM False Positives",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=35776975"
+ },
+ {
+  "id": "hn:40735653",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Hacker Mindset: Understanding How Attackers Think to Strengthen Security Posture",
+  "body": "Some say - Know thy hacker, know thyself. Only then can you protect thyself. That is exactly what we call the \u201cHacker Mindset\u201d. The hacker strategy has changed over the years. Traditional hackers first picked the target and then attempted to find vulnerabilities to attack. But modern hackers are another breed. They find vulnerabilities first, and then decide on the range and scope of the target. T",
+  "url": "https://news.ycombinator.com/item?id=40735653"
+ },
+ {
+  "id": "hn:22868961",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Covid-19 Shines a New Light on Cloud Misconfiguration Risk",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=22868961"
+ },
+ {
+  "id": "hn:21313610",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Imperva: Data Breach Caused by Cloud Misconfiguration",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=21313610"
+ },
+ {
+  "id": "hn:19054057",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Rubrik Data Leak Is Another Cloud Misconfiguration",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=19054057"
+ },
+ {
+  "id": "hn:49669550",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Rare Not Random Using Token Efficiency for Secrets Scanning",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=49669550"
+ },
+ {
+  "id": "hn:34058368",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "GitHub Now Offers Secrets Scanning for Free",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=34058368"
+ },
+ {
+  "id": "hn:23668010",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Why Doesn\u2019t Your CI Pipeline Have Security Bug Testing?",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=23668010"
+ },
+ {
+  "id": "hn:23319207",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Why Doesn't Your CI Pipeline Have Security Bug Testing?",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=23319207"
+ },
+ {
+  "id": "hn:1038094",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Recognizing Five Small Business Security Threats",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=1038094"
+ },
+ {
+  "id": "hn:1055590",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Eliminating Small Business Threats",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=1055590"
+ },
+ {
+  "id": "stackexchange:security:260028",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "stackexchange",
+  "engagement": 1,
+  "title": "AWS IAM Access Issue",
+  "body": "We previously had some AWS keys. The IAM interface show/showed no usage for it but the employee has been able to upload resources. Could anyone advise how to check if the interface is just erring or if they were perhaps not using these credentials? The ATHENA Queries i was tried SELECT eventTime, eventName, userIdentity.principalId,eventSource FROM athena-table WHERE useridentity.accesskeyid like ",
+  "url": "https://security.stackexchange.com/questions/260028/aws-iam-access-issue"
+ },
+ {
+  "id": "github:5121834325",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Security]: Non-admin users can publish site-wide skills and replace mode ignores visibility",
+  "body": "## FAC version 2.5.0 / current `main` ## Description The current skill authorization model allows a non-admin Desk User to create an `FAC Skill` and set it directly to `Published` + `Public`. That skill is then exposed through MCP `resources/list` and `resources/read` to every authenticated user with FAC assistant access, without an administrator review or approval transition. This creates a cross",
+  "url": "https://github.com/buildswithpaul/Frappe_Assistant_Core/issues/225"
+ },
+ {
+  "id": "github:4042128639",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Feature]: security review and tooling",
+  "body": "### Problem Statement I\u2019m frustrated when we overlook security and vulnerability reviews The code base, and implimentation should be secure The reason it\u2019s secure should be documented ### Proposed Solution -document approach to security of communication, config and access control for users - review source code for security and vunerabilities - fix, or document mitigations , remediation and fixes #",
+  "url": "https://github.com/abuxton/pheromone/issues/53"
+ },
+ {
+  "id": "github:5512488308",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Expand 'My work' to show PRs across all repositories, not just repos with sessions",
+  "body": "### Summary Expand \"My work\" to show pull requests from all repositories the user has access to. ### Motivation \"My work\" is close to being a great PR review dashboard, but it currently only surfaces PRs tied to repos where I've already started a session. For anyone working across many repositories, that means most of my open PRs never show up, and I have to go find them elsewhere. If \"My work\" sh",
+  "url": "https://github.com/github/app/issues/4068"
+ },
+ {
+  "id": "github:2153212366",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Friend Request Confirmation - Group 15",
+  "body": "- **Description:** This feature involves adding a friend request confirmation system to the app. When users get friend requests, they'll see a list where they can review and choose to accept or decline them before they're confirmed. - **Expected Outcomes:** By providing a confirmation list, users can make informed decisions about accepting or rejecting friend requests. - **Alternatives:** Instead ",
+  "url": "https://github.com/rilling/OpenTracks-Winter-2024-COMP-354/issues/83"
+ },
+ {
+  "id": "github:4718111666",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Docs: permissions selector uses Auto-review terminology but app labels it \"Approve for me\"",
+  "body": "### What is inconsistent? The Codex sandboxing docs describe the automatic reviewer mode as **Auto-review** and document the config key/value as: ```toml approvals_reviewer = \"auto_review\" ``` Docs page: https://developers.openai.com/codex/concepts/sandboxing#how-you-control-it In the current Codex app permissions selector, the corresponding UI option is labeled **Approve for me**, not **Auto-revi",
+  "url": "https://github.com/openai/codex/issues/29452"
+ },
+ {
+  "id": "github:6113077985",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Simplify Graph Editor inspector, edge disconnection and migration recovery UI",
+  "body": "## Problem Graph Editor's Settings inspector currently appears only when a node is selected, changing the canvas width every time selection is cleared. Selecting an edge instead shows a large floating **Disconnect** button on the canvas, backed by elaborate overlap-placement logic. Finally, saved-graph migration/recovery backups are shown as an extra disclosure near the top of the page, even durin",
+  "url": "https://github.com/takahirox/my-audio-to-text/issues/160"
+ },
+ {
+  "id": "github:2981199208",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Report accessible to view users",
+  "body": "Hello I\u2019m reaching out to ask if there is a way to run a report of users currently listed in Finjector for our units and folders. We\u2019re looking to have a report available that would allow us to regularly review and ensure that system user access is kept up to date. Please let me know if such a report can be generated, or if there\u2019s an alternative way to access this information. Thank you for your ",
+  "url": "https://github.com/ucdavis/finjector/issues/371"
+ },
+ {
+  "id": "github:5192662222",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "provision: --role supervisor landed, but layer_wrapper never tries gh-analyst \u2014 so the role still cannot place the private layer",
+  "body": "## What does not match `deploy/runner/provision` accepts `--role supervisor` since quince#1249, but `layer_wrapper()` still tries only `gh-coder` and `gh-review`. **Neither can act on the supervisor box** \u2014 both refuse, correctly, because the analyst key is the one credential present. So `LAYER_WRAPPER` is empty and provision takes this branch: ``` provision: NOT placing the private layer: this bo",
+  "url": "https://github.com/novkostya/quince/issues/1262"
+ },
+ {
+  "id": "github:4096541954",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "PRD: Legit \u2014 GitHub PR Triage TUI",
+  "body": "## Problem Statement Managing pull requests across GitHub repositories is painful. The GitHub web UI does not surface the information that matters for triage \u2014 who is blocking what, which PRs need my attention right now, what is the real size of a change (excluding lockfiles and tests), and what is the overall health of the PR pipeline. Navigating between PRs, checking CI status, reading unresolve",
+  "url": "https://github.com/mayfieldiv/legit/issues/1"
+ },
+ {
+  "id": "github:4386963348",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Inclusive language: replace 'normal user' in not-just-ztna.md",
+  "body": "## What language is used The post `blog/not-just-ztna.md` uses **normal user** twice. \"Normal\" implies that other users are abnormal, which is othering. In this security-architecture context, the author really means \"non-privileged\" or \"standard\". ## Where it appears - Line 55: \"The problem becomes particularly acute when **normal user** credentials can access systems with connectivity to privileg",
+  "url": "https://github.com/simonpainter/www.simonpainter.com/issues/314"
+ },
+ {
+  "id": "github:4503180388",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "feat(site): MVP",
+  "body": "Build an M365 vendor consolidation tool that helps customers identify which third-party security and productivity tools they can replace when moving to Microsoft 365 E3, E5, or E7. ## Context Many organisations are paying for overlapping tools \u2014 a separate EDR, DLP solution, identity provider, email security gateway \u2014 that are already included in their M365 subscription tier. This app lets a custo",
+  "url": "https://github.com/DevSecNinja/m365-consolidation/issues/1"
+ },
+ {
+  "id": "github:3168060549",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Feature] GKE - Alternatives to service Account JSON Key",
+  "body": "### Is your feature request related to a problem? Please describe. Currently, Rancher's GKE cluster provisioning **only supports Service Account JSON keys** for authentication with Google Cloud Platform. This creates significant security and compliance challenges: **Security Risks:** - JSON service account keys are long-lived credentials that never expire automatically - Keys must be stored and tr",
+  "url": "https://github.com/rancher/terraform-provider-rancher2/issues/1555"
+ },
+ {
+  "id": "github:3937483672",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[star-list-maintainer] Star list maintenance actions",
+  "body": "# Star List Maintenance Report **Generated:** 2026-02-13 14:31:45 UTC ## Summary - **Total starred repositories:** 400 - **Currently assigned:** 26 - **New unassigned repositories:** 374 - **Stale assignments:** 0 - **Suggested reassignments:** 6 ## Action Checklist *Note: Showing top 50 high-confidence and 20 medium-confidence recommendations due to volume (281 high, 15 medium, 0 low, 78 no clear",
+  "url": "https://github.com/matt-riley/matt-riley/issues/16"
+ },
+ {
+  "id": "github:2442377747",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Path B Feedback",
+  "body": "## Welcome I think the paragraph on his page would benefit from being broken into chunks. 'handle complex career-related tasks and workflows for a Human Resources department' is a bit vague. I think we should provide more context on what the app will do. For example, 'In this module, you will build an app that allows HR departments to manage employee onboarding, offboarding, and performance review",
+  "url": "https://github.com/microsoft/copilot-camp/issues/144"
+ },
+ {
+  "id": "github:5347753657",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "serviceaccounts: first-class non-human identities for AI agents and CI (epic)",
+  "body": "## Goal AccessFlow governs every **human** path exhaustively \u2014 queries, API calls and deployments all run `submit \u2192 AI \u2192 review \u2192 approve`, with per-user grants, attestation campaigns and a tamper-evident audit log. The **non-human** callers that increasingly drive those paths \u2014 MCP-connected AI agents, the Terraform provider, and GitHub / GitLab / Azure CI jobs \u2014 have no identity model at all. Th",
+  "url": "https://github.com/bablsoft/accessflow/issues/867"
+ },
+ {
+  "id": "github:1963602856",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Allow self-management of user assignments by PI/manager to own project",
+  "body": "The ColdFront API already supports authentication via OAuth (NERC Keycloak), so it can work with a user's own account. In the current state of our API, only administrators can manage user/group memberships (`staff` flag in ColdFront,) and the user registration script supports authentication only using client credentials. We should allow PIs and managers to issue API requests with their OAuth token",
+  "url": "https://github.com/nerc-project/coldfront-plugin-api/issues/11"
+ },
+ {
+  "id": "github:4340077829",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Sample targets unsupported .NET Core 3.1; please consider upgrade or maintenance signal",
+  "body": "## Summary The `Microsoft.SCIM.WebHostSample` and `Microsoft.SCIM` projects in this repository target `netcoreapp3.1`. .NET Core 3.1 reached end of support on December 13, 2022 ([.NET support policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)). Several deprecated dependencies are also pinned to 3.1-era versions, including `Microsoft.AspNetCore.Mvc.WebApiCompatShim 2.2.0` (di",
+  "url": "https://github.com/AzureAD/SCIMReferenceCode/issues/124"
+ },
+ {
+  "id": "github:4041949884",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Seguran\u00e7a \ud83d\udedf",
+  "body": "--- title: \"Security Scorecard\" description: \"Review your team's Security Scorecard to understand how you can improve your team's security posture and reduce your vulnerabilites.\" --- > **Pricing Information:** This feature is available on [Enterprise](https://www.netlify.com/pricing/?category=enterprise) plans. Improve your team's security and reduce your vulnerabilities with the Security Scoreca",
+  "url": "https://github.com/carvharold/harold-carvalho.com.br-Netlifyastro-platform-starter/issues/206"
+ },
+ {
+  "id": "github:5958888329",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Document groups as code from the manage groups page",
+  "body": "Readers managing group membership in the UI need a pointer to the existing groups-as-code workflow for bulk or version-controlled membership changes. The manage groups page does not mention this option. - Correct information: Lightdash supports managing group membership as code. Groups can be represented as YAML files and synced with the organization using the documented content-as-code workflow, ",
+  "url": "https://github.com/lightdash/mintlify-docs/issues/1519"
+ },
+ {
+  "id": "github:5565969615",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "feat: Google group sync via Cloud Identity API using the user's token (no domain-wide delegation)",
+  "body": "## Summary A customer using Google as their OIDC provider wants JIT group sync at login. Google's OIDC implementation does not include a `groups` claim in the ID token or `/userinfo` response, so Coder's claims-based group/role/org sync (`--oidc-group-field`, org sync, role sync) cannot be used with Google today. This was previously explored in #14685 and closed as not planned (2024-11-05) on the ",
+  "url": "https://github.com/coder/coder/issues/29836"
+ },
+ {
+  "id": "github:6372453173",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Implement Per-IdP SCIM 2.0 (RFC 7643 / RFC 7644) Provisioning Interface (v1.4.0)",
+  "body": "## Summary Implement a fail-closed, stateless **Per-IdP SCIM 2.0 (RFC 7643 / RFC 7644) Service Provider subsystem** (`/plugins/samlsso/front/scim/v2/{idpId}`) as a modern, directory-agnostic provisioning alternative to legacy LDAP background synchronization (context: #189). ## Architectural Scope (`v1.4.0` \u2014 Beta) - **Strict Per-IdP Isolation (`ADR 0004`):** Bind every SCIM-provisioned user exclus",
+  "url": "https://github.com/DonutsNL/samlsso/issues/199"
+ },
+ {
+  "id": "github:5864746351",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Document SCIM PATCH filtered-path syntax for removing a single role",
+  "body": "Readers using SCIM PATCH to remove one role only see removal documented with a plain `\"path\": \"roles\"` operation. The docs do not show that a single role can also be removed by targeting its `value` in the path. - Correct information: A PATCH `remove` operation can remove one role by value using a filtered path, without a `value` field in the operation body: ```json { \"op\": \"remove\", \"path\": \"role",
+  "url": "https://github.com/lightdash/mintlify-docs/issues/1446"
+ },
+ {
+  "id": "github:4430221027",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[P2] [feature-request] Authentication via generic OIDC, local username/password, and reverse-proxy headers \u2014 three modes, one user model",
+  "body": "## Summary Trainable has no authentication today. `backend/main.py:67-96` registers only a `CORSMiddleware` and routes are reachable by anyone who can hit the backend on `:8000`. The data model has zero identity tables (`backend/models.py` covers `projects`, `sessions`, `experiments`, `messages`, `artifacts`, ...; **no `users`, no `roles`, no `memberships`, no `user_id` FK anywhere**), and the fro",
+  "url": "https://github.com/lucastononro/trainable/issues/82"
+ },
+ {
+  "id": "github:3710957272",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Fully Remote] Senior Cloud Engineer - Jobsity",
+  "body": "## About [Jobsity](https://www.jobsity.com/)\ud83d\udca1 We\u2019ve been around for about 10 years. We are a NY based staffing company that works with lots of different clients in the US, Canada and Europe. Most of our developers, data engineers, and Quality Assurance engineers are located in Latin America, although we have a presence in more than 15 countries. We have connected more than 400 people with internat",
+  "url": "https://github.com/backend-br/vagas/issues/12139"
+ },
+ {
+  "id": "github:2824053982",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[FEATURE] Allow to use `databricks_token` resource to issue account-level SCIM token",
+  "body": ". --> ### Configuration ```hcl provider \"databricks\" { alias = \"accounts\" host = \"https://accounts.azuredatabricks.net\" account_id = \"xxxxxxxxxx\" } resource \"databricks_token\" \"scim_pat\" { provider = databricks.accounts lifetime_seconds = 2 * 24 * 60 * 60 } ``` ### Expected Behavior Should return the account level SCIM token for user provisioning ### Actual Behavior Error: cannot create token: fai",
+  "url": "https://github.com/databricks/terraform-provider-databricks/issues/4458"
+ },
+ {
+  "id": "hn:13754094",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "12 Benefits of Privileged Access Management",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=13754094"
+ },
+ {
+  "id": "hn:46931447",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Part 1 the Persistent Vault Issue: Your Encryption Strategy Has a Shelf Life",
+  "body": "Every enterprise identity platform\u2014from Okta and Azure AD to self-hosted password managers and privileged access management systems\u2014shares a common architectural assumption: credentials are encrypted at rest in persistent storage. AES-256, PBKDF2 stretching, HSM key management\u2014these are table stakes. But they're also irrelevant the moment an attacker exfiltrates your encrypted database. The 2022 L",
+  "url": "https://news.ycombinator.com/item?id=46931447"
+ },
+ {
+  "id": "hn:49459218",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "The Self-Hosted SSO Tax: A Verified Tracker",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=49459218"
+ },
+ {
+  "id": "hn:38688926",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "SSO Tax- SaaS companies basis of upgrading from standard to enterprise",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=38688926"
+ },
+ {
+  "id": "github:6297247604",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Documentation review: open items",
+  "body": "_Auto-updated by [Weekly Documentation Review](https://github.com/CloudSecurityOfficeHours/csoh.org/actions/runs/43981505757)._ Weekly review of documentation across the site, against [docs/EDITORIAL_STANDARDS.md](docs/EDITORIAL_STANDARDS.md). Everything here needs a decision. Mechanical fixes are not in this list - they arrive as a separate pull request that is safe to merge on sight. # Weekly do",
+  "url": "https://github.com/CloudSecurityOfficeHours/csoh.org/issues/2037"
+ },
+ {
+  "id": "github:1290488000",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "SPIKE: Asset inventory solution in AWS",
+  "body": "**Describe the issue** We were wanting to use TFC at one point to get a reporting governance view over everything deployed to cloud. We know this is possible via direct queries to each CSP using their own flavour of technologies but we are looking to see if there is a common cross-cloud tool that can provide us this ability. If someone uses the web console to create assets, we won't see them via T",
+  "url": "https://github.com/bcgov/cloud-pathfinder/issues/1837"
+ },
+ {
+  "id": "github:6181980691",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Azure : add support for Bleu Sovereign Cloud",
+  "body": "### Feature search - [x] I have searched the existing issues and this feature has not been requested yet or is already in our [Public Roadmap](https://roadmap.prowler.com/roadmap) ### Which component would this feature affect? Prowler CLI/SDK ### Related to specific cloud provider? Azure ### New feature motivation Bleu is a recently launched Azure Sovereign Cloud, legally independent from Microsof",
+  "url": "https://github.com/prowler-cloud/prowler/issues/13248"
+ },
+ {
+  "id": "github:1847548361",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "2023-08-11 Github Trending",
+  "body": "- ### [**huggingface/candle**](https://github.com/huggingface/candle) Minimalist ML framework for Rust - ### [**clockworklabs/SpacetimeDB**](https://github.com/clockworklabs/SpacetimeDB) Multiplayer at the speed of light - ### [**TheAlgorithms/Python**](https://github.com/TheAlgorithms/Python) All Algorithms implemented in Python - ### [**radix-ui/themes**](https://github.com/radix-ui/themes) Radi",
+  "url": "https://github.com/onysakura/news-daily/issues/3405"
+ },
+ {
+  "id": "github:6034961688",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Open Source Radar \u2014 2026-10-26",
+  "body": "# Open Source Radar \u2014 2026-10-26 _Rotation slot 6 \u2014 infrastructure, observability, deployment_ ## Executive Summary Today's best find wasn't another observability dashboard \u2014 it was formae, a genuinely different take on infrastructure-as-code that discovers what's actually running instead of trusting a state file, with a native MCP server for AI agents. Nora showed up as a credibly lighter-weight ",
+  "url": "https://github.com/sourav-ojha/open-source-radar/issues/64"
+ },
+ {
+  "id": "github:6326584311",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Ask AI for a Niagaros Summary (ChatGPT, Claude, Gemini, Perplexity, Grok, DeepSeek) with Standardized Prompt in Footer",
+  "body": "## \ud83d\ude80 Feature Summary Allow website visitors to generate an AI-powered company and platform analysis by sending a predefined research prompt to leading AI assistants, including: - ChatGPT - Claude - Gemini - Perplexity - Grok - DeepSeek The feature makes it easy for prospects, customers, auditors, investors and partners to research Niagaros through their preferred AI platform. The standardized prom",
+  "url": "https://github.com/niagaros/repo/issues/297"
+ },
+ {
+  "id": "github:1231599492",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "20220511 Github \u524d\u7aef\u8d8b\u52bf\u699c",
+  "body": "# 20220511 Github \u524d\u7aef\u8d8b\u52bf\u699c Github \u524d\u7aef\u5f00\u53d1\u65e5\u62a5\u680f\u76ee\u6570\u636e\u6765\u81ea[Github\u70ed\u699c](http://news.caibaojian.com.cn/)\uff08\u6211\u5f00\u53d1\u7684\u722c\u866b\uff09\uff0c\u6bcf\u65e5\u5206\u4eabHTML\u3001CSS\u3001JavaScript\u3001Vue\u7b49\u5f00\u6e90\u9879\u76ee\uff0c\u4e3a\u5f00\u53d1\u8005\u63d0\u4f9b\u52a8\u529b\uff0c\u70b9\u51fbStar\u6309\u94ae\u6765\u5173\u6ce8\u8fd9\u4e2a\u9879\u76ee\uff0c\u70b9\u51fbWatch\u6765\u6536\u542c\u6bcf\u65e5\u7684\u66f4\u65b0[Github\u4e3b\u9875](https://github.com/kujian/githubTrending) ## JavaScript * [microsoft/Web-Dev-For-Beginners](https://github.com/microsoft/Web-Dev-For-Beginners) \uff0824 Lessons, 12 Weeks, Get Started as a Web Developer\uff09 * [actualbudget/actual]",
+  "url": "https://github.com/kujian/githubTrending/issues/2557"
+ },
+ {
+  "id": "github:1212703934",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "20220423 Github \u524d\u7aef\u8d8b\u52bf\u699c",
+  "body": "# 20220423 Github \u524d\u7aef\u8d8b\u52bf\u699c Github \u524d\u7aef\u5f00\u53d1\u65e5\u62a5\u680f\u76ee\u6570\u636e\u6765\u81ea[Github\u70ed\u699c](http://news.caibaojian.com.cn/)\uff08\u6211\u5f00\u53d1\u7684\u722c\u866b\uff09\uff0c\u6bcf\u65e5\u5206\u4eabHTML\u3001CSS\u3001JavaScript\u3001Vue\u7b49\u5f00\u6e90\u9879\u76ee\uff0c\u4e3a\u5f00\u53d1\u8005\u63d0\u4f9b\u52a8\u529b\uff0c\u70b9\u51fbStar\u6309\u94ae\u6765\u5173\u6ce8\u8fd9\u4e2a\u9879\u76ee\uff0c\u70b9\u51fbWatch\u6765\u6536\u542c\u6bcf\u65e5\u7684\u66f4\u65b0[Github\u4e3b\u9875](https://github.com/kujian/githubTrending) ## JavaScript * [Leaflet/Leaflet](https://github.com/Leaflet/Leaflet) \uff08? JavaScript library for mobile-friendly interactive maps\uff09 * [ryanmcdermott/clean-code-javascript](https://gi",
+  "url": "https://github.com/kujian/githubTrending/issues/2552"
+ },
+ {
+  "id": "github:1228705364",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "20220508 Github \u524d\u7aef\u8d8b\u52bf\u699c",
+  "body": "# 20220508 Github \u524d\u7aef\u8d8b\u52bf\u699c Github \u524d\u7aef\u5f00\u53d1\u65e5\u62a5\u680f\u76ee\u6570\u636e\u6765\u81ea[Github\u70ed\u699c](http://news.caibaojian.com.cn/)\uff08\u6211\u5f00\u53d1\u7684\u722c\u866b\uff09\uff0c\u6bcf\u65e5\u5206\u4eabHTML\u3001CSS\u3001JavaScript\u3001Vue\u7b49\u5f00\u6e90\u9879\u76ee\uff0c\u4e3a\u5f00\u53d1\u8005\u63d0\u4f9b\u52a8\u529b\uff0c\u70b9\u51fbStar\u6309\u94ae\u6765\u5173\u6ce8\u8fd9\u4e2a\u9879\u76ee\uff0c\u70b9\u51fbWatch\u6765\u6536\u542c\u6bcf\u65e5\u7684\u66f4\u65b0[Github\u4e3b\u9875](https://github.com/kujian/githubTrending) ## JavaScript * [lerna/lerna](https://github.com/lerna/lerna) \uff08? A tool for managing JavaScript projects with multiple packages.\uff09 * [aquasecurity/cloudsploit](https://github.com/aq",
+  "url": "https://github.com/kujian/githubTrending/issues/2554"
+ },
+ {
+  "id": "github:2088472572",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "20240118 Github \u524d\u7aef\u8d8b\u52bf\u699c",
+  "body": "# 20240118 Github \u524d\u7aef\u8d8b\u52bf\u699c Github \u524d\u7aef\u5f00\u53d1\u65e5\u62a5\u680f\u76ee\u6570\u636e\u6765\u81ea[Github\u70ed\u699c](https://github.qdkfweb.cn/)\uff08\u6211\u5f00\u53d1\u7684\u722c\u866b\uff09\uff0c\u6bcf\u65e5\u5206\u4eabHTML\u3001CSS\u3001JavaScript\u3001Vue\u7b49\u5f00\u6e90\u9879\u76ee\uff0c\u4e3a\u5f00\u53d1\u8005\u63d0\u4f9b\u52a8\u529b\uff0c\u70b9\u51fbStar\u6309\u94ae\u6765\u5173\u6ce8\u8fd9\u4e2a\u9879\u76ee\uff0c\u70b9\u51fbWatch\u6765\u6536\u542c\u6bcf\u65e5\u7684\u66f4\u65b0[Github\u4e3b\u9875](https://github.com/kujian/githubTrending) ## JavaScript * [poteto/hiring-without-whiteboards](https://link.qdkfweb.cn/?target=https%3A%2F%2Fgithub.com%2Fpoteto%2Fhiring-without-whiteboards) \uff08&#x2b50;&#xfe0f; Companies that don",
+  "url": "https://github.com/kujian/githubTrending/issues/2754"
+ },
+ {
+  "id": "github:2354917562",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "20240615 Github \u524d\u7aef\u8d8b\u52bf\u699c",
+  "body": "# 20240615 Github \u524d\u7aef\u8d8b\u52bf\u699c Github \u524d\u7aef\u5f00\u53d1\u65e5\u62a5\u680f\u76ee\u6570\u636e\u6765\u81ea[Github\u70ed\u699c](https://github.qdkfweb.cn/)\uff08\u6211\u5f00\u53d1\u7684\u722c\u866b\uff09\uff0c\u6bcf\u65e5\u5206\u4eabHTML\u3001CSS\u3001JavaScript\u3001Vue\u7b49\u5f00\u6e90\u9879\u76ee\uff0c\u4e3a\u5f00\u53d1\u8005\u63d0\u4f9b\u52a8\u529b\uff0c\u70b9\u51fbStar\u6309\u94ae\u6765\u5173\u6ce8\u8fd9\u4e2a\u9879\u76ee\uff0c\u70b9\u51fbWatch\u6765\u6536\u542c\u6bcf\u65e5\u7684\u66f4\u65b0[Github\u4e3b\u9875](https://github.com/kujian/githubTrending) ## JavaScript * [gchq/CyberChef](https://link.qdkfweb.cn/?target=https%3A%2F%2Fgithub.com%2Fgchq%2FCyberChef) \uff08The Cyber Swiss Army Knife - a web app for encryption, encoding, compress",
+  "url": "https://github.com/kujian/githubTrending/issues/2896"
+ },
+ {
+  "id": "github:4289204827",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[integration] Expand client + agent SDK surface: Claude Desktop, Agent SDK, LangGraph, Cursor/Windsurf configs",
+  "body": "## Why README claims the repo integrates with Claude Code, Codex, Cursor, Windsurf, Cortex Code CLI, and \"other MCP clients.\" Today only Claude Code has a shipped `.mcp.json` and tested fixtures. Other clients are assumed-to-work-via-generic-MCP with zero docs or config examples. Also: popular agent SDKs (Anthropic Agent SDK, LangGraph) have no integration example, even though the skill bundle con",
+  "url": "https://github.com/msaad00/cloud-ai-security-skills/issues/258"
+ },
+ {
+  "id": "github:3336075008",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Showing new listings for Tuesday, 19 August 2025",
+  "body": "## Keyword: detection ### Title: Assessing Representation Stability for Transformer Models - **Authors:** Bryan E. Tuck, Rakesh M. Verma - **Subjects:** Subjects: Machine Learning (cs.LG); Artificial Intelligence (cs.AI); Computation and Language (cs.CL) - **Arxiv link:** https://arxiv.org/abs/ - **Pdf link:** https://arxiv.org/pdf/ - **Abstract** Adversarial text attacks remain a persistent threa",
+  "url": "https://github.com/LeeKyungwook/get-arxiv-noti/issues/1756"
+ },
+ {
+  "id": "github:3335065729",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Showing new listings for Tuesday, 19 August 2025",
+  "body": "## Keyword: detection ### Title: Assessing Representation Stability for Transformer Models - **Authors:** Bryan E. Tuck, Rakesh M. Verma - **Subjects:** Subjects: Machine Learning (cs.LG); Artificial Intelligence (cs.AI); Computation and Language (cs.CL) - **Arxiv link:** https://arxiv.org/abs/ - **Pdf link:** https://arxiv.org/pdf/ - **Abstract** Adversarial text attacks remain a persistent threa",
+  "url": "https://github.com/LeeKyungwook/get-arxiv-noti/issues/1755"
+ },
+ {
+  "id": "github:4562291765",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Step-by-Step Guide to Hybrid Cloud Security for CISOs",
+  "body": "The modern enterprise is no longer confined to a single data center. Organizations today operate across public clouds, private clouds, on-premises infrastructure, edge environments, and SaaS platforms. While this hybrid approach delivers flexibility, scalability, and business agility, it also creates a complex security landscape that many organizations struggle to manage effectively. For [Chief In",
+  "url": "https://github.com/kaushal-cyber/Off-Page/issues/1"
+ },
+ {
+  "id": "github:2933868382",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2025-03-20",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082025-03-20\uff09 - Security Boulevard - [How can I extend IAM frameworks to include NHIs effectively?](https://securityboulevard.com/2025/03/how-can-i-extend-iam-frameworks-to-include-nhis-effectively/?utm_source=rss&utm_medium=rss&utm_campaign=how-can-i-extend-iam-frameworks-to-include-nhis-effectively) - [DEF CON 32 \u2013 Recon Village \u2013 SWGRecon: Automating SWG Rules, Policies & Bypasses](https",
+  "url": "https://github.com/ruohong2018/ruohong2018.github.io/issues/767"
+ },
+ {
+  "id": "github:2604083711",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2024-10-22",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082024-10-22\uff09 - SecWiki News - [SecWiki News 2024-10-21 Review](http://www.sec-wiki.com/?2024-10-21) - Recent Commits to cve:main - [Update Mon Oct 21 22:28:30 UTC 2024](https://github.com/trickest/cve/commit/f3dfc5b9fd096d1c94464e5034515844f1eb45ef) - [Update Mon Oct 21 14:26:53 UTC 2024](https://github.com/trickest/cve/commit/5d0f2a73c7b45ef587ccac373decbc8052ebaedc) - [Update Mon Oct 21 ",
+  "url": "https://github.com/ruohong2018/ruohong2018.github.io/issues/620"
+ },
+ {
+  "id": "github:2933864865",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2025-03-20",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082025-03-20\uff09 - paper - Last paper - [ ] [Tit-for-Tat\uff1a\u901a\u8fc7\u5bf9\u6297\u9632\u5fa1\u4fdd\u62a4\u5927\u578b\u89c6\u89c9\u8bed\u8a00\u6a21\u578b\u514d\u53d7\u8d8a\u72f1\u653b\u51fb](https://paper.seebug.org/3309/) - SecWiki News - [ ] [SecWiki News 2025-03-19 Review](http://www.sec-wiki.com/?2025-03-19) - \u5947\u5b89\u4fe1\u653b\u9632\u793e\u533a - [ ] [\u3010\u75c5\u6bd2\u5206\u6790\u3011\u201c\u7f8e\u675c\u838e\u201d\u52d2\u7d22\u5bb6\u65cf\uff1a\u4ece\u5165\u4fb5\u5230\u7ed3\u675f\u7684\u5168\u6d41\u7a0b\u6df1\u5ea6\u89e3\u6790](https://forum.butian.net/share/4202) - \u5b89\u5168\u5ba2-\u6709\u601d\u60f3\u7684\u5b89\u5168\u65b0\u5a92\u4f53 - [ ] [\u4f2a\u88c5\u6210\u5b89\u5168\u6587\u6863\u67e5\u770b\u5668\u7684 DocSwap \u6076\u610f\u8f6f\u4ef6\u5bf9\u5168\u7403\u5b89\u5353\u7528\u6237\u53d1\u52a8\u653b\u51fb](https://www.anquanke.com/post/id/305179) - [ ]",
+  "url": "https://github.com/BruceFeIix/picker/issues/1595"
+ },
+ {
+  "id": "github:4449525846",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Expand fantasy scoring settings: multi-kills, CSPM, and team scoring",
+  "body": "## Problem Statement Fantasy league scoring settings currently only cover basic player stats (kills, deaths, assists, raw creep score, wards, kill participation, damage percentage). This does not account for impactful in-game achievements like multi-kills, nor does it reward team-level performance (match wins, objective control). The creep score setting uses a raw total rather than the more meanin",
+  "url": "https://github.com/d-pacheco/FantasyLoL/issues/460"
+ },
+ {
+  "id": "github:1654822003",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2023-04-05",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082023-04-05\uff09 - \u5148\u77e5\u5b89\u5168\u6280\u672f\u793e\u533a - [ ] [house of orange & no free](https://xz.aliyun.com/t/12389) - [ ] [\u4eceCVE-2022-22947\u5b66\u4e60\u7528java-object-searcher\u6784\u9020\u54e5\u65af\u62c9\u9a6c](https://xz.aliyun.com/t/12388) - \u5b89\u5168\u5ba2-\u6709\u601d\u60f3\u7684\u5b89\u5168\u65b0\u5a92\u4f53 - [ ] [CVE-2023-21839 WebLogic Server RCE\u5206\u6790](https://www.anquanke.com/post/id/287753) - [ ] [\u51a0\u519b\uff01\u9752\u85e4\u4e91\u5b89\u5168\u653b\u9632\u5b9e\u529b\u5728\u201c\u78d0\u77f3\u884c\u52a8\u201d\u653b\u9632\u6f14\u7ec3\u4e2d\u518d\u83b7\u8ba4\u53ef](https://www.anquanke.com/post/id/288108) - [ ] [AI\u56fe\u50cf\u751f\u6210\u670dMidjourne\u4ee5\u6ee5\u7528\u4e3a\u7531\u6682\u505c\u514d\u8d39\u8bd5\u7528](htt",
+  "url": "https://github.com/BruceFeIix/picker/issues/267"
+ },
+ {
+  "id": "github:1654821323",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2023-04-05",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082023-04-05\uff09 - HackerOne Hacker Activity - [ ] [CSRF protection on OIDC login is broken](https://hackerone.com/reports/1878381) - Verne in GitHub - [ ] [\u8bb0\u5f55\u4e00\u4e0b Clientexec \u4e2d\u914d\u7f6e SMTP \u65f6\u7684\u4e00\u4e9b\u95ee\u9898](https://einverne.github.io/post/2023/04/clientexec-smtp-config.html) - [ ] [\u4ecb\u7ecd\u4e00\u4e0b\u65b0\u63a8\u51fa\u7684 EV Hosting \u7f51\u7edc\u5171\u4eab\u6258\u7ba1\u670d\u52a1](https://einverne.github.io/post/2023/04/introducing-ev-hosting.html) - \u5b89\u5168\u8109\u640f - [ ] [\u7ed5\u8fc7\u8ba4\u8bc1\u7684\u4e94\u79cd\u65b9\u5f0f](https:",
+  "url": "https://github.com/ruohong2018/ruohong2018.github.io/issues/121"
+ },
+ {
+  "id": "github:2604081960",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2024-10-22",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082024-10-22\uff09 - Security Boulevard - [ ] [Inside the Dark Web: How Threat Actors Are Selling Access to Corporate Networks](https://securityboulevard.com/2024/10/inside-the-dark-web-how-threat-actors-are-selling-access-to-corporate-networks/) - [ ] [Are Leaders Ready to Break the Ransomware Cycle](https://securityboulevard.com/2024/10/are-leaders-ready-to-break-the-ransomware-cycle/) - [ ] [",
+  "url": "https://github.com/BruceFeIix/picker/issues/1299"
+ },
+ {
+  "id": "github:2933871987",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2025-03-20",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082025-03-20\uff09 - SecWiki News - [ ] [SecWiki News 2025-03-19 Review](http://www.sec-wiki.com/?2025-03-19) - paper - Last paper - [ ] [Tit-for-Tat\uff1a\u901a\u8fc7\u5bf9\u6297\u9632\u5fa1\u4fdd\u62a4\u5927\u578b\u89c6\u89c9\u8bed\u8a00\u6a21\u578b\u514d\u53d7\u8d8a\u72f1\u653b\u51fb](https://paper.seebug.org/3309/) - Recent Commits to cve:main - [ ] [Update Wed Mar 19 16:16:41 UTC 2025](https://github.com/trickest/cve/commit/d85c408d64a2bf599e385c726db261a3ac3303d5) - Security Boulevard - [ ] [How can I ",
+  "url": "https://github.com/MM0x02/RSS-Push/issues/84"
+ },
+ {
+  "id": "github:2604082758",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2024-10-22",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082024-10-22\uff09 - SecWiki News - [ ] [SecWiki News 2024-10-21 Review](http://www.sec-wiki.com/?2024-10-21) - \u5947\u5b89\u4fe1\u653b\u9632\u793e\u533a - [ ] [\u8bb0\u4e00\u6b21\u653b\u9632\u6837\u672c\u2014\u2014shellcode\u5206\u6790](https://forum.butian.net/share/3817) - paper - Last paper - [ ] [\u4f7f\u7528 ZoomEye \u5e73\u53f0 \u8fdb\u884c C2 \u8d44\u4ea7\u62d3\u7ebf](https://paper.seebug.org/3232/) - Security Boulevard - [ ] [Inside the Dark Web: How Threat Actors Are Selling Access to Corporate Networks](https://securityb",
+  "url": "https://github.com/chainreactors/picker/issues/687"
+ },
+ {
+  "id": "github:1654819377",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2023-04-05",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082023-04-05\uff09 - Vulnerabilities and Threat Research \u2013 Qualys Security Blog - [ ] [3CXDesktopApp Backdoored in a Suspected Lazarus Campaign](https://blog.qualys.com/category/vulnerabilities-threat-research) - HackerOne Hacker Activity - [ ] [CSRF protection on OIDC login is broken](https://hackerone.com/reports/1878381) - \u5148\u77e5\u5b89\u5168\u6280\u672f\u793e\u533a - [ ] [house of orange & no free](https://xz.aliyun.com/t/123",
+  "url": "https://github.com/chainreactors/picker/issues/160"
+ },
+ {
+  "id": "github:6386134753",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-11-14",
+  "body": "# AI CLI Tools Community Digest 2026-11-14 > Generated: 2026-11-14 05:57 UTC | Tools covered: 10 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCo",
+  "url": "https://github.com/datnguyenquy94/news-radar/issues/1091"
+ },
+ {
+  "id": "github:1560560935",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "2023-01-27 Github Trending",
+  "body": "- ### [**shadcn/ui**](https://github.com/shadcn/ui) Beautifully designed components built with Radix UI and Tailwind CSS. - ### [**TheAppleTucker/backend-GPT**](https://github.com/TheAppleTucker/backend-GPT) - ### [**AzeemIdrisi/PhoneSploit-Pro**](https://github.com/AzeemIdrisi/PhoneSploit-Pro) An all-in-one hacking tool to remotely exploit Android devices using ADB and Metasploit-Framework to get",
+  "url": "https://github.com/onysakura/news-daily/issues/2625"
+ },
+ {
+  "id": "github:1560562735",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "2023-01-27 Github Trending",
+  "body": "- ### [**shadcn/ui**](https://github.com/shadcn/ui) Beautifully designed components built with Radix UI and Tailwind CSS. - ### [**TheAppleTucker/backend-GPT**](https://github.com/TheAppleTucker/backend-GPT) - ### [**AzeemIdrisi/PhoneSploit-Pro**](https://github.com/AzeemIdrisi/PhoneSploit-Pro) An all-in-one hacking tool to remotely exploit Android devices using ADB and Metasploit-Framework to get",
+  "url": "https://github.com/Peins/news-daily/issues/320"
+ },
+ {
+  "id": "github:3385885771",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "GitHub Daily Top 10 @2025-09-05",
+  "body": "1. [**bytebot-ai / bytebot**](https://github.com/bytebot-ai/bytebot) __Bytebot is a self-hosted AI desktop agent that automates computer tasks through natural language commands, operating within a containerized Linux desktop environment.__ 394 stars today | 4,635 stars | 467 forks | `TypeScript` 2. [**LukeGus / Termix**](https://github.com/LukeGus/Termix) __Termix is a web-based server management ",
+  "url": "https://github.com/skipmaple/github-daily/issues/974"
+ },
+ {
+  "id": "github:3385807192",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "2025-09-04 Github Trending",
+  "body": "- ### [**bytebot-ai/bytebot**](https://github.com/bytebot-ai/bytebot) 4.6k stars Bytebot is a self-hosted AI desktop agent that automates computer tasks through natural language commands, operating within a containerized Linux desktop environment. - ### [**LukeGus/Termix**](https://github.com/LukeGus/Termix) 2.9k stars Termix is a web-based server management platform with SSH terminal, tunneling, ",
+  "url": "https://github.com/onysakura/news-daily/issues/6224"
+ },
+ {
+  "id": "github:1581052264",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "2023-02-11 Github Trending",
+  "body": "- ### [**acikkaynak/deprem-yardim-backend-go**](https://github.com/acikkaynak/deprem-yardim-backend-go) - ### [**cloudflare/wildebeest**](https://github.com/cloudflare/wildebeest) Wildebeest is an ActivityPub and Mastodon-compatible server - ### [**jaymody/picoGPT**](https://github.com/jaymody/picoGPT) An unnecessarily tiny and minimal implementation of GPT-2 in NumPy. - ### [**eliaszon/Programmer",
+  "url": "https://github.com/onysakura/news-daily/issues/2684"
+ },
+ {
+  "id": "github:1581053035",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "2023-02-11 Github Trending",
+  "body": "- ### [**acikkaynak/deprem-yardim-backend-go**](https://github.com/acikkaynak/deprem-yardim-backend-go) - ### [**cloudflare/wildebeest**](https://github.com/cloudflare/wildebeest) Wildebeest is an ActivityPub and Mastodon-compatible server - ### [**jaymody/picoGPT**](https://github.com/jaymody/picoGPT) An unnecessarily tiny and minimal implementation of GPT-2 in NumPy. - ### [**eliaszon/Programmer",
+  "url": "https://github.com/Peins/news-daily/issues/380"
+ },
+ {
+  "id": "github:3383251844",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca GitHub Trending Daily - 2025\u5e749\u67084\u65e5",
+  "body": "# GitHub Trending Daily - 2025\u5e749\u67084\u65e5 > **\u66f4\u65b0\u65f6\u95f4:** 2025/9/4 19:06:58 > **\u6570\u636e\u6765\u6e90:** [GitHub Trending](https://github.com/trending) > **\u9879\u76ee\u6570\u91cf:** 14 | \u6392\u540d | \u9879\u76ee | \u8bed\u8a00 | Stars | Forks | \u4eca\u65e5\u65b0\u589e | |------|------|------|-------|-------|-----------| | 1 | [bytebot-ai / bytebot](https://github.com/bytebot-ai/bytebot) | TypeScript | 4,270 | 421 | 638 stars today | Bytebot is a self-hosted AI desktop agent that automat",
+  "url": "https://github.com/Rain1er/trending/issues/52"
+ },
+ {
+  "id": "github:716974862",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Python\u968f\u8eab\u542c-2020-10-08\u6280\u672f\u7cbe\u9009",
+  "body": "# Python\u968f\u8eab\u542c-2020-10-08-\u6280\u672f\u7cbe\u9009 > \u81f4\u8bfb\u8005\uff1a\u4eb2\u7231\u7684\u300cPython\u968f\u8eab\u542c\u300d\u7684\u89c2\u4f17\u4eec\uff0c\u8fd9\u662f\u7531DE8UG\u7684\u4eba\u5de5\u975e\u667a\u80fd\u7ed9\u4f60\u5e26\u6765\u7684\u65b0\u7684\u4e00\u671f\u6280\u672f\u7cbe\u9009\u3002 > \u4e3b\u8981\u4e3a\u7f16\u7a0b\u521d\u5b66\u8005\uff0c\u5f00\u53d1\u5de5\u7a0b\u5e08\uff0c\u7b97\u6cd5\u5de5\u7a0b\u5e08\uff0c\u6570\u636e\u5206\u6790\u5e08\uff0c\u8fd0\u7ef4\uff0c\u6d4b\u8bd5\uff0c\u8fd0\u8425\uff0c\u4ea7\u54c1\u7b49\u5404\u4e2a\u5c97\u4f4d\u7684Python\u7231\u597d\u8005\u5e26\u6765Python\u4e16\u754c\u7684\u6d41\u884c\u8d8b\u52bf\uff0c\u524d\u6cbf\u6280\u672f\u3002 > \u4f60\u53ef\u4ee5\u6311\u9009\u81ea\u5df1\u559c\u6b22\u7684\u9879\u76ee\u5c3d\u60c5\u73a9\u800d\uff0c\u4efb\u4f55\u60f3\u6cd5\u6b22\u8fce\u7559\u8a00\u8ba8\u8bba\u3002 > \u672c\u6587\u7684\u7ed3\u6784\u548c\u5185\u5bb9\u4f1a\u7ecf\u5e38\u66f4\u65b0\uff0c\u6bcf\u592910\uff1a24\u5206\u5de6\u53f3\u53d1\u5e03\uff0c\u611f\u8c22\u8ba2\u9605\ud83c\udd99\u548c\u6536\u85cf\u2606\u3002 >\uff08\u70b9\u51fb\u539f\u6587\u6216\u5230pythonradio.online\u7f51\u7ad9\u67e5\u770b\u53ef\u70b9\u51fb\u7684\u6587\u6863\u94fe\u63a5\uff09 ![](https://img2020.cnblogs.com/blog/152871/202010/152871-20201005104055252-1408177983.png) ## \ud83e\udd29Python\u968f\u8eab\u542c-\u6280\u672f\u7cbe\u9009\uff1a /TheAlgorithms/Pyt",
+  "url": "https://github.com/pythonradio/pythonradio.github.io/issues/17"
+ },
+ {
+  "id": "github:2474595939",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2024-08-20",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082024-08-20\uff09 - Security Boulevard - [Crypto enthusiasts flood npm with more than 281,000 bogus packages overnight](https://securityboulevard.com/2024/08/crypto-enthusiasts-flood-npm-with-more-than-281000-bogus-packages-overnight/) - [What You Missed About the CrowdStrike Outage:: The Next Strike Might Be Linux Due to eBPF](https://securityboulevard.com/2024/08/what-you-missed-about-the-cro",
+  "url": "https://github.com/ruohong2018/ruohong2018.github.io/issues/556"
+ },
+ {
+  "id": "github:2474594497",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2024-08-20",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082024-08-20\uff09 - \u5947\u5b89\u4fe1\u653b\u9632\u793e\u533a - [ ] [\u9006\u5411\u5de5\u7a0b\u5b9e\u6218\uff1a\u901a\u8fc7\u786c\u4ef6\u65ad\u70b9\u63d0\u53d6\u6076\u610f\u8f6f\u4ef6\u4e2d\u7684shellcode\u5e76\u5206\u6790](https://forum.butian.net/share/3665) - [ ] [\u8bb0\u4e00\u6b21\uff08\u53cd\u865a\u62df+\u53cd\u76d1\u6d4b+\u57df\u540d\u524d\u7f6e\uff09\u9493\u9c7c\u6837\u672c\u5206\u6790\u53ca\u601d\u8003](https://forum.butian.net/share/3701) - SecWiki News - [ ] [SecWiki News 2024-08-19 Review](http://www.sec-wiki.com/?2024-08-19) - Trustwave Blog - [ ] [Active Defense and Offensive Security: The Two Sides of a Proactive Cyber Defense Program](https://www.",
+  "url": "https://github.com/BruceFeIix/picker/issues/1174"
+ },
+ {
+  "id": "github:3911908066",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[Digest] 2026-02-08",
+  "body": "# \u6280\u8853\u8cc7\u8a0a\u6458\u8981 - 2026-02-08 ## \u6458\u8981\u6307\u6a19 - \u53bb\u91cd\u7387\uff1a0.00%\uff08\u539f\u59cb 114 \u2192 \u53bb\u91cd 114\uff09 - \u5206\u985e\u7d71\u8a08\uff1acommunity 42 \u7b46 / news 20 \u7b46 / papers 20 \u7b46 / releases 20 \u7b46 / trend 12 \u7b46 - \u4f86\u6e90\u5065\u5eb7\u5ea6\uff1a\u6210\u529f 7 / 7\uff08\u5931\u6557 0\uff09 ## community ### Dev.to #### [404ping: From \"It Works\" to \"It's Actually Really Good\" \ud83d\ude80](https://dev.to/toklas495/404ping-from-it-works-to-its-actually-really-good-18ie) \u767c\u5e03\u65bc\uff1aSun, 08 Feb 2026 03:45:24 +0000 How I spent 3 months turning a simp",
+  "url": "https://github.com/e1134171019/agrnt/issues/52"
+ },
+ {
+  "id": "github:4916082679",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcac Tech Community AI Digest 2026-07-18",
+  "body": "# Tech Community AI Digest 2026-07-18 > Sources: [Dev.to](https://dev.to/) (30 articles) + [Lobste.rs](https://lobste.rs/) (16 stories) | Generated: 2026-07-18 01:20 UTC --- # Tech Community AI Digest | 2026-07-18 --- ## 1. Today's Highlights AI agent reliability, tooling, and autonomy levels lead practical AI discussions on Dev.to this week, with developers sharing hands-on failures, testing stra",
+  "url": "https://github.com/THTHDGCS/agents-radar/issues/191"
+ },
+ {
+  "id": "github:4202169270",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Report out: Jupyter security working group workshop",
+  "body": "_pasted from an update that @jnywong shared with the team_ ### What happened? Here's my report out from the Security Tooling Sprint from yesterday, which was facilitated by Joe Lucas, AI Red Team Lead at NVIDIA and a timely occasion given the many supply chain attacks we have seen over the last few days - We started the day collectively sharing anxieties over the recent spate of software supply ch",
+  "url": "https://github.com/2i2c-org/2i2c-org.github.io/issues/592"
+ },
+ {
+  "id": "github:2622556996",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Showing new listings for Tuesday, 29 October 2024",
+  "body": "## Keyword: detection ### Title: High-Precision Real-Time Pores Detection in LPBF using Thermal Energy Density (TED) Signals - **Authors:** Chuxiao Meng, Conor Porter, Sina Malakpour, Garrett Mathesen, Seongyeon Yang - **Subjects:** Subjects: Computational Engineering, Finance, and Science (cs.CE) - **Arxiv link:** https://arxiv.org/abs/ - **Pdf link:** https://arxiv.org/pdf/ - **Abstract** Pore f",
+  "url": "https://github.com/LeeKyungwook/get-arxiv-noti/issues/1336"
+ },
+ {
+  "id": "github:2844693743",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily Content Summary 2025-02-11",
+  "body": "# \ud83d\udcf0 Daily Content Summary - 2025-02-11 ### Executive Summary **Key Insights** * **Hash Table Limits Redefined:** Contrary to a 40-year-old conjecture, new research demonstrates that hash table operations can achieve faster query and insertion times than previously believed, challenging long-held assumptions about data structure speed limits. * **AI Augmentation Over Automation:** Initial data from",
+  "url": "https://github.com/jhengy/content-aggregator/issues/21"
+ },
+ {
+  "id": "github:5148873231",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Zero-x cloud",
+  "body": "# Zero-X Cloud: Transforming Cloud Security with AI-Powered Automation As organizations move rapidly toward cloud-native applications, multi-cloud infrastructure, Kubernetes, and AI-powered systems, cybersecurity has become increasingly complex. Security teams are often required to manage multiple tools, monitor thousands of assets, investigate alerts, maintain compliance, and remediate vulnerabil",
+  "url": "https://github.com/Shrutikamat/Marshalls/issues/4"
+ },
+ {
+  "id": "github:1478004466",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2022-12-06",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082022-12-06\uff09 - \u5148\u77e5\u5b89\u5168\u6280\u672f\u793e\u533a - [ ] [JAVA\u5ba1\u8ba1\u521d\u63a2](https://xz.aliyun.com/t/11925) - [ ] [\u8be6\u89e3\u901a\u8fc7\u52a8\u6001\u52a0\u8f7d\u5b9e\u73b0\u653b\u51fb\u7684CC3\u548cCC4](https://xz.aliyun.com/t/11923) - [ ] [\u4f01\u4e1a\u7684\u5b89\u5168\u8fd0\u8425\u2014\u2014\u6d45\u6790SDL\u6a21\u578b](https://xz.aliyun.com/t/11922) - [ ] [\u8bb0\u4e00\u6b21\u653b\u9632\u6f14\u7ec3](https://xz.aliyun.com/t/11921) - SecWiki News - [ ] [SecWiki News 2022-12-05 Review](http://www.sec-wiki.com/?2022-12-05) - Recent Commits to cve:main - [ ] [Update Mon Dec 5 09:35:53 UTC ",
+  "url": "https://github.com/BruceFeIix/picker/issues/27"
+ },
+ {
+  "id": "github:1478006036",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2022-12-06",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082022-12-06\uff09 - SecWiki News - [ ] [SecWiki News 2022-12-05 Review](http://www.sec-wiki.com/?2022-12-05) - \u5148\u77e5\u5b89\u5168\u6280\u672f\u793e\u533a - [ ] [JAVA\u5ba1\u8ba1\u521d\u63a2](https://xz.aliyun.com/t/11925) - [ ] [\u8be6\u89e3\u901a\u8fc7\u52a8\u6001\u52a0\u8f7d\u5b9e\u73b0\u653b\u51fb\u7684CC3\u548cCC4](https://xz.aliyun.com/t/11923) - [ ] [\u4f01\u4e1a\u7684\u5b89\u5168\u8fd0\u8425\u2014\u2014\u6d45\u6790SDL\u6a21\u578b](https://xz.aliyun.com/t/11922) - [ ] [\u8bb0\u4e00\u6b21\u653b\u9632\u6f14\u7ec3](https://xz.aliyun.com/t/11921) - \u5b89\u5168\u5ba2-\u6709\u601d\u60f3\u7684\u5b89\u5168\u65b0\u5a92\u4f53 - [ ] [\u4e16\u754c\u676f\u7684\u5e55\u540e\u4ea4\u6613\uff0c\u8c01\u662f\u64cd\u76d8\u201c\u5e84\u5bb6\u201d](https://www.anquanke.com",
+  "url": "https://github.com/chainreactors/picker/issues/17"
+ },
+ {
+  "id": "github:3147918719",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "bug: asdf fails to list or install plugins when executed inside a non-existent working directory",
+  "body": "### Describe the Bug When executing some asdf commands in a terminal where PWD is set to a non-existent directory, the command fails and exits 1 with an internal log (e.g. - from `git` or `os.getwd`). ### Steps to Reproduce ```shell > mkdir test && cd test > rmdir ${PWD} > asdf list x unable to get current directory: getwd: no such file or directory > asdf plugin list all | grep flyctl flyctl http",
+  "url": "https://github.com/asdf-vm/asdf/issues/2135"
+ },
+ {
+  "id": "github:5385894835",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[Bug]: 3.17.0: Terraform/HCL files are indexed but no HCL symbols are extracted (variables, locals, resources, data, outputs unresolvable)",
+  "body": "### Description Terraform/HCL indexing regressed to file-level only. On 3.17.0 (native and wasm) `stats` counts the `.tf` files and `brief ` works, but no HCL symbol is extracted: `variable`, `locals` entries, `resource`, `data` and `output` blocks are all unaddressable with `where`/`context`/`fn-impact`, and `roles --role dead -T` returns zero Terraform symbols. Earlier builds did extract them: `",
+  "url": "https://github.com/optave/ops-codegraph-tool/issues/2662"
+ },
+ {
+  "id": "github:3530738920",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily News Digest - 2025-10-20",
+  "body": "# 2025-10-20 ## RedditDatabase 1. [What are the reasons *not* to migrate from MySQL to PostgreSQL?](https://www.reddit.com/r/Database/comments/1o9duvb/what_are_the_reasons_not_to_migrate_from_mysql_to/) 2. [absurder-sql](https://www.reddit.com/r/Database/comments/1o7tf6a/absurdersql/) 3. [How do you decide between SQL or NoSQL in my case?](https://www.reddit.com/r/Database/comments/1o9a4hs/how_do_",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/173"
+ },
+ {
+  "id": "github:2317621103",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Restructure/correct docs to avoid recommending iam:PassRole with blanket resource and service permissions",
+  "body": "Currently the plugin recommends the need to grant both these permissions so the plugin can launch instances, and I believe otherwise manage ECS tasks. This makes the role given to the ECS plugin a combination which can support privilege escalation, as theoretically the plugin could escalate privileges by launching an instance with an arbitrary existing role. This is summarised somewhat at https://",
+  "url": "https://github.com/gocd/gocd-ecs-elastic-agent/issues/327"
+ },
+ {
+  "id": "github:6008425306",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "AWS account app source needs a maintained catalog destination",
+  "body": "This community app candidate connects each caller's own AWS access keys. It reads STS caller identity and lists regional general-purpose S3 buckets. It uses `defineApp`, a `secrets` provider under `user.accounts`, invocation-scoped fetch and cancellation, and an explicit `never()` approval for each read. STS and S3 return XML, so the app validates XML and response shapes. `aws4fetch@1.0.20` signs ",
+  "url": "https://github.com/UsefulSoftwareCo/executor/issues/2372"
+ },
+ {
+  "id": "github:6050126692",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "feat: add Infisical provider with unit/integration tests and docs",
+  "body": "## Summary Add a first-party **Infisical** provider to SecretsManager, backed by the official [`Infisical.Sdk`](https://www.nuget.org/packages/Infisical.Sdk) NuGet package (currently `3.0.4`). The provider must support both Infisical Cloud and self-hosted Infisical instances, ship with unit tests, an integration test against a self-hosted instance, and full documentation. ## Motivation - Infisical",
+  "url": "https://github.com/mrhamburg/SecretsManager/issues/78"
+ },
+ {
+  "id": "github:4411845051",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Magic Content Engine \u2014 Bullpen Architecture v2 (Lambda Durable Functions)",
+  "body": "## Problem Statement Producing consistent, well-researched \"learn in public\" content as an AWS Community Builder requires synthesising two streams of information: what's happening in the AWS/Kiro ecosystem, and what you've actually been building. A single-agent pipeline lacks the role separation needed to do this well \u2014 research, editorial judgment, writing, quality review, and publication are dis",
+  "url": "https://github.com/mikeartee/magic-content-engine/issues/1"
+ },
+ {
+  "id": "github:681039491",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Aqua",
+  "body": "Is there any benefit to installing a security tool such as Aqua? https://www.aquasec.com/solutions/kubernetes-container-security/",
+  "url": "https://github.com/carlgranfelt/netapp-bootcamp/issues/104"
+ },
+ {
+  "id": "github:4776550757",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[High] Remove host networking/root runtime and unnecessary packages from reporting-api",
+  "body": "## Finding The production reporting container runs with host network exposure and root privileges, with extra packages that expand the attack surface. ## Evidence - `reporting/Dockerfile` uses `ubuntu:20.04`, installs `curl`, `vim`, `net-tools`, and `openssh-server`, and does not set a non-root `USER`. - `deployment/production-compose.yml` sets `user: root` and `network_mode: host` for `reporting-",
+  "url": "https://github.com/anujsingh977/docker-production-config/issues/2"
+ },
+ {
+  "id": "github:6415287109",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcac Tech Community AI Digest 2026-11-16",
+  "body": "# Tech Community AI Digest 2026-11-16 > Sources: [Dev.to](https://dev.to/) (30 articles) + [Lobste.rs](https://lobste.rs/) (9 stories) | Generated: 2026-11-16 05:58 UTC --- Here is the **Tech Community AI Digest** for 2026-11-16. ### Today's Highlights Across Dev.to and Lobste.rs, the community is heavily focused on **AI tooling patterns and security**. There is a strong shift from \"vibe coding\" t",
+  "url": "https://github.com/datnguyenquy94/news-radar/issues/1105"
+ },
+ {
+  "id": "github:3529416398",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily News Digest - 2025-10-19",
+  "body": "# 2025-10-19 ## HackerNews 1. [Root System Drawings](https://images.wur.nl/digital/collection/coll13/search) 2. [Tinnitus Neuromodulator](https://mynoise.net/NoiseMachines/neuromodulationTonesGenerator.php) 3. [Titan submersible\u2019s $62 SanDisk memory card found undamaged at wreckage site](https://www.tomshardware.com/pc-components/microsd-cards/tragic-oceangate-titan-submersibles-usd62-sandisk-memo",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/172"
+ },
+ {
+  "id": "github:3527939132",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily News Digest - 2025-10-18",
+  "body": "# 2025-10-18 ## RedditSoftwareArchitecture 1. [[Megathread] Software Architecture Books & Resources](https://www.reddit.com/r/softwarearchitecture/comments/16usw23/megathread_software_architecture_books_resources/) 2. [Inherited a 10 year old project with no tests](https://www.reddit.com/r/softwarearchitecture/comments/1o7oygf/inherited_a_10_year_old_project_with_no_tests/) 3. [Why Most Apps Shoul",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/171"
+ },
+ {
+  "id": "github:6419684629",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Language-specific container images cannot run as a non-root user (toolchains installed under /root)",
+  "body": "Most of the language-specific cdxgen container images install Node.js, and often other toolchains, under `/root`. `/root` has mode `0700`, so none of those tools can be reached when the container runs as a non-root user. Depending on the container runtime and its capability settings, the container either fails to start, or it starts and then every tool cdxgen spawns fails. @yuvalmich reported this",
+  "url": "https://github.com/cdxgen/cdxgen/issues/4846"
+ },
+ {
+  "id": "github:4208883951",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83e\udd9e OpenClaw Ecosystem Digest 2026-04-06",
+  "body": "# OpenClaw Ecosystem Digest 2026-04-06 > Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-04-06 00:12 UTC - [OpenClaw](https://github\u200b.com/openclaw/openclaw) - [NanoBot](https://github\u200b.com/HKUDS/nanobot) - [Zeroclaw](https://github\u200b.com/zeroclaw-labs/zeroclaw) - [PicoClaw](https://github\u200b.com/sipeed/picoclaw) - [NanoClaw](https://github\u200b.com/qwibitai/nanoclaw) - [NullClaw](https://",
+  "url": "https://github.com/jstamagal/agents-radar/issues/213"
+ },
+ {
+  "id": "github:5252333033",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83e\udd9e OpenClaw Ecosystem Digest 2026-08-26",
+  "body": "# OpenClaw Ecosystem Digest 2026-08-26 > Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-26 00:40 UTC - [OpenClaw](https://github\u200b.com/openclaw/openclaw) - [NanoBot](https://github\u200b.com/HKUDS/nanobot) - [Hermes Agent](https://github\u200b.com/nousresearch/hermes-agent) - [PicoClaw](https://github\u200b.com/sipeed/picoclaw) - [NanoClaw](https://github\u200b.com/qwibitai/nanoclaw) - [NullClaw](h",
+  "url": "https://github.com/Chestnuts-Sisyphus/gittok/issues/1111"
+ },
+ {
+  "id": "github:4610388290",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Embed patterns/ tree with //go:embed for self-contained binaries",
+  "body": "**Description:** The pattern catalog at the repository root `patterns/` (1 `SOURCES.md` plus 81 pattern markdown files: 14 under `design/` and 67 under `technology/{api,docker,go,helm,kubernetes,markdown,observability,python,security}/`) is reachable only via two on-disk fallbacks in every `collectPatternDirs` helper: ` /../patterns` (resolved from `os.Executable()`) and `./patterns` (resolved fro",
+  "url": "https://github.com/Planwerk/planwerk-agent/issues/37"
+ },
+ {
+  "id": "github:1244541462",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[admission-policy-engine] New module",
+  "body": "### Preflight Checklist - [X] I agree to follow the [Code of Conduct](https://github.com/deckhouse/deckhouse/blob/main/CODE_OF_CONDUCT.md) that this project adheres to. - [X] I have searched the [issue tracker](https://github.com/deckhouse/deckhouse/issues) for an issue that matches the one I want to file, without success. ### Use case. Why is this important? Goals: - [x] One of the significant fi",
+  "url": "https://github.com/deckhouse/deckhouse/issues/1603"
+ },
+ {
+  "id": "github:628827390",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Week Ending May 31, 2020",
+  "body": "## Developer News There are two new security vulnerabilities in Kubernetes components, one in [kube-controller-manager](https://groups.google.com/forum/#!topic/kubernetes-dev/yoCzkO9e88c), and one in a [popular CNI component](https://groups.google.com/forum/#!topic/kubernetes-dev/5U7F1QuPccA) used in several overlay networks. Both issues have been patched in the most recent releases. [The Annual P",
+  "url": "https://github.com/dev-obs/actus/issues/165"
+ },
+ {
+  "id": "github:4508128654",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Write for Us Cybersecurity \u2013 Submit Guest Posts",
+  "body": "### **Write for Us Cybersecurity: Submit Guest Posts & Contribute Expert Insights** Cybersecurity is no longer optional in today\u2019s digital world. Businesses, startups, remote teams, and even individuals depend on secure systems to protect sensitive data from hackers, ransomware, phishing attacks, and data breaches. As cyber threats continue to grow, the demand for expert cybersecurity content is i",
+  "url": "https://github.com/grayphiny/write-for-us-technology/issues/3"
+ }
+]

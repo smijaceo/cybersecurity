@@ -30,3 +30,19 @@ segments:
   smb-security-ops:
     description: Small teams with no SOC — alert overload, affordable detection, compliance.
     terms: ["small business security", SIEM, "EDR for small", "SOC 2 compliance tool"]
+
+# ---------------------------------------------------------------------------
+# Phase 2 reference data (decision D7: reuse curated lists and public datasets)
+
+awesome_lists:   # supply side: tools that already exist
+  - {repo: sbilly/awesome-security, branch: master, file: README.md}
+  - {repo: enaqx/awesome-pentest, branch: master, file: README.md}
+  - {repo: 4ndersonLin/awesome-cloud-security, branch: master, file: README.md}
+  - {repo: devsecops/awesome-devsecops, branch: master, file: README.md}
+  - {repo: kdeldycke/awesome-iam, branch: main, file: readme.md}
+  - {repo: meirwah/awesome-incident-response, branch: master, file: README.md}
+  - {repo: magnologan/awesome-k8s-security, branch: master, file: README.md}
+
+threat_data:
+  kev: https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+  attack: https://raw.githubusercontent.com/mitre/cti/master/enterprise-attack/enterprise-attack.json

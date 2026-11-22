@@ -10,13 +10,15 @@ from pathlib import Path
 
 import yaml
 
-from . import review
+from . import relevance, review
 from .collectors import COLLECTORS
 from .store import Store
 
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = ROOT / "config" / "segments.yaml"
 DEFAULT_DB = ROOT / "data" / "signals.db"
+DEFAULT_SCORING = ROOT / "config" / "scoring.yaml"
+DEFAULT_PHASE2 = ROOT / "reports" / "phase2"
 
 # Query style per source, chosen from measured result quality (see docs/ROADMAP.md, P1):
 # - github: pain phrase + term, both quoted. GitHub honours exact phrases, and
@@ -131,6 +133,104 @@ def cmd_evaluate(args) -> int:
     return 0 if all(r.passed for r in results) else 1
 
 
+def cmd_judge_prepare(args) -> int:
+    config = load_config(args.config)
+    store = Store(args.db)
+    dropped, kept = relevance.apply_rules(store)
+    print(f"rules dropped {dropped} signals; {kept} left for the judge")
+    paths = relevance.export_batches(store, config, args.out_dir, args.batch_size)
+    for p in paths:
+        print(f"  {p}")
+    return 0
+
+
+def cmd_judge_import(args) -> int:
+    store = Store(args.db)
+    try:
+        n = relevance.import_labels(store, args.batch, args.labels)
+    except review.LabelError as exc:
+        log.error("rejected %s: %s", args.labels, exc)
+        return 2
+    print(f"stored {n} judgments from {args.labels}")
+    return 0
+
+
+def cmd_judge_stats(args) -> int:
+    store = Store(args.db)
+    print(f"{'segment':22} {'total':>6} {'judged':>7} {'rules':>6} {'on-seg':>7} {'need':>5}")
+    for r in store.judgment_stats():
+        print(f"{r['segment']:22} {r['total']:>6} {r['judged']:>7} {r['dropped_by_rules'] or 0:>6}"
+              f" {r['on_segment'] or 0:>7} {r['need'] or 0:>5}")
+    return 0
+
+
+def cmd_themes(args) -> int:
+    from . import analysis
+
+    store = Store(args.db)
+    result = analysis.build_themes(store, args.out_dir)
+    for t in result["themes"]:
+        print(f"theme {t['theme_id']:>2}  {len(t['signal_ids']):>3} statements  "
+              f"stability {t['stability']:.2f}  {', '.join(t['keywords'][:5])}")
+    print(f"{len(result['themes'])} themes, {len(result['outliers'])} outliers -> "
+          f"{args.out_dir}/themes.json; namer input: {args.out_dir}/theme-naming-input.json")
+    return 0
+
+
+def _load_theme_names(args):
+    from . import analysis
+
+    theme_data = json.loads((args.out_dir / "themes.json").read_text())
+    names = analysis.load_names(args.out_dir / "theme-names.jsonl",
+                                {t["theme_id"] for t in theme_data["themes"]})
+    return theme_data, names
+
+
+def cmd_threat_prepare(args) -> int:
+    from . import analysis
+
+    try:
+        theme_data, names = _load_theme_names(args)
+    except (ValueError, FileNotFoundError) as exc:
+        log.error("theme names: %s", exc)
+        return 2
+    items = analysis.build_threat_input(theme_data["themes"], names, load_config(args.config),
+                                        load_config(args.scoring), args.out_dir)
+    print(f"{len(items)} coherent themes -> {args.out_dir}/threat-mapping-input.json")
+    return 0
+
+
+def cmd_gaps(args) -> int:
+    from datetime import date
+
+    from . import analysis, gaps
+
+    config, scoring = load_config(args.config), load_config(args.scoring)
+    store = Store(args.db)
+    try:
+        theme_data, names = _load_theme_names(args)
+        threat_input = json.loads((args.out_dir / "threat-mapping-input.json").read_text())
+        threat = analysis.load_threat(args.out_dir / "threat-mapping.jsonl", threat_input)
+    except (ValueError, FileNotFoundError) as exc:
+        log.error("agent output: %s", exc)
+        return 2
+    feats = analysis.theme_features(theme_data["themes"], names, threat, store, config, scoring)
+    ranked = gaps.score(feats, scoring["weights"])
+    excluded = [{**t, "reason": names[t["theme_id"]].get("reason", "")}
+                for t in theme_data["themes"] if names[t["theme_id"]]["coherent"] != "y"]
+    meta = {**theme_data, "generated": date.today().isoformat(),
+            "signals_total": sum(r["n"] for r in store.stats()),
+            "themes_total": len(theme_data["themes"])}
+    (args.out_dir / "gaps.json").write_text(json.dumps(ranked, indent=1))
+    report = args.out_dir.parent / f"gaps-{meta['generated']}.md"
+    report.write_text(analysis.render_report(ranked, excluded, meta, scoring))
+    for i, t in enumerate(ranked, 1):
+        print(f"{i:>2}. {t['gap_score']:.3f}  {t['name']}  ({t['demand']['need_signals']} statements,"
+              f" stability {t['stability']})")
+    print(f"report: {report}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="gapfinder", description=__doc__)
     p.add_argument("--db", type=Path, default=DEFAULT_DB)
@@ -152,7 +252,7 @@ def main(argv: list[str] | None = None) -> int:
 
     e = sub.add_parser("export", help="dump signals as JSON lines for analysis")
     e.add_argument("--segment")
-    e.add_argument("--min-engagement", type=int, default=0)
+    e.add_argument("--min-engagement", type=int, default=None)
     e.add_argument("--out", help="file path (default stdout)")
     e.set_defaults(func=cmd_export)
 
@@ -169,6 +269,34 @@ def main(argv: list[str] | None = None) -> int:
     ev.add_argument("--report", help="write a markdown report here")
     ev.add_argument("--title", default="Signal quality review")
     ev.set_defaults(func=cmd_evaluate)
+
+    jp = sub.add_parser("judge-prepare",
+                        help="apply rule filter, write unjudged signals as judge batches")
+    jp.add_argument("--out-dir", required=True)
+    jp.add_argument("--batch-size", type=int, default=150)
+    jp.set_defaults(func=cmd_judge_prepare)
+
+    ji = sub.add_parser("judge-import", help="validate and store a judge's labels for one batch")
+    ji.add_argument("--batch", required=True)
+    ji.add_argument("--labels", required=True)
+    ji.set_defaults(func=cmd_judge_import)
+
+    js = sub.add_parser("judge-stats", help="judgment counts per segment")
+    js.set_defaults(func=cmd_judge_stats)
+
+    th = sub.add_parser("themes", help="cluster need statements into themes (BERTopic)")
+    th.add_argument("--out-dir", type=Path, default=DEFAULT_PHASE2)
+    th.set_defaults(func=cmd_themes)
+
+    tp = sub.add_parser("threat-prepare", help="shortlist ATT&CK candidates for the threat mapper")
+    tp.add_argument("--out-dir", type=Path, default=DEFAULT_PHASE2)
+    tp.add_argument("--scoring", type=Path, default=DEFAULT_SCORING)
+    tp.set_defaults(func=cmd_threat_prepare)
+
+    gp = sub.add_parser("gaps", help="score named themes and write the gap report")
+    gp.add_argument("--out-dir", type=Path, default=DEFAULT_PHASE2)
+    gp.add_argument("--scoring", type=Path, default=DEFAULT_SCORING)
+    gp.set_defaults(func=cmd_gaps)
 
     args = p.parse_args(argv)
     if getattr(args, "source", None) is None and args.cmd == "collect":

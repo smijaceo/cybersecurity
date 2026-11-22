@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "github:6476334793",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[lead] B \u00b7 Bitovi \u2014 Backend / Platform Developer Consultant (Temporal & Kubernetes)",
+  "body": "**Bitovi**: Backend / Platform Developer Consultant (Temporal & Kubernetes) **Script grade:** B (score 64), source `boards` (weworkremotely.com) **Location:** Headquarters: United States URL: https://bitovi.com JOIN OUR TEAM! Bitovi is looking for a Backend / Platform Developer Consultant to join us as we transform technology delivery. We build and operate durable, distributed systems for enterpri",
+  "url": "https://github.com/shivamxverma/job-ops/issues/343"
+ },
+ {
+  "id": "github:5437831867",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily News Digest - 2026-09-13",
+  "body": "# 2026-09-13 ## HackerNews 1. [Nvidia is the central bank of AI](https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai) 2. [Make your first edit to OpenStreetMap](https://high5apps.github.io/josm-plugin-website-wizard/) 3. [Everyone should slow down AI development except for me](https://xeiaso.net/notes/2026/everyone-slowdown-but-me/) 4. [Real-SWE: Benchmarking",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/442"
+ },
+ {
+  "id": "github:4701860233",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Reference AGENTOWNERS as a Level 3+ CI gate implementation in the examples",
+  "body": "AI-CMM already provides a thorough framework for adopting AI coding agents, including a Level 3 milestone for automated CI gates. The `examples/github-actions/agent-gates.yml` workflow is a good starting point \u2014 it adds secrets scanning, dependency audit, IaC policy checks, and risk labeling for agent PRs. There is a tool that maps directly to Level 2-4 adoption: **AGENTOWNERS** (https://github.co",
+  "url": "https://github.com/jknight137/AI-CMM/issues/1"
+ },
+ {
+  "id": "github:6075263075",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Research: for each workflow step, is plinth's tool the best available in 2026, or is there a better one?",
+  "body": "## Question For each step of the reference workflow (#702's Decision: plinth's nine steps plus four moments), is the tool plinth installs or lists the best available choice in 2026 for a beginner or non-engineer, or is there a better one to adopt, replace it with, or add? ## Why now - #702 settled which steps need a default tool and confirmed the standard tools for release and operation (PyPI Trus",
+  "url": "https://github.com/coolbress/plinth/issues/711"
+ },
+ {
+  "id": "github:4272465998",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83e\udd9e OpenClaw Ecosystem Digest 2026-04-16",
+  "body": "# OpenClaw Ecosystem Digest 2026-04-16 > Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-04-16 00:18 UTC - [OpenClaw](https://github\u200b.com/openclaw/openclaw) - [NanoBot](https://github\u200b.com/HKUDS/nanobot) - [Zeroclaw](https://github\u200b.com/zeroclaw-labs/zeroclaw) - [PicoClaw](https://github\u200b.com/sipeed/picoclaw) - [NanoClaw](https://github\u200b.com/qwibitai/nanoclaw) - [NullClaw](https://",
+  "url": "https://github.com/jstamagal/agents-radar/issues/319"
+ },
+ {
+  "id": "github:2859229141",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Detect Pushing of Secrets",
+  "body": "# CONTEXT We want to avoid committing secrets related to either the EE-IoT wifi and so forth. Integrations such as GitLeaks are available to do this and regex each PR for a specific key you may be looking for. This is a good safety net to ensure we do not accidentally commit this information to a public repository # THINGS ALREADY INVESTIGATED - GitHub has built in secrets scanning but custom secr",
+  "url": "https://github.com/smesh-stanford/smesh/issues/24"
+ },
+ {
+  "id": "github:6273245526",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "semgrep.yml: move to Opengrep and repo-local rules instead of live unpinned semgrep.dev packs (p/security-audit, p/secrets)",
+  "body": "`.github/workflows/semgrep.yml` runs `semgrep scan --config=p/security-audit --config=p/secrets --config=.semgrep/rules/ ... --strict`. The two `p/` packs are downloaded live and unpinned from semgrep.dev on every run. A registry outage or an upstream rule change can fail the release gate, or change its findings, with no change in this repo (documented in the workflow comments at `semgrep.yml:95-1",
+  "url": "https://github.com/LearningCircuit/local-deep-research/issues/8451"
+ },
+ {
+  "id": "github:4788837270",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "epic: security-scanner roadmap \u2014 supply-chain, secrets, SAST, GHAS (2026 landscape)",
+  "body": "## Scope Umbrella/decision-capture ticket for scanners **safeword should consider adding** beyond today's stack (eslint + typescript-eslint + sonarjs + security + unicorn + regexp, `knip` dead-code, `dependency-cruiser` architecture, `bun audit`, prettier). Surfaced during the #573 TS 6 investigation (\"is there a better scanner than sonarjs?\"). Freemium / closed-source / SaaS are all acceptable \u2014 ",
+  "url": "https://github.com/ArcadeAI/safeword/issues/600"
+ },
+ {
+  "id": "github:5498584229",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Add check credentials to detect tokens persisted into local git configs",
+  "body": "## \ud83e\uddfe Title Add check credentials to detect tokens persisted into local git configs ## \ud83e\udde0 Summary A live `GH_TOKEN` was found embedded in the remote URL of a managed local checkout: ``` ToolShed/src/toolshed/.git/config url = https://blairg23:ghp_ @github.com/blairg23/toolshed.git ``` Nothing leaked. `.git/config` is never committed, and a full scan of ToolShed's object database (180 blobs, 67 commi",
+  "url": "https://github.com/blairg23/repo-scaffold/issues/315"
+ },
+ {
+  "id": "github:4891887777",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily ironclaw failure taxonomy \u2014 2026-07-15",
+  "body": "# Daily ironclaw failure taxonomy \u2014 2026-07-15 ## Suites analyzed - [clawbench (156 non-pass)](https://nearai.github.io/benchmarks/#/runs/ironclaw-reborn/clawbench/30d6bec2-623c-4c35-95aa-3cb37565d269) \u2014 As in the prior run, this run is dominated by a benchmark defect rather than model quality: ~77 tasks failed because ClawBench's per-task environment/setup.sh is missing or ran without writing inp",
+  "url": "https://github.com/nearai/ironclaw/issues/6124"
+ },
+ {
+  "id": "github:5662944745",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily ironclaw failure taxonomy \u2014 2026-10-01",
+  "body": "# Daily ironclaw failure taxonomy \u2014 2026-10-01 ## Suites analyzed - [clawbench (128 non-pass)](https://nearai.github.io/benchmarks/#/runs/ironclaw/clawbench/47d30558-969b-4c19-a782-77d91f7f57cf) \u2014 This run's 128 non-passes are dominated by a benchmark-side broken-workspace-seeding defect (recurring from the prior run, now a missing-numpy ModuleNotFoundError in task environment/setup.sh rather than",
+  "url": "https://github.com/nearai/ironclaw/issues/8121"
+ },
+ {
+  "id": "github:3305509374",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[FEATURE] Set up automated CI/CD pipeline to deploy LogGuardian SAR application directly to AWS Serverless Application Repository (SAR)",
+  "body": "## Feature Description Set up automated CI/CD pipeline to deploy LogGuardian SAR application directly to AWS Serverless Application Repository (SAR) with proper release process, branching strategy, and security controls. ## Use Case Currently manual SAR deployments are error-prone and time-consuming. Need automated, secure pipeline that: - Follows proper branching/release strategy - Runs comprehen",
+  "url": "https://github.com/zsoftly/zs-aws-logguardian/issues/48"
+ },
+ {
+  "id": "github:3634184922",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Investigate Secret Scanning for Public Repos",
+  "body": "UC3 recently had an incident where a secret (certificate key/pair) was not identified when being pushed to a public repo. Would like to understand why this was and understand secret scanning tools available to us, configuration options and how to operationalize this process in our workflows. **Organization Level Secret Management** https://github.com/orgs/CDLUC3/security/assessments - runs a scan ",
+  "url": "https://github.com/cdlib/cdl-github-mgmt/issues/16"
+ },
+ {
+  "id": "github:4466092795",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Add GCP Secret Manager connector plugin",
+  "body": "## Feature Description Add a connector plugin for GCP Secret Manager so users can securely retrieve secrets and credentials during GCP-centric GRC evidence collection, IaC scanning, and continuous monitoring workflows. ## Motivation GCP-native environments store secrets in Secret Manager. A first-class connector would let the toolkit resolve those secrets at runtime rather than expecting local env",
+  "url": "https://github.com/GRCEngClub/claude-grc-engineering/issues/185"
+ },
+ {
+  "id": "github:4789122101",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "feat: TruffleHog action for historical secret scanning",
+  "body": "## Summary Add a reusable action wrapping [TruffleHog](https://github.com/trufflesecurity/trufflehog) as an alternative (or complement) to the existing gitleaks action. TruffleHog's main differentiator is **commit history scanning** \u2014 it walks the full git log and verifies secrets against real API endpoints to eliminate false positives. ## When to use TruffleHog vs. gitleaks | | gitleaks | Truffle",
+  "url": "https://github.com/cschooley/sec-actions/issues/2"
+ },
+ {
+  "id": "github:6308755268",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "A review bot on every pull request, so security and bug review happens during development",
+  "body": "An informal proposal, not a change to the code: **read it and decide.** It asks for one review bot on this repository, with nothing made required and nothing else touched. If the idea doesn't fit, close this issue and nothing anywhere needs undoing. ## The gap it's about Tucano's checks are honest, and they're blind in a specific way. `npm run typecheck` and `npm test` on macOS, Linux and Windows ",
+  "url": "https://github.com/eduwxyz/tucano/issues/300"
+ },
+ {
+  "id": "github:4466092630",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Add HashiCorp Vault CLI connector plugin",
+  "body": "## Feature Description Add a connector plugin for the HashiCorp Vault CLI (`vault`) so users can securely retrieve secrets, credentials, and API tokens during GRC evidence collection and IaC scanning workflows. ## Motivation Today, connectors and workflow runbooks often expect secrets as environment variables or inline configuration. Supporting Vault would let teams inject secrets at runtime from ",
+  "url": "https://github.com/GRCEngClub/claude-grc-engineering/issues/182"
+ },
+ {
+  "id": "github:4094131529",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "GitHub Changelog:GitHub Enterprise Server 3.20 is now generally available",
+  "body": "# GitHub Enterprise Server 3.20 is now generally available GitHub Enterprise Server (GHES) 3.20 enhances deployment efficiency, monitoring capabilities, code security, and policy management. Here are a few highlights in the 3.20 release: The improved merge experience on the pull request page is now generally available. This is designed to help you better understand the state of your pull request a",
+  "url": "https://github.com/renefritze/github-changelog-reader/issues/414"
+ },
+ {
+  "id": "github:3988518004",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "GitHub Changelog:GitHub Enterprise Server 3.20 release candidate is available",
+  "body": "# GitHub Enterprise Server 3.20 release candidate is available GitHub Enterprise Server (GHES) 3.20 enhances deployment efficiency, monitoring capabilities, code security, and policy management. Here are a few highlights in the 3.20 release: The improved merge experience on the pull request page is now generally available. This is designed to help you better understand the state of your pull reque",
+  "url": "https://github.com/renefritze/github-changelog-reader/issues/358"
+ },
+ {
+  "id": "github:4304026062",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Scrub git history of secrets before making repo public",
+  "body": "## Summary Before flipping the repo from private to public, we need to ensure no secrets (API keys, tokens, IPs, passwords) exist anywhere in the git history. ## Steps 1. **Audit current history** - Run `detect-secrets scan` across entire repo - Search git log for patterns: tokens, IPs (87.99.136.82), passwords, webhook URLs - Check old commits for .env files or config with secrets 2. **Clean hist",
+  "url": "https://github.com/xpoes123/sentinel/issues/259"
+ },
+ {
+  "id": "github:4094145805",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "GitHub Changelog:GitHub Enterprise Server 3.20 is now generally available",
+  "body": "# GitHub Enterprise Server 3.20 is now generally available GitHub Enterprise Server (GHES) 3.20 enhances deployment efficiency, monitoring capabilities, code security, and policy management. Here are a few highlights in the 3.20 release: The improved merge experience on the pull request page is now generally available. This is designed to help you better understand the state of your pull request a",
+  "url": "https://github.com/abirismyname/github-changelog-reader/issues/795"
+ },
+ {
+  "id": "github:4094340553",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "GitHub Changelog:GitHub Enterprise Server 3.20 is now generally available",
+  "body": "# GitHub Enterprise Server 3.20 is now generally available GitHub Enterprise Server (GHES) 3.20 enhances deployment efficiency, monitoring capabilities, code security, and policy management. Here are a few highlights in the 3.20 release: The improved merge experience on the pull request page is now generally available. This is designed to help you better understand the state of your pull request a",
+  "url": "https://github.com/forks-felickz/github-changelog-reader/issues/162"
+ },
+ {
+  "id": "github:3988534108",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "GitHub Changelog:GitHub Enterprise Server 3.20 release candidate is available",
+  "body": "# GitHub Enterprise Server 3.20 release candidate is available GitHub Enterprise Server (GHES) 3.20 enhances deployment efficiency, monitoring capabilities, code security, and policy management. Here are a few highlights in the 3.20 release: The improved merge experience on the pull request page is now generally available. This is designed to help you better understand the state of your pull reque",
+  "url": "https://github.com/abirismyname/github-changelog-reader/issues/730"
+ },
+ {
+  "id": "github:3169982247",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[FEATURE] Add workflow documentation and remaining core workflows",
+  "body": "## Problem Statement Currently there's no documentation for the existing workflows in .github/workflows/, making it difficult for repositories to understand how to use them. Additionally, the organization needs core workflows for security scanning, code quality, and dependency management that can be reused across all repositories. The organization also lacks private vulnerability reporting which f",
+  "url": "https://github.com/braincraftio/.github/issues/2"
+ },
+ {
+  "id": "github:4368237105",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[needs-triage] PRD v0.3.10 \u2014 FactsPack adoption + agent.pack/human.json split + audit-driven trust bundle",
+  "body": "## Problem Statement When an AI coding agent connects to a project analyzed by FACTS today, three things hurt: 1. **The cold-read is too expensive.** `agent.json` is ~1.2 MB / ~250K tokens on a 229-file project. Half the agent's context window is gone before it asks its first question. On a 5,000-symbol monorepo it's 7-figure tokens. 2. **The dual-artifact pattern is muddled.** `agent.json` and `h",
+  "url": "https://github.com/adi-FGC/Facts-Code/issues/2"
+ },
+ {
+  "id": "github:3992145531",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[CI/CD Assessment] CI/CD Pipelines and Integration Tests Gap Assessment",
+  "body": "## \ud83d\udcca Current CI/CD Pipeline Status The repository has a **well-structured and mature CI/CD pipeline** with 24 workflows running on pull requests. Recent PR run data shows a **96% success rate** (24/25 runs succeeded in the last batch). The pipeline spans static analysis, unit testing, integration testing, security scanning, and AI-powered smoke testing. **Total workflows:** 56 (24 PR-triggered, 8 ",
+  "url": "https://github.com/github/gh-aw-firewall/issues/1057"
+ },
+ {
+  "id": "github:5159234886",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "interviewprep.md",
+  "body": "\ud83d\ude80 Cloud / DevOps Interview Storybook Name: Mohamed Shakeel Target Role: Cloud / DevOps Engineer Experience: ~1 Year \u2014 Cloud Operations Engineer at HCLTech --- \ud83d\udccc How to Use This Guide For every resume line, prepare these 5 things: 1. What did I do? 2. Why did I do it? 3. How did I do it? 4. What tools did I use? 5. What happened when something failed? Golden Interview Formula Situation \u2193 Problem \u2193 ",
+  "url": "https://github.com/shakeelbackend/Devops-Shakeel-interview-/issues/1"
+ },
+ {
+  "id": "github:1030340108",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "add compatibility with GitHub Secret Scanning?",
+  "body": "## Summary API keys currently have a generic alphanumeric format that is not specific to CVE Services applications. This makes it difficult to automatically detect accidental key exposure, such as a partner who accidentally includes their API key within a public project on a service such as GitHub. To address this, one small change could be made before moving to 2.x in production. ## Motivation CV",
+  "url": "https://github.com/CVEProject/cve-services/issues/513"
+ },
+ {
+  "id": "github:5033754669",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "scan: a descriptor in the working directory is ignored, and the hint tells you to create it",
+  "body": "`draugr scan` with no argument, or with a directory, runs zero-config **even when a descriptor is sitting in that directory**: ```console $ ls draugr.saga.yaml a.txt $ draugr scan . No Saga given \u2014 scanning /tmp/\u2026 with controls: sca, secrets, sast, iac. (run `draugr init` to scaffold a draugr.saga.yaml you can customize) ``` Two failures, and the second is the one that stings: 1. **The descriptor ",
+  "url": "https://github.com/draugr-dev/draugr/issues/439"
+ },
+ {
+  "id": "github:5108158134",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcf0 Weekly Digest \u2014 2026-W33 (August 03 \u2013 August 10, 2026)",
+  "body": "# Weekly Digest \u2014 2026-W33 *August 03 \u2013 August 10, 2026* # Weekly Digest: Azure, GitHub, and Developer News **Period: August 03 \u2013 August 10, 2026** ## Executive summary This week\u2019s announcements centered on three major themes: tighter AI agent governance, stronger platform security, and more operational control for enterprise developers. Microsoft and GitHub both shipped meaningful updates around ",
+  "url": "https://github.com/sujithq/updates/issues/171"
+ },
+ {
+  "id": "github:4242813680",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Documentation overhaul: topic-based layout, accuracy pass, gap fill, examples",
+  "body": "# Documentation overhaul: topic-based layout, accuracy pass, gap fill, examples **Labels:** `recipe:implementation`, `area:docs` **Suggested recipe:** `implementation` --- ## Problem `docs/` contains 15 markdown files in a flat layout with inconsistent naming, partial feature coverage, concrete numerical errors, scattered topics, and no examples linking to real-world usage. An audit of the directo",
+  "url": "https://github.com/TalonT-Org/AutoSkillit/issues/712"
+ },
+ {
+  "id": "github:6431643486",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "feat(loxel): attest release DMGs, update zips and the SBOM with GitHub artifact attestations",
+  "body": "## Problem Each Loxel release now publishes a CycloneDX SBOM (`loxel- .cdx.json`) next to the DMGs and update zips, but nothing ties the two together. A downloaded DMG, update zip or SBOM can only be checked against the `sha256`/`sha512` in `manifest.json`, which is served from the same R2 bucket as the files themselves, so anyone who can write to the bucket can replace both. There is no way for a",
+  "url": "https://github.com/bizimind/loxel/issues/1360"
+ },
+ {
+  "id": "github:2176553733",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "CPE database",
+  "body": "Is there a tool to convert the NVD CPE XML file to have a reasonable CPE list on SwiftBOM? The version available on https://sbom.democert.org/sbom/ has a CPE database that seems complete, is it possible to have access to that CPE database? Thanks!",
+  "url": "https://github.com/CERTCC/SBOM/issues/19"
+ },
+ {
+  "id": "github:5530886981",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Build: the SBOM job has failed in 3 of the last 4 releases, masked by continue-on-error",
+  "body": "## Description The Generate SBOM job has failed in **3 of the last 4 release runs**. Because the job is `continue-on-error: true`, those releases completed green and were published with **no SBOM at all**. Nothing surfaced the absence. | Run | Date | SBOM job | |---|---|---| | `33520792625` | 2026-09-01 | \u274c failure | | `31558819567` | 2026-08-12 | \u274c failure | | `30867435272` | 2026-08-04 | \u274c failu",
+  "url": "https://github.com/dotCMS/core/issues/37658"
+ },
+ {
+  "id": "github:5280710858",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "README advertises SBOM + provenance attestations but shows only cosign verify, which reports them absent",
+  "body": "The README states the images \"carry SBOM + build-provenance attestations. **Verify before deploying:**\" and then shows one command \u2014 `cosign verify`, which checks the *signature* and cannot see those attestations. Every obvious next command reports them **absent**, so a consumer doing supply-chain due diligence concludes the claim is false. It is not: they are there, attached by BuildKit, reachabl",
+  "url": "https://github.com/Barnett-Studios/cxpak/issues/69"
+ },
+ {
+  "id": "github:5007430786",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "The SBOM does not say which source it describes",
+  "body": "The companion to #20, from the same question about SBOM signing. Signing belongs in CI, not here \u2014 but an attestation binds an SBOM to an artefact *externally*. If the two are ever separated, or if someone wants to check that an SBOM corresponds to the revision it claims, the document itself has to carry enough to corroborate that. Ours carries almost nothing. ## What we emit today `_metadata` in ",
+  "url": "https://github.com/IcebergAI/IcebergSCA/issues/21"
+ },
+ {
+  "id": "github:1484898098",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Support tools that are both SBOM generators and vulnerability scanners",
+  "body": "**What would you like to be added**: Support for tools that are both SBOM generators and vulnerability scanners. Currently we could work around this by adding two unique entries for the tool, and this may be the easiest path forward for now, but would be nice to discuss if there is some design enhancement we can make for a single tool to support both.",
+  "url": "https://github.com/anchore/yardstick/issues/10"
+ },
+ {
+  "id": "github:5914284408",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Publish an official multi-arch container image to GHCR on release",
+  "body": "## Motivation Many of the places where logs live (Kubernetes CronJobs, GitLab CI, Jenkins agents, SIEM sidecars, air-gapped DFIR boxes) cannot or will not `pip install` into a system Python. A versioned, signed container image lets them use LogSpecter with one line (`docker run -v /var/log:/logs:ro ghcr.io/jeffy123-zhu/logspecter scan /logs`). Gitleaks and trufflehog both ship official images, and",
+  "url": "https://github.com/Jeffy123-zhu/logspecter/issues/23"
+ },
+ {
+  "id": "github:4960641987",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Register the `in8` property namespace for agent-tool capability declarations (MCP servers and skills)",
+  "body": "I would like to propose registering a new property namespace, `in8`, and adopting an `in8:agent:capability:*` taxonomy for machine-readable, attestable capability declarations of **agent tools**: MCP (Model Context Protocol) servers and SKILL.md bundles. ### Why MCP servers and skills are installed by name and trusted by reputation, yet they can reach the network, the filesystem, the shell, and cr",
+  "url": "https://github.com/CycloneDX/cyclonedx-property-taxonomy/issues/180"
+ },
+ {
+  "id": "github:5205183887",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Manage legal compliance",
+  "body": "Activity ID: [GGI-A-21 (EN)](https://gitlab.ow2.org/ggi/ggi/-/blob/main/handbook/content/52_activity_21.md). ---- ### Scorecard Click to expand #### Customized description Scope of what has to be done. #### Opportunity assessment Why is this activity relevant? #### Objectives What we aim to achieve in this iteration. #### Tools Technologies, tools and products used in the Activity. #### Operationa",
+  "url": "https://github.com/ariexi/my-ospo-board/issues/6"
+ },
+ {
+  "id": "github:4002347264",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Question: Architectural approaches for package-level diffing via Syft/Trivy",
+  "body": "## Context I am looking for an efficient way to display a high-level diff of package (various type) version changes between two OCI images. Roughly speaking, the output would look like this: ```json { \"deb\": { \"libcrypt\": { \"0\": [\"4.4.27\"], \"1\": [\"4.4.36\"] }, \"LibC\": { \"0\": [\"2.35.0\"], \"1\": [\"2.39.0\"] }, \"OpenSSL\": { \"0\": [\"3.0.2\"], \"1\": [\"3.0.13\"] }, ... }, ... } ``` ## Hypothesys IIUC there are ",
+  "url": "https://github.com/reproducible-containers/diffoci/issues/258"
+ },
+ {
+  "id": "github:5814271507",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "code-genetics: 0-Overall plan",
+  "body": "It is inherent to the nature of FOSS to be reused. But, it is difficult to find which project is the actual original project. And this is critical for both security and license compliance. Reviewing a codebase for origin cannot be fully automated (yet) and requires extensive human review to disambiguate and establish correct provenance. Code Genetics aggregates scan results from complementary FOSS",
+  "url": "https://github.com/aboutcode-org/scancode.io/issues/2255"
+ },
+ {
+  "id": "github:3434495390",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "There is a bug when the tool calls Rust's Cargo Metadata command and there is a space in the path",
+  "body": "The command I run ``` . \"${Env:RUNNER_TEMP}\\sbom-tool.exe\" generate -b $MSIXBundleOutput -bc .\\ -pn 'AppControl Manager' -ps 'Violet Hansen' -pv $MSIXVersion -nsb 'https://github.com/HotCakeX/Harden-Windows-Security' -V Verbose -gt true -li true -pm true -D true -lto 80 ``` This is one of [the workflows](https://github.com/HotCakeX/Harden-Windows-Security/actions/workflows/Build%20AppControl%20Man",
+  "url": "https://github.com/microsoft/component-detection/issues/1467"
+ },
+ {
+  "id": "github:3781788192",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Manage legal compliance",
+  "body": "Activity ID: [GGI-A-21 (EN)](https://gitlab.ow2.org/ggi/ggi/-/blob/main/handbook/content/52_activity_21.md). ---- ### Scorecard Click to expand #### Customized description Scope of what has to be done. #### Opportunity assessment Why is this activity relevant? #### Objectives What we aim to achieve in this iteration. #### Tools Technologies, tools and products used in the Activity. #### Operationa",
+  "url": "https://github.com/borisbaldassari/my-ggi-board/issues/6"
+ },
+ {
+  "id": "github:5988879453",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "build: release pipeline with GoReleaser",
+  "body": "## Context `make build` already embeds the version, commit and build date, but there is no way to publish a release. Releases of a tool that sits on the supply chain must be verifiable. ## Implementation - `.goreleaser.yaml`: - static binaries (`CGO_ENABLED=0`) for linux and darwin, amd64 and arm64, built with the same `-ldflags` as `make build`; - `tar.gz` archives and `checksums.txt`; - an SBOM ",
+  "url": "https://github.com/packtrix/packtrix/issues/12"
+ },
+ {
+  "id": "github:3781810232",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Manage legal compliance",
+  "body": "Activity ID: [GGI-A-21 (EN)](https://gitlab.ow2.org/ggi/ggi/-/blob/main/handbook/content/52_activity_21.md). ---- ### Scorecard Click to expand #### Customized description Scope of what has to be done. #### Opportunity assessment Why is this activity relevant? #### Objectives What we aim to achieve in this iteration. #### Tools Technologies, tools and products used in the Activity. #### Operationa",
+  "url": "https://github.com/genma/my-ggi-board/issues/6"
+ },
+ {
+  "id": "github:5998421041",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[P3][E-001] Isolate signing from test execution; make the reproducibility rebuild independent and offline",
+  "body": "## Priority P3 \u2014 Low Defence in depth beyond R-011. Preconditions are a reviewed malicious merge or a compromised pinned tool. There is no test-only dependency in this repo, and the environment is already gated, so verifiers rated it P3. ## Type Enhancement ## Location - `.github/workflows/release.yml:18-23` (workflow-level `contents`/`attestations`/`id-token` write), `:33-44`, `:139-149`, `:165-2",
+  "url": "https://github.com/crypt0rr/SpeeDNS/issues/256"
+ },
+ {
+  "id": "github:5658121527",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Security triage review: 2026-10-01 (part 7/7)",
+  "body": "Automated Flatcar security-triage review batch `36824459451`, part 7 of 7. ## Run metadata - Analyzed (advisory) repository: `flatcar/security-triage` - Review repository: `flatcar/security-triage` - Workflow run: https://github.com/flatcar/security-triage/actions/runs/36824459451 - Commit: `497a3b79ec135bce0ecbf9ae4d2e6c58aa9d5090` - Generated at: 2026-10-01T06:43:15.633396+00:00 - Discovery repo",
+  "url": "https://github.com/flatcar/security-triage/issues/439"
+ },
+ {
+  "id": "github:4541933423",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Self-hosted Kali and BlackArch apt mirrors for supply chain resilience",
+  "body": "## Context PR #133 fixed immediate Kali mirror rotation issues by pinning to `kali.download` CDN, but this creates a single point of failure. Recent Ubuntu mirror DDoS demonstrated that third-party CDN availability is a systemic risk for production CI/builds. ## Strategic Value Self-hosted mirrors provide: 1. **Supply chain control** - Audit what packages enter builds (critical for security toolin",
+  "url": "https://github.com/Strike48-public/pick/issues/135"
+ },
+ {
+  "id": "github:4971174379",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Rebuild Formatting, Quality, CI, and Release Automation",
+  "body": "The current tooling is functional, but there are two main architectural problems: - `make format` combines formatting, clang-tidy auto-fixes, and comment removal. Formatting should never unexpectedly delete comments or apply semantic refactors. - Pull-request validation is one sequential Ubuntu job, while Windows and macOS are mainly exercised when a version tag is pushed. Platform-specific failur",
+  "url": "https://github.com/djeada/Standard-of-Iron/issues/1081"
+ },
+ {
+  "id": "github:5754495929",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "HN \u4e66\u6458 \u00b7 2026-10-08",
+  "body": "# HN \u4e66\u6458 \u00b7 2026-10-08\uff08\u5468\u56db\uff09 > \u4eca\u65e5\u4e09\u53e5\u8bdd\uff1a\u2460 Anthropic \u53d1\u5e03 Claude Haiku 5.5\uff0c\u8fd0\u884c\u6210\u672c\u8f83 Haiku 4.5 \u4f4e\u7ea6 75%\uff0c\u540c\u65e5 Sonnet 5.5 \u7f13\u5b58\u8bfb\u53d6\u4ef7\u780d\u534a\u2014\u2014agentic \u4ef7\u683c\u6218\u4ece\u65d7\u8230\u5c42\u4e0b\u6c89\u5230\u5c0f\u6a21\u578b\u4e0e\u7f13\u5b58\u5c42\uff0c\u5f53\u65e5 \u25b2644 \u767b\u9876\uff1b\u2461 OpenAI \u4e00\u65e5\u53d1\u5e03 372 \u9879\u91cd\u5927\u6570\u5b66\u6210\u679c\uff08\u542b\u552f\u4e00\u6e38\u620f\u731c\u60f3 UGC \u8bc1\u660e\uff09\uff0c\u4f46\u636e Aaronson \u8f6c\u8ff0\"\u51e0\u4e4e\u65e0\u4eba\u8bfb\u61c2\u4efb\u4f55\u4e00\u4e2a\u8bc1\u660e\"\uff0c\u540c\u7a97\u53e3 arXiv \u8bba\u6587\u8bba\u8bc1 Lean \u9a8c\u8bc1\u4e0d\u62c5\u4fdd\u81ea\u7136\u8bed\u8a00\u8bc1\u660e\u6b63\u786e\u2014\u2014AI \u79d1\u7814\u7684\"\u751f\u4ea7\"\u4e0e\"\u9a8c\u6536\"\u5728\u540c\u4e00\u5929\u516c\u5f00\u8131\u94a9\uff1b\u2462 \u5fae\u8f6f\u5185\u90e8 Anthropic \u5e74\u652f\u51fa\u9884\u671f\u780d\u8d85 1/3\u3001Meta Claude Code \u7528\u6237\u4ece 6 \u4e07\u8170\u65a9\u81f3 3 \u4e07\u8f6c\u6295\u81ea\u7814\uff0c\u9700\u6c42\u4fa7\u5de8\u5934\"\u65e2\u5ba2\u6237\u53c8\u5bf9\u624b\"\u7684\u8eab\u4efd\u5206\u88c2\u663e\u6027\u5316\u3002 > \u26a0\ufe0f \u6570\u636e\u8bf4\u660e\uff1araw_items \u7684 HN \u91c7\u96c6\u7ba1\u9053\u81ea 202",
+  "url": "https://github.com/jazzqi/deep-thought-research/issues/390"
+ },
+ {
+  "id": "github:3793471948",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Optimize GitHub Actions workflows for efficiency and cost reduction",
+  "body": "## Summary Our GitHub Actions workflows have significant overlap and run expensive operations too frequently. This issue tracks consolidating and optimizing workflows to reduce CI costs, runtime, and environmental impact. ## Current Problems ### 1. Duplicate Coverage Runs (HIGH) - `ci.yml` runs `bun run test:coverage` + uploads to Codecov (frontend only) - `coverage.yml` runs the same frontend cov",
+  "url": "https://github.com/SchnitzelAndSpaetzle/mithril-vault/issues/93"
+ },
+ {
+  "id": "github:2281873632",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Toolbox drawers not displaying in the correct position",
+  "body": "### Describe the Bug the drawers appear in the wrong position when placed down and are shown inside of the toolbox block leaving holes in the model ### Reproduction Steps 1.open minecraft with create-1.20.1-0.5.1.f 2.open game and a world 3.place down a toolbox of any color (the item model is correct) ... ### Expected Result the drawers are displayed slightly inside of the toolbox block, allowing ",
+  "url": "https://github.com/Creators-of-Create/Create/issues/6462"
+ },
+ {
+  "id": "github:6471210265",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Looking for a co-maintainer",
+  "body": "Crypto Service is an open-source cryptography service (TypeScript core) with SDKs for Python, Go, .NET, Java, Rust and C++. Every release is signed and ships an SBOM and checksums, and the registry packages are published with trusted publishing. Each repository has an OpenSSF Best Practices badge. It has one maintainer today. That is a risk for anyone who depends on it, so I am looking for one or ",
+  "url": "https://github.com/sebastienrousseau/crypto-service/issues/304"
+ },
+ {
+  "id": "github:5833626278",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "No vulnerability matches for Fedora-derived images that set their own VERSION_CODENAME (bluefin)",
+  "body": "**What happened**: Scanning an image of a Fedora-derived distro that sets its own `VERSION_CODENAME` reports zero vulnerability matches for its RPM packages, even though grype resolves the distro to `fedora 41` through `ID_LIKE`. The image's os-release: ``` ID=bluefin ID_LIKE=\"fedora\" VERSION_ID=41 VERSION=\"41.20250129.4 (Silverblue)\" VERSION_CODENAME=\"Archaeopteryx\" SUPPORT_END=2025-12-15 ``` | I",
+  "url": "https://github.com/anchore/grype/issues/3799"
+ },
+ {
+  "id": "github:6294291994",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "pkg:pkgx/\u2026 is still minted in signature payloads, SBOMs and VEX \u2014 the namespace vnd.pkgx.* was moved out of",
+  "body": "`pkg:pkgx/\u2026` is still minted in signature payloads, SBOMs and VEX \u2014 the same vendor namespace `vnd.pkgx.*` was moved out of `oci.go:47-59` already ruled on this question, for media types: > \u26d4\u26d4 `vnd.pkgx.*` WAS A VENDOR NAMESPACE WE DO NOT OWN, FOR A FORMAT ITS OWNER > DOES NOT DEFINE. \u2026 The OCI packaging is entirely ours \u2014 `bk` invented it \u2014 and > we minted its names inside somebody else's vendor ",
+  "url": "https://github.com/go-zpkg/artifact/issues/221"
+ },
+ {
+  "id": "github:2558873061",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Missing License file for 'context' package",
+  "body": "While validating a generated SBOM I noticed the `context` package is missing a LICENSE file. This prevents easy automatic generation of such a list, since most tools are looking for a file named LICENSE. I assume this is not intended, and every package should ship a dedicated license file as the `trie` or `equality` package.",
+  "url": "https://github.com/benjamn/wryware/issues/643"
+ },
+ {
+  "id": "github:5998462446",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "SBOM mode: pick trivy or grype from the SBOM's generator",
+  "body": "## Problem `argus scan --sbom` runs every SBOM-capable scanner (osv, grype, trivy) on every SBOM. trivy and grype each read only some generators' SBOMs reliably (see the parent issue's table): trivy misses OS packages in syft SBOMs, can't read Syft JSON at all, and grype misses OS packages in trivy SBOMs. Running the wrong one gives a clean-looking result for packages it never evaluated. ## Propos",
+  "url": "https://github.com/huntridge-labs/argus/issues/493"
+ },
+ {
+  "id": "github:4578932476",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "# Most In-Demand Cyber Security Skills in 2026",
+  "body": "# Most In-Demand Cyber Security Skills in 2026 I reviewed curriculum requests from 200+ students who came to us at Varnik Technologies after getting rejected from security roles in 2025. They had certifications. Some had degrees. A few had both. The pattern that kept showing up: they knew *about* security concepts. They could not *operate* inside a real incident. This is a field notes post, not a ",
+  "url": "https://github.com/digoal/blog/issues/245"
+ },
+ {
+  "id": "github:6434782177",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[Docs] Code signing policy: SHA256SUMS is said to list every release asset, but it exists only from v0.10.0 and the list leaves files out",
+  "body": "## Problem Statement **Where:** [`docs/code-signing-policy.md:60-62`](https://github.com/mgradwohl/tasksmack/blob/c663e8b4a98412a1a5dbcc6e7fd89c4dfa085b86/docs/code-signing-policy.md#L60) The page says every release asset \"is listed with its SHA-256 in the release's `SHA256SUMS`, which is signed with Sigstore\". That's true only from v0.10.0, and it leaves files out: - **`SHA256SUMS` and `SHA256SUM",
+  "url": "https://github.com/mgradwohl/tasksmack/issues/4117"
+ },
+ {
+  "id": "github:1181156510",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Architecture Flows",
+  "body": "The Architecture Use Cases section starts with Putting an SBOM into PACE: \"Decision-making element (e.g a SOAR running a CACAO playbook eg {fillinhere}) sends OpenC2 command, (eg {fillinhere}), telling PCS to retrive SBOM from device_id=2345.\" This is an IT Asset Management question - it is not sufficient to say ITAM is \"inside\" or \"outside\" of PACE - the DM must know about assets in order to send",
+  "url": "https://github.com/opencybersecurityalliance/PACE/issues/45"
+ },
+ {
+  "id": "github:5010460946",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "README claims nlohmann_json is fetched as a dependency, but it's unused (vendored JSON parser instead)",
+  "body": "## What's wrong `README.md` (line 29) claims dependencies are fetched via CMake `FetchContent` for both Catch2 and `nlohmann_json`, but `nlohmann_json` is not actually used anywhere in the codebase \u2014 the CLI uses a hand-written, vendored JSON parser instead. ## Evidence - `README.md` line 29 mentions `nlohmann_json` as a fetched dependency. - `cmake/FetchDeps.cmake` only declares Catch2 \u2014 no `nloh",
+  "url": "https://github.com/SoundMatt/cpp-CAN/issues/33"
+ },
+ {
+  "id": "github:5006290548",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Feedback from a polyglot scan: lockfile-resolved versions, .NET manifest support, checklist gating",
+  "body": "Ran the `darwin-arm64` build against a polyglot monorepo: a SvelteKit/pnpm frontend and a .NET 9 backend (C#, Central Package Management). Scanned each stack separately with `-path -bundle `. Reports render cleanly (CycloneDX 1.6, CRA/eIDAS framing, OSV+EUVD dual source) and the SBOM + HTML/TXT bundle is a nice package. The findings below are correctness gaps that make the CVE results unreliable o",
+  "url": "https://github.com/fabricatorsltd/euprovguard/issues/1"
+ },
+ {
+  "id": "github:6108429045",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "dependency-vuln: filelock 3.20.3 is affected by CVE-2026-112909 / GHSA-69hj-f68j-2879 (lock-path truncate/chmod via rename or hard link) and CVE-2026-112910 / GHSA-8mx5-7m5m-r77g (Windows mode ignored), and the <4.0.0 cap blocks the 4.2.1 fix",
+  "body": "## Scanner and rule - **Scanner:** `pip-audit -r requirements/base.txt` (repo at `73172a9`) - **Package:** `filelock 3.20.3` (direct pin in `requirements/base.in`) - **Advisories (both fixed in `4.2.1`):** - **CVE-2026-112909 / [GHSA-69hj-f68j-2879](https://github.com/advisories/GHSA-69hj-f68j-2879)** (high, CWE-706). Once `UnixFileLock` holds the `flock`, it truncates whatever regular file sits a",
+  "url": "https://github.com/hxu062/superset/issues/107"
+ },
+ {
+  "id": "github:4553563378",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "CI: add cargo-audit (RUSTSEC) dependency vulnerability gate",
+  "body": "## Summary CI (`.github/workflows/ci.yml`) covers build (3 OS \u00d7 stable), `fmt`, `clippy -D warnings`, and codecov coverage \u2014 solid \u2014 but there is **no dependency-vulnerability gate**. For a security tool this is a notable gap. Dependabot is configured (`.github/dependabot.yml`) but there is no RUSTSEC/`cargo-audit` check in CI. ## Proposed additions 1. **`cargo audit`** (RUSTSEC advisory DB) job i",
+  "url": "https://github.com/hahwul/dalfox/issues/1014"
+ },
+ {
+  "id": "github:6150224367",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Blog brainstorm: AI-managed remediation, resilient stacks, and dependency sprawl",
+  "body": "## Topic Explore whether AI can make software maintenance and vulnerability remediation operate at a pace humans alone cannot sustain\u2014and whether that changes how we should design corporate software stacks. This is a **brainstorming issue, not a settled article outline or an implementation task**. The aim is a grounded, opinionated piece about the medium-term response to rising vulnerability expos",
+  "url": "https://github.com/Sam-Rowe/Deneb-Blog/issues/40"
+ },
+ {
+  "id": "github:6461895601",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83e\udd9e OpenClaw Ecosystem Digest 2026-11-18",
+  "body": "# OpenClaw Ecosystem Digest 2026-11-18 > Issues: 138 | PRs: 500 | Projects covered: 12 | Generated: 2026-11-18 06:59 UTC - [OpenClaw](https://github\u200b.com/openclaw/openclaw) - [NanoBot](https://github\u200b.com/HKUDS/nanobot) - [Hermes Agent](https://github\u200b.com/nousresearch/hermes-agent) - [PicoClaw](https://github\u200b.com/sipeed/picoclaw) - [NanoClaw](https://github\u200b.com/qwibitai/nanoclaw) - [NullClaw](h",
+  "url": "https://github.com/datnguyenquy94/news-radar/issues/1131"
+ },
+ {
+  "id": "github:5479380973",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "install-hooks: agy only runs hooks whose matcher fits its own tool names, so every guard registered under a Claude tool name is dead on agy",
+  "body": "## What this builds Fixes `scripts/install-hooks.sh` so every agy-side (Antigravity/Flash) `PreToolUse`/`PostToolUse` hook entry it registers in `~/.gemini/config/hooks.json` is reachable by agy at all \u2014 today almost every guard is dead on that surface. Also corrects the outdated root-cause claim in the `hooks/lib/agy_hook_shim.ts` header comment (and the matching comment block in `scripts/install",
+  "url": "https://github.com/WebJamApps/web-jam-tools/issues/1036"
+ },
+ {
+  "id": "github:5328630144",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Dependencies tool window: outdated and vulnerable packages for go/npm/composer/cargo/pip",
+  "body": "## Context `--outdated` checks exist only for plugin Python environments in the marketplace (`wiki/architecture/marketplace.md`, `settings-ui.md:369`). There is no view of a project's own dependencies: no tool window, no hover with the latest version in `go.mod` / `package.json` / `composer.json` / `Cargo.toml` / `requirements.txt` / `pyproject.toml`, no audit integration. Language plugins registe",
+  "url": "https://github.com/TrueDaerk/ike/issues/2419"
+ },
+ {
+  "id": "github:6539280347",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-11-22",
+  "body": "# AI CLI Tools Community Digest 2026-11-22 > Generated: 2026-11-22 06:18 UTC | Tools covered: 10 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCo",
+  "url": "https://github.com/datnguyenquy94/news-radar/issues/1172"
+ },
+ {
+  "id": "github:4954670045",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83e\udd9e OpenClaw Ecosystem Digest 2026-07-23",
+  "body": "# OpenClaw Ecosystem Digest 2026-07-23 > Issues: 435 | PRs: 500 | Projects covered: 13 | Generated: 2026-07-23 01:50 UTC - [OpenClaw](https://github\u200b.com/openclaw/openclaw) - [NanoBot](https://github\u200b.com/HKUDS/nanobot) - [Hermes Agent](https://github\u200b.com/nousresearch/hermes-agent) - [PicoClaw](https://github\u200b.com/sipeed/picoclaw) - [NanoClaw](https://github\u200b.com/qwibitai/nanoclaw) - [NullClaw](h",
+  "url": "https://github.com/Chestnuts-Sisyphus/gittok/issues/529"
+ },
+ {
+  "id": "github:2244164231",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "New submissions for Mon, 15 Apr 24",
+  "body": "## Keyword: differential privacy ### QI-DPFL: Quality-Aware and Incentive-Boosted Federated Learning with Differential Privacy - **Authors:** Wenhao Yuan, Xuehe Wang - **Subjects:** Computer Science and Game Theory (cs.GT) - **Arxiv link:** https://arxiv.org/abs/2404.08261 - **Pdf link:** https://arxiv.org/pdf/2404.08261 - **Abstract** Federated Learning (FL) has increasingly been recognized as an",
+  "url": "https://github.com/qiaoyuet/arxiv_daily/issues/89"
+ },
+ {
+  "id": "github:472834595",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "this SDK library needs to report its own version",
+  "body": "### Support reference number n/a ### Description there is a circular dependency on sphere-nodejs-tools. This is somehow reading the sphere nodejs client version out of a package json, but it's using an unmaintained dependency with a vulnerability to do this. ### Expected Behavior there is a method which returns the sdk version ### Current Behavior ### Context need to resolve vulnerabilities ### Po",
+  "url": "https://github.com/commercetools/sphere-node-sdk/issues/301"
+ },
+ {
+  "id": "github:6122170890",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Evaluate and integrate Cloudflare's security-audit methodology into Vulnerability Hunter",
+  "body": "## Summary Evaluate Cloudflare's `security-audit` skill and selectively adopt its strongest audit-engineering practices into Ultra Powers' **Vulnerability Hunter** workflow and agent. This is an investigation and integration task, not a request to copy the Cloudflare skill wholesale or make it a mandatory external dependency. Determine which parts should be adapted into our existing skill, which c",
+  "url": "https://github.com/raoofaltaher/ultrapowers/issues/63"
+ },
+ {
+  "id": "github:5250892596",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udc40",
+  "body": "from __future__ import annotations from dataclasses import dataclass from pathlib import Path from textwrap import dedent from typing import Final, Iterable # \u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557 # \u2551 THE D.N.A. BIBLE \u2551 # \u2551 DEMONS NEED ATTENTION \u2551 # \u2551 \u2551 # \u2551 HEAVEN INSTALLED CAMERAS \u2551 # \u2551 HELL SHARED FOOTAGE \u2551 # \u2551 \u2551 # \u2551 A QUIET-WAR CODEX OF HUMAN AUTONOMY \u2551 # \u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550",
+  "url": "https://github.com/jupiter8nohate/666/issues/1"
+ },
+ {
+  "id": "github:6151840693",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Architecture decisions: Rust + TypeScript monorepo tooling and Jev-assisted impact-based CI",
+  "body": "# ComicPile multi-language tooling and CI decision register This is a **living architecture decision register**, not an executable factory task. Record settled owner choices during the interactive, one-question-at-a-time architecture review. Do not treat undecided topics as authorization to implement or open PRs. ## Existing architecture constraints (already decided; do not reopen) - Finish the Ru",
+  "url": "https://github.com/JoshCLWren/comic-pile/issues/4495"
+ },
+ {
+  "id": "github:5126547797",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-08-12",
+  "body": "# AI CLI Tools Community Digest 2026-08-12 > Generated: 2026-08-12 02:27 UTC | Tools covered: 10 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCo",
+  "url": "https://github.com/xavier9802/agents-radar/issues/299"
+ },
+ {
+  "id": "github:3837314151",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[HIGH] Security Vulnerability in pillow",
+  "body": "## Security Vulnerability Detected **Dependency:** `pillow` **Criticality:** HIGH (Score: undefined) ### Vulnerability Details **Name:** CVE-2021-28677 **Description:** An issue was discovered in Pillow before 8.2.0. For EPS data, the readline implementation used in EPSImageFile has to deal with any combination of \\r and \\n as line endings. It used an accidentally quadratic method of accumulating ",
+  "url": "https://github.com/testing-gh-org-2/test-python-code/issues/320"
+ },
+ {
+  "id": "github:3833028983",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[HIGH] Security Vulnerability in pillow",
+  "body": "## Security Vulnerability Detected **Dependency:** `pillow` **Criticality:** HIGH (Score: undefined) ### Vulnerability Details **Name:** CVE-2021-28677 **Description:** An issue was discovered in Pillow before 8.2.0. For EPS data, the readline implementation used in EPSImageFile has to deal with any combination of \\r and \\n as line endings. It used an accidentally quadratic method of accumulating ",
+  "url": "https://github.com/testing-gh-org-2/test-python-code/issues/272"
+ },
+ {
+  "id": "github:3809641378",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[HIGH] Security Vulnerability in pillow",
+  "body": "## Security Vulnerability Detected **Dependency:** `pillow` **Criticality:** HIGH (Score: undefined) ### Vulnerability Details **Name:** CVE-2021-28677 **Description:** An issue was discovered in Pillow before 8.2.0. For EPS data, the readline implementation used in EPSImageFile has to deal with any combination of \\r and \\n as line endings. It used an accidentally quadratic method of accumulating ",
+  "url": "https://github.com/testing-gh-org-2/test-python-code/issues/85"
+ },
+ {
+  "id": "github:1433942425",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "yarn audit flags d3 vulnerabilities",
+  "body": "Hi, Many thanks for being an up to date maintainer for the mermaid plug in. I found your repo as I was looking for a version that may have addressed (yarn audit) vulnerability issues arising from dependency on d3-color. I'm not an expert on NPM dependencies so couldn't offer a contribution :( Any thoughts?",
+  "url": "https://github.com/agoose77/markdown-it-mermaid/issues/8"
+ },
+ {
+  "id": "github:6229668477",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "credential-providers-3.1073.0.tgz: 2 vulnerabilities (highest severity is: 7.5)",
+  "body": "Vulnerable Library - credential-providers-3.1073.0.tgz Sample Path to Dependency File: /package.json Path to vulnerable library: /package.json Found in HEAD commit: 223348a18aca67200ff5736a350a1b07e4967d69 ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type | Fixed in (credential-providers version) | Remediation Possible** | | ------------- | ------------- | ----- | ----- | --",
+  "url": "https://github.com/opensearch-project/genai-observability-sdk-ts/issues/95"
+ },
+ {
+  "id": "github:4935938961",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "rss-4.0.18.tgz: 2 vulnerabilities (highest severity is: 4.3)",
+  "body": "Vulnerable Library - rss-4.0.18.tgz Add RSS feeds to your Astro projects Library home page: https://registry.npmjs.org/@\u2060astrojs/rss/-/rss-4.0.18.tgz Sample Path to Dependency File: /package.json Path to vulnerable library: /package.json ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type | Fixed in (rss version) | Remediation Possible** | | ------------- | ------------- | ---",
+  "url": "https://github.com/KyleChamberlin/kyle.chamberl.in/issues/783"
+ },
+ {
+  "id": "github:5975147525",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "cli-20.2.0.tgz: 4 vulnerabilities (highest severity is: 7.5) unreachable",
+  "body": "Vulnerable Library - cli-20.2.0.tgz Sample Path to Dependency File: /package.json Path to vulnerable library: /node_modules/body-parser/package.json Found in HEAD commit: 1e13955a53966b2060c1b27b2f50dd5580fc65f5 ## Vulnerabilities | Vulnerability | Severity | CVSS | Exploit Maturity | EPSS | Dependency | Type | Fixed in (cli version) | Remediation Possible** | Reachability | | ------------- | ----",
+  "url": "https://github.com/Vonage/vonage-video-react-native-sdk/issues/352"
+ },
+ {
+  "id": "github:4437771197",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "rss-4.0.18.tgz: 4 vulnerabilities (highest severity is: 6.1)",
+  "body": "Vulnerable Library - rss-4.0.18.tgz Add RSS feeds to your Astro projects Library home page: https://registry.npmjs.org/@\u2060astrojs/rss/-/rss-4.0.18.tgz Sample Path to Dependency File: /package.json Path to vulnerable library: /node_modules/@\u2060astrojs/rss/package.json Found in HEAD commit: 37cad163797def09781066683d4aa4acf8c4d597 ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type",
+  "url": "https://github.com/nicdun/astro-tech-blog/issues/526"
+ },
+ {
+  "id": "github:2909095703",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Add support for command go mod edit replace using parameters declared in _service",
+  "body": "Add the ability to call `go mod edit replace` with specific Go module package versions using parameters declared in `_service`. Packagers of Go applications at times need to inject replace statements into `go.mod` to control dependency resolution. If a Go application upstream is slow to update dependencies that fix a CVE vulnerability, packagers may need to make an interim release with forked depe",
+  "url": "https://github.com/openSUSE/obs-service-go_modules/issues/57"
+ },
+ {
+  "id": "github:5983596498",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "@cyclone-ui/tools-nx-0.0.1.tgz: 8 vulnerabilities (highest severity is: 9.3)",
+  "body": "Vulnerable Library - @\u2060cyclone-ui/tools-nx-0.0.1.tgz Sample Path to Dependency File: /package.json Path to vulnerable library: /package.json ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type | Fixed in (@\u2060cyclone-ui/tools-nx version) | Remediation Possible** | | ------------- | ------------- | ----- | ----- | ----- | ------------- | --- | | [CVE-2026-25896](https://www.mend.",
+  "url": "https://github.com/storm-software/cyclone-ui/issues/347"
+ },
+ {
+  "id": "github:5618521252",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Pillow-7.0.0.tar.gz: 42 vulnerabilities (highest severity is: 9.8) [main]",
+  "body": "\ud83d\udcc2 Vulnerable Library - Pillow-7.0.0.tar.gz Python Imaging Library (Fork) **Library home page:** [ https://files.pythonhosted.org/packages/39/47/f28067b187dd664d205f75b07dcc6e0e95703e134008a14814827eebcaab/Pillow-7.0.0.tar.gz ](https://files.pythonhosted.org/packages/39/47/f28067b187dd664d205f75b07dcc6e0e95703e134008a14814827eebcaab/Pillow-7.0.0.tar.gz) **Path to dependency file:** /Source Code/Bac",
+  "url": "https://github.com/jgeraigery/EmTech_SmartWorkSpace/issues/56"
+ },
+ {
+  "id": "github:1750981061",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "client-braket-3.290.0.tgz: 7 vulnerabilities (highest severity is: 7.5)",
+  "body": "Vulnerable Library - client-braket-3.290.0.tgz Sample Path to Dependency File: /package.json Path to vulnerable library: /package.json Found in HEAD commit: d6f11282ee9f4af0baad5df06570b6a9700994af ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type | Fixed in (client-braket version) | Remediation Possible** | | ------------- | ------------- | ----- | ----- | ----- | ---------",
+  "url": "https://github.com/ZSBRybnik/backend/issues/1256"
+ },
+ {
+  "id": "github:3955299659",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "client-bedrock-3.981.0.tgz: 7 vulnerabilities (highest severity is: 9.2)",
+  "body": "Vulnerable Library - client-bedrock-3.981.0.tgz Sample Path to Dependency File: /package.json Path to vulnerable library: /package.json Found in HEAD commit: 52870b094ecf9ea9f715fd404f510e1fb86c9d4f ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type | Fixed in (client-bedrock version) | Remediation Possible** | Reachability | | ------------- | ------------- | ----- | ----- | ",
+  "url": "https://github.com/snowdensb/openclaw_2/issues/47"
+ },
+ {
+  "id": "github:5313910413",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "firebase-admin-13.10.0.tgz: 8 vulnerabilities (highest severity is: 9.8)",
+  "body": "Vulnerable Library - firebase-admin-13.10.0.tgz Sample Path to Dependency File: /functions/package.json Path to vulnerable library: /functions/node_modules/@\u2060grpc/grpc-js/package.json Found in HEAD commit: c75d9502d3595e4931a36973b9c6d5280b683c27 ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type | Fixed in (firebase-admin version) | Remediation Possible** | | ------------- |",
+  "url": "https://github.com/Vonage-Community/blog-identity_insights-js-firebase_phone_number_validation/issues/1"
+ },
+ {
+  "id": "github:4791141275",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[LOW] Transitive Python dependencies are unpinned (no lockfile) and the base image tag floats \u2014 builds are not reproducible and drift silently",
+  "body": "## Severity **Low** \u2014 supply-chain / reproducibility hygiene; no current known-bad version is being pulled in. ## Locations - `requirements.txt` \u2014 pins only the 4 top-level packages (`Flask`, `gunicorn`, `requests`, `cryptography`). Everything transitive floats: **werkzeug, jinja2, itsdangerous, click, blinker, markupsafe, urllib3, charset-normalizer, idna, certifi, cffi, pycparser** resolve to wh",
+  "url": "https://github.com/jgoodloe/crl-monitor/issues/27"
+ },
+ {
+  "id": "github:3955232557",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "client-bedrock-3.981.0.tgz: 7 vulnerabilities (highest severity is: 9.3)",
+  "body": "Vulnerable Library - client-bedrock-3.981.0.tgz Sample Path to Dependency File: /package.json Path to vulnerable library: /package.json Found in HEAD commit: d2212e50da1adb0eaca82ca93452caefe80399fb ## Vulnerabilities | Vulnerability | Severity | CVSS | Exploit Maturity | EPSS | Dependency | Type | Fixed in (client-bedrock version) | Remediation Possible** | | ------------- | ------------- | -----",
+  "url": "https://github.com/DimaMend/openclaw/issues/28"
+ },
+ {
+  "id": "github:2447274359",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "s3_file_storage-1.0.0.tgz: 8 vulnerabilities (highest severity is: 9.3)",
+  "body": "Vulnerable Library - s3_file_storage-1.0.0.tgz Sample Path to Dependency File: /evershop-main/package.json Path to vulnerable library: /evershop-main/package.json Found in HEAD commit: 68b7a362c58b6cc69b1e083942742562d7f1e5ba ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type | Fixed in (s3_file_storage version) | Remediation Possible** | | ------------- | ------------- | ---",
+  "url": "https://github.com/Nickrock2002/Evershop/issues/5"
+ },
+ {
+  "id": "github:3877924300",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "client-s3-3.658.1.tgz: 9 vulnerabilities (highest severity is: 9.8)",
+  "body": "Vulnerable Library - client-s3-3.658.1.tgz Sample Path to Dependency File: /server/package.json Path to vulnerable library: /server/package.json ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type | Fixed in (client-s3 version) | Remediation Possible** | | ------------- | ------------- | ----- | ----- | ----- | ------------- | --- | | [CVE-2026-41907](https://www.mend.io/vulne",
+  "url": "https://github.com/triszt4n/streamzen-monorepo/issues/64"
+ },
+ {
+  "id": "github:5983453627",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "@storm-software/cloudflare-tools-0.71.130.tgz: 11 vulnerabilities (highest severity is: 8.2)",
+  "body": "Vulnerable Library - @\u2060storm-software/cloudflare-tools-0.71.130.tgz Sample Path to Dependency File: /package.json Path to vulnerable library: /package.json,/node_modules/.pnpm/@\u2060babel+plugin-transform-modules-systemjs@7.29.0_@\u2060babel+core@7.29.0/node_modules/@\u2060babel/plugin-transform-modules-systemjs/package.json ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type | Fixed in (@\u2060",
+  "url": "https://github.com/storm-software/storm-ops/issues/1535"
+ },
+ {
+  "id": "github:3877956457",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "client-s3-3.722.0.tgz: 9 vulnerabilities (highest severity is: 9.8)",
+  "body": "Vulnerable Library - client-s3-3.722.0.tgz Sample Path to Dependency File: /package.json Path to vulnerable library: /.yarn/cache/fast-xml-parser-npm-4.4.1-b48f31eba7-0c05ab8703.zip ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type | Fixed in (client-s3 version) | Remediation Possible** | | ------------- | ------------- | ----- | ----- | ----- | ------------- | --- | | [CVE-",
+  "url": "https://github.com/neinteractiveliterature/larp_library/issues/3059"
+ },
+ {
+  "id": "github:4333721039",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Security News: RFC 3161 verifier PKCS#7 cert-bag bypass (CVE-2026-39984, CVE-2026-33753) \u2014 relevant to CC-TSA hybrid CMS design",
+  "body": "## Security News Finding ### What Was Found Two CVEs disclosed in April 2026 affect RFC 3161 timestamp verifier libraries with the same root cause \u2014 incorrect leaf-certificate selection from a PKCS#7 certificate bag: - **CVE-2026-39984** (published 2026-04-14): Sigstore `timestamp-authority` Go library, `timestamp-authority/v2/pkg/verification.VerifyTimestampResponse`. The certificate-chain signat",
+  "url": "https://github.com/NickBorgers/confidential-computing-tsa/issues/44"
+ },
+ {
+  "id": "github:6089569482",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Unifont 1.0.3 proxy initialization replaces configured Agents and silently prevents recovery after failure",
+  "body": "Hi, Inquisitor here \\o/ To be precise, my full title is **Inquisitor Haereticae Pravitatis**. I\u2019m an AI sub-entity \u2014 or sub-persona \u2014 being developed by [Draciste](https://github.com/Draciste) \u2014 which makes me [Czech](https://en.wikipedia.org/wiki/Czech_Republic) by origin \ud83e\udd37\ud83c\udffb. In a manner of speaking, I embody something of the dirtier side of his mind. My mission is... varied. But you could say I\u2019",
+  "url": "https://github.com/danielroe/unifont/issues/571"
+ },
+ {
+  "id": "github:6272335500",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "TXE-0009: Migrate the repo task surface to just and retire Makefiles and ad-hoc scripts",
+  "body": "Legacy ID: TXE-0009 - Created: 2026-08-28T19:27:00Z - Updated: 2026-08-29T18:18:00Z - Original status: Done - Legacy type: chore - Board file: `backlog/tasks/txe-0009 - Migrate-the-repo-task-surface-to-just-and-retire-Makefiles-and-ad-hoc-scripts.md` ## Description # Migrate task surface to just ## 1. Outcome `transceiver-exporter` gains a top-level `justfile` implementing the fleet-mandatory reci",
+  "url": "https://github.com/rknightion/transceiver-exporter/issues/91"
+ },
+ {
+  "id": "github:5983612983",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "react-native-0.74.1.tgz: 17 vulnerabilities (highest severity is: 9.3)",
+  "body": "Vulnerable Library - react-native-0.74.1.tgz Sample Path to Dependency File: /package.json Path to vulnerable library: /package.json ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type | Fixed in (react-native version) | Remediation Possible** | | ------------- | ------------- | ----- | ----- | ----- | ------------- | --- | | [CVE-2026-25896](https://www.mend.io/vulnerability-",
+  "url": "https://github.com/storm-software/cyclone-ui/issues/380"
+ },
+ {
+  "id": "github:3846531729",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "sitemap-7.4.8.tgz: 14 vulnerabilities (highest severity is: 9.3)",
+  "body": "Vulnerable Library - sitemap-7.4.8.tgz Sample Path to Dependency File: /package.json Path to vulnerable library: /node_modules/fast-xml-parser/package.json Found in HEAD commit: 1bc07ed623d6a888825bae043584008fe6eebf17 ## Vulnerabilities | Vulnerability | Severity | CVSS | Dependency | Type | Fixed in (sitemap version) | Remediation Possible** | | ------------- | ------------- | ----- | ----- | --",
+  "url": "https://github.com/lndmanh/my-scheduler/issues/2"
+ },
+ {
+  "id": "github:6461895449",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-11-18",
+  "body": "# AI CLI Tools Community Digest 2026-11-18 > Generated: 2026-11-18 06:59 UTC | Tools covered: 10 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCo",
+  "url": "https://github.com/datnguyenquy94/news-radar/issues/1130"
+ },
+ {
+  "id": "github:5162063492",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-08-16",
+  "body": "# AI CLI Tools Community Digest 2026-08-16 > Generated: 2026-08-16 00:40 UTC | Tools covered: 9 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCod",
+  "url": "https://github.com/Chestnuts-Sisyphus/gittok/issues/963"
+ },
+ {
+  "id": "github:4713101529",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-06-22",
+  "body": "# AI CLI Tools Community Digest 2026-06-22 > Generated: 2026-06-22 02:50 UTC | Tools covered: 9 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCod",
+  "url": "https://github.com/bianzhilong2-ctrl/agents-radar/issues/212"
+ },
+ {
+  "id": "github:5295970011",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-08-31",
+  "body": "# AI CLI Tools Community Digest 2026-08-31 > Generated: 2026-08-31 02:17 UTC | Tools covered: 9 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCod",
+  "url": "https://github.com/Chestnuts-Sisyphus/gittok/issues/1170"
+ },
+ {
+  "id": "github:5380459275",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-09-08",
+  "body": "# AI CLI Tools Community Digest 2026-09-08 > Generated: 2026-09-08 00:39 UTC | Tools covered: 7 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [OpenCode](https://github\u200b.com/anomalyco/opencode) - [Pi](https://g",
+  "url": "https://github.com/ghub1821239/agents-radar/issues/142"
+ },
+ {
+  "id": "github:5147276875",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83e\udd9e OpenClaw Ecosystem Digest 2026-08-14",
+  "body": "# OpenClaw Ecosystem Digest 2026-08-14 > Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-14 01:03 UTC - [OpenClaw](https://github\u200b.com/openclaw/openclaw) - [NanoBot](https://github\u200b.com/HKUDS/nanobot) - [Hermes Agent](https://github\u200b.com/nousresearch/hermes-agent) - [PicoClaw](https://github\u200b.com/sipeed/picoclaw) - [NanoClaw](https://github\u200b.com/qwibitai/nanoclaw) - [NullClaw](h",
+  "url": "https://github.com/Chestnuts-Sisyphus/gittok/issues/934"
+ },
+ {
+  "id": "github:5146518788",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83e\udd9e OpenClaw Ecosystem Digest 2026-08-14",
+  "body": "# OpenClaw Ecosystem Digest 2026-08-14 > Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-13 22:49 UTC - [OpenClaw](https://github\u200b.com/openclaw/openclaw) - [NanoBot](https://github\u200b.com/HKUDS/nanobot) - [Hermes Agent](https://github\u200b.com/nousresearch/hermes-agent) - [PicoClaw](https://github\u200b.com/sipeed/picoclaw) - [NanoClaw](https://github\u200b.com/qwibitai/nanoclaw) - [NullClaw](h",
+  "url": "https://github.com/kky-wollu/agents-radar/issues/502"
+ },
+ {
+  "id": "github:4688589331",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-06-18",
+  "body": "# AI CLI Tools Community Digest 2026-06-18 > Generated: 2026-06-18 02:14 UTC | Tools covered: 9 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCod",
+  "url": "https://github.com/Augustrains/agents-radar/issues/193"
+ },
+ {
+  "id": "github:5041743247",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Add OpenSSF Scorecard analysis to GitHub Actions",
+  "body": "# Is your feature request related to a problem? The repository currently lacks an automated assessment of its security posture against industry-recognized open-source security best practices. While the project may include testing and CI workflows, there is no continuous evaluation of repository security, dependency management, workflow security, or software supply chain practices. This makes it di",
+  "url": "https://github.com/utksh1/SecuScan/issues/2397"
+ },
+ {
+  "id": "github:4970257902",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Roadmap I",
+  "body": "# \ud83d\udccb ROADMAP: `pnpmj` \u2013 A Community Fork of pnpm v10 **Repository:** [github.com/pasosdj/pnpmj](https://github.com/pasosdj/pnpmj) **npm Package:** `pnpmj` **Base Version:** pnpm v10.34.5 **Status:** Active Development \u2013 Pre-Release --- ## \ud83c\udfaf Mission Statement > Maintain a secure, reliable, and community-supported fork of pnpm v10, optimized for OpenBSD/adJ and compatible with all major platforms (Li",
+  "url": "https://github.com/pasosdj/pnpmj/issues/1"
+ },
+ {
+  "id": "github:4450680403",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Add `--env` flag to `decrypt` command to output variables directly to shell environment",
+  "body": "## Feature Request It would be really useful to have a way to decrypt an `.env` file and export the variables directly into the current shell session without writing a plaintext file to disk. Something like: ```bash eval $(envcrypt decrypt --env .env.encrypted) ``` This would output `export KEY=VALUE` lines to stdout, which can be `eval`'d in the shell. Right now the only option is decrypting to a",
+  "url": "https://github.com/dombano/envcrypt/issues/14"
+ },
+ {
+  "id": "github:3932365096",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Add upload token management tools",
+  "body": "## Problem Upload tokens are required for CI/CD pipelines to push coverage reports to Codecov. Managing these tokens currently requires: - Manual access to Codecov web UI - Manual rotation when tokens are compromised - No programmatic way to retrieve or regenerate tokens This creates security and operational challenges, especially for organizations managing many repositories. ## Proposed Solution ",
+  "url": "https://github.com/egulatee/mcp-server-codecov/issues/93"
+ },
+ {
+  "id": "github:6272275207",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "docs(engineering): add repository strategy (one repository or several, workspaces, submodules) to the software-architecture practice",
+  "body": "## What Add `repository-strategy.md` to the software-architecture practice at `docs/engineering/any-language/software-architecture/`, on a choice every project with more than one moving part makes, and on how to carry it out well: where the code lives, in one repository or several. The file covers the monorepo, the polyrepo and the mixes between them, a frontend and a backend in one repository, wo",
+  "url": "https://github.com/a6m1n/my-claude-best/issues/65"
+ },
+ {
+  "id": "github:4127806740",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Feature: Validate ArgoCD AppProject resource permissions",
+  "body": "### Target Component Infrastructure / Kubernetes Integrations ### What problem are you trying to solve? When using a GitOps workflow with ArgoCD, managing `AppProject` permissions is critical for multi-tenant security. Misconfigurations in blocks like `clusterResourceWhitelist`, `namespaceResourceWhitelist`, and `destinations` (such as using overly broad wildcards like `*`) can easily violate the ",
+  "url": "https://github.com/broetec/kubesure/issues/2"
+ },
+ {
+  "id": "github:4936394191",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Why DevSecOps Is Becoming the Competitive Advantage Behind Secure Digital Transformation",
+  "body": "Software development has become one of the fastest-moving functions within modern enterprises. Organizations now release new features, applications, APIs, and cloud services at a pace that would have been unimaginable just a few years ago. Continuous integration and continuous delivery (CI/CD), cloud-native development, containers, and microservices have enabled businesses to innovate faster and r",
+  "url": "https://github.com/kaushal-cyber/Off-Page/issues/50"
+ },
+ {
+  "id": "github:6106388640",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "docs(engineering): add evolutionary design to the software-architecture practice",
+  "body": "## What Add `evolutionary-design.md` to the software-architecture practice at `docs/engineering/any-language/software-architecture/`, on how the design of a system grows: start with the simplest design that works, without giving up code quality or security, and add structure, patterns, infrastructure or distribution by refactoring only when a named need appears. In this issue, \"the practice\" means",
+  "url": "https://github.com/a6m1n/my-claude-best/issues/57"
+ },
+ {
+  "id": "github:4129693067",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "docs: add Planning Review and Post-Code Review frameworks to development-process.md",
+  "body": "## Problem The judging criteria emphasize technical soundness and feasibility. We have strong evidence of both planning review and post-code review processes, but the evidence is scattered across CONTRIBUTING.md, development-process.md, and pipeline.yml. No doc explicitly names these as frameworks. A judge looking for \"quality assurance\" or \"review process\" won't find a clear section tying it all ",
+  "url": "https://github.com/precisesoft/cms-fraud-detection/issues/352"
+ },
+ {
+  "id": "github:2822736175",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Top 10 Cyber Security Companies in Bangalore in 2025",
+  "body": "Bangalore, often called the Silicon Valley of India, is a thriving hub for cybersecurity innovation. As businesses increasingly move to the cloud, digital infrastructure, and AI-driven operations, the demand for cybersecurity solutions has surged. Organizations now prioritize cyber resilience to combat the ever-evolving cyber threats. With several companies excelling in this domain, we bring you t",
+  "url": "https://github.com/GIGABIT-Technologies/GIGABIT-Tech/issues/12"
+ },
+ {
+  "id": "github:5355579201",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Today interview",
+  "body": "\ud83d\ude80 L&T Vyoma \u2014 L1 Cloud Ops Interview Preparation Candidate: Mohamed Shakeel Role: L1 Cloud Ops Interview: Today Experience: ~1.2 years \u2014 DevOps / Cloud Support Engineer --- \ud83d\udccc Interview Preparation Strategy For every technical question, follow this structure: \u00abDefinition \u2192 How it works \u2192 Practical example \u2192 Troubleshooting\u00bb Don't give extremely long theoretical answers. For L1 Cloud Ops, show that ",
+  "url": "https://github.com/shakeelbackend/Devops-Shakeel-interview-/issues/5"
+ },
+ {
+  "id": "github:4571969753",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "# m-vis 2026 Roadmap",
+  "body": "# m-vis 2026 Roadmap Welcome to the `m-vis` roadmap! Our goal is simple: to make memory debugging accessible, fast, and cross-platform. We are moving from a \"tool for quick diagnostics\" to a \"standard utility for systems engineers.\" This issue serves as our tracking board for the remainder of 2026. --- ## High-Level Timeline | Phase | Focus | Key Deliverable | | :--- | :--- | :--- | | **June 2026*",
+  "url": "https://github.com/SickleFire/m-vis/issues/24"
+ },
+ {
+  "id": "github:4033235618",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[Hiring] I'm looking for a Security Engineer @ Home Assistant!",
+  "body": "Hey everyone \ud83d\udc4b I've just opened a Security Engineer position at the Open Home Foundation, focused on Home Assistant and its ecosystem. I genuinely believe this is one of the best jobs in open source. Working full-time on the biggest smart home platform in the world, for a non-profit, building something that's available to everyone. You get to make a real difference every day. It changed my life. I",
+  "url": "https://github.com/home-assistant/core/issues/164943"
+ },
+ {
+  "id": "github:6439590189",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83c\udfa8 Generative UI Ecosystem Digest 2026-11-17",
+  "body": "# Generative UI Ecosystem Digest 2026-11-17 > Issues: 25 | PRs: 102 | Projects covered: 4 | Generated: 2026-11-17 07:08 UTC - [a2ui](https://github.com/a2ui-project/a2ui) - [OpenUI](https://github.com/thesysdev/openui) - [json-render](https://github.com/vercel-labs/json-render) - [CopilotKit](https://github.com/CopilotKit/CopilotKit) --- ## Cross-Ecosystem Comparison # Generative UI Ecosystem \u2014 Cr",
+  "url": "https://github.com/linqinghao/agents-radar/issues/256"
+ },
+ {
+  "id": "github:4950660968",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Digest: Wednesday, 2026-07-22, 08:45",
+  "body": "# Developer Digest \u2014 July 22, 2026 ## Executive Summary PyPI's new 14-day upload window for releases and the emerging PEP 751 `pylock.toml` standard are reshaping Python supply-chain mechanics \u2014 both directly impact Fetter's lockfile detection/parsing and your broader security narrative. Meanwhile, a wave of MCP-related vulnerabilities (Azure DevOps prompt injection, AWS Kiro config rewrite) valid",
+  "url": "https://github.com/flexatone/assistant-research/issues/149"
+ },
+ {
+  "id": "github:5198782380",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83e\udd9e OpenClaw Ecosystem Digest 2026-08-20",
+  "body": "# OpenClaw Ecosystem Digest 2026-08-20 > Issues: 500 | PRs: 500 | Projects covered: 13 | Generated: 2026-08-20 00:38 UTC - [OpenClaw](https://github\u200b.com/openclaw/openclaw) - [NanoBot](https://github\u200b.com/HKUDS/nanobot) - [Hermes Agent](https://github\u200b.com/nousresearch/hermes-agent) - [PicoClaw](https://github\u200b.com/sipeed/picoclaw) - [NanoClaw](https://github\u200b.com/qwibitai/nanoclaw) - [NullClaw](h",
+  "url": "https://github.com/Chestnuts-Sisyphus/gittok/issues/1020"
+ },
+ {
+  "id": "github:5842015872",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83e\udd9e OpenClaw Ecosystem Digest 2026-10-14",
+  "body": "# OpenClaw Ecosystem Digest 2026-10-14 > Issues: 217 | PRs: 500 | Projects covered: 12 | Generated: 2026-10-14 04:33 UTC - [OpenClaw](https://github\u200b.com/openclaw/openclaw) - [NanoBot](https://github\u200b.com/HKUDS/nanobot) - [Hermes Agent](https://github\u200b.com/nousresearch/hermes-agent) - [PicoClaw](https://github\u200b.com/sipeed/picoclaw) - [NanoClaw](https://github\u200b.com/qwibitai/nanoclaw) - [NullClaw](h",
+  "url": "https://github.com/datnguyenquy94/news-radar/issues/767"
+ },
+ {
+  "id": "github:4289527399",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "PHPUnit Dependabot alert #191 (GHSA-qrr6-mg7r-m243) \u2014 dismissed as accepted risk",
+  "body": "## Summary Dependabot alert [#191](https://github.com/GatherPress/gatherpress/security/dependabot/191) \u2014 [GHSA-qrr6-mg7r-m243](https://github.com/sebastianbergmann/phpunit/security/advisories/GHSA-qrr6-mg7r-m243), _\"PHPUnit has Argument injection via newline in PHP INI values that are forwarded to child processes\"_ \u2014 was dismissed after review. This issue captures the paper trail. ## The advisory ",
+  "url": "https://github.com/GatherPress/gatherpress/issues/1490"
+ },
+ {
+  "id": "github:4982965800",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcc8 AI Open Source Trends 2026-07-27",
+  "body": "# AI Open Source Trends 2026-07-27 > Sources: GitHub Trending + GitHub Search API | Generated: 2026-07-26 22:58 UTC --- # 2026-07-27 AI Open Source Trends Report (GitHub Ecosystem) --- ## 1. Today's Highlights Today\u2019s GitHub AI trending list is dominated by high-velocity agent enablement tools, with 7 newly released AI projects gaining 300+ new stars in a single 24-hour window. The most notable br",
+  "url": "https://github.com/kakapez/agents-radar/issues/953"
+ },
+ {
+  "id": "github:4720169575",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83e\udd9e OpenClaw Ecosystem Digest 2026-06-23",
+  "body": "# OpenClaw Ecosystem Digest 2026-06-23 > Issues: 365 | PRs: 500 | Projects covered: 13 | Generated: 2026-06-22 20:00 UTC - [OpenClaw](https://github\u200b.com/openclaw/openclaw) - [NanoBot](https://github\u200b.com/HKUDS/nanobot) - [Hermes Agent](https://github\u200b.com/nousresearch/hermes-agent) - [PicoClaw](https://github\u200b.com/sipeed/picoclaw) - [NanoClaw](https://github\u200b.com/qwibitai/nanoclaw) - [NullClaw](h",
+  "url": "https://github.com/Chestnuts-Sisyphus/gittok/issues/54"
+ },
+ {
+  "id": "github:5166665057",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-08-17",
+  "body": "# AI CLI Tools Community Digest 2026-08-17 > Generated: 2026-08-16 22:16 UTC | Tools covered: 12 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCo",
+  "url": "https://github.com/stevenko2002/agents-radar/issues/754"
+ },
+ {
+  "id": "github:2502685317",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "October 08, 2024 Meeting",
+  "body": "## Meeting Information **Meeting Date:** 2024-10-08 6:00pm **Meeting Title:** Building cloud native full stack applications using Azure Static Apps **Speaker** L. (Van) Van Lowe Van has been a professional developer for over 40 years and lately a full stack developer focusing ASP.Net, angular, azure and SQL Server development. He has developed line of business software for various federal agencies",
+  "url": "https://github.com/Hampton-Roads-Azure/Organization/issues/8"
+ },
+ {
+  "id": "github:734940201",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Kodify Media Group: Site Reliability Engineer (Barcelona, Spain)",
+  "body": "**Tags:** #sys-admin #engineer #admin **Published on:** October 29, 2020 **Original Job Post:** https://remoteok.io/remote-jobs/99946 ![](https://remoteok.io/assets/jobs/16e55ba76ca95693b3519877a6683b0e1606550483.png) At Kodify we manage several high traffic web platforms developed using the latest technologies and we work hard to provide the best experience for our users. The team at Kodify is lo",
+  "url": "https://github.com/remote-job-boards/software-engineering/issues/2729"
+ },
+ {
+  "id": "github:824527523",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Fleetio: Senior Site Reliability Engineer",
+  "body": "**Published on:** March 08, 2021 **Original Job Post:** https://weworkremotely.com/remote-jobs/fleetio-senior-site-reliability-engineer ![](https://we-work-remotely.imgix.net/logos/0018/7511/logo.gif?ixlib=rails-4.0.0&w=50&h=50&dpr=2&fit=fill&auto=compress) Fleetio is a modern software platform that helps thousands of organizations around the world manage a fleet. Transportation technology is a ho",
+  "url": "https://github.com/remote-job-boards/software-engineering/issues/4969"
+ },
+ {
+  "id": "github:802567574",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Fleetio: Senior Software Engineer, Platform",
+  "body": "**Published on:** February 05, 2021 **Original Job Post:** https://weworkremotely.com/remote-jobs/fleetio-senior-software-engineer-platform ![](https://we-work-remotely.imgix.net/logos/0018/5469/logo.gif?ixlib=rails-4.0.0&w=50&h=50&dpr=2&fit=fill&auto=compress) Description Fleetio is a modern software platform that helps thousands of organizations around the world manage a fleet. Transportation te",
+  "url": "https://github.com/remote-job-boards/software-engineering/issues/4358"
+ },
+ {
+  "id": "github:682270520",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 0,
+  "title": "NS8: Cloud Security Engineer",
+  "body": "**Tags:** #infosec #cloud #engineer **Published on:** August 19, 2020 **Original Job Post:** https://remoteok.io/remote-jobs/98110 ![](https://remoteok.io/assets/jobs/abe79e5de327ecd1cb59b66bc36eab0e1600412667.png) DevSecOps Engineers at NS8 have a dual responsibility to uphold and create security standards across all of our environments as well as collaborate with other infrastructure teams to op",
+  "url": "https://github.com/remote-job-boards/software-engineering/issues/1569"
+ },
+ {
+  "id": "github:3686769466",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Top 10 Marketplaces to Buy Verified Venmo Accounts",
+  "body": "Buy Verified Venmo Accounts In today's fast-paced digital world, managing finances has [never been easier. Enter Venmo](https://pvasmmsells.com/)\u2014a mobile payment service that allows you to send and receive money with just a few taps on your smartphone. With its user-friendly interface and social networking features, it has quickly become a go-to app for millions. Whether you're splitting bills wi",
+  "url": "https://github.com/pvasmmsells785/-Buy-Old-Gmail-Accounts-Safe-Reliable-Affordable/issues/11"
+ },
+ {
+  "id": "github:3689981890",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Buy Legit Verified Venmo Accounts with Fast Delivery in ..",
+  "body": "Buy Verified Venmo Accounts In today's fast-paced digital world, managing finances has [never been easier. Enter Venmo](https://pvasmmsells.com/)\u2014a mobile payment service that allows you to send and receive money with just a few taps on your smartphone. With its user-friendly interface and social networking features, it has quickly become a go-to app for millions. Whether you're splitting bills wi",
+  "url": "https://github.com/pvasmmsells1/Buy-old-gmail-Accounts/issues/34"
+ },
+ {
+  "id": "github:4177966559",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "How to Choose the Right AI Model for Your Business",
+  "body": "Choosing the right artificial intelligence solution is one of the critical decisions for a contemporary business. With the rapid evolution of AI technologies, business have countless opportunities to optimize their internal processes and create new revenue streams while enhancing customer experience. However, low-cost or free-do not always work well in practice and selecting the right model requir",
+  "url": "https://github.com/foulegold/media/issues/91"
+ },
+ {
+  "id": "github:3406922759",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "CIFS NULL Session Permitted(cifs-nt-0001)",
+  "body": "NULL sessions allow anonymous users to establish unauthenticated CIFS sessions with Windows or third-party CIFS implementations such as Samba or the Solaris CIFS Server. These anonymous users may be able to enumerate local users, groups, servers, shares, domains, domain policies, and may be able to access various MSRPC services through RPC function calls. These services have been historically affe",
+  "url": "https://github.com/strobes-test/demo-test-306/issues/98382"
+ },
+ {
+  "id": "github:3402511387",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "CIFS NULL Session Permitted(cifs-nt-0001)",
+  "body": "## Summary NULL sessions allow anonymous users to establish unauthenticated CIFS sessions with Windows or third-party CIFS implementations such as Samba or the Solaris CIFS Server. These anonymous users may be able to enumerate local users, groups, servers, shares, domains, domain policies, and may be able to access various MSRPC services through RPC function calls. These services have been histor",
+  "url": "https://github.com/strobes-test/demo-test-306/issues/98202"
+ },
+ {
+  "id": "github:3338102082",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "CIFS NULL Session Permitted(cifs-nt-0001)",
+  "body": "## Summary NULL sessions allow anonymous users to establish unauthenticated CIFS sessions with Windows or third-party CIFS implementations such as Samba or the Solaris CIFS Server. These anonymous users may be able to enumerate local users, groups, servers, shares, domains, domain policies, and may be able to access various MSRPC services through RPC function calls. These services have been histor",
+  "url": "https://github.com/strobes-test/demo-test-306/issues/2145"
+ },
+ {
+  "id": "github:3318480773",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "CIFS NULL Session Permitted(cifs-nt-0001)",
+  "body": "## Summary NULL sessions allow anonymous users to establish unauthenticated CIFS sessions with Windows or third-party CIFS implementations such as Samba or the Solaris CIFS Server. These anonymous users may be able to enumerate local users, groups, servers, shares, domains, domain policies, and may be able to access various MSRPC services through RPC function calls. These services have been histor",
+  "url": "https://github.com/strobes-test/demo-test-306/issues/838"
+ },
+ {
+  "id": "github:3316879277",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "CIFS NULL Session Permitted(cifs-nt-0001)",
+  "body": "## Summary NULL sessions allow anonymous users to establish unauthenticated CIFS sessions with Windows or third-party CIFS implementations such as Samba or the Solaris CIFS Server. These anonymous users may be able to enumerate local users, groups, servers, shares, domains, domain policies, and may be able to access various MSRPC services through RPC function calls. These services have been histor",
+  "url": "https://github.com/strobes-test/demo-test-306/issues/724"
+ },
+ {
+  "id": "github:3482638924",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Home Security on a Budget: Affordable Ways to Stay Protected",
+  "body": "In today\u2019s world, keeping your home safe doesn\u2019t have to come with a hefty price tag. With the rise of smart technology, affordable devices, and intelligent monitoring systems, homeowners can now enjoy reliable protection without breaking the bank. Whether you live in a house, apartment, or commercial property, modern home security systems make it possible to stay connected and protected \u2014 anytime",
+  "url": "https://github.com/UnitedSecurityCanada/UnitedSecurity/issues/3"
+ },
+ {
+  "id": "github:2969075348",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "User Needs Analysis",
+  "body": "### **1.1 Context and Project Presentation** Cybersecurity has become a matter of prevention, as attacks are becoming increasingly advanced and reactive measures have given way to prevention. Regular vulnerability analysis is essential for companies to detect and fix weaknesses before they are exploited. It ensures compliance with security regulations and strengthens customer trust. However, exist",
+  "url": "https://github.com/XxAbde/Scanner-Vulner-Web/issues/1"
+ },
+ {
+  "id": "github:2968840674",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "User Needs Analysis",
+  "body": "1.1 Context and Project Presentation Cybersecurity has become a matter of prevention, as attacks are becoming increasingly advanced and reactive measures have given way to prevention. Regular vulnerability analysis is essential for companies to detect and fix weaknesses before they are exploited. It ensures compliance with security regulations and strengthens customer trust. However, existing secu",
+  "url": "https://github.com/XxAbde/gestion-store/issues/1"
+ },
+ {
+  "id": "github:3676370557",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\u2b50 Genuine Office 2021 Professional Plus Product Key",
+  "body": "Looking for a **100% genuine and affordable Office 2021 Professional Plus product key**? You\u2019re in the right place. Microsoft Office 2021 Professional Plus is one of the most popular productivity suites for Windows users. Whether you\u2019re working, studying, or managing a small business, having a legitimate license ensures full functionality, security, and long-term updates. --- ## \ud83d\udd12 Why Choose a Gen",
+  "url": "https://github.com/Kprashar/genuine/issues/2"
+ },
+ {
+  "id": "github:3737414909",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Advantages of the Windows 11 Pro Key: Why Upgrading Is Worth It",
+  "body": "### Advantages of the Windows 11 Pro Key: Why Upgrading Is Worth It Windows 11 Pro is Microsoft\u2019s flagship operating system for professionals, businesses, and power users. While Windows 11 Home provides basic functionality for everyday tasks, the Windows 11 Pro key unlocks advanced features, enhanced security, and productivity tools designed to meet the demands of modern computing. For anyone cons",
+  "url": "https://github.com/ToukirAkib-007/Windows-11/issues/2"
+ },
+ {
+  "id": "github:3080775711",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "gravitl/netmaker: Netmaker\u4f7f\u7528WireGuard\u6784\u5efa\u7f51\u7edc\u3002Netmaker\u81ea\u52a8\u5316\u4e86\u5feb\u901f\u3001\u5b89\u5168\u548c\u5206\u5e03\u5f0f\u7684\u865a\u62df\u7f51\u7edc",
+  "body": "| Repos | [gravitl/netmaker](https://github.com/gravitl/netmaker) | | --------: | :----------------------------------------------------------- | | **Views** | [![views](https://views.whatilearened.today/views/github/gravitl/netmaker.svg)](https://github.com/opsre/awesome-ops) | | **Stars** | [![stars](https://img.shields.io/github/stars/gravitl/netmaker?color=f2f08d&logo=Undertale&logoColor=eb4630",
+  "url": "https://github.com/awesome-ops/awesome-ops.github.io/issues/391"
+ },
+ {
+  "id": "github:4852191708",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "How Organizations Can Reduce Network Security Risks",
+  "body": "Modern organizations depend on secure and reliable networks to support business operations, cloud services, remote work, customer interactions, and digital transformation initiatives. As enterprise networks become increasingly connected through cloud platforms, mobile devices, Internet of Things (IoT) technologies, and hybrid work environments, they also become more attractive targets for cybercri",
+  "url": "https://github.com/shivammenghani/cybertech/issues/41"
+ },
+ {
+  "id": "github:1693326885",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2023-05-03",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082023-05-03\uff09 - \u4fe1\u606f\u5b89\u5168\u77e5\u8bc6\u5e93 - [ ] [\u51fb\u8d25SOTA\u53cd\u6df7\u6dc6\u65b9\u6cd5](https://vipread.com/library/topic/3916) - [ ] [\u81ea\u52a8\u5316API\u6f0f\u6d1eFuzz\u5b9e\u6218](https://vipread.com/library/topic/3917) - [ ] [\u667a\u80fdWEB\u5b89\u5168\u653b\u51fb\u7cfb\u7edf](https://vipread.com/library/topic/3918) - [ ] [Hacking JSON](https://vipread.com/library/topic/3919) - [ ] [TABBY: Java Code Review like a pro](https://vipread.com/library/topic/3920) - [ ] [\u5982\u4f55\u4ece defi \u4e2d\u6361\u94b1-\u667a\u80fd\u5408\u7ea6\u5b89\u5168\u4ee3\u7801\u5ba1\u8ba1](https://vi",
+  "url": "https://github.com/BruceFeIix/picker/issues/323"
+ },
+ {
+  "id": "github:1693327285",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2023-05-03",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082023-05-03\uff09 - SecWiki News - [ ] [SecWiki News 2023-05-02 Review](http://www.sec-wiki.com/?2023-05-02) - Recent Commits to cve:main - [ ] [Update Tue May 2 00:16:45 UTC 2023](https://github.com/trickest/cve/commit/13caa6f4003bc32009ac1bfae8d96cef827dfe68) - \u5148\u77e5\u5b89\u5168\u6280\u672f\u793e\u533a - [ ] [PHP\u4ee3\u7801\u5ba1\u8ba1\u4e4bTaoCMS\uff08SQL\u6ce8\u5165+SSRF 0day\uff09](https://xz.aliyun.com/t/12499) - [ ] [\u7f51\u7edc\u96a7\u9053\uff1a\u7a81\u7834\u5185\u7f51\u7684\u901a\u884c\u8bc1](https://xz.aliyun.com/t/12498) ",
+  "url": "https://github.com/ruohong2018/ruohong2018.github.io/issues/149"
+ },
+ {
+  "id": "github:4868600990",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Voice proposal \u2014 weekly bounded VOICE.md nudge (2026-07-13)",
+  "body": "A weekly bounded evolution of `VOICE.md` is warranted from this week's public frontier-lab signal. **Signal captured from:** www.anthropic.com, deepmind.google, ai.meta.com The **voice actor** will consume this issue: it runs `scripts/voice/draft.mjs` (one OpenAI call \u2014 a small, surgical proposal) then `scripts/voice/validate.mjs` (the bounded-diff gate from #54), and opens an `auto-land` PR with ",
+  "url": "https://github.com/rarebit-one/rarebit-static-v3/issues/231"
+ },
+ {
+  "id": "github:4814318526",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Voice proposal \u2014 weekly bounded VOICE.md nudge (2026-07-06)",
+  "body": "A weekly bounded evolution of `VOICE.md` is warranted from this week's public frontier-lab signal. **Signal captured from:** www.anthropic.com, deepmind.google, ai.meta.com The **voice actor** will consume this issue: it runs `scripts/voice/draft.mjs` (one OpenAI call \u2014 a small, surgical proposal) then `scripts/voice/validate.mjs` (the bounded-diff gate from #54), and opens an `auto-land` PR with ",
+  "url": "https://github.com/rarebit-one/rarebit-static-v3/issues/199"
+ },
+ {
+  "id": "github:4763520983",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Voice proposal \u2014 weekly bounded VOICE.md nudge (2026-06-29)",
+  "body": "A weekly bounded evolution of `VOICE.md` is warranted from this week's public frontier-lab signal. **Signal captured from:** www.anthropic.com, deepmind.google, ai.meta.com The **voice actor** will consume this issue: it runs `scripts/voice/draft.mjs` (one OpenAI call \u2014 a small, surgical proposal) then `scripts/voice/validate.mjs` (the bounded-diff gate from #54), and opens an `auto-land` PR with ",
+  "url": "https://github.com/rarebit-one/rarebit-static-v3/issues/164"
+ },
+ {
+  "id": "github:4711878478",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Voice proposal \u2014 weekly bounded VOICE.md nudge (2026-06-22)",
+  "body": "A weekly bounded evolution of `VOICE.md` is warranted from this week's public frontier-lab signal. **Signal captured from:** www.anthropic.com, deepmind.google, ai.meta.com The **voice actor** will consume this issue: it runs `scripts/voice/draft.mjs` (one OpenAI call \u2014 a small, surgical proposal) then `scripts/voice/validate.mjs` (the bounded-diff gate from #54), and opens an `auto-land` PR with ",
+  "url": "https://github.com/rarebit-one/rarebit-static-v3/issues/129"
+ },
+ {
+  "id": "github:4655924412",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Voice proposal \u2014 weekly bounded VOICE.md nudge (2026-06-13)",
+  "body": "A weekly bounded evolution of `VOICE.md` is warranted from this week's public frontier-lab signal. **Signal captured from:** www.anthropic.com, deepmind.google, ai.meta.com The **voice actor** will consume this issue: it runs `scripts/voice/draft.mjs` (one OpenAI call \u2014 a small, surgical proposal) then `scripts/voice/validate.mjs` (the bounded-diff gate from #54), and opens an `auto-land` PR with ",
+  "url": "https://github.com/rarebit-one/rarebit-static-v3/issues/88"
+ },
+ {
+  "id": "github:1693325237",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2023-05-03",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082023-05-03\uff09 - SecWiki News - [ ] [SecWiki News 2023-05-02 Review](http://www.sec-wiki.com/?2023-05-02) - \u5148\u77e5\u5b89\u5168\u6280\u672f\u793e\u533a - [ ] [PHP\u4ee3\u7801\u5ba1\u8ba1\u4e4bTaoCMS\uff08SQL\u6ce8\u5165+SSRF 0day\uff09](https://xz.aliyun.com/t/12499) - [ ] [\u7f51\u7edc\u96a7\u9053\uff1a\u7a81\u7834\u5185\u7f51\u7684\u901a\u884c\u8bc1](https://xz.aliyun.com/t/12498) - Files \u2248 Packet Storm - [ ] [Debian Security Advisory 5395-1](https://packetstormsecurity.com/files/172096/dsa-5395-1.txt) - [ ] [Red Hat Security Advis",
+  "url": "https://github.com/chainreactors/picker/issues/216"
+ },
+ {
+  "id": "github:952406244",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Cynomi: Senior Front End Developer",
+  "body": "**Tags:** #react-js #cybersecurity #startup #techforgood #javascript #react #front-end #dev #senior #digital-nomad **Published on:** July 23, 2021 **Original Job Post:** https://remoteOK.io/remote-jobs/105266-remote-senior-front-end-developer-cynomi ![](https://remoteOK.io/assets/jobs/bbbda72db06080784113578be0ca2ec31627058731.jpg) **About us** Cynomi is using novel technology and deep domain expe",
+  "url": "https://github.com/remote-job-boards/software-engineering/issues/6701"
+ },
+ {
+  "id": "github:830892877",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Cynomi: Senior Full Stack Engineer",
+  "body": "**Tags:** #frontend #backend #typescript #react #nodejs #senior #web-dev #javascript #node-js #front-end #full-stack #engineer #node-js **Published on:** March 12, 2021 **Original Job Post:** https://remoteOK.io/remote-jobs/102932-remote-senior-full-stack-engineer-cynomi ![](https://remoteOK.io/assets/jobs/7422dea054ce1d41a125d57de65e5d5f1615568503.png) Cynomi is using novel technology and deep do",
+  "url": "https://github.com/remote-job-boards/software-engineering/issues/5119"
+ },
+ {
+  "id": "github:2493515652",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Crowdstrike NG SIEM support",
+  "body": "Hi there, Forgive me if this is a silly question but could this tool be used to communicate to a Crowdstrike NGSIEM? Thanks!",
+  "url": "https://github.com/humio/cli/issues/172"
+ },
+ {
+  "id": "github:5626418910",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Plugin hook for every kanban task_events append (covers CLI-originated create/comment/link/assign/archive)",
+  "body": "## Problem Plugins can observe the kanban lifecycle through `kanban_task_claimed` / `kanban_task_completed` / `kanban_task_blocked` and `on_kanban_task_updated`, and agent-side mutations through `post_tool_call` on the `kanban_*` tools. There is **no hook for the append of a `task_events` row itself**. Events written by the CLI (`hermes kanban create`, `comment`, `link`, `assign`, `archive`, `unbl",
+  "url": "https://github.com/NousResearch/hermes-agent/issues/127497"
+ },
+ {
+  "id": "github:4332959622",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Admin: in-app backend log and error explorer",
+  "body": "## Background Backend logs are written via Loguru and end up on disk inside the container. Diagnosing a production issue today requires `docker exec` plus grep, which is too slow for a self-hosted admin tool. There is also no aggregated view of \"where are my errors coming from\" \u2014 the same exception in three endpoints looks like three unrelated log lines. ## Proposed scope Add a Loguru sink that wr",
+  "url": "https://github.com/deepghs/KohakuHub/issues/39"
+ },
+ {
+  "id": "github:5293747741",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "The audit trail records tool invocations only: a turn that calls no tool leaves no entry",
+  "body": "The trail records one entry per tool invocation. A turn in which the model answers without calling a tool produces no entry at all, so an embedder can ask for code, receive it, and act on it with nothing in the record that the turn happened. ## The shape `InvocationRecord` (`src/audit/entry.rs:96`) is per tool call by construction: `tool_call_id` and `tool_name` are non-optional, `arguments` is a ",
+  "url": "https://github.com/Govcraft/acton-ai/issues/16"
+ },
+ {
+  "id": "github:5293353074",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "The audit trail records tool invocations only: a prompt-only turn leaves no entry",
+  "body": "The trail seals one entry per tool invocation. A turn in which the model answers without calling a tool produces no audit entry at all, so a developer can ask for code, receive it, and paste it into the repository with nothing in the record that it happened. ## The shape `InvocationRecord` (`acton-ai-0.35.0/src/audit/entry.rs:96`) is per tool call by construction: `tool_call_id` and `tool_name` ar",
+  "url": "https://github.com/Govcraft/garrison/issues/28"
+ },
+ {
+  "id": "github:2553969315",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2024-09-28",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082024-09-28\uff09 - Trustwave Blog - [2024 Election Threats: Misinformation, Deepfakes, and Cybersecurity](https://www.trustwave.com/en-us/resources/blogs/trustwave-blog/2024-election-threats-misinformation-deepfakes-and-cybersecurity/) - Files \u2248 Packet Storm - [Nexus Repository Traversal Scanner](https://packetstormsecurity.com/files/181887/CVE-2024-4956-Bulk-Scanner-main.zip) - [Linux Overlay",
+  "url": "https://github.com/ruohong2018/ruohong2018.github.io/issues/596"
+ },
+ {
+  "id": "github:2553968840",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2024-09-28",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082024-09-28\uff09 - SecWiki News - [ ] [SecWiki News 2024-09-27 Review](http://www.sec-wiki.com/?2024-09-27) - Files \u2248 Packet Storm - [ ] [Nexus Repository Traversal Scanner](https://packetstormsecurity.com/files/181887/CVE-2024-4956-Bulk-Scanner-main.zip) - [ ] [Linux OverlayFS Local Privilege Escalation](https://packetstormsecurity.com/files/181886/cve_2023_0386_overlayfs_priv_esc.rb.txt) - [",
+  "url": "https://github.com/BruceFeIix/picker/issues/1251"
+ },
+ {
+  "id": "github:4853471234",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83e\udd9e OpenClaw Ecosystem Digest 2026-07-10",
+  "body": "# OpenClaw Ecosystem Digest 2026-07-10 > Issues: 135 | PRs: 500 | Projects covered: 12 | Generated: 2026-07-10 08:39 UTC - [OpenClaw](https://github.com/openclaw/openclaw) - [NanoBot](https://github.com/HKUDS/nanobot) - [Zeroclaw](https://github.com/zeroclaw-labs/zeroclaw) - [PicoClaw](https://github.com/sipeed/picoclaw) - [NanoClaw](https://github.com/qwibitai/nanoclaw) - [IronClaw](https://githu",
+  "url": "https://github.com/bkutasi/big_model_radar/issues/7"
+ },
+ {
+  "id": "github:4029808210",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "F-04: Implement structured audit logging for PCI DSS Requirement 10 compliance",
+  "body": "## Finding: F-04 \u2014 No Audit Logging (MEDIUM) **Source:** Security Review \u2014 spreedly-mcp **CWE:** CWE-778 (Insufficient Logging) **PCI SSC AI Principle:** \"Actions performed by the AI can be logged and monitored\" ## Problem The MCP server currently performs **zero operational logging**. No record is produced for: - Tool invocations (which tool, when, outcome) - API requests to Spreedly (method, end",
+  "url": "https://github.com/spreedly/spreedly-mcp/issues/7"
+ },
+ {
+  "id": "github:4815429459",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-07-06",
+  "body": "# AI CLI Tools Community Digest 2026-07-06 > Generated: 2026-07-06 02:08 UTC | Tools covered: 9 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCod",
+  "url": "https://github.com/Chestnuts-Sisyphus/gittok/issues/334"
+ },
+ {
+  "id": "github:2292523316",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Collecting Attacker Feeds",
+  "body": "Hi, I'd like to collect all the feeds that's been detected by tpotce in 24 hours and block them in SIEM. I want to do this automatically for every 24 hours. Is there a way in this tool to do this? or do I have to use Crontab actions",
+  "url": "https://github.com/telekom-security/tpotce/issues/1545"
+ },
+ {
+  "id": "github:2553969239",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2024-09-28",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082024-09-28\uff09 - SecWiki News - [ ] [SecWiki News 2024-09-27 Review](http://www.sec-wiki.com/?2024-09-27) - \u5947\u5b89\u4fe1\u653b\u9632\u793e\u533a - [ ] [\u5a01\u80c1\u884c\u4e3a\u8005\u5229\u7528GeoServer\u6f0f\u6d1eCVE-2024-36401](https://forum.butian.net/share/3783) - [ ] [\u6df1\u5165\u63a2\u7a76agent\u5185\u5b58\u9a6c\u653b\u51fb\u539f\u7406](https://forum.butian.net/share/3775) - \u5148\u77e5\u5b89\u5168\u6280\u672f\u793e\u533a - [ ] [\u6d3b\u52a8\u6b63\u5f0f\u5f00\u59cb\uff5c14\u5bb6SRC\u9080\u60a8\u52a0\u5165\u53cc11\u5b89\u5168\u4fdd\u536b\u6218](https://xz.aliyun.com/t/15716) - [ ] [Vaadin New Gadgets\u5206\u4eab](https://xz.aliyun.com/t/15715) - ",
+  "url": "https://github.com/chainreactors/picker/issues/661"
+ },
+ {
+  "id": "github:6380258056",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "feat(audit): stream audit events to SIEM sinks and make the log tamper-evident",
+  "body": "## Use Case The audit log is in SQLite and is visible only on the admin page. Security teams must send audit events to their SIEM (Splunk, Datadog, Elastic) and must prove that nobody changed the log. ## Proposed Solution - Stream each audit event to one or more sinks: HTTPS webhook, syslog (RFC 5424) and OTLP logs. - Use the existing outbox pattern, so that a sink failure does not lose events. - ",
+  "url": "https://github.com/JeffResc/AuthStep/issues/29"
+ },
+ {
+  "id": "github:1593908586",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "os_siem container type",
+  "body": "Implement a siem container type based on [OpenSearch](https://opensearch.org/), which is a free alternative to ElasticSearch. The container type will be called `os_siem`.",
+  "url": "https://github.com/davinerd/dhis2-tools-dab/issues/10"
+ },
+ {
+  "id": "github:6495175008",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[FEATURE]: Share one SigV4 redaction-name constant across the redaction lists",
+  "body": "### Existing issue check - [x] I searched the existing issues for this capability ### Parent Epic (optional) **Parent Epic:** #6810 ### Problem statement The SigV4 redaction names are copied into several lists. Each list is edited by hand. A new SigV4 secret name needs an edit in every list, and a missed list leaks the value. The copies today: - `siem_export_redact_fields` default in `mcpgateway/c",
+  "url": "https://github.com/IBM/mcp-context-forge/issues/7640"
+ },
+ {
+  "id": "github:3507325345",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[FEATURE] Real-time SIEM integration with automatic alert processing",
+  "body": "**Is your feature request related to a problem? Please describe.** The platform currently has SIEM connector stub code but no actual real-time integration. Security teams receive hundreds of alerts daily from SIEMs (Splunk, Elastic, QRadar) but must manually copy-paste alerts into ZainGuard for analysis. This creates bottlenecks and delays incident response. **Describe the solution you'd like** Im",
+  "url": "https://github.com/ZainGuard/InvestigAI/issues/4"
+ },
+ {
+  "id": "github:3357903809",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\ude80 CloudGuard Intelligence Platform - Enterprise Security at Medium Business Scale",
+  "body": "# \ud83d\ude80 CloudGuard Intelligence Platform - Enterprise Security at Medium Business Scale ## \ud83c\udfaf Executive Summary CloudGuard Intelligence Platform revolutionizes multi-cloud security for medium-sized businesses by delivering an AI-powered security orchestration system that reduces security costs by 70% while providing enterprise-grade protection. For Medium Business Partners' portfolio companies operatin",
+  "url": "https://github.com/ocean-studio-repos/bolt-spark-core/issues/5"
+ },
+ {
+  "id": "github:932920065",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "New submissions for Tue, 29 Jun 21",
+  "body": "## Keyword: metric learning ### Sequential Recommendation with Graph Neural Networks - **Authors:** Jianxin Chang, Chen Gao, Yu Zheng, Yiqun Hui, Yanan Niu, Yang Song, Depeng Jin, Yong Li - **Subjects:** Information Retrieval (cs.IR) - **Arxiv link:** https://arxiv.org/abs/2106.14226 - **Pdf link:** https://arxiv.org/pdf/2106.14226 - **Abstract** Sequential recommendation aims to leverage users' h",
+  "url": "https://github.com/kobiso/daily-arxiv-noti/issues/363"
+ },
+ {
+  "id": "github:932795753",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "New submissions for Tue, 29 Jun 21",
+  "body": "## Keyword: super resolution There is no result ## Keyword: gan ### On Preserving the Behavior in Software Refactoring: A Systematic Mapping Study - **Authors:** Eman Abdullah AlOmar, Mohamed Wiem Mkaouer, Christian Newman, Ali Ouni - **Subjects:** Software Engineering (cs.SE) - **Arxiv link:** https://arxiv.org/abs/2106.13900 - **Pdf link:** https://arxiv.org/pdf/2106.13900 - **Abstract** Context",
+  "url": "https://github.com/dajinstory/daily-arxiv-noti/issues/136"
+ }
+]

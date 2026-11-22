@@ -10,6 +10,7 @@ stress-test each concept against a panel of critic agents.
 
 ```bash
 pip install -e '.[dev]'
+pip install --no-deps bertopic==0.17.4   # see decision D9 (avoids PyTorch)
 python -m pytest
 
 python -m gapfinder -v collect --segment appsec-supply-chain   # or omit --segment for all
@@ -20,6 +21,16 @@ python -m gapfinder export --segment appsec-supply-chain --out data/appsec.jsonl
 python -m gapfinder sample --out reports/phase1/roundN-sample.json
 python -m gapfinder evaluate --sample reports/phase1/roundN-sample.json \
     --labels reports/phase1/roundN-labels.jsonl --report reports/phase1/roundN-review.md
+```
+
+Phase 2 gap analysis (agent steps use rubrics in `docs/rubrics/`; see docs/ROADMAP.md):
+
+```bash
+python -m gapfinder judge-prepare --out-dir reports/phase2/judge   # then: relevance judge per batch
+python -m gapfinder judge-import --batch <batch.json> --labels <labels.jsonl>
+python -m gapfinder themes            # then: theme namer -> reports/phase2/theme-names.jsonl
+python -m gapfinder threat-prepare    # then: threat mapper -> reports/phase2/threat-mapping.jsonl
+python -m gapfinder gaps              # -> reports/gaps-<date>.md
 ```
 
 `collect --fresh` clears a segment before re-collecting (use it after changing its search terms).

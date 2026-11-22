@@ -1,0 +1,180 @@
+{"id": "github:1045892026", "on_segment": "y", "need": "n", "reason": "SIEM syslog ingestion troubleshooting; how-to, no tool gap"}
+{"id": "github:5038225762", "on_segment": "y", "need": "y", "reason": "Feature request: unified blocked-events view in OPNsense firewall"}
+{"id": "github:4714087552", "on_segment": "y", "need": "n", "reason": "Opinion essay on SIEM importance"}
+{"id": "github:734938052", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:2499065239", "on_segment": "n", "need": "n", "reason": "Homelab server build plan"}
+{"id": "github:4705021798", "on_segment": "n", "need": "n", "reason": "Generic news digest"}
+{"id": "github:5272432655", "on_segment": "n", "need": "n", "reason": "Enterprise Kibana internal search feature, not small-team ops"}
+{"id": "github:4813205336", "on_segment": "y", "need": "n", "reason": "Project announcement seeking design partner"}
+{"id": "github:4618582293", "on_segment": "n", "need": "n", "reason": "Generic news digest"}
+{"id": "github:2971409483", "on_segment": "n", "need": "n", "reason": "Prompt-writing request, unrelated"}
+{"id": "github:6215742730", "on_segment": "n", "need": "n", "reason": "AI infrastructure digest"}
+{"id": "github:5902352478", "on_segment": "n", "need": "n", "reason": "Website SEO task"}
+{"id": "hn:7950709", "on_segment": "n", "need": "n", "reason": "Programming languages in courses"}
+{"id": "hn:48151014", "on_segment": "n", "need": "n", "reason": "OSS security opinion, not cloud posture"}
+{"id": "hn:47772418", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "hn:47338306", "on_segment": "y", "need": "n", "reason": "Opinion comparing CSPM vendors"}
+{"id": "hn:46326212", "on_segment": "y", "need": "n", "reason": "Remark on AWS Security Hub renaming"}
+{"id": "hn:45893002", "on_segment": "y", "need": "n", "reason": "Self-promotion of open-source CSPM"}
+{"id": "hn:43679371", "on_segment": "y", "need": "n", "reason": "Explains CSPM value for enterprises"}
+{"id": "hn:43679338", "on_segment": "y", "need": "n", "reason": "Explains CSPM complexity; no stated need"}
+{"id": "hn:43679010", "on_segment": "y", "need": "n", "reason": "Explains how CSPM works"}
+{"id": "hn:43678867", "on_segment": "y", "need": "n", "reason": "General skeptical question about CSPM"}
+{"id": "hn:43413613", "on_segment": "y", "need": "n", "reason": "Asks what CSPM is; no gap"}
+{"id": "hn:43412510", "on_segment": "y", "need": "n", "reason": "Describes building internal CSPM tooling"}
+{"id": "hn:43411728", "on_segment": "n", "need": "n", "reason": "Rant about infosec field"}
+{"id": "hn:43410768", "on_segment": "y", "need": "n", "reason": "Acquisition market speculation"}
+{"id": "hn:43409562", "on_segment": "y", "need": "n", "reason": "Opinion that CSPM is box-ticking"}
+{"id": "hn:43408417", "on_segment": "y", "need": "n", "reason": "Opinion on CNAPP/CSPM familiarity"}
+{"id": "hn:43408377", "on_segment": "y", "need": "n", "reason": "Vendor comparison opinion"}
+{"id": "hn:43408089", "on_segment": "y", "need": "n", "reason": "Market share remark"}
+{"id": "hn:42601722", "on_segment": "n", "need": "n", "reason": "Home server malware discussion"}
+{"id": "hn:41615124", "on_segment": "n", "need": "n", "reason": "Google account deletion incident"}
+{"id": "hn:27276373", "on_segment": "y", "need": "n", "reason": "Comment on misconfiguration article"}
+{"id": "hn:17402777", "on_segment": "n", "need": "n", "reason": "NSA cloud news comment"}
+{"id": "hn:47371078", "on_segment": "y", "need": "n", "reason": "Remark on secret-scanning partner revocation"}
+{"id": "hn:47353455", "on_segment": "y", "need": "n", "reason": "Maintainer announcement for secrets scanner"}
+{"id": "hn:43399009", "on_segment": "n", "need": "n", "reason": "Describes Wiz cloud scanning, not appsec"}
+{"id": "hn:42134567", "on_segment": "y", "need": "n", "reason": "Advice to use secret scanning"}
+{"id": "hn:38066957", "on_segment": "n", "need": "n", "reason": "GitHub video commentary"}
+{"id": "hn:36446664", "on_segment": "n", "need": "n", "reason": "GitHub data usage discussion"}
+{"id": "hn:36195793", "on_segment": "n", "need": "n", "reason": "GitHub private repo data policy"}
+{"id": "hn:36190703", "on_segment": "y", "need": "n", "reason": "Discussion of secrets committed to git"}
+{"id": "hn:36185309", "on_segment": "y", "need": "n", "reason": "Comment that secrets rarely in git"}
+{"id": "hn:35467550", "on_segment": "y", "need": "n", "reason": "How-it-works question about leaked key exploitation"}
+{"id": "hn:35285813", "on_segment": "n", "need": "n", "reason": "SSH host key leak speculation"}
+{"id": "hn:34066012", "on_segment": "y", "need": "n", "reason": "Naming complaint about announcement title"}
+{"id": "hn:29512016", "on_segment": "y", "need": "n", "reason": "DevSecOps pipeline workshop tutorial"}
+{"id": "hn:26816767", "on_segment": "n", "need": "n", "reason": "VS Code themes; passing mention"}
+{"id": "hn:50540489", "on_segment": "y", "need": "n", "reason": "Definition of supply chain attack"}
+{"id": "hn:49239138", "on_segment": "n", "need": "n", "reason": "Side project promo, attack path analysis"}
+{"id": "hn:46373929", "on_segment": "y", "need": "n", "reason": "SBOM purposes discussion"}
+{"id": "hn:46067115", "on_segment": "n", "need": "n", "reason": "Satire on build pipelines"}
+{"id": "hn:43009040", "on_segment": "n", "need": "n", "reason": "Comment on content marketing"}
+{"id": "hn:42019633", "on_segment": "n", "need": "n", "reason": "Unmaintained project remark"}
+{"id": "hn:38241680", "on_segment": "n", "need": "n", "reason": "GitHub features list"}
+{"id": "hn:34117257", "on_segment": "n", "need": "n", "reason": "Password manager trust discussion"}
+{"id": "hn:34116254", "on_segment": "n", "need": "n", "reason": "Password manager trust discussion"}
+{"id": "hn:33595098", "on_segment": "y", "need": "y", "reason": "Asks how packages are vetted to avoid dependency compromise"}
+{"id": "hn:32201099", "on_segment": "y", "need": "y", "reason": "Vendor tool fails dependency scan; CVEs unresolved"}
+{"id": "hn:32168627", "on_segment": "y", "need": "n", "reason": "Explains scanner detecting Log4j classes"}
+{"id": "hn:29609423", "on_segment": "y", "need": "n", "reason": "Informational about Go vulnerability database"}
+{"id": "hn:29199896", "on_segment": "n", "need": "n", "reason": "OAuth token storage discussion"}
+{"id": "hn:29199318", "on_segment": "n", "need": "n", "reason": "OAuth flow advice"}
+{"id": "hn:29149371", "on_segment": "n", "need": "n", "reason": "Beg bounty emails"}
+{"id": "hn:26334335", "on_segment": "n", "need": "n", "reason": "Language ecosystem list"}
+{"id": "hn:23808906", "on_segment": "n", "need": "n", "reason": "GitHub Actions scheduling tip"}
+{"id": "hn:21971091", "on_segment": "y", "need": "n", "reason": "Opinion on npm audit"}
+{"id": "hn:21970089", "on_segment": "y", "need": "n", "reason": "Notes improved dependency monitoring"}
+{"id": "hn:21672202", "on_segment": "n", "need": "n", "reason": "Enterprise security procedures advice"}
+{"id": "hn:21150998", "on_segment": "n", "need": "n", "reason": "Praise for Figma blog"}
+{"id": "hn:18990752", "on_segment": "y", "need": "n", "reason": "GitLab product promotion"}
+{"id": "hn:10027428", "on_segment": "y", "need": "n", "reason": "Webapp security advice"}
+{"id": "hn:9760727", "on_segment": "n", "need": "n", "reason": "NSA attack news"}
+{"id": "hn:2816494", "on_segment": "n", "need": "n", "reason": "Passing mention of small business security"}
+{"id": "github:5318164824", "on_segment": "n", "need": "n", "reason": "AI CLI digest"}
+{"id": "github:4154907646", "on_segment": "n", "need": "n", "reason": "Dataset curation status feature"}
+{"id": "github:6547035106", "on_segment": "y", "need": "n", "reason": "Documentation error in IAM policy notebook"}
+{"id": "github:621797714", "on_segment": "y", "need": "n", "reason": "HIPAA access control audit text"}
+{"id": "github:5932597699", "on_segment": "y", "need": "n", "reason": "Onboarding bug in own app, not tool gap"}
+{"id": "github:4558519109", "on_segment": "n", "need": "n", "reason": "Nutrition app project"}
+{"id": "github:1820025003", "on_segment": "n", "need": "n", "reason": "Booklet download feature"}
+{"id": "github:6261487961", "on_segment": "n", "need": "n", "reason": "Docs for plugin marketplace"}
+{"id": "github:5087093837", "on_segment": "y", "need": "n", "reason": "Internal UI build task for access reviews tab"}
+{"id": "github:2134075008", "on_segment": "n", "need": "n", "reason": "PDF download feature"}
+{"id": "github:3961302622", "on_segment": "y", "need": "y", "reason": "Feature request: session access audit logging for compliance"}
+{"id": "github:4954282094", "on_segment": "n", "need": "n", "reason": "Executor design spike"}
+{"id": "github:3054458233", "on_segment": "n", "need": "n", "reason": "LinkedIn log organization"}
+{"id": "github:5372346101", "on_segment": "n", "need": "n", "reason": "iOS app planning"}
+{"id": "github:6218500847", "on_segment": "n", "need": "n", "reason": "Spam content"}
+{"id": "github:5526542819", "on_segment": "n", "need": "n", "reason": "Training advertisement"}
+{"id": "github:4320500171", "on_segment": "n", "need": "n", "reason": "Casino spam"}
+{"id": "github:5043102396", "on_segment": "n", "need": "n", "reason": "Networking outreach"}
+{"id": "github:5333618419", "on_segment": "n", "need": "n", "reason": "Fintech marketing"}
+{"id": "github:5487721651", "on_segment": "n", "need": "n", "reason": "Gambling spam"}
+{"id": "github:5698475858", "on_segment": "n", "need": "n", "reason": "Accounting workflow hardening"}
+{"id": "github:6103828483", "on_segment": "n", "need": "n", "reason": "Generic problem discovery digest"}
+{"id": "github:5197712478", "on_segment": "n", "need": "n", "reason": "AI privacy news"}
+{"id": "github:2349651014", "on_segment": "n", "need": "n", "reason": "CAD review feature"}
+{"id": "github:1314056023", "on_segment": "n", "need": "n", "reason": "GitHub trending list"}
+{"id": "github:1312365869", "on_segment": "n", "need": "n", "reason": "GitHub trending list"}
+{"id": "github:1157802436", "on_segment": "n", "need": "n", "reason": "GitHub trending list"}
+{"id": "github:1315490861", "on_segment": "n", "need": "n", "reason": "GitHub trending list"}
+{"id": "github:1312136666", "on_segment": "n", "need": "n", "reason": "GitHub trending list"}
+{"id": "github:2417564625", "on_segment": "n", "need": "n", "reason": "GitHub trending list"}
+{"id": "github:5140289081", "on_segment": "n", "need": "n", "reason": "Ransomware critical infrastructure guide"}
+{"id": "github:3417278882", "on_segment": "y", "need": "n", "reason": "Docs enhancement to replace jump boxes; best practice"}
+{"id": "github:3080735543", "on_segment": "y", "need": "n", "reason": "Repository listing for access platform"}
+{"id": "github:3540164659", "on_segment": "n", "need": "n", "reason": "Cloud exposure finding, not identity"}
+{"id": "github:5348842531", "on_segment": "y", "need": "n", "reason": "Opinion essay on shadow AI identity"}
+{"id": "github:1283246245", "on_segment": "n", "need": "n", "reason": "Repo list"}
+{"id": "github:212237232", "on_segment": "n", "need": "n", "reason": "Generic startup security guide"}
+{"id": "github:4806004376", "on_segment": "n", "need": "n", "reason": "Docker socket privilege hardening"}
+{"id": "github:1313940212", "on_segment": "n", "need": "n", "reason": "GitHub trending list"}
+{"id": "github:1014456489", "on_segment": "n", "need": "n", "reason": "Repository data dump"}
+{"id": "github:2933780913", "on_segment": "n", "need": "n", "reason": "Exam dump advertisement"}
+{"id": "github:550696980", "on_segment": "n", "need": "n", "reason": "Security architecture guide"}
+{"id": "github:5263462514", "on_segment": "y", "need": "y", "reason": "SSO paywalled in self-hosted apps; cost complaint"}
+{"id": "github:4005343333", "on_segment": "y", "need": "y", "reason": "Shared credentials over chat lack secure handoff"}
+{"id": "github:5037573635", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999772624", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999717863", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999582117", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999525219", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:5998486626", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:5037572601", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999768683", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999713992", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999577844", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4994290347", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4992918362", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:5038627487", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:5038626667", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999768744", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999714074", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999577945", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4994290376", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4992918409", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:5037573563", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999772322", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999717347", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999581443", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4999524538", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:5038627415", "on_segment": "n", "need": "n", "reason": "Job posting"}
+{"id": "github:4895720487", "on_segment": "y", "need": "n", "reason": "Internal API permission delegation dev task"}
+{"id": "github:6340753217", "on_segment": "n", "need": "n", "reason": "AI infrastructure digest"}
+{"id": "github:5652131298", "on_segment": "y", "need": "y", "reason": "Admin wants SAML, SCIM, Kerberos sign-on options"}
+{"id": "github:2044886258", "on_segment": "y", "need": "y", "reason": "SCIM fails provisioning groups with special characters"}
+{"id": "github:2133669832", "on_segment": "y", "need": "y", "reason": "Feature request: Entra provision-on-demand for access tool"}
+{"id": "github:3665112000", "on_segment": "y", "need": "y", "reason": "Missing SharePoint claims provider for group mapping"}
+{"id": "github:6170280769", "on_segment": "y", "need": "y", "reason": "No way to assign roles to SCIM groups"}
+{"id": "github:3838150521", "on_segment": "y", "need": "y", "reason": "Feature request for SCIM support"}
+{"id": "hn:17691837", "on_segment": "n", "need": "n", "reason": "SOX discussion; access review passing mention"}
+{"id": "hn:47254274", "on_segment": "n", "need": "n", "reason": "AI harm news; PAM passing mention"}
+{"id": "hn:46470621", "on_segment": "n", "need": "n", "reason": "Parental controls; PAM analogy"}
+{"id": "hn:44767719", "on_segment": "y", "need": "n", "reason": "Acquisition discussion about CyberArk"}
+{"id": "hn:44328336", "on_segment": "y", "need": "n", "reason": "Explains PAM session recording requirement"}
+{"id": "hn:44075769", "on_segment": "n", "need": "n", "reason": "Postgres GUI preference"}
+{"id": "hn:41967970", "on_segment": "y", "need": "n", "reason": "Building open PAM; project mention"}
+{"id": "hn:41427431", "on_segment": "y", "need": "n", "reason": "Advice on SSO and PAM tools"}
+{"id": "hn:41420600", "on_segment": "y", "need": "n", "reason": "Advice on admin permission management"}
+{"id": "hn:41419672", "on_segment": "y", "need": "n", "reason": "Vendor promotion of PAM platform"}
+{"id": "hn:41051215", "on_segment": "y", "need": "n", "reason": "Product categorization remark"}
+{"id": "hn:40996535", "on_segment": "y", "need": "n", "reason": "Vendor PAM product mention"}
+{"id": "hn:38771075", "on_segment": "y", "need": "y", "reason": "Managing privileged access and session reviews at scale is hard"}
+{"id": "hn:38763451", "on_segment": "y", "need": "n", "reason": "Explains how PAM works"}
+{"id": "hn:32870914", "on_segment": "y", "need": "n", "reason": "Breach news: MFA fatigue attack"}
+{"id": "hn:32399249", "on_segment": "n", "need": "n", "reason": "Terraform ownership and compliance standards"}
+{"id": "hn:31484776", "on_segment": "n", "need": "n", "reason": "Prioritization essay; IAM passing mention"}
+{"id": "hn:31064198", "on_segment": "y", "need": "n", "reason": "Labels bastion as PAM"}
+{"id": "hn:27416976", "on_segment": "y", "need": "n", "reason": "Ransomware advice: use PAM"}
+{"id": "hn:27125372", "on_segment": "y", "need": "n", "reason": "Ransomware advice: reduce domain admins"}
+{"id": "hn:49817171", "on_segment": "y", "need": "y", "reason": "Complains SSO tax blocks own IdP use"}
+{"id": "hn:49811661", "on_segment": "y", "need": "n", "reason": "Clarifies SSO tax reference"}
+{"id": "hn:49810939", "on_segment": "y", "need": "n", "reason": "Discussion of federated login hosting"}
+{"id": "hn:49808468", "on_segment": "y", "need": "n", "reason": "Opinion on OIDC dynamic registration adoption"}
+{"id": "hn:45536281", "on_segment": "y", "need": "n", "reason": "Opinion on offboarding technical controls"}
+{"id": "hn:29102120", "on_segment": "n", "need": "n", "reason": "ISO 27001 certification value"}
+{"id": "hn:50396510", "on_segment": "n", "need": "n", "reason": "Feature flag server licensing limits"}
+{"id": "hn:47273373", "on_segment": "y", "need": "y", "reason": "SCIM federation with partners fails; orphaned guest accounts"}
+{"id": "hn:45531438", "on_segment": "y", "need": "y", "reason": "SSO tax: enterprise tiers too costly for mid-size"}

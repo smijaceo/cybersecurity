@@ -1,0 +1,12 @@
+[
+ {
+  "id": "stackexchange:security:209376",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "stackexchange",
+  "engagement": -1,
+  "title": "SIEM false negatives",
+  "body": "The company I work with has a SIEM which detects when you try to install any software in any workstation. If one of the employees try to install bad software, the SIEM triggers an alert. To circumvent this, my friends in the workplace usually download software from their personal laptops. Did the SIEM do a false negative in this situation?",
+  "url": "https://security.stackexchange.com/questions/209376/siem-false-negatives"
+ }
+]

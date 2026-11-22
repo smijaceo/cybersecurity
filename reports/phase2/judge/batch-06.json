@@ -1,0 +1,132 @@
+[
+ {
+  "id": "hn:44956908",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Vendors that treat single sign-on as a luxury feature",
+  "body": "My hot take is that the SSO tax is totally legitimate because SSO is a clunky and complex feature to manage in a secure way. In fact many SSO implementations are actually not that secure because SAML is a dumpster fire when it comes to security vulnerabilities. Most companies can get equivalent security and a better overall experience just using Google OAuth. The argument that you're having to pay",
+  "url": "https://news.ycombinator.com/item?id=44956908"
+ },
+ {
+  "id": "hn:44955937",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Vendors that treat single sign-on as a luxury feature",
+  "body": "I agree with the sentiment in theory but disagree in practice. The way I typically look to segment and price things is by billing based on organizational complexity rather than gating end-user features whenever possible. If something is a specific need for a large org, it should be a higher tier, since those organizations typically have a larger ability to pay. If it's something that a single seat",
+  "url": "https://news.ycombinator.com/item?id=44955937"
+ },
+ {
+  "id": "hn:44242025",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "What a developer needs to know about SCIM",
+  "body": "(I wrote the article) I probably could have phrased that better. I often meet people who think their customer asking for SCIM provisioning means that their customer is identically asking for some newfangled data retention policy. All I meant to emphasize was that SCIM is just a provisioning / update protocol. Indeed, you are right -- we see customers careful about the data retention policies appli",
+  "url": "https://news.ycombinator.com/item?id=44242025"
+ },
+ {
+  "id": "hn:43647500",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "An open source, self-hosted implementation of the Tailscale control server",
+  "body": "I posted a reply to another subthread with some of this: https://news.ycombinator.com/item?id=43647368 > * Does it work well? Very well! There are some limitations (see link above), but what's implemented is reliable. > * Do you recommend it? Yes, provided your requirements fit headscale's capabilities. If you need things like device trust attestation (e.g. Kandji MDM or Crowdstrike Falcon integra",
+  "url": "https://news.ycombinator.com/item?id=43647500"
+ },
+ {
+  "id": "hn:43647368",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "An open source, self-hosted implementation of the Tailscale control server",
+  "body": "> - How much effort do you put into key management compared to plain WireGuard? Less effort than plain wireguard; the only key management I do is for non-human clients > - How automated is the onboarding process; do you generate and hand over keys? Fully automated. Auth is done via OIDC to my company's SSO provider, so users can enroll their own machines without IT involvement. > - How do you cope",
+  "url": "https://news.ycombinator.com/item?id=43647368"
+ },
+ {
+  "id": "hn:38871623",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "How Open ID Connect Works",
+  "body": "The open-source nature of AuthKit is pretty different. You can build your own complete custom UI with the React components. Or build your own components from scratch and still use the WorkOS backend. Outside of that, it's pretty much a drop-in replacement for Auth0. We also have more features, like native SCIM provisioning and a streaming events API to keep your app's database in sync.",
+  "url": "https://news.ycombinator.com/item?id=38871623"
+ },
+ {
+  "id": "hn:38825625",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Asking your customers what they want doesn't work",
+  "body": "In consumer apps this is true. In B2B and especially enterprise it\u2019s less true. Especially if you sell to tech companies. If your customer says they need an Okta integration with SCIM provisioning, they probably actually do need an Okta integration with SCIM provisioning, and not having that will impact your sales and retention metrics.",
+  "url": "https://news.ycombinator.com/item?id=38825625"
+ },
+ {
+  "id": "hn:38722124",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Google OAuth is broken (sort of)",
+  "body": "The idea is that the company's Zoom admin should always specify the exact list of users who are allowed to be in their Zoom account. The email domain should have no bearing. So if you sign in as bob@mycorp.com, and that is a valid corporate account with the right permissions, you are let through. If you try bob+foo@mycorp.com, it should always fail. The pattern of \"oh they have a mycorp.com email ",
+  "url": "https://news.ycombinator.com/item?id=38722124"
+ },
+ {
+  "id": "hn:35732063",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Dropbox to reduce global workforce by about 16%, or 500 staff",
+  "body": "It does increase engineering headcount because you are expected to add a lot of features to your offering that end users wouldn't necessarily care about, like DLP, eDiscovery, audit logs, SCIM provisioning, admin controls, compliance with a hundred industry regulations (HIPAA, FINRA, SOX), key management, custom retention policies, data residency. The larger increase comes from the fact that large",
+  "url": "https://news.ycombinator.com/item?id=35732063"
+ },
+ {
+  "id": "hn:35644662",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Is there still a reason to use Okta for SSO? Okta vs. Google SSO",
+  "body": "My company has been an Okta customer for several years and I'm responsible for administering it. However I don't have experience with other SSO products, so would be interested to hear what the experience is like on the other side. The key thing for me is SCIM provisioning support, but not just that. There are quite a few apps that don't support SCIM, but Okta has built integrations for them anywa",
+  "url": "https://news.ycombinator.com/item?id=35644662"
+ },
+ {
+  "id": "hn:34100426",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: How to build a SCIM server? From scratch or use tools?",
+  "body": "I suggest just getting started! You\u2019ve done more than the minimum needed to start. The SCIM spec is quite nice and (if you\u2019re like me) fun to implement. My guess is that you\u2019ll get further, faster, by just implementing SCIM. I\u2019m happy to work more directly with you, my contact information is in my HN profile. In the meantime, I hope that you might find one or more of these things helpful: 1. The d",
+  "url": "https://news.ycombinator.com/item?id=34100426"
+ },
+ {
+  "id": "hn:28887656",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Kanidm: A simple, secure and fast identity management platform",
+  "body": "I would have thought that in SCIM provisioning people would invest more time researching for existing projects. Said that, I fully understand why people would not invest enough time to understand the Grouper environment, I going through it and feels like a punishment. If someone wants to see the potential, check this list of known users and their use cases : https://spaces.at.internet2.edu/display",
+  "url": "https://news.ycombinator.com/item?id=28887656"
+ },
+ {
+  "id": "hn:22577374",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: What's the best corporate password manager?",
+  "body": "Keeper integrates seamlessly with Azure AD for both authentication and SCIM provisioning. Same capability across all platforms (iOS, Android, Web, Extensions, etc). I\u2019m happy to do a quick zoom demo with you of the workflow. craig@keepersecurity.com",
+  "url": "https://news.ycombinator.com/item?id=22577374"
+ }
+]

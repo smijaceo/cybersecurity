@@ -1,0 +1,180 @@
+{"id": "github:4003464335", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1517408556", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:208115247", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4166298079", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3590803714", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:6314332868", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:6046033598", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5240761680", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3763213559", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3970378161", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4255595364", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:6210921454", "on_segment": "y", "need": "y", "reason": "Secret scanning never completes on forked PRs, blocking merges"}
+{"id": "github:6282851819", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3877605807", "on_segment": "y", "need": "n", "reason": "Internal evaluation of Trivy vs Grype adoption, no gap stated"}
+{"id": "github:4746683006", "on_segment": "y", "need": "y", "reason": "Feature request to flag vulnerable container update candidates"}
+{"id": "github:5041451504", "on_segment": "y", "need": "n", "reason": "Learning write-up about detect-secrets CI gate"}
+{"id": "github:4837502450", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4314882080", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5085924927", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2913536700", "on_segment": "y", "need": "y", "reason": "Open-source SBOM tool fails where commercial tool succeeds"}
+{"id": "github:2186376927", "on_segment": "y", "need": "y", "reason": "Cannot map Trivy operator SBOMs to containers in Dependency-Track"}
+{"id": "github:5099539474", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:6276289820", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5610492843", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5005708152", "on_segment": "y", "need": "y", "reason": "SBOM/CVE gate misses arm64 images; scanning coverage gap"}
+{"id": "github:5118609118", "on_segment": "y", "need": "n", "reason": "Internal CI refactor of dependency vulnerability gate"}
+{"id": "github:5206804249", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5420790641", "on_segment": "y", "need": "n", "reason": "Automated SSDF guidance report, advisory only"}
+{"id": "github:4092135983", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5127105111", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3942474388", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5341417650", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1786445700", "on_segment": "y", "need": "n", "reason": "Bug report on SBOM export error, no missing capability"}
+{"id": "github:1147183086", "on_segment": "y", "need": "y", "reason": "Feature request to embed and display SBOM in binary"}
+{"id": "github:3716844467", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:6326524583", "on_segment": "y", "need": "y", "reason": "Proposal for machine-readable dependency support-period data"}
+{"id": "github:5064185975", "on_segment": "y", "need": "n", "reason": "Automated finding about wrapper script fallback behaviour"}
+{"id": "github:4417229703", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability report"}
+{"id": "github:5867375891", "on_segment": "y", "need": "n", "reason": "Automated SSDF guidance report"}
+{"id": "github:4013594670", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3634476141", "on_segment": "y", "need": "n", "reason": "Automated dependency vulnerability report"}
+{"id": "github:1752624275", "on_segment": "y", "need": "y", "reason": "Overrides fail to force patched transitive dependency; remediation pain"}
+{"id": "github:2129624551", "on_segment": "y", "need": "n", "reason": "Routine internal evaluation of a Rust advisory"}
+{"id": "github:3361490891", "on_segment": "y", "need": "y", "reason": "Seeking open-source alternatives to replace Snyk"}
+{"id": "github:5069863552", "on_segment": "y", "need": "n", "reason": "Auto-generated Log4j upgrade ticket"}
+{"id": "github:2333255146", "on_segment": "y", "need": "n", "reason": "Request to bump vulnerable dependencies, no tooling gap"}
+{"id": "github:1277210329", "on_segment": "y", "need": "n", "reason": "Internal plan to replace unmaintained vulnerable library"}
+{"id": "github:5528278884", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3424745175", "on_segment": "y", "need": "n", "reason": "Internal task to add dependency and container scanning"}
+{"id": "github:2947023408", "on_segment": "y", "need": "n", "reason": "Asks release date to drop vulnerable dependency"}
+{"id": "github:4426269995", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3754811270", "on_segment": "y", "need": "y", "reason": "Request to replace stored connection-string secrets with managed identity"}
+{"id": "github:3882545718", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3572227319", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3243201521", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4392297376", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4548883283", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4610893874", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3088719476", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4623410335", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:294206221", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3988531114", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4981622236", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1239395072", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:788889963", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5652363834", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4569516673", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5111481955", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:6523777180", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3111538374", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1952388360", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4379846194", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1317521808", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3925895639", "on_segment": "y", "need": "n", "reason": "Product feature spec for SOC 2 compliance module"}
+{"id": "hn:46730535", "on_segment": "y", "need": "n", "reason": "Article about AI-powered CSPM tools"}
+{"id": "hn:37454434", "on_segment": "y", "need": "n", "reason": "CSPM evaluation matrix article"}
+{"id": "hn:35776975", "on_segment": "y", "need": "y", "reason": "Complaint about CSPM false positives"}
+{"id": "hn:40735653", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "hn:22868961", "on_segment": "y", "need": "n", "reason": "News article on cloud misconfiguration risk"}
+{"id": "hn:21313610", "on_segment": "y", "need": "n", "reason": "News about breach caused by cloud misconfiguration"}
+{"id": "hn:19054057", "on_segment": "y", "need": "n", "reason": "News about data leak from cloud misconfiguration"}
+{"id": "hn:49669550", "on_segment": "y", "need": "n", "reason": "Research article on secrets scanning technique"}
+{"id": "hn:34058368", "on_segment": "y", "need": "n", "reason": "News: GitHub offers free secrets scanning"}
+{"id": "hn:23668010", "on_segment": "y", "need": "n", "reason": "Opinion piece on CI security testing"}
+{"id": "hn:23319207", "on_segment": "y", "need": "n", "reason": "Opinion piece on CI security testing"}
+{"id": "hn:1038094", "on_segment": "y", "need": "n", "reason": "Guide on small business security threats"}
+{"id": "hn:1055590", "on_segment": "y", "need": "n", "reason": "Guide on small business security threats"}
+{"id": "stackexchange:security:260028", "on_segment": "y", "need": "y", "reason": "Cannot verify AWS IAM key usage; visibility gap"}
+{"id": "github:5121834325", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4042128639", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5512488308", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2153212366", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4718111666", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:6113077985", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2981199208", "on_segment": "y", "need": "y", "reason": "Needs user access report for regular access reviews"}
+{"id": "github:5192662222", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4096541954", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4386963348", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4503180388", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3168060549", "on_segment": "y", "need": "y", "reason": "Wants alternatives to long-lived service account JSON keys"}
+{"id": "github:3937483672", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2442377747", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5347753657", "on_segment": "y", "need": "n", "reason": "Internal epic design for non-human identities"}
+{"id": "github:1963602856", "on_segment": "y", "need": "y", "reason": "Requests delegated self-management of user access assignments"}
+{"id": "github:4340077829", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4041949884", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5958888329", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5565969615", "on_segment": "y", "need": "y", "reason": "Customer needs Google group sync for SSO without delegation"}
+{"id": "github:6372453173", "on_segment": "y", "need": "n", "reason": "Implementation spec for SCIM provisioning"}
+{"id": "github:5864746351", "on_segment": "y", "need": "n", "reason": "Documentation fix for SCIM PATCH syntax"}
+{"id": "github:4430221027", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3710957272", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2824053982", "on_segment": "y", "need": "y", "reason": "Feature request to issue account-level SCIM token via Terraform"}
+{"id": "hn:13754094", "on_segment": "y", "need": "n", "reason": "Article listing PAM benefits"}
+{"id": "hn:46931447", "on_segment": "y", "need": "n", "reason": "Opinion essay on credential vault encryption"}
+{"id": "hn:49459218", "on_segment": "y", "need": "n", "reason": "Tracker resource on SSO pricing, not a stated need"}
+{"id": "hn:38688926", "on_segment": "y", "need": "y", "reason": "SSO tax cost complaint about enterprise upgrades"}
+{"id": "github:6297247604", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1290488000", "on_segment": "y", "need": "y", "reason": "Seeking cloud asset inventory and governance view solution"}
+{"id": "github:6181980691", "on_segment": "y", "need": "y", "reason": "Feature request for Prowler sovereign cloud support"}
+{"id": "github:1847548361", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:6034961688", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:6326584311", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1231599492", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1212703934", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1228705364", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2088472572", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2354917562", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4289204827", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3336075008", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3335065729", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4562291765", "on_segment": "y", "need": "n", "reason": "Best-practice guide on hybrid cloud security"}
+{"id": "github:2933868382", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2604083711", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2933864865", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4449525846", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1654822003", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1654821323", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2604081960", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2933871987", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2604082758", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1654819377", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:6386134753", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1560560935", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1560562735", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3385885771", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3385807192", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1581052264", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1581053035", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3383251844", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:716974862", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2474595939", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2474594497", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3911908066", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4916082679", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4202169270", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2622556996", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2844693743", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5148873231", "on_segment": "y", "need": "n", "reason": "Marketing article for cloud security product"}
+{"id": "github:1478004466", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1478006036", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3147918719", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5385894835", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3530738920", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:2317621103", "on_segment": "y", "need": "y", "reason": "Docs recommend over-broad iam:PassRole enabling privilege escalation"}
+{"id": "github:6008425306", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:6050126692", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4411845051", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:681039491", "on_segment": "y", "need": "n", "reason": "General question about value of Aqua, no gap"}
+{"id": "github:4776550757", "on_segment": "y", "need": "n", "reason": "Internal container hardening finding"}
+{"id": "github:6415287109", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3529416398", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:3527939132", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:6419684629", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4208883951", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:5252333033", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4610388290", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:1244541462", "on_segment": "y", "need": "y", "reason": "Feature request for Kubernetes admission policy engine"}
+{"id": "github:628827390", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}
+{"id": "github:4508128654", "on_segment": "n", "need": "n", "reason": "Off-segment or unrelated to segment problem space"}

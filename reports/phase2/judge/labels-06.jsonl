@@ -1,0 +1,13 @@
+{"id": "hn:44956908", "on_segment": "y", "need": "n", "reason": "Opinion defending the SSO tax; no unmet need stated"}
+{"id": "hn:44955937", "on_segment": "y", "need": "n", "reason": "Pricing philosophy opinion on SSO tier gating"}
+{"id": "hn:44242025", "on_segment": "y", "need": "n", "reason": "Article author clarifying what SCIM is"}
+{"id": "hn:43647500", "on_segment": "n", "need": "n", "reason": "Main subject is self-hosted Tailscale control server"}
+{"id": "hn:43647368", "on_segment": "n", "need": "n", "reason": "Describes headscale usage experience; VPN focus"}
+{"id": "hn:38871623", "on_segment": "y", "need": "n", "reason": "Vendor promoting AuthKit features"}
+{"id": "hn:38825625", "on_segment": "n", "need": "n", "reason": "Product-management discussion; SCIM only an example"}
+{"id": "hn:38722124", "on_segment": "y", "need": "n", "reason": "Explains expected OAuth domain behaviour; no tool gap"}
+{"id": "hn:35732063", "on_segment": "n", "need": "n", "reason": "Layoff news; SCIM mentioned in passing"}
+{"id": "hn:35644662", "on_segment": "y", "need": "y", "reason": "Admin notes many apps lack SCIM; compares SSO options"}
+{"id": "hn:34100426", "on_segment": "y", "need": "n", "reason": "Encouragement and resources for implementing SCIM"}
+{"id": "hn:28887656", "on_segment": "y", "need": "y", "reason": "Complains Grouper identity provisioning is painful to understand"}
+{"id": "hn:22577374", "on_segment": "y", "need": "n", "reason": "Vendor pitch for password manager SSO/SCIM integration"}

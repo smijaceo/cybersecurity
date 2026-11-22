@@ -1,0 +1,1852 @@
+[
+ {
+  "theme_id": 10,
+  "name": "AWS role credentials for workloads",
+  "need": "Engineers running workloads in EKS, Lambda or outside AWS struggle to get tools to use role-based, short-lived credentials via the default chain instead of static or expiring keys.",
+  "search_query": "aws credential provider",
+  "keywords": [
+   "aws",
+   "environment",
+   "roles",
+   "role",
+   "iam",
+   "credential",
+   "eks",
+   "aws iam",
+   "credentials",
+   "agent"
+  ],
+  "stability": 0.41,
+  "demand": {
+   "need_signals": 11,
+   "engagement": 361,
+   "recent_share": 0.18181818181818182,
+   "segments": [
+    "cloud-security"
+   ]
+  },
+  "supply": {
+   "total_repos": 80,
+   "top_stars": 709,
+   "active_top_repos": 5,
+   "top_repos": [
+    {
+     "name": "aws/aws-workload-credentials-provider",
+     "url": "https://github.com/aws/aws-workload-credentials-provider",
+     "stars": 709,
+     "days_since_push": 4
+    },
+    {
+     "name": "jenkinsci/aws-secrets-manager-credentials-provider-plugin",
+     "url": "https://github.com/jenkinsci/aws-secrets-manager-credentials-provider-plugin",
+     "stars": 65,
+     "days_since_push": 8
+    },
+    {
+     "name": "61418/boto3-refresh-session",
+     "url": "https://github.com/61418/boto3-refresh-session",
+     "stars": 53,
+     "days_since_push": 5
+    },
+    {
+     "name": "jfrog/jfrog-credentials-provider",
+     "url": "https://github.com/jfrog/jfrog-credentials-provider",
+     "stars": 28,
+     "days_since_push": 52
+    },
+    {
+     "name": "geordielad/tableau-athena-credential-provider-examples",
+     "url": "https://github.com/geordielad/tableau-athena-credential-provider-examples",
+     "stars": 14,
+     "days_since_push": 2358
+    },
+    {
+     "name": "dntosas/ecr-credential-provider",
+     "url": "https://github.com/dntosas/ecr-credential-provider",
+     "stars": 11,
+     "days_since_push": 558
+    },
+    {
+     "name": "zillow/aws-custom-credential-provider",
+     "url": "https://github.com/zillow/aws-custom-credential-provider",
+     "stars": 10,
+     "days_since_push": 317
+    },
+    {
+     "name": "theplant/oidc2aws",
+     "url": "https://github.com/theplant/oidc2aws",
+     "stars": 9,
+     "days_since_push": 367
+    },
+    {
+     "name": "khalil-jibran06/StsAssumeRoleCredentialsProvider",
+     "url": "https://github.com/khalil-jibran06/StsAssumeRoleCredentialsProvider",
+     "stars": 7,
+     "days_since_push": 2231
+    },
+    {
+     "name": "aktsk/googleauth_aws_container_credential_provider",
+     "url": "https://github.com/aktsk/googleauth_aws_container_credential_provider",
+     "stars": 5,
+     "days_since_push": 1339
+    }
+   ]
+  },
+  "threat": {
+   "relevance": 3,
+   "reason": "Leaked static AWS keys are a top cloud breach path; role-based short-lived credentials remove them. No candidate fits.",
+   "techniques": [],
+   "nvd_cves": 12
+  },
+  "evidence": [
+   {
+    "title": "Obtain credentials from `cli/cache` json file",
+    "url": "https://github.com/aws/aws-sdk-go/issues/3186",
+    "source": "github",
+    "engagement": 104,
+    "segment": "cloud-security",
+    "created_at": "2020-03-05T16:15:25Z"
+   },
+   {
+    "title": "[AWS] Support the new EKS Pod Identity Agent",
+    "url": "https://github.com/external-secrets/external-secrets/issues/2951",
+    "source": "github",
+    "engagement": 69,
+    "segment": "cloud-security",
+    "created_at": "2023-12-13T11:12:43Z"
+   },
+   {
+    "title": "Support AWS_ROLE_ARN Environment Variable with Environment Credential Provider",
+    "url": "https://github.com/aws/aws-sdk-go-v2/issues/2867",
+    "source": "github",
+    "engagement": 44,
+    "segment": "cloud-security",
+    "created_at": "2019-08-29T12:17:58Z"
+   },
+   {
+    "title": "Would you mind clarifying how to add additional Roles/Users to the AWS AUTH during EKS provisioning",
+    "url": "https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1901",
+    "source": "github",
+    "engagement": 35,
+    "segment": "cloud-security",
+    "created_at": "2022-02-24T10:08:08Z"
+   },
+   {
+    "title": "Support AWS IAM Roles Anywhere for AWS Secrets Engine",
+    "url": "https://github.com/hashicorp/vault/issues/16268",
+    "source": "github",
+    "engagement": 27,
+    "segment": "cloud-security",
+    "created_at": "2022-07-11T07:46:13Z"
+   },
+   {
+    "title": "S3 Client to be able to inherit IAM permissions from runtime / environment",
+    "url": "https://github.com/oven-sh/bun/issues/22711",
+    "source": "github",
+    "engagement": 19,
+    "segment": "cloud-security",
+    "created_at": "2025-09-16T09:10:01Z"
+   },
+   {
+    "title": "AWS ECR Permanent Credentials Feature Request",
+    "url": "https://github.com/runpod/runpod-python/issues/415",
+    "source": "github",
+    "engagement": 18,
+    "segment": "cloud-security",
+    "created_at": "2025-05-01T15:47:06Z"
+   },
+   {
+    "title": "Using env var in vault agent conf",
+    "url": "https://github.com/hashicorp/vault/issues/11571",
+    "source": "github",
+    "engagement": 14,
+    "segment": "cloud-security",
+    "created_at": "2021-05-10T14:48:28Z"
+   },
+   {
+    "title": "Enable specific role assumption in ProviderConfig",
+    "url": "https://github.com/crossplane-contrib/provider-aws/issues/606",
+    "source": "github",
+    "engagement": 14,
+    "segment": "cloud-security",
+    "created_at": "2021-03-26T13:53:37Z"
+   },
+   {
+    "title": "Vault client should use AWS-SDK default credential chain when using AWS auth method in iam mode",
+    "url": "https://github.com/hashicorp/vault/issues/12568",
+    "source": "github",
+    "engagement": 13,
+    "segment": "cloud-security",
+    "created_at": "2021-09-16T11:25:36Z"
+   },
+   {
+    "title": "Detailed list of permissions for AWS iam role too open",
+    "url": "https://github.com/F5Networks/f5-cloud-failover-extension/issues/57",
+    "source": "github",
+    "engagement": 4,
+    "segment": "cloud-security",
+    "created_at": "2021-01-06T20:28:13Z"
+   }
+  ],
+  "scores": {
+   "demand": 0.571,
+   "supply_gap": 0.771,
+   "threat": 0.929
+  },
+  "gap_score": 0.731
+ },
+ {
+  "theme_id": 2,
+  "name": "Remediating vulnerable third-party dependencies",
+  "need": "Developers and security engineers struggle to detect, prioritize and quickly update vulnerable direct and transitive dependencies, including faster patching despite release-age delays.",
+  "search_query": "dependency vulnerability remediation",
+  "keywords": [
+   "vulnerability",
+   "security",
+   "dependency",
+   "dependencies",
+   "update",
+   "dependency vulnerability",
+   "package",
+   "chain",
+   "analysis",
+   "production"
+  ],
+  "stability": 0.76,
+  "demand": {
+   "need_signals": 18,
+   "engagement": 252,
+   "recent_share": 0.5,
+   "segments": [
+    "appsec-supply-chain",
+    "cloud-security",
+    "smb-security-ops"
+   ]
+  },
+  "supply": {
+   "total_repos": 154,
+   "top_stars": 1999,
+   "active_top_repos": 10,
+   "top_repos": [
+    {
+     "name": "pyupio/safety",
+     "url": "https://github.com/pyupio/safety",
+     "stars": 1999,
+     "days_since_push": 17
+    },
+    {
+     "name": "OWASP/cve-lite-cli",
+     "url": "https://github.com/OWASP/cve-lite-cli",
+     "stars": 801,
+     "days_since_push": 0
+    },
+    {
+     "name": "Hamdy910/sentinel-diff-guard",
+     "url": "https://github.com/Hamdy910/sentinel-diff-guard",
+     "stars": 68,
+     "days_since_push": 0
+    },
+    {
+     "name": "fortify/skills",
+     "url": "https://github.com/fortify/skills",
+     "stars": 25,
+     "days_since_push": 30
+    },
+    {
+     "name": "andrasfe/vulnicheck",
+     "url": "https://github.com/andrasfe/vulnicheck",
+     "stars": 11,
+     "days_since_push": 273
+    },
+    {
+     "name": "hexblot/composer-remediate",
+     "url": "https://github.com/hexblot/composer-remediate",
+     "stars": 10,
+     "days_since_push": 0
+    },
+    {
+     "name": "arnnnnaaavvvvv/MEJOR",
+     "url": "https://github.com/arnnnnaaavvvvv/MEJOR",
+     "stars": 5,
+     "days_since_push": 10
+    },
+    {
+     "name": "vaskort/pharos",
+     "url": "https://github.com/vaskort/pharos",
+     "stars": 4,
+     "days_since_push": 88
+    },
+    {
+     "name": "tess-fun/fleetreach",
+     "url": "https://github.com/tess-fun/fleetreach",
+     "stars": 4,
+     "days_since_push": 4
+    },
+    {
+     "name": "shubham-yadav-07/AI-POWERD-VOLUNERBILITY-SCANNER-ADVANCED-",
+     "url": "https://github.com/shubham-yadav-07/AI-POWERD-VOLUNERBILITY-SCANNER-ADVANCED-",
+     "stars": 4,
+     "days_since_push": 227
+    }
+   ]
+  },
+  "threat": {
+   "relevance": 3,
+   "reason": "Exploiting known-vulnerable third-party libraries is a common, actively exploited path; faster patching closes it directly.",
+   "techniques": [
+    {
+     "id": "T1068",
+     "name": "Exploitation for Privilege Escalation",
+     "url": "https://attack.mitre.org/techniques/T1068"
+    },
+    {
+     "id": "T1499.004",
+     "name": "Application or System Exploitation",
+     "url": "https://attack.mitre.org/techniques/T1499/004"
+    }
+   ],
+   "nvd_cves": 3
+  },
+  "evidence": [
+   {
+    "title": "Add support for European Union Vulnerability Database (EUVD)",
+    "url": "https://github.com/DependencyTrack/dependency-track/issues/4863",
+    "source": "github",
+    "engagement": 58,
+    "segment": "appsec-supply-chain",
+    "created_at": "2025-04-22T11:37:11Z"
+   },
+   {
+    "title": "Provide good container securityContext by default for each chart",
+    "url": "https://github.com/falcosecurity/charts/issues/481",
+    "source": "github",
+    "engagement": 51,
+    "segment": "cloud-security",
+    "created_at": "2023-04-13T17:17:24Z"
+   },
+   {
+    "title": "Update dependencies to resolve security vulnerabilities in sub-dependencies",
+    "url": "https://github.com/renovatebot/renovate/issues/3080",
+    "source": "github",
+    "engagement": 48,
+    "segment": "appsec-supply-chain",
+    "created_at": "2019-01-16T18:24:06Z"
+   },
+   {
+    "title": "Add a config option to disable proxying for all private packages (to shield against dependency confusion attacks)",
+    "url": "https://github.com/verdaccio/verdaccio/issues/2103",
+    "source": "github",
+    "engagement": 18,
+    "segment": "appsec-supply-chain",
+    "created_at": "2021-02-23T14:21:34Z"
+   },
+   {
+    "title": "vm2 Sandbox Escape vulnerability",
+    "url": "https://github.com/release-it/release-it/issues/1024",
+    "source": "github",
+    "engagement": 16,
+    "segment": "appsec-supply-chain",
+    "created_at": "2023-07-17T05:48:57Z"
+   },
+   {
+    "title": "[FEATURE] Include a NetworkPolicy to secure communication inside of Longhorn",
+    "url": "https://github.com/longhorn/longhorn/issues/1805",
+    "source": "github",
+    "engagement": 15,
+    "segment": "cloud-security",
+    "created_at": "2020-09-21T15:29:54Z"
+   },
+   {
+    "title": "\ud83d\udcac RFC: Proposal to Remove `node-libs-browser` Dependency",
+    "url": "https://github.com/backstage/backstage/issues/28740",
+    "source": "github",
+    "engagement": 15,
+    "segment": "appsec-supply-chain",
+    "created_at": "2025-02-06T03:15:23Z"
+   },
+   {
+    "title": "Option to bypass minimumReleaseAge when the update fixes a vulnerability",
+    "url": "https://github.com/oven-sh/bun/issues/26065",
+    "source": "github",
+    "engagement": 14,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-01-14T12:54:09Z"
+   },
+   {
+    "title": "web app 3rd party JS dependency vulnerability management",
+    "url": "https://security.stackexchange.com/questions/245529/web-app-3rd-party-js-dependency-vulnerability-management",
+    "source": "stackexchange",
+    "engagement": 6,
+    "segment": "appsec-supply-chain",
+    "created_at": "2021-03-01T10:42:26+00:00"
+   },
+   {
+    "title": "Can you please strip `devDependencies` from npm publish",
+    "url": "https://github.com/sxzz/verkit/issues/11",
+    "source": "github",
+    "engagement": 5,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-08-02T05:19:14Z"
+   },
+   {
+    "title": "Ask HN: Best approach to dependency vulnerability scanning in CI?",
+    "url": "https://news.ycombinator.com/item?id=48944189",
+    "source": "hn",
+    "engagement": 4,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-07-17T07:05:02+00:00"
+   },
+   {
+    "title": "Explore container security scanning signals for update candidates",
+    "url": "https://github.com/magrhino/wudup/issues/410",
+    "source": "github",
+    "engagement": 1,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-06-25T19:07:05Z"
+   },
+   {
+    "title": "Vulnerability in http-cache-semantics dependency",
+    "url": "https://github.com/cdklabs/cdk-ecr-deployment/issues/233",
+    "source": "github",
+    "engagement": 1,
+    "segment": "appsec-supply-chain",
+    "created_at": "2023-06-12T12:09:10Z"
+   },
+   {
+    "title": "Self-hosted Kali and BlackArch apt mirrors for supply chain resilience",
+    "url": "https://github.com/Strike48-public/pick/issues/135",
+    "source": "github",
+    "engagement": 0,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-05-28T16:11:07Z"
+   },
+   {
+    "title": "User Needs Analysis",
+    "url": "https://github.com/XxAbde/Scanner-Vulner-Web/issues/1",
+    "source": "github",
+    "engagement": 0,
+    "segment": "smb-security-ops",
+    "created_at": "2025-04-03T10:22:44Z"
+   },
+   {
+    "title": "User Needs Analysis",
+    "url": "https://github.com/XxAbde/gestion-store/issues/1",
+    "source": "github",
+    "engagement": 0,
+    "segment": "smb-security-ops",
+    "created_at": "2025-04-03T09:06:57Z"
+   },
+   {
+    "title": "Deno 1.28: Featuring 1.3M New Modules",
+    "url": "https://news.ycombinator.com/item?id=33595098",
+    "source": "hn",
+    "engagement": 0,
+    "segment": "appsec-supply-chain",
+    "created_at": "2022-11-14T15:11:35+00:00"
+   },
+   {
+    "title": "LocalStack 1.0",
+    "url": "https://news.ycombinator.com/item?id=32201099",
+    "source": "hn",
+    "engagement": 0,
+    "segment": "appsec-supply-chain",
+    "created_at": "2022-07-23T07:08:35+00:00"
+   }
+  ],
+  "scores": {
+   "demand": 0.757,
+   "supply_gap": 0.436,
+   "threat": 0.929
+  },
+  "gap_score": 0.688
+ },
+ {
+  "theme_id": 0,
+  "name": "SBOM generation across build ecosystems",
+  "need": "Maintainers and compliance-driven teams struggle to generate, sign, assemble and publish accurate SBOMs from their package managers and container builds to meet regulatory guidance.",
+  "search_query": "sbom generation",
+  "keywords": [
+   "sbom",
+   "sboms",
+   "tool",
+   "package",
+   "packages",
+   "software",
+   "information",
+   "author",
+   "https",
+   "generate"
+  ],
+  "stability": 0.74,
+  "demand": {
+   "need_signals": 31,
+   "engagement": 222,
+   "recent_share": 0.3548387096774194,
+   "segments": [
+    "appsec-supply-chain"
+   ]
+  },
+  "supply": {
+   "total_repos": 310,
+   "top_stars": 1464,
+   "active_top_repos": 9,
+   "top_repos": [
+    {
+     "name": "owasp-dep-scan/dep-scan",
+     "url": "https://github.com/owasp-dep-scan/dep-scan",
+     "stars": 1464,
+     "days_since_push": 0
+    },
+    {
+     "name": "NuGuardAI/nuguard",
+     "url": "https://github.com/NuGuardAI/nuguard",
+     "stars": 72,
+     "days_since_push": 1
+    },
+    {
+     "name": "demcon/cmake-sbom",
+     "url": "https://github.com/demcon/cmake-sbom",
+     "stars": 65,
+     "days_since_push": 82
+    },
+    {
+     "name": "goreleaser/example-supply-chain",
+     "url": "https://github.com/goreleaser/example-supply-chain",
+     "stars": 62,
+     "days_since_push": 21
+    },
+    {
+     "name": "ZerberusAI/ZSBOM",
+     "url": "https://github.com/ZerberusAI/ZSBOM",
+     "stars": 52,
+     "days_since_push": 26
+    },
+    {
+     "name": "qualixar/skillfortify",
+     "url": "https://github.com/qualixar/skillfortify",
+     "stars": 41,
+     "days_since_push": 51
+    },
+    {
+     "name": "TimesysGit/meta-timesys",
+     "url": "https://github.com/TimesysGit/meta-timesys",
+     "stars": 40,
+     "days_since_push": 16
+    },
+    {
+     "name": "cybeats/sbomgen",
+     "url": "https://github.com/cybeats/sbomgen",
+     "stars": 36,
+     "days_since_push": 625
+    },
+    {
+     "name": "SBOM-Community/SBOM-Generation",
+     "url": "https://github.com/SBOM-Community/SBOM-Generation",
+     "stars": 35,
+     "days_since_push": 293
+    },
+    {
+     "name": "espressif/esp-idf-sbom",
+     "url": "https://github.com/espressif/esp-idf-sbom",
+     "stars": 28,
+     "days_since_push": 3
+    }
+   ]
+  },
+  "threat": {
+   "relevance": 2,
+   "reason": "Component inventory speeds response to compromised dependencies, but SBOM generation itself prevents nothing.",
+   "techniques": [
+    {
+     "id": "T1195.001",
+     "name": "Compromise Software Dependencies and Development Tools",
+     "url": "https://attack.mitre.org/techniques/T1195/001"
+    },
+    {
+     "id": "T1195.002",
+     "name": "Compromise Software Supply Chain",
+     "url": "https://attack.mitre.org/techniques/T1195/002"
+    }
+   ],
+   "nvd_cves": 0
+  },
+  "evidence": [
+   {
+    "title": "sign SBOMs through cosign tool right after generated it through bom tool",
+    "url": "https://github.com/kubernetes/release/issues/2286",
+    "source": "github",
+    "engagement": 36,
+    "segment": "appsec-supply-chain",
+    "created_at": "2021-10-10T15:38:15Z"
+   },
+   {
+    "title": "[Feature Request]: generating SBOMs for container images while building them",
+    "url": "https://github.com/docker/roadmap/issues/274",
+    "source": "github",
+    "engagement": 33,
+    "segment": "appsec-supply-chain",
+    "created_at": "2021-10-21T12:52:23Z"
+   },
+   {
+    "title": "pip should record the original index url or find links url of the package",
+    "url": "https://github.com/pypa/pip/issues/10736",
+    "source": "github",
+    "engagement": 14,
+    "segment": "appsec-supply-chain",
+    "created_at": "2021-12-20T18:36:09Z"
+   },
+   {
+    "title": "[IDEA] Publish Software Bill of Materials (SBOM)",
+    "url": "https://github.com/nextgenhealthcare/connect/issues/5852",
+    "source": "github",
+    "engagement": 13,
+    "segment": "appsec-supply-chain",
+    "created_at": "2023-07-20T18:16:57Z"
+   },
+   {
+    "title": "Support attestations as artifacts in SPDX 3.1",
+    "url": "https://github.com/spdx/spdx-3-model/issues/594",
+    "source": "github",
+    "engagement": 13,
+    "segment": "appsec-supply-chain",
+    "created_at": "2024-01-10T16:58:53Z"
+   },
+   {
+    "title": "Feature: Allow one sbom to be the primary document in assemble action",
+    "url": "https://github.com/interlynk-io/sbomasm/issues/128",
+    "source": "github",
+    "engagement": 11,
+    "segment": "appsec-supply-chain",
+    "created_at": "2024-12-11T15:07:11Z"
+   },
+   {
+    "title": "Ask HN: Open-source SBOM generation tools?",
+    "url": "https://news.ycombinator.com/item?id=32227594",
+    "source": "hn",
+    "engagement": 11,
+    "segment": "appsec-supply-chain",
+    "created_at": "2022-07-25T17:15:32+00:00"
+   },
+   {
+    "title": "Generate CycloneDX SBOM file from vcpkg",
+    "url": "https://github.com/microsoft/vcpkg/issues/30461",
+    "source": "github",
+    "engagement": 10,
+    "segment": "appsec-supply-chain",
+    "created_at": "2023-03-27T13:19:55Z"
+   },
+   {
+    "title": "Allow to list SBOMs created by the tools by package",
+    "url": "https://github.com/interlynk-io/sbombenchmark.dev/issues/12",
+    "source": "github",
+    "engagement": 10,
+    "segment": "appsec-supply-chain",
+    "created_at": "2023-09-04T07:39:02Z"
+   },
+   {
+    "title": "Add ability to customize 3rd party licences output",
+    "url": "https://github.com/angular/angular-cli/issues/26272",
+    "source": "github",
+    "engagement": 8,
+    "segment": "appsec-supply-chain",
+    "created_at": "2023-11-08T12:05:01Z"
+   },
+   {
+    "title": "[question] How to use google osv-scanner with conan package?",
+    "url": "https://github.com/conan-io/conan/issues/15918",
+    "source": "github",
+    "engagement": 8,
+    "segment": "appsec-supply-chain",
+    "created_at": "2024-03-22T09:47:02Z"
+   },
+   {
+    "title": "Compliance with BSI TR-03183 guidelines",
+    "url": "https://github.com/CycloneDX/cyclonedx-gradle-plugin/issues/865",
+    "source": "github",
+    "engagement": 7,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-07-13T13:29:04Z"
+   },
+   {
+    "title": "Adding purl to generated SBOM",
+    "url": "https://github.com/microsoft/vcpkg/issues/39254",
+    "source": "github",
+    "engagement": 7,
+    "segment": "appsec-supply-chain",
+    "created_at": "2024-06-12T15:42:18Z"
+   },
+   {
+    "title": "Provide SBOM information in an \"queryable\" way",
+    "url": "https://github.com/NixOS/nix/issues/13564",
+    "source": "github",
+    "engagement": 6,
+    "segment": "appsec-supply-chain",
+    "created_at": "2025-07-28T11:51:39Z"
+   },
+   {
+    "title": "use of ldd and best practices improvements",
+    "url": "https://github.com/stolk/sotrace/issues/1",
+    "source": "github",
+    "engagement": 5,
+    "segment": "appsec-supply-chain",
+    "created_at": "2024-04-08T09:19:14Z"
+   },
+   {
+    "title": "Consider Alternative Identifier Logic Related to purl and CPEs",
+    "url": "https://github.com/eBay/sbom-scorecard/issues/36",
+    "source": "github",
+    "engagement": 5,
+    "segment": "appsec-supply-chain",
+    "created_at": "2023-02-16T15:58:15Z"
+   },
+   {
+    "title": "[FEATURE]: Add markdown report output for CI/CD",
+    "url": "https://github.com/OWASP/DockSec/issues/159",
+    "source": "github",
+    "engagement": 5,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-08-06T10:30:29Z"
+   },
+   {
+    "title": "Provide better documentation around usage/integration into various pipelines",
+    "url": "https://github.com/microsoft/sbom-tool/issues/909",
+    "source": "github",
+    "engagement": 4,
+    "segment": "appsec-supply-chain",
+    "created_at": "2025-01-29T23:12:00Z"
+   },
+   {
+    "title": "Consume SBOM, produce VEX",
+    "url": "https://github.com/dependency-check/DependencyCheck/issues/5947",
+    "source": "github",
+    "engagement": 4,
+    "segment": "appsec-supply-chain",
+    "created_at": "2023-09-20T20:00:17Z"
+   },
+   {
+    "title": "Q: What's the best way to get insights from the SBOMs in your company?",
+    "url": "https://github.com/awesomeSBOM/awesome-sbom/issues/39",
+    "source": "github",
+    "engagement": 3,
+    "segment": "appsec-supply-chain",
+    "created_at": "2024-09-20T09:55:02Z"
+   },
+   {
+    "title": "[discussion]: how to add author type of \"Organization\"",
+    "url": "https://github.com/interlynk-io/sbomasm/issues/178",
+    "source": "github",
+    "engagement": 2,
+    "segment": "appsec-supply-chain",
+    "created_at": "2025-06-18T08:32:35Z"
+   },
+   {
+    "title": "SBOM Composing: Consider stopping traversal at top",
+    "url": "https://github.com/chainguard-dev/apko/issues/438",
+    "source": "github",
+    "engagement": 2,
+    "segment": "appsec-supply-chain",
+    "created_at": "2022-12-13T01:30:35Z"
+   },
+   {
+    "title": "Provide a list of packaged files (SBOM, CycloneDX) as an output",
+    "url": "https://github.com/salesforce/rules_spring/issues/88",
+    "source": "github",
+    "engagement": 2,
+    "segment": "appsec-supply-chain",
+    "created_at": "2021-02-11T17:53:52Z"
+   },
+   {
+    "title": "[java] cdxgen fails to generate an sbom while a commercial tool does",
+    "url": "https://github.com/cdxgen/cdxgen/issues/1677",
+    "source": "github",
+    "engagement": 1,
+    "segment": "appsec-supply-chain",
+    "created_at": "2025-03-12T10:50:29Z"
+   },
+   {
+    "title": "[Feature]: Embed and have the ability to display SBOM information in enarx binary.",
+    "url": "https://github.com/enarx/enarx/issues/1450",
+    "source": "github",
+    "engagement": 1,
+    "segment": "appsec-supply-chain",
+    "created_at": "2022-02-22T17:28:27Z"
+   },
+   {
+    "title": "[SIEP] Machine-readable support period: link to a CLE (ECMA-428) document",
+    "url": "https://github.com/ossf/security-insights/issues/227",
+    "source": "github",
+    "engagement": 1,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-11-11T10:30:56Z"
+   },
+   {
+    "title": "CPE database",
+    "url": "https://github.com/CERTCC/SBOM/issues/19",
+    "source": "github",
+    "engagement": 0,
+    "segment": "appsec-supply-chain",
+    "created_at": "2024-03-08T18:26:24Z"
+   },
+   {
+    "title": "README advertises SBOM + provenance attestations but shows only cosign verify, which reports them absent",
+    "url": "https://github.com/Barnett-Studios/cxpak/issues/69",
+    "source": "github",
+    "engagement": 0,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-08-28T17:33:39Z"
+   },
+   {
+    "title": "The SBOM does not say which source it describes",
+    "url": "https://github.com/IcebergAI/IcebergSCA/issues/21",
+    "source": "github",
+    "engagement": 0,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-07-29T09:03:06Z"
+   },
+   {
+    "title": "Support tools that are both SBOM generators and vulnerability scanners",
+    "url": "https://github.com/anchore/yardstick/issues/10",
+    "source": "github",
+    "engagement": 0,
+    "segment": "appsec-supply-chain",
+    "created_at": "2022-12-08T15:38:32Z"
+   },
+   {
+    "title": "SBOM mode: pick trivy or grype from the SBOM's generator",
+    "url": "https://github.com/huntridge-labs/argus/issues/493",
+    "source": "github",
+    "engagement": 0,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-10-23T13:15:55Z"
+   }
+  ],
+  "scores": {
+   "demand": 0.786,
+   "supply_gap": 0.393,
+   "threat": 0.429
+  },
+  "gap_score": 0.559
+ },
+ {
+  "theme_id": 3,
+  "name": "SCIM user provisioning for applications",
+  "need": "Admins of SaaS and self-hosted apps struggle with manual user provisioning and deprovisioning because products lack SCIM support for IdPs like Okta and Azure AD.",
+  "search_query": "scim provisioning",
+  "keywords": [
+   "scim",
+   "provisioning",
+   "user",
+   "support",
+   "api",
+   "feature",
+   "provider",
+   "okta",
+   "account",
+   "server"
+  ],
+  "stability": 0.52,
+  "demand": {
+   "need_signals": 23,
+   "engagement": 147,
+   "recent_share": 0.4782608695652174,
+   "segments": [
+    "appsec-supply-chain",
+    "cloud-security",
+    "identity-access"
+   ]
+  },
+  "supply": {
+   "total_repos": 243,
+   "top_stars": 2269,
+   "active_top_repos": 9,
+   "top_repos": [
+    {
+     "name": "ory/polis",
+     "url": "https://github.com/ory/polis",
+     "stars": 2269,
+     "days_since_push": 118
+    },
+    {
+     "name": "jelhub/scimgateway",
+     "url": "https://github.com/jelhub/scimgateway",
+     "stars": 232,
+     "days_since_push": 37
+    },
+    {
+     "name": "AzureAD/SCIMReferenceCode",
+     "url": "https://github.com/AzureAD/SCIMReferenceCode",
+     "stars": 193,
+     "days_since_push": 11
+    },
+    {
+     "name": "1Password/scim-examples",
+     "url": "https://github.com/1Password/scim-examples",
+     "stars": 192,
+     "days_since_push": 11
+    },
+    {
+     "name": "mlflow-oidc/mlflow-oidc-auth",
+     "url": "https://github.com/mlflow-oidc/mlflow-oidc-auth",
+     "stars": 136,
+     "days_since_push": 2
+    },
+    {
+     "name": "AzureAD/entra-id-inbound-provisioning",
+     "url": "https://github.com/AzureAD/entra-id-inbound-provisioning",
+     "stars": 49,
+     "days_since_push": 70
+    },
+    {
+     "name": "aws-samples/aws-iam-identity-center-sync-script",
+     "url": "https://github.com/aws-samples/aws-iam-identity-center-sync-script",
+     "stars": 33,
+     "days_since_push": 1255
+    },
+    {
+     "name": "python-scim/scim2-models",
+     "url": "https://github.com/python-scim/scim2-models",
+     "stars": 30,
+     "days_since_push": 2
+    },
+    {
+     "name": "arturoeanton/goscim",
+     "url": "https://github.com/arturoeanton/goscim",
+     "stars": 30,
+     "days_since_push": 4
+    },
+    {
+     "name": "yaal-coop/canaille",
+     "url": "https://github.com/yaal-coop/canaille",
+     "stars": 29,
+     "days_since_push": 3
+    }
+   ]
+  },
+  "threat": {
+   "relevance": 2,
+   "reason": "Prompt deprovisioning removes orphaned accounts attackers reuse; no candidate covers valid-account abuse.",
+   "techniques": [],
+   "nvd_cves": 5
+  },
+  "evidence": [
+   {
+    "title": "[Feature] SCIM support",
+    "url": "https://github.com/FusionAuth/fusionauth-issues/issues/106",
+    "source": "github",
+    "engagement": 41,
+    "segment": "identity-access",
+    "created_at": "2019-04-07T17:51:26Z"
+   },
+   {
+    "title": "SCIM Provisioning on SSO Plugin",
+    "url": "https://github.com/better-auth/better-auth/issues/3276",
+    "source": "github",
+    "engagement": 38,
+    "segment": "identity-access",
+    "created_at": "2025-07-06T07:19:10Z"
+   },
+   {
+    "title": "Implement SCIM",
+    "url": "https://github.com/go-vikunja/vikunja/issues/1399",
+    "source": "github",
+    "engagement": 11,
+    "segment": "identity-access",
+    "created_at": "2025-09-03T12:07:07Z"
+   },
+   {
+    "title": "Add SCIM support to provision and manage user accounts in Postman.",
+    "url": "https://github.com/postmanlabs/postman-app-support/issues/6235",
+    "source": "github",
+    "engagement": 9,
+    "segment": "identity-access",
+    "created_at": "2019-04-04T22:08:42Z"
+   },
+   {
+    "title": "feat: Data Access Workflow",
+    "url": "https://github.com/open-metadata/OpenMetadata/issues/12713",
+    "source": "github",
+    "engagement": 8,
+    "segment": "identity-access",
+    "created_at": "2023-08-02T10:26:56Z"
+   },
+   {
+    "title": "Unable to turn on SCIM via the okta API from reading the docs",
+    "url": "https://github.com/okta/okta-developer-docs/issues/5130",
+    "source": "github",
+    "engagement": 8,
+    "segment": "identity-access",
+    "created_at": "2024-10-07T14:31:25Z"
+   },
+   {
+    "title": "Implement Additional Validation for SCIM Server",
+    "url": "https://github.com/FusionAuth/fusionauth-issues/issues/2695",
+    "source": "github",
+    "engagement": 7,
+    "segment": "identity-access",
+    "created_at": "2024-03-21T17:08:46Z"
+   },
+   {
+    "title": "[feature]: Add workspaces to group projects and share members across them",
+    "url": "https://github.com/croffasia/itsaplan/issues/258",
+    "source": "github",
+    "engagement": 7,
+    "segment": "identity-access",
+    "created_at": "2026-08-30T01:55:49Z"
+   },
+   {
+    "title": "[Feat]: SCIM Client support (Outbound provisioning)",
+    "url": "https://github.com/supertokens/supertokens-core/issues/1009",
+    "source": "github",
+    "engagement": 5,
+    "segment": "identity-access",
+    "created_at": "2024-07-08T08:01:54Z"
+   },
+   {
+    "title": "Automatically add users to workspace based on email address",
+    "url": "https://github.com/TracecatHQ/tracecat/issues/1031",
+    "source": "github",
+    "engagement": 4,
+    "segment": "identity-access",
+    "created_at": "2025-04-10T19:51:42Z"
+   },
+   {
+    "title": "Native Reverse Proxy Integration for Web Endpoints \u2013 Full Browser-Based Access to Internal Web UIs (PRA)",
+    "url": "https://github.com/Termix-SSH/Plugin-Web-Endpoint/issues/7",
+    "source": "github",
+    "engagement": 3,
+    "segment": "identity-access",
+    "created_at": "2026-10-27T08:56:14Z"
+   },
+   {
+    "title": "Support AzureAD minimum SCIM requirements",
+    "url": "https://github.com/FusionAuth/fusionauth-issues/issues/1761",
+    "source": "github",
+    "engagement": 2,
+    "segment": "identity-access",
+    "created_at": "2022-06-17T22:12:19Z"
+   },
+   {
+    "title": "[Feature] GKE - Alternatives to service Account JSON Key",
+    "url": "https://github.com/rancher/terraform-provider-rancher2/issues/1555",
+    "source": "github",
+    "engagement": 1,
+    "segment": "identity-access",
+    "created_at": "2025-06-23T12:42:09Z"
+   },
+   {
+    "title": "Allow self-management of user assignments by PI/manager to own project",
+    "url": "https://github.com/nerc-project/coldfront-plugin-api/issues/11",
+    "source": "github",
+    "engagement": 1,
+    "segment": "identity-access",
+    "created_at": "2023-10-26T13:37:53Z"
+   },
+   {
+    "title": "[FEATURE] Allow to use `databricks_token` resource to issue account-level SCIM token",
+    "url": "https://github.com/databricks/terraform-provider-databricks/issues/4458",
+    "source": "github",
+    "engagement": 1,
+    "segment": "identity-access",
+    "created_at": "2025-01-31T17:34:44Z"
+   },
+   {
+    "title": "Support for Enterprise Settings Audit Logs",
+    "url": "https://github.com/PaloAltoNetworks/terraform-provider-prismacloud/issues/209",
+    "source": "github",
+    "engagement": 1,
+    "segment": "cloud-security",
+    "created_at": "2023-04-04T17:52:57Z"
+   },
+   {
+    "title": "Ask HN: Is there still a reason to use Okta for SSO? Okta vs. Google SSO",
+    "url": "https://news.ycombinator.com/item?id=35644662",
+    "source": "hn",
+    "engagement": 0,
+    "segment": "identity-access",
+    "created_at": "2023-04-20T19:05:03+00:00"
+   },
+   {
+    "title": "Restructure/correct docs to avoid recommending iam:PassRole with blanket resource and service permissions",
+    "url": "https://github.com/gocd/gocd-ecs-elastic-agent/issues/327",
+    "source": "github",
+    "engagement": 0,
+    "segment": "cloud-security",
+    "created_at": "2024-05-26T10:10:23Z"
+   },
+   {
+    "title": "Register the `in8` property namespace for agent-tool capability declarations (MCP servers and skills)",
+    "url": "https://github.com/CycloneDX/cyclonedx-property-taxonomy/issues/180",
+    "source": "github",
+    "engagement": 0,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-07-23T16:01:23Z"
+   },
+   {
+    "title": "E88 Additional authentication options",
+    "url": "https://github.com/Chris-Wolfgang/wms/issues/735",
+    "source": "github",
+    "engagement": 0,
+    "segment": "identity-access",
+    "created_at": "2026-09-30T19:48:23Z"
+   },
+   {
+    "title": "SCIM - Will not provision groups with special chars other than - and _",
+    "url": "https://github.com/postmanlabs/postman-app-support/issues/12551",
+    "source": "github",
+    "engagement": 0,
+    "segment": "identity-access",
+    "created_at": "2023-12-16T18:09:09Z"
+   },
+   {
+    "title": "Support Microsoft SharePoint Integration for Claims Provider",
+    "url": "https://github.com/FusionAuth/fusionauth-issues/issues/3256",
+    "source": "github",
+    "engagement": 0,
+    "segment": "identity-access",
+    "created_at": "2025-11-26T00:36:24Z"
+   },
+   {
+    "title": "feature: SCIM Support for Decentralized Collaboration",
+    "url": "https://github.com/penpot/penpot/issues/8152",
+    "source": "github",
+    "engagement": 0,
+    "segment": "identity-access",
+    "created_at": "2026-01-21T12:53:42Z"
+   }
+  ],
+  "scores": {
+   "demand": 0.7,
+   "supply_gap": 0.421,
+   "threat": 0.429
+  },
+  "gap_score": 0.535
+ },
+ {
+  "theme_id": 8,
+  "name": "Managing SIEM log noise and ingestion",
+  "need": "Small security teams struggle to filter noisy logs, enrich and monitor log feeds, and turn SIEM alerts into processed actions without high cost.",
+  "search_query": "siem log filtering",
+  "keywords": [
+   "siem",
+   "messages",
+   "pre",
+   "real",
+   "logs",
+   "events",
+   "cluster",
+   "real time",
+   "alien vault",
+   "alien"
+  ],
+  "stability": 0.51,
+  "demand": {
+   "need_signals": 7,
+   "engagement": 92,
+   "recent_share": 0.14285714285714285,
+   "segments": [
+    "smb-security-ops"
+   ]
+  },
+  "supply": {
+   "total_repos": 52,
+   "top_stars": 328,
+   "active_top_repos": 4,
+   "top_repos": [
+    {
+     "name": "jmasarweh/UniFi-Insights-Plus",
+     "url": "https://github.com/jmasarweh/UniFi-Insights-Plus",
+     "stars": 328,
+     "days_since_push": 20
+    },
+    {
+     "name": "lprat/logstash-plugins",
+     "url": "https://github.com/lprat/logstash-plugins",
+     "stars": 10,
+     "days_since_push": 2676
+    },
+    {
+     "name": "sanesecurityguy/opnsense-ruleset-for-wazuh",
+     "url": "https://github.com/sanesecurityguy/opnsense-ruleset-for-wazuh",
+     "stars": 9,
+     "days_since_push": 1176
+    },
+    {
+     "name": "TomWartenberg-IRN/Shield-Enterprise",
+     "url": "https://github.com/TomWartenberg-IRN/Shield-Enterprise",
+     "stars": 3,
+     "days_since_push": 554
+    },
+    {
+     "name": "PhilipLykov/LogPulseAI",
+     "url": "https://github.com/PhilipLykov/LogPulseAI",
+     "stars": 2,
+     "days_since_push": 66
+    },
+    {
+     "name": "iyonr/fortianalyzer-log-parser",
+     "url": "https://github.com/iyonr/fortianalyzer-log-parser",
+     "stars": 2,
+     "days_since_push": 1016
+    },
+    {
+     "name": "SohamSaha408/SIEM",
+     "url": "https://github.com/SohamSaha408/SIEM",
+     "stars": 1,
+     "days_since_push": 131
+    },
+    {
+     "name": "AdityaBhatt3010/Splunk-Exploring-SPL",
+     "url": "https://github.com/AdityaBhatt3010/Splunk-Exploring-SPL",
+     "stars": 1,
+     "days_since_push": 194
+    },
+    {
+     "name": "5il/siem",
+     "url": "https://github.com/5il/siem",
+     "stars": 0,
+     "days_since_push": 4358
+    },
+    {
+     "name": "sumonst21/logstash-filters-for-siemonster",
+     "url": "https://github.com/sumonst21/logstash-filters-for-siemonster",
+     "stars": 0,
+     "days_since_push": 3363
+    }
+   ]
+  },
+  "threat": {
+   "relevance": 2,
+   "reason": "Feed monitoring can catch disabled logging; noise reduction aids detection broadly but indirectly.",
+   "techniques": [
+    {
+     "id": "T1685.002",
+     "name": "Disable or Modify Cloud Log",
+     "url": "https://attack.mitre.org/techniques/T1685/002"
+    },
+    {
+     "id": "T1685.001",
+     "name": "Disable or Modify Windows Event Log",
+     "url": "https://attack.mitre.org/techniques/T1685/001"
+    }
+   ],
+   "nvd_cves": 0
+  },
+  "evidence": [
+   {
+    "title": "SIEM log pre-filtering question",
+    "url": "https://security.stackexchange.com/questions/41068/siem-log-pre-filtering-question",
+    "source": "stackexchange",
+    "engagement": 29,
+    "segment": "smb-security-ops",
+    "created_at": "2013-08-22T18:10:26+00:00"
+   },
+   {
+    "title": "Are SIEM and NIDS/HIDS complementary?",
+    "url": "https://security.stackexchange.com/questions/133218/are-siem-and-nids-hids-complementary",
+    "source": "stackexchange",
+    "engagement": 17,
+    "segment": "smb-security-ops",
+    "created_at": "2016-08-08T09:00:10+00:00"
+   },
+   {
+    "title": "DNS Processor for Ingest Pipelines",
+    "url": "https://github.com/elastic/elasticsearch/issues/91624",
+    "source": "github",
+    "engagement": 16,
+    "segment": "smb-security-ops",
+    "created_at": "2022-11-16T15:53:07Z"
+   },
+   {
+    "title": "SIEM Alien Vault recommended method for muting noise",
+    "url": "https://security.stackexchange.com/questions/161782/siem-alien-vault-recommended-method-for-muting-noise",
+    "source": "stackexchange",
+    "engagement": 16,
+    "segment": "smb-security-ops",
+    "created_at": "2017-06-12T11:04:37+00:00"
+   },
+   {
+    "title": "Feature request: Support for heartbeat messages for outputs",
+    "url": "https://github.com/falcosecurity/falcosidekick/issues/278",
+    "source": "github",
+    "engagement": 14,
+    "segment": "smb-security-ops",
+    "created_at": "2021-10-29T19:49:00Z"
+   },
+   {
+    "title": "Collecting Attacker Feeds",
+    "url": "https://github.com/telekom-security/tpotce/issues/1545",
+    "source": "github",
+    "engagement": 0,
+    "segment": "smb-security-ops",
+    "created_at": "2024-05-13T11:17:41Z"
+   },
+   {
+    "title": "[FEATURE] Real-time SIEM integration with automatic alert processing",
+    "url": "https://github.com/ZainGuard/InvestigAI/issues/4",
+    "source": "github",
+    "engagement": 0,
+    "segment": "smb-security-ops",
+    "created_at": "2025-10-12T14:55:33Z"
+   }
+  ],
+  "scores": {
+   "demand": 0.214,
+   "supply_gap": 0.957,
+   "threat": 0.429
+  },
+  "gap_score": 0.528
+ },
+ {
+  "theme_id": 7,
+  "name": "IAM-based authentication in AWS service clients",
+  "need": "Cloud teams moving off static passwords and keys find their clients and tools can't authenticate to RDS, MSK, Redshift, API Gateway or ArgoCD with short-lived AWS IAM credentials.",
+  "search_query": "aws iam authentication",
+  "keywords": [
+   "iam",
+   "aws",
+   "authentication",
+   "auth",
+   "amazon",
+   "com",
+   "api",
+   "aws amazon",
+   "docs aws",
+   "https docs"
+  ],
+  "stability": 0.47,
+  "demand": {
+   "need_signals": 15,
+   "engagement": 314,
+   "recent_share": 0.26666666666666666,
+   "segments": [
+    "cloud-security",
+    "identity-access"
+   ]
+  },
+  "supply": {
+   "total_repos": 474,
+   "top_stars": 2338,
+   "active_top_repos": 5,
+   "top_repos": [
+    {
+     "name": "kubernetes-sigs/aws-iam-authenticator",
+     "url": "https://github.com/kubernetes-sigs/aws-iam-authenticator",
+     "stars": 2338,
+     "days_since_push": 30
+    },
+    {
+     "name": "otterize/intents-operator",
+     "url": "https://github.com/otterize/intents-operator",
+     "stars": 313,
+     "days_since_push": 529
+    },
+    {
+     "name": "joshuamkite/terraform-aws-ssh-bastion-service",
+     "url": "https://github.com/joshuamkite/terraform-aws-ssh-bastion-service",
+     "stars": 212,
+     "days_since_push": 794
+    },
+    {
+     "name": "cloudposse/terraform-aws-ec2-bastion-server",
+     "url": "https://github.com/cloudposse/terraform-aws-ec2-bastion-server",
+     "stars": 172,
+     "days_since_push": 325
+    },
+    {
+     "name": "aripalo/aws-cdk-github-oidc",
+     "url": "https://github.com/aripalo/aws-cdk-github-oidc",
+     "stars": 128,
+     "days_since_push": 60
+    },
+    {
+     "name": "haines/pg-aws_rds_iam",
+     "url": "https://github.com/haines/pg-aws_rds_iam",
+     "stars": 77,
+     "days_since_push": 6
+    },
+    {
+     "name": "gjbae1212/grpc-vpn",
+     "url": "https://github.com/gjbae1212/grpc-vpn",
+     "stars": 62,
+     "days_since_push": 2360
+    },
+    {
+     "name": "BabyJ723/blast-ON",
+     "url": "https://github.com/BabyJ723/blast-ON",
+     "stars": 55,
+     "days_since_push": 1905
+    },
+    {
+     "name": "61418/boto3-refresh-session",
+     "url": "https://github.com/61418/boto3-refresh-session",
+     "stars": 53,
+     "days_since_push": 5
+    },
+    {
+     "name": "glassechidna/lastkeypair",
+     "url": "https://github.com/glassechidna/lastkeypair",
+     "stars": 52,
+     "days_since_push": 3023
+    }
+   ]
+  },
+  "threat": {
+   "relevance": 2,
+   "reason": "Short-lived IAM tokens replace static database and service passwords, shrinking the window for stolen-credential reuse.",
+   "techniques": [
+    {
+     "id": "T1550.001",
+     "name": "Application Access Token",
+     "url": "https://attack.mitre.org/techniques/T1550/001"
+    }
+   ],
+   "nvd_cves": 6
+  },
+  "evidence": [
+   {
+    "title": "Support for IAM Roles (Instance Profile/IRSA) for Authentication",
+    "url": "https://github.com/opensearch-project/logstash-output-opensearch/issues/96",
+    "source": "github",
+    "engagement": 70,
+    "segment": "cloud-security",
+    "created_at": "2021-11-26T14:58:07Z"
+   },
+   {
+    "title": "Support IAM Authentication to AWS RDS",
+    "url": "https://github.com/prisma/orm/issues/6587",
+    "source": "github",
+    "engagement": 69,
+    "segment": "cloud-security",
+    "created_at": "2021-04-15T04:57:58Z"
+   },
+   {
+    "title": "SASL: Support AWS_MSK_IAM mechanism",
+    "url": "https://github.com/segmentio/kafka-go/issues/661",
+    "source": "github",
+    "engagement": 31,
+    "segment": "cloud-security",
+    "created_at": "2021-05-11T15:08:44Z"
+   },
+   {
+    "title": "Support scoped-API token based authentication with Cloudflare",
+    "url": "https://github.com/cert-manager/cert-manager/issues/2036",
+    "source": "github",
+    "engagement": 28,
+    "segment": "cloud-security",
+    "created_at": "2019-09-05T05:05:11Z"
+   },
+   {
+    "title": "Support use of cleartext auth plugin",
+    "url": "https://github.com/HeidiSQL/HeidiSQL/issues/296",
+    "source": "github",
+    "engagement": 25,
+    "segment": "cloud-security",
+    "created_at": "2018-07-02T21:50:19Z"
+   },
+   {
+    "title": "Redshift Serverless IAM Auth Support",
+    "url": "https://github.com/aws/aws-toolkit-jetbrains/issues/3498",
+    "source": "github",
+    "engagement": 20,
+    "segment": "cloud-security",
+    "created_at": "2023-03-02T14:05:08Z"
+   },
+   {
+    "title": "Support IAM Authentication from ArgoCD clients",
+    "url": "https://github.com/argoproj/argo-cd/issues/481",
+    "source": "github",
+    "engagement": 19,
+    "segment": "cloud-security",
+    "created_at": "2018-07-31T07:22:36Z"
+   },
+   {
+    "title": "Invoke API Gateway with IAM Auth request signing",
+    "url": "https://github.com/aws/aws-tools-for-powershell/issues/180",
+    "source": "github",
+    "engagement": 19,
+    "segment": "cloud-security",
+    "created_at": "2020-10-29T20:57:23Z"
+   },
+   {
+    "title": "RFC: API Gateway IAM (AWS_IAM) Authorizers",
+    "url": "https://github.com/aws/serverless-application-model/issues/781",
+    "source": "github",
+    "engagement": 17,
+    "segment": "cloud-security",
+    "created_at": "2019-01-23T22:13:49Z"
+   },
+   {
+    "title": "Unable to generate API key when using External IdP (Azure AD)",
+    "url": "https://github.com/kirodotdev/Kiro/issues/8414",
+    "source": "github",
+    "engagement": 7,
+    "segment": "identity-access",
+    "created_at": "2026-05-12T09:16:31Z"
+   },
+   {
+    "title": "Generic OIDC sign-in for existing accounts (Auth0, Okta, Entra ID, Keycloak)",
+    "url": "https://github.com/openclaw/openclaw-enterprise/issues/729",
+    "source": "github",
+    "engagement": 4,
+    "segment": "identity-access",
+    "created_at": "2026-09-30T14:28:25Z"
+   },
+   {
+    "title": "Support for formatting security-hub Custom Action (manually triggered) type findings/events/alerts",
+    "url": "https://github.com/terraform-aws-modules/terraform-aws-notify-slack/issues/269",
+    "source": "github",
+    "engagement": 3,
+    "segment": "cloud-security",
+    "created_at": "2026-02-22T20:11:01Z"
+   },
+   {
+    "title": "AWS IAM Access Issue",
+    "url": "https://security.stackexchange.com/questions/260028/aws-iam-access-issue",
+    "source": "stackexchange",
+    "engagement": 1,
+    "segment": "cloud-security",
+    "created_at": "2022-03-02T06:38:26+00:00"
+   },
+   {
+    "title": "Search for actions for IAM policies",
+    "url": "https://github.com/wallix/awless/issues/190",
+    "source": "github",
+    "engagement": 1,
+    "segment": "cloud-security",
+    "created_at": "2018-02-03T18:21:28Z"
+   },
+   {
+    "title": "Azure : add support for Bleu Sovereign Cloud",
+    "url": "https://github.com/prowler-cloud/prowler/issues/13248",
+    "source": "github",
+    "engagement": 0,
+    "segment": "cloud-security",
+    "created_at": "2026-11-03T11:49:53Z"
+   }
+  ],
+  "scores": {
+   "demand": 0.629,
+   "supply_gap": 0.314,
+   "threat": 0.429
+  },
+  "gap_score": 0.469
+ },
+ {
+  "theme_id": 14,
+  "name": "Dependency context for vulnerability impact",
+  "need": "Teams analyzing SBOMs and advisories struggle to tell how a vulnerability affects their product because reports lack dependency hierarchy, parent component, container and vendor advisory context.",
+  "search_query": "vulnerability impact analysis",
+  "keywords": [
+   "dependency",
+   "dependency track",
+   "track",
+   "reports",
+   "impact",
+   "component",
+   "current",
+   "advisory",
+   "dependencies",
+   "vulnerabilities"
+  ],
+  "stability": 0.73,
+  "demand": {
+   "need_signals": 6,
+   "engagement": 83,
+   "recent_share": 0.0,
+   "segments": [
+    "appsec-supply-chain"
+   ]
+  },
+  "supply": {
+   "total_repos": 295,
+   "top_stars": 65,
+   "active_top_repos": 5,
+   "top_repos": [
+    {
+     "name": "alexdevassy/AI-Powered-Vulnerability-Impact-Analyzer",
+     "url": "https://github.com/alexdevassy/AI-Powered-Vulnerability-Impact-Analyzer",
+     "stars": 65,
+     "days_since_push": 638
+    },
+    {
+     "name": "pchukwuemeka424/Machine-Learning-and-Morphometric-Analysis-for-Runoff-Dynamics-Enhancing-Flood",
+     "url": "https://github.com/pchukwuemeka424/Machine-Learning-and-Morphometric-Analysis-for-Runoff-Dynamics-Enhancing-Flood",
+     "stars": 54,
+     "days_since_push": 253
+    },
+    {
+     "name": "Mario-Kart-Felix/solar-wind-hacker-book",
+     "url": "https://github.com/Mario-Kart-Felix/solar-wind-hacker-book",
+     "stars": 24,
+     "days_since_push": 1702
+    },
+    {
+     "name": "vulnlog/vulnlog",
+     "url": "https://github.com/vulnlog/vulnlog",
+     "stars": 22,
+     "days_since_push": 1
+    },
+    {
+     "name": "Nate0634034090/nate158g-m-w-n-l-p-d-a-o-e",
+     "url": "https://github.com/Nate0634034090/nate158g-m-w-n-l-p-d-a-o-e",
+     "stars": 17,
+     "days_since_push": 1785
+    },
+    {
+     "name": "vfceball/RC-FIAP",
+     "url": "https://github.com/vfceball/RC-FIAP",
+     "stars": 16,
+     "days_since_push": 1186
+    },
+    {
+     "name": "AnamolZ/Exploitation",
+     "url": "https://github.com/AnamolZ/Exploitation",
+     "stars": 10,
+     "days_since_push": 1102
+    },
+    {
+     "name": "Cashcoin123/Cashcoin123",
+     "url": "https://github.com/Cashcoin123/Cashcoin123",
+     "stars": 7,
+     "days_since_push": 48
+    },
+    {
+     "name": "thapawan/Flood-Dynamics-Social-Vulnerability-and-the-Floodplain",
+     "url": "https://github.com/thapawan/Flood-Dynamics-Social-Vulnerability-and-the-Floodplain",
+     "stars": 4,
+     "days_since_push": 252
+    },
+    {
+     "name": "Vain-Guy/Impact-Of-Foreign-Cutoff-on-Kenya",
+     "url": "https://github.com/Vain-Guy/Impact-Of-Foreign-Cutoff-on-Kenya",
+     "stars": 4,
+     "days_since_push": 356
+    }
+   ]
+  },
+  "threat": {
+   "relevance": 2,
+   "reason": "Dependency context speeds triage of vulnerable or compromised components, an indirect exposure reduction.",
+   "techniques": [
+    {
+     "id": "T1195.001",
+     "name": "Compromise Software Dependencies and Development Tools",
+     "url": "https://attack.mitre.org/techniques/T1195/001"
+    }
+   ],
+   "nvd_cves": 28
+  },
+  "evidence": [
+   {
+    "title": "Add support for advisories defined in CSAF",
+    "url": "https://github.com/DependencyTrack/dependency-track/issues/2353",
+    "source": "github",
+    "engagement": 43,
+    "segment": "appsec-supply-chain",
+    "created_at": "2023-01-06T21:45:23Z"
+   },
+   {
+    "title": "Feature: documenting external/extraneous dependencies",
+    "url": "https://github.com/CycloneDX/specification/issues/321",
+    "source": "github",
+    "engagement": 24,
+    "segment": "appsec-supply-chain",
+    "created_at": "2023-10-13T17:28:01Z"
+   },
+   {
+    "title": "Native Image --enable-sbom option generates SBOM with dependency references and hierarchy",
+    "url": "https://github.com/oracle/graal/issues/7729",
+    "source": "github",
+    "engagement": 7,
+    "segment": "appsec-supply-chain",
+    "created_at": "2023-11-04T11:31:10Z"
+   },
+   {
+    "title": "Wishlist / inquiry: \"advisory impact\" standard.",
+    "url": "https://github.com/rustsec/rustsec/issues/505",
+    "source": "github",
+    "engagement": 6,
+    "segment": "appsec-supply-chain",
+    "created_at": "2022-01-29T21:11:46Z"
+   },
+   {
+    "title": "Display which parent dependency the current dependency is part of in Dependency-Track",
+    "url": "https://github.com/ICTU/quality-time/issues/8687",
+    "source": "github",
+    "engagement": 2,
+    "segment": "appsec-supply-chain",
+    "created_at": "2024-05-15T18:24:35Z"
+   },
+   {
+    "title": "Trivy Operator Sbom Reports on Dependency track visualisation based on Container",
+    "url": "https://github.com/takumakume/sbomreport-to-dependencytrack/issues/11",
+    "source": "github",
+    "engagement": 1,
+    "segment": "appsec-supply-chain",
+    "created_at": "2024-03-14T13:22:22Z"
+   }
+  ],
+  "scores": {
+   "demand": 0.036,
+   "supply_gap": 0.686,
+   "threat": 0.429
+  },
+  "gap_score": 0.361
+ },
+ {
+  "theme_id": 11,
+  "name": "CycloneDX SBOM output and attestation",
+  "need": "Supply-chain teams want tools to emit and accept CycloneDX SBOMs (and VEX) and tie them to releases through attestations.",
+  "search_query": "cyclonedx sbom",
+  "keywords": [
+   "cyclonedx",
+   "spdx",
+   "sbom",
+   "bom",
+   "vex",
+   "v1",
+   "add support",
+   "cyclonedx sbom",
+   "org",
+   "sboms"
+  ],
+  "stability": 1.0,
+  "demand": {
+   "need_signals": 6,
+   "engagement": 114,
+   "recent_share": 0.5,
+   "segments": [
+    "appsec-supply-chain"
+   ]
+  },
+  "supply": {
+   "total_repos": 1005,
+   "top_stars": 9950,
+   "active_top_repos": 10,
+   "top_repos": [
+    {
+     "name": "anchore/syft",
+     "url": "https://github.com/anchore/syft",
+     "stars": 9950,
+     "days_since_push": 2
+    },
+    {
+     "name": "DependencyTrack/dependency-track",
+     "url": "https://github.com/DependencyTrack/dependency-track",
+     "stars": 4499,
+     "days_since_push": 1
+    },
+    {
+     "name": "aboutcode-org/scancode-toolkit",
+     "url": "https://github.com/aboutcode-org/scancode-toolkit",
+     "stars": 2678,
+     "days_since_push": 2
+    },
+    {
+     "name": "oss-review-toolkit/ort",
+     "url": "https://github.com/oss-review-toolkit/ort",
+     "stars": 2126,
+     "days_since_push": 0
+    },
+    {
+     "name": "guacsec/guac",
+     "url": "https://github.com/guacsec/guac",
+     "stars": 1581,
+     "days_since_push": 5
+    },
+    {
+     "name": "owasp-dep-scan/dep-scan",
+     "url": "https://github.com/owasp-dep-scan/dep-scan",
+     "stars": 1464,
+     "days_since_push": 0
+    },
+    {
+     "name": "XmirrorSecurity/OpenSCA-cli",
+     "url": "https://github.com/XmirrorSecurity/OpenSCA-cli",
+     "stars": 1138,
+     "days_since_push": 191
+    },
+    {
+     "name": "package-url/purl-spec",
+     "url": "https://github.com/package-url/purl-spec",
+     "stars": 1136,
+     "days_since_push": 1
+    },
+    {
+     "name": "cdxgen/cdxgen",
+     "url": "https://github.com/cdxgen/cdxgen",
+     "stars": 1129,
+     "days_since_push": 2
+    },
+    {
+     "name": "ARPSyndicate/puncia",
+     "url": "https://github.com/ARPSyndicate/puncia",
+     "stars": 666,
+     "days_since_push": 29
+    }
+   ]
+  },
+  "threat": {
+   "relevance": 1,
+   "reason": "SBOM format support and attestations are mostly compliance and interoperability; candidates are unrelated.",
+   "techniques": [],
+   "nvd_cves": 2
+  },
+  "evidence": [
+   {
+    "title": "Provide CycloneDX SBOM as an alternative to SPDX SBOM",
+    "url": "https://github.com/goharbor/harbor/issues/21444",
+    "source": "github",
+    "engagement": 31,
+    "segment": "appsec-supply-chain",
+    "created_at": "2025-01-21T09:40:50Z"
+   },
+   {
+    "title": "Add support for Cyclonedx as a predicate type",
+    "url": "https://github.com/in-toto/attestation/issues/82",
+    "source": "github",
+    "engagement": 27,
+    "segment": "appsec-supply-chain",
+    "created_at": "2022-01-31T11:55:25Z"
+   },
+   {
+    "title": "support generating an additional SBOM file based on CycloneDX format",
+    "url": "https://github.com/goreleaser/goreleaser/issues/2808",
+    "source": "github",
+    "engagement": 25,
+    "segment": "appsec-supply-chain",
+    "created_at": "2022-01-05T18:01:41Z"
+   },
+   {
+    "title": "Give the possibility to atomically upload a SBOM with related VEX",
+    "url": "https://github.com/DependencyTrack/dependency-track/issues/1872",
+    "source": "github",
+    "engagement": 24,
+    "segment": "appsec-supply-chain",
+    "created_at": "2022-08-08T14:14:20Z"
+   },
+   {
+    "title": "Add support for CycloneDX v1.7 schema",
+    "url": "https://github.com/CycloneDX/cyclonedx-gradle-plugin/issues/832",
+    "source": "github",
+    "engagement": 7,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-04-20T16:37:17Z"
+   },
+   {
+    "title": "feat(loxel): attest release DMGs, update zips and the SBOM with GitHub artifact attestations",
+    "url": "https://github.com/bizimind/loxel/issues/1360",
+    "source": "github",
+    "engagement": 0,
+    "segment": "appsec-supply-chain",
+    "created_at": "2026-11-16T21:54:45Z"
+   }
+  ],
+  "scores": {
+   "demand": 0.307,
+   "supply_gap": 0.021,
+   "threat": 0.0
+  },
+  "gap_score": 0.13
+ }
+]

@@ -1,0 +1,658 @@
+[
+ {
+  "theme_id": 0,
+  "name": "SBOM generation across build ecosystems",
+  "need": "Maintainers and compliance-driven teams struggle to generate, sign, assemble and publish accurate SBOMs from their package managers and container builds to meet regulatory guidance.",
+  "candidates": [
+   {
+    "id": "T1543.005",
+    "name": "Container Service",
+    "description": "Container Service. Adversaries may create or modify container or container cluster management tools that run as daemons, agents, or services on individual hosts. These include software for creating and managing individual containers, such as Docker and Podman, as well as container cluster node-level"
+   },
+   {
+    "id": "T1609",
+    "name": "Container Administration Command",
+    "description": "Container Administration Command. Adversaries may abuse a container administration service to execute commands within a container. A container administration service such as the Docker daemon, the Kubernetes API server, or the kubelet may allow remote management of containers within an environment.\n"
+   },
+   {
+    "id": "T1195.001",
+    "name": "Compromise Software Dependencies and Development Tools",
+    "description": "Compromise Software Dependencies and Development Tools. Adversaries may manipulate software dependencies and development tools prior to receipt by a final consumer for the purpose of data or system compromise. Applications often depend on external software to function properly. Popular open source p"
+   },
+   {
+    "id": "T1072",
+    "name": "Software Deployment Tools",
+    "description": "Software Deployment Tools. Adversaries may gain access to and use centralized software suites installed within an enterprise to execute commands and move laterally through the network. Configuration management and software deployment applications may be used in an enterprise network or cloud environ"
+   },
+   {
+    "id": "T1059.013",
+    "name": "Container CLI/API",
+    "description": "Container CLI/API. Adversaries may abuse built-in CLI tools or API calls to execute malicious commands in containerized environments.\n\nThe Docker CLI is used for managing containers via an exposed API point from the `dockerd` daemon. Some common examples of Docker CLI include Docker Desktop CLI and "
+   },
+   {
+    "id": "T1071.005",
+    "name": "Publish/Subscribe Protocols",
+    "description": "Publish/Subscribe Protocols. Adversaries may communicate using publish/subscribe (pub/sub) application layer protocols to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protoc"
+   },
+   {
+    "id": "T1205",
+    "name": "Traffic Signaling",
+    "description": "Traffic Signaling. Adversaries may use traffic signaling to hide open ports or other malicious functionality used for persistence or command and control. Traffic signaling involves the use of a magic value or sequence that must be sent to a system to trigger a special response, such as opening a clo"
+   },
+   {
+    "id": "T1480.001",
+    "name": "Environmental Keying",
+    "description": "Environmental Keying. Adversaries may environmentally key payloads or other features of malware to evade defenses and constraint execution to a specific target environment. Environmental keying uses cryptography to constrain execution or actions based on adversary supplied environment specific condi"
+   },
+   {
+    "id": "T1602.001",
+    "name": "SNMP (MIB Dump)",
+    "description": "SNMP (MIB Dump). Adversaries may target the Management Information Base (MIB) to collect and/or mine valuable information in a network managed using Simple Network Management Protocol (SNMP).\n\nThe MIB is a configuration repository that stores variable information accessible via SNMP in the form of o"
+   },
+   {
+    "id": "T1518",
+    "name": "Software Discovery",
+    "description": "Software Discovery. Adversaries may attempt to get a listing of software and software versions that are installed on a system or in a cloud environment. Adversaries may use the information from [Software Discovery](https://attack.mitre.org/techniques/T1518) during automated discovery to shape follow"
+   },
+   {
+    "id": "T1613",
+    "name": "Container and Resource Discovery",
+    "description": "Container and Resource Discovery. Adversaries may attempt to discover containers and other resources that are available within a containers environment. Other resources may include images, deployments, pods, nodes, and other information such as the status of a cluster.\n\nThese resources can be viewed"
+   },
+   {
+    "id": "T1677",
+    "name": "Poisoned Pipeline Execution",
+    "description": "Poisoned Pipeline Execution. Adversaries may manipulate continuous integration / continuous development (CI/CD) processes by injecting malicious code into the build process. There are several mechanisms for poisoning pipelines: \n\n* In a <b>Direct Pipeline Execution</b> scenario, the threat actor dir"
+   },
+   {
+    "id": "T1195.002",
+    "name": "Compromise Software Supply Chain",
+    "description": "Compromise Software Supply Chain. Adversaries may manipulate application software prior to receipt by a final consumer for the purpose of data or system compromise. Supply chain compromise of software can take place in a number of ways, including manipulation of the application source code, manipula"
+   },
+   {
+    "id": "T1683",
+    "name": "Generate Content",
+    "description": "Generate Content. Adversaries may create or generate content to support targeting and operations. This content may be used to establish personas, impersonate known individuals or organizations, and support [Social Engineering](https://attack.mitre.org/techniques/T1684), fraud, or influence activitie"
+   },
+   {
+    "id": "T1195",
+    "name": "Supply Chain Compromise",
+    "description": "Supply Chain Compromise. Adversaries may manipulate products or product delivery mechanisms prior to receipt by a final consumer for the purpose of data or system compromise.\n\nSupply chain compromise can take place at any stage of the supply chain including:\n\n* Manipulation of development tools\n* Ma"
+   }
+  ]
+ },
+ {
+  "theme_id": 2,
+  "name": "Remediating vulnerable third-party dependencies",
+  "need": "Developers and security engineers struggle to detect, prioritize and quickly update vulnerable direct and transitive dependencies, including faster patching despite release-age delays.",
+  "candidates": [
+   {
+    "id": "T1195.001",
+    "name": "Compromise Software Dependencies and Development Tools",
+    "description": "Compromise Software Dependencies and Development Tools. Adversaries may manipulate software dependencies and development tools prior to receipt by a final consumer for the purpose of data or system compromise. Applications often depend on external software to function properly. Popular open source p"
+   },
+   {
+    "id": "T1687",
+    "name": "Exploitation for Defense Impairment",
+    "description": "Exploitation for Defense Impairment. Adversaries may exploit vulnerabilities in security software, infrastructure, or defensive components to degrade, disable, or otherwise continue to impair their ability to prevent, detect, or respond to malicious activity. \n \nAdversaries may exploit a system or a"
+   },
+   {
+    "id": "T1689",
+    "name": "Downgrade Attack",
+    "description": "Downgrade Attack. Adversaries may downgrade or use a version of system features that may be outdated, vulnerable, and/or does not support updated security controls. Downgrade attacks typically take advantage of a system\u2019s backward compatibility to force it into less secure modes of operation.\n\nAdver"
+   },
+   {
+    "id": "T1068",
+    "name": "Exploitation for Privilege Escalation",
+    "description": "Exploitation for Privilege Escalation. Adversaries may exploit software vulnerabilities in an attempt to elevate privileges. Exploitation of a software vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kern"
+   },
+   {
+    "id": "T1601.002",
+    "name": "Downgrade System Image",
+    "description": "Downgrade System Image. Adversaries may install an older version of the operating system of a network device to weaken security.  Older operating system versions on network devices often have weaker encryption ciphers and, in general, fewer/less updated defensive features.\n\nOn embedded devices, down"
+   },
+   {
+    "id": "T1590.003",
+    "name": "Network Trust Dependencies",
+    "description": "Network Trust Dependencies. Adversaries may gather information about the victim's network trust dependencies that can be used during targeting. Information about network trusts may include a variety of details, including second or third-party organizations/domains (ex: managed service providers, con"
+   },
+   {
+    "id": "T1588.005",
+    "name": "Exploits",
+    "description": "Exploits. Adversaries may buy, steal, or download exploits that can be used during targeting. An exploit takes advantage of a bug or vulnerability in order to cause unintended or unanticipated behavior to occur on computer hardware or software. Rather than developing their own exploits, an adversary"
+   },
+   {
+    "id": "T1588.006",
+    "name": "Vulnerabilities",
+    "description": "Vulnerabilities. Adversaries may acquire information about vulnerabilities that can be used during targeting. A vulnerability is a weakness in computer hardware or software that can, potentially, be exploited by an adversary to cause unintended or unanticipated behavior to occur. Adversaries may fin"
+   },
+   {
+    "id": "T1211",
+    "name": "Exploitation for Stealth",
+    "description": "Exploitation for Stealth. Adversaries may exploit vulnerabilities to evade detection by hiding activity, suppressing logging, or operating within trusted or unmonitored components. \n\nAdversaries may exploit a system or application vulnerability to avoid detection while maintaining access within an e"
+   },
+   {
+    "id": "T1601",
+    "name": "Modify System Image",
+    "description": "Modify System Image. Adversaries may make changes to the operating system of embedded network devices to weaken defenses and provide new capabilities for themselves.  On such devices, the operating systems are typically monolithic and most of the device functionality and capabilities are contained w"
+   },
+   {
+    "id": "T1499.004",
+    "name": "Application or System Exploitation",
+    "description": "Application or System Exploitation. Adversaries may exploit software vulnerabilities that can cause an application or system to crash and deny availability to users. Some systems may automatically restart critical applications and services when crashes occur, but they can likely be re-exploited to c"
+   },
+   {
+    "id": "T1595.002",
+    "name": "Vulnerability Scanning",
+    "description": "Vulnerability Scanning. Adversaries may scan victims for vulnerabilities that can be used during targeting. Vulnerability scans typically check if the configuration of a target host/application (ex: software and version) potentially aligns with the target of a specific exploit the adversary may seek"
+   },
+   {
+    "id": "T1176.002",
+    "name": "IDE Extensions",
+    "description": "IDE Extensions. Adversaries may abuse an integrated development environment (IDE) extension to establish persistent access to victim systems. IDEs such as Visual Studio Code, IntelliJ IDEA, and Eclipse support extensions - software components that add features like code linting, auto-completion, tas"
+   },
+   {
+    "id": "T1668",
+    "name": "Exclusive Control",
+    "description": "Exclusive Control. Adversaries who successfully compromise a system may attempt to maintain persistence by \u201cclosing the door\u201d behind them  \u2013 in other words, by preventing other threat actors from initially accessing or maintaining a foothold on the same system. \n\nFor example, adversaries may patch a"
+   },
+   {
+    "id": "T1546.011",
+    "name": "Application Shimming",
+    "description": "Application Shimming. Adversaries may establish persistence and/or elevate privileges by executing malicious content triggered by application shims. The Microsoft Windows Application Compatibility Infrastructure/Framework (Application Shim) was created to allow for backward compatibility of software"
+   }
+  ]
+ },
+ {
+  "theme_id": 3,
+  "name": "SCIM user provisioning for applications",
+  "need": "Admins of SaaS and self-hosted apps struggle with manual user provisioning and deprovisioning because products lack SCIM support for IdPs like Okta and Azure AD.",
+  "candidates": [
+   {
+    "id": "T1072",
+    "name": "Software Deployment Tools",
+    "description": "Software Deployment Tools. Adversaries may gain access to and use centralized software suites installed within an enterprise to execute commands and move laterally through the network. Configuration management and software deployment applications may be used in an enterprise network or cloud environ"
+   },
+   {
+    "id": "T1087.004",
+    "name": "Cloud Account",
+    "description": "Cloud Account. Adversaries may attempt to get a listing of cloud accounts. Cloud accounts are those created and configured by an organization for use by users, remote support, services, or for administration of resources within a cloud service provider or SaaS application.\n\nWith authenticated access"
+   },
+   {
+    "id": "T1671",
+    "name": "Cloud Application Integration",
+    "description": "Cloud Application Integration. Adversaries may achieve persistence by leveraging OAuth application integrations in a software-as-a-service environment. Adversaries may create a custom application, add a legitimate application into the environment, or even co-opt an existing integration to achieve ma"
+   },
+   {
+    "id": "T1505",
+    "name": "Server Software Component",
+    "description": "Server Software Component. Adversaries may abuse legitimate extensible development features of servers to establish persistent access to systems. Enterprise server applications may include features that allow developers to write and install software or scripts to extend the functionality of the main"
+   },
+   {
+    "id": "T1127.002",
+    "name": "ClickOnce",
+    "description": "ClickOnce. Adversaries may use ClickOnce applications (.appref-ms and .application files) to proxy execution of code through a trusted Windows utility. ClickOnce is a deployment that enables a user to create self-updating Windows-based .NET applications (i.e., .XBAP, .EXE, or .DLL) that install and "
+   },
+   {
+    "id": "T1530",
+    "name": "Data from Cloud Storage",
+    "description": "Data from Cloud Storage. Adversaries may access data from cloud storage.\n\nMany IaaS providers offer solutions for online data object storage such as Amazon S3, Azure Storage, and Google Cloud Storage. Similarly, SaaS enterprise platforms such as Office 365 and Google Workspace provide cloud-based do"
+   },
+   {
+    "id": "T1651",
+    "name": "Cloud Administration Command",
+    "description": "Cloud Administration Command. Adversaries may abuse cloud management services to execute commands within virtual machines. Resources such as AWS Systems Manager, Azure RunCommand, and Runbooks allow users to remotely run scripts in virtual machines by leveraging installed virtual machine agents.\n\nIf"
+   },
+   {
+    "id": "T1021.007",
+    "name": "Cloud Services",
+    "description": "Cloud Services. Adversaries may log into accessible cloud services within a compromised environment using [Valid Accounts](https://attack.mitre.org/techniques/T1078) that are synchronized with or federated to on-premises user identities. The adversary may then perform management actions or access cl"
+   },
+   {
+    "id": "T1003.006",
+    "name": "DCSync",
+    "description": "DCSync. Adversaries may attempt to access credentials and other sensitive information by abusing a Windows Domain Controller's application programming interface (API) to simulate the replication process from a remote domain controller using a technique called DCSync.\n\nMembers of the Administrators, "
+   },
+   {
+    "id": "T1216.002",
+    "name": "SyncAppvPublishingServer",
+    "description": "SyncAppvPublishingServer. Adversaries may abuse SyncAppvPublishingServer.vbs to proxy execution of malicious [PowerShell](https://attack.mitre.org/techniques/T1059/001) commands. SyncAppvPublishingServer.vbs is a Visual Basic script associated with how Windows virtualizes applications (Microsoft App"
+   },
+   {
+    "id": "T1059.009",
+    "name": "Cloud API",
+    "description": "Cloud API. Adversaries may abuse cloud APIs to execute malicious commands. APIs available in cloud environments provide various functionalities and are a feature-rich method for programmatic access to nearly all aspects of a tenant. These APIs may be utilized through various methods such as command "
+   },
+   {
+    "id": "T1190",
+    "name": "Exploit Public-Facing Application",
+    "description": "Exploit Public-Facing Application. Adversaries may attempt to exploit a weakness in an Internet-facing host or system to initially access a network. The weakness in the system can be a software bug, a temporary glitch, or a misconfiguration.\n\nExploited applications are often websites/web servers, bu"
+   },
+   {
+    "id": "T1098.003",
+    "name": "Additional Cloud Roles",
+    "description": "Additional Cloud Roles. An adversary may add additional roles or permissions to an adversary-controlled cloud account to maintain persistent access to a tenant. For example, adversaries may update IAM policies in cloud-based environments or add a new global administrator in Office 365 environments. "
+   },
+   {
+    "id": "T1526",
+    "name": "Cloud Service Discovery",
+    "description": "Cloud Service Discovery. An adversary may attempt to enumerate the cloud services running on a system after gaining access. These methods can differ from platform-as-a-service (PaaS), to infrastructure-as-a-service (IaaS), or software-as-a-service (SaaS). Many services exist throughout the various c"
+   },
+   {
+    "id": "T1098.001",
+    "name": "Additional Cloud Credentials",
+    "description": "Additional Cloud Credentials. Adversaries may add adversary-controlled credentials to a cloud account to maintain persistent access to victim accounts and instances within the environment.\n\nFor example, adversaries may add credentials for Service Principals and Applications in addition to existing l"
+   }
+  ]
+ },
+ {
+  "theme_id": 7,
+  "name": "IAM-based authentication in AWS service clients",
+  "need": "Cloud teams moving off static passwords and keys find their clients and tools can't authenticate to RDS, MSK, Redshift, API Gateway or ArgoCD with short-lived AWS IAM credentials.",
+  "candidates": [
+   {
+    "id": "T1021.008",
+    "name": "Direct Cloud VM Connections",
+    "description": "Direct Cloud VM Connections. Adversaries may leverage [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log directly into accessible cloud hosted compute infrastructure through cloud native methods. Many cloud providers offer interactive connections to virtual infrastructure that can be"
+   },
+   {
+    "id": "T1580",
+    "name": "Cloud Infrastructure Discovery",
+    "description": "Cloud Infrastructure Discovery. An adversary may attempt to discover infrastructure and resources that are available within an infrastructure-as-a-service (IaaS) environment. This includes compute service resources such as instances, virtual machines, and snapshots as well as resources of other serv"
+   },
+   {
+    "id": "T1098.001",
+    "name": "Additional Cloud Credentials",
+    "description": "Additional Cloud Credentials. Adversaries may add adversary-controlled credentials to a cloud account to maintain persistent access to victim accounts and instances within the environment.\n\nFor example, adversaries may add credentials for Service Principals and Applications in addition to existing l"
+   },
+   {
+    "id": "T1526",
+    "name": "Cloud Service Discovery",
+    "description": "Cloud Service Discovery. An adversary may attempt to enumerate the cloud services running on a system after gaining access. These methods can differ from platform-as-a-service (PaaS), to infrastructure-as-a-service (IaaS), or software-as-a-service (SaaS). Many services exist throughout the various c"
+   },
+   {
+    "id": "T1021.007",
+    "name": "Cloud Services",
+    "description": "Cloud Services. Adversaries may log into accessible cloud services within a compromised environment using [Valid Accounts](https://attack.mitre.org/techniques/T1078) that are synchronized with or federated to on-premises user identities. The adversary may then perform management actions or access cl"
+   },
+   {
+    "id": "T1550.001",
+    "name": "Application Access Token",
+    "description": "Application Access Token. Adversaries may use stolen application access tokens to bypass the typical authentication process and access restricted accounts, information, or services on remote systems. These tokens are typically stolen from users or services and used in lieu of login credentials.\n\nApp"
+   },
+   {
+    "id": "T1552.005",
+    "name": "Cloud Instance Metadata API",
+    "description": "Cloud Instance Metadata API. Adversaries may attempt to access the Cloud Instance Metadata API to collect credentials and other sensitive data.\n\nMost cloud service providers support a Cloud Instance Metadata API which is a service provided to running virtual instances that allows applications to acc"
+   },
+   {
+    "id": "T1087.004",
+    "name": "Cloud Account",
+    "description": "Cloud Account. Adversaries may attempt to get a listing of cloud accounts. Cloud accounts are those created and configured by an organization for use by users, remote support, services, or for administration of resources within a cloud service provider or SaaS application.\n\nWith authenticated access"
+   },
+   {
+    "id": "T1528",
+    "name": "Steal Application Access Token",
+    "description": "Steal Application Access Token. Adversaries can steal application access tokens as a means of acquiring credentials to access remote systems and resources.\n\nApplication access tokens are used to make authorized API requests on behalf of a user or service and are commonly used as a way to access reso"
+   },
+   {
+    "id": "T1550.004",
+    "name": "Web Session Cookie",
+    "description": "Web Session Cookie. Adversaries can use stolen session cookies to authenticate to web applications and services. This technique bypasses some multi-factor authentication protocols since the session is already authenticated.\n\nAuthentication cookies are commonly used in web applications, including clo"
+   },
+   {
+    "id": "T1606",
+    "name": "Forge Web Credentials",
+    "description": "Forge Web Credentials. Adversaries may forge credential materials that can be used to gain access to web applications or Internet services. Web applications and services (hosted in cloud SaaS environments or on-premise servers) often use session cookies, tokens, or other materials to authenticate an"
+   },
+   {
+    "id": "T1585.003",
+    "name": "Cloud Accounts",
+    "description": "Cloud Accounts. Adversaries may create accounts with cloud providers that can be used during targeting. Adversaries can use cloud accounts to further their operations, including leveraging cloud storage services such as Dropbox, MEGA, Microsoft OneDrive, or AWS S3 buckets for [Exfiltration to Cloud "
+   },
+   {
+    "id": "T1098.004",
+    "name": "SSH Authorized Keys",
+    "description": "SSH Authorized Keys. Adversaries may modify the SSH <code>authorized_keys</code> file to maintain persistence on a victim host. Linux distributions, macOS, and ESXi hypervisors commonly use key-based authentication to secure the authentication process of SSH sessions for remote management. The <code"
+   },
+   {
+    "id": "T1496.004",
+    "name": "Cloud Service Hijacking",
+    "description": "Cloud Service Hijacking. Adversaries may leverage compromised software-as-a-service (SaaS) applications to complete resource-intensive tasks, which may impact hosted service availability. \n\nFor example, adversaries may leverage email and messaging services, such as AWS Simple Email Service (SES), AW"
+   },
+   {
+    "id": "T1530",
+    "name": "Data from Cloud Storage",
+    "description": "Data from Cloud Storage. Adversaries may access data from cloud storage.\n\nMany IaaS providers offer solutions for online data object storage such as Amazon S3, Azure Storage, and Google Cloud Storage. Similarly, SaaS enterprise platforms such as Office 365 and Google Workspace provide cloud-based do"
+   }
+  ]
+ },
+ {
+  "theme_id": 8,
+  "name": "Managing SIEM log noise and ingestion",
+  "need": "Small security teams struggle to filter noisy logs, enrich and monitor log feeds, and turn SIEM alerts into processed actions without high cost.",
+  "candidates": [
+   {
+    "id": "T1685.001",
+    "name": "Disable or Modify Windows Event Log",
+    "description": "Disable or Modify Windows Event Log. Adversaries may disable or modify the Windows Event Log to limit data that can be leveraged for detections and audits. Windows Event Log records user and system activity such as login attempts and process creation. This data is used by security tools and analysts"
+   },
+   {
+    "id": "T1685.006",
+    "name": "Clear Linux or Mac System Logs",
+    "description": "Clear Linux or Mac System Logs. Adversaries may clear system logs to hide evidence of an intrusion. macOS and Linux both keep track of system or user-initiated actions via system logs. The majority of native system logging is stored under the `/var/log/` directory. Subfolders in this directory categ"
+   },
+   {
+    "id": "T1685.002",
+    "name": "Disable or Modify Cloud Log",
+    "description": "Disable or Modify Cloud Log. An adversary may disable or modify cloud logging capabilities and integrations to limit what data is collected on their activities and avoid detection. Cloud environments allow for collection and analysis of audit and application logs that provide insight into what activ"
+   },
+   {
+    "id": "T1685.005",
+    "name": "Clear Windows Event Logs",
+    "description": "Clear Windows Event Logs. Adversaries may clear Windows Event Logs to hide the activity of an intrusion. Windows Event Logs are a record of a computer's alerts and notifications. There are three system-defined sources of events: System, Application, and Security, with five event types: Error, Warnin"
+   },
+   {
+    "id": "T1685.004",
+    "name": "Disable or Modify Linux Audit System Log",
+    "description": "Disable or Modify Linux Audit System Log. Adversaries may disable or modify the Linux Audit system to hide malicious activity and avoid detection. Linux admins use the Linux Audit system to track security-relevant information on a system. The Linux Audit system operates at the kernel-level and maint"
+   },
+   {
+    "id": "T1564.011",
+    "name": "Ignore Process Interrupts",
+    "description": "Ignore Process Interrupts. Adversaries may evade defensive mechanisms by executing commands that hide from process interrupt signals. Many operating systems use signals to deliver messages to control process behavior. Command interpreters often include specific commands/flags that ignore errors and "
+   },
+   {
+    "id": "T1070.008",
+    "name": "Clear Mailbox Data",
+    "description": "Clear Mailbox Data. Adversaries may modify mail and mail application data to remove evidence of their activity. Email applications allow users and other programs to export and delete mailbox data via command line tools or use of APIs. Mail application data can be emails, email metadata, or logs gene"
+   },
+   {
+    "id": "T1685",
+    "name": "Disable or Modify Tools",
+    "description": "Disable or Modify Tools. Adversaries may disable, degrade, or tamper with security tools or applications (e.g., endpoint detection and response (EDR) tools, intrusion detection systems (IDS), antivirus, logging agents, sensors, etc.) to impair or reduce visibility of defensive capabilities. This may"
+   },
+   {
+    "id": "T1654",
+    "name": "Log Enumeration",
+    "description": "Log Enumeration. Adversaries may enumerate system and service logs to find useful data. These logs may highlight various types of valuable insights for an adversary, such as user authentication records ([Account Discovery](https://attack.mitre.org/techniques/T1087)), security or vulnerable software "
+   },
+   {
+    "id": "T1690",
+    "name": "Prevent Command History Logging",
+    "description": "Prevent Command History Logging. Adversaries may impair command history logging to hide commands they run on a compromised system. Various command interpreters keep track of the commands users type in their terminal so that users can retrace what they have done.\n\nOn Linux and macOS, command history "
+   },
+   {
+    "id": "T1681",
+    "name": "Search Threat Vendor Data",
+    "description": "Search Threat Vendor Data. Threat actors may seek information/indicators from closed or open threat intelligence sources gathered about their own campaigns, as well as those conducted by other adversaries that may align with their target industries, capabilities/objectives, or other operational conc"
+   },
+   {
+    "id": "T1056.003",
+    "name": "Web Portal Capture",
+    "description": "Web Portal Capture. Adversaries may install code on externally facing portals, such as a VPN login page, to capture and transmit credentials of users who attempt to log into the service. For example, a compromised login page may log provided user credentials before logging the user in to the service"
+   },
+   {
+    "id": "T1070.003",
+    "name": "Clear Command History",
+    "description": "Clear Command History. In addition to clearing system logs, an adversary may clear the command history of a compromised account to conceal the actions undertaken during an intrusion. Various command interpreters keep track of the commands users type in their terminal so that users can retrace what t"
+   },
+   {
+    "id": "T1027.005",
+    "name": "Indicator Removal from Tools",
+    "description": "Indicator Removal from Tools. Adversaries may remove indicators from tools if they believe their malicious tool was detected, quarantined, or otherwise curtailed. They can modify the tool by removing the indicator and using the updated version that is no longer detected by the target's defensive sys"
+   },
+   {
+    "id": "T1592.002",
+    "name": "Software",
+    "description": "Software. Adversaries may gather information about the victim's host software that can be used during targeting. Information about installed software may include a variety of details such as types and versions on specific hosts, as well as the presence of additional components that might be indicati"
+   }
+  ]
+ },
+ {
+  "theme_id": 10,
+  "name": "AWS role credentials for workloads",
+  "need": "Engineers running workloads in EKS, Lambda or outside AWS struggle to get tools to use role-based, short-lived credentials via the default chain instead of static or expiring keys.",
+  "candidates": [
+   {
+    "id": "T1021.008",
+    "name": "Direct Cloud VM Connections",
+    "description": "Direct Cloud VM Connections. Adversaries may leverage [Valid Accounts](https://attack.mitre.org/techniques/T1078) to log directly into accessible cloud hosted compute infrastructure through cloud native methods. Many cloud providers offer interactive connections to virtual infrastructure that can be"
+   },
+   {
+    "id": "T1098.004",
+    "name": "SSH Authorized Keys",
+    "description": "SSH Authorized Keys. Adversaries may modify the SSH <code>authorized_keys</code> file to maintain persistence on a victim host. Linux distributions, macOS, and ESXi hypervisors commonly use key-based authentication to secure the authentication process of SSH sessions for remote management. The <code"
+   },
+   {
+    "id": "T1526",
+    "name": "Cloud Service Discovery",
+    "description": "Cloud Service Discovery. An adversary may attempt to enumerate the cloud services running on a system after gaining access. These methods can differ from platform-as-a-service (PaaS), to infrastructure-as-a-service (IaaS), or software-as-a-service (SaaS). Many services exist throughout the various c"
+   },
+   {
+    "id": "T1580",
+    "name": "Cloud Infrastructure Discovery",
+    "description": "Cloud Infrastructure Discovery. An adversary may attempt to discover infrastructure and resources that are available within an infrastructure-as-a-service (IaaS) environment. This includes compute service resources such as instances, virtual machines, and snapshots as well as resources of other serv"
+   },
+   {
+    "id": "T1583.007",
+    "name": "Serverless",
+    "description": "Serverless. Adversaries may purchase and configure serverless cloud infrastructure, such as Cloudflare Workers, AWS Lambda functions, or Google Apps Scripts, that can be used during targeting. By utilizing serverless infrastructure, adversaries can make it more difficult to attribute infrastructure "
+   },
+   {
+    "id": "T1098.001",
+    "name": "Additional Cloud Credentials",
+    "description": "Additional Cloud Credentials. Adversaries may add adversary-controlled credentials to a cloud account to maintain persistent access to victim accounts and instances within the environment.\n\nFor example, adversaries may add credentials for Service Principals and Applications in addition to existing l"
+   },
+   {
+    "id": "T1584.007",
+    "name": "Serverless",
+    "description": "Serverless. Adversaries may compromise serverless cloud infrastructure, such as Cloudflare Workers, AWS Lambda functions, or Google Apps Scripts, that can be used during targeting. By utilizing serverless infrastructure, adversaries can make it more difficult to attribute infrastructure used during "
+   },
+   {
+    "id": "T1547.001",
+    "name": "Registry Run Keys / Startup Folder",
+    "description": "Registry Run Keys / Startup Folder. Adversaries may achieve persistence by adding a program to a startup folder or referencing it with a Registry run key. Adding an entry to the \"run keys\" in the Registry or startup folder will cause the program referenced to be executed when a user logs in. These p"
+   },
+   {
+    "id": "T1072",
+    "name": "Software Deployment Tools",
+    "description": "Software Deployment Tools. Adversaries may gain access to and use centralized software suites installed within an enterprise to execute commands and move laterally through the network. Configuration management and software deployment applications may be used in an enterprise network or cloud environ"
+   },
+   {
+    "id": "T1552.004",
+    "name": "Private Keys",
+    "description": "Private Keys. Adversaries may search for private key certificate files on compromised systems for insecurely stored credentials. Private cryptographic keys and certificates are used for authentication, encryption/decryption, and digital signatures. Common key and certificate file extensions include:"
+   },
+   {
+    "id": "T1651",
+    "name": "Cloud Administration Command",
+    "description": "Cloud Administration Command. Adversaries may abuse cloud management services to execute commands within virtual machines. Resources such as AWS Systems Manager, Azure RunCommand, and Runbooks allow users to remotely run scripts in virtual machines by leveraging installed virtual machine agents.\n\nIf"
+   },
+   {
+    "id": "T1648",
+    "name": "Serverless Execution",
+    "description": "Serverless Execution. Adversaries may abuse serverless computing, integration, and automation services to execute arbitrary code in cloud environments. Many cloud providers offer a variety of serverless resources, including compute engines, application integration services, and web servers. \n\nAdvers"
+   },
+   {
+    "id": "T1552.002",
+    "name": "Credentials in Registry",
+    "description": "Credentials in Registry. Adversaries may search the Registry on compromised systems for insecurely stored credentials. The Windows Registry stores configuration information that can be used by the system or other programs. Adversaries may query the Registry looking for credentials and passwords that"
+   },
+   {
+    "id": "T1552.005",
+    "name": "Cloud Instance Metadata API",
+    "description": "Cloud Instance Metadata API. Adversaries may attempt to access the Cloud Instance Metadata API to collect credentials and other sensitive data.\n\nMost cloud service providers support a Cloud Instance Metadata API which is a service provided to running virtual instances that allows applications to acc"
+   },
+   {
+    "id": "T1136.003",
+    "name": "Cloud Account",
+    "description": "Cloud Account. Adversaries may create a cloud account to maintain access to victim systems. With a sufficient level of access, such accounts may be used to establish secondary credentialed access that does not require persistent remote access tools to be deployed on the system.\n\nIn addition to user "
+   }
+  ]
+ },
+ {
+  "theme_id": 11,
+  "name": "CycloneDX SBOM output and attestation",
+  "need": "Supply-chain teams want tools to emit and accept CycloneDX SBOMs (and VEX) and tie them to releases through attestations.",
+  "candidates": [
+   {
+    "id": "T1675",
+    "name": "ESXi Administration Command",
+    "description": "ESXi Administration Command. Adversaries may abuse ESXi administration services to execute commands on guest machines hosted within an ESXi virtual environment. Persistent background services on ESXi-hosted VMs, such as the VMware Tools Daemon Service, allow for remote management from the ESXi serve"
+   },
+   {
+    "id": "T1588.002",
+    "name": "Tool",
+    "description": "Tool. Adversaries may buy, steal, or download software tools that can be used during targeting. Tools can be open or closed source, free or commercial. A tool can be used for malicious purposes by an adversary, but (unlike malware) were not intended to be used for those purposes (ex: [PsExec](https:"
+   },
+   {
+    "id": "T1221",
+    "name": "Template Injection",
+    "description": "Template Injection. Adversaries may create or modify references in user document templates to conceal malicious code or force authentication attempts. For example, Microsoft\u2019s Office Open XML (OOXML) specification defines an XML-based format for Office documents (.docx, xlsx, .pptx) to replace older"
+   },
+   {
+    "id": "T1608.002",
+    "name": "Upload Tool",
+    "description": "Upload Tool. Adversaries may upload tools to third-party or adversary controlled infrastructure to make it accessible during targeting. Tools can be open or closed source, free or commercial. Tools can be used for malicious purposes by an adversary, but (unlike malware) were not intended to be used "
+   },
+   {
+    "id": "T1059.012",
+    "name": "Hypervisor CLI",
+    "description": "Hypervisor CLI. Adversaries may abuse hypervisor command line interpreters (CLIs) to execute malicious commands. Hypervisor CLIs typically enable a wide variety of functionality for managing both the hypervisor itself and the guest virtual machines it hosts. \n\nFor example, on ESXi systems, tools suc"
+   },
+   {
+    "id": "T1480.002",
+    "name": "Mutual Exclusion",
+    "description": "Mutual Exclusion. Adversaries may constrain execution or actions based on the presence of a mutex associated with malware. A mutex is a locking mechanism used to synchronize access to a resource. Only one thread or process can acquire a mutex at a given time.\n\nWhile local mutexes only exist within a"
+   },
+   {
+    "id": "T1505.006",
+    "name": "vSphere Installation Bundles",
+    "description": "vSphere Installation Bundles. Adversaries may abuse vSphere Installation Bundles (VIBs) to establish persistent access to ESXi hypervisors. VIBs are collections of files used for software distribution and virtual system management in VMware environments. Since ESXi uses an in-memory filesystem where"
+   },
+   {
+    "id": "T1218.007",
+    "name": "Msiexec",
+    "description": "Msiexec. Adversaries may abuse msiexec.exe to proxy execution of malicious payloads. Msiexec.exe is the command-line utility for the Windows Installer and is thus commonly associated with executing installation packages (.msi). The Msiexec.exe binary may also be digitally signed by Microsoft.\n\nAdver"
+   },
+   {
+    "id": "T1027.004",
+    "name": "Compile After Delivery",
+    "description": "Compile After Delivery. Adversaries may attempt to make payloads difficult to discover and analyze by delivering files to victims as uncompiled code. Text-based source code files may subvert analysis and scrutiny from protections targeting executables/binaries. These payloads will need to be compile"
+   },
+   {
+    "id": "T1127.001",
+    "name": "MSBuild",
+    "description": "MSBuild. Adversaries may use MSBuild to proxy execution of code through a trusted Windows utility. MSBuild.exe (Microsoft Build Engine) is a software build platform used by Visual Studio. It handles XML formatted project files that define requirements for loading and building various platforms and c"
+   },
+   {
+    "id": "T1218.014",
+    "name": "MMC",
+    "description": "MMC. Adversaries may abuse mmc.exe to proxy execution of malicious .msc files. Microsoft Management Console (MMC) is a binary that may be signed by Microsoft and is used in several ways in either its GUI or in a command prompt. MMC can be used to create, open, and save custom consoles that contain a"
+   },
+   {
+    "id": "T1673",
+    "name": "Virtual Machine Discovery",
+    "description": "Virtual Machine Discovery. An adversary may attempt to enumerate running virtual machines (VMs) after gaining access to a host or hypervisor. For example, adversaries may enumerate a list of VMs on an ESXi hypervisor using a [Hypervisor CLI](https://attack.mitre.org/techniques/T1059/012) such as `es"
+   },
+   {
+    "id": "T1090.002",
+    "name": "External Proxy",
+    "description": "External Proxy. Adversaries may use an external proxy to act as an intermediary for network communications to a command and control server to avoid direct connections to their infrastructure. Many tools exist that enable traffic redirection through proxies or port redirection, including [HTRAN](http"
+   },
+   {
+    "id": "T1090",
+    "name": "Proxy",
+    "description": "Proxy. Adversaries may use a connection proxy to direct network traffic between systems or act as an intermediary for network communications to a command and control server to avoid direct connections to their infrastructure. Many tools exist that enable traffic redirection through proxies or port r"
+   },
+   {
+    "id": "T1059.013",
+    "name": "Container CLI/API",
+    "description": "Container CLI/API. Adversaries may abuse built-in CLI tools or API calls to execute malicious commands in containerized environments.\n\nThe Docker CLI is used for managing containers via an exposed API point from the `dockerd` daemon. Some common examples of Docker CLI include Docker Desktop CLI and "
+   }
+  ]
+ },
+ {
+  "theme_id": 14,
+  "name": "Dependency context for vulnerability impact",
+  "need": "Teams analyzing SBOMs and advisories struggle to tell how a vulnerability affects their product because reports lack dependency hierarchy, parent component, container and vendor advisory context.",
+  "candidates": [
+   {
+    "id": "T1588.006",
+    "name": "Vulnerabilities",
+    "description": "Vulnerabilities. Adversaries may acquire information about vulnerabilities that can be used during targeting. A vulnerability is a weakness in computer hardware or software that can, potentially, be exploited by an adversary to cause unintended or unanticipated behavior to occur. Adversaries may fin"
+   },
+   {
+    "id": "T1687",
+    "name": "Exploitation for Defense Impairment",
+    "description": "Exploitation for Defense Impairment. Adversaries may exploit vulnerabilities in security software, infrastructure, or defensive components to degrade, disable, or otherwise continue to impair their ability to prevent, detect, or respond to malicious activity. \n \nAdversaries may exploit a system or a"
+   },
+   {
+    "id": "T1195.001",
+    "name": "Compromise Software Dependencies and Development Tools",
+    "description": "Compromise Software Dependencies and Development Tools. Adversaries may manipulate software dependencies and development tools prior to receipt by a final consumer for the purpose of data or system compromise. Applications often depend on external software to function properly. Popular open source p"
+   },
+   {
+    "id": "T1681",
+    "name": "Search Threat Vendor Data",
+    "description": "Search Threat Vendor Data. Threat actors may seek information/indicators from closed or open threat intelligence sources gathered about their own campaigns, as well as those conducted by other adversaries that may align with their target industries, capabilities/objectives, or other operational conc"
+   },
+   {
+    "id": "T1499.004",
+    "name": "Application or System Exploitation",
+    "description": "Application or System Exploitation. Adversaries may exploit software vulnerabilities that can cause an application or system to crash and deny availability to users. Some systems may automatically restart critical applications and services when crashes occur, but they can likely be re-exploited to c"
+   },
+   {
+    "id": "T1565.003",
+    "name": "Runtime Data Manipulation",
+    "description": "Runtime Data Manipulation. Adversaries may modify systems in order to manipulate the data as it is accessed and displayed to an end user, thus threatening the integrity of the data. By manipulating runtime data, adversaries may attempt to affect a business process, organizational understanding, and "
+   },
+   {
+    "id": "T1595.002",
+    "name": "Vulnerability Scanning",
+    "description": "Vulnerability Scanning. Adversaries may scan victims for vulnerabilities that can be used during targeting. Vulnerability scans typically check if the configuration of a target host/application (ex: software and version) potentially aligns with the target of a specific exploit the adversary may seek"
+   },
+   {
+    "id": "T1068",
+    "name": "Exploitation for Privilege Escalation",
+    "description": "Exploitation for Privilege Escalation. Adversaries may exploit software vulnerabilities in an attempt to elevate privileges. Exploitation of a software vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kern"
+   },
+   {
+    "id": "T1587.004",
+    "name": "Exploits",
+    "description": "Exploits. Adversaries may develop exploits that can be used during targeting. An exploit takes advantage of a bug or vulnerability in order to cause unintended or unanticipated behavior to occur on computer hardware or software. Rather than finding/modifying exploits from online or purchasing them f"
+   },
+   {
+    "id": "T1565",
+    "name": "Data Manipulation",
+    "description": "Data Manipulation. Adversaries may insert, delete, or manipulate data in order to influence external outcomes or hide activity, thus threatening the integrity of the data. By manipulating data, adversaries may attempt to affect a business process, organizational understanding, or decision making.\n\nT"
+   },
+   {
+    "id": "T1666",
+    "name": "Modify Cloud Resource Hierarchy",
+    "description": "Modify Cloud Resource Hierarchy. Adversaries may attempt to modify hierarchical structures in infrastructure-as-a-service (IaaS) environments in order to evade defenses.  \n\nIaaS environments often group resources into a hierarchy, enabling improved resource management and application of policies to "
+   },
+   {
+    "id": "T1556.009",
+    "name": "Conditional Access Policies",
+    "description": "Conditional Access Policies. Adversaries may disable or modify conditional access policies to enable persistent access to compromised accounts. Conditional access policies are additional verifications used by identity providers and identity and access management systems to determine whether a user s"
+   },
+   {
+    "id": "T1565.002",
+    "name": "Transmitted Data Manipulation",
+    "description": "Transmitted Data Manipulation. Adversaries may alter data en route to storage or other systems in order to manipulate external outcomes or hide activity, thus threatening the integrity of the data. By manipulating transmitted data, adversaries may attempt to affect a business process, organizational"
+   },
+   {
+    "id": "T1588.005",
+    "name": "Exploits",
+    "description": "Exploits. Adversaries may buy, steal, or download exploits that can be used during targeting. An exploit takes advantage of a bug or vulnerability in order to cause unintended or unanticipated behavior to occur on computer hardware or software. Rather than developing their own exploits, an adversary"
+   },
+   {
+    "id": "T1211",
+    "name": "Exploitation for Stealth",
+    "description": "Exploitation for Stealth. Adversaries may exploit vulnerabilities to evade detection by hiding activity, suppressing logging, or operating within trusted or unmonitored components. \n\nAdversaries may exploit a system or application vulnerability to avoid detection while maintaining access within an e"
+   }
+  ]
+ }
+]

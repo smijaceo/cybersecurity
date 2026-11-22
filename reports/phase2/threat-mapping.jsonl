@@ -1,0 +1,8 @@
+{"theme_id": 0, "techniques": ["T1195.001", "T1195.002"], "threat_relevance": 2, "reason": "Component inventory speeds response to compromised dependencies, but SBOM generation itself prevents nothing."}
+{"theme_id": 2, "techniques": ["T1068", "T1499.004"], "threat_relevance": 3, "reason": "Exploiting known-vulnerable third-party libraries is a common, actively exploited path; faster patching closes it directly."}
+{"theme_id": 3, "techniques": [], "threat_relevance": 2, "reason": "Prompt deprovisioning removes orphaned accounts attackers reuse; no candidate covers valid-account abuse."}
+{"theme_id": 7, "techniques": ["T1550.001"], "threat_relevance": 2, "reason": "Short-lived IAM tokens replace static database and service passwords, shrinking the window for stolen-credential reuse."}
+{"theme_id": 8, "techniques": ["T1685.002", "T1685.001"], "threat_relevance": 2, "reason": "Feed monitoring can catch disabled logging; noise reduction aids detection broadly but indirectly."}
+{"theme_id": 10, "techniques": [], "threat_relevance": 3, "reason": "Leaked static AWS keys are a top cloud breach path; role-based short-lived credentials remove them. No candidate fits."}
+{"theme_id": 11, "techniques": [], "threat_relevance": 1, "reason": "SBOM format support and attestations are mostly compliance and interoperability; candidates are unrelated."}
+{"theme_id": 14, "techniques": ["T1195.001"], "threat_relevance": 2, "reason": "Dependency context speeds triage of vulnerable or compromised components, an indirect exposure reduction."}

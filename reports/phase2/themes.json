@@ -1,0 +1,529 @@
+{
+ "generated": "2026-11-22",
+ "need_signals": 225,
+ "seeds": {
+  "main": 42,
+  "stability": [
+   7,
+   123,
+   2024
+  ]
+ },
+ "outliers": [
+  "stackexchange:security:103242",
+  "hn:35643709",
+  "github:701096694",
+  "hn:47486365",
+  "github:2196792175",
+  "github:2588619393",
+  "github:3612478518",
+  "github:3754811270",
+  "hn:38688926",
+  "github:5530886981",
+  "github:5263462514",
+  "hn:38771075",
+  "hn:47273373"
+ ],
+ "themes": [
+  {
+   "theme_id": 0,
+   "keywords": [
+    "sbom",
+    "sboms",
+    "tool",
+    "package",
+    "packages",
+    "software",
+    "information",
+    "author",
+    "https",
+    "generate"
+   ],
+   "signal_ids": [
+    "github:1022016818",
+    "github:1033434115",
+    "github:1085091070",
+    "github:1814555085",
+    "github:2074789446",
+    "github:2733236490",
+    "hn:32227594",
+    "github:1642032199",
+    "github:1879696596",
+    "github:1983446008",
+    "github:2202104313",
+    "github:4874096848",
+    "github:2349100431",
+    "github:3269581365",
+    "github:2230687682",
+    "github:1587952625",
+    "github:5080226705",
+    "github:2819536314",
+    "github:1905636285",
+    "github:2538389126",
+    "github:3155974797",
+    "github:1493143727",
+    "github:806613398",
+    "github:2913536700",
+    "github:1147183086",
+    "github:6326524583",
+    "github:2176553733",
+    "github:5280710858",
+    "github:5007430786",
+    "github:1484898098",
+    "github:5998462446"
+   ],
+   "stability": 0.74
+  },
+  {
+   "theme_id": 1,
+   "keywords": [
+    "secrets",
+    "secret",
+    "scanning",
+    "github",
+    "ci",
+    "tokens",
+    "add",
+    "git",
+    "detect",
+    "prs"
+   ],
+   "signal_ids": [
+    "github:1946759361",
+    "github:437855051",
+    "github:2101896870",
+    "github:3310052367",
+    "github:2275030660",
+    "github:458782916",
+    "github:5113184569",
+    "github:1486524744",
+    "github:1562837490",
+    "github:2900663966",
+    "github:6210921454",
+    "github:2859229141",
+    "github:5498584229",
+    "github:3634184922",
+    "github:4466092795",
+    "github:4789122101",
+    "github:6308755268",
+    "github:4466092630",
+    "github:1030340108",
+    "github:5814271507",
+    "github:5041743247",
+    "github:3932365096"
+   ],
+   "stability": 0.7
+  },
+  {
+   "theme_id": 2,
+   "keywords": [
+    "vulnerability",
+    "security",
+    "dependency",
+    "dependencies",
+    "update",
+    "dependency vulnerability",
+    "package",
+    "chain",
+    "analysis",
+    "production"
+   ],
+   "signal_ids": [
+    "github:3010815225",
+    "github:1666821290",
+    "github:399937422",
+    "github:814511320",
+    "github:1807025966",
+    "github:705704352",
+    "github:2834426012",
+    "github:3813099364",
+    "stackexchange:security:245529",
+    "github:5040853209",
+    "hn:48944189",
+    "github:4746683006",
+    "github:1752624275",
+    "github:4541933423",
+    "github:2969075348",
+    "github:2968840674",
+    "hn:33595098",
+    "hn:32201099"
+   ],
+   "stability": 0.76
+  },
+  {
+   "theme_id": 3,
+   "keywords": [
+    "scim",
+    "provisioning",
+    "user",
+    "support",
+    "api",
+    "feature",
+    "provider",
+    "okta",
+    "account",
+    "server"
+   ],
+   "signal_ids": [
+    "github:430173256",
+    "github:3206226375",
+    "github:3379574681",
+    "github:429504224",
+    "github:1832901612",
+    "github:2570621544",
+    "github:2200732848",
+    "github:5289860026",
+    "github:2394932544",
+    "github:2986728597",
+    "github:6055994468",
+    "github:1275534439",
+    "github:3168060549",
+    "github:1963602856",
+    "github:2824053982",
+    "github:1654316794",
+    "hn:35644662",
+    "github:2317621103",
+    "github:4960641987",
+    "github:5652131298",
+    "github:2044886258",
+    "github:3665112000",
+    "github:3838150521"
+   ],
+   "stability": 0.52
+  },
+  {
+   "theme_id": 4,
+   "keywords": [
+    "issue",
+    "feature",
+    "github",
+    "request",
+    "https",
+    "github com",
+    "com",
+    "issues",
+    "https github",
+    "group"
+   ],
+   "signal_ids": [
+    "github:1448840244",
+    "github:717391259",
+    "github:998827712",
+    "github:4983218296",
+    "github:2286457835",
+    "github:861840718",
+    "github:3327355925",
+    "github:4616402789",
+    "github:5131262133",
+    "github:3707772545",
+    "github:5427846122",
+    "github:629850192",
+    "github:1988211720",
+    "github:5113000018",
+    "github:5565969615",
+    "github:1244541462",
+    "github:5038225762",
+    "github:6170280769"
+   ],
+   "stability": 0.62
+  },
+  {
+   "theme_id": 5,
+   "keywords": [
+    "policy",
+    "cspm",
+    "security",
+    "groups",
+    "controller",
+    "feature request",
+    "request",
+    "traffic",
+    "currently",
+    "feature"
+   ],
+   "signal_ids": [
+    "github:244862246",
+    "github:3153963149",
+    "github:702982352",
+    "github:1178457052",
+    "github:2200636059",
+    "github:939064820",
+    "github:1269585072",
+    "github:3835479540",
+    "github:2198230819",
+    "github:3168106337",
+    "github:1358079169",
+    "github:3790242830",
+    "hn:35776975",
+    "github:4707242736",
+    "github:1693883407",
+    "hn:49817171",
+    "hn:45531438"
+   ],
+   "stability": 0.37
+  },
+  {
+   "theme_id": 6,
+   "keywords": [
+    "kubernetes",
+    "pod",
+    "security",
+    "kubernetes io",
+    "io",
+    "io docs",
+    "concepts",
+    "admission",
+    "longhorn",
+    "type"
+   ],
+   "signal_ids": [
+    "github:1312836101",
+    "stackexchange:security:268250",
+    "github:399598558",
+    "github:3264008684",
+    "github:1269203613",
+    "github:2804635362",
+    "github:3706795009",
+    "github:3959060405",
+    "github:5328804244",
+    "github:4127806740",
+    "github:1593908586"
+   ],
+   "stability": 0.71
+  },
+  {
+   "theme_id": 7,
+   "keywords": [
+    "iam",
+    "aws",
+    "authentication",
+    "auth",
+    "amazon",
+    "com",
+    "api",
+    "aws amazon",
+    "docs aws",
+    "https docs"
+   ],
+   "signal_ids": [
+    "github:1064569632",
+    "github:858482315",
+    "github:887576981",
+    "github:489529589",
+    "github:337676162",
+    "github:1606868383",
+    "github:346065626",
+    "github:732656110",
+    "github:402453486",
+    "github:4427822478",
+    "github:5648065835",
+    "github:3975344846",
+    "stackexchange:security:260028",
+    "github:294133376",
+    "github:6181980691"
+   ],
+   "stability": 0.47
+  },
+  {
+   "theme_id": 8,
+   "keywords": [
+    "siem",
+    "messages",
+    "pre",
+    "real",
+    "logs",
+    "events",
+    "cluster",
+    "real time",
+    "alien vault",
+    "alien"
+   ],
+   "signal_ids": [
+    "stackexchange:security:41068",
+    "stackexchange:security:133218",
+    "github:1451848978",
+    "stackexchange:security:161782",
+    "github:1039881027",
+    "github:2292523316",
+    "github:3507325345"
+   ],
+   "stability": 0.51
+  },
+  {
+   "theme_id": 9,
+   "keywords": [
+    "cargo",
+    "package",
+    "images",
+    "audit",
+    "file",
+    "env",
+    "yml",
+    "decrypt",
+    "shell",
+    "python"
+   ],
+   "signal_ids": [
+    "github:3116948599",
+    "github:5005708152",
+    "github:4788837270",
+    "github:4002347264",
+    "github:5833626278",
+    "github:5006290548",
+    "github:4553563378",
+    "github:5328630144",
+    "github:4450680403"
+   ],
+   "stability": 0.46
+  },
+  {
+   "theme_id": 10,
+   "keywords": [
+    "aws",
+    "environment",
+    "roles",
+    "role",
+    "iam",
+    "credential",
+    "eks",
+    "aws iam",
+    "credentials",
+    "agent"
+   ],
+   "signal_ids": [
+    "github:576369497",
+    "github:2039485724",
+    "github:2625056326",
+    "github:1149093374",
+    "github:1300335370",
+    "github:3421256358",
+    "github:3034141160",
+    "github:884389891",
+    "github:841979714",
+    "github:998099026",
+    "github:780827546"
+   ],
+   "stability": 0.41
+  },
+  {
+   "theme_id": 11,
+   "keywords": [
+    "cyclonedx",
+    "spdx",
+    "sbom",
+    "bom",
+    "vex",
+    "v1",
+    "add support",
+    "cyclonedx sbom",
+    "org",
+    "sboms"
+   ],
+   "signal_ids": [
+    "github:2801250223",
+    "github:1119332559",
+    "github:1094610825",
+    "github:1331938785",
+    "github:4297231324",
+    "github:6431643486"
+   ],
+   "stability": 1.0
+  },
+  {
+   "theme_id": 12,
+   "keywords": [
+    "10",
+    "network",
+    "siem",
+    "ip",
+    "browser",
+    "logs",
+    "security",
+    "audit",
+    "logging",
+    "displays"
+   ],
+   "signal_ids": [
+    "stackexchange:security:158124",
+    "stackexchange:security:148912",
+    "stackexchange:security:248062",
+    "github:1441403618",
+    "github:3961302622"
+   ],
+   "stability": 0.51
+  },
+  {
+   "theme_id": 13,
+   "keywords": [
+    "people",
+    "report",
+    "secure",
+    "data",
+    "access",
+    "looking",
+    "users",
+    "want",
+    "user",
+    "data ingested"
+   ],
+   "signal_ids": [
+    "stackexchange:security:9684",
+    "github:2074473280",
+    "github:2981199208",
+    "hn:28887656",
+    "github:1290488000",
+    "github:4005343333",
+    "github:2133669832"
+   ],
+   "stability": 0.4
+  },
+  {
+   "theme_id": 14,
+   "keywords": [
+    "dependency",
+    "dependency track",
+    "track",
+    "reports",
+    "impact",
+    "component",
+    "current",
+    "advisory",
+    "dependencies",
+    "vulnerabilities"
+   ],
+   "signal_ids": [
+    "github:1523211113",
+    "github:1942350894",
+    "github:1977291903",
+    "github:1118328282",
+    "github:2298550287",
+    "github:2186376927"
+   ],
+   "stability": 0.73
+  },
+  {
+   "theme_id": 15,
+   "keywords": [
+    "yml",
+    "evaluate",
+    "p3",
+    "sast",
+    "research",
+    "repo",
+    "change",
+    "open source",
+    "snyk",
+    "open"
+   ],
+   "signal_ids": [
+    "github:681257884",
+    "github:1612097034",
+    "github:3361490891",
+    "github:6273245526",
+    "github:5998421041",
+    "github:4791141275"
+   ],
+   "stability": 0.31
+  }
+ ]
+}

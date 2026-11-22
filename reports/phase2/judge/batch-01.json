@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "github:1176169518",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 12,
+  "title": "Minimist vulnerability CVE-2021-44906",
+  "body": "Please bump `tsconfig-paths` dependencies. `minimist <=v1.2.5` brings in [security vulnerability](https://github.com/advisories/GHSA-xvch-5gv4-984h) which affect all packages that depends on `tsconfig-paths`, including the `json5` package also used in this package. `json5` already addresses this `minimist` issue in their latest version [v2.2.1](https://github.com/json5/json5/releases/tag/v2.2.1). ",
+  "url": "https://github.com/jonaskello/tsconfig-paths/issues/195"
+ },
+ {
+  "id": "github:3327355925",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 12,
+  "title": "Consider returning a clear error message when NVD API key is invalid",
+  "body": "**Is your feature request related to a problem? Please describe.** When an API key is invalid, DependencyCheck will fail with a `NullPointerException`. **Describe the solution you'd like** It would be nice if DependencyCheck could fail with a clear message stating that the API key is invalid. **Describe alternatives you've considered** None **Additional context** I'm a contributor to [clj-watson](",
+  "url": "https://github.com/dependency-check/DependencyCheck/issues/7870"
+ },
+ {
+  "id": "hn:21566335",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 12,
+  "title": "An AWS IAM Policy Linter: Parliament",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=21566335"
+ },
+ {
+  "id": "hn:21836168",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 12,
+  "title": "Kubernetes Security Tools Abound",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=21836168"
+ },
+ {
+  "id": "github:1514516532",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 12,
+  "title": "New features enhancements",
+  "body": "**- Professional profile** - [x] Preview before booking - [x] Business logo (Photo) uploaded while switching to Prof user on Profession - [x] Professional certificate (photo) uploaded while switching to Prof user on Profession - [x] Add note option while switching to Prof user on Profession - [x] Add review text field on Booking (FE: while viewing prof Profile before booking) : Keep it a new reque",
+  "url": "https://github.com/YaminiSuman/service-booking-app/issues/4"
+ },
+ {
+  "id": "hn:40079897",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 12,
+  "title": "SSO Tax, Cut",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=40079897"
+ },
+ {
+  "id": "github:712995700",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 11,
+  "title": "AutoPublishAlias Feature for Lambda Alias",
+  "body": "### Current Terraform Version ``` 0.11.14 ``` ### Use-cases To overcome the **cold start** with Lambdas, trying to configure Provisioned concurrency to Lambda with version and alias. when the Lambda code changes the version bumps up with \u2018publish\u2019 option. Have to pass the newly published Lambda version to Lambda Alias every time statically. Looking for an option to automatically point a Lambda Ali",
+  "url": "https://github.com/hashicorp/terraform-provider-aws/issues/15433"
+ },
+ {
+  "id": "github:1197790710",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 11,
+  "title": "CodePipeline: still getting 'Maximum policy size of 10240 bytes exceeded for role' for cross-account pipeline",
+  "body": "### Describe the bug We recently filed an issue about how CodePipeline was failing due to the generation of extremely large IAM policy documents: https://github.com/aws/aws-cdk/issues/19243 Our issue was closed and it was suggested that this PR might fix it: https://github.com/aws/aws-cdk/pull/19114 This tracking issue was closed via that PR: https://github.com/aws/aws-cdk/issues/19276 We have sin",
+  "url": "https://github.com/aws/aws-cdk/issues/19835"
+ },
+ {
+  "id": "github:3116948599",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 11,
+  "title": "feat: Support for `uv.lock` file from uv package manager",
+  "body": "## Is your feature request related to a problem? Please describe. The CycloneDX Python tool currently does not explicitly support the `uv.lock` file format used by the [uv](https://github.com/astral-sh/uv) package manager. While uv\u2019s Python virtual environments are already supported (as mentioned in the documentation), there is no native support for reading the `uv.lock` file directly. This means ",
+  "url": "https://github.com/CycloneDX/cyclonedx-python/issues/907"
+ },
+ {
+  "id": "github:3310052367",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 11,
+  "title": "Complete OCI 1.1 Referrers API Support Across All Cosign Commands",
+  "body": "**Description** We currently push attestations to container registries using tags. I want to enable our builds to start pushing all attestations using the referrer's API but there are some tooling gaps in being able to download and verify this metadata. **Commands WITH OCI 1.1 Support:** - `cosign tree` - `--registry-referrers-mode=oci-1-1` + `--experimental-oci11` - `cosign sign` - `--registry-re",
+  "url": "https://github.com/sigstore/cosign/issues/4335"
+ },
+ {
+  "id": "github:2733236490",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 11,
+  "title": "Feature: Allow one sbom to be the primary document in assemble action",
+  "body": "What I notice is that its only possible to assemble while settings the primary tags or the config and this is a limitation. What I am looking for is to provide the primary component and add all the other boms as dependencies. At this point you are required to use the config even if you would have a proper root component and want to add the extra components from the SBOMs. If there would be a `--pr",
+  "url": "https://github.com/interlynk-io/sbomasm/issues/128"
+ },
+ {
+  "id": "github:4216482618",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 11,
+  "title": "[PROPOSAL]RFC: OAuth 2.0 Support for OpenSearch",
+  "body": "# RFC: OAuth 2.0 Support for OpenSearch ## Status: Proposed --- ## What/Why ### What are you proposing? Add OAuth 2.0 support to OpenSearch via an authentication proxy, enabling secure machine-to-machine access, scoped API tokens, and third-party integrations. The proxy validates OAuth tokens (JWT), maps scopes to OpenSearch security roles, and forwards requests to the engine and Dashboards \u2014 with",
+  "url": "https://github.com/opensearch-project/.github/issues/491"
+ },
+ {
+  "id": "hn:36076140",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 11,
+  "title": "Bypass Validation Parts in AWS IAM Authenticator for Kubernetes",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=36076140"
+ },
+ {
+  "id": "hn:32227594",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 11,
+  "title": "Ask HN: Open-source SBOM generation tools?",
+  "body": "One of the compliance requirements of the recent Cybersecurity EO order is to track software bill of materials (SBOM). Curious to know what open-source tools exist to generate SBOM and how accurate they are.",
+  "url": "https://news.ycombinator.com/item?id=32227594"
+ },
+ {
+  "id": "stackexchange:security:44046",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "stackexchange",
+  "engagement": 11,
+  "title": "SIEM v/s Network Forensic",
+  "body": "when SIEM is already implemented in a enterprise network; does it not do all tasks and report like network forensic investigation? Or can we do away with SIEM and have only Network Forensic tools installed in a enterprise network",
+  "url": "https://security.stackexchange.com/questions/44046/siem-v-s-network-forensic"
+ },
+ {
+  "id": "github:3379574681",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 11,
+  "title": "Implement SCIM",
+  "body": "### Description Two Exemplary Use-Cases what SCIM can do beyond OIDC: ### Provisioning: Easy Permission Management from Account Creation With SCIM, when a new user account is created in your core identity system (like an identity provider or directory), SCIM **automatically provisions** that user across all connected applications, including Vikunja. This means: - User accounts are created instantl",
+  "url": "https://github.com/go-vikunja/vikunja/issues/1399"
+ },
+ {
+  "id": "hn:36494074",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 11,
+  "title": "SSO \u201cWall of Shame\u201d vs. \u201cWall of Fame\u201d",
+  "body": "Have you heard of the SSO tax movement? This is a controversial movement which you may agree or disagree with. My colleague at BoxyHQ, Sama Carlos Samame, wrote about this subject - https://boxyhq.com/blog/sso-wall-of-shame-vs-wall-of-fame, explaining why taxing for SSO is considerably gouging it's customer base. The context is based off of https://sso.tax",
+  "url": "https://news.ycombinator.com/item?id=36494074"
+ },
+ {
+  "id": "github:924419770",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 10,
+  "title": "datasource/aws_iam_policy: performance regression looking up by arn",
+  "body": "#6084 introduced support for looking up a policy by name, but this has significantly regressed the performance when looking up a policy by arn. ### Community Note * Please vote on this issue by adding a \ud83d\udc4d [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) to the original issue to help the community and maintainers prioritize this request * Please do ",
+  "url": "https://github.com/hashicorp/terraform-provider-aws/issues/19878"
+ },
+ {
+  "id": "github:3532878306",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 10,
+  "title": "[Docs] Ark docs analysis against Diataxis",
+  "body": "# Ark docs analysis In QB Labs, we typically use the [Diataxis principles](https://diataxis.fr/) to structure our docs. Take a look at the [docs for Vizro](https://vizro.readthedocs.io), which are maintained on this same [McKinsey GitHub](https://github.com/mckinsey). Note: other sources of inspiration: - https://argo-cd.readthedocs.io/en/stable/ I suggest we review these docs with the Diataxis mi",
+  "url": "https://github.com/mckinsey/agents-at-scale-ark/issues/338"
+ },
+ {
+  "id": "github:2851022119",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 10,
+  "title": "Error every time I open Docker Desktop",
+  "body": "### Description Every single time I open Docker Desktop on windows, an error shows up that says: > -------------------------------------- > > **Privileged helper service is not running** > The Privileged helper service is not running. The service runs in the background with SYSTEM privileges. Docker Desktop needs the service to interact with privileged parts of Windows. > To learn more about the p",
+  "url": "https://github.com/docker/for-win/issues/14599"
+ },
+ {
+  "id": "github:1642032199",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 10,
+  "title": "Generate CycloneDX SBOM file from vcpkg",
+  "body": "**** **Is your feature request related to a problem? Please describe.** As described in the \"Enhancing the Security of the Software Supply Chain through Secure Software Development Practices\" US Whitehouse memorandum (https://www.whitehouse.gov/wp-content/uploads/2022/09/M-22-18.pdf) a Software Bill of Materials (SBOM) may be required by government agencies and must be created according to guidanc",
+  "url": "https://github.com/microsoft/vcpkg/issues/30461"
+ },
+ {
+  "id": "github:1879696596",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 10,
+  "title": "Allow to list SBOMs created by the tools by package",
+  "body": "**Is your feature request related to a problem? Please describe.** Mostly, an auto-generated SBOM can only be as good as the metadata provided the project / packages. As such it might be unfair to compare tools solely based on their SBOM quality scores as they're not necessarily being run on the same packages. **Describe the solution you'd like** For a given project / package, it should be possibl",
+  "url": "https://github.com/interlynk-io/sbombenchmark.dev/issues/12"
+ },
+ {
+  "id": "github:1011855831",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 10,
+  "title": "Show dependency graph leading to a package with a certain version",
+  "body": "# Feature request ## Checklist - [x] The feature / improvement you are suggesting overlaps with the purpose of `gomod`: facilitating the management of Go modules and their dependencies. - [x] You have examined various alternatives to the new feature / improvement you are suggesting and are describing the results in the description below. - [x] You have filled in the three sections below and delete",
+  "url": "https://github.com/Helcaraxan/gomod/issues/120"
+ },
+ {
+  "id": "github:1077727061",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 10,
+  "title": "log4j2 version upgrade for CVE-2021-44228",
+  "body": "**Which module is your feature request related to?** web/agent and any other modules depend on log4j-core, log4j-api **Is your feature request related to a problem?** [CVE-2021-44228](https://www.lunasec.io/docs/blog/log4j-zero-day/#who-is-impacted), log4j vulnerability **Describe the solution you'd like** upgrade log4j dependency version in pom.xml to higher than 2.15.0 **Describe alternatives yo",
+  "url": "https://github.com/pinpoint-apm/pinpoint/issues/8489"
+ },
+ {
+  "id": "github:4109619238",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 10,
+  "title": "Global runtime environment variables across pipeline steps (persist env between steps)",
+  "body": "### Clear and concise description of the problem As a user of Woodpecker I want the ability to define environment variables globally during a CI run (not scoped to a single step) so that they persist and are accessible across all steps in the pipeline. Currently, environment variables defined within a step are limited to that step\u2019s container lifecycle. Once the step finishes and the pod/container",
+  "url": "https://github.com/woodpecker-ci/woodpecker/issues/6273"
+ },
+ {
+  "id": "hn:41988812",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 10,
+  "title": "The AWS IAM Identity Center is decadent and depraved",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=41988812"
+ },
+ {
+  "id": "hn:26231763",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 10,
+  "title": "Project Calico: Kubernetes Security as SaaS",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=26231763"
+ },
+ {
+  "id": "hn:20718505",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 10,
+  "title": "Yet another Kubernetes security best practices",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=20718505"
+ },
+ {
+  "id": "hn:18597396",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 10,
+  "title": "First critical Kubernetes security hole discovered",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=18597396"
+ },
+ {
+  "id": "hn:25026039",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "hn",
+  "engagement": 10,
+  "title": "How to Collect Log for SIEM?",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=25026039"
+ },
+ {
+  "id": "hn:24423524",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "hn",
+  "engagement": 10,
+  "title": "Panther Labs Raises $15M to Reinvent SIEM for Cloud-First Teams",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=24423524"
+ },
+ {
+  "id": "hn:23991701",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "hn",
+  "engagement": 10,
+  "title": "The Developer\u2019s Guide to Audit Logs / SIEM",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=23991701"
+ },
+ {
+  "id": "stackexchange:security:249704",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "stackexchange",
+  "engagement": 10,
+  "title": "Threat Hunting Vs SIEM use cases",
+  "body": "Lately I'm confused about threat hunting vs SIEM Use case creation. The threat hunting resources I have read can be created as a SIEM use case. Then why should I perform it manually in the name of hunting? How exactly does hunting differ from SIEM use case?",
+  "url": "https://security.stackexchange.com/questions/249704/threat-hunting-vs-siem-use-cases"
+ },
+ {
+  "id": "stackexchange:security:180693",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "stackexchange",
+  "engagement": 10,
+  "title": "Does an ELK based SIEM need a correlation engine?",
+  "body": "We want to build a SIEM with an ELK stack, for a multi sites software company (10 locations, 10k people). Is a security specific correlation engine recommended or is it unnecessary? As possible security dedicated correlation engines, we have identified: CorEactive/Esper, Drools, NodeBrain, Prelude, SEC. Some correlation engine reviews recommend Esper as the best compromise for performance, configu",
+  "url": "https://security.stackexchange.com/questions/180693/does-an-elk-based-siem-need-a-correlation-engine"
+ },
+ {
+  "id": "github:5746458049",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 10,
+  "title": "okta_push_group: mapping stuck in ERROR after push Conflict cannot be updated, deleted or recovered",
+  "body": "### Community Note * Please vote on this issue by adding a \ud83d\udc4d [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) to the original issue to help the community and maintainers prioritize this request. * Please do not leave _+1_ or _me too_ comments, they generate extra noise for issue followers and do not help prioritize the request. * If you are interes",
+  "url": "https://github.com/okta/terraform-provider-okta/issues/2980"
+ },
+ {
+  "id": "github:2074473280",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 9,
+  "title": "[Cloud Security] POC for confirming incoming data in the agentless flow",
+  "body": "**User story** As a user when adding a CSPM integration on Agentless I want to get instant feedback if the data is being ingested or not so that I don't wait for data to appear in Findings to confirm that everything is working **Motivation** When adding CSP integration in Agentless flow, a user doesn't get any feedback if the data is being ingested. They need to add integration and then wait for t",
+  "url": "https://github.com/elastic/kibana/issues/174604"
+ },
+ {
+  "id": "github:445737252",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 9,
+  "title": "Support HTTPS requests to expath.org",
+  "body": "HTTPS requests to https://expath.org return warnings like: > This server could not prove that it is expath.org; its security certificate is from cloud.fgeorges.org. This may be caused by a misconfiguration or an attacker intercepting your connection. > Certificate for doesn't match any of the subject alternative names: [cloud.fgeorges.org] Would it be possible to adjust the configuration for the e",
+  "url": "https://github.com/expath/website/issues/1"
+ },
+ {
+  "id": "github:3958582140",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 9,
+  "title": "[EKS] [request]: Support for changing the EKS cluster role",
+  "body": "### Community Note * Please vote on this issue by adding a \ud83d\udc4d [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) to the original issue to help the community and maintainers prioritize this request * Please do not leave \"+1\" or \"me too\" comments, they generate extra noise for issue followers and do not help prioritize the request * If you are intereste",
+  "url": "https://github.com/aws/containers-roadmap/issues/2771"
+ },
+ {
+  "id": "github:367617125",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 9,
+  "title": "Investigate to support local storage capacity reporting with the \"Volume attach limits\" feature",
+  "body": "**Is this a BUG REPORT or FEATURE REQUEST?**: /kind feature **What happened**: For dynamic provisioning of local storage, we'll need a place to report available capacity of each nodes, so that scheduler can be aware of that, and tell if a node is available to provision local volumes of a pod. We've got an internal draft of the design. It is considered a general one, storages can report capacity pe",
+  "url": "https://github.com/kubernetes/kubernetes/issues/69502"
+ },
+ {
+  "id": "github:2275030660",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 9,
+  "title": "CFP: IP metrics",
+  "body": "## Cilium Feature Proposal **Is your proposed feature related to a problem?** I was looking for a way to tell from Cilium/Hubble outputs if traffic flow is encrypted or not, meaning I can see if application running in pod utilizes TLS or plaintext for its communication. Use case here is auditing of communication of workloads. Based on chat with Robin on Slack, hubble flow should contain [a flag in",
+  "url": "https://github.com/cilium/cilium/issues/32301"
+ },
+ {
+  "id": "github:690244528",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 9,
+  "title": "Project Contribution and Onboarding - Git Proxy",
+  "body": "# [Project Contribution] Git Proxy ## Business Problem Many corporations, especially financial services have strict policies towards open source contributions. On rare occasions when a developer can contribute to open source, information security and compliance officers often demand complex shadow processes are set up to ensure code reviews, scans, and other processes are adhered to before a push ",
+  "url": "https://github.com/finos/community/issues/65"
+ },
+ {
+  "id": "github:4829122268",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 9,
+  "title": "MITRE's own CNA-LR records routinely fail to meet 5.1.3 and 5.1.7 (product and vulnerability type identification)",
+  "body": "The CNA Operational Rules require, without exception, that every CVE Record identify an affected product and a vulnerability type: - 5.1.3: MUST identify at least one affected Product using information such as Supplier and Product names, versions, and dates. - 5.1.7: MUST identify the type of Vulnerability. Across MITRE's own CNA-assigned records in cvelistV5 for 2025-2026 (5,905 records), the str",
+  "url": "https://github.com/CVEProject/cve-documents/issues/42"
+ },
+ {
+  "id": "github:4263962037",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 9,
+  "title": "Discussion: Maintenance, Upstream Syncing, and Testing Strategy",
+  "body": "### Context Hi there, thanks for maintaining this project! I am currently evaluating AWX deployment options, specifically looking for alternatives to the K8s operator for environments where a full Kubernetes cluster is overkill. Given that upstream AWX officially dropped Docker Compose support, I am looking to understand the long-term viability and maintenance strategy of this fork/repository befo",
+  "url": "https://github.com/fitbeard/automation-platform/issues/192"
+ },
+ {
+  "id": "hn:45225310",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 9,
+  "title": "How Maintainer Burnout Is Causing a Kubernetes Security Disaster",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=45225310"
+ },
+ {
+  "id": "hn:28064668",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 9,
+  "title": "Qualys partners with Red Hat to improve Linux and Kubernetes security",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=28064668"
+ },
+ {
+  "id": "hn:12366967",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 9,
+  "title": "Kubernetes security issue inside kubelet",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=12366967"
+ },
+ {
+  "id": "stackexchange:security:270947",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "stackexchange",
+  "engagement": 9,
+  "title": "Explanation of the AWS IAM PassRole vulnerability",
+  "body": "Help me understand what the risk in the AWS Privilege Escalation Vulnerabilities article is. I think it is normal that I create an EC2 instance and associate an IAM role as its instance profile, and then log in to the instance. Once I log in to the instance, I can invoke or access the AWS services that the IRM role allows. Does it mean the IAM role as the EC2 profile has more IAM permissions than ",
+  "url": "https://security.stackexchange.com/questions/270947/explanation-of-the-aws-iam-passrole-vulnerability"
+ },
+ {
+  "id": "github:5970788746",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 9,
+  "title": "Fleet secrets: delete the five unused CI secrets and plan per-repository scoping of the three live pipeline tokens",
+  "body": "## Problem The fleet's GitHub Actions secrets have drifted from the documented contract. Some secrets that nothing reads are still stored, and the three live pipeline tokens are almost certainly shared across every consumer. **Inventory (2026-10-21).** Secret *names* and environments were read through the Actions secrets API for every non-archived repository owned by `nathanjohnpayne`. No values w",
+  "url": "https://github.com/nathanjohnpayne/mergepath/issues/2718"
+ },
+ {
+  "id": "github:429504224",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 9,
+  "title": "Add SCIM support to provision and manage user accounts in Postman.",
+  "body": "**Is your feature request related to a problem? Please describe.** Provisioning and de-provisioning users in Postman is a manual process. **Describe the solution you'd like** SCIM is a popular REST-API based standard for implementing user provisioning/de-provisioning. A few relevant links: - http://www.simplecloud.info/ **Describe alternatives you've considered** The current alternative is to manu",
+  "url": "https://github.com/postmanlabs/postman-app-support/issues/6235"
+ },
+ {
+  "id": "github:4258117649",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 8,
+  "title": "[PROPOSAL] OpenSearch Flux \u2014 CLI and MCP server for migrating Dashboards saved objects between OpenSearch instances",
+  "body": "## What/Why ### What are you proposing? OpenSearch Flux is a CLI tool and Model Context Protocol (MCP) server that migrates OpenSearch Dashboards saved objects \u2014 dashboards, visualizations, index patterns, and saved searches \u2014 between OpenSearch instances. It handles the full export \u2192 inspect \u2192 repair \u2192 import pipeline, including data source remapping, index pattern translation, field compatibilit",
+  "url": "https://github.com/opensearch-project/.github/issues/499"
+ },
+ {
+  "id": "github:371364692",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 8,
+  "title": "Windows: OKTA_PROFILE not respected, always have to pass --profile",
+  "body": "**Describe the bug** 1. Even though `OKTA_PROFILE` is set before the initial call to AWS, it doesn't seem to be used when creating the profile. 2. Further calls to `okta-aws` *always* require the profile to be passed in and `OKTA_PROFILE` is not read. Leading to weird issue when you forget to pass it in. - Example: `okta-aws s3 ls` will create a new profile named s3 and return an error because 'ls",
+  "url": "https://github.com/oktadev/okta-aws-cli-assume-role/issues/231"
+ },
+ {
+  "id": "github:2529016486",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 8,
+  "title": "[Enhancement]: Ability to add new audience as an attachment to OIDC provider",
+  "body": "### Description Hi there, I'm looking for a feature to attach a new Client ID/Audience to an existing OIDC provider [provider doc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_openid_connect_provider). Basically, I'm looking for an equivalent feature of [API_AddClientIDToOpenIDConnectProvider](https://docs.aws.amazon.com/IAM/latest/APIReference/API_AddClientIDToO",
+  "url": "https://github.com/hashicorp/terraform-provider-aws/issues/39348"
+ },
+ {
+  "id": "github:4263976764",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 8,
+  "title": "Add Enterprise IAM Plugin for Policy-Based Access Control",
+  "body": "### Is this suited for github? - [ ] Yes, this is suited for github ### Is your feature request related to a problem? Please describe. Better Auth currently lacks a built-in authorization layer beyond basic session authentication. Teams building enterprise applications need fine-grained, policy-based access control \u2014 the ability to define who can do what on which resources, with support for tempor",
+  "url": "https://github.com/better-auth/better-auth/issues/9190"
+ },
+ {
+  "id": "github:2936739447",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 8,
+  "title": "Support EKS Pod Identity (alternative to IRSA)",
+  "body": "**Is your feature request related to a problem or challenge? Please describe what you are trying to do.** I have a rust binary that makes use of object_store and I'd like to use it in AWS EKS with Pod Identity to access objects in S3. Maybe I'm missing something, but it seems like object_store's AWS S3 setup can't make use of the credentials provided by Pod Identity. Looking [here](https://docs.rs",
+  "url": "https://github.com/apache/arrow-rs-object-store/issues/282"
+ },
+ {
+  "id": "github:3741429886",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 8,
+  "title": "Retirement of Managed NGINX in application routing add-on",
+  "body": "### Description The Kubernetes SIG Network and Security Response Committee has publicly announced the upcoming retirement of the **Ingress-NGINX** controller. According to the official Kubernetes blog, best-effort maintenance will continue until March 2026, after which the project will no longer receive releases, bug fixes, or security updates. This marks the end-of-life for one of the most widely",
+  "url": "https://github.com/Azure/AKS/issues/5516"
+ },
+ {
+  "id": "github:3835479540",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 8,
+  "title": "Feature Request: Support disabling public IP addresses on provisioned nodes",
+  "body": "## Feature Request ### Description Currently, the GCENodeClass specification does not provide a way to control whether provisioned GCE instances have external/public IP addresses assigned. Nodes provisioned by Karpenter are automatically assigned public IPs, which may not be desired for security and cost optimization reasons. ### Use Case Many organizations prefer to run their Kubernetes nodes wit",
+  "url": "https://github.com/karpenter-gcp/karpenter-provider-gcp/issues/182"
+ },
+ {
+  "id": "github:1560737110",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 8,
+  "title": "[Feature][Registry] Remove dependency on ZooKeeper when deployed in K8S",
+  "body": "### Search before asking - [X] I had searched in the [issues](https://github.com/apache/dolphinscheduler/issues?q=is%3Aissue) and found no similar feature requirement. ### Description * Add a new registry plugin for DS so that DS will no longer need to depend on ZooKeeper / MySQL / ETCD for service discovery and distributed lock when deployed in K8S. * Service Events - K8S Watch - We may use `Fabr",
+  "url": "https://github.com/apache/dolphinscheduler/issues/13445"
+ },
+ {
+  "id": "github:5840372586",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 8,
+  "title": "fix(platform): after a refused write, the worker stops and reports, and never looks for credentials or another route",
+  "body": "_Claude (tigerteam-planner session) for @bnaylor:_ Part of #2935. ## What happens On main `1e7845bb`, the Platform Agent's worker responds to a refused or unavailable path by looking for a credential that would get around it. Seen live on 2026-10-13, on a fresh today-mode install (ka-today-2: no registered repository, no Config Connector CRDs, and a read-only agent service account). The request wa",
+  "url": "https://github.com/gke-labs/kube-agents/issues/2979"
+ },
+ {
+  "id": "github:5096243270",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 8,
+  "title": "docs/guides/github-token-scopes.md recommends a nonexistent \"Checks\" fine-grained PAT permission",
+  "body": "## Summary `docs/guides/github-token-scopes.md`'s recommended fine-grained PAT permission table lists, for `provider:pr:write`: > Pull requests: Read and write, Checks: Read-only, Commit statuses: Read-only \"Checks\" is not a real fine-grained PAT repository permission. Confirmed against GitHub's current fine-grained PAT permission list (`docs/rest/authentication/permissions-required-for-fine-grain",
+  "url": "https://github.com/Agent-Clubhouse/Goobers/issues/2677"
+ },
+ {
+  "id": "github:4957633423",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 8,
+  "title": "Release v4.16.0: Help test changes and review before the release + planner",
+  "body": "This issue tracks the changes planned for the next major Kubebuilder release `4.16.0`and asks the community to review them **before** we cut the release. Please comment if: - you find any issue in the listed changes, or - something important is missing and should be part of this release. Thank you for the help! \ud83d\ude4c Please, also help us get the release blockers reviwed and merged: https://github.com/",
+  "url": "https://github.com/kubernetes-sigs/kubebuilder/issues/5902"
+ },
+ {
+  "id": "github:1983446008",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 8,
+  "title": "Add ability to customize 3rd party licences output",
+  "body": "### Command build ### Description Currently you only get a plaintext output. This is probably enough to include in the build applications but makes further processing unnecessarily hard. I need to provide a SBOM (software bill of material) with detailed information about the used dependencies and can't really use the text output for that ### Describe the solution you'd like It would be nice to be ",
+  "url": "https://github.com/angular/angular-cli/issues/26272"
+ },
+ {
+  "id": "github:2202104313",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 8,
+  "title": "[question] How to use google osv-scanner with conan package?",
+  "body": "### What is your question? At first, I would like to thank you guys for providing a C/C++ package manager solution. I am looking for a soultion for creating SBOM and CVE scan report of C/C++. For the SBOM portion, I found conan package can generate SBOM file with json format. Therefore, I did following steps to create SBOM report. a. Install openssl package from ConanCenter b. Use \"conan sbom:cycl",
+  "url": "https://github.com/conan-io/conan/issues/15918"
+ },
+ {
+  "id": "github:4092506147",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 8,
+  "title": "Split cloud storage and notification clients into optional extras",
+  "body": "**Is your feature request related to a problem? Please describe.** We use `elementary-data[redshift]` on an AWS-only stack. Installing elementary forces base dependencies that are irrelevant to our environment \u2014 `google-cloud-storage` (which pulls in `google-auth`, `pyasn1`, `pyasn1-modules`, `rsa`, and 6 more Google packages), `azure-storage-blob` (+ `azure-core`), and `pymsteams`. These unused t",
+  "url": "https://github.com/elementary-data/elementary/issues/2155"
+ },
+ {
+  "id": "github:483271660",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 8,
+  "title": "[SIEM] Non-ECS fields in SIEM",
+  "body": "I went through the SIEM app code to find any fields that are not in ECS. Some we can fix today, some we have to wait for ECS to add them. The SIEM app uses fields in many places, so it's likely I missed some, but the main ones are hopefully here. ## Autonomous System ASN info is now in ECS master ([ECS docs](https://www.elastic.co/guide/en/ecs/master/ecs-as.html)). There are several places where w",
+  "url": "https://github.com/elastic/kibana/issues/43649"
+ },
+ {
+  "id": "github:1851657043",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 8,
+  "title": "[Feature]Enrich ingest pipeline functionality",
+  "body": "**Is your feature request related to a problem? Please describe.** We want to build a SIEM based on opensearch. So we ingest a ton of data, but that data needs to be expanded based on data from i.e. our CMDB or personnel records. This makes correlation and deciding on threat impact a lot easier. Elastic has the enrich ingest pipeline processor to do something like this: https://www.elastic.co/guid",
+  "url": "https://github.com/opensearch-project/data-prepper/issues/3167"
+ },
+ {
+  "id": "github:976559629",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 8,
+  "title": "Suggesting move to stix2.1",
+  "body": "**Is your feature request related to a problem? Please describe.** We have built our software on attack-workbench which support stix2.1 only. However stix-shifter has not supported yet. We also plan to develop a custom translator on our siem later. **Describe the solution you'd like** stix-shifter could support stix2.1 inputs and outputs. **Describe alternatives you've considered** hack the source",
+  "url": "https://github.com/opencybersecurityalliance/stix-shifter/issues/674"
+ },
+ {
+  "id": "hn:26540623",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 8,
+  "title": "Continuous AWS IAM Security Best Practices with SQL",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=26540623"
+ },
+ {
+  "id": "hn:21075926",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 8,
+  "title": "The Guide to Kubernetes Security",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=21075926"
+ },
+ {
+  "id": "hn:49883733",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 8,
+  "title": "Your SBOM Is Fan Fiction",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=49883733"
+ },
+ {
+  "id": "hn:32542452",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "hn",
+  "engagement": 8,
+  "title": "Ask HN: SIEM-like product with DNS as its data API?",
+  "body": "A SIEM seems to consist of a database / datasink for event data and an interface for reporting / alerting / alarming on that data. The DNS is a distributed database, which is another way of saying that it is a mechanism for querying distributed databases. Maybe another way I could put this is, is there a reporting / \"pane of glass\" tool which can be put in front of DNS-as-a-database? Maybe a TIP? ",
+  "url": "https://news.ycombinator.com/item?id=32542452"
+ },
+ {
+  "id": "stackexchange:security:179868",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "stackexchange",
+  "engagement": 8,
+  "title": "SIEM and Security Analytics",
+  "body": "I've encountered the two terms 'SIEM' and 'Security Analytics' a lot in the past few weeks, unfortunately I still don't understand the difference. According to some research I've done about these terms SIEMs aggregate data from different sources and display them in a standardized manner to security analysts who sift through the data by hand. Advanced SIEMs are using Big Data technologies to identi",
+  "url": "https://security.stackexchange.com/questions/179868/siem-and-security-analytics"
+ },
+ {
+  "id": "github:1832901612",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 8,
+  "title": "feat: Data Access Workflow",
+  "body": "**Is your feature request related to a problem? Please describe.** With the concept of tasks already introduced (request tags/description) I would like to propose a feature where users can request and keep track of access to entities. This would be different from 'owning' an entity or 'following' an entity (neither of these concepts describe if user can access the data and they don't follow workfl",
+  "url": "https://github.com/open-metadata/OpenMetadata/issues/12713"
+ },
+ {
+  "id": "github:2176626760",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 8,
+  "title": "feat: Implement Archive Chat Button/Feature for Improved Organization and User Experience",
+  "body": "**Is your feature request related to a problem? Please describe.** Users may want to temporarily move chat conversations out of their current active chat list but not delete them entirely. **Describe the solution you'd like** Adding an Archive Chat button would allow users to easily access and review archived chats without affecting their active chat list. **Describe alternatives you've considered",
+  "url": "https://github.com/open-webui/open-webui/issues/1106"
+ },
+ {
+  "id": "github:5514102691",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 8,
+  "title": "AM Business OS \u2014 Master Execution to Final Customer Handoff",
+  "body": "# AM BUSINESS OS \u2014 MASTER EXECUTION TO FINAL HANDOFF ## Purpose This is the **single authoritative execution issue** for completing AM Business OS from the current repository state through final customer handoff. It supersedes Issue #3 and all previous phase/closure execution issues. This is NOT a documentation exercise. This is NOT a cosmetic Odoo clone. This is NOT a request to rebuild the ERP f",
+  "url": "https://github.com/amconsultantplatform-ctrl/AM-Business-Platform/issues/4"
+ },
+ {
+  "id": "github:2570621544",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 8,
+  "title": "Unable to turn on SCIM via the okta API from reading the docs",
+  "body": "Hello everyone! \ud83d\ude03 I have been reading through the okta documentation looking for a way to enable SCIM provisioning for SAML SSO apps via your API, and I am having trouble enabling SCIM via the API using both the create app and update app endpoints. `https://{yourOktaDomain}/api/v1/apps` On [your documentation](https://developer.okta.com/docs/api/openapi/okta-management/management/tag/Application/#",
+  "url": "https://github.com/okta/okta-developer-docs/issues/5130"
+ },
+ {
+  "id": "github:4616402789",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 7,
+  "title": "[New Provider] Add support for Linode cloud provider with initial set of services and checks",
+  "body": "### Feature search - [x] I have searched the existing issues and this feature has not been requested yet or is already in our [Public Roadmap](https://roadmap.prowler.com/roadmap) ### Which component would this feature affect? New component/Integration ### Related to specific cloud provider? _No response_ ### New feature motivation Prowler doesn't currently support scanning the Linode infrastructu",
+  "url": "https://github.com/prowler-cloud/prowler/issues/11504"
+ },
+ {
+  "id": "github:6164886799",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 7,
+  "title": "compatibility.md states each change of release 0.27.0, and the text of Wave 13 keeps to the style limits and states what the code does",
+  "body": "## Background The end-of-wave review of Wave 13 (`v0.26.0..a829cd87`: design with a security pass of the endpoint, style and rule 14, copies, and the public API) found the findings below. As in Wave 12, each FIX-NOW finding lands before the release, which is 0.27.0. Each `file:line` is on `a829cd87`, so find the place again on the head. A session cannot read the reports on the host, so this body h",
+  "url": "https://github.com/como-technologies/strata/issues/556"
+ },
+ {
+  "id": "github:295677106",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Passing a federated identity into AWSAppSyncClient?",
+  "body": "Here's what im trying to do essentially in React. 1) User logs in via a login mutation with appsync and is returned an identityId and JWT token from the response. ``` const cognitoCredentials = new AWS.CognitoIdentityCredentials({ IdentityPoolId: 'IdentityPool goes here', IdentityId: 'IdentityId here', Logins: { 'cognito-identity.amazonaws.com': 'JWT Token here' } }); ``` 2) I pass the credentials",
+  "url": "https://github.com/awslabs/aws-mobile-appsync-sdk-js/issues/39"
+ },
+ {
+  "id": "github:3282791139",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Feature: Add support for SASL reauthentication (KIP-368)",
+  "body": "During deeper testing of https://github.com/grepplabs/kafka-proxy/pull/216, I discovered that the proxy currently doesn't support [KIP-368](https://issues.apache.org/jira/browse/KAFKA-7352) - SASL Reauthentication. It would be great to see support for this added so that long-lived connections using SASL OAUTHBEARER authentication are better supported. To elaborate a bit more on my use case and wha",
+  "url": "https://github.com/grepplabs/kafka-proxy/issues/217"
+ },
+ {
+  "id": "github:215114483",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Feature Request: data source for aws_iam_role",
+  "body": "Hi there, It is currently possible to create a data source for a number of different AWS resources; however, it looks like aws_iam_role is missing. My team has a repository for all of our baseline infrastructure templates, and we put templates for applications in their own, separate, repository. This is intended to reduce risk for big changes. As such, we'd like to be able to define aws_iam_roles ",
+  "url": "https://github.com/hashicorp/terraform/issues/12825"
+ },
+ {
+  "id": "github:2352711598",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Teleport Kube agent fails to start when \"jamf_service.enabled\" is set to \"false\" in v16",
+  "body": "# Summary I am currently using the Teleport Kube Agent to register my Kubernetes cluster with Teleport. This setup works fine with Teleport version `v15`. However, upon upgrading to version `v16`, the agents fail to start, producing the following error: ```log ERROR: jamf_service either username+password or clientID+clientSecret must be provided ``` # Expected behavior: The configuration validatio",
+  "url": "https://github.com/gravitational/teleport/issues/42956"
+ },
+ {
+  "id": "github:1269203613",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Support new Kubernetes PodSecurityStandards",
+  "body": "Hi kpack, [Korifi](https://github.com/cloudfoundry/korifi) here. As of Kubernetes 1.21 pod security policies are deprecated and are going to be removed in 1.25. They are going to be replaced by the [Pod security admission controller](https://kubernetes.io/docs/concepts/security/pod-security-admission/) and [pod security standards](https://kubernetes.io/docs/concepts/security/pod-security-standards",
+  "url": "https://github.com/buildpacks-community/kpack/issues/972"
+ },
+ {
+  "id": "github:1409675436",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Metrics reported for a pod do not accurately rollup child cgroup container metrics",
+  "body": "**What happened**: When looking at CPU or Memory usage for a pod with a container sidecar, the metrics represented do not include metrics from the sidecars. However, sidecars are deployed to the same cgroup namespace and utilize the resource quota allotted to that pod's cgroup. **What you expected to happen**: metrics-server should roll up metrics from the cgroup child into the parent cgroup for t",
+  "url": "https://github.com/kubernetes-sigs/metrics-server/issues/1101"
+ },
+ {
+  "id": "github:1261675134",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Migration from efs-provisionser",
+  "body": "I'm looking for some steps or points about a migration from [the old efs-provisioner](https://github.com/kubernetes-retired/external-storage/tree/master/aws/efs) to aws-efs-csi-driver. Since the driver now supports dynamic provisioning as well, it should be able to fulfil the same purpose why we original chose to use efs-provisioner. There was [one](https://github.com/kubernetes-sigs/aws-efs-csi-d",
+  "url": "https://github.com/kubernetes-sigs/aws-efs-csi-driver/issues/704"
+ },
+ {
+  "id": "github:2588619393",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Hardcoded credential when using AerospikeBackup CR",
+  "body": "When going over the aerospikebackup CR example. We are looking for a reference as to how we can inject the aerospike credential using a Kubernetes secret. The example has only hardcoded values - https://github.com/aerospike/aerospike-kubernetes-operator/blob/aa051f72de962287b9122006b87702a6614da423/config/samples/aerospikebackup.yaml#L17 In addition, when viewing the AerospikeBackupService CR, the",
+  "url": "https://github.com/aerospike/aerospike-kubernetes-operator/issues/318"
+ },
+ {
+  "id": "github:4874096848",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Compliance with BSI TR-03183 guidelines",
+  "body": "### Is your feature request related to a problem? Please describe. The technical guideline [BSI TR-03183](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TR03183/BSI-TR-03183-2_v2_1_0.pdf?__blob=publicationFile&v=5) by the German Federal Office for Information Security (BSI) describes requirements for SBOMs. I compared the specification with the SBOMs produced by th",
+  "url": "https://github.com/CycloneDX/cyclonedx-gradle-plugin/issues/865"
+ },
+ {
+  "id": "github:2349100431",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Adding purl to generated SBOM",
+  "body": "### Is your feature request related to a problem? Please describe. We use [Black Duck](https://www.synopsys.com/software-integrity/software-composition-analysis-tools/black-duck-sca.html) for license and vulnerability scanning. I can upload a vcpkg-generated SBOM there, but it does not find any match. I am told, this is because vcpkgs SBOM are missing a [purl](https://github.com/package-url/purl-s",
+  "url": "https://github.com/microsoft/vcpkg/issues/39254"
+ },
+ {
+  "id": "github:4297231324",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Add support for CycloneDX v1.7 schema",
+  "body": "### Is your feature request related to a problem? Please describe. CycloneDX v1.7 has been released with updates to the SBOM schema. It would be helpful for the plugin to support generating SBOMs compliant with CycloneDX v1.7. ### Describe the solution you'd like Add support for CycloneDX v1.7, including any necessary updates to the data model and serialization to align with the latest schema. ###",
+  "url": "https://github.com/CycloneDX/cyclonedx-gradle-plugin/issues/832"
+ },
+ {
+  "id": "github:458782916",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Rethink security scanning CI approach",
+  "body": "Most of our javascript repositories are using the snyk security auditing tool in some fashion. This is often a CI check linked to github pull requests. I'm not sure this approach is the best. ## Problems with snyk as a pull request CI check - Running `snyk test` requires a snyk token which is a reaction-only secret and thus doesn't work when CI runs against a fork, which is the common case for com",
+  "url": "https://github.com/reactioncommerce/reaction-feature-requests/issues/66"
+ },
+ {
+  "id": "github:1977291903",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Native Image --enable-sbom option generates SBOM with dependency references and hierarchy",
+  "body": "**Feature request** Some vulnerabilities are only present if a dependency is brought in directly exposed by direct dependency. In some cases, the vulnerability does not exist if the dependency is a transitive of another dependency. If the SBOM contains dependency references and the hierarchy, then this can be calculated. The current SBOM generation has a flat structure and does not contain the dep",
+  "url": "https://github.com/oracle/graal/issues/7729"
+ },
+ {
+  "id": "github:320398167",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Fractal shellJS vulnerability",
+  "body": "## Background: - FEC pattern library (https://fec-pattern-library.app.cloud.gov/) is a public site used by the FEC to catalog our style components which is built with [Fractal](https://github.com/frctl/fractal) - Our vulnerability tracker, Snyk, flagged a [high severity command injection vulnerability](https://snyk.io/vuln/npm:shelljs:20140723) with Fractal that we can\u2019t patch ourselves. Here is a",
+  "url": "https://github.com/frctl/fractal/issues/437"
+ },
+ {
+  "id": "github:5124298236",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Epic: one agent loop \u2014 fold the threat hunt and the AI Agent Architecture into main",
+  "body": "Vigil runs **five agent loops**, three tool dispatchers and four transport layers, with rate limiting duplicated across three modules. All five are on `main` today: | Loop | File | Lines | |---|---|---| | chat + chat_stream + AgentSDK | `core/llm/harness/claude.py` | 3,487 | | daemon agent runner | `services/daemon/agent_runner.py` | 1,588 | | investigation supervision | `services/daemon/orchestra",
+  "url": "https://github.com/Vigil-SOC/vigil/issues/620"
+ },
+ {
+  "id": "hn:32006571",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 7,
+  "title": "AWS IAM Roles Anywhere",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=32006571"
+ },
+ {
+  "id": "hn:21688235",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 7,
+  "title": "AWS IAM Access Analyzer",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=21688235"
+ },
+ {
+  "id": "hn:12210932",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 7,
+  "title": "Complete AWS IAM Reference",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=12210932"
+ },
+ {
+  "id": "hn:18598008",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 7,
+  "title": "Critical Kubernetes security flaw (CVE-2018-1002105) in plain English",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=18598008"
+ },
+ {
+  "id": "hn:25129238",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 7,
+  "title": "Kubernetes Security Specialist certification (CKS) now available",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=25129238"
+ },
+ {
+  "id": "hn:24710366",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "hn",
+  "engagement": 7,
+  "title": "My Journey Reviving the SIEM",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=24710366"
+ },
+ {
+  "id": "hn:47014479",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "hn",
+  "engagement": 7,
+  "title": "Sentinel \u2013 Enterprise SIEM for startups (Splunk alternative, free)",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=47014479"
+ },
+ {
+  "id": "hn:33899951",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "hn",
+  "engagement": 7,
+  "title": "Free SOC 2 compliance tool for startups",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=33899951"
+ },
+ {
+  "id": "stackexchange:security:123539",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "stackexchange",
+  "engagement": 7,
+  "title": "Telnet alert on SIEM",
+  "body": "We are currently setting up the McAfee SIEM. Some rules have been set up using signature ID. Below is the alarm that triggers frequently: Summary: Signature ID 'Suspicious - Remote Shell Communication with Suspicious Host - Event or Flow' (47-4000180) match found The following events were found - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Source IP = 93.116.127.108",
+  "url": "https://security.stackexchange.com/questions/123539/telnet-alert-on-siem"
+ },
+ {
+  "id": "stackexchange:security:19867",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "stackexchange",
+  "engagement": 7,
+  "title": "SIEM technology is it database friendly?",
+  "body": "I have a few questions regarding the use of Databases in SIEM technology. I would appreciate if you guys can help me understand / answer these questions. The answers from you help me design the SIEM requirements. The questions are:- How does SIEM grows with the use of database? I'm talking in terms of high volume storage comparable to the size of banks or large country census data. How well does S",
+  "url": "https://security.stackexchange.com/questions/19867/siem-technology-is-it-database-friendly"
+ },
+ {
+  "id": "github:3754925424",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 7,
+  "title": "[Bug] Subagents fail to reliably understand and use the TaskOutput tool",
+  "body": "**Bug Description** This is an odd pattern that I encounter frequently when using a \"consolidation subagent\" to work around [issue #14053](https://github.com/anthropics/claude-code/issues/14053). Subagents constantly try to use TaskOutput as if it were a bash command, and generally seem to have no idea what they're doing: ```claude-code-session \u23fa All 16 review agents launched. Now launching consol",
+  "url": "https://github.com/anthropics/claude-code/issues/15083"
+ },
+ {
+  "id": "github:2200732848",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Implement Additional Validation for SCIM Server",
+  "body": "### Problem The FusionAuth SCIM Server currently advertises and allows integrators to create a schema. This schema might suggest to the SCIM client what attributes are required, etc. However, the current implementation of SCIM Server in FusionAuth does not validate the schema before provisioning a user or group. If you would like to prevent a user/group from being provisioned or modified in Fusion",
+  "url": "https://github.com/FusionAuth/fusionauth-issues/issues/2695"
+ },
+ {
+  "id": "github:4427822478",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 7,
+  "title": "Unable to generate API key when using External IdP (Azure AD)",
+  "body": "### Kiro Product IDE ### Feature Description Description: ## Problem I cannot generate a Kiro API key because the Kiro web portal (app.kiro.dev) does not support my authentication setup. ## My Configuration - **Kiro Profile**: Subscribed via AWS Amazon Q (us-east-1) - **Identity Management**: External IdP (Microsoft Entra ID / Azure AD) with SCIM provisioning - **IAM Identity Center region**: ap-s",
+  "url": "https://github.com/kirodotdev/Kiro/issues/8414"
+ },
+ {
+  "id": "github:5289860026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 7,
+  "title": "[feature]: Add workspaces to group projects and share members across them",
+  "body": "### Problem Every project manages its own members independently. Adding someone to multiple projects means creating a separate invite for each one. For instances with several projects and overlapping teams, this creates repetitive work and makes it easy to forget a project when onboarding or offboarding someone. SCIM groups partially solve this (an identity provider can map a group to multiple pro",
+  "url": "https://github.com/croffasia/itsaplan/issues/258"
+ },
+ {
+  "id": "github:5131262133",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 7,
+  "title": "SAML login for the standalone dashboard",
+  "body": "_Note: this issue was drafted by Claude via back-and-forth with @arthuursantos. The reasoning and decisions are his; the prose is Claude's._ ### Problem or use case In standalone mode the admin dashboard authenticates with a single shared **master key**: it is entered once on the sign-in screen and exchanged (`POST /v1/auth/session`) for an HttpOnly session cookie (`dashboard_sessions`, TTL `dashb",
+  "url": "https://github.com/mozilla-ai/otari/issues/564"
+ },
+ {
+  "id": "github:6525490029",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 7,
+  "title": "MYC-DIR-FABRIC-001: decentralized organizational directory and access fabric",
+  "body": "## Purpose Establish the Mycelix Directory Fabric (working name): a decentralized organizational identity, directory, authorization and trust plane built by composing the existing Mycelix Identity, Governance, Pulse and machine/workload identity work. This is not a second DID registry, a second credential system, a second policy engine, or a replacement for Holochain's host capability enforcement.",
+  "url": "https://github.com/Luminous-Dynamics/mycelix/issues/6428"
+ },
+ {
+  "id": "github:5434339119",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 6,
+  "title": "bench: gate remaining scanner dimensions and performance",
+  "body": "Parent EPIC: #1034 Maps EPIC work: **A5 + A6**. ## Goal Create reproducible accuracy and performance gates for the security dimensions that currently have no committed numbers, using one shared evidence contract while preserving subsystem-specific truth semantics. ## Scope - [ ] Secrets: provenance-backed corpus and differential against pinned Gitleaks/TruffleHog where comparable. - [ ] IaC/miscon",
+  "url": "https://github.com/KKloudTarus/synapse-ce/issues/1040"
+ },
+ {
+  "id": "github:5575620379",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 6,
+  "title": "Proposal: Add optional Native Amazon Aurora DSQL Support",
+  "body": "### Summary Hi, I\u2019m a developer on the Amazon Aurora DSQL team. Aurora DSQL uses the PostgreSQL wire protocol with IAM authentication and TLS. psqlODBC users currently require external code or proxies to generate and manage IAM tokens, adding operational complexity. ### Proposed Support Add an optional Aurora DSQL connection mode that: - Uses the AWS credential chain. - Resolves the AWS Region fro",
+  "url": "https://github.com/postgresql-interfaces/psqlodbc/issues/217"
+ },
+ {
+  "id": "github:2198230819",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 6,
+  "title": "Create a `Policy` CRD",
+  "body": "**Is your feature request related to a problem? Please describe.** Currently, when using Pomerium as an ingress controller, configuring policies for access control requires embedding the policy rules directly within the annotations of each Ingress resource. This can lead to duplication of policy definitions across multiple Ingress resources and becomes cumbersome to manage as the number of Ingress",
+  "url": "https://github.com/pomerium/ingress-controller/issues/925"
+ },
+ {
+  "id": "github:3269581365",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 6,
+  "title": "Provide SBOM information in an \"queryable\" way",
+  "body": "## Is your feature request related to a problem? Some companies require running an MDM/Remote management solution for \"security&audit purposes\". One of the most trivial checks used by these solutions on traditional distros is usually to enumerate installed packages+versions and submit them to a centralized fleet management system which then acts (or doesn't act) on that info appropriately. Nix pro",
+  "url": "https://github.com/NixOS/nix/issues/13564"
+ },
+ {
+  "id": "github:3792379594",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 6,
+  "title": "service fs failed: injecting event blocked for 60s",
+  "body": "### Description I get this error when running a container (of Immich) that is binding to a folder containing thousands of pictures and videos (26,606 files, 417 GB, I'm using Immich as an alternative to Google Photos, both the Docker volumes and the folder containing the pictures and videos are on the same drive). The container starts without any problem, however after 2/3 days, I get this \"servic",
+  "url": "https://github.com/docker/desktop-linux/issues/314"
+ },
+ {
+  "id": "github:2177926573",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 6,
+  "title": "Mining contraption gets stuck in walls",
+  "body": "### Describe the Bug This mining contraption should drill through whatever blocks are in front of it and collect them, as well as place blocks in front of the contraption to destroy any water or lava in front of it. For a while, it does exactly that, but it isn't long before something goes wrong, and the contraption gets stuck. I made an identical contraption without the deployers, and it didn't g",
+  "url": "https://github.com/Creators-of-Create/Create/issues/6235"
+ },
+ {
+  "id": "github:832458840",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 6,
+  "title": "Upgrade of Dependancies",
+  "body": "Hi Rxaviers, I'm using your \"cldr-data\": \"^36.0.0\" with a dependency cldr-data-downloader@0.3.5 and one of the dependencies are outdated and have been flagged with a vulnerability adm-zip@0.4.11 There is an updated adm-zip@0.5.4 Would it be possible for you to update to the latest dependencies, please. Or supply alternative suggestions. Many Thanks in Advance & for the lib that you made available.",
+  "url": "https://github.com/rxaviers/cldr-data-npm/issues/71"
+ },
+ {
+  "id": "github:3062492349",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 6,
+  "title": "Require Configuration or Generation of a Strong, Temporary Initial Administrator Password",
+  "body": "### Current Behavior **Problem:** The default administrator username and password (\"admin\"/\"admin\") for a new Dependency-Track instance are widely known. This presents a critical security vulnerability immediately after deployment, leaving new systems exposed until the password is manually changed. **Context:** Mandating the configuration or generation of a strong, temporary initial password is cr",
+  "url": "https://github.com/DependencyTrack/dependency-track/issues/4956"
+ },
+ {
+  "id": "github:2453077076",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 6,
+  "title": "CVE-2023-29827",
+  "body": "**Library Affected**: workbox-build v7.1.0 and workbox-webpack-plugin v7.1.0. **Browser & Platform**: All Browsers **Issue or Feature Request Description**: Dear Maintainer/Project Team, I am writing to inform you about a security vulnerability in the EJS template engine (version 3.1.10) that affects your project via transitive dependencies. Specifically, the vulnerability is present in surma/roll",
+  "url": "https://github.com/GoogleChrome/workbox/issues/3342"
+ },
+ {
+  "id": "github:1118328282",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 6,
+  "title": "Wishlist / inquiry: \"advisory impact\" standard.",
+  "body": "# Advisory Impact Standard Is there a standard for documenting how upstream dependency vulnerabilities impact a given crate, so that users of the crate know (a) the authors are aware and (b) they have some guidance on the impact for the dependent crate/binaries? This is an idea that's been percolating for me and I'm posting it here because if there's already something like this (I haven't found it",
+  "url": "https://github.com/rustsec/rustsec/issues/505"
+ },
+ {
+  "id": "github:3713058531",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 6,
+  "title": "\ud83d\udd12 Security: Moderate vulnerability in prismjs dependency chain affecting @copilotkit/react-ui",
+  "body": "### \ud83d\udd12 Security Issue A security vulnerability has been identified in the `prismjs` dependency used by `@copilotkit/react-ui` through `react-syntax-highlighter`. ### \ud83d\udcca Vulnerability Details **CVE:** CVE-2024-55591 **Severity:** Moderate **Package:** prismjs **Vulnerable Range:** = 1.30.0`, or 2. **Medium-term:** Replace `react-syntax-highlighter` with a more actively maintained syntax highlighting ",
+  "url": "https://github.com/CopilotKit/CopilotKit/issues/2823"
+ },
+ {
+  "id": "github:5113184569",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 6,
+  "title": "[Feature]: Publish APK signing certificate fingerprint and checksums alongside releases",
+  "body": "### Are you willing to submit a PR? None ### What problem does this solve? Hi, first off great project. I just started self hosting this on TrueNAS and it has been working really well. One thing I noticed is that the releases page does not currently publish a checksum file or APK signing certificate fingerprint alongside the APK download. For users who sideload on security focused Android distribu",
+  "url": "https://github.com/CodeWithCJ/SparkyFitness/issues/2086"
+ },
+ {
+  "id": "github:1432819661",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 6,
+  "title": "Query regarding setting up and forwarding alerts from SIEM to Slack",
+  "body": "Hi, I have questions regarding the Alerting tool of the SIEM OpenSearch. I understand alerts and their triggers can be setup from the SIEM OpenSearch dashboard console and subsequently forward the triggered alerts to channels such as Slack. I have setup my SIEM to visualise the logs data from various AWS services like GuardDuty, Security Hub, etc and also setup alerts and their triggers so as to f",
+  "url": "https://github.com/aws-samples/siem-on-amazon-opensearch-service/issues/324"
+ },
+ {
+  "id": "hn:20587193",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 6,
+  "title": "A Technical Analysis of the Capital One Cloud Misconfiguration Breach",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=20587193"
+ },
+ {
+  "id": "hn:23889177",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 6,
+  "title": "AWS IAM policy generator with fluent interface",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=23889177"
+ },
+ {
+  "id": "hn:11254803",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 6,
+  "title": "Scoping AWS IAM Roles to Docker Containers",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=11254803"
+ },
+ {
+  "id": "hn:32121730",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 6,
+  "title": "Microsoft open sources Salus software bill of materials (SBOM) generation tool",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=32121730"
+ },
+ {
+  "id": "stackexchange:security:245529",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "stackexchange",
+  "engagement": 6,
+  "title": "web app 3rd party JS dependency vulnerability management",
+  "body": "As a security engineer, I wonder about the common approach for web app 3rd party JS dependency vulnerability management. We have a lot of apps depend on Jquery etc. In a regular vulnerability scan, old versions of JS libraries (which alot of them has XSS CVEs) reported as vulnerability. Without really reading and understanding the code, you can't say your app is affected by those XSS's or not and ",
+  "url": "https://security.stackexchange.com/questions/245529/web-app-3rd-party-js-dependency-vulnerability-management"
+ },
+ {
+  "id": "stackexchange:security:223241",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "stackexchange",
+  "engagement": 6,
+  "title": "vulnerability scanner report to SIEM",
+  "body": "Our partners require such configuration as vulnerability scanner A (well-known in CIS area) SIEM B (leaders of the market) And they should perform a scan of the network, get a report then forward it to the SIEM supposedly to challenge the findings against IOCs. They insist to get the report into the SIEM -- we don't want to argue with them. Does challenging the report against IOCs via SIEM sound r",
+  "url": "https://security.stackexchange.com/questions/223241/vulnerability-scanner-report-to-siem"
+ },
+ {
+  "id": "stackexchange:security:128929",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "stackexchange",
+  "engagement": 6,
+  "title": "Feeding Azure portal logs into a SIEM solution",
+  "body": "Currently working on a cloud transformation project where all infrastructure is being placed into Azure. We currently use a SIEM solution to monitor and assess events across the environment. The adoption of Azure has added an additional level of administrative actions that we would need to keep an eye on. Our design uses AD groups that are assigned to RBAC roles and so we can monitor changes to th",
+  "url": "https://security.stackexchange.com/questions/128929/feeding-azure-portal-logs-into-a-siem-solution"
+ },
+ {
+  "id": "stackexchange:security:130810",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "stackexchange",
+  "engagement": 6,
+  "title": "How to create alerts for Watchgurd firewall in SIEM",
+  "body": "I'm working in a SOC (Security Operation Center) where we use a WatchGuard firewall in our customer's environment. We currently create alerts for other devices (SonicWall,Cisco ASA) based on event codes, and messages. I want to similar create WatchGuard alerts, but my WatchGuard raw logs don't show any event codes. Can some one please help me in understand how to create alerts for WatchGuard or pl",
+  "url": "https://security.stackexchange.com/questions/130810/how-to-create-alerts-for-watchgurd-firewall-in-siem"
+ },
+ {
+  "id": "stackexchange:security:269640",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "stackexchange",
+  "engagement": 6,
+  "title": "Insights into SIEM logging for most data exfiltration scenarios",
+  "body": "I would like some input from security professionals on the data exfiltration scenarios commonly executed by ransomware gangs. My area is system recovery & I am not knowledgeable about SIEM. I assume it is a golden window and weak point of even advanced ransomware. That is, if they exfiltrate 1 TB at 100 Gb per day, we have a number of days to react. Even if they disguise this over https and differ",
+  "url": "https://security.stackexchange.com/questions/269640/insights-into-siem-logging-for-most-data-exfiltration-scenarios"
+ },
+ {
+  "id": "stackexchange:security:83385",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "stackexchange",
+  "engagement": 6,
+  "title": "Virtual Pentesting Lab on popular Enterprise level UTM and SIEM",
+  "body": "I\u2019m planning to add a new Penetration Testing Segment to my personal \u201cPen Lab\u201d. It\u2019ll be centered around Vulnerability Assessments /Penetration Testing on market leading Next-Gen Enterprise SIEM,UTM,Firewalls Etc. The following Enterprise Level Information Assurance Software I wish test: Network IDS: Cisco 2900 3500XL Juniper M or T Cisco 5000 Firewall Antivirus: Palo Alto Network VM-Series Watchg",
+  "url": "https://security.stackexchange.com/questions/83385/virtual-pentesting-lab-on-popular-enterprise-level-utm-and-siem"
+ },
+ {
+  "id": "hn:42372596",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 6,
+  "title": "SSO Tax",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=42372596"
+ },
+ {
+  "id": "hn:41442171",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 6,
+  "title": "SSO Tax",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=41442171"
+ },
+ {
+  "id": "stackexchange:security:206445",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "stackexchange",
+  "engagement": 6,
+  "title": "How is Privileged identity management (PIM) different from privileged access management (PAM)?",
+  "body": "I am very confused about those two, I was trying to understand the difference but it all sounds the same from what I read online.",
+  "url": "https://security.stackexchange.com/questions/206445/how-is-privileged-identity-management-pim-different-from-privileged-access-man"
+ },
+ {
+  "id": "github:3050585993",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 5,
+  "title": "PostgreSQL Connection Error to Supabase: connect ENETUNREACH 2600:1f1e:75b:4b01:317e:2906:b007:5fab:5432 - Local (:::0)",
+  "body": "### Bug Description I am currently using n8n Cloud and experiencing a connection issue when trying to set up a PostgreSQL credential to connect to my Supabase database. My n8n Cloud Postgres Credential Configuration is as follows: Credential Name: Gestor Brecho Host: db.nfomheksnqsuxtwnijgg.supabase.co Database: postgres User: n8n_user (This role has been created in my Supabase PostgreSQL database",
+  "url": "https://github.com/n8n-io/n8n/issues/15239"
+ },
+ {
+  "id": "github:3171681158",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Improve the EKS detector",
+  "body": "### Description The current EKS detector has a few shortcomings as referenced in #1856 and #6309 that require it to be configured with some sort of additional permissions before it can work at all. 1. Access to the `kube-system/aws-auth` ConfigMap. This is the \"am I in/on EKS?\" test. It's problematic in that it's granting access to possibly one of the most critical ConfigMaps in the cluster, but a",
+  "url": "https://github.com/open-telemetry/opentelemetry-go-contrib/issues/7502"
+ },
+ {
+  "id": "github:1056775990",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Enabling non-default regions",
+  "body": "### Subject of the issue (This is likely a feature request because I think the currently suggested method of allowing specific regions in org-formation [works a little differently](https://github.com/org-formation/org-formation-reference/blob/0f1d1020a51416e4d81dd7be7d8166cf78252672/src/templates/010-scps/deny-unsupported-regions.yml) to what I'm looking for here.) I have an org-formation definiti",
+  "url": "https://github.com/org-formation/org-formation-cli/issues/292"
+ },
+ {
+  "id": "github:2804635362",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Add seccompProfile to securityContext",
+  "body": "**Is your feature request related to a problem? Please describe.** I think it'd be nice to have this a default under `securityContext` for the nginx Deployment resource. ```yaml seccompProfile: type: RuntimeDefault ``` https://kubernetes.io/docs/tutorials/security/seccomp/#enable-the-use-of-runtimedefault-as-the-default-seccomp-profile-for-all-workloads Docker has a list of syscalls that are banne",
+  "url": "https://github.com/nginx/kubernetes-ingress/issues/7190"
+ },
+ {
+  "id": "github:4632120970",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 5,
+  "title": "alb.ingress.kubernetes.io/inbound-cidrs to automatically split to multiple sgs",
+  "body": "**Describe the feature you are requesting** We were heavily using the annotation `alb.ingress.kubernetes.io/inbound-cidrs`, listing more than 30 IPs, but started to get: > Failed deploy model due to operation error EC2: AuthorizeSecurityGroupIngress, https response error StatusCode: 400, RequestID: XYZ, api error RulesPerSecurityGroupLimitExceeded: The maximum number of rules per security group ha",
+  "url": "https://github.com/kubernetes-sigs/aws-load-balancer-controller/issues/4789"
+ },
+ {
+  "id": "github:5561851538",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 5,
+  "title": "[E11-X02] Configure SAST, SCA and CI guardrails for the chart-engine package",
+  "body": "| Field | Value | |---|---| | Key | E11-X02 | | Kind | Task | | Estimate | 2 | | Sprint | Sprint 06 | | Component | chart-engine | | Phase | P1 Core Charting | | Priority | P2 Medium | | Perspective | Security | | Risk | R8 Browser/GPU compat | | Parent | E11 | | Blocked by | E11-X01 | ## Context `00-planning-brief.md` makes SAST (CodeQL/Semgrep), SCA (Dependabot/npm audit) and secrets scanning no",
+  "url": "https://github.com/CandleViewer/CandleViewer/issues/392"
+ },
+ {
+  "id": "github:2230687682",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 5,
+  "title": "use of ldd and best practices improvements",
+  "body": "Came across this neat project. I am the author of a similar but more comprehensive [tool](https://github.com/owasp-dep-scan/blint) that can generate a full sbom. Noticed a few improvement opportunities in this project. ## Use of unsafe commands like ldd It is never a good idea to run commands like ldd, strace, and strings on malicious binaries directly. Below is an extract from the man pages for l",
+  "url": "https://github.com/stolk/sotrace/issues/1"
+ },
+ {
+  "id": "github:1587952625",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Consider Alternative Identifier Logic Related to purl and CPEs",
+  "body": "One of the open questions at the bottom of the README asks: > Should we preference towards purls or CPEs? Both? After considering this question and doing some related (but not definitive) research, I would like to suggest two options. Option 1: `sbom-scorecard` logic related to package IDs requires EITHER a purl or a CPE. Right now, the logic, IIUC, requires that each package contain both a purl a",
+  "url": "https://github.com/eBay/sbom-scorecard/issues/36"
+ },
+ {
+  "id": "github:4763618244",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Is the project actively maintained?",
+  "body": "Hi, and thanks for go-semantic-release \u2014 the single-binary + plugin-registry design has clearly influenced how people think about release automation in Go. I wanted to ask, openly: is the core binary still actively maintained? The last release was v2.31.0 (Oct 2024), so I wasn't sure whether it's stable-and-done, on a quiet stretch, or looking for hands. No judgment either way \u2014 just trying to und",
+  "url": "https://github.com/go-semantic-release/semantic-release/issues/204"
+ },
+ {
+  "id": "github:1486825021",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 5,
+  "title": "[Sandbox] ko",
+  "body": "### Application contact emails jason@chainguard.dev jonjohnson@google.com ### Project Summary Easy and secure container builds for Go applications ### Project Description ko is a tool designed to make building containers for Go applications as simple as possible, without Dockerfiles, or Docker, or the associated privilege required. ko simply runs `go build` in your environment and uses OCI registr",
+  "url": "https://github.com/cncf/sandbox/issues/17"
+ },
+ {
+  "id": "github:5432972422",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 5,
+  "title": "[tracking] Enhancement backlog from the 2026-09-12 system review",
+  "body": "## What this is A review of the integrated MVP (`main` at `988e6fc`) against its own docs \u2014 `docs/ROADMAP.md`, `docs/MVP-BACKLOG.md`, `docs/RISK-PRINCIPLES.md`, `docs/EVALUATION-FRAMEWORK.md`, `docs/SECURITY-REVIEW-2026-09.md` \u2014 looking for (a) controls the docs promise that the code does not have, (b) defects found by reading and executing the code, and (c) the gaps standing between the paper MVP",
+  "url": "https://github.com/zebadee2kk/DeFi-TraderStack-Agent/issues/75"
+ },
+ {
+  "id": "github:6523320136",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 5,
+  "title": "[BUG] ClusterFuzzLite's missing-artifact lookups page through 8,198 artifacts, so PR fuzzing times out for a new target or a new sanitizer",
+  "body": "## What happens ClusterFuzzLite keeps its corpora and baseline builds as Actions artifacts, and looks one up by listing **every** artifact in the repository. That's `_find_artifact()` \u2192 `github_api.find_artifact()` in `infra/cifuzz/filestore/github_actions/`. The repo now holds **8,198** artifacts (`GET /actions/artifacts` `total_count`), so a lookup for an artifact that doesn't exist pages throug",
+  "url": "https://github.com/mgradwohl/tasksmack/issues/4617"
+ },
+ {
+  "id": "github:4422413519",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Vulnerabilities in transitive dependencies",
+  "body": "### What type of issue is this? Question ### What SharePoint development model, framework, SDK or API is this about? \ud83d\udca5 SharePoint Framework ### Target SharePoint environment SharePoint Online ### What browser(s) / client(s) have you tested - [ ] \ud83d\udca5 Internet Explorer - [ ] \ud83d\udca5 Microsoft Edge - [ ] \ud83d\udca5 Google Chrome - [ ] \ud83d\udca5 FireFox - [ ] \ud83d\udca5 Safari - [ ] mobile (iOS/iPadOS) - [ ] mobile (Android) - [x] not",
+  "url": "https://github.com/SharePoint/sp-dev-docs/issues/10823"
+ },
+ {
+  "id": "github:4826299360",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Security Vulnerability: Remove or make WEBrick dependency optional due to CVE-2026-38969",
+  "body": "### Description The `ferrum` gem currently relies on `webrick` as a hard runtime dependency in its gemspec. Because `webrick` was extracted from the Ruby standard library, it receives fewer updates and has recently been hit with a security vulnerability that forces automated bundle security audits (like `bundler-audit` or Dependabot) to fail. Running security checks against a project using `ferrum",
+  "url": "https://github.com/rubycdp/ferrum/issues/599"
+ },
+ {
+  "id": "github:5040853209",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Can you please strip `devDependencies` from npm publish",
+  "body": "### Clear and concise description of the problem Stripping `devDependencies` and even `scripts` is something that I've been doing for a few years already. Why is it bad to keep dev dependencies? The main disadvantage to publishing dev deps is that all of these dependencies get inspected by tools like Renovate, Dependabot and even npm /pnpm audits, these tools don't seem to make the distinction tha",
+  "url": "https://github.com/sxzz/verkit/issues/11"
+ },
+ {
+  "id": "github:3236152669",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Avoid using `dependencyOverrides`: it's often harmful & confusing!",
+  "body": "If you're looking to fix a dependency vulnerability (eg. one reported by the [Dependency Vulnerability dashboard](https://metrics.gutools.co.uk/d/fdib3p8l85jwgd/dependency-vulnerabilities-by-team?orgId=1&from=now-6h&to=now&timezone=browser&var-repo_owner=$__all)), you're often looking for a way to force your project to use a newer version of some dependency (let's say `foobar`) that's been transit",
+  "url": "https://github.com/guardian/maintaining-scala-projects/issues/20"
+ },
+ {
+  "id": "github:5080226705",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "github",
+  "engagement": 5,
+  "title": "[FEATURE]: Add markdown report output for CI/CD",
+  "body": "## Summary Add Markdown as a supported DockSec report format. This would allow scan results to be published directly into pull request comments, CI/CD job summaries, GitHub issues, and other Markdown-compatible interfaces. ## Problem Statement DockSec currently supports HTML, PDF, JSON, and CSV reports, but none of these formats can be posted directly as a readable pull request comment through Git",
+  "url": "https://github.com/OWASP/DockSec/issues/159"
+ },
+ {
+  "id": "github:3953030324",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Component donation: Google SecOps Exporter",
+  "body": "### Building and distributing outside this repository - [x] I understand I can use and distribute my component outside of this repository. ### Existing component implementation https://github.com/observIQ/bindplane-otel-collector/tree/main/exporter/chronicleexporter ### Components covering similar use cases _No response_ ### The purpose and use-cases of the component The Google SecOps Exporter sen",
+  "url": "https://github.com/open-telemetry/opentelemetry-collector-contrib/issues/46148"
+ },
+ {
+  "id": "github:4398376902",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 5,
+  "title": "[Feature]: OS-Level Enforcement in AI Agent Governance",
+  "body": "### Package agent-os-kernel ### Problem Statement Modern AI agents are rapidly evolving from passive assistants into autonomous systems capable of executing workflows, invoking tools, accessing APIs, modifying infrastructure, interacting with enterprise data, and orchestrating cross-system operations. Current governance frameworks, including application-layer agent governance toolkits, primarily o",
+  "url": "https://github.com/microsoft/agent-governance-toolkit/issues/1793"
+ },
+ {
+  "id": "github:3707772545",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 5,
+  "title": "[Feature Request] Digital Tripwire / High-Fidelity Alerting System",
+  "body": "Hi everyone, I've been thinking about this feature for a few days and I summarized it in this issue to talk about it. --- **Is your feature request related to a problem? Please describe.** Currently, Beelzebub treats all interactions with the same level of severity. Whether a user runs `ls` or tries to `cat /etc/shadow`, the tracer logs a generic Event with status `Stateless` or `Interaction`. Thi",
+  "url": "https://github.com/beelzebub-labs/beelzebub/issues/245"
+ },
+ {
+  "id": "github:582620458",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Failing test: apis Siem GraphQL Endpoints authentications Make sure that we get Authentication data",
+  "body": "This failure is preventing the promotion of the current Elasticsearch nightly snapshot: 7.x/7.7: https://kibana-ci.elastic.co/job/elasticsearch+snapshots+verify/343/execution/node/335/log/ ``` 13:42:35 1) apis 13:42:35 Siem GraphQL Endpoints 13:42:35 authentications 13:42:35 Make sure that we get Authentication data: 13:42:35 Error: GraphQL error: [aggregation_execution_exception] Invalid aggregat",
+  "url": "https://github.com/elastic/kibana/issues/60331"
+ },
+ {
+  "id": "github:533780150",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Elastalert correlation rules capability lacking",
+  "body": "Hi, I'm trying to use 'Elastalaert' for correlation capability, but so far I'm unable to find a true way to get it done. This feature is must , If i want to do built siem capability which cannot exist without correlation. Use cases e.g - An example could be finding 100 failed login events, followed by a successful logon from the same IP address - when none of these rules match in this many minutes",
+  "url": "https://github.com/YelpArchive/elastalert/issues/2594"
+ },
+ {
+  "id": "hn:28074485",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 5,
+  "title": "Magpie \u2013 OSS CSPM and non-native service enumeration",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=28074485"
+ },
+ {
+  "id": "hn:28070302",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 5,
+  "title": "Magpie \u2013 Open-Source CSPM",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=28070302"
+ },
+ {
+  "id": "hn:26608440",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 5,
+  "title": "A curated list for Kubernetes Security resources",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=26608440"
+ },
+ {
+  "id": "hn:20627450",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 5,
+  "title": "Open Sourcing the Kubernetes Security Audit",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=20627450"
+ },
+ {
+  "id": "hn:48647802",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 5,
+  "title": "AI agent security needs a composition graph, not just an SBOM",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=48647802"
+ },
+ {
+  "id": "hn:48174478",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 5,
+  "title": "EDR vendors: source code access (3), staged updates (8), SBoM rare",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=48174478"
+ },
+ {
+  "id": "hn:31742314",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 5,
+  "title": "SBOM in Action: Finding Vulnerabilities with a Software Bill of Materials",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=31742314"
+ },
+ {
+  "id": "hn:29002414",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 5,
+  "title": "Open source and free software and SBOM attestation service for the community",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=29002414"
+ },
+ {
+  "id": "hn:42898103",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "hn",
+  "engagement": 5,
+  "title": "Tailpipe \u2013 open-source SIEM for instant log insights, powered by DuckDB",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=42898103"
+ },
+ {
+  "id": "stackexchange:security:225611",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "stackexchange",
+  "engagement": 5,
+  "title": "AWS IAM policies that differentiate between console & access key access",
+  "body": "Question: How can an AWS IAM policy be devised to differentiate between a console (web) and access key (API) access? Use Case: Say, I want to allow the a certain group of users full IAM privileges via console(web), and read only IAM via access key (API). The specific use case is that I trust some AWS users with full IAM privileges, as they have 2fa for console access. They dont practice 2fa for ac",
+  "url": "https://security.stackexchange.com/questions/225611/aws-iam-policies-that-differentiate-between-console-access-key-access"
+ },
+ {
+  "id": "github:5196362385",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 5,
+  "title": "agent-approval-check ignores valid approvers before repository permission check",
+  "body": "## Summary `agent-approval-check` reports `0/N` approvals even when reviewers have approved the current head commit and have repository write access. The same problem affects a valid `/approve ` comment. The action completes successfully and posts a new pending commit status, but it never calls the collaborator-permission endpoint for any candidate. This suggests candidates are being discarded by ",
+  "url": "https://github.com/anthropics/claude-code-action/issues/1700"
+ },
+ {
+  "id": "github:3930551363",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 5,
+  "title": "Feature Request: Support for Private Git Repositories and npm Packages",
+  "body": "## \ud83c\udfaf Summary Add support for installing skills from: 1. **Private Git repositories** (GitLab, Bitbucket, self-hosted) 2. **npm packages** (public and private registries) ## \ud83d\udd0d Current Limitation Currently, `agent-skills-cli` only supports: - \u2705 Public GitHub repositories - \u2705 GitHub repositories with authentication - \u274c Private GitLab/Bitbucket repositories - \u274c npm packages ### Example that doesn't wo",
+  "url": "https://github.com/Karanjot786/agent-skills-cli/issues/2"
+ },
+ {
+  "id": "github:3168106337",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 5,
+  "title": "[RFE] GKE - Alternatives to service Account JSON Keys",
+  "body": "### Is your feature request related to a problem? Please describe. Currently, Rancher's GKE cluster provisioning **only supports Service Account JSON keys** for authentication with Google Cloud Platform. This creates significant security and compliance challenges: **Security Risks:** - JSON service account keys are long-lived credentials that never expire automatically - Keys must be stored and tr",
+  "url": "https://github.com/rancher/rancher/issues/50777"
+ },
+ {
+  "id": "github:2394932544",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 5,
+  "title": "[Feat]: SCIM Client support (Outbound provisioning)",
+  "body": "## \ud83d\ude80 Feature Feb 2024 blog post: https://supertokens.com/blog/what-is-scim-provisioning - While the article describes SCIM, it doesn't actually clarify that SuperTokens lacks support for this (_both as Server and Client_). - There is a [feature request for implementing support as a SCIM server](https://github.com/supertokens/supertokens-core/issues/898), thus the feature request raised here is for",
+  "url": "https://github.com/supertokens/supertokens-core/issues/1009"
+ },
+ {
+  "id": "github:6419542413",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 5,
+  "title": "ZITADEL as an identity provider beside Keycloak",
+  "body": "The owner wants ZITADEL supported as a full alternative to Keycloak as FerroEHR's identity provider, with a complete compose example for testing. This issue holds the research: how FerroEHR uses Keycloak today, what ZITADEL offers for each use, and what has to change. The sub-issues carry the work. Sources: ZITADEL at tag `v4.20.3` (commit `a8b256c9`, the newest stable release, 2026-11-13), its do",
+  "url": "https://github.com/FerroHEALTH/FerroEHR/issues/5827"
+ },
+ {
+  "id": "hn:42977309",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 5,
+  "title": "The SSO Tax Is Smart Business, and Bad Security",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=42977309"
+ },
+ {
+  "id": "hn:37599084",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 5,
+  "title": "The True Cost of Okta \u2013 SSO Tax Impact",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=37599084"
+ },
+ {
+  "id": "hn:32927242",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 5,
+  "title": "Explaining the Backlash to the SSO Tax",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=32927242"
+ },
+ {
+  "id": "github:780827546",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 4,
+  "title": "Detailed list of permissions for AWS iam role too open",
+  "body": "## Do you already have an issue opened with F5 support? no ## Description Looking for a more granular list of permissions for the AWS IAM role. https://clouddocs.f5.com/products/extensions/f5-cloud-failover/latest/userguide/aws.html#create-and-assign-an-iam-role Example currently... EC2 Read/Write S3 Read/Write STS Assume Role The Azure and GCP roles for CFE have more granular permissions listed. ",
+  "url": "https://github.com/F5Networks/f5-cloud-failover-extension/issues/57"
+ },
+ {
+  "id": "github:1029192887",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 4,
+  "title": "[docs] - K8s AWS auth and roles",
+  "body": "### Dagster Documentation Gap K8s AWS auth and roles --- ## Conversation excerpt [Full Slack conversation](https://dagster.slack.com/archives/C014N0PK37E/p1634326545059500?thread_ts=1634326545.059500&cid=C014N0PK37E) Conversation U02J848FL9F: Folks, the helm chart renders the runLauncher ``` run_launcher: module: dagster_celery_k8s class: CeleryK8sRunLauncher config: dagster_home: env: DAGSTER_HOM",
+  "url": "https://github.com/dagster-io/dagster/issues/5232"
+ },
+ {
+  "id": "github:1165034832",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 4,
+  "title": "Cross-account AWS Datasync location tries to use region as bucket name / shows wrong error if source account's bucket policy does not allow access from the destination account in which the locations are created",
+  "body": "### Community Note * Please vote on this issue by adding a \ud83d\udc4d [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) to the original issue to help the community and maintainers prioritize this request * Please do not leave \"+1\" or other comments that do not add relevant new information or questions, they generate extra noise for issue followers and do not",
+  "url": "https://github.com/hashicorp/terraform-provider-aws/issues/23611"
+ },
+ {
+  "id": "github:1359912880",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 4,
+  "title": "[csi-secrets-store-provider-aws] Update subchart",
+  "body": "**Is your feature request related to a problem?** In this example you are using features of csi 1.2, but the helm chart still deploys 1.1. https://aws.amazon.com/blogs/security/how-to-use-aws-secrets-configuration-provider-with-kubernetes-secrets-store-csi-driver/ **Is your feature request related to a specific Helm chart, if yes mention name of the chart?** csi-secrets-store-provider-aws **Descri",
+  "url": "https://github.com/aws/eks-charts/issues/815"
+ },
+ {
+  "id": "github:3959060405",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 4,
+  "title": "[IMPROVEMENT] RBAC : Longhorn requires to be able to list all secrets in all namespaces",
+  "body": "### Is your improvement request related to a feature? Please describe (\ud83d\udc4d if you like this request) Even though Longhorn already has a wildcard privileges for all resources of type secret within its namespace: ``` $ kubectl -n longhorn-system get role longhorn -o yaml ``` ``` - apiGroups: - \"\" resources: - pods - pods/log - events - secrets - services - endpoints - configmaps - serviceaccounts - pe",
+  "url": "https://github.com/longhorn/longhorn/issues/12680"
+ },
+ {
+  "id": "github:1952792836",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "github",
+  "engagement": 4,
+  "title": "Opening a Jupyter notebook disrupts existing SSH connection with the remote",
+  "body": "Does this issue occur when all extensions are disabled?: Yes/No Report Issue' dialog can assist with this. --> - VS Code Version: 1.83.1 - OS Version: Local: Ubuntu 22.04, Remote: Ubuntu 20.04 - Jupyter extension version: v2023.9.1102792234 - Remote SSh extension version: v0.106.5 - Python extension version: v2023.18.0 I have two servers one with Ubuntu 20.04 and the other with 22.04. This bug occ",
+  "url": "https://github.com/microsoft/vscode/issues/196022"
+ }
+]

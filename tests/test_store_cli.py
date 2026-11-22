@@ -31,3 +31,10 @@ def test_build_queries_per_source():
         '"is there a tool" "SBOM"', '"alternative to" "SBOM"',
         '"is there a tool" "SIEM"', '"alternative to" "SIEM"',
     ]
+
+
+def test_negative_engagement_is_not_dropped(tmp_path):
+    store = Store(tmp_path / "s.db")
+    store.upsert([make("1", -2), make("2", 3)])
+    assert {r["id"] for r in store.iter_signals()} == {"hn:1", "hn:2"}
+    assert [r["id"] for r in store.iter_signals(min_engagement=0)] == ["hn:2"]

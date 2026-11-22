@@ -1,0 +1,180 @@
+{"id": "github:647960270", "on_segment": "n", "need": "n", "reason": "macOS Homebrew compatibility tracking, not cloud security"}
+{"id": "hn:24498678", "on_segment": "n", "need": "n", "reason": "IAM service outage report, not posture or IAM need"}
+{"id": "hn:33566419", "on_segment": "y", "need": "n", "reason": "Opinion essay on IAM role complexity"}
+{"id": "hn:40922740", "on_segment": "y", "need": "n", "reason": "Tool launch for visualizing IAM policies"}
+{"id": "hn:20655017", "on_segment": "y", "need": "n", "reason": "Kubernetes security assessment document"}
+{"id": "github:4048879798", "on_segment": "n", "need": "n", "reason": "LLM backend request, not cloud security"}
+{"id": "hn:13940771", "on_segment": "y", "need": "n", "reason": "Explainer on IAM policies"}
+{"id": "hn:16764743", "on_segment": "y", "need": "n", "reason": "Best-practice guide"}
+{"id": "hn:18906788", "on_segment": "y", "need": "n", "reason": "Best-practice guide"}
+{"id": "hn:32104805", "on_segment": "y", "need": "n", "reason": "Open-source SBOM tool announcement"}
+{"id": "stackexchange:security:101296", "on_segment": "y", "need": "n", "reason": "Learning question on ELK SIEM setup, no gap"}
+{"id": "hn:38248758", "on_segment": "y", "need": "n", "reason": "SBOM proposal article"}
+{"id": "hn:41303844", "on_segment": "y", "need": "n", "reason": "Opinion essay on SSO tax"}
+{"id": "hn:43080378", "on_segment": "y", "need": "n", "reason": "Opinion essay on selling SBOM fragments"}
+{"id": "hn:19151271", "on_segment": "n", "need": "n", "reason": "Red team tooling, not small-team detection"}
+{"id": "stackexchange:security:103242", "on_segment": "y", "need": "y", "reason": "SIEM noise from firewall denies, seeks to reduce alerts"}
+{"id": "hn:20278139", "on_segment": "y", "need": "n", "reason": "Product announcement"}
+{"id": "hn:48723677", "on_segment": "y", "need": "n", "reason": "Product launch"}
+{"id": "hn:41350151", "on_segment": "y", "need": "n", "reason": "Reference list of IAM tools"}
+{"id": "hn:24656111", "on_segment": "n", "need": "n", "reason": "IAM service outage report"}
+{"id": "github:576369497", "on_segment": "y", "need": "y", "reason": "Feature request: IAM authenticator to use SSO cached credentials"}
+{"id": "hn:37295439", "on_segment": "y", "need": "n", "reason": "Article on IAM cleanup"}
+{"id": "hn:25690805", "on_segment": "y", "need": "n", "reason": "Acquisition news"}
+{"id": "github:4447116854", "on_segment": "n", "need": "n", "reason": "Package manager roadmap, unrelated"}
+{"id": "github:2503545888", "on_segment": "n", "need": "n", "reason": "S3 UI component RFC, not security"}
+{"id": "github:1095571058", "on_segment": "y", "need": "n", "reason": "Request to write hardening guide, documentation only"}
+{"id": "hn:5784817", "on_segment": "y", "need": "n", "reason": "Feature announcement news"}
+{"id": "github:4022880214", "on_segment": "n", "need": "n", "reason": "Infrastructure tooling feature, not security"}
+{"id": "hn:35643709", "on_segment": "y", "need": "y", "reason": "Questions whether Okta still worth cost versus Google SSO"}
+{"id": "github:1064569632", "on_segment": "y", "need": "y", "reason": "Requests IAM role auth instead of static keys"}
+{"id": "github:858482315", "on_segment": "y", "need": "y", "reason": "Requests IAM authentication to RDS"}
+{"id": "github:2039485724", "on_segment": "y", "need": "y", "reason": "Missing support for EKS Pod Identity credentials"}
+{"id": "stackexchange:security:71228", "on_segment": "y", "need": "n", "reason": "How-to question on Linux event types for SIEM"}
+{"id": "stackexchange:security:9684", "on_segment": "y", "need": "y", "reason": "Asks for tool detecting logins of absent employees"}
+{"id": "github:1448840244", "on_segment": "y", "need": "y", "reason": "Feature request for access reviews support"}
+{"id": "github:1851821475", "on_segment": "n", "need": "n", "reason": "Performance testing project application"}
+{"id": "github:357555915", "on_segment": "n", "need": "n", "reason": "Yarn read-only filesystem bug"}
+{"id": "github:3010815225", "on_segment": "y", "need": "y", "reason": "Requests alternate vulnerability database, NVD dependency risk"}
+{"id": "github:271942859", "on_segment": "n", "need": "n", "reason": "Kubeadm cloud provider docs, not security"}
+{"id": "github:3493858408", "on_segment": "n", "need": "n", "reason": "CNCF incubation application"}
+{"id": "github:1666821290", "on_segment": "y", "need": "y", "reason": "Requests secure securityContext defaults in Helm charts"}
+{"id": "hn:24498744", "on_segment": "n", "need": "n", "reason": "IAM service outage report"}
+{"id": "github:701096694", "on_segment": "y", "need": "y", "reason": "Needs released version with dependency security fix"}
+{"id": "github:399937422", "on_segment": "y", "need": "y", "reason": "Renovate misses vulnerable sub-dependency updates"}
+{"id": "hn:28499932", "on_segment": "y", "need": "n", "reason": "Critical review essay of guidance"}
+{"id": "hn:33032529", "on_segment": "y", "need": "n", "reason": "Best-practice guide"}
+{"id": "github:441797514", "on_segment": "n", "need": "n", "reason": "Kubelet log parsing bug"}
+{"id": "github:522024908", "on_segment": "n", "need": "n", "reason": "Auth tutorial for mobile app"}
+{"id": "stackexchange:security:5275", "on_segment": "y", "need": "n", "reason": "How-to question on which logs to ingest"}
+{"id": "github:2625056326", "on_segment": "y", "need": "y", "reason": "Feature request: role assumption via environment credentials"}
+{"id": "github:207960885", "on_segment": "n", "need": "n", "reason": "Swarm registry credential helper bug"}
+{"id": "github:398745185", "on_segment": "n", "need": "n", "reason": "Helm chart secrets config design, not cloud posture"}
+{"id": "github:1523211113", "on_segment": "y", "need": "y", "reason": "Requests CSAF advisory support for vulnerability matching"}
+{"id": "stackexchange:security:158124", "on_segment": "y", "need": "y", "reason": "Cannot keep Tor node list synced into SIEM"}
+{"id": "hn:28260300", "on_segment": "y", "need": "n", "reason": "Reference tool launch for IAM actions"}
+{"id": "hn:22159847", "on_segment": "y", "need": "n", "reason": "Security news about vendor backdoors"}
+{"id": "github:430173256", "on_segment": "y", "need": "y", "reason": "Feature request for SCIM provisioning"}
+{"id": "github:2197668583", "on_segment": "n", "need": "n", "reason": "Secret generator namespace feature, not cloud posture"}
+{"id": "github:1312836101", "on_segment": "y", "need": "y", "reason": "Need to migrate off deprecated Pod Security Policy"}
+{"id": "hn:26106234", "on_segment": "y", "need": "n", "reason": "Article on IAM policy normalization"}
+{"id": "github:3170995601", "on_segment": "n", "need": "n", "reason": "OpenTofu logging issue"}
+{"id": "github:1388477110", "on_segment": "n", "need": "n", "reason": "Containerizing an app, not supply-chain security"}
+{"id": "github:3206226375", "on_segment": "y", "need": "y", "reason": "Feature request for SCIM provisioning with SSO"}
+{"id": "github:717391259", "on_segment": "y", "need": "y", "reason": "Pods inherit node IAM roles by default, wants isolation"}
+{"id": "github:244862246", "on_segment": "y", "need": "y", "reason": "Controller overwrites managed security groups, wants control"}
+{"id": "hn:36448073", "on_segment": "y", "need": "n", "reason": "Explainer article"}
+{"id": "hn:29954947", "on_segment": "y", "need": "n", "reason": "Explainer article"}
+{"id": "github:1022016818", "on_segment": "y", "need": "y", "reason": "Wants SBOM signing integrated with generation"}
+{"id": "github:1149093374", "on_segment": "y", "need": "y", "reason": "Cannot manage aws-auth roles, losing cluster access"}
+{"id": "hn:47486365", "on_segment": "y", "need": "y", "reason": "Needs legacy clients running without local admin rights"}
+{"id": "github:1033434115", "on_segment": "y", "need": "y", "reason": "Feature request: SBOM generation during image builds"}
+{"id": "github:2134658689", "on_segment": "n", "need": "n", "reason": "DNS tool documentation request"}
+{"id": "stackexchange:security:268250", "on_segment": "y", "need": "y", "reason": "Unclear how to do SIEM and CIS auditing for Kubernetes"}
+{"id": "github:533039279", "on_segment": "n", "need": "n", "reason": "Terraform docs style suggestion"}
+{"id": "github:887576981", "on_segment": "y", "need": "y", "reason": "Requests IAM auth mechanism for MSK"}
+{"id": "github:3043711044", "on_segment": "n", "need": "n", "reason": "CNCF sandbox application for policy language"}
+{"id": "github:2801250223", "on_segment": "y", "need": "y", "reason": "Requests CycloneDX SBOM for Dependency-Track sync"}
+{"id": "github:483433030", "on_segment": "n", "need": "n", "reason": "Kibana field mapping maintenance"}
+{"id": "stackexchange:security:195798", "on_segment": "n", "need": "n", "reason": "Research dataset request, not small-team operations"}
+{"id": "github:419704699", "on_segment": "n", "need": "n", "reason": "Terraform IAM propagation race bug"}
+{"id": "hn:27815159", "on_segment": "y", "need": "n", "reason": "Guidance document on SBOM elements"}
+{"id": "stackexchange:security:264273", "on_segment": "y", "need": "n", "reason": "Conceptual question on Kubernetes default profiles"}
+{"id": "stackexchange:security:41068", "on_segment": "y", "need": "y", "reason": "SIEM cost pressure forcing log pre-filtering"}
+{"id": "stackexchange:security:139780", "on_segment": "y", "need": "n", "reason": "Conceptual comparison of PAM and named accounts"}
+{"id": "github:3876219230", "on_segment": "n", "need": "n", "reason": "CI/CD build proposal for an app, not cloud security"}
+{"id": "github:489529589", "on_segment": "y", "need": "y", "reason": "Wants scoped API tokens instead of broad keys"}
+{"id": "github:4570406161", "on_segment": "n", "need": "n", "reason": "LLM backend request, not cloud security"}
+{"id": "github:1300335370", "on_segment": "y", "need": "y", "reason": "Requests IAM Roles Anywhere support in Vault"}
+{"id": "github:1280934913", "on_segment": "n", "need": "n", "reason": "Kubernetes proxy endpoint RFC, not security"}
+{"id": "github:1119332559", "on_segment": "y", "need": "y", "reason": "Requests CycloneDX predicate for attestations"}
+{"id": "hn:16571855", "on_segment": "y", "need": "n", "reason": "Security release announcement"}
+{"id": "github:3153963149", "on_segment": "y", "need": "y", "reason": "Org SCP blocks tool, seeks compliant workaround"}
+{"id": "github:701260990", "on_segment": "n", "need": "n", "reason": "Offensive tool summary, not small-team defense"}
+{"id": "github:337676162", "on_segment": "y", "need": "y", "reason": "Cannot use IAM database auth with cleartext plugin"}
+{"id": "github:1094610825", "on_segment": "y", "need": "y", "reason": "Requests CycloneDX SBOM generation in GoReleaser"}
+{"id": "github:399598558", "on_segment": "y", "need": "y", "reason": "Needs per-step IAM role annotations"}
+{"id": "github:450676709", "on_segment": "y", "need": "n", "reason": "Shares solution for IAM-signed requests"}
+{"id": "github:312076094", "on_segment": "y", "need": "n", "reason": "Bug report: security group deleted with ELB"}
+{"id": "github:1331938785", "on_segment": "y", "need": "y", "reason": "Wants atomic SBOM and VEX upload"}
+{"id": "github:1942350894", "on_segment": "y", "need": "y", "reason": "SBOM format lacks external dependency description"}
+{"id": "github:702982352", "on_segment": "y", "need": "y", "reason": "Wants to exclude internal packages from third-party lookups"}
+{"id": "hn:15021293", "on_segment": "n", "need": "n", "reason": "IAM service outage report"}
+{"id": "hn:42658407", "on_segment": "y", "need": "n", "reason": "Cheatsheet reference"}
+{"id": "github:296506073", "on_segment": "n", "need": "n", "reason": "IaC resource identity design, not security"}
+{"id": "github:3432195284", "on_segment": "n", "need": "n", "reason": "Sandbox pod warm pool, not security"}
+{"id": "github:2781039103", "on_segment": "n", "need": "n", "reason": "Build log message bug"}
+{"id": "github:2344880762", "on_segment": "n", "need": "n", "reason": "Gradle configuration API change"}
+{"id": "github:681257884", "on_segment": "y", "need": "y", "reason": "Vulnerable indirect dependency with no patch"}
+{"id": "hn:32907321", "on_segment": "y", "need": "n", "reason": "Tips article"}
+{"id": "github:998827712", "on_segment": "y", "need": "y", "reason": "Needs revocation of long-lived tokens"}
+{"id": "github:4469685602", "on_segment": "n", "need": "n", "reason": "Device backup verification, not identity"}
+{"id": "github:4983218296", "on_segment": "y", "need": "y", "reason": "Wants keyless OIDC cloud auth instead of static credentials"}
+{"id": "github:2455566156", "on_segment": "n", "need": "n", "reason": "Provider package cleanup bug"}
+{"id": "github:2283055403", "on_segment": "n", "need": "n", "reason": "Operator design refactor, not security"}
+{"id": "github:2477907436", "on_segment": "n", "need": "n", "reason": "CNCF sandbox application for FaaS"}
+{"id": "github:1178457052", "on_segment": "y", "need": "y", "reason": "Needs per-storage-class IAM role for tighter permissions"}
+{"id": "hn:33072821", "on_segment": "y", "need": "n", "reason": "Opinion essay on SBOM"}
+{"id": "github:2211683650", "on_segment": "n", "need": "n", "reason": "Lock file update efficiency, not security"}
+{"id": "hn:41194862", "on_segment": "y", "need": "n", "reason": "Learning resource"}
+{"id": "hn:32565979", "on_segment": "y", "need": "n", "reason": "SBOM explainer"}
+{"id": "stackexchange:security:148912", "on_segment": "y", "need": "y", "reason": "SIEM cannot attribute events when DHCP reassigns IPs"}
+{"id": "github:1606868383", "on_segment": "y", "need": "y", "reason": "IAM auth fails for Redshift Serverless"}
+{"id": "github:2200636059", "on_segment": "y", "need": "y", "reason": "Wants handling of unmanaged users in Identity Center"}
+{"id": "github:939064820", "on_segment": "y", "need": "y", "reason": "Security group handling limitations require manual configuration"}
+{"id": "github:2286457835", "on_segment": "y", "need": "y", "reason": "Request to generate SBOM in build"}
+{"id": "github:3421256358", "on_segment": "y", "need": "y", "reason": "Client lacks IAM role credential inheritance"}
+{"id": "github:346065626", "on_segment": "y", "need": "y", "reason": "Requests IAM authentication for ArgoCD"}
+{"id": "github:732656110", "on_segment": "y", "need": "y", "reason": "IAM request signing is cumbersome, wants support"}
+{"id": "github:1612097034", "on_segment": "y", "need": "y", "reason": "Vulnerable dependency fails audit, wants removal"}
+{"id": "hn:31911502", "on_segment": "y", "need": "n", "reason": "Article on IAM trends"}
+{"id": "github:3034141160", "on_segment": "y", "need": "y", "reason": "ECR credential expiry creates manual overhead"}
+{"id": "github:814511320", "on_segment": "y", "need": "y", "reason": "Wants config to block dependency confusion"}
+{"id": "github:2229265382", "on_segment": "y", "need": "n", "reason": "Suggestion about SSO tax website presentation"}
+{"id": "github:402453486", "on_segment": "y", "need": "y", "reason": "Requests IAM authorizer support"}
+{"id": "github:2470557084", "on_segment": "y", "need": "n", "reason": "CVE announcement"}
+{"id": "github:477366890", "on_segment": "n", "need": "n", "reason": "Infra UI metadata display, not security"}
+{"id": "stackexchange:security:133218", "on_segment": "y", "need": "y", "reason": "SIEM seen as too large and expensive"}
+{"id": "stackexchange:security:202035", "on_segment": "y", "need": "n", "reason": "How-to question on safe malware testing"}
+{"id": "github:2219181210", "on_segment": "n", "need": "n", "reason": "CI secrets feature, not cloud posture"}
+{"id": "github:3250322162", "on_segment": "n", "need": "n", "reason": "Repository request for chatbot"}
+{"id": "github:1807025966", "on_segment": "y", "need": "y", "reason": "Vulnerable unmaintained dependency needs replacement"}
+{"id": "github:3078721967", "on_segment": "n", "need": "n", "reason": "CI automation for AI resolver, not security"}
+{"id": "github:1451848978", "on_segment": "y", "need": "y", "reason": "SIEM pipeline lacks DNS enrichment processor"}
+{"id": "github:719626079", "on_segment": "y", "need": "n", "reason": "Bug report on mappings, not missing capability"}
+{"id": "stackexchange:security:161782", "on_segment": "y", "need": "y", "reason": "AlienVault self-generated noise, wants muting method"}
+{"id": "github:861840718", "on_segment": "y", "need": "y", "reason": "MFA factor unsupported for cloud login"}
+{"id": "github:1946759361", "on_segment": "y", "need": "y", "reason": "Cannot set securityContext for container"}
+{"id": "github:705704352", "on_segment": "y", "need": "y", "reason": "UI exposed unauthenticated, wants NetworkPolicy"}
+{"id": "github:437855051", "on_segment": "y", "need": "y", "reason": "Wants regex-based secrets scanning"}
+{"id": "github:2834426012", "on_segment": "y", "need": "y", "reason": "Vulnerable transitive dependency, proposes removal"}
+{"id": "github:3950504349", "on_segment": "n", "need": "n", "reason": "Connector roadmap, not security operations"}
+{"id": "stackexchange:security:26764", "on_segment": "y", "need": "n", "reason": "Documentation process question"}
+{"id": "github:3379463252", "on_segment": "n", "need": "n", "reason": "Binary size reduction, not security need"}
+{"id": "github:884389891", "on_segment": "y", "need": "y", "reason": "Wants env var for AWS role in auth config"}
+{"id": "github:841979714", "on_segment": "y", "need": "y", "reason": "Wants role assumption for least privilege"}
+{"id": "github:988026779", "on_segment": "n", "need": "n", "reason": "Release notes, unrelated"}
+{"id": "github:2221316370", "on_segment": "n", "need": "n", "reason": "Documentation proposal, unrelated"}
+{"id": "github:491558523", "on_segment": "n", "need": "n", "reason": "Windows kubelet stats performance"}
+{"id": "github:2196792175", "on_segment": "y", "need": "y", "reason": "Supply-chain graph lacks deployment tracking"}
+{"id": "github:1085091070", "on_segment": "y", "need": "y", "reason": "Wants package origin recorded for provenance"}
+{"id": "github:2354212558", "on_segment": "n", "need": "n", "reason": "Build log message bug"}
+{"id": "github:3813099364", "on_segment": "y", "need": "y", "reason": "Needs vulnerability fixes to bypass release age delay"}
+{"id": "github:5490385255", "on_segment": "n", "need": "n", "reason": "Large-scale storage RFC, not small-team ops"}
+{"id": "github:1714784535", "on_segment": "n", "need": "n", "reason": "Atlantis log durations, not security"}
+{"id": "github:1039881027", "on_segment": "y", "need": "y", "reason": "Wants heartbeat so SIEM detects missing logs"}
+{"id": "hn:24649022", "on_segment": "y", "need": "n", "reason": "Article on secrets scanning"}
+{"id": "github:998099026", "on_segment": "y", "need": "y", "reason": "Vault AWS auth ignores default credential chain"}
+{"id": "github:3264008684", "on_segment": "y", "need": "y", "reason": "Policy needs user namespace support"}
+{"id": "github:1814555085", "on_segment": "y", "need": "y", "reason": "Wants published SBOM for dependency risk"}
+{"id": "github:3929712910", "on_segment": "n", "need": "n", "reason": "Runtime tool offline docs, not supply chain"}
+{"id": "github:2074789446", "on_segment": "y", "need": "y", "reason": "SBOM format lacks attestation support"}
+{"id": "github:3867136147", "on_segment": "n", "need": "n", "reason": "LLM hook feature, not security ops"}
+{"id": "github:3507675763", "on_segment": "n", "need": "n", "reason": "Log collection source request, not security-specific"}
+{"id": "hn:15809376", "on_segment": "y", "need": "n", "reason": "Article on IAM authenticator"}
+{"id": "stackexchange:security:240676", "on_segment": "y", "need": "n", "reason": "Conceptual comparison question"}
+{"id": "stackexchange:security:128806", "on_segment": "y", "need": "n", "reason": "Asks for use cases, no gap"}
+{"id": "github:773893954", "on_segment": "y", "need": "n", "reason": "Bug report on role creation"}
+{"id": "github:2101896870", "on_segment": "y", "need": "y", "reason": "Connectivity test needs capability dropping for security"}
+{"id": "github:1269585072", "on_segment": "y", "need": "y", "reason": "Wants security group references for ingress"}
+{"id": "github:1592182973", "on_segment": "n", "need": "n", "reason": "Volume ownership feature, not security"}

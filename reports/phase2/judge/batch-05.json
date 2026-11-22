@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "github:1045892026",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Trying to make sure that syslogs are seen in my ElasticStack SIEM",
+  "body": "I am working with El;asticSearch SIEM for the first time and I have been trying to ingest and view syslogs that are sent directly to my logstash server. To that end I have created a pipeline.yml file to perform that task. When I return to my Kibana I see that the syslogs from my inner firewall and the ntp server are being sent to the logstash, which is good; however they are being picked up via th",
+  "url": "https://github.com/unndrstr/Elastic-Stack/issues/1"
+ },
+ {
+  "id": "github:5038225762",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Unified Security Events / Blocked Events View",
+  "body": "- [x] I have read the contributing guidelines at https://github.com/opnsense/core/blob/master/CONTRIBUTING.md - [x] I am convinced that my issue is new after having checked both open and closed issues at https://github.com/opnsense/core/issues?q=is%3Aissue **Similar Tickets** I think there were similar asks, but nothing directly stating what I am looking for, a single page. Also not a full SIEM. #",
+  "url": "https://github.com/opnsense/core/issues/10641"
+ },
+ {
+  "id": "github:4714087552",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Why SIEM Is the Foundation of Cybersecurity Operations",
+  "body": "As cyber threats continue to evolve in complexity and scale, organizations face increasing pressure to secure their digital assets, maintain regulatory compliance, and respond to incidents faster than ever before. Modern IT environments generate enormous volumes of security data from endpoints, servers, applications, cloud platforms, and network devices. Without a centralized approach to monitorin",
+  "url": "https://github.com/shivammenghani/cybertech/issues/17"
+ },
+ {
+  "id": "github:734938052",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Ebury: Senior Security Engineer - Remote (Time Zone +/- 3 GMT)",
+  "body": "**Published on:** September 15, 2020 **Original Job Post:** https://weworkremotely.com/remote-jobs/ebury-senior-security-engineer-remote-time-zone-3-gmt ![](https://we-work-remotely.imgix.net/logos/0017/1352/logo.gif?ixlib=rails-4.0.0&w=50&h=50&dpr=2&fit=fill&auto=compress) Reporting to the VP Security you will lead a small team of security engineers to look after daily SecOps tasks and blue team ",
+  "url": "https://github.com/remote-job-boards/software-engineering/issues/2436"
+ },
+ {
+  "id": "github:2499065239",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[META] Build a racked up server",
+  "body": "## Description The homelab is my go to for learning and trying out new things. Looking at it from a new perspective, it's like a staging environment. ~~I have another board in storage that would make a pretty solid racked up server for moving things into a live build. Things like IDS / SIEM, logging, etc.~~ ## The new plan Turns out I have all the parts I need. By upgrading the firewall (already i",
+  "url": "https://github.com/1Copenut/homelab-learning/issues/173"
+ },
+ {
+  "id": "github:4705021798",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily News Digest - 2026-06-20",
+  "body": "# 2026-06-20 ## RedditPython 1. [Choosing a Python task queue library in 2026: Celery vs Dramatiq vs FastStream vs Taskiq vs Repid](https://www.reddit.com/r/Python/comments/1u775lo/choosing_a_python_task_queue_library_in_2026/) 2. [Talks from the PyCon US Typing Summit - Intersections, Tensor Shapes, and more!](https://www.reddit.com/r/Python/comments/1u94fl8/talks_from_the_pycon_us_typing_summit/",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/358"
+ },
+ {
+  "id": "github:5272432655",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Semantic search for security entities within Saved Objects",
+  "body": "## High level overview Security solution features are increasingly needing to search relevant data by meaning, not just by exact keywords. Today, a lot of this data is stored in kibana saved objects, whose search functionality largely relies on KQL substring matching indexed fields or passing in direct ES search clauses. A user searching for rules that cover \"lateral movement via remote services\" ",
+  "url": "https://github.com/elastic/kibana/issues/287726"
+ },
+ {
+  "id": "github:4813205336",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Microsoft Sentinel backend \u2014 looking for a design partner",
+  "body": "Sentinel is the next backend. Its APIs fit deadair's model cleanly \u2014 analytics rules carry `queryPeriod` and `queryFrequency` as structured fields, tables carry `retentionInDays`, and `ingestion_time()` vs `TimeGenerated` gives measured ingest lag \u2014 so all three finding classes (dead, impaired, unused) map directly, arguably more cleanly than on Elastic. What exists: the backend interface, the con",
+  "url": "https://github.com/alephnull-sh/deadair/issues/3"
+ },
+ {
+  "id": "github:4618582293",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily News Digest - 2026-06-09",
+  "body": "# 2026-06-09 ## RedditDatabase 1. [The 8 SQL Performance Patterns I Keep Seeing During Production Incidents](https://www.reddit.com/r/Database/comments/1txgc37/the_8_sql_performance_patterns_i_keep_seeing/) 2. [How Redis Actually Stores a List Internally](https://youtu.be/U_o-UXaIYMY) 3. [Durable Execution With Just Postgres](https://lucumr.pocoo.org/2025/11/3/absurd-workflows/) 4. [How We Migrate",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/347"
+ },
+ {
+  "id": "github:2971409483",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "AI-CyberSecurity_Promptbook",
+  "body": "// act like a cybersecurity professional with more than 20 years of experience and create a promptbook, craft the promptbook in such a way, and it would make life easy to use prompts in terms of understanding the cyber industry, be updated with all the latest trends, 0-day's, latest threat intel, tips in investigating an alert in SOC operation's. learn new techniques in investigations. // ########",
+  "url": "https://github.com/iamvamsiking/AI-CyberSecurity_Promptbook/issues/1"
+ },
+ {
+  "id": "github:6215742730",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\u2699\ufe0f AI Infrastructure Digest 2026-11-05",
+  "body": "# AI Infrastructure Digest 2026-11-05 > Generated: 2026-11-05 02:44 UTC | Projects covered: 6 - [vLLM](https://github\u200b.com/vllm-project/vllm) - [SGLang](https://github\u200b.com/sgl-project/sglang) - [llama.cpp](https://github\u200b.com/ggml-org/llama.cpp) - [Ollama](https://github\u200b.com/ollama/ollama) - [LiteLLM](https://github\u200b.com/BerriAI/litellm) - [Unsloth](https://github\u200b.com/unslothai/unsloth) --- ## ",
+  "url": "https://github.com/yueguan/agents-radar/issues/136"
+ },
+ {
+  "id": "github:5902352478",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Keyword-bearing titles and a \"who it is for\" line on Landing pages",
+  "body": "## Problem Statement A person searching for \"ISO 27001 compliance software\" or \"translate .resx files\" finds no mvdm.io result. The browser-tab and search-result title of every Landing page is only the Product name plus the brand (\"Compliance \u2014 mvdmio\", \"Translation Tools \u2014 mvdmio\"), so it names no Framework and no platform. The homepage title is a list of five Product names rather than leading wi",
+  "url": "https://github.com/michielvandermeer/www.mvdm.io/issues/6"
+ },
+ {
+  "id": "hn:7950709",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: What programming languages are used in CS courses these days?",
+  "body": "Current Oxford student: Functional Programming: Haskell Imperative Programming: Scala Object Oriented Programming: Java Concurrent Programming: Scala Concurrency: CSPm Intro Algorithms: Haskell Compilers: OCaml Digital Systems: MIPS Assembler Networks: C Graphics: Java Databases: SQL, PHP (apparently...) Principles of Programming Languages: Haskell",
+  "url": "https://news.ycombinator.com/item?id=7950709"
+ },
+ {
+  "id": "hn:48151014",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Welcome to the Strip Mining Era of OSS Security",
+  "body": "I think this is going to play out in interesting ways. There's a saying in lockpicking: even if you can pick the lock, the easiest way in is usually a window. Distribution is core to a technology's market reach, and every distribution point is a window. The strip-mining piece reads to me as one phase of a longer cycle \u2014 tech distributed \u2192 adopted \u2192 experimented with \u2192 misused \u2192 secondary protectio",
+  "url": "https://news.ycombinator.com/item?id=48151014"
+ },
+ {
+  "id": "hn:47772418",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (April 2026)",
+  "body": "MongoDB | Staff/Senior Security Software Engineer or SRE - Infrastructure Security | REMOTE (US) or HYBRID (NYC) | Full-Time We are looking for experienced Software and Site Reliability Engineers to help secure the foundation of MongoDB Atlas, our globally distributed, multi-cloud database platform running across AWS, GCP and Azure. This is a builder role, focusing on security tooling and observab",
+  "url": "https://news.ycombinator.com/item?id=47772418"
+ },
+ {
+  "id": "hn:47338306",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Google closes deal to acquire Wiz",
+  "body": "Nope. Darktrace is crap verging on fraud. Wiz actually solves tangible CSPM and runtime issues.",
+  "url": "https://news.ycombinator.com/item?id=47338306"
+ },
+ {
+  "id": "hn:46326212",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Getting bitten by Intel's poor naming schemes",
+  "body": "AWS just renamed their Security Hub service to Security Hub CSPM and then created a new service named Security Hub that is related but completely different than the original service.",
+  "url": "https://news.ycombinator.com/item?id=46326212"
+ },
+ {
+  "id": "hn:45893002",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: What Are You Working On? (Nov 2025)",
+  "body": "we are working on kexa.io an open source cspm ( security tool ) running on multi platform without servers.( pls stars us to help :) )",
+  "url": "https://news.ycombinator.com/item?id=45893002"
+ },
+ {
+  "id": "hn:43679371",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Wiz's $32B GTM Playbook",
+  "body": "CSPM is most valuable for large enterprises that have many cloud tenants as they can provide visibility across the entire footprint in one place. Consider an enterprise that wants to say \"list all the cloud storage buckets we own that are not in the US and are publicly readable and have a name containing 'foo'\" - and they have several of each of AWS, Azure and GCP organixations because of acquisit",
+  "url": "https://news.ycombinator.com/item?id=43679371"
+ },
+ {
+  "id": "hn:43679338",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Wiz's $32B GTM Playbook",
+  "body": "Conceptually, I don't think CSPMs are answering complicated questions, however there's quite a lot of complexity (IMO) in scaling the answers consistently, and keeping up to date with all of the tests that need to be implemented. If you think about the number of services that AWS/GCP/Azure have, adding good compliance checks across even a portion of those is quite a lot of work :) A small example ",
+  "url": "https://news.ycombinator.com/item?id=43679338"
+ },
+ {
+  "id": "hn:43679010",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Wiz's $32B GTM Playbook",
+  "body": "Well it depends on what you mean by \"real\" :) I'd say CSPM (like many security tools) can help if used well, but it's quite common to see it used as a blunt instrument, which does not help. CSPM helps to apply sets of security rules across cloud resources, with the rules usually being based on external standards or custom rules per organization. It suffers from the downsides of any rules based che",
+  "url": "https://news.ycombinator.com/item?id=43679010"
+ },
+ {
+  "id": "hn:43678867",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Wiz's $32B GTM Playbook",
+  "body": "Is CSPM real, or is this just some BS that sounds good to middle management and ticks of some 'security'-checkboxes?",
+  "url": "https://news.ycombinator.com/item?id=43678867"
+ },
+ {
+  "id": "hn:43413613",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Google to buy Wiz for $32B",
+  "body": "I've been securing my cloud instances the same way I would for dedicated hardware. I use the same tools. I periodically eyeball usage data from the service providers to make sure their end is OK. Takes 5-15 minutes. Occasionally run updates. It all mostly just keeps chugging along. What is a CSPM? Some cloud monitoring tool? What does it provide over open-source security and monitoring tools with ",
+  "url": "https://news.ycombinator.com/item?id=43413613"
+ },
+ {
+  "id": "hn:43412510",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Google to buy Wiz for $32B",
+  "body": "I\u2019ve never heard or seen either of those terms before reading this thread. What you\u2019re calling \u201cCNAPP\u201d I\u2019ve been calling \u201cendpoint security\u201d. I\u2019ve been building internal \u201cCSPM\u201d tooling since 2014 with like raw cloud api calls feeding into graphviz, CI-like tests in a terraform repo, transforming the state of a set of cloud accounts into a form I can shove into z3 and ask questions about, that kind",
+  "url": "https://news.ycombinator.com/item?id=43412510"
+ },
+ {
+  "id": "hn:43411728",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Google to buy Wiz for $32B",
+  "body": "Bullshit. Infosec is not just about highly inflated startups or whatever the fuck CSPM means. I know people who do exploit dev, reverse engineering, blue teaming and they have never heard of wiz. Stop overexaggerating",
+  "url": "https://news.ycombinator.com/item?id=43411728"
+ },
+ {
+  "id": "hn:43410768",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Google to buy Wiz for $32B",
+  "body": "Customers will not start using GCP more instead of AWS for example just because Google owns Wiz. Degrading Wiz capabilities on AWS/Azure/etc will not drive more customers to Googke. CSPM and cloud workloads don\u2019t go hand in hand. What will happen is that other companies will capture the market share left by Google. Will the offerings be less then Wiz quality-wise? Sure, but it will be way cheaper ",
+  "url": "https://news.ycombinator.com/item?id=43410768"
+ },
+ {
+  "id": "hn:43409562",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Google to buy Wiz for $32B",
+  "body": "CSPM solutions are what corporate buys when they don't want to invest in security. It is rubber-stamping and ass covering. From my experience most people involved with such platforms are rather technical sales people than actual security experts.",
+  "url": "https://news.ycombinator.com/item?id=43409562"
+ },
+ {
+  "id": "hn:43408417",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Google to buy Wiz for $32B",
+  "body": "CNAPPs and CSPMs are extremely common tools in cybersecurity. This is my concern. If you're in cyber and don't have knowledge of these things you're either in something insanely niche, in research of some sort, or lack critical knowledge that you should have. There's a big responsibility as a security practitioner to stay up to date on new tools and techniques. CNAPP and CSPM is not some new thing",
+  "url": "https://news.ycombinator.com/item?id=43408417"
+ },
+ {
+  "id": "hn:43408377",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Google to buy Wiz for $32B",
+  "body": "Wiz is widely considered one of the strongest CNAPP/CSPM products on the market. I haven\u2019t personally tested every single competitor\u2019s solution, but I\u2019ve found Wiz to outperform pan, crowdstrike, and prisma. To answer your question. Google doesn't acquire Wis because Google can\u2019t build a comparable product themselves. The real driver is that Wiz has already achieved market penetration and trust. R",
+  "url": "https://news.ycombinator.com/item?id=43408377"
+ },
+ {
+  "id": "hn:43408089",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Google to buy Wiz for $32B",
+  "body": "10% market share of a niche part of the CSPM market",
+  "url": "https://news.ycombinator.com/item?id=43408089"
+ },
+ {
+  "id": "hn:42601722",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "A story on home server security",
+  "body": "> They are not memory safe by design I'm aware of that, but the C/C++ thing seemed more like a rant, hence my question. I've searched up the malware and it doesn't seem to use memory exploitation. Rust is not going to magically protect you against any security issue caused by cloud misconfiguration.",
+  "url": "https://news.ycombinator.com/item?id=42601722"
+ },
+ {
+  "id": "hn:41615124",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "It is hard to recommend Google Cloud",
+  "body": "Never forget what happened to Australian UniSuper when google accidentally deleted their account. https://www.theguardian.com/australia-news/article/2024/may/... \"More than half a million UniSuper fund members went a week with no access to their superannuation accounts after a \u201cone-of-a-kind\u201d Google Cloud \u201cmisconfiguration\u201d led to the financial services provider\u2019s private cloud account being delet",
+  "url": "https://news.ycombinator.com/item?id=41615124"
+ },
+ {
+  "id": "hn:27276373",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Most common cloud misconfigurations \u2013 not what you might think",
+  "body": "\"The number one cloud misconfiguration is S3 buckets not enforcing HTTPS\" is one hell of a take.",
+  "url": "https://news.ycombinator.com/item?id=27276373"
+ },
+ {
+  "id": "hn:17402777",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "NSA \u2018Systematically Moving\u2019 All Its Data to the Cloud",
+  "body": "So there's now definite proof that there is no oversight. This will only stop if sone politicians most private data will leak from some cloud misconfiguration, as it usually does sooner or later.",
+  "url": "https://news.ycombinator.com/item?id=17402777"
+ },
+ {
+  "id": "hn:47371078",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "I found 39 Algolia admin keys exposed across open source documentation sites",
+  "body": "Great write up. Reminder that if you commit these to a Github Gist and the provider partners with GitHub for secrets scanning, they\u2019ll rapidly be invalidated.",
+  "url": "https://news.ycombinator.com/item?id=47371078"
+ },
+ {
+  "id": "hn:47353455",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "I wrote Gitleaks, now I'm maintaining Betterleaks",
+  "body": "8 years ago I wrote the first lines of Gitleaks and have been hooked on finding leaked secrets since. Gitleaks grew from a small project to a name recognized by developers and security folks. It sucks but I gotta take a step back from the project. I'll cut security releases but don't expect any new features from me. But I'm not stepping back from secrets scanning! I'm working full time on maintain",
+  "url": "https://news.ycombinator.com/item?id=47353455"
+ },
+ {
+  "id": "hn:43399009",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Google to buy Wiz for $32B",
+  "body": "Wiz uses various API's via read access in your accounts/orgs/subscriptions to assess risk of configuration. They also snapshot your disks, cloning them to Wiz accounts to provide secrets scanning / vuln scanning / etc against your infra. These resulting risks / findings are scored and provided in their SAAS Wiz console via dashboards / APIs / integrations with remediation guidance.",
+  "url": "https://news.ycombinator.com/item?id=43399009"
+ },
+ {
+  "id": "hn:42134567",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "I Followed the Official AWS Amplify Guide and Was Charged $1,100",
+  "body": "Automated secrets scanning is one of them. You can do it as a pre-commit hook. GitHub and Gitlab can scan it too. https://docs.github.com/en/code-security/secret-scanning/int... https://docs.gitlab.com/ee/user/application_security/secret_...",
+  "url": "https://news.ycombinator.com/item?id=42134567"
+ },
+ {
+  "id": "hn:38066957",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "GitHub Builds GitHub with GitHub [video]",
+  "body": "The video is nice, but not particularly actionable - if you\u2019ve used GitHub Enterprise within the last year, or browsed GitHub\u2019s website marketing, you\u2019ve probably seen many of these features already. https://gh.io/how-we-build-github is linked to from the description and has a few more interesting articles and case studies. While they don\u2019t often go into detail, you\u2019ll pick up some tips and best p",
+  "url": "https://news.ycombinator.com/item?id=38066957"
+ },
+ {
+  "id": "hn:36446664",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "About GitHub\u2019s use of your data",
+  "body": "How do you think they provide all the services they provide? Secrets scanning, contextual source information, everything. I'm not sure how anyone could have gone this long and been surprised by this. Next people will be surprised that GitHub has the right to show your source code on a website....",
+  "url": "https://news.ycombinator.com/item?id=36446664"
+ },
+ {
+  "id": "hn:36195793",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "GitHub Private Repos Considered Private-\u00adIsh",
+  "body": "This comment is complete FUD as you\u2019re linking to a tertiary paragraph in a document describing how your data may be used if the owner of a private repository enable it, for such use as Dependabot, CodeQL, or secrets scanning. The top of the document is: > GitHub aggregates metadata and parses content patterns for the purposes of delivering generalized insights within the product. It uses data fro",
+  "url": "https://news.ycombinator.com/item?id=36195793"
+ },
+ {
+  "id": "hn:36190703",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "GitHub Private Repos Considered Private-\u00adIsh",
+  "body": "> Many platforms also have secrets scanning to ensure you don't accidentally do this too. The reason secrets scanning even became a thing is because of how often secrets get committed to git. Some of them even lead to intrusions. Uber (2016) \u2013 Attackers gained unrestricted access to Uber\u2019s private Github repositories, found exposed secrets in the source code, and used them to access millions of re",
+  "url": "https://news.ycombinator.com/item?id=36190703"
+ },
+ {
+  "id": "hn:36185309",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "GitHub Private Repos Considered Private-\u00adIsh",
+  "body": "This. Every CI platform under the sun has support for secrets and config that should never live in git. It's worth ensuring people know this, of course, but I'm not sure storing secrets in git is all that prevelant. Many platforms also have secrets scanning to ensure you don't accidentally do this too.",
+  "url": "https://news.ycombinator.com/item?id=36185309"
+ },
+ {
+  "id": "hn:35467550",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "What happens when you leak AWS credentials and how AWS minimizes the damage",
+  "body": "I can understand how AWS can react quickly using the secrets scanning service but how do malicious actors do it without having access to that service?",
+  "url": "https://news.ycombinator.com/item?id=35467550"
+ },
+ {
+  "id": "hn:35285813",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "We updated our RSA SSH host key",
+  "body": "Given their secrets scanning functionality, I\u2019m mildly curious if they discovered the leak by a notification from that system.",
+  "url": "https://news.ycombinator.com/item?id=35285813"
+ },
+ {
+  "id": "hn:34066012",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Tencent WeChat is now a GitHub secret scanning partner",
+  "body": "Seems unbelievable how they'd fumble the title when they could just as easily have called it \"secrets scanning\" and it would be OK.",
+  "url": "https://news.ycombinator.com/item?id=34066012"
+ },
+ {
+  "id": "hn:29512016",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Faster Gitlab CI/CD pipelines",
+  "body": "I went ahead and blogged about the workshop, thanks y'all for the inspiration :) https://dev.to/dnsmichi/efficient-devsecops-pipelines-in-a-c... If you learn a new trick or gem, please blog and share with our community :-) Overview of the topics inside the workshop: - Introduction: CI/CD meets Dev, Sec and Ops - CI/CD: Terminology and first steps - Analyse & Identify - Learn using the GitLab CI Pi",
+  "url": "https://news.ycombinator.com/item?id=29512016"
+ },
+ {
+  "id": "hn:26816767",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "New GitHub themes for VS Code",
+  "body": "Treesitter is used heavily behind the scenes at GitHub for things like their secrets scanning and other code analysis.",
+  "url": "https://news.ycombinator.com/item?id=26816767"
+ },
+ {
+  "id": "hn:50540489",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Microsoft's ONNX Runtime has disappeared from GitHub",
+  "body": "If I understand your implication, that's not what \"supply chain attack\" normally means. That term means attacking the mechanism that delivers your packages to deliver a different, more compromised, package. If the package itself is already compromised then that's just a straightforward dependency vulnerability.",
+  "url": "https://news.ycombinator.com/item?id=50540489"
+ },
+ {
+  "id": "hn:49239138",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: What are you working on? (August 2026)",
+  "body": "As a side project, I've been working on a RAG/MCP/agent service with workflows, for security: https://mappedsky.com/seizu/ This primarily builds on top of cartography ( https://docs.cartography.dev/ ), which I'm a contributor to, which pulls infrastructure, SaaS, etc info into a Neo4j database, makes edges, and has a standardize ontology, so you can do attack path analysis, vulnerability assessmen",
+  "url": "https://news.ycombinator.com/item?id=49239138"
+ },
+ {
+  "id": "hn:46373929",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Could lockfiles just be SBOMs?",
+  "body": "You\u2019re right that SBOMs cannot be used to attest that a library is correctly used. I\u2019m not sure if that\u2019s a common use-case of SBOMs though. I normally see people wanting SBOMs for security transparency (customer can see if you\u2019re maintaining your dependencies), vulnerability management (customer can know what vulnerabilities lurk in the dependencies) and license compliance (they can know you didn",
+  "url": "https://news.ycombinator.com/item?id=46373929"
+ },
+ {
+  "id": "hn:46067115",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "After 15 years, I use Outlook as my build pipeline",
+  "body": "Adding steps for code quality scanning, dependency vulnerability analysis and a license scanner certainly makes it look like you actually achieved something in the next performance review, I will give you that.",
+  "url": "https://news.ycombinator.com/item?id=46067115"
+ },
+ {
+  "id": "hn:43009040",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Fake VS Code Extension on NPM Spreads Multi-Stage Malware",
+  "body": "The connection appears to be simply that this is content marketing for Mend, which sells dependency vulnerability scanning software, so NPM is an important keyword for them to stuff in regardless of its relevance.",
+  "url": "https://news.ycombinator.com/item?id=43009040"
+ },
+ {
+  "id": "hn:42019633",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ink: React for interactive CLI apps",
+  "body": "Looks like someone reported a dependency vulnerability back in June and never got a response. Seems like one of those projects that is a pretty neat experiment, but users should probably expect to maintain their own fork if they plan to use it.",
+  "url": "https://news.ycombinator.com/item?id=42019633"
+ },
+ {
+  "id": "hn:38241680",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "GitHub Actions Are a Problem",
+  "body": "But aside from enterprise SSO, far better permissions management than you get with SSH and Linux filesystem permissions, a unified open-source project discovery and vetting-assistance system, secrets management, integrated CI, lfs support, issue tracking, a billion integrations for-free, automatic dependency vulnerability detection, et c\u2026 What have the Romans done for us?",
+  "url": "https://news.ycombinator.com/item?id=38241680"
+ },
+ {
+  "id": "hn:34117257",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "The situation at LastPass may be worse than they are letting on",
+  "body": "> Their software does see your master password. It may process it locally, it may not. If it's run in web client inside browser, that may change at any second. This may happen due to attack, their mistake, their dependency vulnerability or plain lie on their part. Fundamentally you need to trust them. All of this applies to KeePass, minus the browser extension bit (which is trivial to avoid by not",
+  "url": "https://news.ycombinator.com/item?id=34117257"
+ },
+ {
+  "id": "hn:34116254",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "The situation at LastPass may be worse than they are letting on",
+  "body": "Their software does see your master password. It may process it locally, it may not. If it's run in web client inside browser, that may change at any second. This may happen due to attack, their mistake, their dependency vulnerability or plain lie on their part. Fundamentally you need to trust them. In case of keepass and independent sync(doesn't have to be Dropbox), software that sees master pass",
+  "url": "https://news.ycombinator.com/item?id=34116254"
+ },
+ {
+  "id": "hn:33595098",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Deno 1.28: Featuring 1.3M New Modules",
+  "body": "How can one use a bazillion modules in production and not get hacked because of a dependency vulnerability? How are packages vetted?",
+  "url": "https://news.ycombinator.com/item?id=33595098"
+ },
+ {
+  "id": "hn:32201099",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "LocalStack 1.0",
+  "body": "Last time I tried to use this, it wouldn\u2019t pass dependency vulnerability scanning to bring it into the company. Obviously it\u2019s not going into production, but it doesn\u2019t seem a big ask to eliminate known CVEs. They didn\u2019t seem interested in resolving!",
+  "url": "https://news.ycombinator.com/item?id=32201099"
+ },
+ {
+  "id": "hn:32168627",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Log4j: The pain just keeps going",
+  "body": "That leaves the original class file intact. Dependency vulnerability scanners can then identify the class file that is problematic. I have exploded war deployments ( https://www.jrebel.com/learn/what-exploded-and-packaged-depl... ) put in a Tomcat image and the scanner is able to identify the libraries that the classes came from and their vulnerabilities. I've also got fat jars for Spring Boot bat",
+  "url": "https://news.ycombinator.com/item?id=32168627"
+ },
+ {
+  "id": "hn:29609423",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Third High Severity CVE in Log4j Is Published",
+  "body": "There's also ongoing work to build a dependency vulnerability database. This is proposed to be surfaced via a built in `go audit` command. https://go.googlesource.com/proposal/+/master/design/draft-v...",
+  "url": "https://news.ycombinator.com/item?id=29609423"
+ },
+ {
+  "id": "hn:29199896",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Using OAuth to add authentication to a React app",
+  "body": "> Then, store the token in a secure cookie. It's way more secure than moving a token into the browser, where a dependency vulnerability could get access to it. Cookies are still in the browser so what difference are you specifically addressing or advocating",
+  "url": "https://news.ycombinator.com/item?id=29199896"
+ },
+ {
+  "id": "hn:29199318",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Using OAuth to add authentication to a React app",
+  "body": "I suggest to avoid flows that expose a token to the client. This example mentions PKCE quickly at the end. You should absolutely NOT use the described flow without PKCE. That said, a much more secure solution is described in the link below. It's also known as \"Token Handler\" pattern. In a nutshell, keep all the secrets on the backend and also handle the code exchange and tokens on the server, henc",
+  "url": "https://news.ycombinator.com/item?id=29199318"
+ },
+ {
+  "id": "hn:29149371",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Beg Bounties",
+  "body": "FWIW we've also received the exact same email from the same named person with the same vague text of having \"identified a vulnerability in your Web Application\", judging from Troy's twitter thread he seemed to have sent the same email to many others. We're still waiting on a reply to asses whether there's any validity in his claim. I guess what I'm curious is how do people best handle this situati",
+  "url": "https://news.ycombinator.com/item?id=29149371"
+ },
+ {
+  "id": "hn:26334335",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Flutter 2",
+  "body": "Syntax, semantics, code organization and best practices, libraries, frameworks, debugging and debuggers, IDE support (preferably multiple IDEs for multiple platforms), LSP support, linters, profilers, disassemblers, dependency license checkers, dependency vulnerability scanners, package managers, package repository with support for private repos and proxying/mirroring, should I go on and on and on",
+  "url": "https://news.ycombinator.com/item?id=26334335"
+ },
+ {
+  "id": "hn:23808906",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Building a self-updating profile README for GitHub",
+  "body": "This post taught me about two GitHub Actions features I've been wanting and didn't know existed: 1. You can schedule workflows. This is super useful for running dependency vulnerability scanners on repos that don't see active development. 2. You can manually trigger workflows. This is perfect for one repo I have where I manually build releases. The branching model doesn't lend itself well to a PR ",
+  "url": "https://news.ycombinator.com/item?id=23808906"
+ },
+ {
+  "id": "hn:21971091",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Parcel \u2013 Fast, zero-configuration web application bundler",
+  "body": "> npm now comes with security audits during install, and github now comes with free dependency vulnerability monitoring Ultimately, these are solutions to problems that should not exist in the first place.",
+  "url": "https://news.ycombinator.com/item?id=21971091"
+ },
+ {
+  "id": "hn:21970089",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Parcel \u2013 Fast, zero-configuration web application bundler",
+  "body": "Sure, but let's also take the code hosting situation into account: npm now comes with security audits during install, and github now comes with free dependency vulnerability monitoring. While \"fewer deps means fewer vectors\" is true, the security landscape has changed an unusual amount, and for the better, since that article was written.",
+  "url": "https://news.ycombinator.com/item?id=21970089"
+ },
+ {
+  "id": "hn:21672202",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Where to start with enterprise-level security and procedures?",
+  "body": "I recently left the US Federal \u201cCyber\u201d space, which involves practically everything that enterprises claim they want with respect to \u201csecurity\u201d. I also work for a company looking to get into the enterprise space, so have some experience on the side of spinning up these practices. > After meeting with our first client's security team it's clear that we don't have any of the procedures in place that",
+  "url": "https://news.ycombinator.com/item?id=21672202"
+ },
+ {
+  "id": "hn:21150998",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "An Update on Plugin Security",
+  "body": "I gotta say, the Figma team's blog has been on fire with quality posts about their sandbox. They've posted all details about their sandbox implementation, then all the details about this dependency vulnerability that they were on top of, they showed how they reviewed logs for exploitation traces to find there was none, and finally described their strategy for future proactive protection. Kudos all",
+  "url": "https://news.ycombinator.com/item?id=21150998"
+ },
+ {
+  "id": "hn:18990752",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: What are some challenges found when moving from GitHub to GitLab?",
+  "body": "That is correct. Please do note that GitLab also offers dependency vulnerability scanning and we're working on auto remediation https://gitlab.com/gitlab-org/gitlab-ee/issues/3710",
+  "url": "https://news.ycombinator.com/item?id=18990752"
+ },
+ {
+  "id": "hn:10027428",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Best resources on webapp security?",
+  "body": "It's easy to tunnel-vision into the security of your own code and forget that everything you depend on must also be secure. This could span from your framework's cookie signing to the version of OpenSSL you're using on the server to the access controls of your VPS. Unattended upgrades are a good start for your OS-managed dependencies, but make sure to keep up with your app-managed dependencies. Yo",
+  "url": "https://news.ycombinator.com/item?id=10027428"
+ },
+ {
+  "id": "hn:9760727",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Popular Security Software Came Under NSA and GCHQ Attacks",
+  "body": "The source, with more details and the links to the documents: The Intercept: \"Popular Security Software Came Under Relentless NSA and GCHQ Attacks\" https://firstlook.org/theintercept/2015/06/22/nsa-gchq-targe... The Intercept checked some claims themselves: \"Testing performed by The Intercept last month on a trial copy of \u201cKaspersky Small Business Security 4\u201d determined that, while some traffic wa",
+  "url": "https://news.ycombinator.com/item?id=9760727"
+ },
+ {
+  "id": "hn:2816494",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "How I Hacked a Bank and Made 40 Bucks",
+  "body": "wasn't there a wall street journal article talking about how poor small business security was recently? How does this tie in?",
+  "url": "https://news.ycombinator.com/item?id=2816494"
+ },
+ {
+  "id": "github:5318164824",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-09-02",
+  "body": "# AI CLI Tools Community Digest 2026-09-02 > Generated: 2026-09-01 23:48 UTC | Tools covered: 9 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCod",
+  "url": "https://github.com/kakapez/agents-radar/issues/1500"
+ },
+ {
+  "id": "github:4154907646",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "New curation status for data editing step",
+  "body": "We need a new `data_review` curation status, before queued. - Analagous to peer_review, with the same private access availability, but users should not be allowed to release (instead, data editor admins will release these datasets for curation) - Entered automatically after submission (in alternative to peer_review) when a journal workflow is enabled (#4952) - If users modify a dataset while it is",
+  "url": "https://github.com/datadryad/dryad-product-roadmap/issues/4951"
+ },
+ {
+  "id": "github:6547035106",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[IAM-04] Decision tree asks about restricting \"by segment\"; segments never restrict",
+  "body": "**Notebook:** IAM-04 \u2014 Policy Authoring and Management, section \"Policy decision tree\" https://timstewart-dynatrace.github.io/Best-Practice-Notebooks/IAM%20-%20IAM%20Administration/html/-%5BIAM%5D-04-policy-authoring.html **What it says:** The diagram asks *\"Need to restrict by segment or condition?\"*; its text alternative lists rows (\"Read + limited write\", \"Full access \u2192 Admin User\") that differ",
+  "url": "https://github.com/timstewart-dynatrace/Best-Practice-Notebooks/issues/758"
+ },
+ {
+  "id": "github:621797714",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Information Access Management -- Access Establishment and Modification",
+  "body": "## Established Performance Criteria \u00a7164.308(a)(4)(ii)(C): Implement policies and procedures that, based upon the covered entity's or the business associate's access authorization policies, establish, document, review, and modify a user's right of access to a workstation, transaction, program, or process. ## Audit Inquiry Does the entity have policies and procedures in place to authorize access an",
+  "url": "https://github.com/cmorell/test/issues/104"
+ },
+ {
+  "id": "github:5932597699",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Require onboarding approval before CMS access and reconcile user/allowlist status",
+  "body": "People can sign in with an Illinois Microsoft account and reach the CMS without submitting an onboarding request or receiving approval. Profile synchronization creates an active Consultant user, but the team picker reads the separate active AllowedEmail list. This produces users who appear Active in People yet cannot be selected for a team. Observed on October 19, 2026. Reviewed main at 87d57768bd",
+  "url": "https://github.com/DevOps-OTCR/otcr-dashboard/issues/111"
+ },
+ {
+  "id": "github:4558519109",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "PantryPulse",
+  "body": "### Project Name PantryPulse ### Team Members Lamar Raysor ### Summary PantryPulse is a mobile-first nutrition and food intelligence app that helps users scan packaged foods, understand nutrition details, compare better alternatives, and use AI-powered tools to make cleaner homemade versions of processed foods. The project matters because most shoppers do not have time to decode nutrition labels, ",
+  "url": "https://github.com/bestgateeng/project-skynet-submissions/issues/2"
+ },
+ {
+  "id": "github:1820025003",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Request for Booklet Download Feature",
+  "body": "**Is your feature request related to a problem? Please describe:** Yes, the current platform lacks the functionality to download booklets that contain all the problems of a programming contest in a single PDF. This becomes a challenge for users who participate in such contests and need a convenient way to access and review all the problems in one place. Currently, users have to navigate through mu",
+  "url": "https://github.com/lightoj-dev/bugs-and-features/issues/195"
+ },
+ {
+  "id": "github:6261487961",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "docs(claude): add privacy, support, and marketplace guidance",
+  "body": "Context Athene needs a clear user-facing explanation of its capabilities, GitHub behavior, support route, and data handling before directory review. **Proposal** - Add: - PRIVACY.md - SUPPORT.md - optionally SECURITY.md and TERMS.md - Update README with: - the exact seven-skill inventory; - at least three example prompts; - GitHub prerequisites for PR Review and Review Gate; - distinction between ",
+  "url": "https://github.com/saksham-shr/athene/issues/99"
+ },
+ {
+  "id": "github:5087093837",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[Feature]: Build the Roles & Permissions \"Permission sets\" and \"Access reviews\" tabs",
+  "body": "## Problem statement `/os/settings/roles` (`interface/src/app/(main)/os/settings/roles/_components/roles.tsx`) has three tabs: \"Roles,\" \"Permission sets,\" and \"Access reviews.\" Only \"Roles\" has a built UI (a searchable/filterable table of roles with access level, user count, permission-set badges, last-review date, and row actions) \u2014 though even that tab's data is hardcoded (`roles-table/data.ts` ",
+  "url": "https://github.com/alaiy-tech/alaiy_os/issues/142"
+ },
+ {
+  "id": "github:2134075008",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Implement User Response PDF Download",
+  "body": "# Description: ## A. Problem: Currently, users cannot download a consolidated PDF document containing all their responses to past interactions. This limits: - Record keeping and reference: Users cannot easily archive or share their responses for future reference or documentation. - Accessibility: Individuals with print preferences or offline reading needs might struggle to access their interaction",
+  "url": "https://github.com/MACantara/RPG-Survey-Form/issues/4"
+ },
+ {
+  "id": "github:3961302622",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Audit logging for compliance",
+  "body": "## Summary Add comprehensive audit logging to track who accessed what sessions and what commands were executed. ## Motivation Enterprise and regulated environments require: - Compliance with security policies (SOC2, ISO27001, etc.) - Incident investigation capabilities - User activity tracking - Access logs for security review ## Proposed Solution ```yaml # config.yaml audit: enabled: true log_inp",
+  "url": "https://github.com/cuzic/bunterm/issues/5"
+ },
+ {
+  "id": "github:4954282094",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "spike: local poll-driven executor \u2014 machine-user PR identity + sandboxed hgt work",
+  "body": "## Context A third execution surface beyond the SPEC's (Actions async / manual `hgt work`) pair: an always-on **local** process that watches for `ready` issues and drives `hgt work ` to a PR \u2014 with the full transcript + tmux visibility the Actions path lacks (the pain behind #57/#61/#62/#64). A third answer to the #56 fork: don't build on GitHub's runners or ride Agent HQ \u2014 **host the loop yoursel",
+  "url": "https://github.com/cesutherland/hgt/issues/68"
+ },
+ {
+  "id": "github:3054458233",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[FEATURE] Organize LinkedIn chat logs in contact-specific directories",
+  "body": "## \ud83d\udcdd Feature Description Create a directory structure for storing LinkedIn chat logs, where each contact has its own directory under `./logs/`. Each directory should be named after the contact and contain a text file with the full conversation previously extracted. ## \ud83c\udfaf Motivation Currently, all conversation logs are stored in a single directory with timestamps, making it difficult to track conver",
+  "url": "https://github.com/fabricio-entringer/linkedin-agent/issues/45"
+ },
+ {
+  "id": "github:5372346101",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Plan the iOS App Store direction after V5 completion and web user feedback",
+  "body": "## User problem and objective GoodCat should eventually offer a consumer iOS app distributed through the App Store. Mobile use is an important product direction, but the app's scope should follow evidence from a useful, validated web product rather than interrupt completion of V5. The owner explicitly confirmed this sequence: finish every V5 stage, test the website on the real domain after the exi",
+  "url": "https://github.com/twstockanalysis/goodcat-website/issues/116"
+ },
+ {
+  "id": "github:6218500847",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Crickso Official: A Guide to the Website, App and Online Platform",
+  "body": "Introduction: Getting to Know Crickso When searching for an online brand, people often want to understand more than just its name. They may be looking for its official website, information about its app, or a clearer idea of what the platform offers. Crickso is a name associated with online entertainment and digital experiences. People searching for [Crickso](http://kricso.com/) may have different",
+  "url": "https://github.com/renshan/game/issues/48"
+ },
+ {
+  "id": "github:5526542819",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Master SAP GRC Security at Bangalore with Version IT Make an Excelling Career in SAP Security.",
+  "body": "SAP Security Training In today's fast paced digital business world, virtually all organizations depend on SAP application systems for running their core business processes, recording financial transactions and accounting, storing customer information, and keeping track of enterprise resources. As data security and compliance requirements become more complex, the need for SAP GRC Security specialis",
+  "url": "https://github.com/versionitleads-lgtm/sap/issues/2"
+ },
+ {
+  "id": "github:4320500171",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "JL99.blog: A Simple Guide to Casino Content, Trends, and Online Gaming in the Philippines",
+  "body": "JL99.blog: A Simple Guide to Casino Content, Trends, and Online Gaming in the Philippines Introduction If you are looking for a website that shares latest casino trends, scatter links, and gaming guides in the Philippines, then JL99.blog is one of the platforms you might come across. This blog focuses on providing informational content about online gaming, including slot guides, bonus updates, and",
+  "url": "https://github.com/realindaytilapia-source/casino/issues/1"
+ },
+ {
+  "id": "github:5043102396",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Similar project \u2014 Django SaaS auth + billing server. Would love to connect",
+  "body": "Hey Stephane, I'm building **ShipFast Django AI** \u2014 also a Django 5 + DRF + JWT + Stripe billing SaaS starter. Saw your Server-Auth project and it's impressive \u2014 JWT RS256, OAuth2 introspection, Celery, the full setup. We're solving very similar problems (auth + Stripe billing for multi-tenant SaaS). ShipFast adds AI streaming chat and RAG document Q&A on top, plus a React 18 frontend. I'm looking",
+  "url": "https://github.com/kingoftech-v01/Server-Auth/issues/1"
+ },
+ {
+  "id": "github:5333618419",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Top Fintech App Developers in Nigeria for Secure and Scalable Financial Apps",
+  "body": "Nigeria's fintech ecosystem has created significant opportunities for businesses developing digital banking, payment, lending, investment, insurance, wallet, and financial management solutions. As more financial activities move to digital platforms, businesses need applications that are not only convenient but also secure, reliable, and capable of handling growing transaction volumes. For fintech ",
+  "url": "https://github.com/1743294154/software/issues/60"
+ },
+ {
+  "id": "github:5487721651",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Top DuitNow Slot Sites Malaysia Fast Transactions and Mobile Friendly Games",
+  "body": "Mobile gaming has become a convenient way for users to access online entertainment, while digital payments have made account transactions easier to manage. In Malaysia, DuitNow is a familiar payment infrastructure that can be supported by participating banks and financial services. For users exploring slot websites, finding a platform that combines suitable payment options with mobile-friendly gam",
+  "url": "https://github.com/sahra-adam/exampoint/issues/4"
+ },
+ {
+  "id": "github:5698475858",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[Accounting] Harden /accounting/manual workflow, permissions, audit trail, dates, branch context & sync",
+  "body": "## Scope Full audit of `/accounting/manual` and its manual-journal workflow across UI, API routes, service layer, ledger posting/reversal, permissions, database migrations, hybrid sync ownership, and tests. The current implementation has a solid accounting core, but several workflow, permission, auditability, date, branch-context, and sync defects can cause accidental submission, incorrect posting",
+  "url": "https://github.com/hamidnoshady/biza-miz/issues/823"
+ },
+ {
+  "id": "github:6103828483",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udd0e Problem Discovery 2026-10-30",
+  "body": "# Problem Discovery from Public Discussions 2026-10-30 > Sources: GitHub Issues \u00b7 Stack Exchange \u00b7 Hacker News | Problems: 15 | Generated: 2026-10-29 16:13 UTC --- ## Software Development ### Platform silently blocks access or reviews for legitimate integrations **Affected Users:** Claude in Chrome users automating Reddit reads, and GitHub repo owners using the Codex review app on fork PRs **Probl",
+  "url": "https://github.com/BuhDuy256/agents-radar/issues/156"
+ },
+ {
+  "id": "github:5197712478",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "OpenAI seeks to one-up Anthropic with new customer privacy protections",
+  "body": "## Summary OpenAI is previewing Private Safety Processing to select enterprise customers, a new automated monitoring system that detects abuse across multiple sessions while retaining zero customer data. The technology extends existing Zero Data Retention policies to catch malicious behavior like malware engineering spread across several requests, without requiring human review or storing conversa",
+  "url": "https://github.com/hanzhad/squelch-news-engine/issues/345"
+ },
+ {
+  "id": "github:2349651014",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "CAD/Project File Reviews",
+  "body": "## Overview The project file reviews feature serve to track part and assembly drawing reviews within FinishLine. Users are able to create parts tied to a project and are able to upload submissions and reviews for those parts. ## Stakeholders Product Stakeholder: @sharonyang16 Software Stakeholder: Peyton McKee, Sean Walker Reference Users: Ethan Herrell, Sofia Varner ## User Story 1. As a head/lea",
+  "url": "https://github.com/Northeastern-Electric-Racing/FinishLine/issues/2667"
+ },
+ {
+  "id": "github:1314056023",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "GitHub Daily Top 10 @2022-07-22",
+  "body": "1. [**carbon-language/carbon-lang**: Carbon Language's main repository: documents, design, implementation, and related tools. (NOTE: Carbon Language is experimental; see README)](https://github.com/carbon-language/carbon-lang) 3,189 stars today | 9,394 stars | 270 forks | C++ 2. [**gothinkster/realworld**: \"The mother of all demo apps\" \u2014 Exemplary fullstack Medium.com clone powered by React, Angul",
+  "url": "https://github.com/headllines/github-daily/issues/283"
+ },
+ {
+  "id": "github:1312365869",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "GitHub Daily Top 10 @2022-07-21",
+  "body": "1. [**AppFlowy-IO/AppFlowy**: AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations. Built with Flutter and Rust.](https://github.com/AppFlowy-IO/AppFlowy) 328 stars today | 23,953 stars | 1,294 forks | Rust 2. [**hashicorp/vault**: A tool for secrets management, encryption as a service, and privileged access management](https://github.com/hashicorp/va",
+  "url": "https://github.com/headllines/github-daily/issues/282"
+ },
+ {
+  "id": "github:1157802436",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "2022-03-02 Github Trending",
+  "body": "- ### [**microsoft/PowerToys**](https://github.com/microsoft/PowerToys) Windows system utilities to maximize productivity - ### [**cat-milk/Anime-Girls-Holding-Programming-Books**](https://github.com/cat-milk/Anime-Girls-Holding-Programming-Books) Anime Girls Holding Programming Books - ### [**curated-intel/Ukraine-Cyber-Operations**](https://github.com/curated-intel/Ukraine-Cyber-Operations) Cura",
+  "url": "https://github.com/onysakura/news-daily/issues/1300"
+ },
+ {
+  "id": "github:1315490861",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "2022-07-22 Github Trending",
+  "body": "- ### [**carbon-language/carbon-lang**](https://github.com/carbon-language/carbon-lang) Carbon Language's main repository: documents, design, implementation, and related tools. (NOTE: Carbon Language is experimental; see README) - ### [**hashicorp/vault**](https://github.com/hashicorp/vault) A tool for secrets management, encryption as a service, and privileged access management - ### [**HalseySpi",
+  "url": "https://github.com/onysakura/news-daily/issues/1869"
+ },
+ {
+  "id": "github:1312136666",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "2022-07-20 Github Trending",
+  "body": "- ### [**AppFlowy-IO/AppFlowy**](https://github.com/AppFlowy-IO/AppFlowy) AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations. Built with Flutter and Rust. - ### [**hashicorp/vault**](https://github.com/hashicorp/vault) A tool for secrets management, encryption as a service, and privileged access management - ### [**logto-io/logto**](https://github.c",
+  "url": "https://github.com/onysakura/news-daily/issues/1860"
+ },
+ {
+  "id": "github:2417564625",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "2024-07-18 Github Trending",
+  "body": "- ### [**free-educa/books**](https://github.com/free-educa/books) 6k stars o armaz\u00e9m de livros - ### [**git-ecosystem/git-credential-manager**](https://github.com/git-ecosystem/git-credential-manager) 6.1k stars Secure, cross-platform Git credential storage with authentication to GitHub, Azure Repos, and other popular Git hosting services. - ### [**tokio-rs/tokio**](https://github.com/tokio-rs/tok",
+  "url": "https://github.com/onysakura/news-daily/issues/4679"
+ },
+ {
+  "id": "github:5140289081",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Preparing Critical Infrastructure for Ransomware-Driven Disruption",
+  "body": "Critical infrastructure organizations operate services that modern societies cannot afford to lose. Energy, water, transportation, manufacturing, healthcare, telecommunications, and other essential sectors increasingly depend on interconnected Operational Technology (OT), Industrial Control Systems (ICS), enterprise IT, cloud platforms, and third-party services. This connectivity improves efficien",
+  "url": "https://github.com/shivammenghani/cybertech/issues/89"
+ },
+ {
+  "id": "github:3417278882",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Using VM Jump Boxes for Secure Access in Zero Trust Architectures",
+  "body": "# Replace Jump Box Pattern with Azure Bastion and Entra Private Access for Zero Trust Compliance ## Issue Type - [x] Enhancement Request - [x] Architecture Discussion - [x] Security Improvement ## Summary The current AI Landing Zone architecture documentation and examples still reference traditional VM jump boxes for secure access to private resources. This pattern is outdated and contradicts Micr",
+  "url": "https://github.com/Azure/AI-Landing-Zones/issues/14"
+ },
+ {
+  "id": "github:3080735543",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "firezone/firezone: \u4e00\u4e2a\u5f00\u6e90\u5e73\u53f0\uff0c\u53ef\u5b89\u5168\u5730\u7ba1\u7406\u5404\u79cd\u89c4\u6a21\u7ec4\u7ec7\u7684\u8fdc\u7a0b\u8bbf\u95ee\u3002\u4e0e\u5927\u591a\u6570 VPN \u4e0d\u540c\uff0cFirezone \u91c7\u7528\u7ec6\u7c92\u5ea6\u3001\u6700\u5c0f\u6743\u9650\u7684\u8bbf\u95ee\u7ba1\u7406\u65b9\u6cd5\u3002",
+  "body": "| Repos | [firezone/firezone](https://github.com/firezone/firezone) | | --------: | :----------------------------------------------------------- | | **Views** | [![views](https://views.whatilearened.today/views/github/firezone/firezone.svg)](https://github.com/opsre/awesome-ops) | | **Stars** | [![stars](https://img.shields.io/github/stars/firezone/firezone?color=f2f08d&logo=Undertale&logoColor=eb",
+  "url": "https://github.com/awesome-ops/awesome-ops.github.io/issues/167"
+ },
+ {
+  "id": "github:3540164659",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Security posture: Publicly exposed Container Apps (octopetsapi, octopetsfe) lack network restrictions and unverified authentication",
+  "body": "## Summary Both Container Apps for Octopets are publicly exposed with no IP restrictions or client certificate enforcement visible. Authentication and access control for the API are not evidenced in platform configuration. This presents elevated risk of unauthorized access, data exposure, and abuse if the application does not enforce strong authentication and authorization at the app layer. ## Aff",
+  "url": "https://github.com/BandaruDheeraj/octopets-security/issues/20"
+ },
+ {
+  "id": "github:5348842531",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Shadow AI and the Identity Gap: Securing Workforce Access in the AI Era",
+  "body": "Artificial intelligence is rapidly becoming part of everyday work. Employees use generative AI to summarize documents, analyze information, write code, prepare presentations, research markets, automate workflows, and accelerate routine tasks. These capabilities can create meaningful productivity advantages, but they also introduce a security challenge that many organizations are still learning to ",
+  "url": "https://github.com/kaushal-cyber/Off-Page/issues/112"
+ },
+ {
+  "id": "github:1283246245",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\u3010\u2b50\u3011",
+  "body": "## Rust - [exa](https://github.com/ogham/exa) A modern replacement for \u2018ls\u2019. - [swc](https://github.com/swc-project/swc) Rust-based platform for the Web - [tools](https://github.com/rome/tools) The Rome Toolchain. A linter, compiler, bundler, and more for JavaScript, TypeScript, HTML, Markdown, and CSS. - [sonic](https://github.com/valeriansaliou/sonic) \ud83e\udd94 Fast, lightweight & schema-less search bac",
+  "url": "https://github.com/webVueBlog/Leetcode/issues/75"
+ },
+ {
+  "id": "github:212237232",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Security 101 for SaaS startups",
+  "body": "Security 101 for SaaS startups http://ift.tt/2mI2iYm Security 101 for SaaS startups Things I wish my first boss have told me So you are working at a Startup, and you have been wondering at what point should you start looking into security considerations and compliance? Which technical debt should be postponed for a later stage, and which systems should be hardened this instant? What are the main c",
+  "url": "https://github.com/lucaswadedavis/reading-list/issues/66"
+ },
+ {
+  "id": "github:4806004376",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Reduce Alloy Docker socket privilege in observability stack",
+  "body": "## Summary The private observability stack currently mounts `/var/run/docker.sock` into Alloy as read-only so Alloy can discover and collect opt-in SITBank container logs. Even with `read_only: true`, `cap_drop: ALL`, and `no-new-privileges`, a Docker socket mount is still a high-privilege host API exposure if the collector container or Alloy process is compromised. This issue should either replac",
+  "url": "https://github.com/Koon-Kiat/SITBank/issues/400"
+ },
+ {
+  "id": "github:1313940212",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "2022-07-21 Github Trending",
+  "body": "- ### [**carbon-language/carbon-lang**](https://github.com/carbon-language/carbon-lang) Carbon Language's main repository: documents, design, implementation, and related tools. (NOTE: Carbon Language is experimental; see README) - ### [**gothinkster/realworld**](https://github.com/gothinkster/realworld) \"The mother of all demo apps\" \u2014 Exemplary fullstack Medium.com clone powered by React, Angular,",
+  "url": "https://github.com/onysakura/news-daily/issues/1865"
+ },
+ {
+  "id": "github:1014456489",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Get issues from repositories",
+  "body": "owner,name,description,language,topics,stars - [x] \"freeCodeCamp\",\"freeCodeCamp\",\"freeCodeCamp.org's open-source codebase and curriculum. Learn to code for free.\",\"JavaScript\",\"[learn-to-code, nonprofits, programming, nodejs, react, d3, careers, education, teachers, javascript, certification, curriculum, math, community, freecodecamp]\",\"332489\" - [x] \"996icu\",\"996.ICU\",\"Repo for counting stars and",
+  "url": "https://github.com/ThePatriczek/github-issue-analyzer/issues/22"
+ },
+ {
+  "id": "github:2933780913",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Get the Latest SC-300 Exam Dumps from P2PCerts",
+  "body": "**Advance Your Security Skills with the SC-300 Certification! \ud83d\ude80** Earning the SC-300 Certification is a significant achievement for professionals looking to master identity and access management, security controls, and compliance in Microsoft environments. This certification validates your ability to implement identity solutions, manage access control, and ensure secure authentication, making you ",
+  "url": "https://github.com/annazoe2091/SC-300-Exam-Dumps/issues/1"
+ },
+ {
+  "id": "github:550696980",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Security architecture anti-patterns - NCSC",
+  "body": "Security architecture anti-patterns - NCSC https://ift.tt/2UvLCkU About 0 Minutes Six design patterns to avoid when designing computer systems. Back to top Terminology A few quick points on terminology before we start. Anti-patterns The term '' is now used to refer to any repeated (but ineffective) solution to a common problem, it is credited to Andrew Koenig who coined it in response to the semin",
+  "url": "https://github.com/guevara/read-it-later/issues/6206"
+ },
+ {
+  "id": "github:5263462514",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Companion resource: the SSO tax has reached self-hosted software \u2014 a tracker for that side of the fence",
+  "body": "The pricing practice this list documents has started landing in self-hostable software: PLANKA removed OIDC from its free Community edition in v2.2.0 (Aug 2026, [plankanban/planka#1754](https://github.com/plankanban/planka/issues/1754)), and it joins a set of self-hostable apps that gate SAML/OIDC behind paid tiers even when the code runs on your own hardware. Since sso.tax deliberately scopes to ",
+  "url": "https://github.com/robchahin/sso-wall-of-shame/issues/734"
+ },
+ {
+  "id": "github:4005343333",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Problem: Employees share team account credentials in chat messages with no secure handoff",
+  "body": "**JTBD:** When multiple people on a team need access to a shared service account, I want a secure way to hand off credentials and document who has access, so we can stop sharing passwords over Slack or email where they're exposed in message history indefinitely. ## Context & frequency Employees on small or mid-sized teams regularly share credentials for social media accounts, analytics tools, vend",
+  "url": "https://github.com/muaddibco/RealWorldProblems/issues/358"
+ },
+ {
+  "id": "github:5037573635",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Picogrid: Head of People",
+  "body": "**Company:** Picogrid **Location:** El Segundo, CA **Compensation:** $160K - $200K **Posted:** 2026-07-17 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/picogrid/7af1dce2-b19a-4329-9774-d84d504e2d46 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Who we are Picogrid is ",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/164"
+ },
+ {
+  "id": "github:4999772624",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Picogrid: Head of People",
+  "body": "**Company:** Picogrid **Location:** El Segundo, CA **Compensation:** $160K - $200K **Posted:** 2026-07-17 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/picogrid/7af1dce2-b19a-4329-9774-d84d504e2d46 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Who we are Picogrid is ",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/149"
+ },
+ {
+  "id": "github:4999717863",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Picogrid: Head of People",
+  "body": "**Company:** Picogrid **Location:** El Segundo, CA **Compensation:** $160K - $200K **Posted:** 2026-07-17 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/picogrid/7af1dce2-b19a-4329-9774-d84d504e2d46 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Who we are Picogrid is ",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/121"
+ },
+ {
+  "id": "github:4999582117",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Picogrid: Head of People",
+  "body": "**Company:** Picogrid **Location:** El Segundo, CA **Compensation:** $160K - $200K **Posted:** 2026-07-17 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/picogrid/7af1dce2-b19a-4329-9774-d84d504e2d46 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Who we are Picogrid is ",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/91"
+ },
+ {
+  "id": "github:4999525219",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Picogrid: Head of People",
+  "body": "**Company:** Picogrid **Location:** El Segundo, CA **Compensation:** $160K - $200K **Posted:** 2026-07-17 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/picogrid/7af1dce2-b19a-4329-9774-d84d504e2d46 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Who we are Picogrid is ",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/53"
+ },
+ {
+  "id": "github:5998486626",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Notion: Head of People Operations",
+  "body": "**Company:** Notion **Location:** San Francisco, California **Compensation:** not stated **Posted:** 2026-10-22 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/notion/c413d063-add4-4c55-aebd-704d49fb54c1 --- ### Real-Fit Score: 88.0 / 100 \u2014 Apply | Category | Points | Note | |---|---|---| | Domain Alignment | 30 / 30 | domain language: people operations | | Seniority Alignment | 20 / 20 | ti",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/192"
+ },
+ {
+  "id": "github:5037572601",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Albedo: Head of People",
+  "body": "**Company:** Albedo **Location:** Broomfield, CO **Workplace type (inferred):** onsite **Posted:** 2026-07-09 **Apply:** https://job-boards.greenhouse.io/albedo/jobs/4277961009 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Be one of the Bedo 100 Albedo is making Very Low Ear",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/152"
+ },
+ {
+  "id": "github:4999768683",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Albedo: Head of People",
+  "body": "**Company:** Albedo **Location:** Broomfield, CO **Posted:** 2026-07-09 **Apply:** https://job-boards.greenhouse.io/albedo/jobs/4277961009 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Be one of the Bedo 100 Albedo is making Very Low Earth Orbit (VLEO) mainstream, building t",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/123"
+ },
+ {
+  "id": "github:4999713992",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Albedo: Head of People",
+  "body": "**Company:** Albedo **Location:** Broomfield, CO **Posted:** 2026-07-09 **Apply:** https://job-boards.greenhouse.io/albedo/jobs/4277961009 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Be one of the Bedo 100 Albedo is making Very Low Earth Orbit (VLEO) mainstream, building t",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/95"
+ },
+ {
+  "id": "github:4999577844",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Albedo: Head of People",
+  "body": "**Company:** Albedo **Location:** Broomfield, CO **Posted:** 2026-07-09 **Apply:** https://job-boards.greenhouse.io/albedo/jobs/4277961009 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Be one of the Bedo 100 Albedo is making Very Low Earth Orbit (VLEO) mainstream, building t",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/57"
+ },
+ {
+  "id": "github:4994290347",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Albedo: Head of People",
+  "body": "**Company:** Albedo **Location:** Broomfield, CO **Posted:** 2026-07-09 **Apply:** https://job-boards.greenhouse.io/albedo/jobs/4277961009 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Be one of the Bedo 100 Albedo is making Very Low Earth Orbit (VLEO) mainstream, building t",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/14"
+ },
+ {
+  "id": "github:4992918362",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Albedo: Head of People",
+  "body": "**Company:** Albedo **Location:** Broomfield, CO **Posted:** 2026-07-09 **Apply:** https://job-boards.greenhouse.io/albedo/jobs/4277961009 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Be one of the Bedo 100 Albedo is making Very Low Earth Orbit (VLEO) mainstream, building t",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/1"
+ },
+ {
+  "id": "github:5038627487",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Picogrid: Head of People",
+  "body": "**Company:** Picogrid **Location:** El Segundo, CA **Compensation:** $160K - $200K **Posted:** 2026-07-17 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/picogrid/7af1dce2-b19a-4329-9774-d84d504e2d46 --- ### Real-Fit Score: 90.5 / 100 \u2014 Apply | Category | Points | Note | |---|---|---| | Domain Alignment | 24.0 / 30 | domain language: people operations, human resources | | Seniority Alignment",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/177"
+ },
+ {
+  "id": "github:5038626667",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Albedo: Head of People",
+  "body": "**Company:** Albedo **Location:** Broomfield, CO **Workplace type (inferred):** onsite **Posted:** 2026-07-09 **Apply:** https://job-boards.greenhouse.io/albedo/jobs/4277961009 --- ### Real-Fit Score: 70.5 / 100 \u2014 Optional | Category | Points | Note | |---|---|---| | Domain Alignment | 9.0 / 30 | no explicit domain language found; scored low on title match alone | | Seniority Alignment | 20 / 20 |",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/166"
+ },
+ {
+  "id": "github:4999768744",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Authenticx: Vice President of Human Resources",
+  "body": "**Company:** Authenticx **Location:** Indianapolis, IN **Posted:** 2026-07-24 **Apply:** https://job-boards.greenhouse.io/authenticx/jobs/4253512009 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Vice President of Human Resources Job Description Authenticx is a fast-growing, ",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/124"
+ },
+ {
+  "id": "github:4999714074",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Authenticx: Vice President of Human Resources",
+  "body": "**Company:** Authenticx **Location:** Indianapolis, IN **Posted:** 2026-07-24 **Apply:** https://job-boards.greenhouse.io/authenticx/jobs/4253512009 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Vice President of Human Resources Job Description Authenticx is a fast-growing, ",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/96"
+ },
+ {
+  "id": "github:4999577945",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Authenticx: Vice President of Human Resources",
+  "body": "**Company:** Authenticx **Location:** Indianapolis, IN **Posted:** 2026-07-24 **Apply:** https://job-boards.greenhouse.io/authenticx/jobs/4253512009 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Vice President of Human Resources Job Description Authenticx is a fast-growing, ",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/58"
+ },
+ {
+  "id": "github:4994290376",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Authenticx: Vice President of Human Resources",
+  "body": "**Company:** Authenticx **Location:** Indianapolis, IN **Posted:** 2026-07-24 **Apply:** https://job-boards.greenhouse.io/authenticx/jobs/4253512009 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Vice President of Human Resources Job Description Authenticx is a fast-growing, ",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/15"
+ },
+ {
+  "id": "github:4992918409",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Authenticx: Vice President of Human Resources",
+  "body": "**Company:** Authenticx **Location:** Indianapolis, IN **Posted:** 2026-07-24 **Apply:** https://job-boards.greenhouse.io/authenticx/jobs/4253512009 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Vice President of Human Resources Job Description Authenticx is a fast-growing, ",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/2"
+ },
+ {
+  "id": "github:5037573563",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "FAR.AI: Head of People",
+  "body": "**Company:** FAR.AI **Location:** Remote (US), Berkeley Office, Hybrid (US) **Compensation:** not stated **Posted:** 2026-07-17 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/far.ai/24d6d8e4-b036-4820-92e2-093b12697b5b --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Abo",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/161"
+ },
+ {
+  "id": "github:4999772322",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "FAR.AI: Head of People",
+  "body": "**Company:** FAR.AI **Location:** Remote (US), Berkeley Office, Hybrid (US) **Compensation:** not stated **Posted:** 2026-07-17 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/far.ai/24d6d8e4-b036-4820-92e2-093b12697b5b --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Abo",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/144"
+ },
+ {
+  "id": "github:4999717347",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "FAR.AI: Head of People",
+  "body": "**Company:** FAR.AI **Location:** Remote (US), Berkeley Office, Hybrid (US) **Compensation:** not stated **Posted:** 2026-07-17 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/far.ai/24d6d8e4-b036-4820-92e2-093b12697b5b --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Abo",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/116"
+ },
+ {
+  "id": "github:4999581443",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "FAR.AI: Head of People",
+  "body": "**Company:** FAR.AI **Location:** Remote (US), Berkeley Office, Hybrid (US) **Compensation:** not stated **Posted:** 2026-07-17 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/far.ai/24d6d8e4-b036-4820-92e2-093b12697b5b --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Abo",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/84"
+ },
+ {
+  "id": "github:4999524538",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "FAR.AI: Head of People",
+  "body": "**Company:** FAR.AI **Location:** Remote (US), Berkeley Office, Hybrid (US) **Compensation:** not stated **Posted:** 2026-07-17 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/far.ai/24d6d8e4-b036-4820-92e2-093b12697b5b --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description Abo",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/46"
+ },
+ {
+  "id": "github:5038627415",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "FAR.AI: Head of People",
+  "body": "**Company:** FAR.AI **Location:** Remote (US), Berkeley Office, Hybrid (US) **Compensation:** not stated **Posted:** 2026-07-17 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/far.ai/24d6d8e4-b036-4820-92e2-093b12697b5b --- ### Real-Fit Score: 84.5 / 100 \u2014 Apply | Category | Points | Note | |---|---|---| | Domain Alignment | 30 / 30 | domain language: people operations | | Seniority Alignmen",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/174"
+ },
+ {
+  "id": "github:4895720487",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Allow self-management of user assignments by PI/manager to own project",
+  "body": "The ColdFront API already supports authentication via OAuth (NERC Keycloak), so it can work with a user's own account. In the current state of our API, only administrators can manage user/group memberships (`staff` flag in ColdFront,) and the user registration script supports authentication only using client credentials. We should allow PIs and managers to issue API requests with their OAuth token",
+  "url": "https://github.com/CCI-MOC/MOC-issues/issues/273"
+ },
+ {
+  "id": "github:6340753217",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\u2699\ufe0f AI Infrastructure Digest 2026-11-12",
+  "body": "# AI Infrastructure Digest 2026-11-12 > Generated: 2026-11-12 01:38 UTC | Projects covered: 6 - [vLLM](https://github\u200b.com/vllm-project/vllm) - [SGLang](https://github\u200b.com/sgl-project/sglang) - [llama.cpp](https://github\u200b.com/ggml-org/llama.cpp) - [Ollama](https://github\u200b.com/ollama/ollama) - [LiteLLM](https://github\u200b.com/BerriAI/litellm) - [Unsloth](https://github\u200b.com/unslothai/unsloth) --- ## ",
+  "url": "https://github.com/jinming1345/agents-radar/issues/552"
+ },
+ {
+  "id": "github:5652131298",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "E88 Additional authentication options",
+  "body": "As an administrator, I want more sign-on and provisioning options so I can fit the WMS into whatever identity setup my company already has. - Stories to define: SAML 2.0 (document Keycloak-as-bridge first, native only on demand); Windows Integrated Authentication (Kerberos/Negotiate) for the console; SCIM provisioning (see E89); mutual TLS for ERP integrations as an alternative to API keys; device",
+  "url": "https://github.com/Chris-Wolfgang/wms/issues/735"
+ },
+ {
+  "id": "github:2044886258",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "SCIM - Will not provision groups with special chars other than - and _",
+  "body": "### Is there an existing request for this feature? - [X] I have searched the existing issues for this feature request and I know that duplicates will be closed ### Is your feature request related to a problem? Yes, we tend use periods (.) in our group naming standards... Azure Groups allow ' . - _ ! # ^ ~ Azure provisioning gives the following error when attempting to provision with a . I haven't ",
+  "url": "https://github.com/postmanlabs/postman-app-support/issues/12551"
+ },
+ {
+  "id": "github:2133669832",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Feature Request: Azure Provider - Add Functionality for Provision on Demand",
+  "body": "Hi there, sweet tool! I am using the granted-cli tool heavily, and discovered this by looking at documentation. Full disclosure: I have not spun up a glide instance yet, so please forgive any errant preconceived notions or misunderstandings. I am looking to potentially make use of this with AWS, but the more intriguing use case for me is to hook it up to Entra in order to manage some group members",
+  "url": "https://github.com/common-fate/glide/issues/669"
+ },
+ {
+  "id": "github:3665112000",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Support Microsoft SharePoint Integration for Claims Provider",
+  "body": "## Support Microsoft SharePoint Integration for Claims Provider ### Problem Today developers are unable to map group memberships from FusionAuth to a SharePoint Server despite successfully authenticating users through FusionAuth as the IdP. This is because SharePoint Server uses a bespoke **Claims Provider Service** to augment user tokens returned from an IdP. This Claims Provider service is requi",
+  "url": "https://github.com/FusionAuth/fusionauth-issues/issues/3256"
+ },
+ {
+  "id": "github:6170280769",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Support assigning roles to SCIM Enterprise Groups",
+  "body": "### Checklist - [x] I agree to the terms within the [Auth0 Code of Conduct](https://github.com/auth0/open-source-template/blob/master/CODE-OF-CONDUCT.md). ### Describe the problem you'd like to have solved As far as I can tell there is currently no way to [assign Auth0 RBAC roles to enterprise groups](https://auth0.com/docs/manage-users/access-control/configure-core-rbac/rbac-users/assign-roles-to",
+  "url": "https://github.com/auth0/terraform-provider-auth0/issues/1773"
+ },
+ {
+  "id": "github:3838150521",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "github",
+  "engagement": 0,
+  "title": "feature: SCIM Support for Decentralized Collaboration",
+  "body": "### Is your feature request related to a problem? Please describe. Hi Penpot team, huge appreciation for building such an open and accessible design platform! Penpot has incredible potential to support **decentralized, interconnected communities**\u2014especially small organizations and grassroots initiatives that collaborate across networks but lack large budgets. ### Describe the solution you'd like.",
+  "url": "https://github.com/penpot/penpot/issues/8152"
+ },
+ {
+  "id": "hn:17691837",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "The Stock Market Is Shrinking",
+  "body": "SOX proves there are adults running the business. There are some bad parts of SOX, but most of it is good. Also, companies can define their own policies and standards under SOX, unlike say PCI where you must adhere to an industry standard. This means companies that are run well can make decisions about doing a user access review yearly instead of quarterly.",
+  "url": "https://news.ycombinator.com/item?id=17691837"
+ },
+ {
+  "id": "hn:47254274",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Father claims Google's AI product fuelled son's delusional spiral",
+  "body": "I would absolutely not consider this overreaching if the statement within this thread that \"it had referred the user to mental help hotlines multiple times in the past\" is true. That reaches near the fact that a lot of AI is not ready for the enterprise especially when interconnected with other AI agents since it lacks identity and privileged access management. Perhaps one could establish the laws",
+  "url": "https://news.ycombinator.com/item?id=47254274"
+ },
+ {
+  "id": "hn:46470621",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Parental controls aren't for parents",
+  "body": "I've seen this first hand and yes, it's not sinister, getting dozens of services coordinated and permissioned under a single, easy to use, system is too much cognitive load for the team that inevitably gets tasked to do these things. Think about Privileged Access Management or Active Directory, but an 8 year old has to get it to work with a stay at home mom's 5 year old android device, and the PM'",
+  "url": "https://news.ycombinator.com/item?id=46470621"
+ },
+ {
+  "id": "hn:44767719",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Palo Alto Networks agrees to buy CyberArk for $25B",
+  "body": "What are you talking about? CyberArk is enterprise privileged access management. It\u2019s not an app you install and forget about for 1-2 years. It\u2019s certainly not something you just uninstall because you found out very basic information about the vendor on HN, because you almost assuredly run it because auditors require you to, and uninstalling it without a like replacement would be an extremely bad ",
+  "url": "https://news.ycombinator.com/item?id=44767719"
+ },
+ {
+  "id": "hn:44328336",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "SAML vs. SSO",
+  "body": "it is privileged access management that you are describing. One of the key requirements for compliance frameworks is also to record the user sessions. Authentication is one aspect of it, i think key problem is authorization too.",
+  "url": "https://news.ycombinator.com/item?id=44328336"
+ },
+ {
+  "id": "hn:44075769",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Postgres IDE in VS Code",
+  "body": "We build privileged access management tools. Majority of our users do not like to use CLI. They know workbenches, pgadmin etc. at a wizard level. In my opinion, i see that graphical editors are more product for major section of devs and admins.",
+  "url": "https://news.ycombinator.com/item?id=44075769"
+ },
+ {
+  "id": "hn:41967970",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: What Are You Working On? (October 2024)",
+  "body": "I am working on a couple of things. - An open version of strongDM/teleport for privileged access management. I am currently testing it out in my org and plan to release the source soon. - I also run a free HTTPS and TCP tunnel which gets a few users daily ( https://webrelay.dev )",
+  "url": "https://news.ycombinator.com/item?id=41967970"
+ },
+ {
+  "id": "hn:41427431",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: How to store and share passwords in a company?",
+  "body": "Single Sign On (SSO) for all applications as the default. That will do 80%+ of what you want. Thycotic (Delinea) Secret Server for API keys, break-glass accounts, etc. If you have a more granular need for Privileged Access Management (PAM) there are enterprise tools for that. (I don't recommend BeyondTrust; I've heard CyberArk is decent but haven't used it.) You could do a mid-roll-your-own with B",
+  "url": "https://news.ycombinator.com/item?id=41427431"
+ },
+ {
+  "id": "hn:41420600",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: How to store and share passwords in a company?",
+  "body": "(Personal background: I currently work in the enterprise identity space, where problems like this are bog-standard.) Everyone else seems to be going on about SSO. That's good for end users signing into websites & laptops, but I'm getting the sense that you're more worried about admin-level permissions management. First, some terminology to help you Google for things: > new hire be given access to ",
+  "url": "https://news.ycombinator.com/item?id=41420600"
+ },
+ {
+  "id": "hn:41419672",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: How to store and share passwords in a company?",
+  "body": "While building Adaptive ( https://adaptive.live ), I have been working very closely with regulated industries, financial institutions, healthcare orgs. Traditionally, people have been using Cyberark to do Identity management, paired with Privilege access management. There are some modern Privileged Access Management platforms like Strongdm, teleport, us ( https://adaptive.live ) and few more in th",
+  "url": "https://news.ycombinator.com/item?id=41419672"
+ },
+ {
+  "id": "hn:41051215",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: I built a Yubikey-based domain controller. Is it sellable?",
+  "body": "I guess it could be categorised as a PAM (privileged access management) solution with a built-in IdP?",
+  "url": "https://news.ycombinator.com/item?id=41051215"
+ },
+ {
+  "id": "hn:40996535",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "SSH has become our universal (Unix) external access protocol",
+  "body": "SSH (The company behind ssh) even have their own. https://www.ssh.com/products/privileged-access-management-pr... I've not tested it much, but it seems very good",
+  "url": "https://news.ycombinator.com/item?id=40996535"
+ },
+ {
+  "id": "hn:38771075",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Non-interactive SSH password authentication",
+  "body": "> privileged access management is the proper way to manage access to a password protected systems Managing access to privileged systems at scale is hard despite these tools. This isn\u2019t a knock on the tools. It\u2019s a people/risk problem. Eg staying on top of those recorded sessions becomes increasingly difficult over time. The sustainable way is to work with business and compliance and remove the nee",
+  "url": "https://news.ycombinator.com/item?id=38771075"
+ },
+ {
+  "id": "hn:38763451",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Non-interactive SSH password authentication",
+  "body": "I believe privileged access management is the proper way to manage access to a password protected systems. It is basically a terminal server, proxy, bastion or anything similar. You log in there with federated identity (for example AD) and it logs you in into target system with some shared or temporary user. Usually it also records session and does other security/compliance related things. Example",
+  "url": "https://news.ycombinator.com/item?id=38763451"
+ },
+ {
+  "id": "hn:32870914",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Uber hacked, internal systems breached and vulnerability reports stolen",
+  "body": "> ... who said they breached Uber after performing a social engineering attack on an employee and stealing their password. > As the Uber account was protected with multi-factor authentication, the attacker allegedly used an MFA Fatigue attack and pretended to be Uber IT support to convince the employee to accept the MFA request. > ... the hacker says they found a PowerShell script containing admin",
+  "url": "https://news.ycombinator.com/item?id=32870914"
+ },
+ {
+  "id": "hn:32399249",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "\u201cWho Should Write the Terraform?\u201d",
+  "body": "The challenge with this is that many orgs have hundreds if not thousands of standards that must be adhered to in this situation. So if a engineer wishes to use a database, they can stand one up with the CDK no problem. But it's going to fail every audit unless they are aware of these requirements. And even if they are aware of these requirements, doing the integration for things like privileged ac",
+  "url": "https://news.ycombinator.com/item?id=32399249"
+ },
+ {
+  "id": "hn:31484776",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "When everything is important but nothing is getting done",
+  "body": "> Be really careful with the yellows: if there is low impact, you might be confusing work for progress. If there is low urgency, you might be overestimaging the value of your work. On the flipside, if only high-urgency projects get done, you end up becoming a 500+ employee IT service provider without a proper Identity and Access Management System (IAM), without a Privileged Access Management syste",
+  "url": "https://news.ycombinator.com/item?id=31484776"
+ },
+ {
+  "id": "hn:31064198",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Warpgate: Smart SSH bastion that works with any SSH client",
+  "body": "I believe this is Privileged Access Management (PAM) product.",
+  "url": "https://news.ycombinator.com/item?id=31064198"
+ },
+ {
+  "id": "hn:27416976",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: What Are Your Measures Against Ransomware?",
+  "body": "Use Active Directory? Reduce your domain admin population to zero. Use a privileged access management to enable elevation as needed. https://ericalexander.org/post/devops-and-ransomware/",
+  "url": "https://news.ycombinator.com/item?id=27416976"
+ },
+ {
+  "id": "hn:27125372",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: What's the best way to protect a network against ransomware?",
+  "body": "Most ransomware attacks involve windows domains. The chain of events is usually: land a beach head (perimeter vuln or phishing), find domain admin with bloodhound or similar, steal domain admin creds with mimikatz or similar, encrypt everything. There's multiple points in that chain to address. You'll get the most leverage by reducing domain admin population size through privileged access manageme",
+  "url": "https://news.ycombinator.com/item?id=27125372"
+ },
+ {
+  "id": "hn:49817171",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "SAML: A fractal of bad design",
+  "body": "With dynamic client registration, I could host my own IdP server at home, or with a provider of my choice, and it would just work everywhere without any coordination work for anyone, manual signups to be assigned a client id/secret, etc. The entire point is that you won't let me do that because you want to charge extra for better, simpler, cheaper security for everyone. That is the SSO tax. I shou",
+  "url": "https://news.ycombinator.com/item?id=49817171"
+ },
+ {
+  "id": "hn:49811661",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "SAML: A fractal of bad design",
+  "body": "GP was probably thinking of Azure AD / Entra as the \"SSO tax\".",
+  "url": "https://news.ycombinator.com/item?id=49811661"
+ },
+ {
+  "id": "hn:49810939",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "SAML: A fractal of bad design",
+  "body": "As someone with a vested interest/being/been many of the parties you mention... Do you think support for \"federated login via OIDC\" would _not_ fall under the SSO tax? Who do you think would host the \"federated login\" system that would replace the major authentication companies? You can already stand up a SAML or OIDC provider using OSS and run the IdP for your company. I have many customers that ",
+  "url": "https://news.ycombinator.com/item?id=49810939"
+ },
+ {
+  "id": "hn:49808468",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "SAML: A fractal of bad design",
+  "body": "OpenID Connect actually has all the machinery needed to support federated login as part of its dynamic discovery and dynamic registration specifications. The issue is that absolutely no one uses them or implements them. Smaller tech companies don't want federated login to happen. They are, as a rule, far to happy to rely on the SSO tax to up-sell enterprise customers. The major authentication comp",
+  "url": "https://news.ycombinator.com/item?id=49808468"
+ },
+ {
+  "id": "hn:45536281",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "The RubyGems \"Security Incident\"",
+  "body": "Mh, one of our security admins recently said something that's very fitting to the discussion: If you are removing an employee from a company, and you have to rely on their personal integrity instead of technical controls to avoid problems, you are doing very basic access control wrong. And if you're doing absolute fundamentals like that wrong, how much is your entire information security worth the",
+  "url": "https://news.ycombinator.com/item?id=45536281"
+ },
+ {
+  "id": "hn:29102120",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Is the ISO 27001 certification worth it?",
+  "body": "I disagree. soc2 forced us to yubikeys everywhere; getting serious about knowing, auditing, and controlling access; etc. There def were useless bits (contingency plans? If an earthquake hits sfo bad we're screwed, you're screwed, etc)). But on the whole, I think it made us a more secure company. Lots of it is basically best practices. Have, test, and document db backups. Have, test, and document a",
+  "url": "https://news.ycombinator.com/item?id=29102120"
+ },
+ {
+  "id": "hn:50396510",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "We've built an open-source feature flag server for 11 years",
+  "body": "From the website. ``` Yes. Unleash Open Source is free, self-hosted, and has no limit on seats. It covers the core feature set, with a limit of 1 project, 2 environments, and 5,000 feature flags per instance. Thousands of teams run it in production. It does not include single sign-on, SCIM provisioning, granular role-based access control, change request approvals... ``` 1 project, 2 environments. ",
+  "url": "https://news.ycombinator.com/item?id=50396510"
+ },
+ {
+  "id": "hn:47273373",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Why is integrating external partners to Jira so hard?",
+  "body": "The SCIM provisioning piece is usually where it falls apart first. Even when both sides have Atlassian Access, the external org's IdP doesn't cleanly federate, so you end up with manually provisioned guest accounts that nobody deactivates when the contractor rolls off. Infosec says no to that, and they're right. The harder part in defense/aerospace is data residency and CUI handling. Jira Cloud wi",
+  "url": "https://news.ycombinator.com/item?id=47273373"
+ },
+ {
+  "id": "hn:45531438",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Cybersecurity training programs don't prevent phishing scams",
+  "body": "Re: the receive email -> click URL -> enter credentials. We need SSO to stop being gated behind enterprise tiers. SSO tax is real, and can help solve this problem. I've moaned about this before as the leader of an IT team for a medium-sized company reliant on a lot of SaaS. Enterprise plans are too much (both in terms of cost and features) for us, but we are smart enough to have security requireme",
+  "url": "https://news.ycombinator.com/item?id=45531438"
+ }
+]

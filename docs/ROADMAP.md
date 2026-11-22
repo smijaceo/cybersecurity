@@ -26,7 +26,7 @@ Status values: `not started` · `in progress` · `done` · `blocked (reason)`
 | Python package `gapfinder`, `pyproject.toml`, `.gitignore` | done |
 | Cloud environment `cybersecurity` with the data-source hosts allowed | done |
 | Plan, decision log, `CLAUDE.md` working rules | done |
-| Environment setup script installs dependencies for new sessions | done |
+| Environment setup script installs dependencies for new sessions | done (updated for Phase 2) |
 
 **Exit criteria:** tests run in a fresh session with no manual setup. ✅
 
@@ -94,24 +94,64 @@ Collect posts, questions and issues where people express a need, for the four se
   ("Show HN", "Launch HN"), essays and news. Phase 2's relevance filter must drop these before
   clustering, and should look past the top-engagement items.
 
-## Phase 2 — Gap analysis · `not started` (next)
+## Phase 2 — Gap analysis · `done — awaiting PM sign-off on the report`
 
 Turn raw signals into a ranked list of unmet needs, each with evidence.
+Output: **[reports/gaps-2026-11-22.md](../reports/gaps-2026-11-22.md)**.
 
-Builds on existing projects (decision D7):
-
-| Deliverable | Planned approach | Reused projects / data |
+| Deliverable | Status | How (reused projects per D7) |
 |---|---|---|
-| Relevance filter: keep only real need statements ("I need / is there / we struggle / too expensive") | Rule-based pre-filter in code (e.g. drop "Show HN" / "Launch HN" titles), then the relevance judge over all signals in batches, reusing the Phase 1 rubric and `evaluate` checks | — |
-| Need themes per segment | Topic modelling over the filtered signals | BERTopic, sentence-transformers (model download needs huggingface.co allowed: environment change, PM approval) |
-| Supply map: existing tools per theme | Tools listed per theme, with stars and last-commit date as health signals | awesome-security, awesome-pentest, awesome-devsecops lists; GitHub repo search API |
-| Threat relevance | Keyword overlap between themes and exploited vulnerabilities / techniques | CISA KEV feed, NVD API, MITRE ATT&CK STIX data (mitre/cti) |
-| Gap score | demand (volume, growth) × pain × supply weakness × threat relevance; weights in config |
-| Gap report | `reports/gaps-<date>.md`: top 10 gaps, score breakdown, evidence links |
+| Relevance filter | done | Rules drop launch/dead posts (43), then the relevance judge labels the other 1,094 in batches (`judge-prepare` → judge → `judge-import`). 225 need statements. |
+| Need themes | done | BERTopic with the model2vec `potion-base-8M` backend (D9), outlier reduction at similarity ≥ 0.6. 16 themes; theme namer marked 8 coherent. Per-theme stability across 3 extra seeds. |
+| Supply map | done — changed by D10 | GitHub repository search per theme (repo count, leader's stars, active top repos). Awesome-lists dropped from scoring. |
+| Threat relevance | done — changed by D10 | ATT&CK candidates shortlisted with `potion-retrieval-32M`; threat mapper rates 0–3 and picks techniques. NVD keyword count shown, not scored. |
+| Gap score | done | [config/scoring.yaml](../config/scoring.yaml): 0.40 demand + 0.35 supply gap + 0.25 threat, percentile ranks. |
+| Gap report | done | `gapfinder gaps` → `reports/gaps-<date>.md` + `reports/phase2/gaps.json`. |
 
-**Exit criteria:** a gap report the PM agrees is credible; each top gap links ≥5 real signals.
+**Exit criteria**
+- Each top gap links ≥ 5 real signals. ✅ (smallest coherent theme: 6)
+- The PM agrees the report is credible. ⏳ waiting on PM.
 
-## Phase 3 — Idea generation · `not started`
+**Pipeline** (all agent inputs and outputs committed under `reports/phase2/`):
+`judge-prepare` → relevance judge → `judge-import` → `themes` → theme namer → `threat-prepare`
+→ threat mapper → `gaps`.
+
+**Results (2026-11-22)**
+
+| # | Gap | Score | Statements | Stability |
+|---|---|---|---|---|
+| 1 | AWS role credentials for workloads | 0.731 | 11 | 0.41 ⚠ |
+| 2 | Remediating vulnerable third-party dependencies | 0.688 | 18 | 0.76 |
+| 3 | SBOM generation across build ecosystems | 0.559 | 31 | 0.74 |
+| 4 | SCIM user provisioning for applications | 0.535 | 23 | 0.52 |
+| 5 | Managing SIEM log noise and ingestion | 0.528 | 7 | 0.51 |
+| 6 | IAM-based authentication in AWS service clients | 0.469 | 15 | 0.47 ⚠ |
+| 7 | Dependency context for vulnerability impact | 0.361 | 6 | 0.73 |
+| 8 | CycloneDX SBOM output and attestation | 0.130 | 6 | 1.00 |
+
+**Notes and known limitations**
+- Judge calibration: on the 69 signals labelled in both Phase 1 and Phase 2, the judges agreed
+  on 64 `need` labels (93%) and 65 `on_segment` labels (94%). The highest-engagement batch leaned
+  slightly lenient (4 of 5 disagreements were n → y).
+- Bug found and fixed: signals with negative engagement (down-voted Stack Exchange questions)
+  were skipped by export, sampling and judging. One signal was affected; it couldn't have been
+  in the Phase 1 samples.
+- Theme stability is moderate (adjusted Rand index 0.44–0.66 between seeds), as expected for
+  225 short texts. The report shows per-theme stability and flags themes below 0.5.
+- Half the themes were incoherent. Notably secrets scanning: only ~4 of its statements were
+  about secrets, so it isn't ranked. SMB security ops contributed only one coherent theme
+  (21 need statements in total).
+- The awesome-lists contain no SBOM tools, no Dependabot/Renovate and one SCIM entry, so they
+  can't measure supply for these themes; embedding matches against them were noise (D10).
+- Supply depends on the namer's search query: `sbom generation` misses Syft, which is tagged
+  `sbom`. GitHub search also returns some off-topic repos (e.g. for "vulnerability impact").
+- The ATT&CK shortlist sometimes misses the obvious technique (T1078 Valid Accounts for SCIM,
+  T1552.001 Credentials In Files for AWS keys). The mapper's 0–3 rating doesn't depend on it.
+- Most evidence comes from GitHub feature requests on specific projects, so several gaps are
+  "projects keep being asked for X" rather than "no product does X". The Phase 4 competitor
+  critic must test that.
+
+## Phase 3 — Idea generation · `not started` (next, after PM sign-off)
 
 For each top gap, a structured startup concept (decision D4: commercial product) saved to
 `ideas/<slug>.md`: target buyer and user, problem with evidence, MVP scope, differentiation vs the

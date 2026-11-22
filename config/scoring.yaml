@@ -1,0 +1,23 @@
+# Gap score weights (Phase 2). Each component is a percentile rank across themes (0..1),
+# so weights express relative importance. Changing weights is a scope decision: log it in
+# docs/DECISIONS.md.
+
+weights:
+  demand: 0.40        # how many people state the need, how much engagement, how recent
+  supply_gap: 0.35    # 1 - how much maintained open-source supply exists (GitHub repos)
+  threat: 0.25        # threat mapper's 0-3 rating against ATT&CK techniques
+
+demand:
+  recent_years: 2     # signals newer than this count as "recent"
+  # demand = 0.5 * rank(need statements) + 0.3 * rank(log engagement) + 0.2 * rank(recent share)
+
+supply:               # GitHub repository search on the theme's search query (decision D10)
+  # supply = 0.4 * rank(log repo count) + 0.3 * rank(log top stars) + 0.3 * rank(active top repos)
+
+threat:               # threat mapper agent, docs/rubrics/threat-mapping.md (decision D10)
+  attack_candidates: 15   # ATT&CK techniques shortlisted per theme for the mapper
+  # threat = rank(threat_relevance 0-3)
+
+report:
+  top_gaps: 10
+  min_evidence: 5     # Phase 2 exit criterion: each top gap links >= 5 real signals

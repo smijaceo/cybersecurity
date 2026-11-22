@@ -1,0 +1,80 @@
+{"id": "github:647960270", "on_segment": "n", "need": "n", "reason": "macOS/Homebrew compatibility, not cloud security"}
+{"id": "hn:24498678", "on_segment": "n", "need": "n", "reason": "AWS IAM service outage, not posture or IAM sprawl"}
+{"id": "hn:33566419", "on_segment": "y", "need": "y", "reason": "Complaint about unnecessary complexity of AWS IAM roles"}
+{"id": "hn:40922740", "on_segment": "y", "need": "n", "reason": "Tool launch for simplifying IAM policies"}
+{"id": "hn:20655017", "on_segment": "y", "need": "n", "reason": "Kubernetes security assessment document, no stated gap"}
+{"id": "github:4048879798", "on_segment": "n", "need": "n", "reason": "Claude Desktop backend request, not cloud security"}
+{"id": "hn:13940771", "on_segment": "y", "need": "n", "reason": "IAM policy explainer/tutorial"}
+{"id": "hn:16764743", "on_segment": "y", "need": "n", "reason": "Kubernetes security best-practice guide"}
+{"id": "hn:18906788", "on_segment": "y", "need": "n", "reason": "Kubernetes security best-practice guide"}
+{"id": "hn:21262954", "on_segment": "y", "need": "n", "reason": "Show HN launch of least-privilege policy generator"}
+{"id": "hn:41350151", "on_segment": "y", "need": "n", "reason": "Reference list of IAM security tools"}
+{"id": "hn:24656111", "on_segment": "n", "need": "n", "reason": "AWS IAM service outage, not posture or IAM sprawl"}
+{"id": "github:576369497", "on_segment": "y", "need": "y", "reason": "Feature request: IAM authenticator support for AWS SSO credentials"}
+{"id": "github:2503545888", "on_segment": "n", "need": "n", "reason": "S3 storage browser UI component RFC"}
+{"id": "github:1095571058", "on_segment": "y", "need": "n", "reason": "Proposal to write a hardening guide, documentation work"}
+{"id": "github:4022880214", "on_segment": "n", "need": "n", "reason": "Terragrunt configuration feature, not security"}
+{"id": "github:1064569632", "on_segment": "y", "need": "y", "reason": "Request for IAM role auth to avoid static credentials"}
+{"id": "github:858482315", "on_segment": "y", "need": "y", "reason": "Request for AWS IAM database authentication support"}
+{"id": "github:2039485724", "on_segment": "y", "need": "y", "reason": "Secrets operator lacks EKS Pod Identity support"}
+{"id": "github:1851821475", "on_segment": "n", "need": "n", "reason": "Kubernetes performance tool sandbox application"}
+{"id": "hn:32104805", "on_segment": "y", "need": "n", "reason": "News: Microsoft open-sources SBOM tool"}
+{"id": "hn:38248758", "on_segment": "y", "need": "n", "reason": "SBOM proposal announcement, no stated pain"}
+{"id": "hn:43080378", "on_segment": "y", "need": "n", "reason": "Opinion piece on SBOM business model"}
+{"id": "github:4447116854", "on_segment": "n", "need": "n", "reason": "Package manager Rust roadmap"}
+{"id": "github:3010815225", "on_segment": "y", "need": "y", "reason": "Request for EUVD vulnerability source in Dependency-Track"}
+{"id": "github:701096694", "on_segment": "y", "need": "n", "reason": "Request to tag release, not a missing capability"}
+{"id": "github:399937422", "on_segment": "y", "need": "y", "reason": "Renovate lacks PRs fixing vulnerable sub-dependencies"}
+{"id": "github:1523211113", "on_segment": "y", "need": "y", "reason": "Missing CSAF advisory support; CPE not granular enough"}
+{"id": "github:1388477110", "on_segment": "n", "need": "n", "reason": "Containerizing NextcloudPi, not security"}
+{"id": "hn:29954947", "on_segment": "y", "need": "n", "reason": "Explainer article on SBOM benefits"}
+{"id": "github:1022016818", "on_segment": "y", "need": "y", "reason": "Request to sign SBOMs at generation time"}
+{"id": "github:1033434115", "on_segment": "y", "need": "y", "reason": "Feature request: SBOM generation in docker bake"}
+{"id": "github:2801250223", "on_segment": "y", "need": "y", "reason": "Request for CycloneDX SBOM output in Harbor"}
+{"id": "hn:27815159", "on_segment": "y", "need": "n", "reason": "Guidance document on SBOM minimum elements"}
+{"id": "github:1119332559", "on_segment": "y", "need": "y", "reason": "Request for CycloneDX predicate type in in-toto"}
+{"id": "hn:31355692", "on_segment": "y", "need": "n", "reason": "Product launch of secrets scanning tool"}
+{"id": "hn:33072821", "on_segment": "y", "need": "n", "reason": "Opinion article on SBOM, title only"}
+{"id": "hn:32565979", "on_segment": "y", "need": "n", "reason": "SBOM introductory explainer"}
+{"id": "hn:48847577", "on_segment": "y", "need": "n", "reason": "Launch of open-source code vulnerability scanner"}
+{"id": "hn:24649022", "on_segment": "y", "need": "n", "reason": "Article promoting secrets scanning automation"}
+{"id": "stackexchange:security:101296", "on_segment": "y", "need": "n", "reason": "Learning how to set up ELK as SIEM"}
+{"id": "hn:34505603", "on_segment": "y", "need": "n", "reason": "Launch of low-cost SIEM alternative"}
+{"id": "hn:22686913", "on_segment": "y", "need": "n", "reason": "Launch of open-source SIEM"}
+{"id": "hn:19151271", "on_segment": "n", "need": "n", "reason": "Title only, red team tooling unclear"}
+{"id": "stackexchange:security:103242", "on_segment": "y", "need": "y", "reason": "Struggling to reduce noisy SIEM alerts"}
+{"id": "hn:20278139", "on_segment": "y", "need": "n", "reason": "SIEM product announcement"}
+{"id": "stackexchange:security:71228", "on_segment": "y", "need": "n", "reason": "How-to question on Linux event types"}
+{"id": "stackexchange:security:9684", "on_segment": "y", "need": "y", "reason": "Asks whether a tool exists for login anomaly detection"}
+{"id": "stackexchange:security:5275", "on_segment": "y", "need": "n", "reason": "General question on Windows logs for SIEM"}
+{"id": "stackexchange:security:158124", "on_segment": "y", "need": "y", "reason": "Cannot keep Tor node list synced in QRadar"}
+{"id": "hn:22159847", "on_segment": "n", "need": "n", "reason": "Vendor backdoor news"}
+{"id": "stackexchange:security:268250", "on_segment": "y", "need": "y", "reason": "Traditional SIEM approach unclear for Kubernetes nodes"}
+{"id": "github:483433030", "on_segment": "n", "need": "n", "reason": "Kibana internal field mapping cleanup"}
+{"id": "stackexchange:security:195798", "on_segment": "n", "need": "n", "reason": "Request for research datasets, not operations"}
+{"id": "stackexchange:security:41068", "on_segment": "y", "need": "y", "reason": "SIEM cost pressure forces log pre-filtering"}
+{"id": "github:701260990", "on_segment": "n", "need": "n", "reason": "Offensive tool catalog entry"}
+{"id": "stackexchange:security:148912", "on_segment": "y", "need": "y", "reason": "SIEM cannot correlate DHCP IP reassignment"}
+{"id": "github:477366890", "on_segment": "n", "need": "n", "reason": "Infrastructure UI metadata request"}
+{"id": "github:1451848978", "on_segment": "n", "need": "n", "reason": "Ingest pipeline DNS processor, data platform feature"}
+{"id": "github:719626079", "on_segment": "n", "need": "n", "reason": "Beats mapping bug report"}
+{"id": "hn:35524328", "on_segment": "y", "need": "n", "reason": "Show HN launch of OSS tool; pain described but it's an announcement"}
+{"id": "hn:44117059", "on_segment": "y", "need": "n", "reason": "Launch of open-source B2B auth/SSO product"}
+{"id": "hn:41303844", "on_segment": "y", "need": "n", "reason": "Opinion essay defending SSO tax"}
+{"id": "hn:33346183", "on_segment": "y", "need": "n", "reason": "Launch HN for passwordless PAM/IAM product"}
+{"id": "hn:32422871", "on_segment": "y", "need": "n", "reason": "Launch HN for SaaS provisioning/deprovisioning product"}
+{"id": "hn:48723677", "on_segment": "y", "need": "n", "reason": "Announcement of open-source PAM project"}
+{"id": "hn:41118468", "on_segment": "y", "need": "n", "reason": "Launch of free shadow IT / OAuth scope scanner"}
+{"id": "hn:35643709", "on_segment": "y", "need": "n", "reason": "Okta vs Google SSO comparison question, no clear gap stated"}
+{"id": "github:1448840244", "on_segment": "y", "need": "y", "reason": "Feature request: manage Azure AD access reviews via Terraform"}
+{"id": "github:430173256", "on_segment": "y", "need": "y", "reason": "Feature request: SCIM provisioning in FusionAuth identity provider"}
+{"id": "github:3206226375", "on_segment": "y", "need": "y", "reason": "Feature request: SCIM provisioning for SSO plugin"}
+{"id": "hn:47486365", "on_segment": "y", "need": "y", "reason": "Needs way to run legacy app without granting local admin"}
+{"id": "stackexchange:security:139780", "on_segment": "y", "need": "n", "reason": "General PAM vs named accounts comparison question"}
+{"id": "github:998827712", "on_segment": "n", "need": "n", "reason": "Supabase API token revocation; offboarding mentioned only in passing"}
+{"id": "github:4469685602", "on_segment": "n", "need": "n", "reason": "Consumer device backup verification, not identity/access"}
+{"id": "github:2229265382", "on_segment": "y", "need": "n", "reason": "Suggestion about sso.tax website presentation, no security tool gap"}
+{"id": "hn:38344733", "on_segment": "y", "need": "n", "reason": "Launch of SSO tax advocacy site"}
+{"id": "github:1514516532", "on_segment": "n", "need": "n", "reason": "Service booking app feature list, unrelated to identity"}
+{"id": "github:3379574681", "on_segment": "y", "need": "y", "reason": "Feature request: SCIM provisioning in Vikunja"}
+{"id": "github:5746458049", "on_segment": "y", "need": "n", "reason": "Bug report in Okta Terraform provider, not missing capability"}

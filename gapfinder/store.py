@@ -60,6 +60,12 @@ class Store:
         self.conn.commit()
         return len(rows)
 
+    def delete_segment(self, segment: str) -> int:
+        """Remove a segment's signals, e.g. before re-collecting with changed search terms."""
+        cur = self.conn.execute("DELETE FROM signals WHERE segment = ?", (segment,))
+        self.conn.commit()
+        return cur.rowcount
+
     def stats(self) -> list[sqlite3.Row]:
         return self.conn.execute(
             """

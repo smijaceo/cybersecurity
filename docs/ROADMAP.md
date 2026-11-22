@@ -30,7 +30,7 @@ Status values: `not started` · `in progress` · `done` · `blocked (reason)`
 
 **Exit criteria:** tests run in a fresh session with no manual setup. ✅
 
-## Phase 1 — Demand collection · `in progress`
+## Phase 1 — Demand collection · `done`
 
 Collect posts, questions and issues where people express a need, for the four segments in
 [`config/segments.yaml`](../config/segments.yaml) (decision D3).
@@ -43,13 +43,15 @@ Collect posts, questions and issues where people express a need, for the four se
 | Collector: GitHub issues | done |
 | CLI: `collect`, `stats`, `export` | done |
 | Full run across all 4 segments | done — 1,193 signals (2026-11-22) |
-| PM review of [reports/phase1-review-sample.md](../reports/phase1-review-sample.md) | waiting on PM |
-| Collector: Reddit (needs OAuth app + credential, decision pending) | not started |
+| Automated quality review (`sample` → relevance judge → `evaluate`, decision D8) | done — all segments pass, see [round 2](../reports/phase1/round2-review.md) |
+| Collector: Reddit | moved to *Later / parked* (needs an OAuth app and credential) |
 
-**Exit criteria**
-- All four segments collected from every enabled source.
-- A sample of 20 top signals per segment is reviewed; at least half are on-topic.
-- Collection is repeatable: re-running updates engagement, doesn't duplicate rows.
+**Exit criteria** (review method changed by D8)
+- All four segments collected from every enabled source. ✅
+- The relevance judge labels the top 20 signals per segment against
+  [docs/rubrics/relevance.md](rubrics/relevance.md); `gapfinder evaluate` passes when at least
+  half of every segment's sample is on-segment. ✅ (round 2)
+- Collection is repeatable: re-running updates engagement, doesn't duplicate rows. ✅ (tested)
 
 **Notes from the first live run (appsec-supply-chain)**
 - GitHub matched the words of unquoted terms separately and returned popular off-topic issues.
@@ -76,7 +78,23 @@ Collect posts, questions and issues where people express a need, for the four se
   down-weight body-only matches.
 - One GitHub rate-limit response during the run; the retry recovered it.
 
-## Phase 2 — Gap analysis · `not started`
+**Quality review (2026-11-22)**
+
+| Segment | Round 1 on-segment | Round 2 on-segment | Need statements (round 2) |
+|---|---|---|---|
+| cloud-security | 13/20 | 13/20 (unchanged) | 5 |
+| appsec-supply-chain | 18/20 | 18/20 (unchanged) | 7 |
+| identity-access | 7/20 — **fail** | 17/20 | 5 |
+| smb-security-ops | 12/20 | 12/20 (unchanged) | 6 |
+
+- Round 1 failed identity-access: "access review" matched video-game and code reviews, and
+  "privileged access" matched breach news. Round 2 replaced the terms (see
+  `config/segments.yaml`) and re-collected only that segment.
+- Only 25–35% of top signals are need statements. Ranking by engagement favours launches
+  ("Show HN", "Launch HN"), essays and news. Phase 2's relevance filter must drop these before
+  clustering, and should look past the top-engagement items.
+
+## Phase 2 — Gap analysis · `not started` (next)
 
 Turn raw signals into a ranked list of unmet needs, each with evidence.
 
@@ -84,7 +102,7 @@ Builds on existing projects (decision D7):
 
 | Deliverable | Planned approach | Reused projects / data |
 |---|---|---|
-| Relevance filter: keep only real need statements ("I need / is there / we struggle / too expensive") | Rule-based pre-filter in code, then Claude Code subagent classification over exported JSONL (D2) | — |
+| Relevance filter: keep only real need statements ("I need / is there / we struggle / too expensive") | Rule-based pre-filter in code (e.g. drop "Show HN" / "Launch HN" titles), then the relevance judge over all signals in batches, reusing the Phase 1 rubric and `evaluate` checks | — |
 | Need themes per segment | Topic modelling over the filtered signals | BERTopic, sentence-transformers (model download needs huggingface.co allowed: environment change, PM approval) |
 | Supply map: existing tools per theme | Tools listed per theme, with stars and last-commit date as health signals | awesome-security, awesome-pentest, awesome-devsecops lists; GitHub repo search API |
 | Threat relevance | Keyword overlap between themes and exploited vulnerabilities / techniques | CISA KEV feed, NVD API, MITRE ATT&CK STIX data (mitre/cti) |
@@ -130,4 +148,4 @@ reconsidered here (decision D1).
 ## Later / parked
 
 - Automate idea generation and critics through the Claude API (requires an API key; D2 revisit).
-- Reddit collector (OAuth app and credential).
+- Reddit collector (needs a Reddit OAuth app and a credential stored on the environment).

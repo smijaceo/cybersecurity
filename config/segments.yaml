@@ -22,7 +22,10 @@ segments:
 
   identity-access:
     description: SSO, MFA rollout, access reviews, privileged access, offboarding.
-    terms: ["access review", "privileged access", "MFA rollout", "SSO tax"]
+    # Round 2 (2026-11-22): "access review" matched game reviews and code review, and
+    # "privileged access" matched breach news; replaced with unambiguous terms.
+    terms: ["user access review", "privileged access management", "SSO tax",
+            "employee offboarding", "SCIM provisioning"]
 
   smb-security-ops:
     description: Small teams with no SOC — alert overload, affordable detection, compliance.

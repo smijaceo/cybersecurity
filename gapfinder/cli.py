@@ -10,6 +10,7 @@ from pathlib import Path
 
 import yaml
 
+from . import review
 from .collectors import COLLECTORS
 from .store import Store
 
@@ -54,6 +55,9 @@ def cmd_collect(args) -> int:
         log.error("unknown segment(s): %s", ", ".join(sorted(unknown)))
         return 2
     store = Store(args.db)
+    if args.fresh:
+        for segment in segments:
+            print(f"removed {store.delete_segment(segment)} old signals from {segment}")
     total = 0
     for source in args.source:
         collector = COLLECTORS[source]()
@@ -100,6 +104,33 @@ def cmd_export(args) -> int:
     return 0
 
 
+def cmd_sample(args) -> int:
+    config = load_config(args.config)
+    store = Store(args.db)
+    sample = review.build_sample(store, config, args.per_segment, args.per_source_cap)
+    Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.out).write_text(json.dumps(sample, indent=1))
+    print(f"wrote {len(sample)} signals to {args.out}")
+    return 0
+
+
+def cmd_evaluate(args) -> int:
+    sample = json.loads(Path(args.sample).read_text())
+    try:
+        labels = review.load_labels(args.labels, sample)
+    except review.LabelError as exc:
+        log.error("invalid labels: %s", exc)
+        return 2
+    results = review.evaluate(sample, labels, args.threshold)
+    for r in results:
+        print(f"{r.segment:22} on-segment {r.on_segment:>3}/{r.total} ({r.on_segment_rate:.0%})"
+              f"  need {r.need:>3}  {'pass' if r.passed else 'FAIL'}")
+    if args.report:
+        Path(args.report).write_text(review.render_report(sample, labels, results, args.title))
+        print(f"report: {args.report}")
+    return 0 if all(r.passed for r in results) else 1
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="gapfinder", description=__doc__)
     p.add_argument("--db", type=Path, default=DEFAULT_DB)
@@ -112,6 +143,8 @@ def main(argv: list[str] | None = None) -> int:
     c.add_argument("--source", action="append", choices=sorted(COLLECTORS),
                    help="source (repeatable; default all)")
     c.add_argument("--limit", type=int, default=30, help="max results per query")
+    c.add_argument("--fresh", action="store_true",
+                   help="delete the segments' existing signals first (after changing search terms)")
     c.set_defaults(func=cmd_collect)
 
     s = sub.add_parser("stats", help="signal counts per segment and source")
@@ -122,6 +155,20 @@ def main(argv: list[str] | None = None) -> int:
     e.add_argument("--min-engagement", type=int, default=0)
     e.add_argument("--out", help="file path (default stdout)")
     e.set_defaults(func=cmd_export)
+
+    sm = sub.add_parser("sample", help="pick top signals per segment for the relevance judge")
+    sm.add_argument("--out", required=True)
+    sm.add_argument("--per-segment", type=int, default=20)
+    sm.add_argument("--per-source-cap", type=int, default=10)
+    sm.set_defaults(func=cmd_sample)
+
+    ev = sub.add_parser("evaluate", help="score judge labels; exit 1 if any segment fails")
+    ev.add_argument("--sample", required=True)
+    ev.add_argument("--labels", required=True)
+    ev.add_argument("--threshold", type=float, default=0.5)
+    ev.add_argument("--report", help="write a markdown report here")
+    ev.add_argument("--title", default="Signal quality review")
+    ev.set_defaults(func=cmd_evaluate)
 
     args = p.parse_args(argv)
     if getattr(args, "source", None) is None and args.cmd == "collect":

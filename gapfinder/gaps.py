@@ -54,11 +54,15 @@ def demand_features(signals: list[dict], recent_years: int, now: datetime | None
     }
 
 
+BUNDLING_SAFETY = {"low": 2, "medium": 1, "high": 0}
+
+
 def score(themes: list[dict], weights: dict) -> list[dict]:
     """Add demand/supply/threat component scores and the weighted gap score to each theme.
 
     Each theme needs: demand{need_signals, engagement, recent_share},
-    supply{total_repos, top_stars, active_top_repos}, threat{relevance}.
+    supply{total_repos, top_stars, active_top_repos, crowdedness},
+    monetization{willingness_to_pay, paid_pain_share, bundling_risk}, threat{relevance}.
     """
     def ranks(f):
         return percentile_rank([f(t) for t in themes])
@@ -67,17 +71,24 @@ def score(themes: list[dict], weights: dict) -> list[dict]:
         ranks(lambda t: t["demand"]["need_signals"]),
         ranks(lambda t: math.log1p(t["demand"]["engagement"])),
         ranks(lambda t: t["demand"]["recent_share"]))]
-    s = [0.4 * a + 0.3 * b + 0.3 * c for a, b, c in zip(
+    oss = [0.4 * a + 0.3 * b + 0.3 * c for a, b, c in zip(
         ranks(lambda t: math.log1p(t["supply"]["total_repos"])),
         ranks(lambda t: math.log1p(t["supply"]["top_stars"])),
         ranks(lambda t: t["supply"]["active_top_repos"]))]
+    s = [0.6 * c + 0.4 * o for c, o in zip(ranks(lambda t: t["supply"]["crowdedness"]), oss)]
+    m = [0.5 * a + 0.25 * b + 0.25 * c for a, b, c in zip(
+        ranks(lambda t: t["monetization"]["willingness_to_pay"]),
+        ranks(lambda t: t["monetization"]["paid_pain_share"]),
+        ranks(lambda t: BUNDLING_SAFETY[t["monetization"]["bundling_risk"]]))]
     th = ranks(lambda t: t["threat"]["relevance"])
     w = weights
-    for t, dv, sv, tv in zip(themes, d, s, th):
+    for t, dv, sv, mv, tv in zip(themes, d, s, m, th):
         t["scores"] = {
             "demand": round(dv, 3),
             "supply_gap": round(1 - sv, 3),
+            "monetization": round(mv, 3),
             "threat": round(tv, 3),
         }
-        t["gap_score"] = round(w["demand"] * dv + w["supply_gap"] * (1 - sv) + w["threat"] * tv, 3)
+        t["gap_score"] = round(w["demand"] * dv + w["supply_gap"] * (1 - sv)
+                               + w["monetization"] * mv + w["threat"] * tv, 3)
     return sorted(themes, key=lambda t: -t["gap_score"])

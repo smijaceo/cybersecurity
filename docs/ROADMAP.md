@@ -94,7 +94,7 @@ Collect posts, questions and issues where people express a need, for the four se
   ("Show HN", "Launch HN"), essays and news. Phase 2's relevance filter must drop these before
   clustering, and should look past the top-engagement items.
 
-## Phase 2 — Gap analysis · `done — awaiting PM sign-off on the report`
+## Phase 2 — Gap analysis · `in progress — paid-market analysis added (D11)`
 
 Turn raw signals into a ranked list of unmet needs, each with evidence.
 Output: **[reports/gaps-2026-11-22.md](../reports/gaps-2026-11-22.md)**.
@@ -105,7 +105,8 @@ Output: **[reports/gaps-2026-11-22.md](../reports/gaps-2026-11-22.md)**.
 | Need themes | done | BERTopic with the model2vec `potion-base-8M` backend (D9), outlier reduction at similarity ≥ 0.6. 16 themes; theme namer marked 8 coherent. Per-theme stability across 3 extra seeds. |
 | Supply map | done — changed by D10 | GitHub repository search per theme (repo count, leader's stars, active top repos). Awesome-lists dropped from scoring. |
 | Threat relevance | done — changed by D10 | ATT&CK candidates shortlisted with `potion-retrieval-32M`; threat mapper rates 0–3 and picks techniques. NVD keyword count shown, not scored. |
-| Gap score | done | [config/scoring.yaml](../config/scoring.yaml): 0.40 demand + 0.35 supply gap + 0.25 threat, percentile ranks. |
+| Paid-market map (D11) | in progress | Market researcher agents with web search: commercial vendors, pricing, paid-market gaps, willingness to pay, bundling risk, all with source links (`market-prepare` → researcher → `gaps` validates). Statements complaining about price or vendors counted per theme. |
+| Gap score | done — reweighted by D11 | [config/scoring.yaml](../config/scoring.yaml): 0.30 demand + 0.30 supply gap (60% commercial, 40% open source) + 0.25 monetization + 0.15 threat, percentile ranks. |
 | Gap report | done | `gapfinder gaps` → `reports/gaps-<date>.md` + `reports/phase2/gaps.json`. |
 
 **Exit criteria**
@@ -114,9 +115,9 @@ Output: **[reports/gaps-2026-11-22.md](../reports/gaps-2026-11-22.md)**.
 
 **Pipeline** (all agent inputs and outputs committed under `reports/phase2/`):
 `judge-prepare` → relevance judge → `judge-import` → `themes` → theme namer → `threat-prepare`
-→ threat mapper → `gaps`.
+→ threat mapper → `market-prepare` → market researchers → `gaps`.
 
-**Results (2026-11-22)**
+**Results, first run (2026-11-22, open-source supply only — superseded by the D11 run)**
 
 | # | Gap | Score | Statements | Stability |
 |---|---|---|---|---|

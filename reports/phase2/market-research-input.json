@@ -1,0 +1,585 @@
+[
+ {
+  "theme_id": 0,
+  "name": "SBOM generation across build ecosystems",
+  "need": "Maintainers and compliance-driven teams struggle to generate, sign, assemble and publish accurate SBOMs from their package managers and container builds to meet regulatory guidance.",
+  "open_source_leaders": [
+   "owasp-dep-scan/dep-scan (1464 stars)",
+   "NuGuardAI/nuguard (72 stars)",
+   "demcon/cmake-sbom (65 stars)",
+   "goreleaser/example-supply-chain (62 stars)",
+   "ZerberusAI/ZSBOM (52 stars)"
+  ],
+  "statements": [
+   {
+    "title": "sign SBOMs through cosign tool right after generated it through bom tool",
+    "body": "#### What would you like to be added: We talked about a bit of generating/signing process of SBOMs on the `sigstore` Slack channel. In this talk @SantiagoTorres and @nadgowdas made a really valuable c",
+    "url": "https://github.com/kubernetes/release/issues/2286"
+   },
+   {
+    "title": "[Feature Request]: generating SBOMs for container images while building them",
+    "body": "I'm a huge fan of the `bake` command, recently I opened a similar issue to the builds which you can see from [here](https://github.com/docker/buildx/issues/778). Nowadays, SBOM (Software Bill Of Mater",
+    "url": "https://github.com/docker/roadmap/issues/274"
+   },
+   {
+    "title": "pip should record the original index url or find links url of the package",
+    "body": "### What's the problem this feature will solve? Currently users may download packages from various pip repositories (apart from pypi). These packages may contain alternative versions of packages from ",
+    "url": "https://github.com/pypa/pip/issues/10736"
+   },
+   {
+    "title": "[IDEA] Publish Software Bill of Materials (SBOM)",
+    "body": "**Is your feature request related to a problem? Please describe.** A published SBOM would allow users of Mirth Connect to have a better view into the specific usage of libraries by #various Mirth Conn",
+    "url": "https://github.com/nextgenhealthcare/connect/issues/5852"
+   },
+   {
+    "title": "Support attestations as artifacts in SPDX 3.1",
+    "body": "There is a need to be able to attest to the transformation of SBOM information from one format to another, and carry this attestation with the SBOM generated (rather than as a side car/ encapulating e",
+    "url": "https://github.com/spdx/spdx-3-model/issues/594"
+   },
+   {
+    "title": "Feature: Allow one sbom to be the primary document in assemble action",
+    "body": "What I notice is that its only possible to assemble while settings the primary tags or the config and this is a limitation. What I am looking for is to provide the primary component and add all the ot",
+    "url": "https://github.com/interlynk-io/sbomasm/issues/128"
+   },
+   {
+    "title": "Ask HN: Open-source SBOM generation tools?",
+    "body": "One of the compliance requirements of the recent Cybersecurity EO order is to track software bill of materials (SBOM). Curious to know what open-source tools exist to generate SBOM and how accurate th",
+    "url": "https://news.ycombinator.com/item?id=32227594"
+   },
+   {
+    "title": "Generate CycloneDX SBOM file from vcpkg",
+    "body": "**** **Is your feature request related to a problem? Please describe.** As described in the \"Enhancing the Security of the Software Supply Chain through Secure Software Development Practices\" US White",
+    "url": "https://github.com/microsoft/vcpkg/issues/30461"
+   },
+   {
+    "title": "Allow to list SBOMs created by the tools by package",
+    "body": "**Is your feature request related to a problem? Please describe.** Mostly, an auto-generated SBOM can only be as good as the metadata provided the project / packages. As such it might be unfair to com",
+    "url": "https://github.com/interlynk-io/sbombenchmark.dev/issues/12"
+   },
+   {
+    "title": "Add ability to customize 3rd party licences output",
+    "body": "### Command build ### Description Currently you only get a plaintext output. This is probably enough to include in the build applications but makes further processing unnecessarily hard. I need to pro",
+    "url": "https://github.com/angular/angular-cli/issues/26272"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "Generate CycloneDX SBOM file from vcpkg",
+    "body": "**** **Is your feature request related to a problem? Please describe.** As described in the \"Enhancing the Security of the Software Supply Chain through Secure Software Development Practices\" US Whitehouse memorandum (https://www.whitehouse.gov/wp-content/uploads/2022/09/M-22-18.pdf) a Software Bill",
+    "url": "https://github.com/microsoft/vcpkg/issues/30461"
+   },
+   {
+    "title": "Add ability to customize 3rd party licences output",
+    "body": "### Command build ### Description Currently you only get a plaintext output. This is probably enough to include in the build applications but makes further processing unnecessarily hard. I need to provide a SBOM (software bill of material) with detailed information about the used dependencies and ca",
+    "url": "https://github.com/angular/angular-cli/issues/26272"
+   },
+   {
+    "title": "Adding purl to generated SBOM",
+    "body": "### Is your feature request related to a problem? Please describe. We use [Black Duck](https://www.synopsys.com/software-integrity/software-composition-analysis-tools/black-duck-sca.html) for license and vulnerability scanning. I can upload a vcpkg-generated SBOM there, but it does not find any matc",
+    "url": "https://github.com/microsoft/vcpkg/issues/39254"
+   },
+   {
+    "title": "Provide better documentation around usage/integration into various pipelines",
+    "body": "We have a GitHub actions pipeline, but the documentation provided here is hard to follow: https://github.com/microsoft/sbom-tool/blob/main/docs/setting-up-github-actions.md 1. There are images after the intro section which don't seem to make sense as the first thing was just showing an example witho",
+    "url": "https://github.com/microsoft/sbom-tool/issues/909"
+   }
+  ]
+ },
+ {
+  "theme_id": 2,
+  "name": "Remediating vulnerable third-party dependencies",
+  "need": "Developers and security engineers struggle to detect, prioritize and quickly update vulnerable direct and transitive dependencies, including faster patching despite release-age delays.",
+  "open_source_leaders": [
+   "pyupio/safety (1999 stars)",
+   "OWASP/cve-lite-cli (801 stars)",
+   "Hamdy910/sentinel-diff-guard (68 stars)",
+   "fortify/skills (25 stars)",
+   "andrasfe/vulnicheck (11 stars)"
+  ],
+  "statements": [
+   {
+    "title": "Add support for European Union Vulnerability Database (EUVD)",
+    "body": "### Current Behavior Currently Dependency Track uses the National Vulnerability Database to download vulnerabilty information. ### Proposed Behavior Having in mind the recent \"almost-shutdown\" of the ",
+    "url": "https://github.com/DependencyTrack/dependency-track/issues/4863"
+   },
+   {
+    "title": "Provide good container securityContext by default for each chart",
+    "body": "**Motivation** This would improve the default security out of the box for helm chart users. If the containers currently support it, there isn't much downside to improving the default security. It also",
+    "url": "https://github.com/falcosecurity/charts/issues/481"
+   },
+   {
+    "title": "Update dependencies to resolve security vulnerabilities in sub-dependencies",
+    "body": "**What would you like Renovate to be able to do?** GitHub informs of vulnerabilities for sub-dependencies present in package-lock.json, but Renovate doesn't cut PRs for updating the top-level dependen",
+    "url": "https://github.com/renovatebot/renovate/issues/3080"
+   },
+   {
+    "title": "Add a config option to disable proxying for all private packages (to shield against dependency confusion attacks)",
+    "body": "**Is your feature request related to a problem?** - [Dependency confusion](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610) attacks exploit a vulnerability in private package registr",
+    "url": "https://github.com/verdaccio/verdaccio/issues/2103"
+   },
+   {
+    "title": "vm2 Sandbox Escape vulnerability",
+    "body": "Npm is reporting vm2 vulnerability again. I have noticed the packages were updated recently but it seems the issue wasn't resolved. I looked at the vm2 package, the author suggests to use an alternati",
+    "url": "https://github.com/release-it/release-it/issues/1024"
+   },
+   {
+    "title": "[FEATURE] Include a NetworkPolicy to secure communication inside of Longhorn",
+    "body": "**Is your feature request related to a problem? Please describe.** When longhorn-UI is deployed, it is easily accessible from inside the cluster without authentication. This poses a security risk if 1",
+    "url": "https://github.com/longhorn/longhorn/issues/1805"
+   },
+   {
+    "title": "\ud83d\udcac RFC: Proposal to Remove `node-libs-browser` Dependency",
+    "body": "### \ud83d\udd16 Need The primary motivation for removing `node-libs-browser` is due to a security vulnerability that has been detected. The vulnerability originates from a dependency chain that includes `node-l",
+    "url": "https://github.com/backstage/backstage/issues/28740"
+   },
+   {
+    "title": "Option to bypass minimumReleaseAge when the update fixes a vulnerability",
+    "body": "### What is the problem this feature would solve? As a security conscious company, we use a minimal release age to protect ourselves against supply chain attacks. However, some updates need to be hast",
+    "url": "https://github.com/oven-sh/bun/issues/26065"
+   },
+   {
+    "title": "web app 3rd party JS dependency vulnerability management",
+    "body": "As a security engineer, I wonder about the common approach for web app 3rd party JS dependency vulnerability management. We have a lot of apps depend on Jquery etc. In a regular vulnerability scan, ol",
+    "url": "https://security.stackexchange.com/questions/245529/web-app-3rd-party-js-dependency-vulnerability-management"
+   },
+   {
+    "title": "Can you please strip `devDependencies` from npm publish",
+    "body": "### Clear and concise description of the problem Stripping `devDependencies` and even `scripts` is something that I've been doing for a few years already. Why is it bad to keep dev dependencies? The m",
+    "url": "https://github.com/sxzz/verkit/issues/11"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "Add support for European Union Vulnerability Database (EUVD)",
+    "body": "### Current Behavior Currently Dependency Track uses the National Vulnerability Database to download vulnerabilty information. ### Proposed Behavior Having in mind the recent \"almost-shutdown\" of the MITRE CVE Database (https://cve.mitre.org/), due to unclear financing, this could IMHO also happen t",
+    "url": "https://github.com/DependencyTrack/dependency-track/issues/4863"
+   },
+   {
+    "title": "Explore container security scanning signals for update candidates",
+    "body": "## Problem WUDup can plan container image updates, but it does not currently tell users whether an update candidate has reported security issues. Before adding security-oriented update delay behavior, we should decide whether this repository can reliably flag containers with relevant vulnerability o",
+    "url": "https://github.com/magrhino/wudup/issues/410"
+   },
+   {
+    "title": "Self-hosted Kali and BlackArch apt mirrors for supply chain resilience",
+    "body": "## Context PR #133 fixed immediate Kali mirror rotation issues by pinning to `kali.download` CDN, but this creates a single point of failure. Recent Ubuntu mirror DDoS demonstrated that third-party CDN availability is a systemic risk for production CI/builds. ## Strategic Value Self-hosted mirrors p",
+    "url": "https://github.com/Strike48-public/pick/issues/135"
+   },
+   {
+    "title": "User Needs Analysis",
+    "body": "### **1.1 Context and Project Presentation** Cybersecurity has become a matter of prevention, as attacks are becoming increasingly advanced and reactive measures have given way to prevention. Regular vulnerability analysis is essential for companies to detect and fix weaknesses before they are explo",
+    "url": "https://github.com/XxAbde/Scanner-Vulner-Web/issues/1"
+   },
+   {
+    "title": "User Needs Analysis",
+    "body": "1.1 Context and Project Presentation Cybersecurity has become a matter of prevention, as attacks are becoming increasingly advanced and reactive measures have given way to prevention. Regular vulnerability analysis is essential for companies to detect and fix weaknesses before they are exploited. It",
+    "url": "https://github.com/XxAbde/gestion-store/issues/1"
+   }
+  ]
+ },
+ {
+  "theme_id": 3,
+  "name": "SCIM user provisioning for applications",
+  "need": "Admins of SaaS and self-hosted apps struggle with manual user provisioning and deprovisioning because products lack SCIM support for IdPs like Okta and Azure AD.",
+  "open_source_leaders": [
+   "ory/polis (2269 stars)",
+   "jelhub/scimgateway (232 stars)",
+   "AzureAD/SCIMReferenceCode (193 stars)",
+   "1Password/scim-examples (192 stars)",
+   "mlflow-oidc/mlflow-oidc-auth (136 stars)"
+  ],
+  "statements": [
+   {
+    "title": "[Feature] SCIM support",
+    "body": "## Add support for the SCIM protocol for user provisioning ### Problem FusionAuth currently supports user provisioning via its own APIs. This works for integrating with other backends when those backe",
+    "url": "https://github.com/FusionAuth/fusionauth-issues/issues/106"
+   },
+   {
+    "title": "SCIM Provisioning on SSO Plugin",
+    "body": "### Is this suited for github? - [x] Yes, this is suited for github ### Is your feature request related to a problem? Please describe. _No response_ ### Describe the solution you'd like As SSO impleme",
+    "url": "https://github.com/better-auth/better-auth/issues/3276"
+   },
+   {
+    "title": "Implement SCIM",
+    "body": "### Description Two Exemplary Use-Cases what SCIM can do beyond OIDC: ### Provisioning: Easy Permission Management from Account Creation With SCIM, when a new user account is created in your core iden",
+    "url": "https://github.com/go-vikunja/vikunja/issues/1399"
+   },
+   {
+    "title": "Add SCIM support to provision and manage user accounts in Postman.",
+    "body": "**Is your feature request related to a problem? Please describe.** Provisioning and de-provisioning users in Postman is a manual process. **Describe the solution you'd like** SCIM is a popular REST-AP",
+    "url": "https://github.com/postmanlabs/postman-app-support/issues/6235"
+   },
+   {
+    "title": "feat: Data Access Workflow",
+    "body": "**Is your feature request related to a problem? Please describe.** With the concept of tasks already introduced (request tags/description) I would like to propose a feature where users can request and",
+    "url": "https://github.com/open-metadata/OpenMetadata/issues/12713"
+   },
+   {
+    "title": "Unable to turn on SCIM via the okta API from reading the docs",
+    "body": "Hello everyone! \ud83d\ude03 I have been reading through the okta documentation looking for a way to enable SCIM provisioning for SAML SSO apps via your API, and I am having trouble enabling SCIM via the API usi",
+    "url": "https://github.com/okta/okta-developer-docs/issues/5130"
+   },
+   {
+    "title": "Implement Additional Validation for SCIM Server",
+    "body": "### Problem The FusionAuth SCIM Server currently advertises and allows integrators to create a schema. This schema might suggest to the SCIM client what attributes are required, etc. However, the curr",
+    "url": "https://github.com/FusionAuth/fusionauth-issues/issues/2695"
+   },
+   {
+    "title": "[feature]: Add workspaces to group projects and share members across them",
+    "body": "### Problem Every project manages its own members independently. Adding someone to multiple projects means creating a separate invite for each one. For instances with several projects and overlapping ",
+    "url": "https://github.com/croffasia/itsaplan/issues/258"
+   },
+   {
+    "title": "[Feat]: SCIM Client support (Outbound provisioning)",
+    "body": "## \ud83d\ude80 Feature Feb 2024 blog post: https://supertokens.com/blog/what-is-scim-provisioning - While the article describes SCIM, it doesn't actually clarify that SuperTokens lacks support for this (_both a",
+    "url": "https://github.com/supertokens/supertokens-core/issues/1009"
+   },
+   {
+    "title": "Automatically add users to workspace based on email address",
+    "body": "**Is your feature request related to a problem? Please describe.** I'm always frustrated when I invite a new user to Tracecat, as I have to ask them to sign up/sign in the first time, wait, and then m",
+    "url": "https://github.com/TracecatHQ/tracecat/issues/1031"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "E88 Additional authentication options",
+    "body": "As an administrator, I want more sign-on and provisioning options so I can fit the WMS into whatever identity setup my company already has. - Stories to define: SAML 2.0 (document Keycloak-as-bridge first, native only on demand); Windows Integrated Authentication (Kerberos/Negotiate) for the console",
+    "url": "https://github.com/Chris-Wolfgang/wms/issues/735"
+   },
+   {
+    "title": "SCIM - Will not provision groups with special chars other than - and _",
+    "body": "### Is there an existing request for this feature? - [X] I have searched the existing issues for this feature request and I know that duplicates will be closed ### Is your feature request related to a problem? Yes, we tend use periods (.) in our group naming standards... Azure Groups allow ' . - _ !",
+    "url": "https://github.com/postmanlabs/postman-app-support/issues/12551"
+   },
+   {
+    "title": "feature: SCIM Support for Decentralized Collaboration",
+    "body": "### Is your feature request related to a problem? Please describe. Hi Penpot team, huge appreciation for building such an open and accessible design platform! Penpot has incredible potential to support **decentralized, interconnected communities**\u2014especially small organizations and grassroots initia",
+    "url": "https://github.com/penpot/penpot/issues/8152"
+   }
+  ]
+ },
+ {
+  "theme_id": 7,
+  "name": "IAM-based authentication in AWS service clients",
+  "need": "Cloud teams moving off static passwords and keys find their clients and tools can't authenticate to RDS, MSK, Redshift, API Gateway or ArgoCD with short-lived AWS IAM credentials.",
+  "open_source_leaders": [
+   "kubernetes-sigs/aws-iam-authenticator (2338 stars)",
+   "otterize/intents-operator (313 stars)",
+   "joshuamkite/terraform-aws-ssh-bastion-service (212 stars)",
+   "cloudposse/terraform-aws-ec2-bastion-server (172 stars)",
+   "aripalo/aws-cdk-github-oidc (128 stars)"
+  ],
+  "statements": [
+   {
+    "title": "Support for IAM Roles (Instance Profile/IRSA) for Authentication",
+    "body": "**Is your feature request related to a problem? Please describe.** The current best practices for security in AWS recommends using short-lived credentials through IAM Role (STS) instead of static IAM ",
+    "url": "https://github.com/opensearch-project/logstash-output-opensearch/issues/96"
+   },
+   {
+    "title": "Support IAM Authentication to AWS RDS",
+    "body": "## Problem My organization is moving away from standard db user/password to AWS IAM authentication. Essentially, IAM authentication adds an additional step to generate the session token which will exp",
+    "url": "https://github.com/prisma/orm/issues/6587"
+   },
+   {
+    "title": "SASL: Support AWS_MSK_IAM mechanism",
+    "body": "**Describe the solution you'd like** * Add a package with a [sasl.Mechanism](https://github.com/segmentio/kafka-go/blob/84623745d7b8ae64830d78bac17afc0b839def5a/sasl/sasl.go#L11) implementation suppor",
+    "url": "https://github.com/segmentio/kafka-go/issues/661"
+   },
+   {
+    "title": "Support scoped-API token based authentication with Cloudflare",
+    "body": "**Is your feature request related to a problem? Please describe.** Cloudflare recently released scoped api tokens [here](https://blog.cloudflare.com/api-tokens-general-availability/). And I would like",
+    "url": "https://github.com/cert-manager/cert-manager/issues/2036"
+   },
+   {
+    "title": "Support use of cleartext auth plugin",
+    "body": "## Steps to reproduce this issue I don't expect anybody to try to reproduce this obscure issue -- I'm just looking for some general guidance. I am attempting to connect to a database using the [cleart",
+    "url": "https://github.com/HeidiSQL/HeidiSQL/issues/296"
+   },
+   {
+    "title": "Redshift Serverless IAM Auth Support",
+    "body": "**Problem** I'm trying to connect to my Redshift Serverless workgroup using IAM auth provided by the AWS Toolkit for JetBrains, but I get the error: `Cluster my-cluster-name not found. (Service: Redsh",
+    "url": "https://github.com/aws/aws-toolkit-jetbrains/issues/3498"
+   },
+   {
+    "title": "Support IAM Authentication from ArgoCD clients",
+    "body": "As an alternative to JWT tokens, there is an upcoming need to authenticate to ArgoCD at an AWS account level, using IAM roles. After discussion with @wanghong230, @edlee2121, and @gaganapplatix we cou",
+    "url": "https://github.com/argoproj/argo-cd/issues/481"
+   },
+   {
+    "title": "Invoke API Gateway with IAM Auth request signing",
+    "body": "I'd like a way to call a API Gateway method/resource that has IAM Auth enabled. This requires signing the request in the [AWS Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-vers",
+    "url": "https://github.com/aws/aws-tools-for-powershell/issues/180"
+   },
+   {
+    "title": "RFC: API Gateway IAM (AWS_IAM) Authorizers",
+    "body": "This is an RFC for enabling IAM (AWS_IAM) auth type on APIs. SAM Template: ```yaml Resources: MyApi: ... Properties: Auth: # Sets auth type for all resources+methods of this API # Can be overridden at",
+    "url": "https://github.com/aws/serverless-application-model/issues/781"
+   },
+   {
+    "title": "Unable to generate API key when using External IdP (Azure AD)",
+    "body": "### Kiro Product IDE ### Feature Description Description: ## Problem I cannot generate a Kiro API key because the Kiro web portal (app.kiro.dev) does not support my authentication setup. ## My Configu",
+    "url": "https://github.com/kirodotdev/Kiro/issues/8414"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "Support IAM Authentication from ArgoCD clients",
+    "body": "As an alternative to JWT tokens, there is an upcoming need to authenticate to ArgoCD at an AWS account level, using IAM roles. After discussion with @wanghong230, @edlee2121, and @gaganapplatix we could use the techniques employed by [AWS IAM Authenticator](https://github.com/kubernetes-sigs/aws-iam",
+    "url": "https://github.com/argoproj/argo-cd/issues/481"
+   },
+   {
+    "title": "Azure : add support for Bleu Sovereign Cloud",
+    "body": "### Feature search - [x] I have searched the existing issues and this feature has not been requested yet or is already in our [Public Roadmap](https://roadmap.prowler.com/roadmap) ### Which component would this feature affect? Prowler CLI/SDK ### Related to specific cloud provider? Azure ### New fea",
+    "url": "https://github.com/prowler-cloud/prowler/issues/13248"
+   }
+  ]
+ },
+ {
+  "theme_id": 8,
+  "name": "Managing SIEM log noise and ingestion",
+  "need": "Small security teams struggle to filter noisy logs, enrich and monitor log feeds, and turn SIEM alerts into processed actions without high cost.",
+  "open_source_leaders": [
+   "jmasarweh/UniFi-Insights-Plus (328 stars)",
+   "lprat/logstash-plugins (10 stars)",
+   "sanesecurityguy/opnsense-ruleset-for-wazuh (9 stars)",
+   "TomWartenberg-IRN/Shield-Enterprise (3 stars)",
+   "PhilipLykov/LogPulseAI (2 stars)"
+  ],
+  "statements": [
+   {
+    "title": "SIEM log pre-filtering question",
+    "body": "As everyone knows each company wants to save as much money as possible. I have been tasked with pre-filtering logs on less important status/health messages before they get to the SIEM. Does anyone see",
+    "url": "https://security.stackexchange.com/questions/41068/siem-log-pre-filtering-question"
+   },
+   {
+    "title": "Are SIEM and NIDS/HIDS complementary?",
+    "body": "I just would like to have your feedback if you were involved with Security Information and Event Management. From your experience, do we have to add a SIEM to an existing NIDS (snort) and HIDS (ossec)",
+    "url": "https://security.stackexchange.com/questions/133218/are-siem-and-nids-hids-complementary"
+   },
+   {
+    "title": "DNS Processor for Ingest Pipelines",
+    "body": "### Description TL:DR - There needs to be a DNS processor for Ingest Pipelines. We have been using Elastic as a SIEM for nearly four years, and we have now spent the last ~15 months rolling it out as ",
+    "url": "https://github.com/elastic/elasticsearch/issues/91624"
+   },
+   {
+    "title": "SIEM Alien Vault recommended method for muting noise",
+    "body": "I have installed Alien Vault into my environment and I am seeing a ton of logs going into the SIEM. Upon further investigation, I see that these are being generated by AlienVault itself. I think that ",
+    "url": "https://security.stackexchange.com/questions/161782/siem-alien-vault-recommended-method-for-muting-noise"
+   },
+   {
+    "title": "Feature request: Support for heartbeat messages for outputs",
+    "body": "**Motivation** We would like to send falco messages from multiple clusters to a SIEM. It would be nice if the SIEM could detect if we stopped receiving logs from a given cluster though (for example, i",
+    "url": "https://github.com/falcosecurity/falcosidekick/issues/278"
+   },
+   {
+    "title": "Collecting Attacker Feeds",
+    "body": "Hi, I'd like to collect all the feeds that's been detected by tpotce in 24 hours and block them in SIEM. I want to do this automatically for every 24 hours. Is there a way in this tool to do this? or ",
+    "url": "https://github.com/telekom-security/tpotce/issues/1545"
+   },
+   {
+    "title": "[FEATURE] Real-time SIEM integration with automatic alert processing",
+    "body": "**Is your feature request related to a problem? Please describe.** The platform currently has SIEM connector stub code but no actual real-time integration. Security teams receive hundreds of alerts da",
+    "url": "https://github.com/ZainGuard/InvestigAI/issues/4"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "Are SIEM and NIDS/HIDS complementary?",
+    "body": "I just would like to have your feedback if you were involved with Security Information and Event Management. From your experience, do we have to add a SIEM to an existing NIDS (snort) and HIDS (ossec)? It seems to be quite huge and expensive to set up this kind of software - SIEM (and team dealing w",
+    "url": "https://security.stackexchange.com/questions/133218/are-siem-and-nids-hids-complementary"
+   },
+   {
+    "title": "DNS Processor for Ingest Pipelines",
+    "body": "### Description TL:DR - There needs to be a DNS processor for Ingest Pipelines. We have been using Elastic as a SIEM for nearly four years, and we have now spent the last ~15 months rolling it out as a Data Lake and Infrastructure Monitoring tool for the rest of our company. Over the years, we have ",
+    "url": "https://github.com/elastic/elasticsearch/issues/91624"
+   },
+   {
+    "title": "[FEATURE] Real-time SIEM integration with automatic alert processing",
+    "body": "**Is your feature request related to a problem? Please describe.** The platform currently has SIEM connector stub code but no actual real-time integration. Security teams receive hundreds of alerts daily from SIEMs (Splunk, Elastic, QRadar) but must manually copy-paste alerts into ZainGuard for anal",
+    "url": "https://github.com/ZainGuard/InvestigAI/issues/4"
+   }
+  ]
+ },
+ {
+  "theme_id": 10,
+  "name": "AWS role credentials for workloads",
+  "need": "Engineers running workloads in EKS, Lambda or outside AWS struggle to get tools to use role-based, short-lived credentials via the default chain instead of static or expiring keys.",
+  "open_source_leaders": [
+   "aws/aws-workload-credentials-provider (709 stars)",
+   "jenkinsci/aws-secrets-manager-credentials-provider-plugin (65 stars)",
+   "61418/boto3-refresh-session (53 stars)",
+   "jfrog/jfrog-credentials-provider (28 stars)",
+   "geordielad/tableau-athena-credential-provider-examples (14 stars)"
+  ],
+  "statements": [
+   {
+    "title": "Obtain credentials from `cli/cache` json file",
+    "body": "### Is this related to a problem? Going upstream after creating this: https://github.com/kubernetes-sigs/aws-iam-authenticator/issues/296 ### Feature description Describe what you want to happen. If y",
+    "url": "https://github.com/aws/aws-sdk-go/issues/3186"
+   },
+   {
+    "title": "[AWS] Support the new EKS Pod Identity Agent",
+    "body": "## Description of the bug External Secrets v0.9.9 installed in EKS does not work with the new [EKS Pod Identity Agent](https://docs.aws.amazon.com/eks/latest/userguide/pod-identities.html) feature (al",
+    "url": "https://github.com/external-secrets/external-secrets/issues/2951"
+   },
+   {
+    "title": "Support AWS_ROLE_ARN Environment Variable with Environment Credential Provider",
+    "body": "### Feature description The `AWS_ROLE_ARN` environment variable was recently added with the introduction of the web identity credential provider. It would be great if the `AWS_ROLE_ARN` environment va",
+    "url": "https://github.com/aws/aws-sdk-go-v2/issues/2867"
+   },
+   {
+    "title": "Would you mind clarifying how to add additional Roles/Users to the AWS AUTH during EKS provisioning",
+    "body": "## Is your request related to a problem? Please describe. Could not add Roles arn:: to the aws_auth configmap during installation process hence there are no any ability to manage EKS cluster after pro",
+    "url": "https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1901"
+   },
+   {
+    "title": "Support AWS IAM Roles Anywhere for AWS Secrets Engine",
+    "body": "**Is your feature request related to a problem? Please describe.** Recently Amazon introduces [IAM Roles Anywhere for workloads outside of AWS](https://aws.amazon.com/blogs/security/extend-aws-iam-rol",
+    "url": "https://github.com/hashicorp/vault/issues/16268"
+   },
+   {
+    "title": "S3 Client to be able to inherit IAM permissions from runtime / environment",
+    "body": "### What is the problem this feature would solve? Currently if you use the bun S3 client in say a lambda or fargate container, the only way to authorize the client is by explicilty passing in a access",
+    "url": "https://github.com/oven-sh/bun/issues/22711"
+   },
+   {
+    "title": "AWS ECR Permanent Credentials Feature Request",
+    "body": "**Is your feature request related to a problem? Please describe.** I'm running into a frustrating issue with ECR's 12-hour credential expiration. We're still setting up our initial workflow, having to",
+    "url": "https://github.com/runpod/runpod-python/issues/415"
+   },
+   {
+    "title": "Using env var in vault agent conf",
+    "body": "**Is your feature request related to a problem? Please describe.** I'd like to use an environment variable for my vault agent configuration. This var is the AWS role and vary on my deploy stage. **Des",
+    "url": "https://github.com/hashicorp/vault/issues/11571"
+   },
+   {
+    "title": "Enable specific role assumption in ProviderConfig",
+    "body": "### What problem are you facing? I would like to use specific and least privileged access roles for provisioning AWS resources without creating additional credentials wherever possible. ### How could ",
+    "url": "https://github.com/crossplane-contrib/provider-aws/issues/606"
+   },
+   {
+    "title": "Vault client should use AWS-SDK default credential chain when using AWS auth method in iam mode",
+    "body": "**Is your feature request related to a problem? Please describe.** I have tried vault with multiple credential retrieval methods that the AWS SDK natively supports, namely: 1. ~/.aws/config with sourc",
+    "url": "https://github.com/hashicorp/vault/issues/12568"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "[AWS] Support the new EKS Pod Identity Agent",
+    "body": "## Description of the bug External Secrets v0.9.9 installed in EKS does not work with the new [EKS Pod Identity Agent](https://docs.aws.amazon.com/eks/latest/userguide/pod-identities.html) feature (alternative to IRSA). EKS Pod Identity Agent injects the `AWS_CONTAINER_CREDENTIALS_FULL_URI: http://1",
+    "url": "https://github.com/external-secrets/external-secrets/issues/2951"
+   },
+   {
+    "title": "Enable specific role assumption in ProviderConfig",
+    "body": "### What problem are you facing? I would like to use specific and least privileged access roles for provisioning AWS resources without creating additional credentials wherever possible. ### How could Crossplane help solve your problem? Adding a field e.g. `assumeRoleARN` to the `ProviderConfig` woul",
+    "url": "https://github.com/crossplane-contrib/provider-aws/issues/606"
+   }
+  ]
+ },
+ {
+  "theme_id": 11,
+  "name": "CycloneDX SBOM output and attestation",
+  "need": "Supply-chain teams want tools to emit and accept CycloneDX SBOMs (and VEX) and tie them to releases through attestations.",
+  "open_source_leaders": [
+   "anchore/syft (9950 stars)",
+   "DependencyTrack/dependency-track (4499 stars)",
+   "aboutcode-org/scancode-toolkit (2678 stars)",
+   "oss-review-toolkit/ort (2126 stars)",
+   "guacsec/guac (1581 stars)"
+  ],
+  "statements": [
+   {
+    "title": "Provide CycloneDX SBOM as an alternative to SPDX SBOM",
+    "body": "Hi there, currently Harbor generates a trivy SPDX SBOM: https://goharbor.io/docs/edge/administration/sbom-integration/ We would prefer [CycloneDX](https://cyclonedx.org) over SPDX json as it is more w",
+    "url": "https://github.com/goharbor/harbor/issues/21444"
+   },
+   {
+    "title": "Add support for Cyclonedx as a predicate type",
+    "body": "intoto attestations currently document the [SPDX predicate type](https://github.com/in-toto/attestation/blob/main/spec/predicates/spdx.md). SBOMs and BOMs in general are a diverse space as of now and ",
+    "url": "https://github.com/in-toto/attestation/issues/82"
+   },
+   {
+    "title": "support generating an additional SBOM file based on CycloneDX format",
+    "body": "### Is your feature request related to a problem? Please describe. No, it is not related to a problem. ### Describe the solution you'd like We have many tools that can allow us to generate an SBOM fil",
+    "url": "https://github.com/goreleaser/goreleaser/issues/2808"
+   },
+   {
+    "title": "Give the possibility to atomically upload a SBOM with related VEX",
+    "body": "### Current Behavior: Dependency Track manage BOM and VEX as distinct entities with their own API as recommended [here](https://cyclonedx.org/capabilities/vex/). From an automation perspective, one ha",
+    "url": "https://github.com/DependencyTrack/dependency-track/issues/1872"
+   },
+   {
+    "title": "Add support for CycloneDX v1.7 schema",
+    "body": "### Is your feature request related to a problem? Please describe. CycloneDX v1.7 has been released with updates to the SBOM schema. It would be helpful for the plugin to support generating SBOMs comp",
+    "url": "https://github.com/CycloneDX/cyclonedx-gradle-plugin/issues/832"
+   },
+   {
+    "title": "feat(loxel): attest release DMGs, update zips and the SBOM with GitHub artifact attestations",
+    "body": "## Problem Each Loxel release now publishes a CycloneDX SBOM (`loxel- .cdx.json`) next to the DMGs and update zips, but nothing ties the two together. A downloaded DMG, update zip or SBOM can only be ",
+    "url": "https://github.com/bizimind/loxel/issues/1360"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "Provide CycloneDX SBOM as an alternative to SPDX SBOM",
+    "body": "Hi there, currently Harbor generates a trivy SPDX SBOM: https://goharbor.io/docs/edge/administration/sbom-integration/ We would prefer [CycloneDX](https://cyclonedx.org) over SPDX json as it is more widely adopted. In our special case, we would like to sync SBOMs generated in Harbor to [Dependency-T",
+    "url": "https://github.com/goharbor/harbor/issues/21444"
+   },
+   {
+    "title": "Add support for Cyclonedx as a predicate type",
+    "body": "intoto attestations currently document the [SPDX predicate type](https://github.com/in-toto/attestation/blob/main/spec/predicates/spdx.md). SBOMs and BOMs in general are a diverse space as of now and [CycloneDX](https://cyclonedx.org/) is the other leading industry alternative to SPDX for SBOMs and ",
+    "url": "https://github.com/in-toto/attestation/issues/82"
+   }
+  ]
+ },
+ {
+  "theme_id": 14,
+  "name": "Dependency context for vulnerability impact",
+  "need": "Teams analyzing SBOMs and advisories struggle to tell how a vulnerability affects their product because reports lack dependency hierarchy, parent component, container and vendor advisory context.",
+  "open_source_leaders": [
+   "alexdevassy/AI-Powered-Vulnerability-Impact-Analyzer (65 stars)",
+   "pchukwuemeka424/Machine-Learning-and-Morphometric-Analysis-for-Runoff-Dynamics-Enhancing-Flood (54 stars)",
+   "Mario-Kart-Felix/solar-wind-hacker-book (24 stars)",
+   "vulnlog/vulnlog (22 stars)",
+   "Nate0634034090/nate158g-m-w-n-l-p-d-a-o-e (17 stars)"
+  ],
+  "statements": [
+   {
+    "title": "Add support for advisories defined in CSAF",
+    "body": "### Current Behavior Some commercial software vendors provide advisory information in CSAF 2.0 format. These include RedHat and Oracle, among others. There isn't currently a good way to identify vulne",
+    "url": "https://github.com/DependencyTrack/dependency-track/issues/2353"
+   },
+   {
+    "title": "Feature: documenting external/extraneous dependencies",
+    "body": "## current state CycloneDX allows describing components, and the dependency graph. Each component can have exactly one version, no version range. Components can be connected in a dependency graph. ## ",
+    "url": "https://github.com/CycloneDX/specification/issues/321"
+   },
+   {
+    "title": "Native Image --enable-sbom option generates SBOM with dependency references and hierarchy",
+    "body": "**Feature request** Some vulnerabilities are only present if a dependency is brought in directly exposed by direct dependency. In some cases, the vulnerability does not exist if the dependency is a tr",
+    "url": "https://github.com/oracle/graal/issues/7729"
+   },
+   {
+    "title": "Wishlist / inquiry: \"advisory impact\" standard.",
+    "body": "# Advisory Impact Standard Is there a standard for documenting how upstream dependency vulnerabilities impact a given crate, so that users of the crate know (a) the authors are aware and (b) they have",
+    "url": "https://github.com/rustsec/rustsec/issues/505"
+   },
+   {
+    "title": "Display which parent dependency the current dependency is part of in Dependency-Track",
+    "body": "## Summary Add a 'Parent component' column to the measurement details of the 'security warnings' and 'dependencies' metrics when Dependency-Track is the source. The column shows the top-level (root) d",
+    "url": "https://github.com/ICTU/quality-time/issues/8687"
+   },
+   {
+    "title": "Trivy Operator Sbom Reports on Dependency track visualisation based on Container",
+    "body": "I would like to analyze the SBOM reports generated by the Trivy operator in Dependency Track. However, I am encountering difficulty in associating these reports with their respective containers, as th",
+    "url": "https://github.com/takumakume/sbomreport-to-dependencytrack/issues/11"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "Feature: documenting external/extraneous dependencies",
+    "body": "## current state CycloneDX allows describing components, and the dependency graph. Each component can have exactly one version, no version range. Components can be connected in a dependency graph. ## feature Make it possible to describe external dependencies that are not part of a shipped product, l",
+    "url": "https://github.com/CycloneDX/specification/issues/321"
+   }
+  ]
+ }
+]

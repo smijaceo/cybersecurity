@@ -200,6 +200,22 @@ def cmd_threat_prepare(args) -> int:
     return 0
 
 
+def cmd_market_prepare(args) -> int:
+    from . import analysis
+
+    try:
+        theme_data, names = _load_theme_names(args)
+    except (ValueError, FileNotFoundError) as exc:
+        log.error("theme names: %s", exc)
+        return 2
+    items = analysis.build_market_input(theme_data["themes"], names, Store(args.db), args.out_dir)
+    for i in items:
+        print(f"theme {i['theme_id']:>2}  {i['name']}  "
+              f"({len(i['price_or_vendor_statements'])} price/vendor statements)")
+    print(f"-> {args.out_dir}/market-research-input.json")
+    return 0
+
+
 def cmd_gaps(args) -> int:
     from datetime import date
 
@@ -211,10 +227,13 @@ def cmd_gaps(args) -> int:
         theme_data, names = _load_theme_names(args)
         threat_input = json.loads((args.out_dir / "threat-mapping-input.json").read_text())
         threat = analysis.load_threat(args.out_dir / "threat-mapping.jsonl", threat_input)
+        market_input = json.loads((args.out_dir / "market-research-input.json").read_text())
+        market = analysis.load_market(args.out_dir / "market-research.jsonl", market_input)
     except (ValueError, FileNotFoundError) as exc:
         log.error("agent output: %s", exc)
         return 2
-    feats = analysis.theme_features(theme_data["themes"], names, threat, store, config, scoring)
+    feats = analysis.theme_features(theme_data["themes"], names, threat, market, store, config,
+                                    scoring)
     ranked = gaps.score(feats, scoring["weights"])
     excluded = [{**t, "reason": names[t["theme_id"]].get("reason", "")}
                 for t in theme_data["themes"] if names[t["theme_id"]]["coherent"] != "y"]
@@ -226,7 +245,8 @@ def cmd_gaps(args) -> int:
     report.write_text(analysis.render_report(ranked, excluded, meta, scoring))
     for i, t in enumerate(ranked, 1):
         print(f"{i:>2}. {t['gap_score']:.3f}  {t['name']}  ({t['demand']['need_signals']} statements,"
-              f" stability {t['stability']})")
+              f" stability {t['stability']}, crowded {t['supply']['crowdedness']}/3,"
+              f" WTP {t['monetization']['willingness_to_pay']}/3) {t['scores']}")
     print(f"report: {report}")
     return 0
 
@@ -292,6 +312,10 @@ def main(argv: list[str] | None = None) -> int:
     tp.add_argument("--out-dir", type=Path, default=DEFAULT_PHASE2)
     tp.add_argument("--scoring", type=Path, default=DEFAULT_SCORING)
     tp.set_defaults(func=cmd_threat_prepare)
+
+    mp = sub.add_parser("market-prepare", help="input for the paid-market researcher agents")
+    mp.add_argument("--out-dir", type=Path, default=DEFAULT_PHASE2)
+    mp.set_defaults(func=cmd_market_prepare)
 
     gp = sub.add_parser("gaps", help="score named themes and write the gap report")
     gp.add_argument("--out-dir", type=Path, default=DEFAULT_PHASE2)

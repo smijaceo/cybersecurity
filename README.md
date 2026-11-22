@@ -30,6 +30,7 @@ python -m gapfinder judge-prepare --out-dir reports/phase2/judge   # then: relev
 python -m gapfinder judge-import --batch <batch.json> --labels <labels.jsonl>
 python -m gapfinder themes            # then: theme namer -> reports/phase2/theme-names.jsonl
 python -m gapfinder threat-prepare    # then: threat mapper -> reports/phase2/threat-mapping.jsonl
+python -m gapfinder market-prepare    # then: market researchers -> reports/phase2/market-research.jsonl
 python -m gapfinder gaps              # -> reports/gaps-<date>.md
 ```
 

@@ -2,17 +2,23 @@
 # so weights express relative importance. Changing weights is a scope decision: log it in
 # docs/DECISIONS.md.
 
-weights:
-  demand: 0.40        # how many people state the need, how much engagement, how recent
-  supply_gap: 0.35    # 1 - how much maintained open-source supply exists (GitHub repos)
-  threat: 0.25        # threat mapper's 0-3 rating against ATT&CK techniques
+weights:              # decision D11 (monetization focus)
+  demand: 0.30        # how many people state the need, how much engagement, how recent
+  supply_gap: 0.30    # 1 - supply: 0.6 commercial crowdedness + 0.4 open-source (GitHub)
+  monetization: 0.25  # willingness to pay, price/vendor complaints, bundling risk
+  threat: 0.15        # threat mapper's 0-3 rating against ATT&CK techniques
 
 demand:
   recent_years: 2     # signals newer than this count as "recent"
   # demand = 0.5 * rank(need statements) + 0.3 * rank(log engagement) + 0.2 * rank(recent share)
 
-supply:               # GitHub repository search on the theme's search query (decision D10)
-  # supply = 0.4 * rank(log repo count) + 0.3 * rank(log top stars) + 0.3 * rank(active top repos)
+supply:               # decisions D10, D11
+  # open_source = 0.4 * rank(log repo count) + 0.3 * rank(log top stars) + 0.3 * rank(active top repos)
+  # supply = 0.6 * rank(commercial crowdedness 0-3) + 0.4 * open_source
+
+monetization:         # market researcher agent, docs/rubrics/market-research.md (decision D11)
+  # monetization = 0.5 * rank(willingness to pay 0-3) + 0.25 * rank(share of statements about
+  #                price/vendors) + 0.25 * rank(bundling safety: low risk = best)
 
 threat:               # threat mapper agent, docs/rubrics/threat-mapping.md (decision D10)
   attack_candidates: 15   # ATT&CK techniques shortlisted per theme for the mapper

@@ -48,3 +48,42 @@ def test_load_threat_rejects(tmp_path, row, msg):
     other = {"theme_id": 3, "techniques": [], "threat_relevance": 0}
     with pytest.raises(ValueError, match=msg):
         analysis.load_threat(write(tmp_path / "t.jsonl", [row, other]), THREAT_INPUT)
+
+
+def test_paid_pain_matches_price_and_vendor_language():
+    sigs = [{"title": "SSO tax is absurd", "body": ""},
+            {"title": "Need SCIM", "body": "only on the Enterprise plan, too expensive"},
+            {"title": "Alternative to Okta?", "body": ""},
+            {"title": "Support IAM auth", "body": "please add"}]
+    assert [s["title"] for s in analysis.paid_pain(sigs)] == [
+        "SSO tax is absurd", "Need SCIM", "Alternative to Okta?"]
+
+
+def market(tid=0, **over):
+    d = {"theme_id": tid,
+         "vendors": [{"name": "V", "url": "https://v", "offering": "o", "pricing": "$5/user",
+                      "segment": "SMB", "source": "https://v/pricing"}],
+         "crowdedness": 2, "paid_market_gaps": [{"gap": "g", "evidence": "https://e"}],
+         "willingness_to_pay": 2, "wtp_evidence": "w", "wtp_sources": ["https://s"],
+         "bundling_risk": "low", "bundling_note": "n", "summary": "s"}
+    d.update(over)
+    return d
+
+
+def test_load_market_accepts_valid(tmp_path):
+    out = analysis.load_market(write(tmp_path / "m.jsonl", [market()]), [{"theme_id": 0}])
+    assert out[0]["crowdedness"] == 2
+
+
+@pytest.mark.parametrize("over, msg", [
+    ({"crowdedness": 4}, "crowdedness must be 0-3"),
+    ({"bundling_risk": "maybe"}, "bundling_risk"),
+    ({"wtp_sources": []}, "source URLs"),
+    ({"paid_market_gaps": [{"gap": "g", "evidence": "trust me"}]}, "evidence URL"),
+    ({"vendors": [{"name": "V", "url": "u", "offering": "o", "pricing": "p", "segment": "s",
+                   "source": "none"}]}, "no source URL"),
+    ({"extra": 1}, "keys"),
+])
+def test_load_market_rejects(tmp_path, over, msg):
+    with pytest.raises(ValueError, match=msg):
+        analysis.load_market(write(tmp_path / "m.jsonl", [market(**over)]), [{"theme_id": 0}])

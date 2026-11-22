@@ -22,6 +22,10 @@ and stress-tests them with critic agents. The repository owner is the product ma
 - Never commit secrets or `data/*.db`. API keys go into the cloud environment as secrets.
 - LLM work (filtering, idea generation, critics) runs as Claude Code subagents per decision D2;
   don't add an Anthropic API dependency without a decision entry.
-- Agent steps (relevance judge, theme namer, threat mapper) each use their rubric in
-  [docs/rubrics/](docs/rubrics/) via a fresh subagent that sees only the rubric and the data.
-  Their outputs are validated by code on import, and inputs and outputs are committed.
+- Agent steps are defined once in `.claude/agents/` (relevance-judge, theme-namer,
+  threat-mapper, market-researcher) and follow their rubric in [docs/rubrics/](docs/rubrics/).
+  Use those definitions; don't write ad-hoc agent prompts for pipeline steps.
+- Re-run Phase 2 with the saved `gap-analysis` workflow (`.claude/workflows/`), not by hand.
+- Every agent output is validated against `gapfinder/schemas.py` (pydantic) and committed.
+- Reuse maintained open-source libraries before writing our own (D7); record any new
+  dependency in `pyproject.toml`.

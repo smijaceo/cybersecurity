@@ -105,6 +105,7 @@ Output: **[reports/gaps-2026-11-22.md](../reports/gaps-2026-11-22.md)**.
 | Need themes | done | BERTopic with the model2vec `potion-base-8M` backend (D9), outlier reduction at similarity ≥ 0.6. 16 themes; theme namer marked 8 coherent. Per-theme stability across 3 extra seeds. |
 | Supply map | done — changed by D10 | GitHub repository search per theme (repo count, leader's stars, active top repos). Awesome-lists dropped from scoring. |
 | Threat relevance | done — changed by D10 | ATT&CK candidates shortlisted with `potion-retrieval-32M`; threat mapper rates 0–3 and picks techniques. NVD keyword count shown, not scored. |
+| Repeatable workflow (D12) | done | `.claude/workflows/gap-analysis.js`, agent definitions, pydantic schemas, scipy ranks. |
 | Paid-market map (D11) | in progress | Market researcher agents with web search: commercial vendors, pricing, paid-market gaps, willingness to pay, bundling risk, all with source links (`market-prepare` → researcher → `gaps` validates). Statements complaining about price or vendors counted per theme. |
 | Gap score | done — reweighted by D11 | [config/scoring.yaml](../config/scoring.yaml): 0.30 demand + 0.30 supply gap (60% commercial, 40% open source) + 0.25 monetization + 0.15 threat, percentile ranks. |
 | Gap report | done | `gapfinder gaps` → `reports/gaps-<date>.md` + `reports/phase2/gaps.json`. |
@@ -113,9 +114,15 @@ Output: **[reports/gaps-2026-11-22.md](../reports/gaps-2026-11-22.md)**.
 - Each top gap links ≥ 5 real signals. ✅ (smallest coherent theme: 6)
 - The PM agrees the report is credible. ⏳ waiting on PM.
 
-**Pipeline** (all agent inputs and outputs committed under `reports/phase2/`):
-`judge-prepare` → relevance judge → `judge-import` → `themes` → theme namer → `threat-prepare`
-→ threat mapper → `market-prepare` → market researchers → `gaps`.
+**Pipeline** (decision D12). Re-run with the saved workflow — in a Claude Code session ask to
+"run the gap-analysis workflow" with `from` = `collect` | `judge` | `themes` | `enrich` | `score`:
+
+`collect` → `judge-prepare` → **relevance-judge** per batch → `judge-import` → `themes` →
+**theme-namer** → `threat-prepare` + `market-prepare` → **threat-mapper** + **market-researcher**
+per theme → `market-merge` → `gaps` → adversarial fact-check of market claims.
+
+Agents are defined in `.claude/agents/` and follow rubrics in `docs/rubrics/`; every output is
+validated against `gapfinder/schemas.py` and committed under `reports/phase2/`.
 
 **Results, first run (2026-11-22, open-source supply only — superseded by the D11 run)**
 

@@ -42,7 +42,8 @@ Collect posts, questions and issues where people express a need, for the four se
 | Collector: Stack Exchange (security.stackexchange.com) | done — weak source, see notes |
 | Collector: GitHub issues | done |
 | CLI: `collect`, `stats`, `export` | done |
-| Full run across all 4 segments, results reviewed with PM | not started |
+| Full run across all 4 segments | done — 1,193 signals (2026-11-22) |
+| PM review of [reports/phase1-review-sample.md](../reports/phase1-review-sample.md) | waiting on PM |
 | Collector: Reddit (needs OAuth app + credential, decision pending) | not started |
 
 **Exit criteria**
@@ -58,6 +59,22 @@ Collect posts, questions and issues where people express a need, for the four se
 - Stack Exchange full-text search matched loose words ("secrets" → Messenger "Secret
   Conversations"). It now matches titles only: precise but few results. Unauthenticated quota is
   ~300 requests/day. Treat it as a supporting source.
+
+**Full run (2026-11-22): 1,193 signals**
+
+| Segment | GitHub | HN | Stack Exchange |
+|---|---|---|---|
+| appsec-supply-chain | 311 | 85 | 1 |
+| cloud-security | 216 | 100 | 6 |
+| identity-access | 194 | 94 | 5 |
+| smb-security-ops | 115 | 36 | 30 |
+
+- Most of the top signals belong to their segment, but many are news, guides or launches rather than
+  stated needs. Separating the two is the Phase 2 relevance filter.
+- GitHub still lets through long issues that mention a term only in passing (top cloud-security item:
+  Homebrew's "macOS Big Sur compatibility"), and sorting by reactions pushes them up. Phase 2 must
+  down-weight body-only matches.
+- One GitHub rate-limit response during the run; the retry recovered it.
 
 ## Phase 2 — Gap analysis · `not started`
 

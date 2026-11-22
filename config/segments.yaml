@@ -1,0 +1,29 @@
+# Market segments for the first scan (decision D3: 3–5 segments).
+# Each query runs against every enabled source. Keep the list short:
+# Stack Exchange allows ~300 unauthenticated requests per day.
+#
+# Query style: a phrase people use when they have an unmet need
+# ("is there a tool", "alternative to", "too expensive") plus a segment term.
+
+pain_phrases:
+  - "is there a tool"
+  - "alternative to"
+  - "too expensive"
+  - "looking for a"
+
+segments:
+  cloud-security:
+    description: Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.
+    terms: [CSPM, "cloud misconfiguration", "AWS IAM", "kubernetes security"]
+
+  appsec-supply-chain:
+    description: Secrets in code, dependency risk, SBOM, CI/CD pipeline security.
+    terms: ["secrets scanning", SBOM, "dependency vulnerability", "CI pipeline security"]
+
+  identity-access:
+    description: SSO, MFA rollout, access reviews, privileged access, offboarding.
+    terms: ["access review", "privileged access", "MFA rollout", "SSO tax"]
+
+  smb-security-ops:
+    description: Small teams with no SOC — alert overload, affordable detection, compliance.
+    terms: ["small business security", SIEM, "EDR for small", "SOC 2 compliance tool"]

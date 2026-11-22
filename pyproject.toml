@@ -1,0 +1,19 @@
+[project]
+name = "gapfinder"
+version = "0.1.0"
+description = "Find unmet needs in the cybersecurity tools market and stress-test product ideas against critic agents."
+requires-python = ">=3.11"
+dependencies = ["requests>=2.31", "PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["gapfinder*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

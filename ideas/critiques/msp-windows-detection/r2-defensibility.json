@@ -1,0 +1,81 @@
+{
+  "concept_id": "msp-windows-detection",
+  "lens": "defensibility",
+  "round": 2,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "The move from configs to rollout, drift alerts and reports is right, but every new layer is something Wazuh already has: agent groups push per-tenant config, SCA YAML policies check registry and command output and alert on changes. The paid layer is still files the MSSP keeps. Wazuh is the copier. The benchmark that could be a moat sits only in risks.",
+  "objections": [
+    {
+      "objection": "Wazuh itself is the most likely copier, and it could ship this within a quarter. Its SCA module runs YAML policies with registry and command checks (for example auditpol output, the Sysmon service and log-size keys) and raises alerts whenever a check changes status. Its agent groups push one agent.conf per group to that group's agents. The 'coverage verifier + drift alert' is therefore one SCA policy plus group configs, and Wazuh already ships CIS-based Windows policies. A 'Windows logging coverage' policy would be a small release item.",
+      "severity": "major",
+      "evidence": "https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/how-it-works.html ; https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/creating-custom-policies.html ; https://documentation.wazuh.com/current/user-manual/reference/centralized-configuration.html ; concept:mvp.features[1]"
+    },
+    {
+      "objection": "The stateful layer is still copyable files on the customer's side. The verifier, decoders, rules, dashboards and report runner all run inside the MSSP environment with no hosted service, so a customer can cancel and keep running the last version. A Wazuh partner or consultant can also repackage it for their own clients. The state (per-tenant drift history) lives in the MSSP's indexer, not with QuietWin.",
+      "severity": "major",
+      "evidence": "concept:mvp.out_of_scope[0]; concept:mvp.features[2]; concept:risks[1]"
+    },
+    {
+      "objection": "The only real moat named in the revision log, an opt-in cross-MSSP coverage benchmark, is missing from the MVP features and appears only as a hope in risks. Local-only tooling with no data leaving the MSSP makes it hard to build. Without it there are no data or network effects.",
+      "severity": "major",
+      "evidence": "concept:revision_log ('added ... opt-in cross-MSSP coverage benchmark'); concept:mvp.features; concept:risks[1]"
+    },
+    {
+      "objection": "Distribution remains unowned. A Wazuh partner listing is an annual paid programme ($3,200 or $9,900 in year one), not a channel lock, and it makes QuietWin one partner among the integrators who could sell the same service. RMM script-library listings are open to anyone. Huntress still holds the bundled MSP SIEM channel.",
+      "severity": "minor",
+      "evidence": "https://wazuh.com/partners/ ; concept:go_to_market.channel"
+    },
+    {
+      "objection": "Narrowing to Wazuh-only MSSPs makes the product depend on one platform whose vendor sells professional services and partner programmes to the same buyers. That shrinks a niche already called lifestyle-scale and keeps a capable copier in the room.",
+      "severity": "minor",
+      "evidence": "concept:risks[2]; concept:buyer.company_profile"
+    }
+  ],
+  "strongest_point": "Replay-tested public coverage results, IR-question checks and the built-in vs standalone Sysmon migration expertise give real, if thin, founder-trust and know-how advantages in a narrow Wazuh niche.",
+  "what_would_change_my_mind": [
+    "The cross-MSSP coverage benchmark built into the MVP (opt-in anonymized coverage and volume metrics from 20+ MSSPs) and shown in client reports that free SCA policies cannot match",
+    "A signed Wazuh technology-partner, marketplace or OEM deal, or an RMM vendor bundling the packs, rather than a paid partner listing",
+    "A licence-enforced or hosted component (for example signed pack updates or a report service) whose absence breaks monthly value when a customer cancels",
+    "Pilot evidence that 3 of 5 MSSPs renew at month 3 and say they would not rebuild the layer from Wazuh SCA themselves"
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Product is copyable text files; open core gives the method away; maintenance is not a moat.",
+      "resolved": false,
+      "note": "A verifier, drift rules and a report runner were added, but they are also files and scripts the MSSP runs and keeps. Copyability is lower but still high."
+    },
+    {
+      "objection": "Strong free substitutes (sysmon-modular, Cribl packs) cover the core claim.",
+      "resolved": true,
+      "note": "Repositioned on top of sysmon-modular, with volume reduction no longer the pitch. A new free substitute for the verifier layer is Wazuh's own SCA module."
+    },
+    {
+      "objection": "Microsoft is the most likely copier (Sentinel event sets, built-in Sysmon).",
+      "resolved": true,
+      "note": "Sentinel was dropped and two-flavour Sysmon migration was added. The main copier is now Wazuh rather than Microsoft."
+    },
+    {
+      "objection": "MSP channel already held by bundled players (Huntress, Wazuh, Graylog, RMMs).",
+      "resolved": false,
+      "note": "The concept narrows to MSSPs who keep their own Wazuh stack and plans partner and RMM listings, but no deal is signed. The Wazuh partner programme is paid and non-exclusive."
+    },
+    {
+      "objection": "Lock-in levers deliberately out of scope; near-zero switching cost.",
+      "resolved": false,
+      "note": "Per-tenant drift and report workflows add some habit, but no hosting and local-only state still mean a customer can cancel and keep using everything."
+    },
+    {
+      "objection": "Price too low to fund a durable lead.",
+      "resolved": true,
+      "note": "Per-tenant pricing ($9/tenant, $149 minimum) now scales with the MSSP's client count. Revenue is still modest, but this is no longer a defensibility blocker by itself."
+    }
+  ],
+  "sources": [
+    "https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/index.html",
+    "https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/how-it-works.html",
+    "https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/creating-custom-policies.html",
+    "https://documentation.wazuh.com/current/user-manual/reference/centralized-configuration.html",
+    "https://wazuh.com/partners/"
+  ]
+}

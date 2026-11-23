@@ -1,0 +1,80 @@
+{
+  "concept_id": "msp-windows-detection",
+  "lens": "security-practitioner",
+  "round": 2,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "The revision fixes most round-1 problems. It narrows to Wazuh, supports both Sysmon flavours, makes 'Keep' the default and drops the canaries. Two practitioner gaps remain. Wazuh archives cannot recover events that the agent dropped, so the 'Lean' safety net is false. The RMM verifier also duplicates Wazuh-native SCA and group config, which an MSSP already trusts. A coverage verdict does not prove the events arrived.",
+  "objections": [
+    {
+      "objection": "The 'Lean' profile drops events in Wazuh agent eventchannel XPath queries, and the concept names Wazuh compressed archives as the full-fidelity safety net. Wazuh archives only hold events that the manager received, so events filtered at the agent never reach archives.json. The safety net does not cover the drops it is meant to back. An IR lead who reads the docs will catch this, and the drops stay unrecoverable. Real options: keep full collection and filter with manager-side rules (archive everything, alert on less), or keep a local full-size Windows log retention window on each host.",
+      "severity": "major",
+      "evidence": "https://documentation.wazuh.com/current/user-manual/manager/event-logging.html; concept:mvp.features (Two profiles per role)"
+    },
+    {
+      "objection": "The paid 'stateful layer' is a custom verifier pushed through RMM, but Wazuh already does this natively. SCA policies run scheduled per-agent command and registry checks (auditpol output, Sysmon service and config hash, EventLog MaxSize) and report pass/fail changes into Wazuh. Agent groups (agent.conf) push localfile/eventchannel config per tenant. A practitioner would rather run vendor-native SCA YAML than grant a solo vendor's signed scripts execution on 50 tenants through RMM. Rebuild the verifier as SCA policies plus group config, and keep RMM only for GPO and Sysmon install. That cuts both the trust burden and the 'Wazuh could add it' gap to a thin layer.",
+      "severity": "major",
+      "evidence": "https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/creating-custom-policies.html; https://documentation.wazuh.com/current/user-manual/reference/centralized-configuration.html; concept:mvp.features (Coverage verifier run per host via RMM)"
+    },
+    {
+      "objection": "Configuration state is not delivery. Correct auditpol and Sysmon settings still lose events when the agent's client buffer overflows, when EPS limits are hit, when channels are disabled, or when an agent goes silent. A monthly client report that says 'covered' on config checks alone gives false assurance, and that report is a liability for the MSSP. Drift checks need an end-to-end heartbeat: generate a known test event per channel on each host and alert when it does not land in the indexer.",
+      "severity": "major",
+      "evidence": "concept:mvp.features (Wazuh decoders, rules and dashboards ... coverage status)"
+    },
+    {
+      "objection": "Staged rings, signed packs, auditpol preview and per-tenant rollback appear only under hardest_parts, not as MVP features. Overriding a client's existing advanced audit subcategories through GPO can still collide with EDR-required or legacy-category settings, for example when 'Force audit policy subcategory settings' is off. Rollback needs a captured per-host auditpol backup taken before any change.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts"
+    },
+    {
+      "objection": "Most small MSSPs run one shared Wazuh manager and indexer for all their clients. Per-client reports and dashboards depend on strict agent-group and label hygiene, and a report runner that holds indexer credentials able to read every tenant is a cross-client leakage risk if it is mislabelled. Each report query needs a scope limited to one tenant.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "The product runs locally with no hosted logs. 'Keep' is the default, the replay lab tests IR questions, and the client report gives the MSSP a concrete deliverable it can trust and resell.",
+  "what_would_change_my_mind": [
+    "The 'Lean' profile is redesigned so that every drop can be recovered (manager-side filtering with archives on, or a documented local retention window), and an IR tabletop at a pilot answers lateral-movement and logon-timeline questions.",
+    "The verifier ships as Wazuh SCA policies plus agent-group config, with RMM used only for GPO and Sysmon install, and 3 pilot MSSPs accept it after a security review.",
+    "An end-to-end per-channel heartbeat test event goes into the report, and at least one pilot shows it catching a real delivery gap (buffer drop, silent agent) that the config checks missed.",
+    "A pilot rollout to 20 or more tenants with a pre-change auditpol backup, staged rings and at least one tested rollback, with no EDR or audit conflicts."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "The why-now rests on built-in Sysmon, which covers few SMB servers; packs must support both flavours, migration and XML-field parsing.",
+      "resolved": true,
+      "note": "Packs now support standalone and built-in Sysmon with migration and XML-field parsing; why_now is reframed around migrating across the two flavours."
+    },
+    {
+      "objection": "Source-side drops are unrecoverable forensic gaps, and there is no archive safety net.",
+      "resolved": false,
+      "note": "'Keep' as the default and the IR checklist help. But the named safety net, Wazuh archives, does not hold events dropped by agent-side XPath, so 'Lean' drops are still unrecoverable."
+    },
+    {
+      "objection": "Free Sentinel event sets and Wazuh defaults may already cover the need; the paid delta is unproven.",
+      "resolved": true,
+      "note": "Sentinel is out of v1. For Wazuh, the delta is now audit policy, Sysmon, drift and reports rather than filtering. Pilots still have to measure it, and part of the drift value overlaps with native SCA."
+    },
+    {
+      "objection": "The ransomware-precursor pack duplicates EDR, and the canaries are slow and noisy.",
+      "resolved": true,
+      "note": "Canary folders and active response are removed; only the mapped Sigma detections remain as a baseline."
+    },
+    {
+      "objection": "RMM push to many tenants is a change-management and supply-chain risk, and needs signing, staged rings and rollback.",
+      "resolved": false,
+      "note": "These are acknowledged in hardest_parts but are not MVP features. RMM execution scope actually grew with the verifier, where Wazuh-native SCA would avoid it."
+    },
+    {
+      "objection": "Logon evidence needs high-volume events (4624/4634/4778/4779), which conflicts with the volume-cut promise on RDS hosts.",
+      "resolved": true,
+      "note": "The RDS 'Keep' profile keeps these events, and volume reduction is no longer promised or pitched."
+    }
+  ],
+  "sources": [
+    "https://documentation.wazuh.com/current/user-manual/manager/event-logging.html",
+    "https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/index.html",
+    "https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/creating-custom-policies.html",
+    "https://documentation.wazuh.com/current/user-manual/reference/centralized-configuration.html"
+  ]
+}

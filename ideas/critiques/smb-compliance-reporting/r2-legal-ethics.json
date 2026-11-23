@@ -1,0 +1,80 @@
+{
+  "concept_id": "smb-compliance-reporting",
+  "lens": "legal-ethics",
+  "round": 2,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "The revision fixes the round-1 legal problems: scoping now follows 314.6, reportability goes to counsel and the insurer, and no SSNs, returns or mailbox content are stored. Pen testing brings new exposure: third-party-hosted assets, Microsoft's rules of engagement, and outage liability during tax season. Testing authorization and insurance are still plans, so the verdict is conditional.",
+  "objections": [
+    {
+      "objection": "Testing authorization does not cover third-party assets. Many target offices run tax or loan software on hosted desktops (Verito and ACE, which the concept lists as competitors, are hosting providers), on MSP-managed firewalls or on ISP-owned gear. A signature from the office owner does not authorize testing infrastructure the office does not own. Without the host's written consent, the test risks unauthorized access under the CFAA and state laws and breaches the host's terms. Microsoft's Rules of Engagement also bind the owner's authorized agents. They prohibit post-exploit actions, lateral movement, phishing through Microsoft services, DoS and the use of credentials other than your own. The M365 'pen test' therefore has to be scoped as configuration review plus limited testing, not as an attack simulation.",
+      "severity": "major",
+      "evidence": "https://www.microsoft.com/en-us/msrc/pentest-rules-of-engagement ; concept:mvp.features[2] ; concept:competitors[1] ; concept:competitors[2]"
+    },
+    {
+      "objection": "The liability and insurance fix is still only a plan. The concept now adds active testing against production systems at financial offices. An outage or lockout during filing season, a missed critical finding later exploited, or a report a regulator rejects as (d)(2) evidence (open_questions[3]) could each lead to a claim. No E&O/cyber quote, liability cap or reviewed engagement terms exist yet, and the founder carries all of it personally.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts[3] ; concept:open_questions[3] ; concept:open_questions[6] ; concept:pricing.entry_price"
+    },
+    {
+      "objection": "The wedge copy calls annual pen testing 'a concrete legal duty', but 314.4(d)(2) requires it only absent effective continuous monitoring. The concept's own M365 monitor could be read as partial continuous monitoring, which muddies the claim. Marketing must keep the 'absent continuous monitoring' condition everywhere, and must not promise that a founder-run test satisfies the FTC.",
+      "severity": "minor",
+      "evidence": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.4 ; concept:go_to_market.wedge"
+    },
+    {
+      "objection": "Concentrated custody remains. A multi-tenant, admin-consented Graph app with directory, audit-log and mailbox-settings read across many financial firms, plus their scan and pen-test findings, is an attacker's roadmap. The concept recognizes this (hardest_parts[0]) and limits stored data. Execution and a 314.4(f)-acceptable vendor program are still to come.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts[0] ; concept:mvp.features[1]"
+    },
+    {
+      "objection": "White-label and insurer channels raise ethics questions. An MSP-branded report hides who did the testing and how independent they are, often when the MSP is the party being graded. Sharing findings with insurers 'to support underwriting' could expose a client who attested MFA on an application to rescission. Findings must belong to the client, and their disclosure must take the client's written consent.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[5] ; concept:competitors[3]"
+    }
+  ],
+  "strongest_point": "Regulatory claims now track the primary text. Scoping follows 314.4 and 314.6, the free first-hour card defers reportability to counsel or the insurer, and the IRS steps are included.",
+  "what_would_change_my_mind": [
+    "A lawyer-reviewed engagement letter and test authorization template that requires the host's or MSP's written consent for any asset the office does not own, and an M365 test scope written to Microsoft's Rules of Engagement",
+    "Bound E&O/cyber cover with a quoted premium that fits within the $179/month Program margin, plus a liability cap in the terms",
+    "A written opinion or regulator/insurer feedback that a scoped founder-run test is acceptable 314.4(d)(2) evidence for a small office",
+    "Marketing copy that states the 'absent continuous monitoring' condition and makes no promise of compliance",
+    "A client-owned-findings clause in the MSP and insurer channels, with no sharing without the client's consent"
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Regulatory overstatement: 314.6 exempts firms under 5,000 consumers from (b)(1), (d)(2), (h), (i)",
+      "resolved": true,
+      "note": "Resegmented to firms at 5,000+ consumers, with obligation scoping at onboarding and a Core tier labelled as good practice. The 314.6 text matches."
+    },
+    {
+      "objection": "Reportability reasoning risks unauthorized practice of law and creates a discoverable, non-privileged record",
+      "resolved": true,
+      "note": "The reportability engine and FTC pre-fill are removed. The card records facts only and hands off to counsel or the breach coach, and the out-of-scope list excludes legal advice."
+    },
+    {
+      "objection": "Conflict with cyber insurers' breach coach and panel requirements",
+      "resolved": true,
+      "note": "The first step is now to call the insurer's hotline or counsel, and the insurer is positioned as a referral partner."
+    },
+    {
+      "objection": "Data custody and the founder's own Safeguards service-provider duties",
+      "resolved": true,
+      "note": "No SSNs, returns or mailbox content are stored, and the 314.4(f) agreement and vendor program are now hardest parts. A residual concentration risk remains (see the minor objection)."
+    },
+    {
+      "objection": "Liability mismatched with $49/month price",
+      "resolved": false,
+      "note": "The price is now about $2.1k a year and cover is named as a prerequisite, but nothing is quoted yet. Active pen testing adds new liability."
+    },
+    {
+      "objection": "Clock omits IRS Stakeholder Liaison/state tax steps; PowerShell scripts need authorization",
+      "resolved": true,
+      "note": "The IRS, state tax agency and state AG steps are added. Owner-run scripts are removed, and changes need separate written authorization."
+    }
+  ],
+  "sources": [
+    "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.6",
+    "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.4",
+    "https://www.microsoft.com/en-us/msrc/pentest-rules-of-engagement"
+  ]
+}

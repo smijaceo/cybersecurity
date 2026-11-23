@@ -1,0 +1,78 @@
+{
+  "concept_id": "ai-agent-access-control",
+  "lens": "legal-ethics",
+  "round": 2,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "The revision fixed the serious round-1 problems. Vulnerability-for-sale outreach is gone, testing defaults to disposable environments, the founder stays out of client logs, and the 'enforced' and SOC 2 wording is honest. Two gaps remain before launch. The disposable fork moves client code into the founder's environment and LLM accounts, which needs a custody design. The production-credential exception, insurance and the white-label liability chain are still promises, not terms.",
+  "objections": [
+    {
+      "objection": "The red team runs on 'a fork of a real repo' with the client's real MCP server versions in a disposable environment. Unless that environment runs in the client's own cloud account, with the client's own agent licences, the founder now holds the client's private source code. Every injection run also sends that code to an LLM provider under the founder's API account and data terms, not the client's. This contradicts the claim that 'the founder never holds client data'. It also makes the founder a sub-processor that the client's SOC 2 vendor review and its customers' DPAs have to cover. The concept needs a custody design before the first sprint. The default should be an environment in the client's tenant, using the client's agent accounts, destroyed at the end of the sprint with written confirmation. Otherwise it needs a DPA, a named LLM provider with zero-retention terms, encryption, and deletion on close.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[1] ('a fork of a real repo, scoped test tokens and the client's real MCP server versions'); concept:mvp.out_of_scope[2]; concept:risks[3]"
+    },
+    {
+      "objection": "The liability controls are listed but not yet contracted or priced. 'Production credentials only with written approval' leaves a door open that a client under deadline pressure will push through, and a successful injection with a production token can delete or exfiltrate data. E&O and cyber cover for a new solo firm doing offensive testing remains an open question. The rationale says the price 'covers insurance', but gives no quote. Before selling, the founder needs three things: a signed engagement template with an authorisation letter, a third-party exclusion and a liability cap at or near the fee; a written rule that production testing uses read-only or single-resource tokens and has a rollback plan; and a bound policy.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[1] ('Production credentials only with written approval'); concept:open_questions[3]; concept:pricing.rationale; concept:build.hardest_parts[3]"
+    },
+    {
+      "objection": "Through the white-label and partner resale model, the founder tests the partner's clients, who may never contract with the founder directly. The authorisation letter, scope, liability cap and DPA must flow down from the end client through the partner to the founder. The founder's insurance must cover work done as a subcontractor. Otherwise the founder attacks systems without direct authorisation from their owner, and the partner's contract terms may expose the founder to uncapped liability.",
+      "severity": "minor",
+      "evidence": "concept:build.team ('white-label partners do their own selling'); concept:pricing.model"
+    },
+    {
+      "objection": "The stated-bypass list must also cover fail-open behaviour in the managed controls themselves. If the server-managed settings fetch fails and there is no cache, Claude Code continues without them unless forceRemoteSettingsRefresh is set. The sandbox has an unsandboxed-retry escape hatch unless allowUnsandboxedCommands is false. If the control description omits these, it repeats the misrepresentation risk at the managed-settings layer.",
+      "severity": "minor",
+      "evidence": "https://code.claude.com/docs/en/server-managed-settings ('If the fetch fails, Claude Code continues without server-managed settings ... If a managed source sets forceRemoteSettingsRefresh, Claude Code exits instead'); https://code.claude.com/docs/en/sandboxing (dangerouslyDisableSandbox retry, allowUnsandboxedCommands)"
+    },
+    {
+      "objection": "The credibility plan depends on public injection write-ups, ideally on vendor-acknowledged findings, against agent vendors' products. Testing vendor products needs to stay within each vendor's bug-bounty or safe-harbour terms and use the founder's own accounts. Write-ups should be published only after coordinated disclosure. Recommending that clients ship developer command logs to a central store is employee-monitoring advice, so the deliverable should flag notice duties and, in the EU, works-council duties for the client.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts[0]; concept:mvp.features[4]; concept:risks[3]"
+    }
+  ],
+  "strongest_point": "It is a defensive, client-authorised engagement. It runs in disposable environments by default, uses no outbound vulnerability selling, collects no client logs, and describes its guardrails honestly with stated bypasses and without SOC 2 claims.",
+  "what_would_change_my_mind": [
+    "A custody design where the disposable test environment runs in the client's tenant with the client's agent accounts, or a signed DPA with named zero-retention LLM terms and deletion on close.",
+    "A bound E&O and cyber policy quote for offensive-testing work by a solo firm, shown to fit the $6,500 and $5,000 wholesale margins.",
+    "An engagement template with a liability cap, a third-party exclusion and a production-token rule, plus a flow-down clause for partner resale.",
+    "A sample control description whose stated-bypass list includes managed-settings fetch failure and the sandbox retry escape hatch."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Outbound exposure notes to strangers' public repositories look like vulnerability-for-sale and unauthorised testing.",
+      "resolved": true,
+      "note": "The channel is dropped, unsolicited scanning is out of scope, and public findings go through a no-pitch disclosure policy."
+    },
+    {
+      "objection": "Injection testing against production-credentialed agents, third-party reach, and an uninsured solo founder.",
+      "resolved": false,
+      "note": "Partly resolved: testing now uses a disposable environment, test tokens and mock MCP servers by default, and third-party testing is out of scope. The production-credential exception, the paperwork and the insurance are still unpriced and unsigned, and insurability is an open question."
+    },
+    {
+      "objection": "Hook logs capture code, secrets and employee activity, and the founder acts as a processor on retainer.",
+      "resolved": false,
+      "note": "The log part is resolved: the founder no longer reviews logs, the inventory emits a summary only, and logs stay in the client's store. But the disposable fork of a real repo creates a new custody issue, because client code passes into the founder's environment and LLM accounts."
+    },
+    {
+      "objection": "Selling bypassable hooks as 'enforced' controls and as SOC 2 evidence is misrepresentation.",
+      "resolved": true,
+      "note": "The concept now delivers guardrails with a stated-bypass list and a control description for the auditor to evaluate, and attestation is out of scope. Fail-open behaviour in managed settings still needs to be on the bypass list (minor)."
+    },
+    {
+      "objection": "OWASP and SOC 2 compliance framing.",
+      "resolved": true,
+      "note": "The concept states that SOC 2 has no AI criteria, frames demand as customer-questionnaire pull, and makes no claim that a criterion is met."
+    },
+    {
+      "objection": "Dual-use workflow scanner.",
+      "resolved": true,
+      "note": "Only the self-scan inventory tool is released, CI scanning uses zizmor, and the injection suite stays private."
+    }
+  ],
+  "sources": [
+    "https://code.claude.com/docs/en/server-managed-settings",
+    "https://code.claude.com/docs/en/sandboxing"
+  ]
+}

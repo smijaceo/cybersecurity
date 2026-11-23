@@ -1,0 +1,75 @@
+{
+  "concept_id": "smb-compliance-reporting",
+  "lens": "gtm-pricing",
+  "round": 2,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "The revision fixes the weakest pricing: it now prices openly against Verito, sells a recurring legal deliverable (scans plus an annual test) and needs 40 clients instead of 150. But the channel that carries the plan is MSP resale. It is unproven, thinly margined and conflicted. The ARR maths ignores the 30% wholesale discount, and $2.1k/yr is double what owners now spend.",
+  "objections": [
+    {
+      "objection": "The go-to-market now depends on MSP resale: half of the first ten customers and the core channel. But the concept's own risks say MSPs may treat findings about their clients' tenants as a threat. A 30% margin on $179/month is about $54/month per office, a small incentive against the reputational risk of a third party grading their work. Many MSPs also already run their own scanning or compliance tooling. There is no MSP letter of intent, no partner economics and no CAC or payback figure for either channel.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.channel; concept:risks; concept:pricing.model"
+    },
+    {
+      "objection": "Willingness to pay at $2.1k is unproven. The buyer's reference spend is a $999 Verito WISP plus $297-$697 insurance, and the concept itself flags low FTC enforcement and possible unawareness of the 5,000-consumer duty. Program costs $2,638 in year one with setup, roughly double the current spend. Unless an insurer questionnaire or examiner asks for test evidence, owners may keep the document plus insurance.",
+      "severity": "major",
+      "evidence": "concept:pricing.rationale; concept:riskiest_assumption; concept:risks"
+    },
+    {
+      "objection": "The ARR maths is still optimistic. '40 Program clients ≈ $86k ARR' assumes list price, but the plan sells at least half via MSPs at ~30% off. With 20 direct and 20 wholesale clients ARR is about $73k, before E&O/cyber premium and contract testers once the founder passes 40-60 clients.",
+      "severity": "minor",
+      "evidence": "concept:pricing.rationale; concept:pricing.model; concept:go_to_market.first_customers"
+    },
+    {
+      "objection": "The price comparables still omit the obvious reference for the wedge: what small-office external pen tests and vulnerability-scan services cost. Without them nobody can tell whether $179/month is cheap enough to win or too cheap to staff. The rationale says 'below typical standalone pen-test engagements' but cites nothing.",
+      "severity": "minor",
+      "evidence": "concept:pricing.comparables"
+    },
+    {
+      "objection": "The Core tier at $39/month sits against a free IRS Pub 5708 template and Verito's document service, with no low-touch channel defined. It risks becoming support load and a low-value distraction from the Program sale.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price; concept:competitors"
+    }
+  ],
+  "strongest_point": "The wedge is now a dated, recurring legal deliverable: six-monthly scans and an annual test under 314.4(d)(2). Document vendors do not provide it, so it is a natural reason to renew.",
+  "what_would_change_my_mind": [
+    "One signed MSP letter of intent covering 10+ client offices at the wholesale price, or at least 3 paid $490 testing checks from the 2-week test.",
+    "Evidence that a tax-pro or mortgage cyber insurer's application or renewal questionnaire asks for pen-test or vulnerability-scan evidence.",
+    "A CAC/payback model from the first 10 closes showing payback under 12 months for both direct and MSP channels.",
+    "Quotes for small-office external pen tests and scans from 3+ providers, showing that $179/month undercuts them while covering ~8 founder hours and insurance."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Positioning ignored Verito's recurring $499/$999 WISP, which was cheaper than the concept",
+      "resolved": true,
+      "note": "Verito and ACE are now listed. The rationale prices against them openly and sells on testing and verification, which they lack."
+    },
+    {
+      "objection": "There was a distribution gap: incumbents bundle WISPs with hosting, while the concept relied on founder-led cold sales with no CAC model",
+      "resolved": false,
+      "note": "The concept moved to MSP partner-first plus insurers and associations, which is the right direction. The channel is still unproven and conflicted, and there is still no CAC or partner-economics model."
+    },
+    {
+      "objection": "Renewal risk: the PTIN checkbox trigger is met by a free template, so the year-2 renewal is weak",
+      "resolved": true,
+      "note": "The wedge is now the recurring 314.4(d)(2) testing duty with dated annual deliverables. Renewal still depends on owners believing the duty is enforced."
+    },
+    {
+      "objection": "The revenue maths was optimistic: 150 closes in seasonal months",
+      "resolved": true,
+      "note": "40 Program clients at ~$2.1k plus year-round mortgage brokers is far more achievable. The ARR still ignores the wholesale discount."
+    },
+    {
+      "objection": "The comparables flattered the price (SOC 2 platforms, KnowBe4, Cyber Essentials)",
+      "resolved": true,
+      "note": "The real comparables (Verito, ACE, PTIN insurance, the free template) now drive the rationale. The SOC 2 entries are kept only as a ceiling. A pen-test price comparable is still missing."
+    },
+    {
+      "objection": "Included incident hours and insurance eat into a $588 contract",
+      "resolved": true,
+      "note": "Paid incident hours were removed and handed off to the insurer or counsel. Insurance cost now sits against a ~$2.1k contract, but still needs pricing."
+    }
+  ],
+  "sources": []
+}

@@ -1,0 +1,83 @@
+{
+  "concept_id": "ai-agent-access-control",
+  "lens": "competitor-analyst",
+  "round": 2,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "The repositioning fixes the Kirin, Drata and zizmor overlaps. But the new core, red teaming that 'no platform bundles', is on Vanta's published roadmap for Spring 2027 via Pillar. Promptfoo gives away coding-agent injection plugins, and Appsecco already sells fixed-price agent-workflow tests with retest. That leaves roughly a 6-12 month window and a thin moat.",
+  "objections": [
+    {
+      "objection": "Most dangerous competitor is still Vanta, and the threat now hits the core. Vanta's Pillar roadmap lists AI inventory and runtime monitoring for January 2027, red teaming ('adversarial testing tailored to your business context') for Spring 2027 and runtime enforcement for Summer 2027, sold inside the SOC 2 platform the named co-buyer already pays for. Pillar's catalogue includes coding agents and MCP servers. The concept's strongest claim, red teaming that platforms do not bundle, has a public expiry date. The implementation-partner role also depends on a Vanta partner track for AI services, and none has been published.",
+      "severity": "major",
+      "evidence": "https://www.vanta.com/resources/vanta-acquires-pillar"
+    },
+    {
+      "objection": "The claimed asset, a private injection suite of 30+ cases, is being commoditised. Promptfoo ships free, open coding-agent red-team plugins for repo-text injection, terminal-output injection, secret env and file reads, sandbox read and write escape, network egress bypass, delayed CI exfiltration and automation poisoning, run against an isolated repo copy. That is most of the concept's suite and test method. GitInject (live GitHub workflow injection) and SuperClaw add open tooling. An in-house platform engineer, or any pentest firm, can run this, so the work shifts from owning a suite to delivery and judgment.",
+      "severity": "major",
+      "evidence": "https://www.promptfoo.dev/docs/red-team/coding-agents/"
+    },
+    {
+      "objection": "The concept understates the boutique overlap. Its table says Appsecco 'tests MCP servers', but Appsecco sells fixed-price product security testing for agent workflows, MCP tools and connected data sources, with a 48-hour quote and a retest within 30 days. That is the same fixed-fee, retest-included structure, from a firm with published research and a client base. The differentiation from Christian Schneider holds, since his offer is an interview-based assessment and explicitly 'not a pentest'.",
+      "severity": "major",
+      "evidence": "https://appsecco.com/mcp-pentesting"
+    },
+    {
+      "objection": "The partner resellers (pentest, vCISO and SOC 2 readiness firms) are also the likeliest direct competitors. Channel coverage of the Vanta-Pillar deal already tells MSPs and compliance partners to build their own adversarial-testing and AI-governance services. With free Promptfoo plugins and a published OWASP agentic list, a $5,000 wholesale sprint competes with partners doing it themselves.",
+      "severity": "minor",
+      "evidence": "https://www.channelinsider.com/channel-business/mergers-and-acquisitions/news-vanta-pillar-security-deal-ai-protection/"
+    },
+    {
+      "objection": "Agent vendors keep hardening defaults: native sandboxes, managed MCP allowlists and read-only CI agents in gh-aw. Each release shrinks the hardening half of the sprint, and with it the share of the $6,500 the buyer sees as installed fixes rather than a report.",
+      "severity": "minor",
+      "evidence": "concept:risks"
+    }
+  ],
+  "strongest_point": "Repositioned as testing that complements Vanta, Drata and Kirin rather than competing with them. Before Spring 2027, no platform attacks a small company's real coding-agent, MCP and CI setup.",
+  "what_would_change_my_mind": [
+    "Vanta/Pillar red teaming ships for AI apps only, or at enterprise tiers only, and leaves developer coding agents and CI agent jobs out of scope through 2027",
+    "Vanta or Drata publishes a services/implementation partner track for AI governance and accepts a solo firm into it",
+    "The private suite finds, in 3 pilot clients, exploitable paths that a default Promptfoo coding-agent:all run misses",
+    "2 or more pentest or vCISO firms sign wholesale agreements rather than building the service in-house",
+    "3 of 10 prospects who were quoted by Appsecco or a similar boutique choose the sprint"
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Vanta (acquiring Pillar) bundles inventory, guardrails and control narrative inside the buyer's existing SOC 2 contract",
+      "resolved": false,
+      "note": "Partly resolved: inventory, enforcement and evidence are no longer sold, and Vanta is framed as a partner. But Vanta's roadmap adds Pillar red teaming in Spring 2027, which threatens the new core, and no AI implementation partner track exists yet."
+    },
+    {
+      "objection": "Drata AI Agent Governance makes the SOC 2-mapped audit trail a built-in platform feature",
+      "resolved": true,
+      "note": "Audit-trail and enforced-evidence deliverables were dropped. The report is now a findings and control description, and logs stay in the client's store. Drata does no hands-on injection testing."
+    },
+    {
+      "objection": "Knostic Kirin at about $375/month matches the $400 retainer with maintained enforcement and audit logs",
+      "resolved": true,
+      "note": "Retainer replaced by a $1,800 quarterly re-test, which Kirin does not offer. Kirin is recommended for continuous enforcement, so the offers no longer collide."
+    },
+    {
+      "objection": "Boutiques (Christian Schneider, Appsecco, cheap solo audit sprints) already occupy the service niche and were missing from the competitor table",
+      "resolved": false,
+      "note": "They were added, and the Schneider differentiation holds because his offer is interview-only. Appsecco, however, sells fixed-price agent-workflow and MCP tests with retest, which mostly matches the sprint."
+    },
+    {
+      "objection": "CI hardening and the workflow scanner are mostly free (zizmor, GitHub Agentic Workflows)",
+      "resolved": true,
+      "note": "The custom scanner was dropped. zizmor and the gh-aw pattern are now used, and the remaining value is configuring and testing them."
+    },
+    {
+      "objection": "Agent vendors' native managed settings and hooks shrink the 'design and maintain the rules' service",
+      "resolved": true,
+      "note": "Configuration is no longer the core, and the concept builds on native controls. The residual erosion of the hardening half is kept as a minor point."
+    }
+  ],
+  "sources": [
+    "https://www.vanta.com/resources/vanta-acquires-pillar",
+    "https://www.channelinsider.com/channel-business/mergers-and-acquisitions/news-vanta-pillar-security-deal-ai-protection/",
+    "https://www.pillar.security/",
+    "https://www.promptfoo.dev/docs/red-team/coding-agents/",
+    "https://appsecco.com/mcp-pentesting",
+    "https://christian-schneider.net/consulting/coding-agent-security/"
+  ]
+}

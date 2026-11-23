@@ -1,0 +1,81 @@
+{
+  "concept_id": "msp-windows-detection",
+  "lens": "legal-ethics",
+  "round": 2,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "Revision fixed most round-1 issues: 'Keep' default with opt-in drops, local-only verifier and report runner, DPIA/notice template, attribution, no Sysmon redistribution. New exposure: the monthly client evidence report and PCI/HIPAA mapping become attestations clients hand to auditors and insurers. Liability terms and E&O remain unwritten. Cross-MSSP benchmark and Wazuh GPL need care.",
+  "objections": [
+    {
+      "objection": "The product now issues client-facing evidence: a monthly PDF with 'coverage status' and per-pack PCI DSS 10 / HIPAA 164.312(b) mapping. MSSP clients will attach it to audit evidence or cyber-insurance questionnaires. If drift went undetected or the mapping is read as 'compliant', a misstatement to an insurer can jeopardise cover, and the claim chain runs MSSP to QuietWin. The lawyer-reviewed agreement with liability cap, no-completeness warranty and E&O cover is still listed as a need, not done, and the report needs explicit 'not a compliance attestation' wording and a stated verification time window.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[2]; concept:mvp.features[5]; concept:risks[3]; concept:open_questions[1]"
+    },
+    {
+      "objection": "The opt-in cross-MSSP coverage benchmark pools data derived from MSSPs' client estates (coverage state, drift, event volumes). MSSPs' client contracts usually make that confidential, so 'opt-in' must mean the end client's consent too, and the data must be aggregated and de-identified with a written data-use policy. Otherwise it contradicts the 'no data leaves the client' promise.",
+      "severity": "minor",
+      "evidence": "concept:revision_log (defensibility: opt-in cross-MSSP coverage benchmark); concept:risks[1]"
+    },
+    {
+      "objection": "Wazuh's licence states GPLv2 covers its decoders, rules and data files, and treats integrating them as a derivative work. Paid packs that copy or modify stock Wazuh rules or decoders must be distributed under GPLv2, which undermines the 'paid content' tier; new rules should be written from scratch or the paid value kept in services and the report runner.",
+      "severity": "minor",
+      "evidence": "https://raw.githubusercontent.com/wazuh/wazuh/master/LICENSE"
+    },
+    {
+      "objection": "The PCI DSS mapping must cover retention, not just event selection: PCI DSS v4 Req. 10.5.1 asks for 12 months of audit log history with 3 months immediately available, and Wazuh archives are off by default. 'Archive guidance' needs to state required retention per framework, or the mapping overstates what the pack delivers. HIPAA 164.312(b) is a broad standard and should be described as supporting it, not satisfying it.",
+      "severity": "minor",
+      "evidence": "https://www.law.cornell.edu/cfr/text/45/164.312"
+    },
+    {
+      "objection": "The verifier and packs run with admin rights on client hosts via RMM and change audit policy. A faulty or compromised pack is a supply-chain incident across many tenants. Signed packs and staged rings are planned, but the agreement should spell out change-approval responsibility (the MSSP authorises each rollout) so the founder isn't the de facto change owner.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts[3]"
+    }
+  ],
+  "strongest_point": "Still ships content and local tooling, not a hosted log service; 'Keep' default and opt-in documented drops align with data minimisation without creating logging-duty breaches.",
+  "what_would_change_my_mind": [
+    "A signed, lawyer-reviewed subscription agreement with liability cap, no-completeness warranty and MSSP-owned change approval",
+    "A sample client report with 'not a compliance attestation' wording and a dated coverage-verification window",
+    "Tech E&O quote under $2k/year bound before the first paid pilot",
+    "A written benchmark data-use policy requiring end-client consent and aggregation thresholds",
+    "Per-framework retention guidance (PCI 12/3 months) included in the mapping",
+    "Confirmation that paid Wazuh rules and decoders are original work, not modified stock rules"
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Volume reduction can push clients below their logging or retention duties; liability if a dropped event is needed",
+      "resolved": true,
+      "note": "'Keep' is the default, drops are opt-in and documented, archives are the safety net and PCI/HIPAA mapping was added. The residual contract and E&O gap moves into the new report-attestation objection."
+    },
+    {
+      "objection": "Logon evidence report is employee monitoring (GDPR, DPIA, BetrVG s.87 works councils)",
+      "resolved": true,
+      "note": "A monitoring notice and DPIA template ship with the report, and the risk is stated. The controller duty stays with the client, which is correct."
+    },
+    {
+      "objection": "Data custody in the tuning engagement and log-diet script",
+      "resolved": true,
+      "note": "Verifier and report runner run locally inside the MSSP environment; hosting logs is out of scope; DPA and NDA for onboarding. The benchmark is a new, smaller custody question."
+    },
+    {
+      "objection": "Upstream licence duties (Sigma DRL, CC BY, MIT)",
+      "resolved": true,
+      "note": "sysmon-modular is credited and Sigma authors are credited in packs and outputs. Wazuh GPL is a new, separate licence point."
+    },
+    {
+      "objection": "Sysinternals licence forbids redistributing standalone Sysmon",
+      "resolved": true,
+      "note": "RMM scripts fetch Sysmon from Microsoft; stated in risks."
+    },
+    {
+      "objection": "Public drop list tells attackers what clients are blind to",
+      "resolved": true,
+      "note": "The public baseline is the 'Keep' profile; 'Lean' drop rationale is in the paid tier."
+    }
+  ],
+  "sources": [
+    "https://www.law.cornell.edu/cfr/text/45/164.312",
+    "https://raw.githubusercontent.com/wazuh/wazuh/master/LICENSE",
+    "https://documentation.wazuh.com/current/user-manual/manager/event-logging.html"
+  ]
+}

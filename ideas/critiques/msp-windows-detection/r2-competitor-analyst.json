@@ -1,0 +1,88 @@
+{
+ "concept_id": "msp-windows-detection",
+ "lens": "competitor-analyst",
+ "round": 2,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "The repositioning is sound. It builds on sysmon-modular and Yamato, drops Sentinel and Cribl-style volume claims, and targets MSSPs who keep their own Wazuh. But the new paid layer overlaps Wazuh's own features: CIS SCA policies already check auditpol subcategories per agent, agent.conf groups push per-tenant collection, and Wazuh 5.0 adds scheduled, emailed reports. Wazuh is now the most dangerous competitor.",
+ "objections": [
+  {
+   "objection": "The coverage verifier and drift alerts largely duplicate Wazuh Security Configuration Assessment (SCA). Wazuh ships CIS SCA policies that already run auditpol checks per agent, for example 'Audit Logon' Success and Failure, 'Audit Process Creation' and 'Audit Security Group Management'. Custom SCA YAML can check registry values (log sizes), running processes (Sysmon) and command output, and results show in the dashboard and alert when a check changes state. Per-tenant rollout of eventchannel collection and SCA policies is native through agent groups and agent.conf. An MSSP engineer can rebuild most of the 'stateful layer' with free features and no extra agent-side script, and Wazuh could ship a 'Windows logging coverage' SCA policy in a point release.",
+   "severity": "major",
+   "evidence": "https://raw.githubusercontent.com/wazuh/wazuh/v4.9.0/ruleset/sca/windows/cis_win2022.yml ; https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/index.html ; https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/creating-custom-policies.html ; https://documentation.wazuh.com/current/user-manual/reference/centralized-configuration.html ; concept:mvp.features[1]"
+  },
+  {
+   "objection": "The concept says 'free Wazuh has no scheduled per-client evidence report', but the Wazuh 5.0 Reporting module supports scheduled and on-demand reports from saved dashboards, visualizations and searches, delivered by email under indexer RBAC. With a saved per-agent-group dashboard, a free monthly client PDF is a configuration task. The report runner's uniqueness shrinks to report content, such as logon and RDP narratives and coverage status, rather than the ability to produce and schedule a report.",
+   "severity": "major",
+   "evidence": "https://documentation.wazuh.com/5.0-beta/user-manual/wazuh-indexer/modules/reporting.html ; concept:mvp.features[2].why"
+  },
+  {
+   "objection": "Huntress remains the most dangerous channel competitor, with Wazuh close behind. Narrowing to MSSPs that 'keep their own Wazuh stack' avoids competing on volume, but it targets the segment that managed SIEMs bundling a SOC (Huntress, Blumira, LimaCharlie MSSP tiers) are pulling away. The addressable base shrinks while the product is being built, and the concept already calls it lifestyle-scale.",
+   "severity": "major",
+   "evidence": "concept:risks[2] ; concept:buyer.company_profile ; concept:competitors[4] ; round-1 sources (huntress.com smart-filtering blog, limacharlie.io/pricing)"
+  },
+  {
+   "objection": "Low-cost Wazuh MSSP add-ons and open-source MSSP layers set the price anchor. Search results show one-off listings for a 'Wazuh Multi-Tenant Client Dashboard' at $349 and monthly Wazuh report templates at $34.99; I could not open these listings to verify them. SOCFortress CoPilot (AGPL, about 550 stars) offers an open-source MSSP console on Wazuh and Graylog with a tenant-scoped customer portal. Against these anchors, $9 per tenant per month ($450/month at 50 tenants) is a hard sell unless replay-tested coverage proof is clearly better.",
+   "severity": "minor",
+   "evidence": "https://github.com/socfortress/CoPilot ; concept:pricing.entry_price"
+  },
+  {
+   "objection": "SOC Prime and similar content vendors could still add collection guidance, and SOCFortress publishes free Wazuh rulesets for Windows and Sysmon. The revision did not address this, and the content layer stays crowded.",
+   "severity": "minor",
+   "evidence": "concept:revision_log (SOC Prime entry: not changed)"
+  },
+  {
+   "objection": "For the logon and RDP evidence report, ManageEngine ADAudit Plus (from $245/yr) and Netwrix still offer turnkey reports. MSSPs whose clients mainly want an access-review PDF may resell those tools instead of Wazuh-derived reports.",
+   "severity": "minor",
+   "evidence": "concept:pricing.comparables[0]"
+  }
+ ],
+ "strongest_point": "No vendor sells replay-tested, maintained Windows coverage packs for Wazuh that handle both Sysmon flavours and include a migration path. That is a real, narrow niche that Wazuh itself has not filled.",
+ "what_would_change_my_mind": [
+  "In 15 interviews, at least 6 Wazuh MSSPs say they know SCA and Wazuh reporting but still would not build per-tenant coverage checks and client reports themselves",
+  "A side-by-side showing QuietWin catches drift (stopped Sysmon, overwritten GPO, shrunk logs) and IR-question gaps that stock CIS SCA policies miss on the same lab hosts",
+  "Wazuh Inc. agreeing to list or partner on the packs, which turns the most likely copier into a channel",
+  "Pilot renewals at month 3 showing that the monthly report and drift monitoring are valued beyond the one-off deployment"
+ ],
+ "resolved_prior": [
+  {
+   "objection": "Free maintained configs (sysmon-modular, Yamato) already cover the core product",
+   "resolved": true,
+   "note": "Repositioned to build on and credit them. Paid value moved to rollout, drift, replay proof and reports, but that layer now overlaps Wazuh SCA and reporting (new objection 1)."
+  },
+  {
+   "objection": "Sentinel bundles curated Windows event sets and DCR filtering",
+   "resolved": true,
+   "note": "Sentinel dropped from v1 and added only on paid demand."
+  },
+  {
+   "objection": "Cribl is free to 1TB/day with Windows reduction packs",
+   "resolved": true,
+   "note": "The pitch no longer rests on volume reduction, and Cribl is named as a free competitor."
+  },
+  {
+   "objection": "Flat or per-sensor MSP SIEMs (Huntress, Blumira, LimaCharlie) remove the volume ROI; Huntress is the most dangerous competitor",
+   "resolved": false,
+   "note": "The volume argument is gone, but narrowing to DIY-Wazuh MSSPs puts the product in the segment these platforms are absorbing. The channel threat remains."
+  },
+  {
+   "objection": "SOC Prime and content vendors could add collection recommendations",
+   "resolved": false,
+   "note": "Not changed, and minor. The content layer stays crowded (SOCFortress free Wazuh rules)."
+  },
+  {
+   "objection": "Logon pack competes with ADAudit Plus",
+   "resolved": false,
+   "note": "Price corrected and competitor kept. Positioning on the MSSP's Wazuh is reasonable, but the turnkey alternative remains."
+  }
+ ],
+ "sources": [
+  "https://raw.githubusercontent.com/wazuh/wazuh/v4.9.0/ruleset/sca/windows/cis_win2022.yml",
+  "https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/index.html",
+  "https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/creating-custom-policies.html",
+  "https://documentation.wazuh.com/current/user-manual/reference/centralized-configuration.html",
+  "https://documentation.wazuh.com/5.0-beta/user-manual/wazuh-indexer/modules/reporting.html",
+  "https://wazuh.com/cloud/",
+  "https://github.com/socfortress/CoPilot"
+ ]
+}

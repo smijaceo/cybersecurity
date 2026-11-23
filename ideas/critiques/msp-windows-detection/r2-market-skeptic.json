@@ -1,0 +1,82 @@
+{
+  "concept_id": "msp-windows-detection",
+  "lens": "market-skeptic",
+  "round": 2,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "The revision is honest and the cost pitch is gone, but the demand evidence did not change: old in-house admin questions, with no MSSP owner asking to buy. Narrowing to Wazuh-running MSSPs shrinks a market that was already small. Whether clients want the compliance-driven evidence report is untested. It stays a hypothesis until the 15-interview and paid-pilot test passes.",
+  "objections": [
+    {
+      "objection": "There is still no buyer-side demand signal. All eight problem.evidence items come from in-house admins, a vendor blog or an enterprise survey, and most date from 2009-2021. The concept's own risks admit this. The new value claims (per-tenant drift alerts, a resellable client evidence report) have no evidence at all that any MSSP or SMB client asked for them.",
+      "severity": "major",
+      "evidence": "concept:problem.evidence; concept:risks[2]; https://serverfault.com/questions/13451/terminal-server-logging"
+    },
+    {
+      "objection": "Narrowing the target makes the market smaller. The target is now MSSPs with 2-15 analysts that run their own Wazuh for Windows-heavy SMB clients and will not use Huntress, Blumira or LimaCharlie. That is a subset of a niche already estimated at low thousands. At $9 per tenant ($450/month at 50 tenants, about $5.4k/year), even 200 customers is roughly $1M ARR. The concept still gives no count. Its only route to scale is a Wazuh or RMM partner, and that is an open question.",
+      "severity": "major",
+      "evidence": "concept:buyer.company_profile; concept:pricing.entry_price; concept:open_questions[0]; concept:open_questions[2]"
+    },
+    {
+      "objection": "The forcing function is assumed, not shown. The pitch now depends on PCI DSS 10, HIPAA and cyber-insurance clients asking their MSSP for server logon evidence. The concept lists whether insurers or auditors actually ask for this as an open question. If they don't, the client report is a nice-to-have, and the MSSP cannot easily resell it per client.",
+      "severity": "major",
+      "evidence": "concept:open_questions[1]; concept:go_to_market.first_customers"
+    },
+    {
+      "objection": "Recurring demand is doubtful. Once packs are deployed, drift is occasional. The concept makes month-3 renewal an open question, which means the recurring part of the revenue is unproven. A one-off $2,500 onboarding may be all that many MSSPs pay for.",
+      "severity": "minor",
+      "evidence": "concept:open_questions[3]"
+    },
+    {
+      "objection": "The claim that free Wazuh has no scheduled per-client report needs checking. The Wazuh dashboard is built on OpenSearch Dashboards, whose Reporting feature makes recurring and cron-scheduled PDF reports from saved dashboards. If Wazuh exposes that feature, MSSPs can build the client report themselves, and the willingness to pay for it shrinks.",
+      "severity": "minor",
+      "evidence": "https://docs.opensearch.org/latest/reporting/report-dashboard-index/; concept:mvp.features[2]"
+    }
+  ],
+  "strongest_point": "The test is now aimed at the actual buyer. It runs 15 calls with Wazuh-running MSSPs, asks for payment up front and has a clear pass bar, so it will cheaply show whether demand exists.",
+  "what_would_change_my_mind": [
+    "The riskiest-assumption test passes: at least 6 of 15 Wazuh MSSPs lack per-tenant verification or reports, at least 4 would resell the report, and at least 2 pay the $500 pilot",
+    "A count of small MSSPs running Wazuh for clients, for example from Wazuh's partner directory or community, of 1,500 or more firms",
+    "Two or more SMB cyber-insurance questionnaires or PCI/HIPAA assessor requests that ask for server logon evidence or an audit-policy baseline",
+    "Pilot MSSPs renewing at month 3 and charging their clients for the evidence report",
+    "A signed or LOI-level distribution deal with Wazuh (whose partner program already exists at $3,200-$9,900/year) or an RMM vendor"
+  ],
+  "resolved_prior": [
+    {
+      "objection": "The people complaining (in-house admins on Q&A sites) are not the named buyer (MSSP owners)",
+      "resolved": false,
+      "note": "This is acknowledged in risks, and the test now interviews MSSPs directly. No MSSP-owner evidence has been added yet."
+    },
+    {
+      "objection": "The evidence is old (2009-2021); no current urgency",
+      "resolved": false,
+      "note": "The evidence wording now admits the age. No 2025-2026 signal has been added, and the test is supposed to supply it."
+    },
+    {
+      "objection": "The cost-pain evidence describes enterprises, and many targets have no per-GB bill",
+      "resolved": true,
+      "note": "Ingest savings are no longer the pitch. The Help Net claim is reworded as not MSSP-specific, and the pricing rationale says Wazuh has no per-GB licence."
+    },
+    {
+      "objection": "Free alternatives (sysmon-modular, built-in Sysmon) already cover the core need",
+      "resolved": true,
+      "note": "The concept now builds on the free baselines and sells rollout, drift monitoring and reports instead. Demand for that paid layer is unproven (see the new objections)."
+    },
+    {
+      "objection": "The market is small (low thousands of firms at about $3k/year)",
+      "resolved": false,
+      "note": "This is now stated as lifestyle-scale. Narrowing to Wazuh-only makes the target smaller still. Per-tenant pricing raises revenue per customer only modestly."
+    },
+    {
+      "objection": "The logon and ransomware packs' demand is equally anecdotal and competes with budgeted tools",
+      "resolved": false,
+      "note": "The ransomware canaries were dropped. The logon report is now tied to compliance resale, but there is no evidence that clients or auditors ask for it."
+    }
+  ],
+  "sources": [
+    "https://serverfault.com/questions/13451/terminal-server-logging",
+    "https://wazuh.com/cloud/",
+    "https://wazuh.com/partners/",
+    "https://docs.opensearch.org/latest/reporting/report-dashboard-index/",
+    "https://documentation.wazuh.com/current/user-manual/wazuh-dashboard/creating-custom-dashboards.html"
+  ]
+}

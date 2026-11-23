@@ -1,0 +1,78 @@
+{
+  "concept_id": "ai-agent-access-control",
+  "lens": "gtm-pricing",
+  "round": 2,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "The revised pricing works. $6,500 for a defined scope sits inside small-business assessment ranges, and two sprints a month at about $100/hour gross around $13k. Partners get a real $1.5k margin. Demand still depends on a trigger, so purchases stay discretionary. Solo capacity, unpriced wedge and expansion steps, and a thin re-test stream limit revenue.",
+  "objections": [
+    {
+      "objection": "Demand still depends on a trigger and has no budget line. Narrowing the buyer to companies with a written questionnaire item, an auditor question or a near-miss is honest, but it shrinks the funnel to a segment nobody has sized. It also makes deal flow follow the slow, uneven questionnaire cycle. No evidence yet shows partners or CTOs actually have such requests in hand.",
+      "severity": "major",
+      "evidence": "concept:riskiest_assumption; concept:buyer.role; concept:risks[0]; concept:open_questions[0]"
+    },
+    {
+      "objection": "Two sprints a month is optimistic for one person who must also write 2-3 public research pieces, keep a 30+ case injection suite current across four agents, run free self-scan walkthroughs, manage partners and handle engagement paperwork. Early utilisation is more likely 1-1.5 sprints a month, so $6.5-10k gross before insurance and partner discounts. First revenue is expected around month 3-5, so year one may bring in well under $100k.",
+      "severity": "major",
+      "evidence": "concept:pricing.rationale; concept:build.hardest_parts; concept:build.team; concept:revision_log[founder-fit]"
+    },
+    {
+      "objection": "The wedge is unpriced. The 'one-repository CI-agent injection test' is meant to be the lower-friction first paid step and part of the success signal, but it has no price, scope or rule for crediting it toward the full sprint. Without a fixed price (for example $1.5-2k, credited against the sprint), it adds a custom-quote step that slows the first deals.",
+      "severity": "minor",
+      "evidence": "concept:go_to_market.wedge; concept:riskiest_assumption.success_signal; concept:pricing.entry_price"
+    },
+    {
+      "objection": "The re-test is a weak recurring stream. Questionnaire and audit cycles are annual, so most buyers will re-test once a year rather than quarterly. That gives roughly $1.8k per account per year at a modest attach rate, too little to smooth the uneven project revenue.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price; concept:mvp.features[5]"
+    },
+    {
+      "objection": "There is still little room to expand. The scope caps at 25 developers and 3 CI repositories, but the target goes up to 150 employees, and no price is set per extra developer, repository or agent. Small pentest partners who resell the sprint learn the method and may bring it in-house after a few engagements, which caps partner volume over time.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price; concept:buyer.company_profile; concept:go_to_market.channel"
+    }
+  ],
+  "strongest_point": "A published, fixed $6,500 price for a defined scope, below typical approval thresholds, with a $1.5k partner margin. Nearby offers are either quote-only enterprise platforms or $15/user tools it recommends rather than undercuts.",
+  "what_would_change_my_mind": [
+    "At least 3 of 10 interviewed SOC 2 readiness, vCISO or pentest firms show client questionnaires with coding-agent or MCP items, and 2 sign a resale agreement at $5,000 wholesale",
+    "At least 1 CTO pays a $1,000 deposit at $6,500, or 2 pay for a priced one-repository CI test, within the two-week test",
+    "A priced one-repository CI test that is credited toward the sprint, plus overage pricing per extra 25 developers or extra repository",
+    "At least half of the first five sprint customers buy a re-test within 6 months"
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Unit economics don't close at $3,500 and 3-4 sprints a month",
+      "resolved": true,
+      "note": "The price is now $6,500 and the plan assumes 2 sprints a month: about $80-110/hour for 60-80 hours and about $13k/month gross at capacity. Utilisation risk remains and is listed as a new objection."
+    },
+    {
+      "objection": "Price below the small-business pentest and LLM-assessment floor signals junior work",
+      "resolved": true,
+      "note": "$6,500 is inside the small-business assessment range and leaves room for insurance and a $1.5k partner margin."
+    },
+    {
+      "objection": "The $400 policy retainer competes with Kirin's $15/user plan and free managed settings and will churn",
+      "resolved": true,
+      "note": "The retainer is replaced by a $1,800 re-test that Kirin does not offer. Kirin Team is still $15/user/month, so the change was right. Re-test cadence and attach rate are still unproven (minor)."
+    },
+    {
+      "objection": "No budget line, so this is a discretionary purchase",
+      "resolved": false,
+      "note": "The buyer is narrowed to companies with a trigger and resellers with existing budgets are used, but the trigger's frequency is still untested. It is now the riskiest assumption."
+    },
+    {
+      "objection": "Channels are high-friction (stranger runs an inventory script, cold exposure notes, low reseller incentive)",
+      "resolved": true,
+      "note": "Exposure notes are dropped, the inventory runs on the client's side and emits a summary the client reviews, and the partner margin rises to about $1.5k."
+    },
+    {
+      "objection": "Little room to expand",
+      "resolved": false,
+      "note": "Not changed apart from re-tests. There is still no overage pricing above 25 developers or 3 repositories."
+    }
+  ],
+  "sources": [
+    "https://www.knostic.ai/pricing",
+    "https://christian-schneider.net/consulting/coding-agent-security/"
+  ]
+}

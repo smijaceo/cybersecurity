@@ -1,0 +1,70 @@
+{
+  "concept_id": "ai-agent-access-control",
+  "lens": "security-practitioner",
+  "round": 2,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "The revision fixes the core round-1 problems. Controls are now delivered centrally and fail closed, CI fixes rest on least privilege, and testing uses a disposable environment with an honest bypass list. A practitioner would accept that. The remaining gap: the native sandbox does not contain MCP servers, the exposure the concept sells against. Disposable-environment findings and buyers without central delivery also weaken the risk reduction.",
+  "objections": [
+    {
+      "objection": "The hardening leans on the native sandbox with an egress allowlist, but Claude Code's sandbox covers shell commands only. File tools, MCP servers and hooks run outside it. The concept's headline exposure is MCP servers wired to GitHub, cloud and production data, so a poisoned issue that makes the agent call a write-capable MCP tool is not contained by the sandbox. MCP risk has to be cut at the server: an allowlist (allowedMcpServers/managed-mcp.json), per-tool deny rules, least-privilege tokens for each MCP server, and read-only database roles. None of these is named as a deliverable.",
+      "severity": "major",
+      "evidence": "https://code.claude.com/docs/en/sandboxing (sandbox covers shell commands only; MCP servers and hooks run outside it); concept:mvp.features[3]; concept:problem.evidence"
+    },
+    {
+      "objection": "Central enforcement is uneven across the four agents. Claude Code has server-managed settings on Teams/Enterprise and MDM delivery. Cursor's team and enterprise-managed hooks are Enterprise-only, and Cursor cloud agents skip beforeMCPExecution hooks and run no hooks during read-only early turns. The client gets one hardening outcome per agent, and a 15-150 person buyer on Cursor Pro or Copilot Business may end up with advisory controls. The concept admits this ('best fit', 'told their guardrails are advisory'), but it should be checked before the client pays.",
+      "severity": "minor",
+      "evidence": "https://cursor.com/docs/agent/hooks (Enterprise team hooks; MCP hooks not available in cloud agents); concept:buyer.company_profile"
+    },
+    {
+      "objection": "Default testing runs on a fork with scoped test tokens and possibly mock MCP servers. That makes access easy to grant, but the findings show whether the configuration can be injected, not what the real tokens can reach. A CTO may read 'injection succeeded on a mock' as low real risk. The report needs a blast-radius section built from the real token scopes, which the client enumerates.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[1]"
+    },
+    {
+      "objection": "Hooks set to fail closed on every tool call will break developer workflows whenever an agent update changes tool names or input formats. Teams under deadline then add excludedCommands or loosen rules, so the controls drift between quarterly re-tests. The re-test catches drift late. A config-drift check, such as /status showing managed sources or a CI lint of settings, would catch it sooner.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[5]; concept:build.hardest_parts[2]"
+    }
+  ],
+  "strongest_point": "Hands-on injection tests plus deterministic CI fixes (least-privilege GITHUB_TOKEN, no secrets on untrusted triggers, gated writes) cut real risk and come with an honest stated-bypass list.",
+  "what_would_change_my_mind": [
+    "MCP-specific hardening added as a deliverable: allowlist plus per-server least-privilege tokens or read-only roles, and a re-test showing a poisoned issue can no longer trigger a write-capable MCP tool.",
+    "Inventory data from 10 prospects showing at least half have Claude Teams/Enterprise, Cursor Enterprise or MDM, so central delivery is the common case.",
+    "One pilot report where a blast-radius section built from the client's real token scopes changed what the client fixed."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "The 'enforced tool policy' is client-side and bypassable without Teams/Enterprise or MDM.",
+      "resolved": true,
+      "note": "Delivery moved to server-managed settings/MDM with allowManagedHooksOnly; 'enforced' wording dropped; buyers without central delivery are told their controls are advisory. Coverage across agents is still uneven (new minor)."
+    },
+    {
+      "objection": "Hooks fail open, a custom shell-AST parser will break, and parsing misses script/interpreter indirection; native sandboxing missing.",
+      "resolved": true,
+      "note": "Custom parser dropped for maintained OSS guards, hooks fail closed, native sandbox with egress allowlist added, and indirection cases added to the suite. The sandbox does not cover MCP servers (new major)."
+    },
+    {
+      "objection": "The red-team and inventory access request is hard to grant (secrets in MCP configs, real production agents).",
+      "resolved": true,
+      "note": "Client-run inventory emits a reviewed summary only; testing defaults to a disposable fork with scoped tokens. The trade-off is lower realism (new minor)."
+    },
+    {
+      "objection": "CI canary catches only verbatim exfiltration; least privilege is the real fix.",
+      "resolved": true,
+      "note": "Canary demoted to a tripwire; least-privilege GITHUB_TOKEN, no secrets on untrusted triggers and gated writes are now primary, using zizmor and the gh-aw pattern."
+    },
+    {
+      "objection": "Local hook logs are tamper-prone and weak SOC 2 evidence.",
+      "resolved": true,
+      "note": "Logs are shipped to the client's central store where one exists, and the concept no longer claims tamper-resistant evidence otherwise."
+    }
+  ],
+  "sources": [
+    "https://code.claude.com/docs/en/server-managed-settings",
+    "https://code.claude.com/docs/en/sandboxing",
+    "https://code.claude.com/docs/en/settings",
+    "https://cursor.com/docs/agent/hooks",
+    "https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-hooks"
+  ]
+}

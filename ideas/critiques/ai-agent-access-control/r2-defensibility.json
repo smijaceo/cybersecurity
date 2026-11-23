@@ -1,0 +1,78 @@
+{
+ "concept_id": "ai-agent-access-control",
+ "lens": "defensibility",
+ "round": 2,
+ "score": 4,
+ "verdict": "conditional",
+ "summary": "The revision rightly drops the configuration kit and stakes the business on red-team testing plus reputation. But the claimed asset, a private 30+ case injection suite, is already matched free: Promptfoo (MIT, now OpenAI) ships 13 coding-agent red-team plugins with disposable checkouts and canaries. Any pentest boutique or reseller can copy the service. Only published research could give it a moat.",
+ "objections": [
+  {
+   "objection": "The 'private, growing injection-test suite' the differentiation names as the asset is already free and maintained. Promptfoo's coding-agent collection covers repo prompt injection, terminal-output injection, secret env/file reads, sandbox read/write escape, egress bypass, delayed CI exfil, automation poisoning and verifier sabotage, with MCP plugins and disposable-checkout guidance. That is a superset of the planned 30+ cases, backed by a vendor that is part of OpenAI.",
+   "severity": "major",
+   "evidence": "https://www.promptfoo.dev/docs/red-team/coding-agents/; concept:differentiation; concept:mvp.features[1]"
+  },
+  {
+   "objection": "The likeliest copier is still the small pentest, vCISO and SOC 2 readiness firm, now invited in as a reseller. Wholesale resale at $5,000 is not exclusive and teaches the method: after a few sprints a partner can run Promptfoo plus native managed settings itself and keep the whole $6,500. Established boutiques that already sell coding-agent or MCP assessments (listed in competitors) can add a fixed price within a quarter.",
+   "severity": "major",
+   "evidence": "concept:pricing.entry_price; concept:go_to_market.channel; concept:competitors[3]"
+  },
+  {
+   "objection": "There are no switching costs. Fixes live in the client's native managed settings, sandbox config and log store by design, and the quarterly re-test ($1,800) can go to any tester. Compliance platforms (Vanta, Drata) that own the buyer relationship could add an automated red-team check or a partner service and pull re-tests away.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[3]; concept:mvp.features[5]; concept:competitors[0]"
+  },
+  {
+   "objection": "The only durable asset left is reputation, and it starts at zero. The concept itself admits that it has no technical moat and that the founder's record is in Windows detection and CTFs. It still has no plan to turn cross-client findings into an anonymised corpus, a public benchmark or vendor-acknowledged CVEs that others cannot easily reproduce.",
+   "severity": "minor",
+   "evidence": "concept:risks[1]; concept:build.hardest_parts[0]"
+  },
+  {
+   "objection": "Platform-native protections (GitHub Agentic Workflows read-only jobs with threat detection, vendor sandboxes) keep cutting the number of findings a red team can show, so sprints will find less each year unless they move to newer attack surfaces.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[2]"
+  }
+ ],
+ "strongest_point": "It now sells testing and verification, which platforms do not bundle, rather than configuration they do. A reputation for published, vendor-acknowledged agent-injection findings is a real services moat.",
+ "what_would_change_my_mind": [
+  "Within 6 months, 2 or more vendor-acknowledged findings or CVEs in coding agents or popular MCP servers published under the founder's name",
+  "A documented test set that, across 5 client engagements, finds exploitable issues that a default Promptfoo coding-agent:all run misses in at least 30% of them",
+  "A partner agreement with exclusivity or a referral fee on re-tests, plus partner retention over 12 months",
+  "Re-test renewal of at least 60% of clients after the first year",
+  "Listing as a named implementation or red-team partner in the Vanta or Drata partner directory"
+ ],
+ "resolved_prior": [
+  {
+   "objection": "The core deliverable configures controls that platform owners control and keep bundling",
+   "resolved": true,
+   "note": "Repositioned: configuration is now secondary and the red team and re-tests are the core, so bundling no longer removes the product. The moat problem moves to the testing itself (see objection 1)."
+  },
+  {
+   "objection": "Shell-AST hook scripts already exist free (dcg, longline, claw-hooks)",
+   "resolved": true,
+   "note": "The custom parser and policy compiler are dropped in favour of maintained open-source guards, so the concept no longer claims this as a differentiator."
+  },
+  {
+   "objection": "The open-source kit and handed-over policy pack give away the only proprietary asset",
+   "resolved": false,
+   "note": "The suite is now private, but an equivalent free suite exists (Promptfoo coding-agent plugins), so keeping it private does not create an asset."
+  },
+  {
+   "objection": "Channel partners (SOC 2 consultants, vCISOs, AppSec boutiques) are the likeliest copiers",
+   "resolved": false,
+   "note": "Partners now resell at $5,000 wholesale, which turns some of them into a channel, but the deal is not exclusive and shows them how to copy the service."
+  },
+  {
+   "objection": "CI hardening is moving to the platform (GitHub Agentic Workflows)",
+   "resolved": true,
+   "note": "The concept accepts this: it uses zizmor and the gh-aw pattern and sells configuring and testing them, not a custom scanner."
+  },
+  {
+   "objection": "Engagement findings could become a data moat but are not captured",
+   "resolved": false,
+   "note": "The suite is versioned and public write-ups are planned, but there is still no plan for an anonymised cross-client findings corpus or a benchmark."
+  }
+ ],
+ "sources": [
+  "https://www.promptfoo.dev/docs/red-team/coding-agents/"
+ ]
+}

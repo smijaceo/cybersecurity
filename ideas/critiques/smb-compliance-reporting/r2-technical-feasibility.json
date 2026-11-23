@@ -1,0 +1,86 @@
+{
+  "concept_id": "smb-compliance-reporting",
+  "lens": "technical-feasibility",
+  "round": 2,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "The revision builds on the founder's real skills: a read-only M365 monitor, external scans and a manual pen test. Three months is plausible for the monitor, WISP generator and reports. Remaining risks: the app becomes a credential vault into many financial tenants, Exchange checks need a directory role in each tenant, signals depend on licence, the partner console inflates scope, and the ~8 h/client budget understates testing.",
+  "objections": [
+    {
+      "objection": "Holding admin-consented application permissions (AuditLog.Read.All, Directory/Policy read, MailboxSettings read, Exchange.ManageAsApp) for dozens of financial-firm tenants makes one app secret or certificate a key to all of them. Read-only scopes still expose inbox rules, sign-in logs and the full user directory, which is exactly the reconnaissance a BEC attacker wants. The revision names vendor security as a hardest part but does not design it: certificate-only credentials in an HSM or Key Vault, per-tenant token isolation, no standing human access, and a 314.4(f)-ready security program. A solo founder has to build this to production quality inside the same three months.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts[0], concept:mvp.features[1], https://learn.microsoft.com/en-us/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0"
+    },
+    {
+      "objection": "Graph does not expose external forwarding settings (mailbox ForwardingSmtpAddress, remote-domain auto-forward, outbound spam policy). These need Exchange Online PowerShell app-only access, which requires Exchange.ManageAsApp plus a Microsoft Entra directory role assigned to the app's service principal in each client tenant, with certificate authentication and a PowerShell runtime in the backend. That is a per-tenant onboarding step beyond one-click admin consent, and small-office owners or wary MSPs may refuse it. It also complicates a Python/Graph-only backend.",
+      "severity": "major",
+      "evidence": "https://learn.microsoft.com/en-us/powershell/exchange/app-only-auth-powershell-v2?view=exchange-ps ; concept:mvp.features[1]"
+    },
+    {
+      "objection": "Signal coverage varies by licence. Risky users and risk detections need Entra ID P2, which few 3-20-seat offices have. Sign-in log and registration-detail reports are tied to premium tiers, so they may be missing on Business Basic or Standard tenants. MFA coverage then has to fall back to per-user authentication-method enumeration and a check on security defaults or conditional access. The concept names this risk, but the MVP needs a per-SKU check matrix and test tenants for each SKU before launch, or the monthly evidence quietly varies by client.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts[1], https://learn.microsoft.com/en-us/graph/api/signin-list?view=graph-rest-1.0 ; https://learn.microsoft.com/en-us/graph/api/riskyuser-list?view=graph-rest-1.0"
+    },
+    {
+      "objection": "Founder hours are underestimated. An annual pen test of external services plus an M365 tenant (scoping, written authorization, testing, retest, report), two scans with triage, a tabletop and an annual report will not fit in about 8 hours per client unless the test is a templated tool run. A templated run risks not counting as 'penetration testing' under 314.4(d)(2). At a realistic 15-25 hours, 40 clients needs 600-1,000 hours a year beside running the platform.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts[2], concept:pricing.entry_price, concept:build.team"
+    },
+    {
+      "objection": "A white-label multi-client MSP partner console in the v1 feature list adds multi-level tenancy (MSP > client > users), role-based access, branding and report theming. That is scope creep for a three-month solo MVP. Defer it, and serve the first MSP partners with exported PDFs.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[5], concept:build.months_to_mvp"
+    },
+    {
+      "objection": "Multi-tenant apps from unverified publishers face consent warnings and blocks. Microsoft publisher verification (a partner program ID and a verified domain) and a stable consent flow should be done before outreach, or the first admin consents will stall.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "The scope is now small and squarely within the founder's skills: read-only Graph checks, external scanning and manual testing, with no reportability engine, legal tables or client-side scripts.",
+  "what_would_change_my_mind": [
+    "A working prototype that onboards 3 real tenants (Business Basic, Standard and Premium) with one consent flow and returns MFA, forwarding and admin-role findings on each, with the Exchange role step timed and accepted",
+    "A written vendor security design (certificate-only app credentials in a managed key store, per-tenant isolation, audit log, MFA, no standing access) reviewed by an outside tester before the first client connects",
+    "Time logs from 3 pilot pen tests plus scans showing 10 h or less per client, with a report format that a lawyer or insurer accepts as 314.4(d)(2) evidence",
+    "The partner console moved to post-MVP, and the MVP feature list confirmed to fit in 3 months by a week-level plan"
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Program omitted 314.4(d)(2) scanning/testing and the 5,000-consumer branching",
+      "resolved": true,
+      "note": "Six-monthly scans, annual pen test and onboarding scoping by the 314.6 threshold now in MVP and pricing tiers; delivery hours remain underestimated (new objection)."
+    },
+    {
+      "objection": "Lawyer-reviewed reportability tree and 50-state table outside the one-month plan",
+      "resolved": true,
+      "note": "Both removed from scope; the first-hour card hands off to counsel or the insurer, which takes the content burden off the critical path."
+    },
+    {
+      "objection": "App holds sensitive client data and needs its own security program; out-of-band incident access",
+      "resolved": false,
+      "note": "Data held is narrower (no SSNs, returns or mail content) and months_to_mvp went from 1 to 3, but the app now holds standing read access to many tenants. The security design is still only named as a hard part. Out-of-band access matters less now that the incident card is static."
+    },
+    {
+      "objection": "No API for FTC submission or desktop tax software",
+      "resolved": true,
+      "note": "FTC pre-fill dropped; inventory now comes mainly from M365 Graph rather than tax software."
+    },
+    {
+      "objection": "PowerShell hardening scripts risk lockouts across mixed configurations",
+      "resolved": true,
+      "note": "Scripts removed; fixes go to the firm's IT person or MSP, and founder changes need a separate written authorization."
+    },
+    {
+      "objection": "Bursty incident support overwhelms a solo founder",
+      "resolved": true,
+      "note": "No incident hours are sold; the card hands off to the insurer and counsel. The burst risk has moved to testing season (see the hours objection)."
+    }
+  ],
+  "sources": [
+    "https://learn.microsoft.com/en-us/graph/api/authenticationmethodsroot-list-userregistrationdetails?view=graph-rest-1.0",
+    "https://learn.microsoft.com/en-us/graph/api/signin-list?view=graph-rest-1.0",
+    "https://learn.microsoft.com/en-us/graph/api/riskyuser-list?view=graph-rest-1.0",
+    "https://learn.microsoft.com/en-us/powershell/exchange/app-only-auth-powershell-v2?view=exchange-ps",
+    "https://www.ecfr.gov/api/versioner/v1/full/2025-01-01/title-16.xml?part=314&section=314.4"
+  ]
+}

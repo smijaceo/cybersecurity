@@ -1,0 +1,82 @@
+{
+ "concept_id": "msp-windows-detection",
+ "lens": "technical-feasibility",
+ "round": 2,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "The revision cut the impossible parts. Wazuh only, no simulator, no canaries and a local report runner make this buildable. Three gaps remain. The 3-month plan still runs over once Wazuh learning and month-one onboarding are counted. The report and volume features assume data that Wazuh does not index by default. And the replay lab has no defined way to evaluate Sigma rules.",
+ "objections": [
+  {
+   "objection": "Schedule is still optimistic. Thirteen weeks have to cover: 3-5 weeks learning Wazuh (the concept's own estimate); 4 role packs x Keep/Lean x standalone/built-in Sysmon; a verifier; decoders, rules and dashboards; a PDF report runner; signed RMM rollout with rings and rollback; compliance and DPIA templates; and a replay lab of ~20 techniques per role (~80 tests). Paid onboarding also starts in month one. A realistic figure is 4-5 months, or 3 months with the lab and Lean profiles deferred.",
+   "severity": "major",
+   "evidence": "concept:build.months_to_mvp; concept:build.hardest_parts; concept:mvp.features"
+  },
+  {
+   "objection": "Wazuh indexes alerts, not events. Archives are off by default and need logall_json plus extra index storage before raw events can be searched. Per-event-ID volume and a complete logon/RDP/logoff report therefore only work in one of two ways. Either the packs ship rules that raise every 4624/4634/4778/4779/4672 event to an indexed alert level, which adds the indexer volume the product is meant to tame, or the MSSP indexes archives. Wazuh Cloud has no shell on the manager, so the runner can only use APIs. The concept doesn't choose between these designs.",
+   "severity": "major",
+   "evidence": "https://documentation.wazuh.com/current/user-manual/manager/event-logging.html; concept:mvp.features"
+  },
+  {
+   "objection": "'Publishing which Sigma/Wazuh rules still fire' has no defined mechanism. There is no maintained pySigma Wazuh backend: PyPI has only an OpenSearch backend, which needs custom field mappings for win.eventdata.*. Converting Sigma rules to Wazuh XML rules is a project in its own right. A cheaper route is to run Sigma over the lab's EVTX exports with an existing engine such as Hayabusa or Chainsaw, and to test only the Wazuh rules the packs ship.",
+   "severity": "minor",
+   "evidence": "https://pypi.org/pypi/pySigma-backend-opensearch/json"
+  },
+  {
+   "objection": "Two pieces could be reused but are not. Wazuh agent groups already push localfile/XPath config per tenant. Wazuh SCA policies, including the shipped CIS Windows checks, already assess audit-policy settings and report pass/fail into Wazuh. Building an RMM-run verifier and an RMM config push duplicates both. Note that SCA command checks pushed from the manager need sca.remote_commands enabled on agents. That is a security trade-off, unless the policy is placed locally by RMM.",
+   "severity": "minor",
+   "evidence": "https://documentation.wazuh.com/current/user-manual/reference/centralized-configuration.html; https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/how-to-configure.html"
+  },
+  {
+   "objection": "Safe rollout (signed packs, staged rings, per-tenant rollback) depends on what each RMM supports: NinjaOne, Datto, N-able, ConnectWise and others differ. Audit policy also has two delivery paths: domain GPO, and local auditpol for workgroup servers. Name one RMM and both paths for v1, or rollout safety becomes per-customer custom work.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Scope is now one SIEM and Windows only, squarely in the founder's specialty, with no hosted service. Wazuh's eventchannel XML fields handle localized built-in Sysmon, so the hard parts are known and bounded.",
+ "what_would_change_my_mind": [
+  "A written design choice for logon and volume data (custom alert rules versus an indexed archives index), with the measured indexer-volume cost on one real tenant.",
+  "A cut plan: 4 role packs in Keep profile, a verifier built on Wazuh SCA, the report runner, and a lab of 20 techniques in total (not per role), shipped in 12 weeks, with Lean profiles and the full lab in months 4-5.",
+  "A working lab pipeline (e.g. a Ludus- or Proxmox-based snapshot lab plus Hayabusa over EVTX) that re-runs nightly without manual steps.",
+  "Confirmation that the report runner works on Wazuh Cloud through its indexer/API access, not only on self-hosted Wazuh."
+ ],
+ "resolved_prior": [
+  {
+   "objection": "Scope versus schedule: 4 SIEMs, RMM and lab in 2 months solo",
+   "resolved": false,
+   "note": "Mostly addressed: Wazuh only and 3 months. The remaining scope (8 config variants per role pair, verifier, report runner, ~80 replay tests, Wazuh learning) still points to 4-5 months. Restated as a new objection."
+  },
+  {
+   "objection": "Coverage-versus-volume simulator across SIEMs is the hardest feature",
+   "resolved": true,
+   "note": "Simulator removed. It is replaced by Wazuh-only volume reporting, which raises a narrower data-availability issue (alerts versus archives)."
+  },
+  {
+   "objection": "Built-in Sysmon covers a minority and can't coexist with standalone",
+   "resolved": true,
+   "note": "Packs support both flavours with migration. Wazuh collects eventchannel XML fields, which are not localized."
+  },
+  {
+   "objection": "Maintenance load underestimated",
+   "resolved": true,
+   "note": "One SIEM shrinks the matrix. The lab is still listed as a hardest part and should be automated from day one."
+  },
+  {
+   "objection": "No report execution engine in free SIEMs",
+   "resolved": true,
+   "note": "A local report runner querying the Wazuh indexer was added. It is feasible, subject to the data being indexed and to Wazuh Cloud API access."
+  },
+  {
+   "objection": "Canary folders need per-client SACL tuning",
+   "resolved": true,
+   "note": "Canary folders removed from scope."
+  }
+ ],
+ "sources": [
+  "https://documentation.wazuh.com/current/user-manual/manager/event-logging.html",
+  "https://documentation.wazuh.com/current/user-manual/reference/centralized-configuration.html",
+  "https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/how-to-configure.html",
+  "https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/configuration.html",
+  "https://learn.microsoft.com/windows/security/operating-system-security/sysmon/overview",
+  "https://pypi.org/pypi/pySigma-backend-opensearch/json"
+ ]
+}

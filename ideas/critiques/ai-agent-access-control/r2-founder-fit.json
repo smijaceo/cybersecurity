@@ -1,0 +1,78 @@
+{
+ "concept_id": "ai-agent-access-control",
+ "lens": "founder-fit",
+ "round": 2,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "The revision fits a solo bootstrapped founder better: a 3-month build with public research first, disposable test setups, no custom compiler, realistic capacity and a partner channel. Credibility is still the gate. An unknown founder with Windows, CTF and CompTIA credentials must win CTOs and partners against named researchers. First revenue lands around month 4-6, and the founder's detection skills stay unused.",
+ "objections": [
+  {
+   "objection": "Credibility is still unproven and everything depends on it. The plan now puts 2-3 write-ups before selling, but the direct and partner channels both need the founder to look like a coding-agent security expert. Established boutiques already publish deep coding-agent work, such as Christian Schneider's ten-domain assessment and cheat sheet. Pentest and vCISO firms will not resell an unknown solo tester's red team until they see a finding or a reference client.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts[0]; concept:go_to_market.channel; https://christian-schneider.net/consulting/coding-agent-security/"
+  },
+  {
+   "objection": "Time to first revenue is long for a founder with no capital. The plan needs 3 months to build the test environment, the 30+ case suite and the write-ups, plus about a month to learn agent managed settings, sandbox and hook semantics, GitHub Actions attack paths and SOC 2 control wording. With the 2-week test after that and a typical first-deal cycle, the first $6,500 arrives around month 4-6. The founder has plenty of time, so this is survivable but not fast. A paid one-repository CI test could close earlier.",
+   "severity": "major",
+   "evidence": "concept:build.months_to_mvp; concept:riskiest_assumption.test; config/founder.yaml constraints.capital"
+  },
+  {
+   "objection": "There is still an upfront cost and hurdle before the first sprint. E&O and cyber insurance, rules of engagement, an authorisation letter, a liability cap and a DPA are all needed. A new solo firm with no claims history may struggle to get cover, and premiums are paid before any income. Disposable-environment testing removes most of the operational liability.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts[3]; concept:open_questions[3]"
+  },
+  {
+   "objection": "The founder's strongest asset, Windows detection engineering, is still unused, so the business rests on newly learned skills. A detection add-on is only an open question. Endpoint-managed Claude Code settings reach Windows through the registry, so a Windows/MDM-hardening angle exists, but the concept does not use it.",
+   "severity": "minor",
+   "evidence": "concept:open_questions[4]; https://code.claude.com/docs/en/server-managed-settings"
+  },
+  {
+   "objection": "One person carries both selling and keeping up with four agents' changing settings. Dropping the policy compiler helps, but the private injection suite and coverage matrix still need re-validation with every agent release, on top of delivery and sales at about 2 sprints a month.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts[2]; concept:pricing.rationale"
+  }
+ ],
+ "strongest_point": "A fixed-fee service with near-zero running costs and a disposable-environment red team built on the founder's offensive and Python skills. Partner resale suits someone without a sales team.",
+ "what_would_change_my_mind": [
+  "Within 3 months, 2-3 public reproducible coding-agent or CI-agent injection write-ups, at least one acknowledged by a vendor or maintainer, plus a talk accepted at a BSides or similar event.",
+  "2 of 10 interviewed pentest, SOC 2 readiness or vCISO firms sign a written referral or resale agreement, and 1 paid deposit or one-repository CI test closes by month 4.",
+  "An insurance quote for E&O and cyber cover under about $3k a year for a new solo firm.",
+  "Fit would improve with a Windows-fleet variant: MDM- or registry-delivered managed settings plus Sysmon or EDR rules for agent-spawned shells and MCP processes, sold through MSPs that manage Windows developer fleets."
+ ],
+ "resolved_prior": [
+  {
+   "objection": "Credibility gap with the named buyer, with no time planned before the sales test.",
+   "resolved": false,
+   "note": "Partly addressed. Write-ups before selling and 3 months of build time are now planned, but the credibility itself is still unproven and is the main dependency."
+  },
+  {
+   "objection": "Core strengths unused and three new domains to learn; a 1-month MVP is unrealistic.",
+   "resolved": false,
+   "note": "The timeline is fixed (3 months), but the Windows detection strengths are still unused and the learning load is unchanged."
+  },
+  {
+   "objection": "First-customer plan exceeds a solo founder's reach.",
+   "resolved": true,
+   "note": "The success signal is reset to partner commitments and one deposit, with first revenue expected around month 3-5. That is realistic, though the partners still need credibility."
+  },
+  {
+   "objection": "Liability risk of red-teaming production credentials, plus insurance cost.",
+   "resolved": true,
+   "note": "Testing now runs in a disposable fork with scoped tokens by default, plus paperwork and insurance. The remaining insurance cost and the risk of being refused cover are minor."
+  },
+  {
+   "objection": "The income model overstated one person's capacity.",
+   "resolved": true,
+   "note": "The rationale now assumes 2 sprints a month, about $13k gross."
+  },
+  {
+   "objection": "Vendor managed policies shrink the setup work and force constant re-learning.",
+   "resolved": false,
+   "note": "The core is moved to red teams and re-tests and the compiler is dropped, which reduces upkeep. Keeping up with the platforms is still a solo burden."
+  }
+ ],
+ "sources": [
+  "https://christian-schneider.net/consulting/coding-agent-security/",
+  "https://code.claude.com/docs/en/server-managed-settings"
+ ]
+}

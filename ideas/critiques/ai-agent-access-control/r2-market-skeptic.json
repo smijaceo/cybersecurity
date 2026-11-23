@@ -1,0 +1,74 @@
+{
+ "concept_id": "ai-agent-access-control",
+ "lens": "market-skeptic",
+ "round": 2,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "The revision is honest: it now targets only firms with a written trigger and needs about 24 sprints a year, which is a low bar. But no evidence yet shows that the trigger exists. AI questionnaires ask about data handling and shadow AI, not red-teaming coding agents. The problem evidence is still developer GitHub issues. Demand is plausible but untested.",
+ "objections": [
+  {
+   "objection": "The whole concept now rests on the trigger, and no evidence shows that it exists. The buyer is a CTO with a written customer-questionnaire item, auditor question or near-miss about coding agents. Published AI vendor questionnaire guidance (Vanta, GRC templates) asks about training on customer data, prompt retention, sub-processors and shadow AI. It does not ask for adversarial testing of developers' agents, MCP permissions or CI agent jobs. The concept cites no questionnaire, auditor or customer that asks for this. SOC 2 has no AI criteria (CSA). Without such a document, a red team is a discretionary $6,500.",
+   "severity": "major",
+   "evidence": "https://www.vanta.com/resources/questions-to-ask-ai-vendors; concept:riskiest_assumption; concept:risks[0]"
+  },
+  {
+   "objection": "The problem evidence still comes from developers and tool authors. The new items (headless MCP auto-approval, an MCP read-only bypass, a missing subagent validator) are bugs in agent and MCP projects, reported by their own maintainers or users. They show that the risk is technically real. They do not show that a small-company CTO will pay an outsider to find it. None of them involves a target-profile company that was harmed, or one that asked for help.",
+   "severity": "major",
+   "evidence": "concept:problem.evidence; input:themes[0].need_statements"
+  },
+  {
+   "objection": "The budget for AI-coding security goes to a different pain. Buyers worry most about defects in generated code (Black Duck: 64%), and SAST/SCA and code-review vendors serve that. The concept chose not to change this and treats it as out of scope. That is defensible, but it means the sprint competes for leftover discretionary budget at firms without an AppSec engineer.",
+   "severity": "minor",
+   "evidence": "https://www.infosecurity-magazine.com/news/ai-coding-adoption-governance-lags/"
+  },
+  {
+   "objection": "Urgency still depends on an incident. Wiz's GhostApproval and other coding-assistant vulnerability disclosures raise awareness. A widely reported breach of a small SaaS company through an injected coding agent would turn deferral into purchases, and the founder cannot make that happen.",
+   "severity": "minor",
+   "evidence": "concept:risks[0]"
+  },
+  {
+   "objection": "Partner resale assumes that pentest and vCISO firms see client pull for this line item. If they don't, they will not push a $5,000 wholesale SKU. If they do, they can build the service in-house from the same free native controls.",
+   "severity": "minor",
+   "evidence": "concept:go_to_market.channel"
+  }
+ ],
+ "strongest_point": "The demand bar is now realistic: about 24 paying engagements a year, and a two-week, deposit-based test that asks partners and CTOs for written triggers before any build.",
+ "what_would_change_my_mind": [
+  "3 of 10 SOC 2 readiness, vCISO or pentest firms show redacted client questionnaires or audit requests that ask about coding-agent, MCP or CI-agent controls",
+  "At least 1 CTO deposit of $1,000 toward a $6,500 sprint, or 2 paid one-repository CI tests, within the 2-week test",
+  "A major questionnaire standard (SIG, CAIQ) or a large enterprise buyer's vendor-security template adds explicit coding-agent or MCP tool-permission questions"
+ ],
+ "resolved_prior": [
+  {
+   "objection": "The demand signal comes from the wrong people (developer GitHub issues, vendor-filed #60246)",
+   "resolved": false,
+   "note": "#60246 and the vendor-filed items were removed, which fixes the bias. The replacement evidence is still developer bug reports, though. Buyer-side demand is acknowledged and goes to the riskiest-assumption test, but it is still not shown."
+  },
+  {
+   "objection": "The must-have trigger (SOC 2 or auditor demand) is assumed",
+   "resolved": false,
+   "note": "This is now stated honestly. The buyer is narrowed to firms with a written trigger, and the test targets that trigger. The trigger itself is still unproven, and published AI questionnaires don't ask about this."
+  },
+  {
+   "objection": "Buyers' budgeted pain is insecure generated code, not agent tool-call hardening",
+   "resolved": false,
+   "note": "Deliberately unchanged. The concept targets a narrower segment instead. This is accepted as a positioning choice and downgraded to minor."
+  },
+  {
+   "objection": "Urgency depends on an incident",
+   "resolved": false,
+   "note": "This is still in risks. It is outside the founder's control."
+  },
+  {
+   "objection": "The reachable slice is narrow",
+   "resolved": true,
+   "note": "For a solo services firm that needs about 24 sprints a year, low thousands of candidate firms is enough, if the trigger exists."
+  }
+ ],
+ "sources": [
+  "https://www.vanta.com/resources/questions-to-ask-ai-vendors",
+  "https://www.isaca.org/resources/news-and-trends/isaca-now-blog/2026/securing-the-ai-frontier-a-practical-framework-for-assessing-ai-coding-assistant-vulnerabilities",
+  "https://www.infosecurity-magazine.com/news/ai-coding-adoption-governance-lags/",
+  "https://labs.cloudsecurityalliance.org/research/csa-research-note-soc2-ai-controls-gap-20260830-csa-styled/"
+ ]
+}

@@ -1,0 +1,82 @@
+{
+  "concept_id": "smb-compliance-reporting",
+  "lens": "security-practitioner",
+  "round": 2,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "The revision makes real security work the core: read-only M365 checks, external scans and an annual test replace owner self-attestation and the risky incident engine. But a monthly findings email is too slow to catch BEC. Pen-test scope skips workstations and remote access, where tax offices get breached. A multi-tenant app with standing read access to many financial firms concentrates risk.",
+  "objections": [
+    {
+      "objection": "The monitor reports by monthly email, but the signals it collects are attacks in progress. An external forwarding rule, a new Global Admin or a risky sign-in means business email compromise is happening now. Learning about it up to 30 days later is post-mortem evidence, not detection. On Entra ID Free tenants (Business Basic/Standard), sign-in and audit logs are kept for only 7 days, so a monthly pull misses most activity unless the product polls daily and stores the data. It needs near-real-time alerts to the owner and MSP for high-severity changes, and daily collection, or it does not reduce BEC risk or meaningfully address 314.4(c)(8) user-activity monitoring.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[1] ('monthly findings email'); https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention (Free: sign-ins and audit logs 7 days)"
+    },
+    {
+      "objection": "The penetration test covers only 'internet-facing services and the M365 tenant', within a budget of about 8 founder hours per client per year that must also cover two scans, a tabletop and the report. Small tax and mortgage offices usually expose almost nothing externally. Their real compromise paths are phishing, infostealers or remote-access tools on workstations, shared local admin accounts, and tax or LOS software on office PCs. A test that never touches endpoints or the internal network produces a clean dated report while the main attack surface goes untested. That is checkbox compliance, the problem round 1 flagged in a new form, and an incident on an untested workstation would expose it.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[2] (scope: internet-facing services and M365 tenant); concept:build.hardest_parts[2] (~8 hours/year per Program client); https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.4 ((d)(2)(i) testing 'of your information systems ... based on relevant identified risks')"
+    },
+    {
+      "objection": "The checks the concept lists need tenant-wide application permissions: AuditLog.Read.All for sign-ins, MailboxSettings.Read for inbox rules on every mailbox, Policy/Directory reads, and app-only Exchange Online access for forwarding. These permissions stay granted indefinitely across dozens of financial firms' tenants. One stolen app secret or certificate, or a compromise of the founder's laptop, becomes a read path into every client and a ready map of their weaknesses (the findings database). Attackers have abused OAuth apps this way before. A solo founder running the platform with no 24/7 coverage is a concentrated supply-chain risk. MSPs and the 314.4(f) oversight duty will ask for evidence the concept does not yet plan: certificate auth held in an HSM or Key Vault, per-tenant app registrations or GDAP, Conditional Access for workload identities, an independent assessment, and a breach notification commitment.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts[0]; concept:risks[4]; https://learn.microsoft.com/en-us/graph/api/mailfolder-list-messagerules?view=graph-rest-1.0 (Application: MailboxSettings.Read); https://learn.microsoft.com/en-us/graph/api/signin-list?view=graph-rest-1.0 (Application: AuditLog.Read.All)"
+    },
+    {
+      "objection": "Risk detections need Entra ID P1 or P2, and Business Basic/Standard tenants have neither. Risky sign-ins are kept for only 7 days on Free. On the cheaper tenants many of these offices run, 'risky sign-ins' will mostly be empty. The monitor then shrinks to configuration checks (MFA, admins, forwarding, stale accounts). The product should say so per tenant, and perhaps recommend Business Premium as a finding.",
+      "severity": "minor",
+      "evidence": "https://learn.microsoft.com/en-us/graph/api/riskdetection-list?view=graph-rest-1.0 (P1 or P2 required)"
+    },
+    {
+      "objection": "The configuration checks repeat what MSPs already run for free. Maester, CISA ScubaGear, Microsoft Secure Score and Lighthouse cover MFA, admin roles and forwarding, Maester with thousands of read-only checks mapped to CIS/CISA that never leave the tenant. A competent MSP will see the monitor as a lighter version of tools it has and value only the Safeguards mapping, the testing and the reports. A third-party vendor's findings may also conflict with these tools' results.",
+      "severity": "minor",
+      "evidence": "https://maester.dev/"
+    }
+  ],
+  "strongest_point": "Founder-delivered six-monthly scans and an annual test, combined with read-only M365 checks, give small offices real evidence of configuration and the (d)(2) deliverable that WISP vendors never provide.",
+  "what_would_change_my_mind": [
+    "The monitor collects data daily and sends same-day alerts for external forwarding, new privileged roles and MFA removal; a 10-tenant pilot detects and contains at least one real or simulated BEC indicator within 24 hours.",
+    "The pen-test scope includes an authenticated internal and endpoint review (local admins, remote-access tools, EDR presence, patch levels) plus a phishing-resilience check, and a time study shows it fits the hours budget or the price is raised to cover it.",
+    "A documented vendor security design (certificate credentials in an HSM or Key Vault, per-tenant isolation or GDAP, least-privilege scopes listed, workload-identity Conditional Access, an external review) that two MSPs accept in their vendor assessment.",
+    "MSPs already running Maester or ScubaGear say in pilots that the Safeguards mapping and testing are worth reselling on top."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "The program was mostly self-attested paperwork with no technical verification of M365, Google or endpoints.",
+      "resolved": true,
+      "note": "A read-only Graph/Exchange monitor for MFA, leavers, forwarding, admin roles and risky sign-ins is now the core feature. Its monthly cadence and licence limits remain new issues."
+    },
+    {
+      "objection": "The program omitted the 314.4(c)(8) monitoring/logging and (d)(2) testing controls.",
+      "resolved": true,
+      "note": "The six-monthly external scans and annual test meet (d)(2) on paper. (c)(8) is only partly covered: a monthly pull of 7-day logs is not user-activity monitoring, and the test scope is narrow (see new objections)."
+    },
+    {
+      "objection": "The incident clock asked owners forensic questions that decide reportability and could produce a confidently wrong 'not reportable' record.",
+      "resolved": true,
+      "note": "Reportability reasoning was removed. The card presumes reportability, routes to the insurer or counsel and records facts only."
+    },
+    {
+      "objection": "Insurer breach counsel would sideline a non-privileged third-party incident timeline.",
+      "resolved": true,
+      "note": "The record is now facts-only handoff material to the breach coach. The insurer hotline comes first."
+    },
+    {
+      "objection": "Owner-run PowerShell hardening risks lockouts, makes the vendor a privileged third party, and the vendor's own security posture was missing.",
+      "resolved": true,
+      "note": "Scripts were removed and changes need separate written authorization. Vendor security is now listed as a hardest part, but standing multi-tenant read access raises a larger concentration risk (new objection)."
+    },
+    {
+      "objection": "The marketing overstated duties for firms under 5,000 consumers that 314.6 exempts.",
+      "resolved": true,
+      "note": "Scoping at onboarding, resegmentation to 5,000+ consumers, and a Core tier labelled as good practice."
+    }
+  ],
+  "sources": [
+    "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.4",
+    "https://learn.microsoft.com/en-us/graph/api/signin-list?view=graph-rest-1.0",
+    "https://learn.microsoft.com/en-us/graph/api/riskdetection-list?view=graph-rest-1.0",
+    "https://learn.microsoft.com/en-us/graph/api/mailfolder-list-messagerules?view=graph-rest-1.0",
+    "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention",
+    "https://maester.dev/"
+  ]
+}

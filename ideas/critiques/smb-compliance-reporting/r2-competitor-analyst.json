@@ -1,0 +1,89 @@
+{
+ "concept_id": "smb-compliance-reporting",
+ "lens": "competitor-analyst",
+ "round": 2,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "The pivot to M365 checks plus 314.4(d)(2) testing does sidestep the tax-vertical WISP and MDR bundlers. It also puts the product in front of the MSP tool stack: Kaseya vPenTest, ConnectSecure scans, free M365 baselines (Lighthouse, CIPP, Maester) and Cynomi's FTC Safeguards vCISO platform. Those are the MSP partners' own tools. Vertical WISP SaaS such as Kompflow at $99/yr also undercuts the Core tier.",
+ "objections": [
+  {
+   "objection": "The most dangerous competitor is now Kaseya, with the MSP stack around it. The concept's channel is MSPs 'that lack security-testing staff', but those MSPs don't need staff: Kaseya's vPenTest runs automated internal and external pen tests monthly or on demand and is pitched as producing compliance-ready reports. ConnectSecure sells scheduled vulnerability scanning plus compliance reporting to MSPs 'in highly regulated industries'. An MSP that owns these tools can deliver 314.4(d)(2) evidence itself and keep the margin. It has no reason to resell a solo founder's manual test at 30% off. Kaseya also owns Compliance Manager GRC, so a Safeguards template on top is a short step.",
+   "severity": "major",
+   "evidence": "https://www.kaseya.com/products/network-penetration-testing-tool/"
+  },
+  {
+   "objection": "The read-only M365 posture monitor, the concept's core feature, is commodity in the MSP channel. Microsoft 365 Lighthouse gives CSP partners SMB security baselines and multi-tenant risk views at no extra cost. CIPP (open source, built for MSPs) does multi-tenant standards and compliance reporting. Maester runs 2,000+ read-only checks against CIS/CISA baselines for free. The MFA, leaver, forwarding-rule and admin-role checks in the MVP are a subset of what partners already run. What's left to differentiate is the mapping to Safeguards sections and the report wording, not the detection.",
+   "severity": "major",
+   "evidence": "https://maester.dev/"
+  },
+  {
+   "objection": "Cynomi already sells an FTC Safeguards vCISO platform to MSPs and MSSPs. It automates risk assessments, program documentation and compliance reporting, and names mortgage brokers, tax preparers and accounting firms as targets. That is the partner console, tailored-WISP and risk-assessment layer of this MVP. It is already funded and already in the MSP channel. With Cynomi plus vPenTest, an MSP gets the whole Program tier from existing vendors.",
+   "severity": "major",
+   "evidence": "https://cynomi.com/?p=12890"
+  },
+  {
+   "objection": "Vertical WISP SaaS has moved toward 'continuous'. SafeGuardGRC/Kompflow sells a firm-specific WISP aligned with FTC 314 and Pub 4557 for $499 the first year, then $99/year, with auto-updates. Its higher tiers advertise a risk assessment, IR playbooks, vendor inventory, insurer questionnaires and 'continuous control testing'. The Core tier at $39/month (~$470/yr) is about 5x that price, and a WISP 'regenerated from findings' will not stay unique.",
+   "severity": "major",
+   "evidence": "https://www.safeguardgrc.com/"
+  },
+  {
+   "objection": "The competitor table still leaves out local IT/security consultancies and managed-IT hosts aimed at accountants (Verito, Rightworks, ACE), which sell vulnerability scans and pen tests as add-ons. A credentialed human tester is still the only clear edge, and it doesn't scale beyond about 40-60 clients.",
+   "severity": "minor",
+   "evidence": ""
+  },
+  {
+   "objection": "The SBTPG/Watch Cloud bundle remains a risk. A tier with an external scan or an M365 check would fit its per-device model, and it is paid from refund-transfer fees with no cash outlay. The concept accepts this risk as relationship-based with no product moat.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "A human, credentialed pen test with a dated 314.4(d)(2) report, scoped by the 314.6 threshold, is something tax-vertical WISP and bundle vendors don't deliver today.",
+ "what_would_change_my_mind": [
+  "2-3 MSPs that serve accounting or mortgage offices and already own vPenTest, ConnectSecure or Cynomi sign a letter of intent to resell the Program, and say what they can't get from those tools.",
+  "Evidence that insurers, examiners or clients reject automated pen-test reports for (d)(2) and want a human-led test, so a manual test becomes a requirement rather than a preference.",
+  "A price comparison for a 10-user office showing that vPenTest plus Cynomi plus MSP labour costs well over $2,150/yr, or that MSPs won't take on Safeguards scope.",
+  "Five owners of tax or mortgage offices above 5,000 consumers who already use Kompflow, Verito or an MSP still pay the $490 testing check."
+ ],
+ "resolved_prior": [
+  {
+   "objection": "SBTPG/Watch Cloud bundles the WISP, incident team and MDR through the bank-product channel and was not in the table.",
+   "resolved": true,
+   "note": "Now the top competitor. The concept repositions as a verification and testing layer beside endpoint bundles rather than a rival program. The risk that it adds a scan tier remains, as a minor objection."
+  },
+  {
+   "objection": "Verito's $999 recurring WISP was missed and pricing was framed against SOC 2 platforms.",
+   "resolved": true,
+   "note": "Verito and ACE are now in the table and pricing is set openly against them. The listed comparables are still SOC 2/KnowBe4 ceilings rather than vertical or MSP comparables."
+  },
+  {
+   "objection": "The FTC clock, questionnaire and tabletop differentiators were copyable within a quarter.",
+   "resolved": true,
+   "note": "The clock is now a free card. The new differentiators (M365 checks, scans, tests) face a different copy threat from MSP tooling, raised as new objections."
+  },
+  {
+   "objection": "The insurer's breach coach and panel counsel squeeze out the paid incident allowance.",
+   "resolved": true,
+   "note": "Incident hours were removed. The insurer is now the handoff target and a referral partner."
+  },
+  {
+   "objection": "Unverified: SafeGuardGRC may pre-empt the MSP white-label channel.",
+   "resolved": false,
+   "note": "Not in the competitor table. Now verified: Kompflow sells a $499/$99-a-year Safeguards-aligned WISP with higher tiers that claim continuous control testing."
+  },
+  {
+   "objection": "Free substitutes (IRS Pub 5708, tax-software WISP content) set the price anchor.",
+   "resolved": true,
+   "note": "The concept concedes the free template is enough below 5,000 consumers and targets firms that owe testing. The Core tier is still exposed to free and $99 options."
+  }
+ ],
+ "sources": [
+  "https://www.kaseya.com/products/network-penetration-testing-tool/",
+  "https://connectsecure.com/",
+  "https://learn.microsoft.com/en-us/microsoft-365/lighthouse/m365-lighthouse-overview",
+  "https://cipp.app/",
+  "https://maester.dev/",
+  "https://cynomi.com/?p=12890",
+  "https://www.safeguardgrc.com/",
+  "https://www.sbtpg.com/all-in-one-cybersecurity/"
+ ]
+}

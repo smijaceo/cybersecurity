@@ -1,0 +1,79 @@
+{
+  "concept_id": "msp-windows-detection",
+  "lens": "gtm-pricing",
+  "round": 2,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "Much better: per-tenant pricing with a minimum gives an expansion path, the pitch no longer depends on ingest savings, and the pilot ladder is consistent. Remaining problems: every paid component runs locally, so customers can cancel and keep it; the Wazuh 'marketplace' channel doesn't exist for ISVs; and ~$5k ACV plus founder-delivered onboarding caps first-year revenue.",
+  "objections": [
+    {
+      "objection": "Cancel-and-keep is still structural. The verifier, drift rules, dashboards and report runner all run inside the MSSP's environment with no hosted component or licence check, so after onboarding an MSSP can stop paying and keep drift alerts and monthly reports running. The subscription then sells only future updates and support, which change slowly (audit-policy and Sysmon schemas are stable).",
+      "severity": "major",
+      "evidence": "concept:mvp.out_of_scope[0] ; concept:pricing.model ; concept:open_questions[3]"
+    },
+    {
+      "objection": "The planned scalable channel is weak. Wazuh's partner program has Gold and Platinum tiers for resellers and MSSPs who pay Wazuh to join (search results put the first-year cost at about $3.2k-$9.9k). It offers Wazuh Cloud, multi-tenancy and listing as a certified service partner, not a marketplace for third-party content. Without it, distribution is founder-led community work into a niche of low-thousands firms.",
+      "severity": "major",
+      "evidence": "https://wazuh.com/partners/ ; concept:go_to_market.channel"
+    },
+    {
+      "objection": "The revenue ceiling is set by founder time. At $9/tenant and 20-60 tenants, a typical MSSP pays $149-$540/month (about $1.8k-$6.5k ARR) plus a one-off $2,500 onboarding the founder delivers personally. One person can probably run 1-2 onboardings a month alongside pack maintenance and the replay lab, so 12-month ARR is likely $50-100k. The concept already calls this lifestyle-scale.",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price ; concept:build.team ; concept:risks[5] ; concept:risks[2]"
+    },
+    {
+      "objection": "The per-client resale story is untested. Nothing yet shows SMB clients will pay the MSSP extra for a logon/coverage PDF, and if they won't, the $9 is pure cost to the MSSP. Pricing ignores estate size (a 2-server client and a 40-server client cost the same), although per-estate comparables (ADAudit Plus from $245/yr for 100 workstations, $595/yr for 2 DCs) leave room to raise the price.",
+      "severity": "minor",
+      "evidence": "https://www.manageengine.com/products/active-directory-audit/pricing-details.html ; concept:riskiest_assumption.success_signal"
+    },
+    {
+      "objection": "Requiring $500 paid up front within two weeks from community leads (r/msp polices vendor self-promotion) is optimistic for a solo vendor with no production MSSP track record. Expect the first paid pilots to come only from the founder's contacts.",
+      "severity": "minor",
+      "evidence": "concept:riskiest_assumption.test"
+    }
+  ],
+  "strongest_point": "Per-tenant SKU with a $149 floor, paid onboarding from month one and a free RMM coverage-check wedge give near-zero-CAC revenue that grows with each MSSP's client count.",
+  "what_would_change_my_mind": [
+    "2 of 3 pilot MSSPs renew past month 3 and at least one resells the evidence report to a client at a markup",
+    "A hosted or licence-keyed component (e.g. cross-MSSP coverage benchmark, signed pack feed with expiry) that stops working on cancel without holding customer logs",
+    "An RMM vendor script library or a Wazuh partner agreeing to distribute or bundle the packs",
+    "Onboarding shown to take 3 founder-days or less per MSSP, so services don't cap growth"
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Dollar ROI (GB saved) applies only to per-GB SIEMs, a minority of targets",
+      "resolved": true,
+      "note": "Pitch moved to coverage, drift alerts and client evidence; ingest savings dropped; Wazuh Cloud cited only as context."
+    },
+    {
+      "objection": "Real price anchor is free (Cribl Free plus community configs)",
+      "resolved": true,
+      "note": "Concept now builds on the free baselines and charges for rollout, verification, drift and reports. Cribl acknowledged as a free competitor."
+    },
+    {
+      "objection": "Flat $249 for 50 tenants has no expansion path or per-client SKU",
+      "resolved": true,
+      "note": "$9/tenant/month with $149 minimum scales with client count and gives MSSPs a per-client line to mark up."
+    },
+    {
+      "objection": "Structural churn: customers cancel and keep deployed configs",
+      "resolved": false,
+      "note": "Recurring deliverables are now defined (drift alerts, monthly report), but they run locally with no enforcement, so the cancel-and-keep risk remains; renewal is only an open question."
+    },
+    {
+      "objection": "First-ten plan optimistic; $500 pilot vs $2,500 tuning inconsistent",
+      "resolved": true,
+      "note": "Pilot is credited toward onboarding and the success threshold is lowered to 2 paid pilots; reliance on community leads remains a minor concern."
+    },
+    {
+      "objection": "Liability terms a $249 subscription can't carry",
+      "resolved": true,
+      "note": "Standard liability-capped, no-completeness-warranty agreement plus E&O cover; 'Keep' profile is the default."
+    }
+  ],
+  "sources": [
+    "https://wazuh.com/cloud/",
+    "https://wazuh.com/partners/",
+    "https://www.manageengine.com/products/active-directory-audit/pricing-details.html"
+  ]
+}

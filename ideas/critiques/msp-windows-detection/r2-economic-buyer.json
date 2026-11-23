@@ -1,0 +1,75 @@
+{
+ "concept_id": "msp-windows-detection",
+ "lens": "economic-buyer",
+ "round": 2,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "As an owner of a Wazuh MSSP, I now see a clean budget line: a per-client cost of goods I can mark up. At about $5.4k a year for 50 tenants it is cheap. It is still a nice-to-have, though. Wazuh already claims PCI/HIPAA mapping, nobody yet pays for the report, my detection engineer could build it, and a solo vendor's scripts on client DCs is a vendor-risk question.",
+ "objections": [
+  {
+   "objection": "The new forcing function is weak. PCI DSS Req. 10 and HIPAA 164.312(b) require that audit logs exist and are reviewed. They don't require this product. Free Wazuh already ships regulatory-compliance tagging and dashboards (PCI DSS, HIPAA, GDPR, NIST) in its ruleset, so the compliance reason is claimed by what I already run. Most SMB card merchants are SAQ-level, and the HIPAA rule is non-prescriptive. No auditor finding or insurer clause yet makes me buy, and the insurer question is still open.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[5]; concept:open_questions[1]; concept:riskiest_assumption"
+  },
+  {
+   "objection": "The economics rest on reselling the report, which is untested. If clients won't pay a separate line for a 'monthly evidence report', the fee is pure cost and I expect monthly reporting to be part of the managed-security fee I already charge. The concept's own success signal (4 of 15 would resell) is an intention, not a price clients have accepted.",
+   "severity": "major",
+   "evidence": "concept:pricing.rationale; concept:riskiest_assumption.success_signal; concept:open_questions[0]"
+  },
+  {
+   "objection": "Build versus buy. The named user is my own detection engineer. sysmon-modular and Yamato give the configs for free. A PowerShell verifier plus a few Wazuh rules and an indexer query for a PDF is a few weeks of in-house work that I own forever. At $9/tenant I'd pay only if the replay-tested maintenance and Sysmon-migration support clearly beat that one-off effort. I'd want the pilot to show hours saved per tenant.",
+   "severity": "major",
+   "evidence": "concept:user; concept:competitors[0]; concept:competitors[1]; concept:differentiation"
+  },
+  {
+   "objection": "Vendor risk now sits on my clients' domain controllers. The product pushes auditpol, Sysmon and scripts via RMM from a one-person vendor with no SOC 2 or security attestation. My clients' vendor-risk questionnaires and my own E&O carrier will ask about that supply chain. Signed packs and staged rings help, but I'd need attestation-grade evidence and a code-review right before rollout to every client DC.",
+   "severity": "major",
+   "evidence": "concept:build.team; concept:mvp.features[1]; concept:build.hardest_parts[3]"
+  },
+  {
+   "objection": "The bus factor remains for the paid layer. The open baseline is only the configs. If the vendor stops, the verifier, drift rules and report runner (the things I pay for) have no stated escrow or licence to keep running, and my clients would then be missing a report they were promised.",
+   "severity": "minor",
+   "evidence": "concept:pricing.model; concept:risks[5]"
+  },
+  {
+   "objection": "Once packs are stable, drift alerts will be rare, so month-to-month value rests on the report alone. Renewal at month 3 is still an open question rather than a demonstrated outcome.",
+   "severity": "minor",
+   "evidence": "concept:open_questions[3]"
+  }
+ ],
+ "strongest_point": "The concept now pitches a per-client SKU I can mark up and pass through. That turns a cost into potential margin at a price under one analyst-day per month, with no dependence on ingest savings.",
+ "what_would_change_my_mind": [
+  "At least 3 pilot MSSPs that bill clients for the monthly evidence report (e.g. $20+/client/month) and renew at month 3",
+  "A cyber-insurance application, PCI QSA or HIPAA auditor finding that names Windows logon/audit-policy evidence, in which the QuietWin report closed the finding",
+  "Pilot time logs showing the vendor saves more analyst hours per tenant per month than the fee, versus building in-house with sysmon-modular and Yamato",
+  "A vendor-security package (code signing, reproducible builds, third-party review or SOC 2 roadmap) plus source escrow or a perpetual licence for the verifier and report runner"
+ ],
+ "resolved_prior": [
+  {
+   "objection": "Savings don't land on the MSSP's P&L (Graylog Open/Wazuh free; Sentinel ingest billed to the client)",
+   "resolved": true,
+   "note": "The concept dropped ingest savings as the pitch and dropped Sentinel from v1. Value is now coverage, drift and a resellable report, and the pricing rationale says so explicitly."
+  },
+  {
+   "objection": "Nice-to-have with no regulatory, audit or insurer forcing function",
+   "resolved": false,
+   "note": "A PCI DSS 10 / HIPAA mapping was added, but these rules don't mandate this product and Wazuh already ships compliance mapping. The insurer question is still open."
+  },
+  {
+   "objection": "Flat-priced MSP SIEMs (Huntress, Blumira) remove the cost case",
+   "resolved": true,
+   "note": "The target was narrowed to MSSPs that keep their own Wazuh stack, and the pitch no longer depends on volume cost. This shrinks the market, but that is outside this lens."
+  },
+  {
+   "objection": "Liability and solo-vendor bus-factor risk land on the MSSP",
+   "resolved": false,
+   "note": "The 'Keep' default, archive guidance and a liability-capped agreement address liability. The bus factor remains for the paid stateful layer, and RMM rollout to client DCs adds a new supply-chain concern."
+  },
+  {
+   "objection": "Price so low it signals a GitHub config with a support plan",
+   "resolved": true,
+   "note": "The paid tier now holds the verifier, drift rules, dashboards and report runner, and per-tenant pricing gives a resellable SKU."
+  }
+ ],
+ "sources": []
+}

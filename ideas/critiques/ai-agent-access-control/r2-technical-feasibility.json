@@ -1,0 +1,68 @@
+{
+ "concept_id": "ai-agent-access-control",
+ "lens": "technical-feasibility",
+ "round": 2,
+ "score": 7,
+ "verdict": "go",
+ "summary": "The revision fixed the main build risks: the custom compiler and parser are gone, central managed settings and an OS sandbox are used, and the test environment and suite are budgeted in 3 months. Gaps remain. The sandbox covers shell commands only, not MCP servers, the main injection path. Sandbox and central delivery are uneven across the four agents, and one person must keep the coverage matrix current.",
+ "objections": [
+  {
+   "objection": "The new containment layer does not cover the main attack surface. Claude Code's sandbox covers shell commands only. Local MCP servers, hooks and the built-in file and web tools run outside it with full user access, and allowedDomains does not limit WebFetch. A poisoned issue that drives an MCP tool such as GitHub, a database or mail is limited only by the MCP allowlist, permission rules and token scope, not by the sandbox or the egress allowlist. The hardening must add per-server least-privilege tokens, deny rules on MCP write tools and possibly containerised MCP servers. The bypass list must say plainly that the sandbox does not cover MCP.",
+   "severity": "major",
+   "evidence": "https://code.claude.com/docs/en/sandboxing.md ('The sandbox covers shell commands only. Claude's file tools, MCP servers, and hooks run outside it'; local MCP servers 'run with your full access'); concept:mvp.features[3]"
+  },
+  {
+   "objection": "The sandbox fails open unless configured otherwise. By default, when the sandbox is unsupported or its dependencies are missing, commands run unsandboxed. This covers native Windows, Linux machines without bubblewrap or socat, and containers where bwrap cannot start. An allow rule also approves an unsandboxed retry. The kit must set failIfUnavailable, allowUnsandboxedCommands: false and allowManagedDomainsOnly in managed settings. A 25-developer rollout will also need allowlist tuning when builds break. A 2-week sprint must budget for that tuning or ship the sandbox in audit mode.",
+   "severity": "minor",
+   "evidence": "https://code.claude.com/docs/en/sandboxing.md (failIfUnavailable; unsandboxed-retry escape hatch; allowUnsandboxedCommands)"
+  },
+  {
+   "objection": "Central delivery and sandbox parity still differ by agent. Claude Code server-managed settings require Teams or Enterprise. Cursor team hooks are Enterprise only, and Cursor's sandbox has its own platform and network modes. Copilot cloud agent supports only a subset of hook events, and Gemini uses a separate TOML policy engine. Dropping the compiler removes the code to maintain, but one founder still has to keep the per-agent coverage matrix and the 30+ injection-case suite re-validated across weekly releases. For clients on mixed tools, part of the hardening will stay advisory, as the concept now admits.",
+   "severity": "minor",
+   "evidence": "https://code.claude.com/docs/en/server-managed-settings.md (Teams/Enterprise only); https://cursor.com/docs/agent/terminal; concept:build.hardest_parts[2]"
+  },
+  {
+   "objection": "Three months is tight for everything now listed: a disposable-environment method, a versioned 30+ case suite with interpreter indirection, a self-scan inventory tool, engagement paperwork with insurance, and 2-3 public write-ups. Vendor-acknowledged findings depend on disclosure timelines the founder does not control. The build itself is feasible, but the write-ups may push the first sale past month 3.",
+   "severity": "minor",
+   "evidence": "concept:build.months_to_mvp; concept:build.hardest_parts[0]"
+  }
+ ],
+ "strongest_point": "The build is now mostly configuration and testing of documented vendor controls (managed settings, OS sandbox, fail-closed hooks, zizmor, gh-aw), which one skilled tester can deliver and maintain.",
+ "what_would_change_my_mind": [
+  "A pilot client where an MCP-driven injection case (poisoned issue to a GitHub or database MCP write) is blocked by token scope or deny rules, not only shell cases by the sandbox.",
+  "A managed-settings template with failIfUnavailable, allowUnsandboxedCommands: false and allowManagedDomainsOnly, rolled out to 20+ developers with under a day of allowlist tuning.",
+  "A coverage matrix for the four agents, kept current through two release cycles in under one day a month."
+ ],
+ "resolved_prior": [
+  {
+   "objection": "The shell-AST differentiator is largely native and not a security boundary; interpreter indirection needs an OS sandbox and egress limits.",
+   "resolved": true,
+   "note": "The custom parser was dropped. A native sandbox with an egress allowlist and indirection test cases were added. The sandbox's MCP and fail-open gaps remain as new objections."
+  },
+  {
+   "objection": "Controls are not enforced without central delivery; hooks fail open and project/user hooks are editable.",
+   "resolved": true,
+   "note": "Delivery now runs through server-managed settings or MDM with allowManagedHooksOnly and fail-closed hooks. Clients without central delivery are told their guardrails are advisory, and the 'enforced' wording was removed."
+  },
+  {
+   "objection": "One YAML policy compiled into four agents is a maintenance burden with silent holes.",
+   "resolved": true,
+   "note": "The compiler was dropped in favour of native controls, a coverage matrix and stated gaps. Upkeep of the matrix and suite remains, now minor."
+  },
+  {
+   "objection": "The CI canary catches only verbatim leaks and is no substitute for removing write tokens and secrets.",
+   "resolved": true,
+   "note": "The canary is now only a tripwire. A least-privilege GITHUB_TOKEN, no secrets on untrusted triggers, gh-aw read-only jobs and zizmor are the primary fix."
+  },
+  {
+   "objection": "A disposable red-team environment was not budgeted in the one-month plan or the $3,500 sprint.",
+   "resolved": true,
+   "note": "The disposable fork, scoped tokens and mock MCP servers are now an MVP feature and a hardest part. The MVP takes 3 months, and the price is $6,500."
+  }
+ ],
+ "sources": [
+  "https://code.claude.com/docs/en/sandboxing.md",
+  "https://code.claude.com/docs/en/server-managed-settings.md",
+  "https://cursor.com/docs/agent/terminal"
+ ]
+}

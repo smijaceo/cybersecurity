@@ -1,0 +1,83 @@
+{
+  "concept_id": "ai-agent-access-control",
+  "lens": "economic-buyer",
+  "round": 2,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "The revision fixes most of what I raised: the Kirin-shaped retainer is gone, red-team access is easier to approve and partners can resell it. But at $6,500 this now costs as much as my whole annual pentest and needs finance approval. I would only pay it with a written customer or auditor request about coding agents in hand, and that trigger is still unproven.",
+  "objections": [
+    {
+      "objection": "The new price puts the sprint head-to-head with the security spend I already have. $6,500 is about what a small SaaS pays for its whole annual pentest: fixed-price vendors quote $4,000 for web app and API plus $2,400 for cloud, $6,400 in total. That pentest is what customers and SOC 2 auditors actually ask for. At $3,500 I could put it on a card; at $6,500 it needs a budget conversation, and the CFO will ask why a coding-agent test costs as much as the test of our product. Without a written trigger, I defer it to next year's budget.",
+      "severity": "major",
+      "evidence": "https://www.redfoxsec.com/blog/how-much-does-a-penetration-test-cost-for-a-saas-company-in-2026; concept:pricing.entry_price"
+    },
+    {
+      "objection": "The must-have trigger is still an assumption, not evidence. The revision narrows the buyer to companies with a written questionnaire item or auditor question about coding agents, but the concept shows none. The enterprise AI questionnaires I can find ask about the vendor's AI product (model behaviour, refusals, retention, training, guardrails), not about how its developers configure Claude Code or MCP. The concept itself says SOC 2 has no AI criteria. The segment that has a real trigger may be very small.",
+      "severity": "major",
+      "evidence": "https://tianpan.co/blog/2026-04-27-80-question-wall-enterprise-ai-security-questionnaire; concept:riskiest_assumption.assumption; concept:why_now.summary"
+    },
+    {
+      "objection": "The partner channel may not carry the price through to me. A pentest or vCISO firm buying at $5,000 and adding its margin either charges me more than $6,500 or adds a cheaper 'AI tooling' line to its own scope. Either way, as the buyer I would ask my existing tester for an add-on day, not a separate two-week sprint.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price; concept:go_to_market.channel"
+    },
+    {
+      "objection": "The quarterly re-test costs $7,200 a year, more than the $6,500 sprint. Without a change to our agents or MCP setup I would re-test once a year alongside the pentest, so recurring revenue will be thin.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price"
+    },
+    {
+      "objection": "There is still no money case for the CFO: no avoided-loss figure, no deal value unblocked and no insurer credit. The pitch remains OWASP mappings and findings, which a finance approver discounts.",
+      "severity": "minor",
+      "evidence": "concept:problem.summary"
+    },
+    {
+      "objection": "Bundling erodes the reason to buy again. Vanta, Drata and the agent vendors' managed settings will be good enough for my auditor, so after one sprint I may consider the topic closed.",
+      "severity": "minor",
+      "evidence": "concept:risks"
+    }
+  ],
+  "strongest_point": "A fixed-scope, published-price red team with re-test evidence, testing in a disposable environment by default and offering a one-repository entry step is something a CTO can approve quickly once a customer asks.",
+  "what_would_change_my_mind": [
+    "3 of 10 partner firms show redacted client questionnaires or auditor requests that name coding agents, MCP or CI agent jobs.",
+    "At least 1 CTO pays the $1,000 deposit at $6,500 and cites a specific deal or audit as the reason.",
+    "A pentest firm sells the sprint at $6,500 or more as a separate line next to its normal pentest rather than folding it into its own scope.",
+    "Evidence that the one-repository CI test (priced well under $5,000) converts to the full sprint in at least 1 of 3 cases."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "No must-have trigger; SOC 2 has no AI criteria and questionnaires are covered by an inventory and a policy.",
+      "resolved": false,
+      "note": "Buyer narrowed to companies with a written trigger and the riskiest assumption now tests it, but no evidence yet that such triggers are common."
+    },
+    {
+      "objection": "No budget line of its own; I would rather ask my existing pentest or compliance vendor.",
+      "resolved": true,
+      "note": "Pentest, vCISO and SOC 2 readiness firms are now resellers at wholesale, so the sprint can be their line item. The budget it competes with is still the pentest (see new objection)."
+    },
+    {
+      "objection": "The $400 retainer loses to Knostic Kirin at $15/user/month.",
+      "resolved": true,
+      "note": "Retainer replaced by a quarterly re-test that Kirin does not do; Kirin recommended for enforcement. The re-test price raises a smaller issue."
+    },
+    {
+      "objection": "Approval friction for red-teaming production credentials exceeds the price.",
+      "resolved": true,
+      "note": "Disposable fork, scoped tokens and mock MCP servers by default, a one-repository first step, and paperwork plus insurance planned before launch."
+    },
+    {
+      "objection": "Hard to justify to a CFO in money terms.",
+      "resolved": false,
+      "note": "No avoided-loss or deal-unblocked case was added, and this matters more at the higher price."
+    },
+    {
+      "objection": "Agent vendors bundle managed settings, eroding the reason to pay.",
+      "resolved": false,
+      "note": "Acknowledged in risks and the core moved to red-teaming, which reduces but does not remove the issue."
+    }
+  ],
+  "sources": [
+    "https://www.redfoxsec.com/blog/how-much-does-a-penetration-test-cost-for-a-saas-company-in-2026",
+    "https://tianpan.co/blog/2026-04-27-80-question-wall-enterprise-ai-security-questionnaire"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+ "concept_id": "smb-compliance-reporting",
+ "lens": "market-skeptic",
+ "round": 2,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "Resegmenting to firms with 5,000+ consumers ties the paid tier to a real 314.4(d)(2) duty. But the segment is still uncounted. No buyer evidence has been added. The duty can be met by 'continuous monitoring' that MDR bundles already claim. Insurers rarely demand pen tests from small firms, and enforcement is weak. Demand is plausible but unproven.",
+ "objections": [
+  {
+   "objection": "The new wedge rests on a segment nobody has sized. We don't know how many 3-20 person tax, CPA and mortgage offices hold data on 5,000+ consumers, or whether they know it. Sources disagree on how to count consumers (active versus all retained records), so many owners will self-classify under the line and buy the $39 Core tier or the free IRS template. The concept lists this as its first open question. Without a count, the 40-client target can't be judged against the size of the market.",
+   "severity": "major",
+   "evidence": "concept:open_questions[0] ; concept:buyer.company_profile ; https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.6"
+  },
+  {
+   "objection": "Under 314.4(d)(2), the annual pen test and six-monthly scans are needed only 'absent effective continuous monitoring'. SBTPG/Watch Cloud already sells MDR plus 'Microsoft 365 & Google Workspace monitoring' through the tax-pro channel, and MSPs will say their RMM/EDR stack is continuous monitoring. Many firms above 5,000 consumers will reasonably believe they already meet the testing duty, which shrinks the market that is legally forced to buy. The concept's own continuous M365 monitor also blurs the line.",
+   "severity": "major",
+   "evidence": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.4 ; https://www.sbtpg.com/all-in-one-cybersecurity/ ; concept:go_to_market.wedge"
+  },
+  {
+   "objection": "The demand evidence still does not come from the named buyer. problem.evidence is regulation text plus old HN, ServerFault and StackExchange posts from tech-adjacent small firms. No tax-office, CPA or mortgage-broker owner or MSP asks for verification or testing. The revision log admits the problem was not changed. The pain is mandated on paper, but there is no evidence it is felt or budgeted.",
+   "severity": "major",
+   "evidence": "concept:problem.evidence ; concept:revision_log[-1] ; concept:risks[1]"
+  },
+  {
+   "objection": "The levers that turn a duty into budget are weak for this segment. FTC enforcement against sub-20-person firms is rare. Industry guides to cyber-insurance requirements (seen only in search results, not opened) say small-firm applications gate on MFA, EDR and backups, and treat pen-test or scan summaries as optional evidence asked for at higher limits. Owners already pay $999 for a WISP plus $297-$697 for insurance, and have little outside pressure to add about $2,150 a year.",
+   "severity": "major",
+   "evidence": "concept:pricing.rationale ; concept:open_questions[1] ; concept:risks[1]"
+  },
+  {
+   "objection": "The mortgage-broker segment is now the stated all-year anchor, but there are still no need statements or counts for it. Older CSBS figures (from search results) suggest state-licensed mortgage companies number in the low tens of thousands, with most having 1-5 originators, so many may fall below the threshold. The concept also does not say how they relate to the state-regulator exams that may already cover Safeguards.",
+   "severity": "minor",
+   "evidence": "concept:go_to_market.first_customers"
+  },
+  {
+   "objection": "The partner-first channel assumes MSPs want a third party grading their tenants. Nothing in the input shows MSP demand for it.",
+   "severity": "minor",
+   "evidence": "concept:risks[3]"
+  }
+ ],
+ "strongest_point": "For firms above 5,000 consumers, annual pen testing and six-monthly scans are a concrete, dated legal duty that WISP sellers don't deliver, and the price sits far below standalone pen tests.",
+ "what_would_change_my_mind": [
+  "The concept's own test passes: at least 3 paid $490 checks or 1 MSP letter of intent covering 10+ offices within two weeks.",
+  "At least 4 of 10 owner calls confirm 5,000+ consumers, no annual test or scan, and willingness to pay.",
+  "A credible count (e.g. from state regulator or association data) showing at least 10,000 US tax, CPA or mortgage offices with 5-20 staff above the 5,000-consumer line.",
+  "Evidence that a carrier or tax-pro insurance programme (e.g. PTIN.org's) asks small firms for pen-test or scan evidence, or offers a premium credit for it.",
+  "At least 2 MSPs serving accounting offices saying their clients have asked them for Safeguards testing they cannot staff."
+ ],
+ "resolved_prior": [
+  {
+   "objection": "The tested IR plan and risk assessment were sold as legal duties although 314.6 exempts firms under 5,000 consumers.",
+   "resolved": true,
+   "note": "Resegmented to firms with 5,000+ consumers. Onboarding scoping and a cheaper Core tier are labelled honestly as good practice. The new problem is how large that segment is."
+  },
+  {
+   "objection": "The FTC 30-day clock wedge rarely fires (under 1% of offices a year, 500+ consumer threshold).",
+   "resolved": true,
+   "note": "The clock is demoted to a free first-hour card. The wedge is now the recurring (d)(2) testing duty."
+  },
+  {
+   "objection": "No demand evidence from the named buyer (tax, bookkeeping or mortgage owners).",
+   "resolved": false,
+   "note": "Not changed. The concept moves it to risks and the riskiest-assumption test, which is the right test, but it has not been run."
+  },
+  {
+   "objection": "Observed willingness to pay is for a one-off ~$699 document. The move to a recurring subscription is unproven.",
+   "resolved": false,
+   "note": "Recurring WTP is partly shown by Verito's $999/yr WISP. The price is now ~$2,150/yr, a larger jump, with no evidence buyers will pay it."
+  },
+  {
+   "objection": "The tax-software ecosystem already sells WISP plus device security in the existing purchase flow.",
+   "resolved": false,
+   "note": "Repositioned as a verification layer beside these bundles. But SBTPG/Watch Cloud already advertises M365 monitoring, which narrows the remaining market and may count as continuous monitoring under (d)(2)."
+  },
+  {
+   "objection": "Seasonality, and the mortgage-broker segment is only asserted.",
+   "resolved": false,
+   "note": "Seasonality is partly addressed through mortgage brokers and MSP channels. The mortgage segment still has no evidence or count."
+  }
+ ],
+ "sources": [
+  "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.6",
+  "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.4",
+  "https://www.sbtpg.com/all-in-one-cybersecurity/"
+ ]
+}

@@ -1,0 +1,73 @@
+{
+  "concept_id": "msp-windows-detection",
+  "lens": "founder-fit",
+  "round": 2,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "Better fit after revision: Wazuh-only, local tooling, no hosted data, paid onboarding from month one, all inside the founder's Windows/Sysmon specialty. Remaining risks: an MVP still wide for three solo months (RMM-agnostic verifier, PDF runner, replay CI, two Sysmon flavours), legal/E&O costs with no capital, an unproven trust gap, and a Wazuh partner route that is a paid reseller programme.",
+  "objections": [
+    {
+      "objection": "Scope is narrower but still heavy for one person in 3 months: 4 role packs x 2 Sysmon flavours x Keep/Lean profiles, a verifier deployed 'via RMM' without naming which RMM (NinjaOne, Datto, N-able, ConnectWise each need their own script packaging and test tenant), a PDF report runner against the Wazuh indexer, a ~20-technique replay CI lab, compliance mappings and DPIA templates, plus 3-5 weeks learning Wazuh decoders and dashboards. Realistic first sellable cut is 4-5 months unless v1 is DC + workstation packs, one RMM and a simple HTML report.",
+      "severity": "major",
+      "evidence": "concept:mvp.features ; concept:build.months_to_mvp ; concept:build.hardest_parts[0]"
+    },
+    {
+      "objection": "Credibility with MSSP owners is addressed only by plan, not proof: the founder still has no production SOC/MSSP history, and the concept itself budgets 3-6 months of public replay-tested work before trust. Combined with 3 months to MVP, realistic recurring revenue starts at month 6-9; until then income depends on $500 pilots and $2,500 onboardings closed from a few contacts.",
+      "severity": "major",
+      "evidence": "concept:risks[5] ; config/founder.yaml:background ; config/founder.yaml:constraints.network"
+    },
+    {
+      "objection": "The risk mitigations cost money a zero-capital founder lacks: a lawyer-reviewed liability-capped agreement, DPA/NDA templates and tech E&O insurance (typically low thousands of dollars per year) are needed before touching client estates in onboarding. These should be funded from the first onboarding fees, which delays the first paid engagement or forces it to run uninsured.",
+      "severity": "minor",
+      "evidence": "concept:risks[3] ; concept:risks[4] ; config/founder.yaml:constraints.capital"
+    },
+    {
+      "objection": "Distribution via a 'Wazuh partner/marketplace listing' is less available than implied: Wazuh's partner programme is a Gold/Platinum reseller/MSSP scheme with subscription renewal fees and Wazuh Cloud environments, not a free listing for third-party content, and Wazuh also sells its own professional services. The founder's channel is therefore direct community selling; Wazuh partners are better used as a prospect list than as a distributor.",
+      "severity": "minor",
+      "evidence": "https://wazuh.com/partners/"
+    },
+    {
+      "objection": "The two-week test still assumes reach the founder lacks: 15 calls with Wazuh-running MSSPs from a few contacts and new community presence is ambitious in two weeks; a slow start could be misread as no demand. Allow 4-6 weeks or count calls, not days.",
+      "severity": "minor",
+      "evidence": "concept:riskiest_assumption.test ; config/founder.yaml:constraints.network"
+    }
+  ],
+  "strongest_point": "Squarely the founder's specialty (Windows audit policy, Sysmon, logon detection) on a free SIEM runnable in a home lab, with no hosted data and services revenue from the first month.",
+  "what_would_change_my_mind": [
+    "v1 cut to DC + workstation packs, one named RMM and a simple report, shipped in 8-10 weeks with replay-test results public on GitHub.",
+    "2 paid $500 pilots (or one $2,500 onboarding) closed within 60 days, funding the agreement template and E&O cover.",
+    "One MSSP willing to be a named reference after a pilot, and month-3 renewal of the per-tenant subscription by at least one pilot customer.",
+    "Better-fitting variant: lead as 'Windows coverage and drift checks for Wazuh MSSPs' consulting with a free open baseline repo, productise the verifier and report runner only after 3-5 engagements, and target Wazuh reseller partners and RMM script libraries as prospects rather than as paid channels."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "MVP spanning four SIEMs, multiple RMMs, four role packs and a replay lab is unrealistic in two months solo.",
+      "resolved": true,
+      "note": "Cut to Wazuh only, Sentinel deferred to paid demand, months_to_mvp raised to 3 and Wazuh learning time listed. Residual scope (unnamed RMMs, report runner, two Sysmon flavours) is raised again as a smaller objection."
+    },
+    {
+      "objection": "Credibility gap with MSSP owners due to no production SOC/MSSP history.",
+      "resolved": false,
+      "note": "Replay-tested public results, IR checklist and paid onboarding are the right plan and the 3-6 month trust period is now stated, but no proof exists yet; it still pushes recurring revenue to month 6-9."
+    },
+    {
+      "objection": "Two-week demand test with 3 paid pilots and 10 pricing requests assumes an audience the founder lacks.",
+      "resolved": true,
+      "note": "Changed to 15 interviews with a 2-paid-pilot bar, which is a fair signal; the two-week window remains tight (minor)."
+    },
+    {
+      "objection": "Services and product compete for one person's time; living wage needs many subscribers; GB-saved ROI does not apply to Wazuh.",
+      "resolved": true,
+      "note": "Pitch moved to coverage and client evidence, per-tenant pricing scales with client count, and the services/maintenance tension is named in risks; acceptable for a services-first start."
+    },
+    {
+      "objection": "Built-in Sysmon only on Windows 11 / Server 2025, so both delivery paths are needed.",
+      "resolved": true,
+      "note": "Packs now support standalone and built-in Sysmon with migration and XML-field parsing; cost is lab maintenance, captured in hardest parts."
+    }
+  ],
+  "sources": [
+    "https://wazuh.com/partners/",
+    "https://wazuh.com/cloud/"
+  ]
+}

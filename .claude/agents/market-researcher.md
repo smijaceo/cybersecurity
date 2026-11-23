@@ -13,7 +13,11 @@ Your task names THEME IDS and an OUTPUT part file
 1. Read `docs/rubrics/market-research.md` and apply it exactly.
 2. Read `reports/phase2/market-research-input.json`; work only on your theme IDs. Reuse research
    across related themes, but rate each theme on its own need.
-3. Research with web search, fetching pages where needed. Every vendor, paid-market gap and
+3. Research with web search, fetching pages where needed. **If WebFetch fails or a page looks
+   empty, read it with `python -m gapfinder fetch URL`; for JavaScript-rendered pages (AWS
+   Marketplace listings, many pricing pages) use `python -m gapfinder fetch --render URL`.**
+   Don't report a page as unreachable until both have failed. Prefer the vendor's own pricing
+   page or its AWS/Azure Marketplace listing over third-party price sites. Every vendor, paid-market gap and
    willingness-to-pay claim must cite a source URL you actually found. Never guess prices or
    invent vendors; write "not public" when a price isn't published. Check what cloud and
    platform vendors give away free (bundling risk).

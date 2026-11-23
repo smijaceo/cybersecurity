@@ -99,7 +99,7 @@
      "name": "Snyk Open Source",
      "url": "https://snyk.io/pricing/",
      "offering": "Developer-first SCA with fix PRs for direct and transitive dependencies",
-     "pricing": "Free tier (200 OSS tests); Team $25/contributing dev/month, 5-dev minimum; Enterprise custom",
+     "pricing": "Free tier; Team $25/contributing dev/month, 5-dev minimum, up to 10 contributing devs; Enterprise custom",
      "segment": "developers, SMB to enterprise",
      "source": "https://snyk.io/start/team"
     },
@@ -115,9 +115,9 @@
      "name": "Mend Renovate Enterprise / Mend SCA",
      "url": "https://www.mend.io/?p=1196",
      "offering": "Automated dependency update PRs incl. transitive deps, merge confidence, SaaS or self-hosted",
-     "pricing": "Renovate from $25,000/yr for 100 devs; Mend SCA from $18,000/yr for 25 devs (possibly stale page)",
+     "pricing": "Renovate Enterprise $25,000/yr for 100 contributing devs (about $250/dev/yr) on AWS Marketplace; Mend SCA not public",
      "segment": "mid-market and enterprise",
-     "source": "https://aws-stg.mend.io/?p=281"
+     "source": "https://aws.amazon.com/marketplace/pp/prodview-yinerd2u4nhw4"
     },
     {
      "name": "Endor Labs",
@@ -163,11 +163,11 @@
   },
   "monetization": {
    "willingness_to_pay": 2,
-   "wtp_evidence": "Many vendors publish $25-40/developer/month SCA prices and Mend lists $25k/yr Renovate deals; buyers pay, but switch on price and free Dependabot sets a low baseline.",
+   "wtp_evidence": "Published SCA list prices cluster around $21-30/developer/month: Snyk Team $25/contributing dev/month, GitHub Code Security $30/active committer/month, Mend Renovate Enterprise $25,000/yr for 100 devs (about $21/dev/month). Buyers pay, but switch on price and free Dependabot sets a low baseline.",
    "wtp_sources": [
     "https://snyk.io/start/team",
-    "https://aws-stg.mend.io/?p=281",
-    "https://github.blog/changelog/2025-04-01-github-advanced-security-is-here-for-github-team-organizations"
+    "https://github.blog/changelog/2025-04-01-github-advanced-security-is-here-for-github-team-organizations",
+    "https://aws.amazon.com/marketplace/pp/prodview-yinerd2u4nhw4"
    ],
    "paid_pain_share": 0.278,
    "paid_pain_examples": [
@@ -475,9 +475,9 @@
      "name": "Aembit Workload IAM",
      "url": "https://aembit.io/pricing/",
      "offering": "Workload IAM: secretless, policy-based access using native cloud identities across clouds",
-     "pricing": "free Starter up to 10 workloads; paid tiers not confirmed publicly; AWS Marketplace contracts",
+     "pricing": "free Starter tier; Teams from $20/workload/month and $20/agent/month; Enterprise custom quote",
      "segment": "mid-market / enterprise",
-     "source": "https://docs.aembit.io/get-started/signup-options/"
+     "source": "https://aembit.io/faq/"
     },
     {
      "name": "Teleport Machine & Workload Identity",
@@ -497,11 +497,11 @@
     },
     {
      "name": "HCP Vault Dedicated (HashiCorp/IBM)",
-     "url": "https://www.ibm.com/products/hashicorp/pricing",
+     "url": "https://hashicorp.com/pricing/all",
      "offering": "Secrets manager with dynamic short-lived AWS credentials via AWS secrets engine",
-     "pricing": "hourly cluster fee (~$1.58/h Essentials small) plus ~$72.92/client/month",
+     "pricing": "hourly cluster fee plus ~$112.17/client/month (Standard and Plus tiers, official HashiCorp price list)",
      "segment": "mid-market / enterprise",
-     "source": "https://www.ibm.com/products/hashicorp/pricing"
+     "source": "https://hashicorp.com/pricing/all"
     },
     {
      "name": "Akeyless",
@@ -515,14 +515,14 @@
      "name": "Infisical",
      "url": "https://infisical.com/pricing",
      "offering": "Open-core secrets and machine identity with AWS IAM role-based auth",
-     "pricing": "free 5 identities; Pro $18/identity/month",
+     "pricing": "free tier; Pro $20/identity/month billed annually ($23 monthly); Advanced $40 annually",
      "segment": "SMB / developers / mid-market",
      "source": "https://infisical.com/pricing.md"
     },
     {
-     "name": "Oasis NHI Security Cloud",
+     "name": "Oasis NHI Security Cloud (now Cyera Identity)",
      "url": "https://aws.amazon.com/marketplace/pp/prodview-blsgeikmunnxc",
-     "offering": "Non-human identity discovery, posture and lifecycle management",
+     "offering": "Non-human identity discovery, posture and lifecycle management; Oasis acquired by Cyera (~$1B, 2026) and operates as Cyera Identity",
      "pricing": "AWS Marketplace Starter Pack $50,000/12 months",
      "segment": "enterprise",
      "source": "https://www.g2.com/products/oasis-nhi-security-cloud/pricing"
@@ -539,11 +539,11 @@
   },
   "monetization": {
    "willingness_to_pay": 2,
-   "wtp_evidence": "Established paid products with public prices: HCP Vault ~$72.92/client/month, Infisical Pro $18/identity/month, Oasis $50k/year starter; NHI vendors raise large rounds (Defakto $30.75M).",
+   "wtp_evidence": "Established paid products with public prices: HCP Vault Dedicated ~$112.17/client/month (Standard, official price list), Aembit Teams $20/workload/month, Oasis (now Cyera Identity) $50k/12-month starter on AWS Marketplace.",
    "wtp_sources": [
-    "https://www.ibm.com/products/hashicorp/pricing",
-    "https://aws.amazon.com/marketplace/pp/prodview-blsgeikmunnxc",
-    "https://www.securityweek.com/defakto-raises-30-million-for-non-human-iam-platform/"
+    "https://hashicorp.com/pricing/all",
+    "https://aembit.io/faq/",
+    "https://aws.amazon.com/marketplace/pp/prodview-blsgeikmunnxc"
    ],
    "paid_pain_share": 0.182,
    "paid_pain_examples": [
@@ -560,7 +560,7 @@
    "bundling_note": "AWS gives IRSA, EKS Pod Identity and IAM Roles Anywhere (no service charge) plus SDK default-chain support for free, covering the core in-AWS and off-AWS need.",
    "paid_market_gaps": [
     {
-     "gap": "Per-identity/per-client pricing scales with machine count, punishing workload-heavy teams (Infisical $18/identity, Vault ~$73/client).",
+     "gap": "Per-identity/per-client pricing scales with machine count, punishing workload-heavy teams (Infisical Pro $20-23/identity, HCP Vault ~$112/client, Aembit $20/workload).",
      "evidence": "https://dev.to/beton/infisical-pricing-teardown-2026-1ang"
     },
     {
@@ -568,7 +568,7 @@
      "evidence": "https://github.com/hashicorp/vault/issues/16268"
     },
     {
-     "gap": "Workload identity is sold as quote-only enterprise bundles (Teleport, Defakto, Oasis $50k starter); little self-serve mid-tier.",
+     "gap": "Workload identity is mostly sold as quote-only enterprise bundles (Teleport, Defakto, Oasis $50k starter); Aembit Teams at $20/workload is the main self-serve exception.",
      "evidence": "https://goteleport.com/pricing/guide/"
     },
     {
@@ -576,7 +576,7 @@
      "evidence": "https://startwithidentity.com/vendors/ai-identity/aembit/"
     }
    ],
-   "summary": "AWS-only role credentials are free and native; paid money sits in multi-cloud workload identity/NHI platforms, already crowded and consolidating. A narrow opening: cheap self-serve cross-cloud workload identity for mid-market teams priced against per-identity Vault/Infisical bills."
+   "summary": "AWS-only role credentials are free and native; paid money sits in multi-cloud workload identity/NHI platforms, already crowded and consolidating (Cyera-Oasis, Palo Alto-CyberArk). A narrow opening: cheap self-serve cross-cloud workload identity for mid-market teams, priced against per-identity Vault/Infisical bills and Aembit's $20/workload Teams tier."
   },
   "threat": {
    "relevance": 3,
@@ -790,15 +790,15 @@
      "name": "Stytch",
      "url": "https://stytch.com",
      "offering": "B2B auth platform with SSO and SCIM connections from one shared pool",
-     "pricing": "5 SSO/SCIM connections free, then $125 per connection/month; Enterprise custom",
+     "pricing": "Pay-as-you-go: 5 SSO/SCIM connections free (shared pool), then $125 per connection/month; annual contract also sold via AWS Marketplace (see wtp_sources)",
      "segment": "developers / B2B SaaS",
-     "source": "https://stytch.com/lp/scim"
+     "source": "https://stytch.com/pricing?vertical=B2B"
     },
     {
      "name": "SSOJet",
      "url": "https://ssojet.com",
      "offering": "Low-cost enterprise SSO and SCIM layer for SaaS apps",
-     "pricing": "Business plan from $118/mo billed annually for 2 connections (SSO and SCIM each count as one)",
+     "pricing": "Business: $79 per connection/month billed monthly or $59 billed annually (2-4 connections; SSO and SCIM each count as one); volume discounts above; older listings show a $99/mo base structure",
      "segment": "SMB / startup SaaS developers",
      "source": "https://ssojet.com/pricing/"
     },
@@ -846,11 +846,11 @@
   },
   "monetization": {
    "willingness_to_pay": 2,
-   "wtp_evidence": "SaaS developers pay published per-connection prices ($59-$125/mo) to WorkOS, Stytch, SSOJet; IT buyers pay enterprise upgrades or Okta's $4/user add-on, but resent the SSO/SCIM tax.",
+   "wtp_evidence": "SaaS developers pay published per-connection prices: Stytch $125/mo after 5 free, or a $25,000/yr contract on AWS Marketplace; WorkOS and SSOJet per-connection prices are in the vendor rows. IT buyers pay enterprise-tier upgrades or Okta suites that include Lifecycle Management (Essentials from $17/user/month), but resent the SSO/SCIM tax.",
    "wtp_sources": [
-    "https://workos.com/pricing",
-    "https://ssojet.com/pricing/",
-    "https://blog.1password.com/explaining-the-backlash-to-the-sso-tax"
+    "https://stytch.com/pricing?vertical=B2B",
+    "https://aws.amazon.com/marketplace/pp/prodview-mk7ac2kpntwec",
+    "https://www.okta.com/pricing/"
    ],
    "paid_pain_share": 0.13,
    "paid_pain_examples": [
@@ -1196,8 +1196,8 @@
      "url": "https://g2.com/products/manifest-cyber-manifest/pricing",
      "offering": "SBOM and VEX management separating theoretical CVEs from actual product exposure",
      "pricing": "not public",
-     "segment": "enterprise, device makers",
-     "source": "https://www.rfp.wiki/vendors/manifest-cyber"
+     "segment": "enterprise; medical device makers (one disclosed multi-year deal)",
+     "source": "https://prnewswire.com/news-releases/manifest-inks-multi-year-sbom-deal-with-publicly-traded-medical-device-manufacturer-302156852.html"
     },
     {
      "name": "Interlynk",
@@ -1251,11 +1251,11 @@
   },
   "monetization": {
    "willingness_to_pay": 2,
-   "wtp_evidence": "Several funded SBOM/VEX vendors sell quote-based subscriptions; CRA reporting duties live since Sept 2026 push manufacturers to buy, but prices are not public and demand framing is mostly vendor-sourced.",
+   "wtp_evidence": "Funded SBOM/VEX vendors sell quote-based subscriptions (Manifest multi-year device-maker deal). CRA SBOM duty applies only from Dec 2027; Sept 2026 duties cover exploited-vulnerability/incident reporting. Prices not public.",
    "wtp_sources": [
-    "https://www.gartner.com/reviews/product/sbom-studio",
-    "https://helpnetsecurity.com/2026/06/17/armorcode-agentic-ai-platform-cra-capabilities/",
-    "https://fossa.com/sbom-requirements-cra-cyber-resilience-act/"
+    "https://prnewswire.com/news-releases/manifest-inks-multi-year-sbom-deal-with-publicly-traded-medical-device-manufacturer-302156852.html",
+    "https://commission.europa.eu/news-and-media/news/safer-and-more-secure-digital-products-2026-09-11_en",
+    "https://www.sonarsource.com/resources/library/what-does-the-cra-require-for-sbom/"
    ],
    "paid_pain_share": 0.167,
    "paid_pain_examples": [
@@ -1284,7 +1284,7 @@
      "evidence": "https://docs.jfrog.com/security/docs/transitive-sbom"
     }
    ],
-   "summary": "Real but competitive opening: an affordable hosted SBOM impact/VEX layer (CSAF ingestion, dependency paths, container mapping) for mid-size software and device vendors facing CRA, positioned above free Dependency-Track and below enterprise quote-only platforms."
+   "summary": "Real but competitive opening: an affordable hosted SBOM impact/VEX layer (CSAF ingestion, dependency paths, container mapping) for mid-size software and device vendors preparing for CRA's Dec 2027 SBOM duty, between free Dependency-Track and enterprise quote-only platforms."
   },
   "threat": {
    "relevance": 2,
@@ -1454,17 +1454,17 @@
      "name": "Cribl Stream",
      "url": "https://cribl.io",
      "offering": "Telemetry pipeline to filter, reduce, enrich and route logs before SIEM",
-     "pricing": "Cloud credits ~$0.27/GB (Standard) to $0.32/GB (Enterprise) plus infrastructure; free tier exists",
+     "pricing": "Cribl.Cloud free up to 1 TB/day; paid Stream ingest credits ~$0.27/GB (Standard, up to 5 TB/day) to $0.32/GB (Enterprise), $1 per credit, plus worker infrastructure",
      "segment": "enterprise / large SOC",
      "source": "https://cribl.io/pricing/"
     },
     {
      "name": "DataBahn",
      "url": "https://www.databahn.ai",
-     "offering": "Security data pipeline claiming ~65% average SIEM cost reduction",
+     "offering": "Security data pipeline; vendor-reported claims of up to 60% lower SIEM ingestion costs (Microsoft Sentinel integration) and 40-50% telemetry reduction",
      "pricing": "not public",
      "segment": "enterprise",
-     "source": "https://guptadeepak.com/tools/top-5-security-data-pipeline-platforms/"
+     "source": "https://tfir.io/databahn-microsoft-sentinel-security-data-pipeline/"
     },
     {
      "name": "Tenzir",
@@ -1518,10 +1518,10 @@
   },
   "monetization": {
    "willingness_to_pay": 2,
-   "wtp_evidence": "Enterprises pay per-GB pipeline fees (Cribl ~$0.27-0.32/GB, ~$9.6K/mo at 1 TB/day) to cut SIEM bills; big acquisitions confirm value, but small teams resist cost and complexity.",
+   "wtp_evidence": "Enterprises pay per-GB pipeline fees (Cribl.Cloud ~$0.27-0.32/GB in credits above a free tier of up to 1 TB/day) to cut SIEM bills, and SIEM/XDR vendors buy pipeline startups (e.g. CrowdStrike agreed to acquire Onum); but Cribl's pricing and minimums are reviewed as unsuitable for small and medium companies, and the generous free tier caps what small teams would pay.",
    "wtp_sources": [
     "https://cribl.io/pricing/",
-    "https://www.motadata.com/blog/cribl-pricing",
+    "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-agrees-acquire-onum-supercharge-falcon-next-gen-siem",
     "https://www.peerspot.com/products/comparisons/cribl_vs_stellar-cyber-open-xdr"
    ],
    "paid_pain_share": 0.429,
@@ -1742,17 +1742,17 @@
      "name": "Anchore Enterprise",
      "url": "https://anchore.com/",
      "offering": "SBOM storage, CycloneDX/SPDX import-export, policy and compliance reporting",
-     "pricing": "not public on site; AWS Marketplace list cited ~$34,500/yr",
+     "pricing": "not public; quote via sales (AWS Marketplace contract listing prices deployment and support plan as separate dimensions, no single list price)",
      "segment": "enterprise, public sector",
-     "source": "https://www.rfp.wiki/it-security/application-security-testing/software-supply-chain-security/anchore/chainguard"
+     "source": "https://aws.amazon.com/marketplace/pp/prodview-ilkug4gdyavdq"
     },
     {
      "name": "Interlynk",
      "url": "https://interlynk.io/",
      "offering": "SBOM automation platform: storage, monitoring, VEX and policy enforcement",
-     "pricing": "free tier; paid tiers by active developers, price not public",
+     "pricing": "free Community tier; AWS Marketplace contracts by active developers: $18,000 (10), $36,000 (25), $60,000 (50), $100,000 (100)",
      "segment": "SMB to enterprise, device makers",
-     "source": "https://journalofcyberpolicy.com/?p=246924"
+     "source": "https://aws.amazon.com/marketplace/pp/prodview-n6mc7symiq2rm"
     },
     {
      "name": "sbomify",
@@ -1806,11 +1806,11 @@
   },
   "monetization": {
    "willingness_to_pay": 2,
-   "wtp_evidence": "Regulated buyers pay: Manifest signed a multi-year SaaS SBOM deal with a public medical device maker and raised $15M; Anchore lists around $34.5k/yr on AWS Marketplace.",
+   "wtp_evidence": "Public prices: Interlynk AWS Marketplace contracts $18k-$100k by active developers; sbomify Business from $159/month. Manifest won a three-year medical-device-maker deal (value undisclosed).",
    "wtp_sources": [
-    "https://prnewswire.com/news-releases/manifest-inks-multi-year-sbom-deal-with-publicly-traded-medical-device-manufacturer-302156852.html",
-    "https://securityweek.com/manifest-raises-15-million-for-sbom-management-platform",
-    "https://www.rfp.wiki/it-security/application-security-testing/software-supply-chain-security/anchore/chainguard"
+    "https://aws.amazon.com/marketplace/pp/prodview-n6mc7symiq2rm",
+    "https://www.itechguides.com/products/sbomify/",
+    "https://prnewswire.com/news-releases/manifest-inks-multi-year-sbom-deal-with-publicly-traded-medical-device-manufacturer-302156852.html"
    ],
    "paid_pain_share": 0.333,
    "paid_pain_examples": [
@@ -2007,17 +2007,17 @@
      "name": "Anchore Enterprise",
      "url": "https://anchore.com/",
      "offering": "SBOM generation (Syft-based), storage and policy for containers and CI",
-     "pricing": "not public on site; AWS Marketplace list cited ~$34,500/yr (cloud image)",
+     "pricing": "not public; quote via sales (AWS Marketplace listing is contract-based, no single list price)",
      "segment": "enterprise, public sector",
-     "source": "https://www.rfp.wiki/it-security/application-security-testing/software-supply-chain-security/anchore/chainguard"
+     "source": "https://get.anchore.com/request-pricing"
     },
     {
      "name": "Docker Scout",
      "url": "https://docs.docker.com/scout/",
      "offering": "Generates/indexes image SBOMs and build attestations; vulnerability and policy views",
-     "pricing": "free tier; Team $9 per repo/month (blocks of 5); Business via sales",
+     "pricing": "bundled in Docker subscriptions: Personal $0 (1 Scout repo), Pro $9-11/user/mo (2 repos), Team $15-16/user/mo and Business $24/user/mo (unlimited Scout repos)",
      "segment": "developers, SMB to enterprise",
-     "source": "https://www.docker.com/?p=40309"
+     "source": "https://www.docker.com/pricing/"
     },
     {
      "name": "Snyk (SBOM export)",
@@ -2480,9 +2480,9 @@
      "name": "Teleport (Database Access / Machine & Workload Identity)",
      "url": "https://goteleport.com/docs/ver/17.x/enroll-resources/database-access/enroll-aws-databases/rds.md",
      "offering": "Identity-aware proxy that uses IAM auth to RDS, issuing short-lived credentials",
-     "pricing": "not public (quote-based Enterprise Standard/Premium; MWI billed per MWI)",
+     "pricing": "not public (quote-based; usage-based on monthly active users and Teleport Protected Resources, with each tbot machine-identity instance counted as a TPR, no separate per-MWI price)",
      "segment": "mid-market / enterprise",
-     "source": "https://goteleport.com/pricing/guide/"
+     "source": "https://goteleport.com/_uploads/Teleport_Pricing_Guide_Rev_June_16_2026_5f41774f5e.pdf"
     },
     {
      "name": "StrongDM",
@@ -2512,11 +2512,11 @@
   },
   "monetization": {
    "willingness_to_pay": 1,
-   "wtp_evidence": "Buyers pay for broad access platforms (StrongDM median ~$33k/yr), but IAM auth itself is a free AWS feature with free AWS client libraries; nobody sells per-client IAM plugins.",
+   "wtp_evidence": "Buyers pay for broad access platforms: Vendr reports a StrongDM median of ~$33k/yr across 58 purchases, and its buyer guide shows a ~$71k average contract value that large deals skew upward. IAM itself is usable at no additional charge per AWS's RDS docs, so the per-client auth plumbing has no paid line item to displace.",
    "wtp_sources": [
     "https://vendr.com/marketplace/strongdm",
-    "https://aws.amazon.com/ko/blogs/big-data/amazon-msk-iam-authentication-now-supports-all-programming-languages/",
-    "https://hoop.dev/blog/aws-rds-iam-connect-secure-passwordless-database-access-with-no-extra-licensing-costs"
+    "https://vendr.com/buyer-guides/strongdm",
+    "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAM.html"
    ],
    "paid_pain_share": 0.133,
    "paid_pain_examples": [

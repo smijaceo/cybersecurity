@@ -265,6 +265,17 @@ def cmd_gaps(args) -> int:
     return 0
 
 
+def cmd_fetch(args) -> int:
+    from .fetch import fetch_text
+
+    try:
+        print(fetch_text(args.url, render=args.render))
+    except Exception as exc:
+        log.error("fetch failed: %s", exc)
+        return 1
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="gapfinder", description=__doc__)
     p.add_argument("--db", type=Path, default=DEFAULT_DB)
@@ -339,6 +350,11 @@ def main(argv: list[str] | None = None) -> int:
     gp.add_argument("--out-dir", type=Path, default=DEFAULT_PHASE2)
     gp.add_argument("--scoring", type=Path, default=DEFAULT_SCORING)
     gp.set_defaults(func=cmd_gaps)
+
+    fp = sub.add_parser("fetch", help="print a web page's main text (for agents)")
+    fp.add_argument("url")
+    fp.add_argument("--render", action="store_true", help="render JavaScript with Chromium")
+    fp.set_defaults(func=cmd_fetch)
 
     args = p.parse_args(argv)
     if getattr(args, "source", None) is None and args.cmd == "collect":

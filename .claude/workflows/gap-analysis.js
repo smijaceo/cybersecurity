@@ -149,8 +149,10 @@ async function factCheck(round, themeIds) {
   const file = 'reports/phase2/fact-check.json'
   const r = await agent(
     `You are an adversarial fact-checker. Read reports/phase2/market-research.jsonl. For ${scope}, take its first ` +
-    'two vendors and its willingness-to-pay claim, open the cited source URLs (WebFetch, or WebSearch if a page ' +
-    'will not load) and check that each source supports the claim — especially prices and who the product sells to. ' +
+    'two vendors and its willingness-to-pay claim, open the cited source URLs and check that each source supports the ' +
+    'claim — especially prices and who the product sells to. Read pages with WebFetch; if it fails or a page looks ' +
+    'empty, run `python -m gapfinder fetch URL`, and for JavaScript-rendered pages (AWS Marketplace, many pricing ' +
+    'pages) `python -m gapfinder fetch --render URL`. Only call a source unreachable after both fail. ' +
     'Assume a claim is wrong until the source shows it. Report every claim the source does not support. ' +
     `Then write {"round": ${round}, "checked": <n>, "problems": [...]} (same content you return) to ${file}, and ` +
     `validate it with: python -c "from gapfinder import schemas;schemas.FactCheck.model_validate_json(open('${file}').read())" ` +

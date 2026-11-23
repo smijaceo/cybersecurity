@@ -1,0 +1,53 @@
+{
+ "concept_id": "buyer-side-provisioning",
+ "lens": "market-skeptic",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "The pain is real: Stitchflow and Zluri sell non-SCIM offboarding, so some buyers pay. But this concept's own evidence comes mostly from developers asking for SCIM in their products, not IT buyers. The headline stat is vendor marketing. Labor savings alone don't cover the price at mid-market volumes. Demand for a self-serve standalone bridge has not been shown.",
+ "objections": [
+  {
+   "objection": "Wrong complainant. Most need statements are developers asking for SCIM support in their own products (FusionAuth, better-auth, SuperTokens, Vikunja, Penpot). That is developer-side demand, which the input itself calls crowded and bundled for free. Only one weak signal (an HN post) comes from the named buyer, a mid-market Head of IT.",
+   "severity": "major",
+   "evidence": "input:themes[0].need_statements; input:themes[0].market_research.summary"
+  },
+  {
+   "objection": "Willingness to pay is unverified. The input scores WTP 2 of 5, and the flagged claims show that 'IT buyers resent the SSO/SCIM tax' has no support in the WTP sources. The only evidence of spending is on IdP suites and enterprise-tier upgrades, not on a standalone bridge. The concept admits this in its risks.",
+   "severity": "major",
+   "evidence": "input:themes[0].market_research.willingness_to_pay; input:flagged_claims[1]; concept:risks[5]"
+  },
+  {
+   "objection": "Labor ROI is negative at the target size, so the purchase rests on audit and risk fear. Take a 500-person company with about 15 joiner/leaver events a month and 10 manual apps at about 5 minutes each: that is roughly 12 hours a month, or about $600 of admin time. Ten apps at $149-299 would cost $1.5K-3K a month. SOC 2 auditors already accept ticketed manual offboarding, so the pain is often tolerated rather than budgeted.",
+   "severity": "major",
+   "evidence": "concept:pricing.entry_price; concept:buyer.company_profile"
+  },
+  {
+   "objection": "The headline market statistic is vendor marketing with no stated method. Stitchflow's '721 apps' claim (42% paywalled, 57% no SCIM, 1.2% on the base tier) adds up to more than 100%. It comes from a firm selling the fix, and it counts apps that may have no user-admin need. It overstates how many of a buyer's apps are actually in scope.",
+   "severity": "minor",
+   "evidence": "https://www.stitchflow.com/blog/scim-tax-worst-offenders"
+  },
+  {
+   "objection": "The proof that people pay points to a services-led model, not self-serve. Stitchflow positions itself as a managed IT automation service ('we build your workflows, we maintain everything') and bundles spend visibility. That suggests buyers pay for done-for-you coverage of every app, not for a per-app self-serve connector. The self-serve segment may be small.",
+   "severity": "minor",
+   "evidence": "https://www.stitchflow.com/pricing"
+  },
+  {
+   "objection": "The addressable pool is narrower than it looks. It needs Okta Core Essentials or above, or Entra provisioning, plus a 150-1,500 employee company with 5 or more painful apps. Okta has about 20K customers in total, and over 5,200 of them pay $100K+ a year, which skews large. Many apps the buyer cares about most (Slack, Figma, Salesforce) will be upgraded for other enterprise features anyway.",
+   "severity": "minor",
+   "evidence": "https://www.okta.com/pricing/"
+  }
+ ],
+ "strongest_point": "Funded vendors (Stitchflow, Zluri) already sell non-SCIM deprovisioning to Okta shops, and Okta LCM is a paid engine that stops at SCIM apps. The pain exists and gets budgeted somewhere.",
+ "what_would_change_my_mind": [
+  "The concept's own test hits its target: at least 10 of 20 interviewed IT managers at 150-1,500-person Okta or Entra shops each name 3 or more manually provisioned apps, and at least 5 pay a $149 deposit or sign an LOI.",
+  "Evidence that auditors or insurers in this segment flag manual non-SCIM offboarding, or a breach tied to an orphan account in a non-SCIM app.",
+  "Proof that Stitchflow or Zluri win mid-market deals mainly on non-SCIM provisioning rather than on spend management."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://www.stitchflow.com/blog/scim-tax-worst-offenders",
+  "https://www.stitchflow.com/pricing",
+  "https://www.zluri.com/eye-on-identity/deprovision-non-scim-apps-okta-offboarding",
+  "https://www.okta.com/pricing/"
+ ]
+}

@@ -1,0 +1,48 @@
+{
+  "concept_id": "buyer-side-provisioning",
+  "lens": "legal-ethics",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Legitimate, low-abuse admin tooling, but the browser-agent tier runs on shared human admin logins and MFA handling that several vendors' terms forbid, the pitch frames it as dodging paid tiers, and a hosted vault of admin credentials across many tenants is a concentrated breach and liability risk. Workable only with API-first design, machine accounts, and narrow evidence claims.",
+  "objections": [
+    {
+      "objection": "The browser-agent fallback needs a human admin's login (plus MFA seed or session) held and replayed by us. Vendor terms commonly make accounts personal and non-shareable: Figma says credentials 'may not be shared or used by anyone other than the individual'; GitHub says 'a single login may not be shared by multiple people'. The customer, not us, is in breach, and vendors can suspend the customer's workspace. Storing TOTP seeds also defeats the MFA control auditors expect.",
+      "severity": "major",
+      "evidence": "https://www.figma.com/legal/tos/ (Authorized User accounts personal; credentials may not be shared); https://docs.github.com/en/site-policy/github-terms/github-terms-of-service (single login may not be shared); concept:mvp.features[2]"
+    },
+    {
+      "objection": "Positioning the product as a way around SCIM paywalls invites 'circumvent usage limits' claims. Atlassian's Cloud Terms bar customers from interfering with or circumventing Product usage limits or Scope of Use restrictions. Pricing rationale explicitly sells the bridge as cheaper than GitHub Enterprise's SCIM uplift, which reads as tier-avoidance in a dispute and in any Okta/Microsoft gallery review.",
+      "severity": "major",
+      "evidence": "https://www.atlassian.com/legal/cloud-terms-of-service (s.2.x: may not interfere with or circumvent Product usage limits); concept:pricing.rationale; concept:risks[3]"
+    },
+    {
+      "objection": "A multi-tenant service holding admin credentials to many companies' SaaS apps is a supply-chain target; one compromise grants account-creation rights across all customers. Per-tenant KMS keys do not help if the worker that decrypts them is compromised. The MVP has no stated design for customer-held keys, a local agent option, or least-privilege machine accounts, and a 5-month MVP with 2 engineers makes SOC 2 Type II at launch implausible.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[5]; concept:build.months_to_mvp; concept:open_questions[5]"
+    },
+    {
+      "objection": "Selling nightly verification as 'audit evidence' creates liability: if a connector silently misses a deprovision or the diff misreads a UI, the customer's SOC 2 control fails and an ex-employee keeps access. Contract needs clear limits of liability, no warranty of completeness, and marketing that says 'evidence of checks run', not 'proof access is gone'.",
+      "severity": "minor",
+      "evidence": "concept:differentiation; concept:mvp.features[3]"
+    },
+    {
+      "objection": "We process employee personal data (names, emails, roles) and store screenshots of admin consoles that show other users' data. Under GDPR we are a processor needing Art. 28 DPAs, a sub-processor list (LLM/browser vendors) and data minimisation; screenshots retained as evidence are likely excessive.",
+      "severity": "minor",
+      "evidence": "https://gdpr-info.eu/art-28-gdpr/; concept:mvp.features[2]"
+    }
+  ],
+  "strongest_point": "Customer-authorised admin automation with low dual-use risk; API-first connectors are clearly lawful, and some vendors (monday.com s.2.7) explicitly allow customer-authorised third-party agents.",
+  "what_would_change_my_mind": "Counsel review of the top 25 target apps' terms showing that 20+ permit API or dedicated service/bot accounts for user management without enterprise tiers; a design using machine accounts or customer-run agents so no human admin credentials or MFA seeds are held centrally; written non-objection from 3 major app vendors or acceptance into the Okta Integration Network; positioning rewritten from 'avoid the SCIM tax' to 'automate apps without SCIM'.",
+  "resolved_prior": [],
+  "sources": [
+    "https://www.figma.com/legal/tos/",
+    "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies",
+    "https://www.atlassian.com/legal/cloud-terms-of-service",
+    "https://monday.com/l/legal/tos/",
+    "https://www.stitchflow.com/blog/automate-scim-provisioning-without-enterprise-tier",
+    "https://www.zluri.com/eye-on-identity/deprovision-non-scim-apps-okta-offboarding",
+    "https://gdpr-info.eu/art-28-gdpr/"
+  ]
+}

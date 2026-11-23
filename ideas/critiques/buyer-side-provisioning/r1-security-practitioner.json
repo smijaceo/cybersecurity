@@ -1,0 +1,56 @@
+{
+ "concept_id": "buyer-side-provisioning",
+ "lens": "security-practitioner",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "The workflow fit is strong: the bridge appears to Okta or Entra as an ordinary SCIM app, and IT teams want deprovisioning evidence. The trust model is the weak point. Unattended browser connectors need vault-held super-admin credentials and MFA seeds, often on SSO-bypass accounts, all held by a three-person, pre-SOC 2 startup. The concept also gives no answer for async failures or for deprovisioning the wrong account.",
+ "objections": [
+  {
+   "objection": "Unattended browser connectors need a local admin login that the vendor can use with no human present. In practice that means storing a password plus a TOTP seed for an account excluded from SSO enforcement: the break-glass, SSO-bypass account that security teams and auditors flag. Stitchflow handles MFA prompts with a 24/7 human team. A two-engineer self-serve team can't, so every MFA prompt turns into a manual task, and the product's value disappears on exactly the apps it targets.",
+   "severity": "major",
+   "evidence": "https://www.stitchflow.com/blog/secure-provisioning-automation; concept:mvp.features[2]; concept:mvp.features[5]; concept:build.team"
+  },
+  {
+   "objection": "Concentration risk: one multi-tenant cloud service holds admin credentials for many apps across many customers. Many non-SCIM apps have no scoped role that can only remove users, so the 'scoped service accounts' are in practice full admin accounts. A vendor security review will require SOC 2 Type II, a pen test and a tenant-isolation design before granting that access. A five-month MVP built by three people won't have these, so the earliest deals stall or get limited to low-risk apps.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts[1]; concept:risks[4]; concept:build.months_to_mvp"
+  },
+  {
+   "objection": "False assurance: Okta and Entra make synchronous SCIM calls, but browser jobs are slow and run through a queue. If the endpoint returns 200 before the job runs, the IdP shows the user as deprovisioned while the account is still live. If the endpoint waits for the job, calls time out. A failure then shows up only in a Slack alert or in the nightly diff, which leaves an exposure window of up to 24 hours that the IdP audit log hides.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[0]; concept:mvp.features[3]; concept:mvp.features[4]"
+  },
+  {
+   "objection": "Destructive mistakes: matching IdP users to app accounts by email or username is fragile. Okta handles a username change by unassigning and reassigning the app, which can trigger a false deprovision. A bridge that wrongly deactivates or deletes users, especially through UI automation, loses trust after the first incident. The concept doesn't mention soft-delete defaults, dry-run modes or approval for destructive actions.",
+   "severity": "major",
+   "evidence": "https://www.zluri.com/eye-on-identity/deprovision-non-scim-apps-okta-offboarding; concept:build.hardest_parts[2]"
+  },
+  {
+   "objection": "The risk reduction is uneven. In apps where SSO is enforced, deactivating the user in the IdP already blocks interactive login, so what remains is licence cost plus leftover API tokens and sessions. The highest-risk orphans sit in apps without SSO, and those are also the apps where the bridge needs the riskiest credentials. The value pitch should name which apps actually reduce risk.",
+   "severity": "minor",
+   "evidence": "concept:go_to_market.wedge"
+  },
+  {
+   "objection": "Running the browser agent only in the cloud rules out buyers who require admin sessions to run on their own infrastructure. Stitchflow already ships a local agent that keeps credentials in the OS keychain.",
+   "severity": "minor",
+   "evidence": "https://pypi.org/project/stitchflow-local-agent/; concept:open_questions[5]"
+  }
+ ],
+ "strongest_point": "It keeps Okta or Entra as the single control plane, and nightly diff-based verification of removal gives auditors evidence that access was actually removed. Both fit how small IT teams already work.",
+ "what_would_change_my_mind": [
+  "Security reviews at 5 or more of 20 target buyers approve production use.",
+  "An MFA design that uses no SSO-bypass accounts, or a customer-run agent option, proven on the top 10 apps.",
+  "API-only coverage of 70% or more of the launch apps.",
+  "Async SCIM semantics that report pending or failed status back to the IdP.",
+  "A pilot with zero wrong deprovisions over 500 or more lifecycle events."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://www.stitchflow.com/blog/automate-scim-provisioning-without-enterprise-tier",
+  "https://www.stitchflow.com/blog/secure-provisioning-automation",
+  "https://pypi.org/project/stitchflow-local-agent/",
+  "https://www.zluri.com/eye-on-identity/deprovision-non-scim-apps-okta-offboarding",
+  "https://learn.microsoft.com/en-us/entra/identity/app-provisioning/use-scim-to-provision-users-and-groups"
+ ]
+}

@@ -1,0 +1,53 @@
+{
+  "concept_id": "buyer-side-provisioning",
+  "lens": "gtm-pricing",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Per-app pricing is clear and anchored to a real SCIM tax, but the economics don't hold: a $5-11K wedge deal must clear a security review for a vendor holding admin credentials, the cheap API tier competes with flows Okta already includes, and Stitchflow's managed service is only modestly dearer and already owns the SEO channel.",
+  "objections": [
+    {
+      "objection": "Sales motion versus contract value. The wedge is three apps, about $5.4K-$10.8K a year. A vendor that holds admin credentials to customer apps will face vendor-risk questionnaires, SOC 2 Type II requests and legal review on every deal, so 'self-serve' is unrealistic. Founder-led sales with a multi-week security review can't be funded at that ACV, and the concept puts SOC 2 Type II among its hardest parts, so early deals will stall without it.",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price; concept:go_to_market.wedge; concept:build.hardest_parts"
+    },
+    {
+      "objection": "Weak ROI for the 57% of apps with no SCIM at any price. Against an enterprise-tier uplift the payback math works (GitHub $17/seat uplift, about 9 seats). For apps with no SCIM, the alternative is admin minutes. At 150-1,500 employees, an app might see 2-20 leavers a month at a few minutes each, worth tens of dollars in labour versus $149-$299 a month. The ~$12K/app/year manual cost is Stitchflow's own claim. SOC 2 auditors also accept ticketed manual offboarding, so 'audit evidence' is a nice-to-have, not a budget line.",
+      "severity": "major",
+      "evidence": "https://www.stitchflow.com/blog/automate-scim-provisioning-without-enterprise-tier; concept:pricing.rationale"
+    },
+    {
+      "objection": "The $149 API-backed tier competes with something the buyer already owns. The target segment (Okta Core Essentials or above) gets Okta Workflows with 5 flows on Core Essentials and 50 on Essentials, with prebuilt app connectors. For API-reachable apps, which the MVP says are the majority, an admin can build a deprovisioning flow at no extra cost. Only the browser-backed long tail is clearly differentiated, and that is also where margins are most at risk.",
+      "severity": "major",
+      "evidence": "https://www.okta.com/pricing/; concept:mvp.features"
+    },
+    {
+      "objection": "The price gap with Stitchflow is narrow for what the buyer gives up. Stitchflow charges a flat fee under $5K per app per year for a managed service: they audit the stack, build the workflows in about a week, maintain them, and run the browser agent locally on the customer's machine. A 30-60% discount on an undisclosed ceiling does little against 'they build and maintain it for us', and Stitchflow can match a self-serve price whenever it chooses.",
+      "severity": "major",
+      "evidence": "https://www.stitchflow.com/pricing; concept:competitors"
+    },
+    {
+      "objection": "The content channel is already taken. Stitchflow publishes per-app SCIM pages (stitchflow.com/scim/<app>) and a 721-app SCIM database that already rank for '<app> SCIM' searches, which is exactly the directory play the concept proposes. Listing in the OIN and the Entra gallery also depends on stable connectors and the platforms' approval, so it won't produce the first ten customers.",
+      "severity": "minor",
+      "evidence": "concept:go_to_market.channel"
+    },
+    {
+      "objection": "Expansion and churn. Account size is capped at 5-20 apps. Revenue leaves when a vendor adds or unpaywalls SCIM, when the customer upgrades a tier for other reasons, or when they adopt Zluri, Lumos or another IGA platform as they grow. The per-app model churns per line item, and nothing in the plan expands beyond apps.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "Concrete, easy-to-compare per-app pricing anchored to a measurable SCIM tax (for example GitHub's $17/seat uplift), sold into buyers who already pay for Okta or Entra provisioning.",
+  "what_would_change_my_mind": [
+    "At least 5 of 20 interviewed IT managers pay deposits at $149+/app/month for apps with no SCIM at all, not only paywalled ones",
+    "At least 3 early deals close in under 30 days, security review included",
+    "Prospects confirm they tried and rejected Okta Workflows for those apps",
+    "A blended ACV of at least $15K from a per-tenant platform fee plus per-app pricing"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://www.stitchflow.com/pricing",
+    "https://www.stitchflow.com/blog/automate-scim-provisioning-without-enterprise-tier",
+    "https://www.okta.com/pricing/"
+  ]
+}

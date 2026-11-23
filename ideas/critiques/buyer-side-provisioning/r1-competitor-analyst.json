@@ -1,0 +1,51 @@
+{
+  "concept_id": "buyer-side-provisioning",
+  "lens": "competitor-analyst",
+  "round": 1,
+  "score": 3,
+  "verdict": "no-go",
+  "summary": "The core product, a hosted SCIM endpoint per non-SCIM app registered in Okta or Entra, already exists in Aquera, which is listed by Okta and Microsoft, and in Scimify, which is self-serve and Okta-listed at about $0.90/user/month with unlimited apps. Cerby, Stitchflow and Zluri cover browser automation. The competitor table omits the three closest rivals, and the per-app price is undercut several times over.",
+  "objections": [
+    {
+      "objection": "The exact architecture is already shipped by an incumbent with both IdP channels. Aquera's SCIM gateway plugs into Okta Lifecycle Management and Entra provisioning. It has 300+ Okta connectors (900+ claimed on Microsoft's page) and builds new ones on demand in 1-5 days. It uses robotic or admin-console automation where there is no API, holds SOC 2 Type 2, and is listed by Microsoft as an official partner-driven integration path for non-SCIM apps. The concept's competitor table doesn't mention it.",
+      "severity": "fatal",
+      "evidence": "https://www.okta.com/partners/aquera/ ; https://learn.microsoft.com/en-us/entra/identity/app-provisioning/partner-driven-integrations ; concept:competitors"
+    },
+    {
+      "objection": "Most dangerous competitor: Veraproof Scimify. It is already the self-serve, IdP-native 'SCIM bridge' this concept describes: middleware that translates Okta SCIM to native SaaS APIs, listed in the Okta Integration Network, with guides for Entra, Lumos and SailPoint. It costs from $0.90/user/month with unlimited integrations and a 14-day trial. For a 500-user company with 10 API-backed apps, Scimify is about $450/month against SCIMbridge's $1,490/month, and the gap grows with every app. The per-app price wedge is inverted.",
+      "severity": "fatal",
+      "evidence": "https://www.okta.com/en-au/integrations/veraproof-scimify/ ; https://veraproof.pages.dev/scimify/ ; https://veraproof.pages.dev/blog/20260524-scimify-claude-openai-enterprise-scim-savings/ ; concept:pricing.entry_price"
+    },
+    {
+      "objection": "The browser-agent fallback, which the concept calls the reason a buyer can't just script it, is not unique. Cerby automates provisioning and deprovisioning for apps without SCIM or APIs. It sits in the Okta Integration Network as a SAML+SCIM app, feeds Okta Identity Governance, and is co-marketed with Okta (published customer case: about 200 apps connected at monday.com). Aquera uses robotic automation, and Stitchflow and Zluri ship browser agents. The long tail is contested by better-funded vendors.",
+      "severity": "major",
+      "evidence": "https://www.cerby.com/blog/provisioning-and-deprovisioning-apps-without-scim ; https://www.stitchflow.com/pricing ; concept:mvp.features"
+    },
+    {
+      "objection": "Nightly orphan-account verification is a thin moat. Aquera already feeds discovered entitlements back to Okta for Access Audit Reports. SaaS-management tools (Stitchflow, Zluri, Torii, Lumos) sell user-list reconciliation as a core feature. IGA vendors such as ConductorOne offer open-source Baton connectors that anyone can use to sync app user lists.",
+      "severity": "major",
+      "evidence": "https://www.okta.com/partners/aquera/ ; concept:differentiation"
+    },
+    {
+      "objection": "Bundling risk is still real even though Okta hasn't shipped a native non-SCIM feature. Okta's strategy is to partner and co-sell (Aquera, Cerby, Scimify are all OIN-listed), so a late entrant competes for the same OIN shelf space against established partners rather than an empty slot.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "Demand is real and validated by several funded vendors. A self-serve buyer who wants the IdP as the only control plane is underserved by the services-led Stitchflow and Zluri.",
+  "what_would_change_my_mind": [
+    "At least 10 of 20 interviewed mid-market IT admins evaluated or used Aquera or Scimify and rejected them for missing app coverage, unreliable connectors or an opaque sales process.",
+    "A list of at least 15 high-demand non-SCIM apps that neither Aquera nor Scimify covers, and that we can serve reliably.",
+    "A pricing redesign that can beat about $1/user/month with unlimited apps while still funding browser-connector maintenance."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://www.okta.com/partners/aquera/",
+    "https://learn.microsoft.com/en-us/entra/identity/app-provisioning/partner-driven-integrations",
+    "https://www.okta.com/en-au/integrations/veraproof-scimify/",
+    "https://veraproof.pages.dev/scimify/",
+    "https://veraproof.pages.dev/blog/20260524-scimify-claude-openai-enterprise-scim-savings/",
+    "https://www.cerby.com/blog/provisioning-and-deprovisioning-apps-without-scim",
+    "https://www.stitchflow.com/pricing"
+  ]
+}

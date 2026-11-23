@@ -1,0 +1,55 @@
+{
+ "concept_id": "buyer-side-provisioning",
+ "lens": "technical-feasibility",
+ "round": 1,
+ "score": 4,
+ "verdict": "conditional",
+ "summary": "The SCIM endpoint itself is buildable, but the MVP rests on a weak premise: apps that paywall SCIM often paywall or omit user-management APIs too, which pushes much of the coverage onto browser agents. Two engineers can't ship 25 connectors, a browser fallback through SSO and MFA, verification, and a credential vault to a SOC 2 standard in 5 months.",
+ "objections": [
+  {
+   "objection": "The premise that 'most apps without SCIM still have a user-management API' fails for exactly the SCIM-paywalled apps the concept targets. Notion's public API can only list and retrieve users; member provisioning is SCIM-only on the Enterprise plan. When the vendor gates lifecycle APIs on the same tier as SCIM, there's no cheap API path, so far more of the top 25 apps need the browser-agent tier than the plan assumes.",
+   "severity": "major",
+   "evidence": "https://developers.notion.com/reference/user (SCIM API available for workspaces on Notion's Enterprise Plan); https://developers.notion.com/reference/get-users (list-only endpoint); concept:mvp.features[1].why"
+  },
+  {
+   "objection": "The scope doesn't fit the time and team. Five months with two engineers has to cover a SCIM 2.0 server that conforms to both Okta and Entra, 25 API connectors (about 2-3 per engineer-month, alongside everything else), a headless browser-agent platform with per-tenant isolation, nightly diffing, a retry and alert queue, a KMS-backed vault, and the controls needed to start SOC 2 Type II. Realistically, that's 9-12 months, or an MVP cut to about 8 offboarding-only connectors.",
+   "severity": "major",
+   "evidence": "concept:build.months_to_mvp; concept:build.team; concept:mvp.features"
+  },
+  {
+   "objection": "The browser-agent path has to log in to apps that are themselves behind the customer's Okta or Entra SSO, often with SSO enforced for every user. The agent therefore needs an IdP service identity with a stored MFA factor (a TOTP seed) or a break-glass local admin. Both widen the blast radius, and both break whenever device-trust, phishing-resistant MFA or bot-detection policies change. The concept names MFA as a hardest part but has no design for it.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts[0]; concept:mvp.features[2]"
+  },
+  {
+   "objection": "Running the connectors is a permanent maintenance cost that the per-app price may not cover. Every UI change or API deprecation breaks a connector silently until the next nightly diff, and the concept has no estimate of maintenance hours per connector. At $299/month, a browser connector used by a handful of tenants can't pay for an engineer's week of repairs.",
+   "severity": "major",
+   "evidence": "concept:risks[2]; concept:open_questions[1]; concept:pricing.entry_price"
+  },
+  {
+   "objection": "SCIM client behaviour differs between the two IdPs. Entra deactivates with PATCH active=false, mapped from IsSoftDeleted, and runs on a periodic provisioning cycle. Okta pushes in real time with its own PATCH and PUT quirks. Group-push semantics also differ. All of this has to be mapped onto app-specific seat and role models, but the libraries and test harnesses are mature, so this is solvable.",
+   "severity": "minor",
+   "evidence": "https://learn.microsoft.com/en-us/entra/identity/app-provisioning/use-scim-to-provision-users-and-groups; https://developer.okta.com/docs/guides/scim-provisioning-integration-prepare/main/"
+  },
+  {
+   "objection": "Listing in the Okta Integration Network and the Entra gallery is a per-app submission and review, so 25 apps means 25 listings to keep current. For the MVP, plan on custom SCIM app setup in each tenant, which adds onboarding friction for a self-serve motion.",
+   "severity": "minor",
+   "evidence": "https://developer.okta.com/docs/guides/scim-provisioning-integration-prepare/main/"
+  }
+ ],
+ "strongest_point": "The IdP-native design is sound: a hosted SCIM endpoint is a well-specified, standard surface, so the core plumbing reuses mature SCIM libraries and test suites, and nightly diff verification is cheap to build.",
+ "what_would_change_my_mind": [
+  "A per-app capability matrix for the target 25 apps showing that at least 18 offer create/deactivate/list-user APIs on the tiers buyers actually hold",
+  "A working prototype that offboards from 3 SSO-enforced apps by browser agent, including MFA, running unattended for 30 days with at least 95% success and the repair hours logged",
+  "An MVP rescoped to offboarding plus verification for about 8 apps in 5 months, or the timeline extended to 9-12 months or a third engineer added",
+  "Measured connector maintenance of 4 engineer-hours or less per connector per month"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://developers.notion.com/reference/get-users",
+  "https://developers.notion.com/reference/user",
+  "https://learn.microsoft.com/en-us/entra/identity/app-provisioning/use-scim-to-provision-users-and-groups",
+  "https://developer.okta.com/docs/guides/scim-provisioning-integration-prepare/main/",
+  "https://docs.slack.dev/reference/methods/admin.users.remove"
+ ]
+}

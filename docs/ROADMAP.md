@@ -225,25 +225,37 @@ grounding). ✅
 - One unsourced claim in Keybridge's `risks` (Access Analyzer / Wiz flag old keys); the rubric
   only requires sources in `why_now` and `competitors`.
 
-## Phase 4 — Critic panel · `not started` (next)
+## Phase 4 — Critic panel · `in progress`
 
-Claude Code subagents in `.claude/agents/` (decision D2), each with a fixed rubric, scoring 1–10
-with objections and the evidence that would change their mind:
+Six independent critics per concept, each one lens of [docs/rubrics/critics.md](rubrics/critics.md),
+scoring 1–10 with a verdict, objections (fatal / major / minor, with evidence) and what would
+change their mind:
 
 | Critic | Question it answers |
 |---|---|
-| Market skeptic | Is the demand real and large, or a few loud voices? |
-| Competitor analyst | Who already does this, or could ship it next quarter? |
-| Security practitioner | Would a real security team adopt it and trust it? |
-| Technical feasibility | Can a small team build the MVP, and what's hard? |
-| Go-to-market and pricing | Who pays, how much, and how do you reach them? |
-| Legal and ethics | Dual-use risk, data handling, platform terms |
+| market-skeptic | Is the demand real and large, or a few loud voices? |
+| competitor-analyst | Who already does this, or could ship it next quarter? |
+| security-practitioner | Would a real security or IT team adopt it and trust it? |
+| technical-feasibility | Can the stated team build the MVP in the stated time? |
+| gtm-pricing | Who pays, how much, and how do you reach them? |
+| legal-ethics | Dual-use risk, data handling, platform terms, regulatory accuracy |
 
-Process: critique → revise concept → re-score, at most 2 rounds. Panel output saved to
-`ideas/<slug>.critique.md`.
+Process (workflow [.claude/workflows/critic-panel.js](../.claude/workflows/critic-panel.js)):
+round 1 critiques → concept-writer revises (logging every objection acted on or rejected) →
+round 2 critiques, each critic checking whether its round-1 objections were resolved →
+`gapfinder panel` decides by code (thresholds in `config/scoring.yaml`: GO = mean ≥ 7, every
+lens ≥ 5, no fatal objection; CONDITIONAL = mean ≥ 5.5, every lens ≥ 3; else NO-GO).
+"At most 2 rounds" is implemented as two critique rounds with one revision between them.
 
-**Exit criteria:** every concept has a scored critique; a ranked shortlist with a go/no-go
-recommendation for the PM.
+| Deliverable | Status |
+|---|---|
+| Critic rubric, `Critique` schema, `critic` agent, writer revision mode | done |
+| `gapfinder panel` (go/no-go by code), `critique-check` | done |
+| `critic-panel` workflow | done |
+| Panel run: `ideas/<slug>.critique.md`, [reports/phase4/panel.md](../reports/phase4/panel.md) | in progress |
+
+**Exit criteria:** every concept has a scored critique from all six lenses in the final round;
+a ranked shortlist with a go/no-go recommendation for the PM.
 
 ## Phase 5 — Validation loop · `not started`
 

@@ -183,12 +183,67 @@ class Concept(Strict):
     risks: list[str] = Field(min_length=3, max_length=6)
     riskiest_assumption: RiskiestAssumption
     open_questions: list[str] = Field(min_length=1)
+    revision_log: list[str] = Field(default_factory=list)  # Phase 4: what changed and why
 
     @model_validator(mode="after")
     def why_now_sources_are_urls(self):
         bad = [u for u in self.why_now.sources if not u.startswith(("http://", "https://"))]
         if bad:
             raise ValueError(f"why_now.sources must be URLs: {bad}")
+        return self
+
+
+# ---------------------------------------------------------------- Phase 4 critics
+
+LENSES = ("market-skeptic", "competitor-analyst", "security-practitioner",
+          "technical-feasibility", "gtm-pricing", "legal-ethics")
+Lens = Literal["market-skeptic", "competitor-analyst", "security-practitioner",
+               "technical-feasibility", "gtm-pricing", "legal-ethics"]
+
+
+class Objection(Strict):
+    objection: str
+    severity: Literal["fatal", "major", "minor"]
+    evidence: str = ""
+
+    @model_validator(mode="after")
+    def serious_needs_evidence(self):
+        if self.severity in ("fatal", "major") and not self.evidence.strip():
+            raise ValueError(f"{self.severity} objection needs evidence")
+        return self
+
+
+class PriorResolution(Strict):
+    objection: str
+    resolved: bool
+    note: str = ""
+
+
+class Critique(Strict):
+    concept_id: str
+    lens: Lens
+    round: int = Field(ge=1, le=3)
+    score: int = Field(ge=1, le=10)
+    verdict: Literal["go", "conditional", "no-go"]
+    summary: str
+    objections: list[Objection] = Field(min_length=1, max_length=6)
+    strongest_point: str
+    what_would_change_my_mind: list[str] = Field(min_length=1)
+    resolved_prior: list[PriorResolution] = Field(default_factory=list)
+    sources: list[str] = Field(default_factory=list)
+
+    @model_validator(mode="after")
+    def consistent(self):
+        if self.verdict == "go" and (self.score < 7 or any(o.severity == "fatal"
+                                                           for o in self.objections)):
+            raise ValueError("verdict go needs score >= 7 and no fatal objection")
+        if self.round == 1 and self.resolved_prior:
+            raise ValueError("round 1 has no prior objections to resolve")
+        if self.round > 1 and not self.resolved_prior:
+            raise ValueError("round 2+ must say whether each prior objection was resolved")
+        bad = [u for u in self.sources if not u.startswith(("http://", "https://"))]
+        if bad:
+            raise ValueError(f"sources must be URLs: {bad}")
         return self
 
 

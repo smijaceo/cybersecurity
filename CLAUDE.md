@@ -22,11 +22,11 @@ and stress-tests them with critic agents. The repository owner is the product ma
 - LLM work (filtering, idea generation, critics) runs as Claude Code subagents per decision D2;
   don't add an Anthropic API dependency without a decision entry.
 - Agent steps are defined once in `.claude/agents/` (relevance-judge, theme-namer,
-  threat-mapper, market-researcher, concept-writer) and follow their rubric in
+  threat-mapper, market-researcher, concept-writer, critic) and follow their rubric in
   [docs/rubrics/](docs/rubrics/).
   Use those definitions; don't write ad-hoc agent prompts for pipeline steps.
 - Run pipeline phases with the saved workflows in `.claude/workflows/` (`gap-analysis` for
-  Phase 2, `concepts` for Phase 3), invoked by file path, not by hand.
+  Phase 2, `concepts` for Phase 3, `critic-panel` for Phase 4), invoked by file path, not by hand.
 - Every agent output is validated against `gapfinder/schemas.py` (pydantic) and committed.
 - Reuse maintained open-source libraries before writing our own (D7); record any new
   dependency in `pyproject.toml`.

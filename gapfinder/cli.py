@@ -296,6 +296,34 @@ def cmd_concept_render(args) -> int:
     return 0 if ok and results else 1
 
 
+def cmd_critique_check(args) -> int:
+    from . import panel
+
+    try:
+        c = panel.load_critique(args.path)
+    except (ValueError, FileNotFoundError) as exc:
+        log.error("%s", exc)
+        return 2
+    print(f"ok: {c.concept_id} {c.lens} round {c.round} score {c.score} {c.verdict}")
+    return 0
+
+
+def cmd_panel(args) -> int:
+    from . import panel
+
+    cfg = load_config(args.scoring)["panel"]
+    try:
+        results = panel.run(args.ideas_dir, cfg, args.report)
+    except (ValueError, FileNotFoundError) as exc:
+        log.error("panel: %s", exc)
+        return 2
+    for i, r in enumerate(results, 1):
+        print(f"{i}. {r['decision']:<11} mean {r['mean']:<5} (r1 {r['round1_mean']}) "
+              f"min {r['min']}  {r['name']}")
+    print(f"report: {args.report}")
+    return 0 if results else 1
+
+
 def cmd_fetch(args) -> int:
     from .fetch import fetch_text
 
@@ -391,6 +419,16 @@ def main(argv: list[str] | None = None) -> int:
     cr.add_argument("--ideas-dir", type=Path, default=ROOT / "ideas")
     cr.add_argument("--only", help="validate/render just this opening id")
     cr.set_defaults(func=cmd_concept_render)
+
+    cc = sub.add_parser("critique-check", help="Phase 4: validate one critique file")
+    cc.add_argument("path", type=Path)
+    cc.set_defaults(func=cmd_critique_check)
+
+    pn = sub.add_parser("panel", help="Phase 4: decide go/no-go, write critique and panel reports")
+    pn.add_argument("--ideas-dir", type=Path, default=ROOT / "ideas")
+    pn.add_argument("--scoring", type=Path, default=DEFAULT_SCORING)
+    pn.add_argument("--report", type=Path, default=ROOT / "reports" / "phase4" / "panel.md")
+    pn.set_defaults(func=cmd_panel)
 
     fp = sub.add_parser("fetch", help="print a web page's main text (for agents)")
     fp.add_argument("url")

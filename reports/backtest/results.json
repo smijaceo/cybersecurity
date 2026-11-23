@@ -1,5 +1,32 @@
 {
- "gap_finder": null,
+ "gap_finder": {
+  "categories_verified": [
+   "api-security",
+   "browser-security",
+   "cloud-posture-agentless",
+   "compliance-automation",
+   "data-security-posture",
+   "identity-threat-detection",
+   "non-human-identity",
+   "software-supply-chain",
+   "zero-trust-mesh-vpn"
+  ],
+  "categories_dropped": [
+   "secrets-in-code"
+  ],
+  "found_top_k": [
+   "compliance-automation",
+   "software-supply-chain"
+  ],
+  "found_any_rank": [
+   "compliance-automation",
+   "software-supply-chain"
+  ],
+  "recall_at_k": 0.222,
+  "precision_at_k": 0.222,
+  "top_k": 10,
+  "themes_ranked": 9
+ },
  "calibration": {
   "auc": 0.781,
   "per_lens_auc": {

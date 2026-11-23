@@ -1,0 +1,9 @@
+{"theme_id": 8, "category": "compliance-automation", "confidence": "low", "note": "Compliance-audit pain, but PCI DSS scan remediation rather than automating SOC 2 / ISO 27001 evidence collection and readiness."}
+{"theme_id": 9, "category": null, "confidence": "high", "note": "ASV scanner false positives on backported package versions; a scan-accuracy problem, not any pre-registered category."}
+{"theme_id": 13, "category": null, "confidence": "medium", "note": "Auditing logons and admin activity is logging/audit; it does not describe detecting attacks on AD/IdPs or token theft (ITDR)."}
+{"theme_id": 6, "category": "compliance-automation", "confidence": "high", "note": "Small companies struggling to meet SOC 2 / ISO 27001 audit demands is the same need as automated audit readiness."}
+{"theme_id": 4, "category": "software-supply-chain", "confidence": "medium", "note": "Vulnerable dependencies and container images in CI overlap substantially with securing the software supply chain, though the need is SCA/updates rather than SBOMs, signing or malicious packages."}
+{"theme_id": 14, "category": null, "confidence": "high", "note": "Session/SSH login logging on servers; no matching category."}
+{"theme_id": 11, "category": null, "confidence": "high", "note": "Procurement of outsourced audit/testing services; not a product category in the list."}
+{"theme_id": 15, "category": null, "confidence": "medium", "note": "Network/system segmentation to reduce PCI scope; not zero-trust remote access for small teams nor compliance evidence automation."}
+{"theme_id": 16, "category": null, "confidence": "high", "note": "Ransomware prevention and recovery on Windows file servers; no matching category."}

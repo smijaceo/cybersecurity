@@ -1,0 +1,47 @@
+{
+ "concept_id": "cal-02",
+ "lens": "security-practitioner",
+ "round": 1,
+ "score": 7,
+ "verdict": "conditional",
+ "summary": "PR-time IaC checks are a natural fit: engineers see findings where they already work, and a read-only runtime role is an easy grant. Trust hinges on noise and fix quality: hundreds of default policies flood PRs, static scans miss values resolved at plan time, write-capable remediation won't be granted, and ClickOps resources can't be fixed as code.",
+ "objections": [
+  {
+   "objection": "Noise kills voluntary adoption. 'Hundreds of built-in policies' enabled by default will fail most PRs on day one (missing tags, logging, encryption on dev buckets). Engineers add skip comments or drop the CI step unless the product ships severity tiers, baselining of existing findings, and inline suppressions with reasons. The riskiest-assumption test measures installs, not whether findings are acted on.",
+   "severity": "major",
+   "evidence": "concept:mvp.features (Open-source static scanner ... hundreds of built-in policies); concept:riskiest_assumption.success_signal"
+  },
+  {
+   "objection": "Static scanning of raw Terraform misses much real risk: values come from variables, modules, remote state and data sources, and many resources are defined in shared modules outside the repo. Without evaluating the plan (terraform plan JSON) and resolving modules, the scanner gives both false negatives and false positives, which erodes trust fast.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts (Policy coverage across many cloud resource types and IaC frameworks; Mapping runtime resources back to the code that created them)"
+  },
+  {
+   "objection": "Access model for remediation. A read-only audit role for runtime scanning is routinely granted, but any auto-fix applied directly to accounts needs write permissions that platform teams will refuse for a third-party SaaS. Remediation must stay PR-only and human-merged; the concept should say so explicitly and spell out the cross-account role and what data leaves the account.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features (Automated remediation delivered as pull requests or code snippets); concept:open_questions (Will automated remediation be trusted in production?)"
+  },
+  {
+   "objection": "Brownfield gap: in most target companies a large share of resources were created by console or scripts and are not in IaC. Drift detection flags them but 'fix as code' doesn't apply, so those findings fall back to the ticket workflow the product claims to replace. Importing such resources into Terraform is a heavy lift the MVP doesn't cover.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features (Runtime scan ... drift detection against the IaC); concept:problem.summary"
+  },
+  {
+   "objection": "Risk reduction is narrower than the pitch: per-resource misconfiguration checks miss the combinations that cause real cloud breaches (over-permissive IAM chained with an exposed workload, cross-account trust). Practitioners will see a compliance checklist rather than attack-path context, and the CISO buyer will still need another tool for identity risk.",
+   "severity": "minor",
+   "evidence": "concept:mvp.out_of_scope; concept:mvp.features (Compliance benchmark mapping)"
+  }
+ ],
+ "strongest_point": "Findings and fixes land in the pull request the engineer already owns, before deployment, with a free CLI that needs no credentials: the lowest-friction security workflow available.",
+ "what_would_change_my_mind": [
+  "In pilot repos, fewer than 10% of findings suppressed as noise and over half of flagged PRs fixed before merge within 30 days.",
+  "Plan-based scanning that resolves variables and modules, with a measured false-negative rate on a set of known-bad Terraform samples.",
+  "3 of 10 design partners merging generated remediation PRs without edits and keeping the CI check blocking after 60 days.",
+  "Runtime coverage needing only a read-only role, documented to the satisfaction of 5 platform teams' security reviews."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://cloudcustodian.io/",
+  "https://en.wikipedia.org/wiki/Infrastructure_as_code"
+ ]
+}

@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "serverfault:serverfault:293217",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 8232,
+  "title": "Our security auditor is an idiot. How do I give him the information he wants?",
+  "body": "A security auditor for our servers has demanded the following within two weeks: A list of current usernames and plain-text passwords for all user accounts on all servers A list of all password changes for the past six months, again in plain-text A list of \"every file added to the server from remote devices\" in the past six months The public and private keys of any SSH keys An email sent to him eve",
+  "url": "https://serverfault.com/questions/293217/our-security-auditor-is-an-idiot-how-do-i-give-him-the-information-he-wants"
+ },
+ {
+  "id": "serverfault:serverfault:451387",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 6443,
+  "title": "How to delete cached temporarily credentials for a network share on a Windows machine without rebooting or logging off",
+  "body": "This is more of a curiosity then a real problem, I am just to lazy to reboot or log off my laptop. I have connected to a network share on a Windows server with domain credentials from a non-domain Windows 7 machine, I didn't mark the option to remember the password. The share is let's say \\\\10.10.10.10\\folder . I have changed the password for that domain account in the meantime, and now when I try",
+  "url": "https://serverfault.com/questions/451387/how-to-delete-cached-temporarily-credentials-for-a-network-share-on-a-windows-ma"
+ },
+ {
+  "id": "serverfault:serverfault:73319",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3340,
+  "title": "SFTP logging: is there a way?",
+  "body": "I'm wondering if there is a way to log commands received by the server. It can be all SSH commands, as long as it includes information on commands related to file transfer. I'm having issues with an SFTP client and the creator is asking for logs, but I am unable to find any existing logs. I'm looking to log on both or either CentOS or OS X (although I suspect if it's possible, it'd be similar on b",
+  "url": "https://serverfault.com/questions/73319/sftp-logging-is-there-a-way"
+ },
+ {
+  "id": "serverfault:serverfault:71071",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2879,
+  "title": "How to enable MySQL logging?",
+  "body": "I am running MySQL 5.0.45 on OS X 10.6.1 and I cannot get MySQL to log anything. I am debugging an application and need to see all queries and errors. I added to the etc/my.cnf: [mysqld] bind-address = 127.0.0.1 log = /var/log/mysqld.log log-error = /var/log/mysqld.error.log I used sudo to create two log files, set permissions to 644, then restarted MySQL. I referred to Where is my mysql log on OS",
+  "url": "https://serverfault.com/questions/71071/how-to-enable-mysql-logging"
+ },
+ {
+  "id": "github:735408387",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2822,
+  "title": "URGENT: SECURITY: New maintainer is probably malicious",
+  "body": "**TLDR**: The old maintainer appears to have **sold** the extension to parties unknown, who have **malicious intent** to exploit the users of this extension in advertising fraud, tracking, and more. In v7.1.8 of the extension (published to the web store but NOT to GitHub), **arbitrary code was executed from a remote server**, which appeared to be used to commit a variety of tracking and fraud acti",
+  "url": "https://github.com/greatsuspender/thegreatsuspender/issues/1263"
+ },
+ {
+  "id": "serverfault:serverfault:318574",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1762,
+  "title": "How to disable Nginx logging?",
+  "body": "I have the following in config file server { listen 80; server_name _; access_log /var/log/nginx/access.log main; ... server { listen 80; server_name example.com access_log off; error_log off; But it is still keep logging for example.com virtual host. What am I doing wrong?",
+  "url": "https://serverfault.com/questions/318574/how-to-disable-nginx-logging"
+ },
+ {
+  "id": "serverfault:serverfault:574880",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1688,
+  "title": "nginx / php-fpm error logging",
+  "body": "I'm trying to figure out where the PHP errors are going in my setup. I'm running nginx as the reverse proxy to PHP-FPM, but I'm not seeing the various E_NOTICE or E_WARNING messages my app is producing. The only reason I know they're happening is failed responses and NewRelic catching stack traces. Here's the logging config: nginx.conf proxy_intercept_errors on; fastcgi_intercept_errors on; php.in",
+  "url": "https://serverfault.com/questions/574880/nginx-php-fpm-error-logging"
+ },
+ {
+  "id": "serverfault:serverfault:645924",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1679,
+  "title": "HAProxy logging to syslog",
+  "body": "I installed HAProxy 1.5 via apt-get on ubuntu 14.04 via ppa:vbernat/haproxy-1.5 as per this Debian repository selection tool . The problem is it logging to /var/log/syslog instead of /var/log/haproxy.log The setup is basically the default: /etc/haproxy/haproxy.cfg global log /dev/log local0 log /dev/log local1 notice chroot /var/lib/haproxy stats socket /run/haproxy/admin.sock mode 660 level admin",
+  "url": "https://serverfault.com/questions/645924/haproxy-logging-to-syslog"
+ },
+ {
+  "id": "serverfault:serverfault:647395",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1272,
+  "title": "Haproxy not logging requests?",
+  "body": "So, I configured Haproxy so the logging would go through rsyslog and, for now, be all dumped in one file. It's definetly logging, as I get those \"starting\" messages on startup, but no HTTP requests logging at all. What is wrong with my configuration? haproxy.cfg : global log /dev/log local0 debug chroot /var/lib/haproxy stats socket /run/haproxy/admin.sock mode 660 level admin stats timeout 30s us",
+  "url": "https://serverfault.com/questions/647395/haproxy-not-logging-requests"
+ },
+ {
+  "id": "serverfault:serverfault:37088",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1244,
+  "title": "How to add a security group to a running EC2 Instance?",
+  "body": "I have an Amazon EC2 instance running and I will like to add another security group to that instance and then remove the current security group from that instance. Is this possible?",
+  "url": "https://serverfault.com/questions/37088/how-to-add-a-security-group-to-a-running-ec2-instance"
+ },
+ {
+  "id": "serverfault:serverfault:237557",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1178,
+  "title": "How to change an EC2 instance's security group",
+  "body": "I have created a new EC2 instance. It got assigned the default security group. I want to change that security group. How?",
+  "url": "https://serverfault.com/questions/237557/how-to-change-an-ec2-instances-security-group"
+ },
+ {
+  "id": "serverfault:serverfault:202044",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1098,
+  "title": "Sending audit logs to SYSLOG server",
+  "body": "I'm running several RHEL based systems which utilize the audit functionality within the 2.6 kernel to track user activity and I need to have these logs sent to centralized SYSLOG servers for monitoring and event correlation. Anyone know how to achieve this?",
+  "url": "https://serverfault.com/questions/202044/sending-audit-logs-to-syslog-server"
+ },
+ {
+  "id": "serverfault:serverfault:417173",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1017,
+  "title": "Enable HTTP Strict Transport Security (HSTS) in IIS 7",
+  "body": "What is the best way to turn on HTTP Strict Transport Security on an IIS 7 web server? Can I just through the GUI and add the proper HTTP response header or should I be using appcmd and if so what switches?",
+  "url": "https://serverfault.com/questions/417173/enable-http-strict-transport-security-hsts-in-iis-7"
+ },
+ {
+  "id": "github:413722441",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1016,
+  "title": "Roadmap: TSLint -> ESLint",
+  "body": "As you may have read in [this blog post](https://medium.com/palantir/tslint-in-2019-1a144c2317a9), we plan to deprecate TSLint in 2019 and support the migration to ESLint as the standard linter for both TypeScript & JavaScript. This will not be an immediate deprecation; on the contrary, there is a lot of work to do to ensure a smooth transition to the new tooling without any regressions. There are",
+  "url": "https://github.com/palantir/tslint/issues/4534"
+ },
+ {
+  "id": "hn:46048996",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 983,
+  "title": "Google Antigravity exfiltrates data via indirect prompt injection attack",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=46048996"
+ },
+ {
+  "id": "serverfault:serverfault:310640",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 911,
+  "title": "Reduce SNMPd logging verbosity",
+  "body": "SNMPd on my CentOS systems is sending log messages to syslog every time it receives a query from my monitoring tools. Is there a way to lower the verbosity of SNMPd? It adds a lot of clutter to the logs. Sep 12 13:05:40 myhost snmpd[7073]: Received SNMP packet(s) from UDP: [ipaddr]:42874 Sep 12 13:05:40 myhost snmpd[7073]: Connection from UDP: [ipaddr]:49272 Thanks!",
+  "url": "https://serverfault.com/questions/310640/reduce-snmpd-logging-verbosity"
+ },
+ {
+  "id": "serverfault:serverfault:463550",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 810,
+  "title": "How to change the name and description of an AWS EC2 security group?",
+  "body": "How do you change the name and description of a security group in AWS EC2? My security group is named quick-start-1 (the default) and I want to change it to \" HTTP, HTTPS and Limited SSH \".",
+  "url": "https://serverfault.com/questions/463550/how-to-change-the-name-and-description-of-an-aws-ec2-security-group"
+ },
+ {
+  "id": "hn:41302597",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 778,
+  "title": "Data Exfiltration from Slack AI via indirect prompt injection",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=41302597"
+ },
+ {
+  "id": "serverfault:serverfault:137468",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 696,
+  "title": "Better logging for cronjobs? Send cron output to syslog?",
+  "body": "I am looking for a better way to log cronjobs. Most cronjobs tend to spam email or the console, get ignored, or create yet another logfile. In this case, I have a Nagios NSCA script which sends data to a central Nagios sever. This send_nsca script also prints a single status line to STDOUT, indicating success or failure. 0 * * * * root /usr/local/nagios/sbin/nsca_check_disk This emails the followi",
+  "url": "https://serverfault.com/questions/137468/better-logging-for-cronjobs-send-cron-output-to-syslog"
+ },
+ {
+  "id": "hn:35929122",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 683,
+  "title": "Prompt injection explained, with video, slides, and a transcript",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=35929122"
+ },
+ {
+  "id": "serverfault:serverfault:205094",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 681,
+  "title": "Are EC2 security group changes effective immediately for running instances?",
+  "body": "I have an EC2 instance running, and it belongs to a security group. If I add a new allowed connection to that security group through AWS Management Console, should that change be effective immediately ? Or perhaps only after restart of the instance? In my case, I'm trying to allow access to PostgreSQL's default port (tcp 5432 5432 0.0.0.0/0), and I'm not sure if it's the EC2 firewall or PostgreSQL",
+  "url": "https://serverfault.com/questions/205094/are-ec2-security-group-changes-effective-immediately-for-running-instances"
+ },
+ {
+  "id": "hn:35572290",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 665,
+  "title": "Prompt injection: what\u2019s the worst that can happen?",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=35572290"
+ },
+ {
+  "id": "serverfault:serverfault:183589",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 664,
+  "title": "How do I activate launchd logging on OS X?",
+  "body": "How do I activate launchd logging on OS X 10.6? I added a new daemon that is not starting properly (status is 1 ). I want to debug the problem but I was not able to find launchd logs, they are not in /var/log/launchd.log .",
+  "url": "https://serverfault.com/questions/183589/how-do-i-activate-launchd-logging-on-os-x"
+ },
+ {
+  "id": "serverfault:serverfault:546012",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 655,
+  "title": "How to determine AWS security group dependencies?",
+  "body": "Amazon EC2 won't let me delete a security group, complaining that the group still has dependencies. How Can I find what those dependencies are? aws ec2 describe-security-groups doesn't say.",
+  "url": "https://serverfault.com/questions/546012/how-to-determine-aws-security-group-dependencies"
+ },
+ {
+  "id": "serverfault:serverfault:611082",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 630,
+  "title": "How to handle security updates within Docker containers?",
+  "body": "When deploying applications onto servers, there is typically a separation between what the application bundles with itself and what it expects from the platform (operating system and installed packages) to provide. One point of this is that the platform can be updated independently of the application. This is useful for example when security updates need to be applied urgently to packages provided",
+  "url": "https://serverfault.com/questions/611082/how-to-handle-security-updates-within-docker-containers"
+ },
+ {
+  "id": "github:3360932443",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 587,
+  "title": "Feature Request: Add support for Agent Client Protocol (ACP)",
+  "body": "### **Title: Feature Request: Add support for Agent Client Protocol (ACP)** **Is your feature request related to a problem? Please describe.** Claude Code is a powerful agentic coding assistant, but its usage is currently focused on its dedicated terminal REPL and specific IDE integrations. This requires bespoke integration work to expand its reach to other development environments. With the recen",
+  "url": "https://github.com/anthropics/claude-code/issues/6686"
+ },
+ {
+  "id": "hn:34777646",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 585,
+  "title": "AI-powered Bing Chat spills its secrets via prompt injection attack",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=34777646"
+ },
+ {
+  "id": "serverfault:serverfault:483938",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 579,
+  "title": "Multiple EC2 security groups - permissive or restrictive?",
+  "body": "What happens when I assign multiple security groups to an instance? Is it permissive in the sense that the traffic is allowed in if any one of the security groups allows it. OR is it restrictive in the sense that every security group must allow the traffic in for it to be passed in? For example, lets say I have a class of instances that will only ever talk to other instances in the same account. I",
+  "url": "https://serverfault.com/questions/483938/multiple-ec2-security-groups-permissive-or-restrictive"
+ },
+ {
+  "id": "hn:38251957",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 575,
+  "title": "Hacking Google Bard \u2013 From Prompt Injection to Data Exfiltration",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=38251957"
+ },
+ {
+  "id": "hn:35224666",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 570,
+  "title": "Anti-recruiter prompt injection attack in LinkedIn profile",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=35224666"
+ },
+ {
+  "id": "hn:50322173",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 568,
+  "title": "Brazilian Court Sanctions Lawyers for Prompt Injection in Court Filing",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=50322173"
+ },
+ {
+  "id": "serverfault:serverfault:316516",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 495,
+  "title": "Does changing default port number actually increase security?",
+  "body": "I have seen advice saying you should use different port numbers for private applications (e.g. intranet, private database, anything that no outsider will use). I am not entirely convinced that can improve security because Port scanners exist If an application is vulnerable, it remains so regardless of its port number. Did I miss something or have I answered my own question?",
+  "url": "https://serverfault.com/questions/316516/does-changing-default-port-number-actually-increase-security"
+ },
+ {
+  "id": "serverfault:serverfault:334448",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 480,
+  "title": "Why is SSH password authentication a security risk?",
+  "body": "Most guides for OpenSSH configuration advise to disable password authentication in favor of key-based authentication. But in my opinion password authentication has a significant advantage: an ability to connect from absolutely anywhere without a key. If used always with a strong password, this should not be a security risk. Or should it?",
+  "url": "https://serverfault.com/questions/334448/why-is-ssh-password-authentication-a-security-risk"
+ },
+ {
+  "id": "hn:34976886",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 480,
+  "title": "Indirect Prompt Injection on Bing Chat",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=34976886"
+ },
+ {
+  "id": "serverfault:serverfault:483183",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 467,
+  "title": "Can you require MFA for AWS IAM accounts?",
+  "body": "Is it possible to require Multi-factor Authentication (MFA) be enabled for specific/all IAM accounts in Amazon Web Services? There are options for password requirements and it's clear how one can choose to add it to one's account, but it's not clear if there is an option to force users to have MFA.",
+  "url": "https://serverfault.com/questions/483183/can-you-require-mfa-for-aws-iam-accounts"
+ },
+ {
+  "id": "hn:46840676",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 425,
+  "title": "Autonomous cars, drones cheerfully obey prompt injection by road sign",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=46840676"
+ },
+ {
+  "id": "serverfault:serverfault:823956",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 413,
+  "title": "Ansible security best practices",
+  "body": "I am going to introduce Ansible into my data center, and I'm looking for some security best practice on where to locate the control machine and how to manage the SSH keys. Question 1: the control machine We of course need a control machine. The control machine has public SSH keys saved on it. If an attacker has access to the control machine, it potentially has access to the whole data center (or t",
+  "url": "https://serverfault.com/questions/823956/ansible-security-best-practices"
+ },
+ {
+  "id": "serverfault:serverfault:114052",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 390,
+  "title": "Logging a Daemon's Output with Upstart",
+  "body": "I have a custom daemon that is managed by upstart on my Ubuntu server. It works perfectly except that I need to capture (log) the daemon's output. The official stanzas page says that I can use console logged to do this, but what file does it log to? I've also read that console logged is no longer a valid stanza . I'm currently using 0.3.9 (Hardy) but will upgrade to 0.6.x (Lucid) in a few months. ",
+  "url": "https://serverfault.com/questions/114052/logging-a-daemons-output-with-upstart"
+ },
+ {
+  "id": "hn:37927357",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 365,
+  "title": "GPT-4 vision prompt injection",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=37927357"
+ },
+ {
+  "id": "hn:48631888",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 351,
+  "title": "Prompt Injection as Role Confusion",
+  "body": "https://arxiv.org/abs/2603.12277",
+  "url": "https://news.ycombinator.com/item?id=48631888"
+ },
+ {
+  "id": "github:3334629769",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 346,
+  "title": "Should the web platform adopt XSLT 3.0?",
+  "body": "### What is the issue with the HTML Standard? ### Background This is a follow-up to #11523. That issue raises concerns regarding security issues, code maintainability, and the complexity of aging browser code currently used for rendering XML with XSLT stylesheets. I highly recommend reading through that issue first as it includes a good background of XSLT on the web as well as the specific concern",
+  "url": "https://github.com/whatwg/html/issues/11578"
+ },
+ {
+  "id": "hn:38654533",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 332,
+  "title": "Data exfiltration from Writer.com with indirect prompt injection",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=38654533"
+ },
+ {
+  "id": "serverfault:serverfault:115624",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 330,
+  "title": "Iptables NAT logging",
+  "body": "I have a box setup as a router using Iptables (masquerade), logging all network traffic. The problem: Connections from LAN IPs to WAN show fine, i.e. SRC=192.168.32.10 -> DST=60.242.67.190 but for traffic coming from WAN to LAN it will show the WAN IP as the source, but the routers IP as the destination, then the router -> LAN IP. I.e. SRC=60.242.67.190 -> DST=192.168.32.199 SRC=192.168.32.199(rou",
+  "url": "https://serverfault.com/questions/115624/iptables-nat-logging"
+ },
+ {
+  "id": "github:4770593507",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 330,
+  "title": "Revert policy on unrecognized keys in `.npmrc`",
+  "body": "TLDR: npm v12 plans to start hard-erroring on unrcognized keys. I strongly urge the team to revert this new policy before the stable release. I've read the arguments for and against. Ultimately my case is this: the ecosystem-wide churn this has already caused (and will continue causing) far outweighs any benefits the team hopes to gain here. The `.npmrc` file has been a neutral ground for package ",
+  "url": "https://github.com/npm/cli/issues/9699"
+ },
+ {
+  "id": "hn:13516116",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 328,
+  "title": "Ask HN: Online Security Tips for Newbie Freedom Activists?",
+  "body": "I'm becoming active in a local group of citizens (constituents of one electoral district here in the United States) who are trying to promote protection of civil liberties. Many are quite new to any kind of political activism and quite a few are very new to participation in online networks. What are your recommendations for sources of advice on best online security practices, easy for beginners to",
+  "url": "https://news.ycombinator.com/item?id=13516116"
+ },
+ {
+  "id": "serverfault:serverfault:992027",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 325,
+  "title": "AWS IAM won't let my users change their passwords",
+  "body": "My password policy is configured to allow users to change their passwords, but when I create a new user with the \"must change password\" option, the user gets told they need \"iam:ChangePassword\" permission. They get a similar message when they try to change it using the CLI. Any idea how to diagnose and fix this?",
+  "url": "https://serverfault.com/questions/992027/aws-iam-wont-let-my-users-change-their-passwords"
+ },
+ {
+  "id": "hn:35911595",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 324,
+  "title": "Delimiters won\u2019t save you from prompt injection",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=35911595"
+ },
+ {
+  "id": "hn:32817941",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 321,
+  "title": "Prompt injection attacks against GPT-3",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=32817941"
+ },
+ {
+  "id": "hn:35925758",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 310,
+  "title": "The Dual LLM pattern for building AI assistants that can resist prompt injection",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=35925758"
+ },
+ {
+  "id": "github:850651551",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 301,
+  "title": "Future of Angular E2E & Plans for Protractor",
+  "body": "# TLDR The Angular team plans to end development of Protractor at the end of 2022 (in conjunction with Angular v15). Why? Protractor was created in [2013](https://github.com/angular/protractor/commit/0595652c2cf936419a08b82a866cc5c0915b8a6c) when WebDriver APIs were not yet a [standard](https://www.w3.org/TR/webdriver/) and end-to-end (e2e) tests were hard to write due to lack of support for `asyn",
+  "url": "https://github.com/angular/protractor/issues/5502"
+ },
+ {
+  "id": "hn:37877605",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 289,
+  "title": "Multi-modal prompt injection image attacks against GPT-4V",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=37877605"
+ },
+ {
+  "id": "github:573452170",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 283,
+  "title": "NixOS for Pentesting Overview",
+  "body": "## NixOS for Pentesting This represents an effort to bring Security and Forensics software to NixOS, so that it can become a viable alternative to projects like Kali Linux and BlackArch. Expect updates here to any progress we may be making. Contributions are welcome. Exploitation - [ ] [armitage](https://repology.org/project/armitage/information) not maintained - [x] [backdoor-factory](https://rep",
+  "url": "https://github.com/NixOS/nixpkgs/issues/81418"
+ },
+ {
+  "id": "github:298392777",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 269,
+  "title": "[spec: webpack 5] - A module disk cache between build processes",
+  "body": "## Current Problems & Scenarios Users get fast webpack builds on large code bases by running continuous processes that watch the file system with webpack-dev-server or webpack's watch option. Starting those continuous processes can take a lot of time to build all the modules for the code base anew to fill the memory cache webpack has to make rebuilds fast. Some webpack uses remove the benefit from",
+  "url": "https://github.com/webpack/webpack/issues/6527"
+ },
+ {
+  "id": "hn:44070626",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 268,
+  "title": "Remote Prompt Injection in Gitlab Duo Leads to Source Code Theft",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=44070626"
+ },
+ {
+  "id": "serverfault:serverfault:804043",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 261,
+  "title": "How to know if an AWS IAM role is actually being used",
+  "body": "I'm doing some cleanup on an AWS account and I see many roles that I'm almost positive are not being used. The account has many services being used so a manual check is impractical. Is there a way to know how many times a particular AWS Role is being used? And if possible, which service and/or instances are using it?",
+  "url": "https://serverfault.com/questions/804043/how-to-know-if-an-aws-iam-role-is-actually-being-used"
+ },
+ {
+  "id": "github:2729859922",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 251,
+  "title": "\ud83d\udd0a New container images security assessments",
+  "body": "On December 10th, 2024, we released a minor version for every Helm chart in the Bitnami catalog. This minor version introduced a new security mechanism to detect the usage of non-standard containers while installing or upgrading Helm chart releases. Replacing the original containers that are shipped with the charts will result in installation errors like the one below: ``` \u26a0 ERROR: Original contai",
+  "url": "https://github.com/bitnami/charts/issues/30850"
+ },
+ {
+  "id": "hn:41958550",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 250,
+  "title": "ZombAIs: From Prompt Injection to C2 with Claude Computer Use",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=41958550"
+ },
+ {
+  "id": "serverfault:serverfault:842749",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 242,
+  "title": "Firewalld - Logging denied packets enabled - not logging",
+  "body": "I am using Firewalld and the drop zone is the default zone with an interface assigned to the zone. I then have rich rules to allow some traffic through the drop zone and I have enabled firewall-cmd --set-log-denied=all . I would of thought that this would log anything that attempts to connect to the server that doesn't come from the white-listed rich rule... but it won't log. I ran port scans agai",
+  "url": "https://serverfault.com/questions/842749/firewalld-logging-denied-packets-enabled-not-logging"
+ },
+ {
+  "id": "github:1322309567",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 242,
+  "title": "Implement a Sandbox mode",
+  "body": "### Describe the project you are working on Godot ### Describe the problem or limitation you are having in your project It seems many users want to use Godot in a way where more complex content (such as scenes or Godot resources or even scripts) are downloaded from the internet. Unlike just sending simple variants, this is very insecure because the attack surface is huge. Just limiting the Godot A",
+  "url": "https://github.com/godotengine/godot-proposals/issues/5010"
+ },
+ {
+  "id": "github:396983442",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 231,
+  "title": "[ECS, Fargate]: Support for building Docker containers",
+  "body": "**Tell us about your request** We're using Fargate for our CI builds. This works for most of our pipelines, except the ones building Docker images. Currently it's not possible to use Docker inside a Fargate container. Mainly I'd like to do `docker build` and `docker push`. **Which service(s) is this request for?** This only applies to Fargate. **Tell us about the problem you're trying to solve. Wh",
+  "url": "https://github.com/aws/containers-roadmap/issues/95"
+ },
+ {
+  "id": "github:480089774",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 225,
+  "title": "Tridactyl has been delisted from addons.mozilla.org",
+  "body": "**edit by glacambre on october 22 2019**: Steps have been taken to reinstate Tridactyl on Mozilla's addon store. In the meantime, you can still install Tridactyl by following [these instructions](https://github.com/tridactyl/tridactyl#installing). -- An addons.mozilla.org (AMO) reviewer has demanded that we edit every user's [user.js](http://kb.mozillazine.org/User.js_file) to revert any changes t",
+  "url": "https://github.com/tridactyl/tridactyl/issues/1800"
+ },
+ {
+  "id": "github:2089998419",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 222,
+  "title": "[Sandbox] OpenTofu",
+  "body": "### Application contact emails core@opentofu.org ### Project Summary The open source, cloud agnostic, Infrastructure as Code tool ### Project Description OpenTofu is a Terraform fork created in response to HashiCorp licenses change. The goal of the founders was to keep this tool open source. We believe that IaC and Terraform (now OpenTofu) is a skeleton of Cloud Native applications, and by ensurin",
+  "url": "https://github.com/cncf/sandbox/issues/81"
+ },
+ {
+  "id": "github:432659624",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 221,
+  "title": "Repost of the security issues",
+  "body": "Earlier today the attacker posted some insightful issues, but since Github has suspended their account, those are now gone. This is a repost. GitHub issues of matrix.org pieced together as one \"story\": > I noticed in your blog post that you were talking about doing a postmortem and steps you need to take. As someone who is intimately familiar with your entire infrastructure, I thought I could help",
+  "url": "https://github.com/matrix-org/matrix.org/issues/371"
+ },
+ {
+  "id": "serverfault:serverfault:944254",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 213,
+  "title": "AWS IAM - AssumeRole within same account?",
+  "body": "I'm trying to configure permissions for CloudTrail > S3 > SQS > Splunk workflow. https://docs.splunk.com/Documentation/AddOns/released/AWS/ConfigureAWSpermissions I created a role, attached a policy to grant permissions for S3, SQS etc. I went to Trust Relation policy and added the same account number and the user because the user will be in the same account. I then go to the user and attach a pol",
+  "url": "https://serverfault.com/questions/944254/aws-iam-assumerole-within-same-account"
+ },
+ {
+  "id": "hn:32662385",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 211,
+  "title": "Ask HN: IT Security Checklist for Startups?",
+  "body": "Hi HN, Does anyone have a list of IT security stuff that you should setup for your early stage startup? Like for example DNSSEC, VPN, forcing employees to use 2-factor etc.",
+  "url": "https://news.ycombinator.com/item?id=32662385"
+ },
+ {
+  "id": "github:1589451455",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 204,
+  "title": "[Sandbox] SOPS",
+  "body": "### Application contact emails dnazer@mozilla.com hidde@weave.works ablock@redhat.com ### Project Summary SOPS (Secrets OPerationS) is an editor in the form of a command-line tool and SDK designed to help manage encrypted files in a variety of structured (YAML, JSON, ENV, INI) and BINARY formats using a one of the supported Key Management Systems (KMS), PGP, or age. ### Project Description SOPS (S",
+  "url": "https://github.com/cncf/sandbox/issues/28"
+ },
+ {
+  "id": "github:3991625570",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 199,
+  "title": "[FEATURE] Link a source control repo as the source for organization skills",
+  "body": "### Preflight Checklist - [x] I have searched [existing requests](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20label%3Aenhancement) and this feature hasn't been requested yet - [x] This is a single feature request (not multiple features) ### Problem Statement Currently the only way to manage org-level skills is uploading them individually through the Claude.ai admin console. Thi",
+  "url": "https://github.com/anthropics/claude-code/issues/28729"
+ },
+ {
+  "id": "hn:34719586",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 194,
+  "title": "Ask HN: Is \u201cprompt injection\u201d going to be a new common vulnerability?",
+  "body": "There was a post [0] recently about the bing chatGPT assistant either citing or hallucinating it\u2019s own initial prompt from the (in theory) low privileged chat input UI they put together. This feels like it\u2019s almost unavoidable if you let users actually chat with something like this. How would we sanitize strings now? I know OpenAI has banned topics they seem to regex for, but that\u2019s always going t",
+  "url": "https://news.ycombinator.com/item?id=34719586"
+ },
+ {
+  "id": "serverfault:serverfault:602402",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 185,
+  "title": "IIS 7.5 not logging",
+  "body": "I have a strange issue with a Windows Server 2008 R2 running IIS: HTTP logging stopped a few months ago (I just found out), and I cannot seem to get it to start logging again. I have both HTTP Logging and Logging Tools installed (under Web Server/ Health and Diagnostics) and under IIS Manager > Logging, it is enabled (One log per: Site, Format: W3C, Directory: \"%SystemDrive%\\inetpub\\logs\\LogFiles\"",
+  "url": "https://serverfault.com/questions/602402/iis-7-5-not-logging"
+ },
+ {
+  "id": "github:1446654153",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 180,
+  "title": "Allow web users to view remote posts/follower/following lists inline in the web application, and at all in the mobile application",
+  "body": "### Pitch Currently when you view a user profile from your local instance via the web application, you only see their follower/following that are visible to the local instance. A link is provided, \"Browse more on the original profile\", that takes you to the users home server. However in doing so you leave the web application and are no longer interacting with that list using your logged in Mastodo",
+  "url": "https://github.com/mastodon/mastodon/issues/20533"
+ },
+ {
+  "id": "github:2013286273",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 177,
+  "title": "Rust Support in Zephyr",
+  "body": "## Introduction Various parties have expressed interest in having \"Rust Support\" in Zephyr. This can mean different things, such as writing applications in Rust, to writing Zephyr drivers in Rust. This RFC attempts to define a specific type of support for Rust within Zephyr. ### Problem description The [Rust programming language](https://rust-lang.org/) is a relatively modern programming language ",
+  "url": "https://github.com/zephyrproject-rtos/zephyr/issues/65837"
+ },
+ {
+  "id": "hn:47654317",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 175,
+  "title": "My university uses prompt injection to catch cheaters",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=47654317"
+ },
+ {
+  "id": "github:3290336832",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 170,
+  "title": "[FEATURE REQUEST] Allow Claude Code to access gitignored files",
+  "body": "## Current Behavior Claude Code currently respects `.gitignore` files and excludes gitignored files from: - `@`-mention autocomplete suggestions - General file awareness and reading (unless explicitly requested) ## Problem Description This behavior creates friction for local development workflows where users want to: - Keep certain files out of version control (private notes, local configs, etc.) ",
+  "url": "https://github.com/anthropics/claude-code/issues/5105"
+ },
+ {
+  "id": "github:3191978385",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 162,
+  "title": "[EKS] [request]: Support for certification rotation on EKS clusters",
+  "body": "### Community Note * Please vote on this issue by adding a \ud83d\udc4d [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) to the original issue to help the community and maintainers prioritize this request * Please do not leave \"+1\" or \"me too\" comments, they generate extra noise for issue followers and do not help prioritize the request * If you are intereste",
+  "url": "https://github.com/aws/containers-roadmap/issues/2638"
+ },
+ {
+  "id": "github:530446705",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 159,
+  "title": "First-class session support in FastAPI",
+  "body": "### Is your feature request related to a problem All of the security schemas currently supported by FastAPI rely on some sort of \"client-server synergy\" , where, for instance, the client is expected to know and remember an OAuth token or the user credentials to be sent via headers. This works fairly well for single-page applications, but if you need to integrate authentication to an app that uses ",
+  "url": "https://github.com/fastapi/fastapi/issues/754"
+ },
+ {
+  "id": "github:2152478814",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 158,
+  "title": "Integer overflow in lib/vssh/libssh2.c",
+  "body": "### I did this Security Vulnerability Report File: lib/vssh/libssh2.c Function: ssh_statemachact() (Starting at line 2512) Vulnerability Type: Integer Overflow Location: Line 2547 Severity: High Description: In the ssh_statemachact() function, at line 2547, there exists a vulnerability related to an integer overflow. The vulnerability arises from the calculation of the variable size, which is assi",
+  "url": "https://github.com/curl/curl/issues/12983"
+ },
+ {
+  "id": "hn:45794245",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 158,
+  "title": "New prompt injection papers: Agents rule of two and the attacker moves second",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=45794245"
+ },
+ {
+  "id": "github:688132079",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 156,
+  "title": "Rust unstable features needed for the kernel",
+  "body": "Unstable features (including language, library, tools...) we currently use. See as well: - Rust 2026 roadmap: [Rust for Linux](https://rust-lang.github.io/rust-project-goals/2026/roadmap-rust-for-linux.html) and the individual project goals linked there, e.g. [compiler features](https://rust-lang.github.io/rust-project-goals/2026/rust-for-linux-compiler-features.html). - Rust 2025H2 project goals:",
+  "url": "https://github.com/Rust-for-Linux/linux/issues/2"
+ },
+ {
+  "id": "github:4564421937",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 153,
+  "title": "Proposal: Architecture & Codebase Structure v3",
+  "body": "# Odysseus \u2014 Architecture & Implementation Document > **Status:** v3 \u2014 updated with community feedback from #605 > **Scope:** Backend reorganization, frontend rebuild, tooling standardization, contributor conventions > **Principle:** No behavior changes in Phase 1. Structure first, features after. > [!WARNING] > **This version may be stale.** The proposals here are being broken down and formalised",
+  "url": "https://github.com/odysseus-dev/odysseus/issues/605"
+ },
+ {
+  "id": "hn:45559603",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 146,
+  "title": "GitHub Copilot: Remote Code Execution via Prompt Injection (CVE-2025-53773)",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=45559603"
+ },
+ {
+  "id": "github:581226963",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 145,
+  "title": "Nancy is not being maintained. Close the project down and communicate it to the community.",
+  "body": "She's dead Jim. Nancy was one of the leading projects with respect to her interactions and communications with the community. We owe it to them to communicate the current status clearly. We need to: - communicate that it is not being maintained (and won't ever be) by updating the readme in all the projects (and with a big \"Thank You\" too). - closing all open issues & PRs - archiving repositories m",
+  "url": "https://github.com/NancyFx/Nancy/issues/3010"
+ },
+ {
+  "id": "serverfault:serverfault:849997",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 136,
+  "title": "ms17-010 is not showing in WSUS (WannaCry Ransomware)",
+  "body": "I am trying to push update MS17-010 in my environment but unfortunatly it is not showing in WSUS. I am targeting it for Win 7 devices. Win 7 is selected in product category but this update is not showing. Please advise what kind of category needs to selected or any alternate method to deploy this update from WSUS. Here is the microsoft link https://support.microsoft.com/en-us/help/4013389/title I ",
+  "url": "https://serverfault.com/questions/849997/ms17-010-is-not-showing-in-wsus-wannacry-ransomware"
+ },
+ {
+  "id": "serverfault:serverfault:488967",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 134,
+  "title": "haproxy not logging",
+  "body": "I have configured rsyslog (CentOS 6.3) adding the -c 0 -r options and the line local2.* /var/log/haproxy.log and restarted rsyslog but all that happens is an haproxy.log gets created. It is never written to. Not quite sure how to troubleshoot this. Below is my haproxy.cfg file. Nothing else is configured to use local2 according to grepping for it in rsyslog.conf . My haproxy config is basically th",
+  "url": "https://serverfault.com/questions/488967/haproxy-not-logging"
+ },
+ {
+  "id": "github:2250852394",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 134,
+  "title": "SAML/SSO Authentication for Atlantis Web UI and API",
+  "body": "### Community Note - Please vote on this issue by adding a \ud83d\udc4d [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) to the original issue to help the community and maintainers prioritize this request. Searching for pre-existing feature requests helps us consolidate datapoints for identical requirements into a single place, thank you! - Please do not leav",
+  "url": "https://github.com/runatlantis/atlantis/issues/4452"
+ },
+ {
+  "id": "github:3941978096",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 134,
+  "title": "Bug: There is no signal, there is no security. Two critical barriers blocking Signal usage in repressive regimes: \"censorship circumvention\" unavailable before login/registration + phone number verification ALREADY just easily DISABLED by dictator government",
+  "body": "Authorization by phone number in Russia is just simply forbidden. It is already disabled in some regions. Others will be banned in the near future. I'm in the Irkutsk region. I've checked several different smartphones with different carriers. Phone number authorization doesn't work for anyone. And since you can't enable the built-in \"Censorship Bypass\" from the very beginning of authorization, you",
+  "url": "https://github.com/signalapp/Signal-Android/issues/14593"
+ },
+ {
+  "id": "github:1728051617",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 130,
+  "title": "[EKS] [request]: Support for OIDC endpoint with PrivateLink EKS VPC Endpoint",
+  "body": "### Community Note * Please vote on this issue by adding a \ud83d\udc4d [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) to the original issue to help the community and maintainers prioritize this request * Please do not leave \"+1\" or \"me too\" comments, they generate extra noise for issue followers and do not help prioritize the request * If you are intereste",
+  "url": "https://github.com/aws/containers-roadmap/issues/2038"
+ },
+ {
+  "id": "hn:45000894",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 128,
+  "title": "Agentic Browser Security: Indirect Prompt Injection in Perplexity Comet",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=45000894"
+ },
+ {
+  "id": "serverfault:serverfault:1066180",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 127,
+  "title": "AWS IAM Roles: What is a trusted entity exactly?",
+  "body": "I have a role attached to a LaunchConfiguration for an EC2 instance, that gives the EC2 instance privs to do certain things like do Cloudwatch logs (the context isn't important to the question). In Cloudformation the Role looks like: Type: 'AWS::IAM::Role' Properties: AssumeRolePolicyDocument: Version: '2012-10-17' Statement: - Effect: Allow Principal: Service: 'ec2.amazonaws.com' Action: 'sts:Ass",
+  "url": "https://serverfault.com/questions/1066180/aws-iam-roles-what-is-a-trusted-entity-exactly"
+ },
+ {
+  "id": "hn:43158562",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 126,
+  "title": "Grok 3 is highly vulnerable to indirect prompt injection",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=43158562"
+ },
+ {
+  "id": "serverfault:serverfault:842082",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 125,
+  "title": "Spamassassin logging",
+  "body": "I have a Postfix, Postgrey, Spamassassin, amavisd-new, dovecot setup. When I send an e-mail through the system, the log file goes completely nuts. I can't find any info to explain what the log lines mean, so I'm not sure what the best thing is to post here. It looks like it's going back to some information from when I installed the servers 6 months ago and providing log lines for enormous numbers ",
+  "url": "https://serverfault.com/questions/842082/spamassassin-logging"
+ },
+ {
+  "id": "hn:46137746",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 125,
+  "title": "Prompt Injection via Poetry",
+  "body": "https://archive.ph/RlKoj",
+  "url": "https://news.ycombinator.com/item?id=46137746"
+ },
+ {
+  "id": "serverfault:serverfault:962397",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 123,
+  "title": "how to show an IAM user's roles with 'aws iam'?",
+  "body": "If I run $ aws iam get-user --user-name anthony , I get result like this { \"User\": { \"Path\": \"/\", \"UserName\": \"anthony\", \"UserId\": \"E2S4XZIL9NRNSBIDBI5U6\", \"Arn\": \"arn:aws:iam::123456:user/anthony\", \"CreateDate\": \"2015-04-03T01:22:11Z\", \"PasswordLastUsed\": \"2019-04-10T01:38:14Z\" } } If I want to get a list of role this login has, how can I do it with aws iam ?",
+  "url": "https://serverfault.com/questions/962397/how-to-show-an-iam-users-roles-with-aws-iam"
+ },
+ {
+  "id": "github:2862112205",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 122,
+  "title": "Possibility of Portal 1 Code Inclusion",
+  "body": "**Edit: I have now made a separate [request for a Portal 2 SDK](https://github.com/ValveSoftware/portal2/issues/460), which would be preferred over Portal 1 in the event that one of the two has to be chosen/prioritized. A Portal 1 SDK, as described in this issue, would still be greatly appreciated if it did happen though.** Hello, I am opening this issue in order to ask about the inclusion of Port",
+  "url": "https://github.com/ValveSoftware/source-sdk-2013/issues/633"
+ },
+ {
+  "id": "github:5511377880",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 121,
+  "title": "openapi-typescript in maintenance mode",
+  "body": "Hello, just posting an update many of you suspected: **openapi-typescript is in maintenance mode and won\u2019t be getting any more updates.** Please migrate to another project. This will be a rather long post, so I\u2019ll try and frontload the more practical bits: - **Any more updates? Like, security patches, too?** Yes\u2014no updates. As of **Sep 19, 2026** (this post), this project will not receive updates.",
+  "url": "https://github.com/openapi-ts/openapi-typescript/issues/2874"
+ },
+ {
+  "id": "github:3190325216",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 118,
+  "title": "Feature Request: Implement a Hooks System for Custom Automation and Workflow Integration",
+  "body": "### **Title: Feature Request: Implement a Hooks System for Custom Automation and Workflow Integration** **Labels:** `feature-request`, `enhancement`, `automation`, `integrations` ### Is your feature request related to a problem? Please describe. I'm a frequent user of the Gemini CLI and find it incredibly powerful for day-to-day development tasks. However, as I integrate it more deeply into my tea",
+  "url": "https://github.com/google-gemini/gemini-cli/issues/2779"
+ },
+ {
+  "id": "serverfault:serverfault:134945",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 116,
+  "title": "Virus sending phishing emails through exchange server",
+  "body": "It appears that there is a virus on my network somewhere that is sending phishing emails through my exchange server. I can see the messages in message tracking and I see many SMTP errors for NDR's and rejected connections from external servers, but I do not see any SMTP authentications and I have logging up to MAX. How can I find the IP or hostname of the PC that is infected? Or is there some othe",
+  "url": "https://serverfault.com/questions/134945/virus-sending-phishing-emails-through-exchange-server"
+ },
+ {
+  "id": "serverfault:serverfault:427262",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 115,
+  "title": "Phishing site uses subdomain that I never registered",
+  "body": "I recently received the following message from Google Webmaster Tools: Dear site owner or webmaster of http://gotgenes.com/ , [...] Below are one or more example URLs on your site which may be part of a phishing attack: http://repair.gotgenes.com/~elmsa/.your-account.php [...] What I don't understand is that I never had a subdomain repair.gotgenes.com, but visiting it in the web browser gives an a",
+  "url": "https://serverfault.com/questions/427262/phishing-site-uses-subdomain-that-i-never-registered"
+ },
+ {
+  "id": "serverfault:serverfault:13451",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 114,
+  "title": "Terminal Server Logging",
+  "body": "Is there a simple utility to log terminal server use? I'd like to be able to do some simple monitoring of our terminal server and don't seem to be able to find any good way to do it. I'd want to track logins, session durations, disconnections, and failed login attempts. Ideally it'd just be something simple for a dashboard-style review to make sure everything's cool and there's no problems. It'll ",
+  "url": "https://serverfault.com/questions/13451/terminal-server-logging"
+ },
+ {
+  "id": "hn:50104310",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 113,
+  "title": "Prompt injection in HTTP headers: what 217M web responses show",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=50104310"
+ },
+ {
+  "id": "github:4121523307",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 112,
+  "title": "[speckit.plan] Security Review",
+  "body": "> **Parent Issue:** #5277 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.plan` Create a detailed implementation plan. Break down the specification into actionable steps, identify dependencies, and define the order of execution. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable patter",
+  "url": "https://github.com/Boykai/github-workflows/issues/5279"
+ },
+ {
+  "id": "github:856053899",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 110,
+  "title": "Add security headers by default (with ability to override or disable)",
+  "body": "### Describe the feature you'd like to request Next.js provides the ability to set custom `headers`, but you need to do the research to understand which security headers should be included to secure your site. It would be great if Next.js had sensible defaults that users could override or disable if not needed. This would provide more security out of the box. ### Describe the solution you'd like B",
+  "url": "https://github.com/vercel/next.js/issues/23993"
+ },
+ {
+  "id": "hn:49758689",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 108,
+  "title": "The Implications of Linguistic Illegibility for LLM Security",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=49758689"
+ },
+ {
+  "id": "serverfault:serverfault:93926",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 101,
+  "title": "Logging bandwidth use?",
+  "body": "In an attempt to make my life easier I want to log all bandwidth used on my server for a day, and then somehow export it. It doesn't matter much how it exports it because I can parse that stuff myself, but I need software to be able to accurately log traffic going in and out of eth0. If anyone knows of such software, I'd be grateful if you could provide a link. I have already Googled for such thin",
+  "url": "https://serverfault.com/questions/93926/logging-bandwidth-use"
+ },
+ {
+  "id": "github:4046371249",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 100,
+  "title": "RFC: ComplianceCallbackHandler \u2014 tamper-evident audit trails for regulated industries",
+  "body": "### Checked other resources - [x] This is a feature request, not a bug report or usage question. - [x] I added a clear and descriptive title that summarizes the feature request. - [x] I used the GitHub search to find a similar feature request and didn't find it. - [x] I checked the LangChain documentation and API reference to see if this feature already exists. - [x] This is not related to the lan",
+  "url": "https://github.com/langchain-ai/langchain/issues/35691"
+ },
+ {
+  "id": "github:3924835803",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 93,
+  "title": "Unable to Access Gemini Models Due to Permission Denied Error (403)",
+  "body": "### Pre-submission checklist - [x] I have searched existing issues for duplicates - [x] I have read the [\ud83d\udccb Troubleshooting Guide](https://github.com/NoeFabris/opencode-antigravity-auth/blob/main/docs/TROUBLESHOOTING.md) - [x] I have read the [README](https://github.com/NoeFabris/opencode-antigravity-auth#readme) installation instructions ### Model used antigravity-gemini-3-pro ### Exact error mess",
+  "url": "https://github.com/NoeFabris/opencode-antigravity-auth/issues/426"
+ },
+ {
+  "id": "serverfault:serverfault:637750",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 91,
+  "title": "OpenVPN \"rwRW\" logging",
+  "body": "When an openvpn client is configured to have a debugging level of verb 5 or higher, one will find text similar to \"rWrWRwRwRwRwrWrWrWRw\" in their OpenVPN log, appearing when packets transit the VPN interface. It's clear the messages are associated with reads and writes through the tunneled interface, but what is indicated by the change in case? E.g.: r vs R and w vs W ? I have searched man openvpn",
+  "url": "https://serverfault.com/questions/637750/openvpn-rwrw-logging"
+ },
+ {
+  "id": "github:3534002430",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 87,
+  "title": "SEP-1686: Tasks",
+  "body": "# SEP-1686: Tasks ## Preamble **Title:** Tasks **Author:** Surbhi Bansal, Luca Chang **Status:** Accepted **Type:** Standards Track **Created:** 2025-10-20 ## Abstract This SEP improves support for task-based workflows in the Model Context Protocol (MCP). It introduces both the **task primitive** and the associated **task ID**, which can be used to query the state and results of a task, up to a se",
+  "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1686"
+ },
+ {
+  "id": "hn:36149904",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 84,
+  "title": "Ask HN: Cyber Security folks \u2013 what are your biggest pain points?",
+  "body": "I'm building a startup which focusses on automated cyber defense and tries to build products which can adapt to changing situations in the network landscape as well as network behaviours or process behaviours (EDR/XDR/whatever BS term). In my case I'm building everything from the ground up, and the MVP is trying to start with a better inventory of everything; whereas the inventory focusses on the ",
+  "url": "https://news.ycombinator.com/item?id=36149904"
+ },
+ {
+  "id": "serverfault:serverfault:647894",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 83,
+  "title": "I can't upload server certificate on AWS IAM",
+  "body": "I got AWS iam working on my server , and trying to upload some certificates: aws iam upload-server-certificate --server-certificate-name domain2014 --certificate-body file:///var/www/html/certificate.pem --private-key file:///var/www/html/private-key.pem --certificate-chain file:///var/www/html/ca.pem I get: Error parsing parameter '--certificate-body': file does not exist: /var/www/html/certifica",
+  "url": "https://serverfault.com/questions/647894/i-cant-upload-server-certificate-on-aws-iam"
+ },
+ {
+  "id": "serverfault:serverfault:39916",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 80,
+  "title": "Check public DNS health and RFC compliance",
+  "body": "Every now and again I like to run checks on my DNS servers to make sure they are running right and to RFC spec. I used to use the DNSTools website to do this as it gave me a pretty good picture of what was going on - are all my servers responding to the outside world, and the important (NS, MX especially ) records still up and replicated right. Also to see if my MX records have managed to make it ",
+  "url": "https://serverfault.com/questions/39916/check-public-dns-health-and-rfc-compliance"
+ },
+ {
+  "id": "hn:16151153",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 80,
+  "title": "Ask HN: Found security flaws but vendor seems not to care. What should I do?",
+  "body": "I've found some web app vulnerabilities to some high profile services in my country, but the vendor doesn't seem interested in fixing them as 6 months have passed and they claim to have other things to do, which, judging by the announcements on the main page, is finishing missing features. The fixes to the flaws that allow for iterative exfiltriation of PII are trivial to implement as well. The ot",
+  "url": "https://news.ycombinator.com/item?id=16151153"
+ },
+ {
+  "id": "stackexchange:security:26537",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 79,
+  "title": "Tool for generating MD4 collisions",
+  "body": "There are a lot of research papers available online that discuss vulnerabilities of MD4 algorithm, but I couldn't find any implementation of these. Uptill now I have used tools like John the Ripper or MDCrack and tried to bruteforce the hash. But bruteforcing seems like a waste of CPU power when collision attacks can be done much more efficiently. (In few seconds I've read). Are there any availabl",
+  "url": "https://security.stackexchange.com/questions/26537/tool-for-generating-md4-collisions"
+ },
+ {
+  "id": "github:3048647526",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 78,
+  "title": "Simplify HTTP transport with Websockets and stateless request/response options",
+  "body": "## Is your feature request related to a problem? Please describe. The current HTTP transport mechanisms for MCP (both HTTP+SSE and Streamable HTTP) introduce unnecessary complexity, state management challenges, and security concerns. As someone implementing an MCP server, I've encountered several issues: 1. **Excessive Complexity**: The current approach requires maintaining session state across mu",
+  "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/493"
+ },
+ {
+  "id": "serverfault:serverfault:963055",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 75,
+  "title": "AWS IAM: Restrict Console Access to only One Instance",
+  "body": "I am trying to create an IAM user for the AWS Console with permission to list and perform action on only 1 instance. So I have a total of 6 Instances and I tried hiding 5 of them via IAM Policies by adding the below policy: Breakdown 1. First took all the permissions away 2. Added permission to only one instance { \"Statement\": [ { \"Effect\": \"Deny\", \"Action\": \"*\", \"Resource\": \"*\", \"Condition\": { \"c",
+  "url": "https://serverfault.com/questions/963055/aws-iam-restrict-console-access-to-only-one-instance"
+ },
+ {
+  "id": "hn:49290521",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 75,
+  "title": "Person Hides Prompt Injection in Legal Filing Telling AI to Side with Them",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=49290521"
+ },
+ {
+  "id": "stackexchange:security:151902",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 73,
+  "title": "What standard alternative to ISO 27001 can be used for a small business?",
+  "body": "The business in question has high requirements for information security due to the sensitive nature of their work. The company has 5 people on staff and work with consultants from time to time. Is there another information security standard that can be used instead of ISO 27001 for a business of this size?",
+  "url": "https://security.stackexchange.com/questions/151902/what-standard-alternative-to-iso-27001-can-be-used-for-a-small-business"
+ },
+ {
+  "id": "serverfault:serverfault:626541",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 71,
+  "title": "Amazon AWS IAM Policy for single VPC Subnet",
+  "body": "I want to create an IAM policy that allows a user deploy instances as follows: They can only use 1 AMI They can only deploy to 1 specific VPC subnet They can only use 1 specific VPC security group This scenario is addressed in the VPC documentation here (Example 4): http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_IAM.html#subnet-sg-example-iam I have tried my own version of the policy as",
+  "url": "https://serverfault.com/questions/626541/amazon-aws-iam-policy-for-single-vpc-subnet"
+ },
+ {
+  "id": "hn:35993498",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 68,
+  "title": "Inject My PDF: Prompt Injection for Your Resume",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=35993498"
+ },
+ {
+  "id": "hn:47131689",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 67,
+  "title": "NIST Seeking Public Comment on AI Agent Security (Deadline: March 9, 2026)",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=47131689"
+ },
+ {
+  "id": "serverfault:serverfault:4788",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 66,
+  "title": "Physical server security",
+  "body": "A lot of time and columns are spent discussing securing a server from outside attacks. This is perfectly valid because it's easier for an attacker to use the Internet to break your server than it is for them to gain physical access. However, some IT professionals gloss over the importance of physical server security. Many, if not most, of the most egregious breaches of security are performed from ",
+  "url": "https://serverfault.com/questions/4788/physical-server-security"
+ },
+ {
+  "id": "serverfault:serverfault:142737",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 66,
+  "title": "IT Audit checklist",
+  "body": "I recently have taken on the position of a one man show for a company that is going to have an audit. The network isn't anywhere close to prepared and I have been looking for a general audit checklist since one hasn't been provided by the auditors and haven't found much good information out there. Does anyone have a nice template that will give me a good starting point. I know that this will be hi",
+  "url": "https://serverfault.com/questions/142737/it-audit-checklist"
+ },
+ {
+  "id": "stackexchange:security:191966",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 66,
+  "title": "Best tool to BruteForcing RDP",
+  "body": "I have tried many tools and to do not seem to be successful with locking out an account I am testing on my network with an RDP domain. I used crowbar, ncrack and THC hydra but they don't seem to be working accurately. Can someone point me in the right direction on how to approach this for testing?",
+  "url": "https://security.stackexchange.com/questions/191966/best-tool-to-bruteforcing-rdp"
+ },
+ {
+  "id": "serverfault:serverfault:47079",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 64,
+  "title": "Puppet Security and Network Topologies",
+  "body": "Background: I am finally setting aside some time to join the 21st Century and look at Puppet. As it stands today we version control all server configurations in a repository that is held internally at the office. When an update needs making, the changes are checked back into the repos and manually pushed out to the machine in question. This usually means SFTP'ing to the remote machine and then mov",
+  "url": "https://serverfault.com/questions/47079/puppet-security-and-network-topologies"
+ },
+ {
+  "id": "hn:17024036",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 62,
+  "title": "Ask HN: Security of Passwordless Login?",
+  "body": "Hi, all. I noticed Tumblr (for me, as least) started offering passwordless login ala Medium (i.e. they'll send me a \"magic link\" that logs me in). I was wondering: how secure is this sort of passwordless login? I think I've got a good understanding of how the magic links work (single-use, time-limited tokens, etc.) and that seems secure, but I'm wondering if you can rely on only the actual user re",
+  "url": "https://news.ycombinator.com/item?id=17024036"
+ },
+ {
+  "id": "hn:46925406",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 62,
+  "title": "Google Translate apparently vulnerable to prompt injection",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=46925406"
+ },
+ {
+  "id": "github:3290141045",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 55,
+  "title": "SEP-1299: Server-Side Authorization Management with Client Session Binding",
+  "body": "## Preamble **Title**: Server-Side Authorization Management with Client Session Binding **Author**: @DickHardt **Status**: Draft **Type**: Feature **Created**: 2025-08-04 *Holding on creating a PR until there is community interest in this enhancement.* ## Abstract This SEP proposes moving OAuth authorization flow management from MCP Clients to MCP Servers, eliminating the need for dynamic client r",
+  "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1299"
+ },
+ {
+  "id": "serverfault:serverfault:997706",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 54,
+  "title": "Security Considerations of AWS Private Subnet vs Private Security Group",
+  "body": "AWS Virtual Private Cloud allows several ways of restricting access to devices on the VPC network from the Internet. 1) Place devices into a private subnet (no Internet Gateway). Each device can communicate with other devices using private IP's. No device has a public IP, so no access from the Internet. 2) Place devices into a public subnet. Each device has a public IP, so they can communicate wit",
+  "url": "https://serverfault.com/questions/997706/security-considerations-of-aws-private-subnet-vs-private-security-group"
+ },
+ {
+  "id": "serverfault:serverfault:313234",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 52,
+  "title": "SSH session logging",
+  "body": "We have a policy of logging all SSH session activity for CYA purposes with our clients. With PuTTY under windows this is trivial, as we can log each session to a file using PuTTY's built-in logging facility . But when working from Linux workstations, it's not quite as simple. Note that server-side logging, while important for other reasons, is not part of what we're doing here. These session logs ",
+  "url": "https://serverfault.com/questions/313234/ssh-session-logging"
+ },
+ {
+  "id": "github:4473295777",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 52,
+  "title": "[Feature]: Allow users to add custom agent presets, not only override commands for built-in agents",
+  "body": "### Problem or use case The Agents settings page states: \u201cManage AI agents, set a default, and customize commands.\u201d Currently, command customization only works for built-in agents. Users can override commands for agents like `codex` or `claude`, but cannot add new custom agents such as: - Codex Remote VM: `codex-vm` - Local wrapped Codex profile: `codex --profile foo` - Internal/company CLI agent:",
+  "url": "https://github.com/stablyai/orca/issues/2284"
+ },
+ {
+  "id": "stackexchange:security:206243",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 52,
+  "title": "How to automate publication of CRL and CRT files to CDP and AIA location?",
+  "body": "I'm setting up Two-Tier PKI for the first time in our Windows Server 2012 R2 environment and I've read several tutorials on setting this up. Some of the methodology is very different, but I've chosen to go with the guide at http://www.rebeladmin.com/2018/06/step-step-guide-setup-two-tier-pki-environment/ . One thing that several guides I've read agree on is that a copy of the Offline Root CA and E",
+  "url": "https://security.stackexchange.com/questions/206243/how-to-automate-publication-of-crl-and-crt-files-to-cdp-and-aia-location"
+ },
+ {
+  "id": "github:3990301210",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 51,
+  "title": "[FEATURE] Gmail MCP Connector: Add file attachment support to gmail_create_draft and add gmail_send_draft tool",
+  "body": "### Preflight Checklist - [x] I have searched [existing requests](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20label%3Aenhancement) and this feature hasn't been requested yet - [x] This is a single feature request (not multiple features) ### Problem Statement The Gmail MCP connector in Cowork mode does not support attaching files when creating email drafts. The `gmail_create_dra",
+  "url": "https://github.com/anthropics/claude-code/issues/28575"
+ },
+ {
+  "id": "serverfault:serverfault:42565",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 50,
+  "title": "FLOSS Server management and audit tools",
+  "body": "I've been working with HP's Server Automation tool suite for a long time, and while it's a great tool - it's too much for a small business or home network to use (more accurately: it's way too expensive for anything less than a large company to afford). I'm somewhat familiar with Puppet and OpenNMS for provisioning and monitoring. After googling for other information, though, it seems there's not ",
+  "url": "https://serverfault.com/questions/42565/floss-server-management-and-audit-tools"
+ },
+ {
+  "id": "github:5236793873",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 50,
+  "title": "Containment follow-on: scope questions carried over from the sandboxing blog post (#167)",
+  "body": "# Containment follow-on: scope questions carried over from the sandboxing blog post (#167) PR #167 (\"Treat Your Agent Like an Insider Threat\") drew substantial review. We deliberately kept the blog post narrow \u2014 it argues one thing, that containment is a present-tense requirement \u2014 and fixed accuracy and precision issues in place rather than growing it. A number of review comments were **too good ",
+  "url": "https://github.com/cosai-oasis/ws4-secure-design-agentic-systems/issues/172"
+ },
+ {
+  "id": "serverfault:serverfault:1106683",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 49,
+  "title": "DMARC record is valid, but your domain's None/Quarantine policy does not yet protect it against email spoofing and phishing",
+  "body": "People, Using the website: https://easydmarc.com/tools/dmarc-lookup?domain=name.com I got this error: DMARC record is valid, but your domain's None/Quarantine policy does not yet protect it against email spoofing and phishing. What does it mean and how can I fix the above issue? Do I must manually check the mailbox dmarc@name.com and then decide if it is legitimate or actual spam/spoof emails?",
+  "url": "https://serverfault.com/questions/1106683/dmarc-record-is-valid-but-your-domains-none-quarantine-policy-does-not-yet-pro"
+ },
+ {
+  "id": "serverfault:serverfault:696193",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 48,
+  "title": "How can I chain AWS IAM AssumeRole API calls?",
+  "body": "There are a number of AWS accounts which I don't control. I've had the account owners deploy an IAM Role, TrustingSecurityAuditor , into their accounts which grants the right to assume the TrustingSecurityAuditor role to a different IAM role in my AWS account, TrustedSecurityAuditor . ( Docs on delegating access ) This works great and allows me and my security team to provide security auditing ser",
+  "url": "https://serverfault.com/questions/696193/how-can-i-chain-aws-iam-assumerole-api-calls"
+ },
+ {
+  "id": "stackexchange:security:18819",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 48,
+  "title": "SQL Injection tool (Mac OS X)",
+  "body": "Do you know any software for searching (analyze) SQL injection (on website) from Snow Leopard ? I have found some that can run from Linux or Windows. I understand that most Linux (console) applications could be run under Mac Os x. But is there any GUI based software for that purpose ?",
+  "url": "https://security.stackexchange.com/questions/18819/sql-injection-tool-mac-os-x"
+ },
+ {
+  "id": "serverfault:serverfault:856737",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 47,
+  "title": "AWS IAM Policy for elasticloadbalancing:DescribeTargetHealth",
+  "body": "I am trying to run this cli on a target group: aws elbv2 describe-target-health This IAM policy doesn't work: { \"Version\": \"2012-10-17\", \"Statement\": [ { \"Sid\": \"Stmt1497933736509\", \"Action\": [ \"elasticloadbalancing:DescribeTargetHealth\" ], \"Effect\": \"Allow\", \"Resource\": \"arn:aws:elasticloadbalancing:::*\" } ] } Error message: An error occurred (AccessDenied) when calling the DescribeTargetHealth o",
+  "url": "https://serverfault.com/questions/856737/aws-iam-policy-for-elasticloadbalancingdescribetargethealth"
+ },
+ {
+  "id": "serverfault:serverfault:340083",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 46,
+  "title": "IIS stopped logging",
+  "body": "IIS 7.5 has stopped logging all traffic for a single site (of a couple of dozen on the same box), and I can't work out why. It stopped logging at exactly midday on Friday last week, and nothing since. All log files for other sites are as expected. So far I've checked; Logging configuration is the same as other sites (W3C logging to a directory, one file per day) NTFS ACLs on the log folder are OK ",
+  "url": "https://serverfault.com/questions/340083/iis-stopped-logging"
+ },
+ {
+  "id": "github:2834998115",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 46,
+  "title": "Budget 2025",
+  "body": "## 2024 Recap We did [update on budget 2024](https://github.com/asyncapi/community/issues/1598) on October. So let's first see summary of budget, to get an idea how much left. ### Numbers \ud83d\udcb5 Some figures: - **Budgeted expenses: ~$102,000** - Expenses: - Actual expenses: ~$84,850 - Expenses for 2025: $19,980 //some costs are reimbursed next year, like mentorship program for example - **Total expense",
+  "url": "https://github.com/asyncapi/community/issues/1681"
+ },
+ {
+  "id": "github:3686259798",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 45,
+  "title": "Private Access Control Tokens",
+  "body": "This is a joint problem statement from [Dennis Jackson](https://github.com/dennisjackson), [Sam Schlesinger](https://github.com/SamuelSchlesinger) and [Eric Trouton](https://github.com/etrouton). ## TL;DR We propose to develop a new technology for the web to reduce the friction of CAPTCHAs for users whilst preserving their privacy and still allowing websites to enforce rate limits to mitigate high",
+  "url": "https://github.com/antifraudcg/proposals/issues/22"
+ },
+ {
+  "id": "serverfault:serverfault:832435",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 43,
+  "title": "Are AWS IAM user names case-sensitive?",
+  "body": "As I'm creating users in AWS IAM, I want to know whether the user names are case-sensitive or not.",
+  "url": "https://serverfault.com/questions/832435/are-aws-iam-user-names-case-sensitive"
+ },
+ {
+  "id": "serverfault:serverfault:11521",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 43,
+  "title": "SVN+SSH Security",
+  "body": "I use snv+ssh with key based authentication. Right now in order for any of my svn users to access the repository through Subversion, I must set the repo files to be readable and writable on the filesystem to those users. I want to prevent the users from being able to delete the repo database when logged in to the server via ssh, yet stil be able to checkout and commit code. Thoughts on how I can d",
+  "url": "https://serverfault.com/questions/11521/svnssh-security"
+ },
+ {
+  "id": "github:3823256832",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 43,
+  "title": "[FEATURE] Tool result transform hook for content sanitization",
+  "body": "### Preflight Checklist - [x] I have searched [existing requests](https://github.com/anthropics/claude-code/issues?q=is%3Aissue%20label%3Aenhancement) and this feature hasn't been requested yet - [x] This is a single feature request (not multiple features) ### Problem Statement ### The Architectural Gap Claude Code's hook system provides `PreToolUse` (before tool execution) and `PostToolUse` (afte",
+  "url": "https://github.com/anthropics/claude-code/issues/18653"
+ },
+ {
+  "id": "stackexchange:security:55005",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 43,
+  "title": "Is PCI Compliance mandatory?",
+  "body": "I recently started working on an eCommerce addition to a site I'm working on.In my research looking for a way to do SSL without a certificate/a free certificate I came across PCI Compliance.I have been reading the PCI DSS Requirements from : https://www.pcisecuritystandards.org/documents/pci_dss_v2.pdf and to be honest a lot of this sounds a bit overkill for what I'm doing. The shop I'm working on",
+  "url": "https://security.stackexchange.com/questions/55005/is-pci-compliance-mandatory"
+ },
+ {
+  "id": "github:4058365632",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 41,
+  "title": "Make Home Assistant OS easier to install",
+  "body": "### Problem statement Installing Home Assistant OS today is a fragmented experience that varies wildly depending on the target hardware or platform. There is no single, official tool that guides a user from \"I want to run Home Assistant\" to a working system. **For single board computers (Raspberry Pi, ODROID, etc.):** users rely on the Raspberry Pi Imager or third party tools like Balena Etcher. W",
+  "url": "https://github.com/OpenHomeFoundation/roadmap/issues/58"
+ },
+ {
+  "id": "github:192655104",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 41,
+  "title": "Proposal: PLATFORM.bundle / moduleIdFor",
+  "body": "Currently, there is no way for tooling to statically generate a list of dynamically loaded modules (i.e. loaded through any of the aurelia-loaders). This means that to bundle properly we've got to maintain this list manually, outside of the source-code, and it's a different list for each bundler: - the CLI has got the `aurelia.json` file - JSPM has got the config.js generated from `package.json` c",
+  "url": "https://github.com/aurelia/pal/issues/17"
+ },
+ {
+  "id": "serverfault:serverfault:850391",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 40,
+  "title": "wanna cry ransomware on LInux ?",
+  "body": "Do Linux users bother about wanna cry ransomware. I am not talking about using windows emulation like WINE. All my servers and office desktops are on linux, I am assuming I am safe against at least this ransomware. But I just want to make sure",
+  "url": "https://serverfault.com/questions/850391/wanna-cry-ransomware-on-linux"
+ },
+ {
+  "id": "serverfault:serverfault:528337",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 39,
+  "title": "Bastion host for PCI compliance",
+  "body": "A client in the retail industry has a network with point-of-sale (POS) terminals that connect to a POS Server. Additionally, most of the Windows workstations in non-sales areas also connect to the same server. This is because the POS software is only one module of a larger legacy application that runs everything for the company (inventory, purchasing, accounting, etc.). According to our PCI audito",
+  "url": "https://serverfault.com/questions/528337/bastion-host-for-pci-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:946620",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 39,
+  "title": "local mysql was hacked with ransomware hack. How to check if database data was downloaded?",
+  "body": "I had a test mysql database running on Vagrant dev box. Turns out the network wasn't that secure. All of the databases were deleted (and replaced with a DB ransomware note) and in the logs I can see all of the drop db commands. However, I don't see any sign of dump or mysql dump commands anywhere. There are some commands like below in the logs. Query SHOW SESSION VARIABLES LIKE 'FOREIGN_KEY_CHECKS",
+  "url": "https://serverfault.com/questions/946620/local-mysql-was-hacked-with-ransomware-hack-how-to-check-if-database-data-was-d"
+ },
+ {
+  "id": "github:4396046054",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 39,
+  "title": "Alternative path: use native CLI resume/continue plus sessionMap instead of full transcript reinjection on every turn",
+  "body": "## Problem Issue #730 proposes the cleaner long-term fix for session continuity in Open Design: reuse ACP sessions directly for ACP-capable agents instead of creating a fresh session on every turn. There is also a second possible approach: - keep the current per-run spawn model; - do not rely on ACP session restore as the primary mechanism; - instead, use each CLI agent's own native conversation r",
+  "url": "https://github.com/nexu-io/open-design/issues/744"
+ },
+ {
+  "id": "hn:2670078",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 39,
+  "title": "Ask HN: Found security flaw in site, what should I do?",
+  "body": "I found an obvious security flaw in the site of a regional business that serves 10's of thousands of customers a month - think a hotel room or airline ticket. Just change the sequential transaction id in the URL and you can see all the details of any transaction (with the exception of credit card number) for the past year. Even worse you can change any reservation before it is used. What should I ",
+  "url": "https://news.ycombinator.com/item?id=2670078"
+ },
+ {
+  "id": "hn:945034",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 39,
+  "title": "Ask HN: Is security by obfuscation sufficient?",
+  "body": "I am currently working on a web application that allows users to upload files. There is much more to it than this of course, but I am asking the following question solely in relation to the storage of files. I am planning on using a CDN (such as Amazon's S3) and my question is simple: How effective is obfuscating the names of publicly available files using a UUID for security purposes? For example",
+  "url": "https://news.ycombinator.com/item?id=945034"
+ },
+ {
+  "id": "serverfault:serverfault:760855",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 37,
+  "title": "how did ransomware delete shadowcopies on file server",
+  "body": "We had a PC infected with a Ransomware Trojan RANSOM_CRYPTESLA.AC that encrypted a bunch of files on a network drive. We isolated the PC and just restored from backup. One of the things that happened at the same time was all our shadow copies from the file server were deleted too. This server was not infected - scanned with AV and the special ransomware tool from Trend. The server is Windows 2008R",
+  "url": "https://serverfault.com/questions/760855/how-did-ransomware-delete-shadowcopies-on-file-server"
+ },
+ {
+  "id": "hn:29627171",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 37,
+  "title": "Ask HN: Security Cameras Inside Houses?",
+  "body": "I recently received a promotional offer in the mail for a home security system. It boasts both a camera doorbell, but also cameras for the sole purpose of monitoring rooms inside your house. The ad shows an example of monitoring your living room on your phone [0]. In the past month I've been to a few homes of family and friends, and was disturbed to see some of them have cameras monitoring the kit",
+  "url": "https://news.ycombinator.com/item?id=29627171"
+ },
+ {
+  "id": "github:376156151",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 36,
+  "title": "Migrate from Slack to an alternative platform",
+  "body": "> _This is a Bisq Network proposal. Please familiarize yourself with the [submission and review process](https://docs.bisq.network/proposals.html)._ This is a WIP proposal in the sense that it's incomplete and needs a proper owner to take it forward. I wanted to put this placeholder here, though, to make it clear that a number of us would be interested to see a proper proposal for migrating from S",
+  "url": "https://github.com/bisq-network/proposals/issues/54"
+ },
+ {
+  "id": "github:1425934394",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 35,
+  "title": "[Sandbox] Inspektor Gadget",
+  "body": "### Application contact emails chriskuehl@microsoft.com, mauriciov@microsoft.com ### Project Summary Inspektor Gadget is a collection of tools (or gadgets) to debug and inspect Kubernetes resources and applications ### Project Description Inspektor Gadget is a collection of tools (or gadgets) to debug and inspect Kubernetes resources and applications. It manages the packaging, deployment and execu",
+  "url": "https://github.com/cncf/sandbox/issues/7"
+ },
+ {
+  "id": "serverfault:serverfault:871410",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 34,
+  "title": "Vshub constantly logging",
+  "body": "I'm managing a small server with Windows Server 2012 R2 Foundation from HP on board. A few months ago, I've installed MSSQL Server 2016 with the latest Management Studio. Since then, there is an app called \"vshub\" working in background. I've seen people asking how to disable it, but no one seemed to experience the same issue as I do. Every few minutes, this app creates a ~34MB log file in the C:\\U",
+  "url": "https://serverfault.com/questions/871410/vshub-constantly-logging"
+ },
+ {
+  "id": "github:2150821422",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 34,
+  "title": "WASM UDFs",
+  "body": "### Is your feature request related to a problem or challenge? Databases / ETL solutions built on top of DataFusion can use UDFs (in their various forms) to extend the functionality of DataFusion, e.g. to add new scalar or aggregation functions. This extensibility however does NOT automatically extend to their users, since they cannot and (for security reasons) should not add code to the running s",
+  "url": "https://github.com/apache/datafusion/issues/9326"
+ },
+ {
+  "id": "github:2700427527",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 34,
+  "title": "FR: Support for non-tls TCP packets on Funnel (raw tcp traffic)",
+  "body": "### What are you trying to do? I want to host a simple Minecraft Server for my friends but telling them to install Tailscale is a hasle, I prefer to do the security on the server itself rather than Tailscale. Unfortunately, Funnel only works with tls-terminated tcp packets which the Minecraft Client can't connect to it. ### How should we solve this? Please support the forward of raw tcp traffic, w",
+  "url": "https://github.com/tailscale/tailscale/issues/14240"
+ },
+ {
+  "id": "serverfault:serverfault:899432",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 33,
+  "title": "Can AWS IAM be used on any non-ec2 instances?",
+  "body": "Currently, we use ec2 instances in our environment. For the purpose to avoid credentials exposed to source code, we use IAM Roles to delegate access to users, applications, or services. However, there are also several on-premises intances in our envioronment. Can they also use IAM role just like what EC2 does? I know that CodeDeploy support to register on-premises instances with IAM roles, but in ",
+  "url": "https://serverfault.com/questions/899432/can-aws-iam-be-used-on-any-non-ec2-instances"
+ },
+ {
+  "id": "hn:17387079",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 33,
+  "title": "Ask HN: Securely exposing host just to webhooks?",
+  "body": "Background: I wish to listen for github webhooks on a Jenkins instance sitting in a private network. There are no public endpoints on the network, it's for internal services. Easy enough to add an endpoint that forwards to Jenkins, but I'm not a web dev person and have no experience securing public endpoints so this is a terrifying prospect to me. I could easily introduce a huge backdoor without r",
+  "url": "https://news.ycombinator.com/item?id=17387079"
+ },
+ {
+  "id": "serverfault:serverfault:565271",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "serverfault",
+  "engagement": 32,
+  "title": "How do I install OSSIM (Alientvault SIEM) manually?",
+  "body": "AlienVault by defult is a .iso image. It installed on the core of Debian. I want to install it on Ubuntu 12.04. How can i do that?! Or is it possible or not?! (AlienVault is a SIEM product, it is an open source monitoring security logs .., and use in Security Operations Center. Due to some reasons i need to installing it on Ubuntu. All the files of this product are in pool directory of its Debian ",
+  "url": "https://serverfault.com/questions/565271/how-do-i-install-ossim-alientvault-siem-manually"
+ },
+ {
+  "id": "serverfault:serverfault:296421",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 32,
+  "title": "CentOS PCI Compliance assessment",
+  "body": "We are currently working our way through a PCI compliance assessment on our server running CentOS. We are getting a lot of 'severe' issues with suggested fixes. The suggestions to rectify the issues are mostly to update the packages to the latest version. Sound advice I thought, until I ran 'sudo yum update', then ran that scan again and frustratingly the issues hadn't gone. I spoke to our hosting",
+  "url": "https://serverfault.com/questions/296421/centos-pci-compliance-assessment"
+ },
+ {
+  "id": "serverfault:serverfault:261816",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 32,
+  "title": "PCI Compliance: File Integrity Checkers",
+  "body": "We're looking for a file integrity checker for our windows server environment. Anyone have any good suggestions?",
+  "url": "https://serverfault.com/questions/261816/pci-compliance-file-integrity-checkers"
+ },
+ {
+  "id": "serverfault:serverfault:887548",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 31,
+  "title": "Ansible enable audit logging",
+  "body": "I am looking for audit logging in Ansible. I am running my playbook as root, but i want to write in log who the local user is executing the playbook. Please help in enabling logs to show user.",
+  "url": "https://serverfault.com/questions/887548/ansible-enable-audit-logging"
+ },
+ {
+  "id": "hn:44238404",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 31,
+  "title": "JavelinGuard: Low-Cost Transformer Architectures for LLM Security",
+  "body": "We present JavelinGuard, a suite of low-cost, high-performance model architectures designed for detecting malicious intent in Large Language Model (LLM) interactions, optimized specifically for production deployment. Recent advances in transformer architectures, including compact BERT(Devlin et al. 2019) variants (e.g., ModernBERT (Warner et al. 2024)), allow us to build highly accurate classifier",
+  "url": "https://news.ycombinator.com/item?id=44238404"
+ },
+ {
+  "id": "stackexchange:security:9761",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 31,
+  "title": "HIPAA compliance without PII",
+  "body": "I have a web site where people fill medical syndrome questioners. They can see how their condition changes during the time period. I am not storing ANY PII information, just user name. I can store in encrypted (if I have to). My question is \u2013 Do I have to be HIPAA compliant? Remember NO PII. If I would store email address (encrypted) \u2013 will it change my regulatory situation? Thanks Aaron",
+  "url": "https://security.stackexchange.com/questions/9761/hipaa-compliance-without-pii"
+ },
+ {
+  "id": "stackexchange:security:43009",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 31,
+  "title": "ReverseProxy and PCI Compliance",
+  "body": "My company has a PCI compliant billing gateway and they expose a service for submitting credit card payment details. I am writing a (Single Page Application/end-to-end javascript) website for them that is on a different domain than this billing gateway so naturally calling this service from javascript in the client (browser) violates the same-origin policy. In the past, I have used proxies to get ",
+  "url": "https://security.stackexchange.com/questions/43009/reverseproxy-and-pci-compliance"
+ },
+ {
+  "id": "github:4786173445",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 30,
+  "title": "DeepSeek Community \u2014 June 2026 Technical Ecosystem Summary Report (Draft for Review)",
+  "body": "# DeepSeek Community \u2014 June 2026 Technical Ecosystem Summary Report (Draft for Review) > **Purpose**: Monthly community technical ecosystem briefing for the DeepSeek product/engineering/operations teams, also serving as a public community review document. > **Objective**: Present substantive technical contributions, cross\u2011framework collaboration progress, and key signals that merit official attent",
+  "url": "https://github.com/deepseek-ai/DeepSeek-V3/issues/1471"
+ },
+ {
+  "id": "serverfault:serverfault:913838",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "serverfault",
+  "engagement": 29,
+  "title": "AWS IAM role RDS authentication failure",
+  "body": "Trying to create a process for IAM role based authentication to my RDS instance per AWS wiki, but no matter what I seem to do I get a basic auth failure akin to a bad password, with no logging anywhere to give me more insights into the problem. My steps to reproduce: Ensure IAM authentication is enabled in RDS instance. Create a role db_user_test with RDSFullAccess policy and the following inline ",
+  "url": "https://serverfault.com/questions/913838/aws-iam-role-rds-authentication-failure"
+ },
+ {
+  "id": "github:1071570667",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 29,
+  "title": "Add a pip audit command/task",
+  "body": "I'm looking for a solution to automatically scan the packages in my selected interpreter for a workspace and raise warning/log messages on the UI when there are security vulnerabilities. `pip-audit` is a tool for scanning Python environments for packages with known vulnerabilities. It uses the Python Packaging Advisory Database (https://github.com/pypa/advisory-db) via the [PyPI JSON API](https://",
+  "url": "https://github.com/microsoft/vscode-python/issues/18115"
+ },
+ {
+  "id": "github:1251273813",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 29,
+  "title": "On The Fly Encryption Feature Proposal",
+  "body": "## Feature Proposal This document is a proposal of On The Fly encryption feature that allows OpenSearch to encrypt search indices on the Directory level using different encryption keys per index. ## Why we need it Enterprise customers require additional controls over data they store in multi-tenanted cloud services. Data encryption with a customer provided key is one of the features these customer",
+  "url": "https://github.com/opensearch-project/OpenSearch/issues/3469"
+ },
+ {
+  "id": "stackexchange:security:72764",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 29,
+  "title": "PCI Compliance and PayPal",
+  "body": "First, please forgive my ignorance. Until this week, the only \"credit card security\" I understood was how to hack systems and why to write PHP pages with the types of features I do (msqli, pdo, parameterized query, etc..). As per my involved ignorance, I will make this question as robust as I can, attempting to not over-complicate it. (Maybe too late now) I've checked every PCI Compliance Q on her",
+  "url": "https://security.stackexchange.com/questions/72764/pci-compliance-and-paypal"
+ },
+ {
+  "id": "serverfault:serverfault:303926",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 28,
+  "title": "How to Isolate PCI Compliance",
+  "body": "We currently process, but do not store, credit card data. We authorize the cards via a self developed application using the authorize.net API. If possible, we would like to limit all requirements of PCI that effect our servers (such as installing Anti-Virus) to an isolated separate environment. Is that possible to do while still maintaining compliance? If so, what would constitute sufficent isolat",
+  "url": "https://serverfault.com/questions/303926/how-to-isolate-pci-compliance"
+ },
+ {
+  "id": "hn:12801974",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 28,
+  "title": "Ask HN: IT Security",
+  "body": "I recently have been attending and researching anything and everything about IT security, primarily windows. Are there any books/resources/etc. that you would recommend for an individual who is passionate about learning? I have seen countless books on the subject, but I would rather not waste the limited time I have reading something that isn't helpful. I have a degree in Management Information Sy",
+  "url": "https://news.ycombinator.com/item?id=12801974"
+ },
+ {
+  "id": "hn:1812632",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 28,
+  "title": "Ask HN: Found security vulnerability at work. rebuked. was I wrong?",
+  "body": "Obviously this is a throwaway account. OK, so I have a question about security testing and whether or not I crossed a line... I work at a very small company and we have a test environment running on virtual machines firewalled off from the rest of the network running under another devs desk. I have to jump into another server first to get into this environment and the only sensitive data is our so",
+  "url": "https://news.ycombinator.com/item?id=1812632"
+ },
+ {
+  "id": "stackexchange:security:171131",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 28,
+  "title": "Online Diffie-Hellman Tool",
+  "body": "I stumbled upon this website which provides a service to generate Diffie-Hellman parameters online for free to the public. Surely using a website like this would be a bad idea to use in a production environment to generate the DH parameters instead of generating them yourself? Or does it actually make no difference where they come from?",
+  "url": "https://security.stackexchange.com/questions/171131/online-diffie-hellman-tool"
+ },
+ {
+  "id": "stackexchange:security:45695",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 28,
+  "title": "Using Selenium tool for xss scripts",
+  "body": "Ok, so i need to know can Selenium webdriver tool be used for testing xss vulnerabilities and exploits. If its possible, then pleasee provide me with some example or tutorial. Apologizes, if am wrong to ask this question.",
+  "url": "https://security.stackexchange.com/questions/45695/using-selenium-tool-for-xss-scripts"
+ },
+ {
+  "id": "stackexchange:security:22564",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 28,
+  "title": "Could a computer program be used to automate testing for trapdoors?",
+  "body": "Could a computer program given the source or object version of another program be used to automate testing for trapdoors/backdoors?",
+  "url": "https://security.stackexchange.com/questions/22564/could-a-computer-program-be-used-to-automate-testing-for-trapdoors"
+ },
+ {
+  "id": "serverfault:serverfault:862261",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 27,
+  "title": "Spamassassin logging scores",
+  "body": "I have the Spamassassin 3.4 + Ubuntu 14 + Qmail + Clamav. All are running OK. When a SPAM is detected, it is marked as [spam] and delivered to recipients. Readind the spamd log (mail.log for me), I grep these lines: Jul 14 17:32:36 mail spamd[2575]: spamd: identified spam (11.3/7.0) for foo.user@foodomain.com.br:89 in 1.9 seconds, 5217 bytes. Jul 14 17:32:36 mail spamd[2575]: spamd: result: Y 11 -",
+  "url": "https://serverfault.com/questions/862261/spamassassin-logging-scores"
+ }
+]

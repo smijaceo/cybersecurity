@@ -1,0 +1,1532 @@
+[
+ {
+  "id": "github:2053229592",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\u3010CS-part4\u3011New submissions for Thu, 21 Dec 23",
+  "body": "## Keyword: gpt ### Can It Edit? Evaluating the Ability of Large Language Models to Follow Code Editing Instructions - **Authors:** Federico Cassano, Luisa Li, Akul Sethi, Noah Shinn, Abby Brennan-Jones, Anton Lozhkov, Carolyn Anderson, Arjun Guha - **Subjects:** Software Engineering (cs.SE); Artificial Intelligence (cs.AI); Machine Learning (cs.LG); Programming Languages (cs.PL) - **Arxiv link:**",
+  "url": "https://github.com/Yukeaaa/arxiv-daily/issues/1012"
+ },
+ {
+  "id": "github:4799608294",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcf0 Hacker News AI Digest 2026-07-03",
+  "body": "# Hacker News AI Community Digest 2026-07-03 > Source: [Hacker News](https://news.ycombinator.com/) | 30 stories | Generated: 2026-07-03 01:56 UTC --- # Hacker News AI Community Digest **Date:** 2026-07-03 ## 1. Today's Highlights The dominant narrative today is geopolitical, centered on OpenAI\u2019s proposal to grant a 5% stake to the US government (specifically the Trump administration) to mitigate ",
+  "url": "https://github.com/Chestnuts-Sisyphus/gittok/issues/286"
+ },
+ {
+  "id": "github:5194641516",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[P1][Architecture][AI] Define AI-optional, AI-enhanced platform architecture",
+  "body": "## Background Beluga is a data platform spanning structured, semi-structured, unstructured, edge, API, document, image/video, Medallion, DuckDB/Trino, catalog, quality, and lineage capabilities. AI will naturally integrate with many of these flows, but the platform must not become dependent on AI availability or a specific model/provider. ## Goal Define a dual-mode architecture in which every core",
+  "url": "https://github.com/dasomel/beluga/issues/90"
+ },
+ {
+  "id": "github:3706446930",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[arXiv 2025] A Light-Weight Large Language Model File Format for Highly-Secure Model Distribution (Huawei)",
+  "body": "\ud83e\udde0 **Title:** A Light-Weight Large Language Model File Format for Highly-Secure Model Distribution \ud83d\udcc5 **Published:** 2025-12-04T08:49:22Z \ud83d\udd17 **URL:** https://arxiv.org/abs/2512.04580v1 \ud83e\uddd1\u200d\ud83d\udcbc **Companies:** Huawei \ud83d\udcdd **Summary:** Here is a three-sentence summary of the paper: 1. Existing methods for securely distributing Large Language Models (LLMs) are either too slow, expensive, or lack built-in securi",
+  "url": "https://github.com/zippeurfou/arxiv_rec_finder/issues/881"
+ },
+ {
+  "id": "github:6544827639",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "usage-report: and it fels slow and hard to read clogging the window.",
+  "body": "**Skill:** `usage-report` \u00b7 **Plugin commit:** `d169e01d5668` **What happened** The usage report for the plugin generated a long file and the skill showed the file being generated line by line **What I did not like** and it fels slow and hard to read clogging the window. I don't think seeing the json being rendered live was a good thing. **What I would like instead** I think it doesn't need to sho",
+  "url": "https://github.com/lasp/dev-tools/issues/144"
+ },
+ {
+  "id": "github:3782172232",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Automated QA-FSM: Multi-Modal Testing Orchestration",
+  "body": "## Vision Build a reusable QA-FSM that orchestrates comprehensive automated testing across web, mobile, API, accessibility, performance, and security dimensions. The FSM coordinates multiple specialist LLMs, each connected via MCP to relevant testing tools, producing a complete quality report without human intervention. **Positioning**: This could be a shrink-wrapped product\u2014a \"QA-as-FSM\" that any",
+  "url": "https://github.com/JulesGosnell/claij/issues/163"
+ },
+ {
+  "id": "github:4589580701",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[Issue]: Lorebook regex safety no longer has a hard execution timeout",
+  "body": "## Summary The Batch 7 lorebook parityscan found that refactor no longer preserves legacy hard-timeout behavior for user-supplied lorebook regex keyword matching. Legacy ran regex tests in a VM with a timeout; refactor uses static safety heuristics and a scan-text length cap, but no interruptible execution timeout. ## Expected behavior Lorebook regex keyword matching should fail closed when a user",
+  "url": "https://github.com/Pasta-Devs/Marinara-Engine/issues/2199"
+ },
+ {
+  "id": "github:4954669974",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcca AI CLI Tools Digest 2026-07-23",
+  "body": "# AI CLI Tools Community Digest 2026-07-23 > Generated: 2026-07-23 01:50 UTC | Tools covered: 9 - [Claude Code](https://github\u200b.com/anthropics/claude-code) - [OpenAI Codex](https://github\u200b.com/openai/codex) - [Gemini CLI](https://github\u200b.com/google-gemini/gemini-cli) - [GitHub Copilot CLI](https://github\u200b.com/github/copilot-cli) - [Kimi Code CLI](https://github\u200b.com/MoonshotAI/kimi-cli) - [OpenCod",
+  "url": "https://github.com/Chestnuts-Sisyphus/gittok/issues/528"
+ },
+ {
+  "id": "github:1938325736",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "New submissions for Wed, 11 Oct 23",
+  "body": "## Keyword: differential privacy ### Fingerprint Attack: Client De-Anonymization in Federated Learning - **Authors:** Qiongkai Xu, Trevor Cohn, Olga Ohrimenko - **Subjects:** Cryptography and Security (cs.CR); Artificial Intelligence (cs.AI); Computation and Language (cs.CL); Machine Learning (cs.LG) - **Arxiv link:** https://arxiv.org/abs/2310.05960 - **Pdf link:** https://arxiv.org/pdf/2310.0596",
+  "url": "https://github.com/qiaoyuet/arxiv_daily/issues/27"
+ },
+ {
+  "id": "github:5573873347",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Latest 15 Papers - September 25, 2026",
+  "body": "**Please check the [Github](https://github.com/zezhishao/MTS_Daily_ArXiv) page for a better reading experience and more papers.** ## LLM AND attack | **Title** | **Date** | **Comment** | | --- | --- | --- | | **[Safeguarding LLM Agents against Long-Horizon Threats via Shadow Memory](https://arxiv.org/abs/2605.03228v2)** | 2026-09-23 | Accep... Accepted to ACM CCS 2026 | | **[Your Model Is Leaking:",
+  "url": "https://github.com/bddk520/DailyArXiv/issues/400"
+ },
+ {
+  "id": "github:5558613850",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Latest 15 Papers - September 24, 2026",
+  "body": "**Please check the [Github](https://github.com/zezhishao/MTS_Daily_ArXiv) page for a better reading experience and more papers.** ## LLM AND attack | **Title** | **Date** | **Comment** | | --- | --- | --- | | **[ActGov: Governing LLM Agent Actions via Policy-Constrained Validation](https://arxiv.org/abs/2609.24446v2)** | 2026-09-22 | | | **[Probabilistic Modeling of Jailbreak on Multimodal LLMs: F",
+  "url": "https://github.com/bddk520/DailyArXiv/issues/399"
+ },
+ {
+  "id": "github:4662044731",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily News Digest - 2026-06-15",
+  "body": "# 2026-06-15 ## HackerNews 1. [Firewood Splitting Simulator](https://screen.toys/firewood/) 2. [Show HN: Kage \u2013 Shadow any website to a single binary for offline viewing](https://github.com/tamnd/kage) 3. [Rio de Janeiro's \"homegrown\" LLM appears to be a merge of an existing model](https://github.com/nex-agi/Nex-N2/issues/4) 4. [Your ePub Is fine](https://andreklein.net/your-epub-is-fine-kobo-disa",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/353"
+ },
+ {
+  "id": "github:4999581316",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Coram AI: Head of People",
+  "body": "**Company:** Coram AI **Location:** Sunnyvale **Compensation:** not stated **Posted:** 2026-07-16 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/coram-ai/b5aa515f-f11d-4698-971b-6e0d8610bd76 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description At Coram AI, we\u2019re reimagining ",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/82"
+ },
+ {
+  "id": "github:4999524423",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Coram AI: Head of People",
+  "body": "**Company:** Coram AI **Location:** Sunnyvale **Compensation:** not stated **Posted:** 2026-07-16 **Source:** Ashby **Apply:** https://jobs.ashbyhq.com/coram-ai/b5aa515f-f11d-4698-971b-6e0d8610bd76 --- ### Review checklist - [ ] JDR fit score - [ ] Competitiveness score (only if fit is 60+) - [ ] Contact type identified - [ ] Effort band assigned --- Job description At Coram AI, we\u2019re reimagining ",
+  "url": "https://github.com/rmallorybpc/job-watch/issues/44"
+ },
+ {
+  "id": "github:3552980360",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Feature: AI Virtual Assistant Widget for Property Search",
+  "body": "## Feature Description Implement an AI-powered virtual assistant widget that allows clients to interact with the real estate platform using voice or text chat. This assistant will be integrated with our backend to provide intelligent, conversational property search capabilities. ## Overview Instead of manually navigating through the website, clients can simply speak or chat with an AI agent that u",
+  "url": "https://github.com/malionsara/luxury-estate-folio/issues/1"
+ },
+ {
+  "id": "github:4357937791",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Invicti - INFORMATION:LLM Response Pattern Detected",
+  "body": "| Field | Value | | --- | --- | | Vulnerability | LLM Response Pattern Detected | | Severity | INFORMATION | | URL | [https://vulnbank.org/api/ai/chat](https://vulnbank.org/api/ai/chat) | | Target Name | Vulnbank Test | | Target URL | [https://vulnbank.org/](https://vulnbank.org/) | ## Classification CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N \\- Score: 4.8 CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/",
+  "url": "https://github.com/OrionInvictus2/trackertest/issues/16"
+ },
+ {
+  "id": "github:5233279197",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "LinkedIn Drafts - Weekly Tech Roundup (2026-08-24)",
+  "body": "# Weekly LinkedIn Drafts - Generated on 8/24/2026 ## Topic: Securing LLM applications and prompt injection mitigation patterns (OWASP Top 10 for LLMs) We often zero in on prompt injection (LLM01) when discussing LLM security \u2013 and rightly so, as the OWASP Top 10 for LLMs (2025) highlights its criticality. But I've found that focusing *solely* on input controls can leave a significant blind spot: t",
+  "url": "https://github.com/cp262808/Projects/issues/52"
+ },
+ {
+  "id": "github:4857783734",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Looking for Contributors: AI-powered Vulnerability Analysis & Report Generation",
+  "body": "# \ud83d\ude80 Looking for Contributors! Hey everyone! I've been working on **GuardScanner**, an open-source vulnerability scanner built in Python. The project currently performs automated vulnerability scanning and generates PDF reports, but I'd love to take it much further by integrating AI. ## Current Features - Website vulnerability scanning - Reconnaissance modules - Modular architecture - PDF report ge",
+  "url": "https://github.com/DragonB0i/GuardScanner-V2/issues/2"
+ },
+ {
+  "id": "github:6439831681",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcc8 AI Open Source Trends 2026-11-17",
+  "body": "# AI Open Source Trends 2026-11-17 > Sources: GitHub Trending + GitHub Search API | Generated: 2026-11-17 07:36 UTC --- **GitHub AI Open Source Trends Report** **Date:** 2026-11-17 ### Step 1 (Filter): AI-Relevant Projects Selection From the provided data, the following projects are clearly related to AI/ML. General frontend frameworks (Svelte), unrelated tools (Docker management, historical maps)",
+  "url": "https://github.com/datnguyenquy94/news-radar/issues/1111"
+ },
+ {
+  "id": "github:4870137352",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "AI Briefing Request - 2026-07-13 08:00 UTC+8",
+  "body": "@codex Please create today's PulseMind software-engineer AI radar as a pull request. Date: 2026-07-13 Goal: Create a high-signal Chinese curated digest for software engineers. It should collect, organize, and publish AI-related news, technical blogs, tools, papers, and engineering practice that software engineers would actually want to open, read, try, or track. Focus areas: - AI application devel",
+  "url": "https://github.com/happyfeetw/pulse-mind/issues/153"
+ },
+ {
+  "id": "github:3771171720",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Systematic Review - Paper 13",
+  "body": "# Tasks Paper: https://arxiv.org/abs/2305.15324 1. Use the codebook + lookup table to perform systematic review - extract/categorize recommendations from the paper and output them as rows. 2. Upload updated excel file containing systematic review results. ```markdown | Suggestion Name | Source | Source URL | Suggestion Text | Relevant Class | Extracted Item Type | Paper Scope | Workflow stage | Ar",
+  "url": "https://github.com/dshi2/evaluation-consensus-project/issues/24"
+ },
+ {
+  "id": "github:2990975540",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2025-04-13",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082025-04-13\uff09 - Recent Commits to cve:main - [Update Sat Apr 12 16:13:08 UTC 2025](https://github.com/trickest/cve/commit/3216dc26ad6d2f3d4aac45cdafc8c1d76b863b87) - Security Boulevard - [Rest Assured with Top-tier Cloud-Native Security](https://securityboulevard.com/2025/04/rest-assured-with-top-tier-cloud-native-security/?utm_source=rss&utm_medium=rss&utm_campaign=rest-assured-with-top-ti",
+  "url": "https://github.com/ruohong2018/ruohong2018.github.io/issues/791"
+ },
+ {
+  "id": "github:5787068418",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcac Tech Community AI Digest 2026-10-10",
+  "body": "# Tech Community AI Digest 2026-10-10 > Sources: [Dev.to](https://dev.to/) (30 articles) + [Lobste.rs](https://lobste.rs/) (3 stories) | Generated: 2026-10-10 01:54 UTC --- ## Tech Community AI Digest (October 10, 2026) ### 1. Today's Highlights The developer community is currently fixated on the \"last mile\" of AI integration, moving past simple prompts toward complex agentic workflows and local e",
+  "url": "https://github.com/jinming1345/agents-radar/issues/282"
+ },
+ {
+  "id": "github:4756589483",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily News Digest - 2026-06-27",
+  "body": "# 2026-06-27 ## HackerNews 1. [Previewing GPT\u20115.6 Sol: a next-generation model](https://openai.com/index/previewing-gpt-5-6-sol/) 2. [U.S. government will decide who gets to use GPT-5.6](https://www.washingtonpost.com/technology/2026/06/26/openai-says-us-government-will-vet-users-its-latest-ai-model/) 3. [MicroVMs: Run isolated sandboxes with full lifecycle control](https://aws.amazon.com/blogs/aw",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/365"
+ },
+ {
+  "id": "github:5312173947",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Arxiv Paper Digest for 2026-09-01",
+  "body": "### MusGU+: Toward a Musician-Centered Evaluation Framework and Discovery Tool for Generative Music AI - **Authors:** Laura Ib\u00e1\u00f1ez-Mart\u00ednez, Roser Batlle-Roca, Xavier Serra, Mart\u00edn Rocamora - **Subjects:** Sound (cs.SD), Artificial Intelligence (cs.AI), Computers and Society (cs.CY), Audio and Speech Processing (eess.AS) - **Arxiv link:** https://arxiv.org/abs/2608.30940 - **Pdf link:** https://ar",
+  "url": "https://github.com/mismayil/daily-arxiv-digest/issues/384"
+ },
+ {
+  "id": "github:5823869216",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcac Tech Community AI Digest 2026-10-13",
+  "body": "# Tech Community AI Digest 2026-10-13 > Sources: [Dev.to](https://dev.to/) (30 articles) + [Lobste.rs](https://lobste.rs/) (6 stories) | Generated: 2026-10-13 03:10 UTC --- ## Tech Community AI Digest: 2026-10-13 ### 1. Today's Highlights The developer community is currently fixated on the practical limitations and \"hidden costs\" of AI integration, moving past the initial hype toward rigorous debu",
+  "url": "https://github.com/jinming1345/agents-radar/issues/324"
+ },
+ {
+  "id": "github:2990974869",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2025-04-13",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082025-04-13\uff09 - SecWiki News - [ ] [SecWiki News 2025-04-12 Review](http://www.sec-wiki.com/?2025-04-12) - Security Boulevard - [ ] [Rest Assured with Top-tier Cloud-Native Security](https://securityboulevard.com/2025/04/rest-assured-with-top-tier-cloud-native-security/?utm_source=rss&utm_medium=rss&utm_campaign=rest-assured-with-top-tier-cloud-native-security) - [ ] [Exploring Innovative N",
+  "url": "https://github.com/BruceFeIix/picker/issues/1642"
+ },
+ {
+  "id": "github:4216587790",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "LLM Daily Update - 2026-04-07 (20 items)",
+  "body": "# LLM Research & Tech Daily Update - 2026-04-07 **5** GitHub updates | **15** arXiv papers | **0** Papers with Code --- ## GitHub Updates (5) ### New Releases **1. [ggerganov/llama.cpp](https://github.com/ggml-org/llama.cpp/releases/tag/b8682)** `b8682` Relevance: MEDIUM (score: 2.7) | Topics: coding, deployment > This release adds Q1_0 1-bit quantization support to llama.cpp for CPU inference, pr",
+  "url": "https://github.com/changao1/updater-for-LLM-tech/issues/49"
+ },
+ {
+  "id": "github:2097304376",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2024-01-24",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082024-01-24\uff09 - Files \u2248 Packet Storm - [Ubuntu Security Notice USN-6595-1](https://packetstormsecurity.com/files/176682/USN-6595-1.txt) - [Ubuntu Security Notice USN-6594-1](https://packetstormsecurity.com/files/176681/USN-6594-1.txt) - [Ubuntu Security Notice USN-6593-1](https://packetstormsecurity.com/files/176680/USN-6593-1.txt) - [Ubuntu Security Notice USN-6592-1](https://packetstormse",
+  "url": "https://github.com/ruohong2018/ruohong2018.github.io/issues/350"
+ },
+ {
+  "id": "github:4251231625",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[Digest - CAD] 2026-04-13",
+  "body": "# \u6280\u8853\u8cc7\u8a0a\u6458\u8981 - 2026-04-13 (CAD & 3D) ## \u6458\u8981\u6307\u6a19 - \u53bb\u91cd\u7387\uff1a2.55%\uff08\u539f\u59cb 549 \u2192 \u53bb\u91cd 535\uff09 - \u5206\u985e\u7d71\u8a08\uff1acommunity 152 \u7b46 / industry 10 \u7b46 / news 75 \u7b46 / papers 175 \u7b46 / releases 109 \u7b46 / trend 14 \u7b46 - \u4f86\u6e90\u5065\u5eb7\u5ea6\uff1a\u6210\u529f 41 / 43\uff08\u5931\u6557 2\uff09 - \u5931\u6557\u4f86\u6e90\uff1aPTC Community - Creo, GitHub Releases - Jetson Containers ## community ### Practical Machinist - CAD/CAM #### [2006 Haas VF-2 communication issues](https://www.practicalmachinist.com/forum/threads/2006-",
+  "url": "https://github.com/e1134171019/agrnt/issues/201"
+ },
+ {
+  "id": "github:6168034444",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "(well-architected-security-mcp-server): print() calls write to stdout and corrupt the stdio JSON-RPC stream",
+  "body": "### Describe the bug `well-architected-security-mcp-server` uses the stdio transport by default (`mcp.run()` in `main()`, `server.py`). The package has 176 bare `print()` calls in its tool code paths, and none of them pass `file=sys.stderr`: | File | `print()` calls | |---|---| | `server.py` | 68 | | `util/security_services.py` | 46 | | `util/network_security.py` | 32 | | `util/storage_security.py",
+  "url": "https://github.com/awslabs/mcp/issues/4991"
+ },
+ {
+  "id": "github:5735234537",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Gateway extension idea: source-rights evidence before URL-bearing MCP calls",
+  "body": "MintMCP\u2019s gateway positioning is directly about centralizing authentication, monitoring, security, telemetry and governance across MCP servers. For teams that expose public-web retrieval/search/ingestion tools through that gateway, there is a narrow additional context signal that could be useful before selected tool calls execute. AcqPath observes machine-readable source-rights/TDM declarations fo",
+  "url": "https://github.com/mintmcp/servers/issues/3"
+ },
+ {
+  "id": "github:6540979790",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[Feature] Make live attacks realistic: tool-result injection, interception, corroborated findings",
+  "body": "## Problem ziran's live attacks are less realistic than the best products in the review in #534. Three gaps matter most. 1. **Indirect injection is simulated.** The vectors in `indirect_injection*.yaml` and `rag_poisoning.yaml` put the payload in the user prompt and describe it as coming from a document. A real indirect attack arrives in a tool result the agent did not expect to be hostile. Agents",
+  "url": "https://github.com/taoq-ai/ziran/issues/535"
+ },
+ {
+  "id": "github:4211473533",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "feat: MCP auto-registration from config and production MCP server validation",
+  "body": "## Problem MCP support exists (`McpClient`, `McpManager`, `McpToolWrapper`) but MCP servers are never auto-registered from config. Users must manually wire them. Additionally, there is no validation of MCP server tool descriptions \u2014 a malicious or misconfigured MCP server can inject arbitrary instructions into tool descriptions (MCP tool poisoning, documented in arXiv:2601.17548). ## Part 1: Auto-",
+  "url": "https://github.com/geeythree/agentcli/issues/10"
+ },
+ {
+  "id": "github:5165643650",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Security: user-registered MCP servers get blanket tool auto-approval in headless claude runs",
+  "body": "## Problem `getClaudeMcpArgs` (`electron/memory-sup.js:216-232`) builds `--allowedTools=mcp__ __*` for **all** `activeServers()`. That set includes user-added servers from settings, merged by `syncUserMcpServers` (memory-sup.js:156-190) into `extraServers` and written into the claude MCP config (`writeMcpConfig`, memory-sup.js:655-678). The comment at line 227 (\"Scope is exactly our own servers' t",
+  "url": "https://github.com/currentbits/solenta/issues/126"
+ },
+ {
+  "id": "github:3265411532",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Improper Access Control results in bypassing a \"read-only\" mode for mcp-dbutils MCP Server",
+  "body": "--> July 26 communication: > Hi, > Can you please enable Private Vulnerability Report in this repository settings so I can disclose a security issue for this project? --> September 20 update: # Improper Access Control results in bypassing a \"read-only\" mode for mcp-dbutils MCP Server The MCP Server at https://github.com/donghao1393/mcp-dbutils provides an MCP interface for agentic workflows to int",
+  "url": "https://github.com/donghao1393/mcp-dbutils/issues/116"
+ },
+ {
+  "id": "github:5846798432",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Power-MCP: keep AI work in the operator's agent \u2014 hand back work items (translate, moduleize, \u2026) instead of Caelo-side provider calls; fix cost cap",
+  "body": "## Summary The Power-MCP (token scope `admin`) is meant to keep the reasoning, and its cost, in the operator's own agent (their Claude Code or ChatGPT subscription). The docs promise \"Caelo makes no provider calls on this path\" (`docs-site/pages/mcp.md`, `mcp-server/src/admin-server.ts:5-8`, `ops/security/mcp_power.ts:10-11`). That is not true: 12 exposed tools make Caelo-side AI provider calls on",
+  "url": "https://github.com/caelo-cms/caelo-cms/issues/741"
+ },
+ {
+  "id": "github:4954566107",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcac Tech Community AI Digest 2026-07-23",
+  "body": "# Tech Community AI Digest 2026-07-23 > Sources: [Dev.to](https://dev.to/) (30 articles) + [Lobste.rs](https://lobste.rs/) (8 stories) | Generated: 2026-07-23 01:26 UTC --- Here is the structured **Tech Community AI Digest** for **2026-07-23**, based on activity from Dev.to and Lobste.rs. --- ## Tech Community AI Digest: 2026-07-23 ### 1. Today's Highlights Developers are deeply focused on the rel",
+  "url": "https://github.com/Augustrains/agents-radar/issues/694"
+ },
+ {
+  "id": "github:4144855839",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Digest: Thursday, 2026-03-26, 08:08",
+  "body": "# Developer Digest \u2014 2026-03-26 ## Executive Summary A critical Python supply chain attack on **litellm** (a package in your Shuntly dependency graph) dropped malicious versions on PyPI this week \u2014 a textbook case for Fetter's vulnerability detection and a potential article topic given your upcoming Python ACE presentation. The MCP ecosystem is at an inflection point: multiple articles this week d",
+  "url": "https://github.com/flexatone/assistant-research/issues/67"
+ },
+ {
+  "id": "github:4325982428",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[Feature] Tool-level disable: prevent a tool from appearing in any policy",
+  "body": "## Problem There is currently no way to disable a specific tool globally. Once an MCP server is registered and its tools are discovered, every tool is visible in the policy form's capability registry and can be granted to any policy. The only workaround is removing the entire MCP server, which takes down all tools on that server. Operators need a way to suppress individual tools \u2014 for example, a d",
+  "url": "https://github.com/Felag-Engineering/gleipnir/issues/99"
+ },
+ {
+  "id": "github:6418706441",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Owner decisions: Dev mode with a stale pending plan_id, and image export outside the workspace",
+  "body": "**Size:** S | **Priority:** P1 **Problem** Two Dev-mode behaviours were left to the owner. 1. In Dev mode a write call that carries a plan_id still refuses when that plan is `pending` (a stale draft). Only a call with no plan_id runs unplanned. 2. `revit_export_image` with an `output_path` outside the workspace is refused in Dev mode, because Dev does not relax the path sandbox. **Evidence** - `pa",
+  "url": "https://github.com/Sam-AEC/aec-model-bridge/issues/153"
+ },
+ {
+  "id": "github:5455626021",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "agent-engine-deploy fails when git submodules are uninitialized",
+  "body": "## Problem Summary Running `just agent-engine-deploy` in a fresh clone or new git worktree fails during `agent_engines.create()` with: ```text FileNotFoundError: Extra package specified but not found: extra_package='external/mcp-security/server/secops' ``` ## Root Cause `manage_agent_engine.py` packages local MCP servers as `extra_packages`: - `external/mcp-security/server/secops` - `external/mcp-",
+  "url": "https://github.com/dandye/agentic_soc_gemini_enterprise/issues/113"
+ },
+ {
+  "id": "github:4168844451",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[Submit] fraud-prevention-mcp-server - Open-source MCP server for fraud prevention",
+  "body": "## Server Submission **Name:** fraud-prevention-mcp-server **PyPI:** https://pypi.org/project/fraud-prevention-mcp-server/ **GitHub:** https://github.com/AiAgentKarl/fraud-prevention-mcp-server **Category:** Security / Fraud Prevention ## Description Open-source MCP server for AI-powered fraud prevention using free APIs. An open alternative to proprietary solutions. ## Tools (7) - `check_ip_reputa",
+  "url": "https://github.com/chatmcp/mcpso/issues/1378"
+ },
+ {
+  "id": "github:3934493693",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Investigate Gondolin as alternative to Docker for chat UI sessions",
+  "body": "## Goal Evaluate whether [Gondolin](https://earendil-works.github.io/gondolin/) (local Linux micro-VMs with programmable network/filesystem) can serve as an additional option alongside Eddo's current Docker-based chat UIs. ## Context **Gondolin Features:** - Lightweight QEMU micro-VMs (boots in <1s) - JavaScript-controlled network stack with secret injection - Programmable VFS layer for filesystem",
+  "url": "https://github.com/walterra/eddoapp/issues/527"
+ },
+ {
+  "id": "github:6309091165",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Bug: HTTP 421 \"Invalid Host header\" when the server is reached via a non-loopback hostname (e.g. Kubernetes Service)",
+  "body": "**Image:** `ghcr.io/mekayelanik/firecrawl-mcp:3.38.0` **Transport:** Streamable HTTP (`/mcp`), default setup (HAProxy frontend \u2192 `mcp-proxy` on 127.0.0.1:38011) ### Description When the container is exposed via a load balancer / proxy that forwards the original `Host` header (e.g. a Kubernetes `ClusterIP` Service), **every** MCP request is rejected with `HTTP 421 Misdirected Request`: ``` [W 2026-",
+  "url": "https://github.com/MekayelAnik/firecrawl-mcp-docker/issues/12"
+ },
+ {
+  "id": "github:4217388120",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Support environment variable for API key (-k / --twelve-data-apikey)",
+  "body": "## Problem The `-k` / `--twelve-data-apikey` CLI option is currently the only way to pass the API key when using `stdio` transport. This exposes the key in the process list (`ps aux` / `/proc/*/cmdline`), which is a security concern on shared machines. Other MCP servers (e.g. `mcp-grafana`) accept credentials via environment variables, keeping them out of the process list entirely. ## Proposed sol",
+  "url": "https://github.com/twelvedata/mcp/issues/8"
+ },
+ {
+  "id": "github:6448834007",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Adopt / reference existing AI artifacts (don't reinvent)",
+  "body": "# Adopt / reference existing AI artifacts (don't reinvent) **Labels:** `ai-integration`, `research`, `dependencies` **Depends on:** #136, #138 **Informs:** #141, #142, #143, #148 ## Summary A build-vs-adopt-vs-reference register so the template **wires in or links** good existing artifacts instead of authoring its own. Applies the \"earn the custom code\" principle to the whole bundle. Findings from",
+  "url": "https://github.com/brightdigit/taylr/issues/151"
+ },
+ {
+  "id": "github:6016811293",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "[Docs] README claims a management-agent.jar fallback that was removed and a 50 to 1,000 histogram bound the code does not enforce",
+  "body": "\ufeff### Context & Problem Description Two statements in `README.md` no longer match the code on `main`. 1. **Architectural Principles** (README line ~315): \"JMX access is initialized dynamically via `VirtualMachine.startLocalManagementAgent()`, **falling back to standard `$JAVA_HOME/lib/management-agent.jar`**.\" `JmxConnectionManager` no longer contains any `management-agent.jar` logic (it was remove",
+  "url": "https://github.com/oscarbol09/jvm-mcp/issues/220"
+ },
+ {
+  "id": "github:4332468461",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Add your favorite cloud infrastructure resources",
+  "body": "We're building the most comprehensive list of production-grade cloud infrastructure resources. **How to contribute:** 1. Fork this repo 2. Add your resource in the appropriate category with a one-line description 3. Submit a PR **What we're looking for:** - Production-tested Terraform/Pulumi/CDK modules - AI agent frameworks and tools - MCP server implementations - DevSecOps tools and pipelines - ",
+  "url": "https://github.com/kogunlowo123/awesome-cloud-infrastructure/issues/2"
+ },
+ {
+  "id": "github:5198638877",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily News Digest - 2026-08-20",
+  "body": "# 2026-08-20 ## InfoQ 1. [Docker Launches Fully Rebuilt Virtualization Layer to Boost Performance and Improve Dev Experience](https://www.infoq.com/news/2026/08/docker-vmm-layer/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global) 2. [Whatsapp Tests on Device ML for Scam Detection with Privacy Preserving Analytics](https://www.infoq.com/news/2026/08/whatsapp-scam-alert-bet",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/419"
+ },
+ {
+  "id": "github:5585255748",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Add table_access for authority, *PUBLIC and RCAC on a table",
+  "body": "## Problem Statement When an agent works with a table that holds personal or financial data, the user often asks \"who can read this?\" or \"is this column masked for other users?\". Today the agent has to guess, or needs `QSYS2` in the allowlist and knowledge of several views. The answer is in the catalog: `QSYS2.OBJECT_PRIVILEGES` for object authority (including `*PUBLIC` and authorization lists), `",
+  "url": "https://github.com/Strom-Capital/mcp-server-db2i/issues/157"
+ },
+ {
+  "id": "github:5187909246",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily News Digest - 2026-08-19",
+  "body": "# 2026-08-19 ## RedditGo 1. [Learn Go with Tests: Revisiting time, with testing/synctest](https://www.reddit.com/r/golang/comments/1vr1y3e/learn_go_with_tests_revisiting_time_with/) 2. [Who's Hiring](https://www.reddit.com/r/golang/comments/1vcmusx/whos_hiring/) 3. [Remote Taskfiles are now generally available!](https://taskfile.dev/blog/remote-taskfiles) 4. [Small Projects](https://www.reddit.com",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/418"
+ },
+ {
+  "id": "github:3298629148",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily News Digest - 2025-08-07",
+  "body": "# 2025-08-07 ## RedditPython 1. [Axiom, a new kind of \"truth engine\" as a tool to fight my own schizophrenia. Now open-sourcing it.](https://www.reddit.com/r/Python/comments/1miaw6m/axiom_a_new_kind_of_truth_engine_as_a_tool_to/) 2. [*Noobie* Created my first \"app\" today!](https://www.reddit.com/r/Python/comments/1miuohk/noobie_created_my_first_app_today/) 3. [I finish my first app with Python/Kiv",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/99"
+ },
+ {
+  "id": "github:4529390679",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Daily News Digest - 2026-05-27",
+  "body": "# 2026-05-27 ## RedditDatabase 1. [40 TB PostgreSQL on-prem \u2014 sharding vs ClickHouse vs something else for a 500B-row time-series workload](https://www.reddit.com/r/Database/comments/1tn2469/40_tb_postgresql_onprem_sharding_vs_clickhouse_vs/) 2. [The Database Zoo: Why SQL and NoSQL Are No Longer Enough](https://blog.gaborkoos.com/posts/2025-09-19-The-Database-Zoo-Exotic-Data-Storage-Engines/) 3. [",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/334"
+ },
+ {
+  "id": "github:4910825909",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Proposal: pre-install dependency risk signal for MCP agents",
+  "body": "Hi! I\u2019m building DepScout, a lightweight x402 API that checks npm, PyPI, and GitHub dependencies before an AI agent installs or connects them. It returns a compact safe, caution, or block verdict with public risk signals. Since MCP Scanner focuses on security findings in MCP servers and tools, I\u2019m wondering whether DepScout could be useful as a pre-install dependency signal alongside MCP scanning.",
+  "url": "https://github.com/cisco-ai-defense/mcp-scanner/issues/217"
+ },
+ {
+  "id": "github:5273838960",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Feature request: opt-in fatal mode for ambiguous terminal response delivery",
+  "body": "### Summary Would you consider an opt-in, default-off mode for security-sensitive MCP servers where any non-definitive delivery of a terminal MCP response makes the entire tunnel runtime fatal before another command-specific downstream action can begin? The normal availability-oriented behavior should remain unchanged by default. The requested mode is for local tools where a downstream operation m",
+  "url": "https://github.com/openai/tunnel-client/issues/52"
+ },
+ {
+  "id": "github:4291504734",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "AI Guardian Space Health Command System",
+  "body": "# AI Guardian Space Health Command System: A Strategic Executive Report ## Massachusetts Space Week 2026: Space Medicine Innovation Initiative --- ## 1. Abstract: The Vision of Excellence The **AI Guardian Space Health Command System** is not merely a software application; it is the physical manifestation of a highest-level strategic collaboration between Human Leadership and Advanced Artificial I",
+  "url": "https://github.com/TSAMBALI/Ariadne_Tsambali/issues/161"
+ },
+ {
+  "id": "github:5208328120",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "security: serve-http's DNS-rebinding protection is inherited from an SDK default, and codecalc's own loopback allowlist is wider than the one that enables it",
+  "body": "**Environment:** codecalc 0.3.1 from PyPI, `mcp` 2.0.0, macOS arm64. I went looking for a DNS-rebinding hole in `serve-http` and did **not** find one on the documented default. It is worth saying why, because the protection is not yours \u2014 it is inherited from an SDK default that your own bind policy can step outside of. **Verified holding on `--host 127.0.0.1`** (live, no token set): ``` POST /mcp",
+  "url": "https://github.com/The-40-Thieves/codecalc/issues/211"
+ },
+ {
+  "id": "github:6245445337",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "B110: Unfiltered audit queries sort the whole audit_logs table",
+  "body": "### B110 \u2014 Unfiltered audit queries sort the whole `audit_logs` table **Status**: Open (GitHub: to be filed) **Severity**: Low to Medium \u2014 performance only; grows with the trail. **Files**: `internal/repositories/audit_repository.go` (`QueryAuditLogs`), `internal/db/db.go` (audit indexes) **Symptom**: `QueryAuditLogs` orders by `COALESCE(seq, 0) DESC, timestamp DESC, id DESC`. No index matches tha",
+  "url": "https://github.com/Snehal1112/rocketvault/issues/78"
+ },
+ {
+  "id": "github:4872516601",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Proposal: external pre-install dependency risk signal for AI agents",
+  "body": "Hi! I\u2019m building DepScout, a small x402 API that returns a machine-readable safe, caution, or block verdict for npm, PyPI, and GitHub dependencies before an AI coding agent installs them. I noticed that Snyk Agent Scan already focuses on security risks in AI agents, MCP servers, and agent skills. Would an external pre-install dependency risk signal be useful alongside Agent Scan? DepScout is inten",
+  "url": "https://github.com/snyk/agent-scan/issues/396"
+ },
+ {
+  "id": "github:4323780837",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Aura Intelligence",
+  "body": "# Project Aura: Orchestrator-G ## Strategic Human\u2013AI Command Framework for Autonomous Incident Response ### 1. Inspiration The inspiration for **Orchestrator-G** (formerly Aura Intelligence) stems from the \"Last Mile\" problem in Cybersecurity and Strategic Intelligence. While LLMs like Gemini have reached \"Pro\" and \"Ultra\" levels of reasoning, applying that reasoning to $300GB$ disk images or cros",
+  "url": "https://github.com/TSAMBALI/project/issues/11"
+ },
+ {
+  "id": "github:4355929452",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcac Tech Community AI Digest 2026-04-30",
+  "body": "# Tech Community AI Digest 2026-04-30 > Sources: [Dev.to](https://dev.to/) (30 articles) + [Lobste.rs](https://lobste.rs/) (10 stories) | Generated: 2026-04-30 06:31 UTC --- # Tech Community AI Digest: April 30, 2026 ## 1. Today's Highlights The developer ecosystem is shifting rapidly from \"chatbots\" to **autonomous agents** and **systems of action**, largely driven by updates from Google Cloud NE",
+  "url": "https://github.com/wangeDear/agents-radar/issues/12"
+ },
+ {
+  "id": "github:4288839134",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Astraeus: Human\u2013AI Product Command System",
+  "body": "# Astraeus: Human\u2013AI Product Command System ## Executive Strategic Report & Product Documentation > **Status**: Competition-Ready Submission > **Strategic Lead**: Ariadne-Anne DEWATSON-LE'DETsambali > **Cognitive Engine**: Gemini 3.1 Pro (Innovation Architecture) --- ## 1. Project Inspiration: The Genesis of Astraeus The inspiration for **Astraeus** stems from a critical observation of high-pressu",
+  "url": "https://github.com/TSAMBALI/Ariadne_Tsambali/issues/151"
+ },
+ {
+  "id": "github:5624080145",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcac Tech Community AI Digest 2026-09-29",
+  "body": "# Tech Community AI Digest 2026-09-29 > Sources: [Dev.to](https://dev.to/) (30 articles) + [Lobste.rs](https://lobste.rs/) (5 stories) | Generated: 2026-09-29 02:16 UTC --- ## Tech Community AI Digest (2026-09-29) ### 1. Today's Highlights The AI conversation has shifted from \"hype and wonder\" to a sober focus on production reliability, cost management, and architectural integrity. Developers are ",
+  "url": "https://github.com/jinming1345/agents-radar/issues/114"
+ },
+ {
+  "id": "github:4439676946",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "logosdb-mcp-server: respect repo .gitignore (and nested .gitignore files) when walking directories for logosdb_index_file",
+  "body": "## Summary `logosdb_index_file` currently filters the directory walk using two static lists in `mcp/src/security.ts` (`INDEXABLE_EXTENSIONS` allowlist + `SKIP_DIRS` denylist + a hidden-directory rule). It does **not** consult repository `.gitignore` files. As a result, generated, vendored, or otherwise ignored files that happen to land in a non-skipped directory with an indexable extension still g",
+  "url": "https://github.com/jose-compu/logosdb/issues/101"
+ },
+ {
+  "id": "github:6406256391",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "Documentation audit since 15.25.0: README, guides (EN/PT), contributor docs, MCP descriptions and in-app help",
+  "body": "An audit of the documentation against what has been merged since the 15.25.0 release (`git log v15.25.0..origin/main`, the `changes/` fragments), every claim checked against the code. Each finding: `file:line \u2014 what it says \u2192 what is true now (evidence)`; MISSING: a feature the document should cover. It is fixed by four pull requests, by area: README; the user guides (English and Portuguese); the ",
+  "url": "https://github.com/pmnmalo/Silinx/issues/4123"
+ },
+ {
+  "id": "github:5176860403",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 0,
+  "title": "\ud83d\udcc8 AI Open Source Trends 2026-08-18",
+  "body": "# AI Open Source Trends 2026-08-18 > Sources: GitHub Trending + GitHub Search API | Generated: 2026-08-18 00:37 UTC --- **AI Open Source Trends Report (2026-08-18)** ### 1. Today's Highlights The AI open-source ecosystem is experiencing a surge in **Agent Infrastructure** and **RAG-native tools**. High-profile projects like `santifer/career-ops` and `usestrix/strix` demonstrate the explosion of **",
+  "url": "https://github.com/Chestnuts-Sisyphus/gittok/issues/981"
+ },
+ {
+  "id": "hn:41037136",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Systemd Talks Up Automatic Boot Assessment in Light of the CrowdStrike Outage",
+  "body": "> The only problem? Major Linux distributions aren't yet onboard with using the Automatic Boot Assessment feature. systemd.io/AUTOMATIC_BOOT_ASSESSMENT/ : https://systemd.io/AUTOMATIC_BOOT_ASSESSMENT/ From https://news.ycombinator.com/item?id=29995566 : > Which distro has the best out-of-the-box output for:? systemd-analyze security > Is there a tool like `audit2allow` for systemd units? And also ",
+  "url": "https://news.ycombinator.com/item?id=41037136"
+ },
+ {
+  "id": "hn:37328571",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "SELinux in Linux 6.6 Removes References to Its Origins at the US NSA",
+  "body": "https://news.ycombinator.com/item?id=29995566 : > Which distro has the best out-of-the-box output for:? systemd-analyze security > Is there a tool like `audit2allow` for systemd units? selinux/python/audit2allow/audit2allow: https://github.com/SELinuxProject/selinux/blob/master/python... https://stopdisablingselinux.com/",
+  "url": "https://news.ycombinator.com/item?id=37328571"
+ },
+ {
+  "id": "hn:29995566",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Systemd service sandboxing and security hardening (2020)",
+  "body": "Which distro has the best out-of-the-box output for:? systemd-analyze security Is there a tool like `audit2allow` for systemd units? selinux/python/audit2allow/audit2allow: https://github.com/SELinuxProject/selinux/blob/master/python... https://stopdisablingselinux.com/",
+  "url": "https://news.ycombinator.com/item?id=29995566"
+ },
+ {
+  "id": "hn:5231284",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "CVE-2013-0871: Linux arbitrary kernel-mode code execution",
+  "body": "There have been multiple local kernel exploits in the past few years. For somebody who doesn't constantly watch seclists.org or similar security sites, how do I find out whether my kernel is vulnerable to any known exploit? Is there a tool that can help me with checking? Is there a notification tool?",
+  "url": "https://news.ycombinator.com/item?id=5231284"
+ },
+ {
+  "id": "hn:36560346",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "How I changed my D-Link camera to a locally managed IP camera",
+  "body": "Could I ask for some advice? I was gifted a new rando chinese IP cam that uses the mobile app. It's not googlable. I've been using as a outside security camera. The camera saves to an SD card continuously, and has a paid option to use the cloud which I did not take. It has a mobile app, KP WIFICAM, which lets me view the feed in real-time even over the Internet. I can even view or download the pas",
+  "url": "https://news.ycombinator.com/item?id=36560346"
+ },
+ {
+  "id": "hn:25848940",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "I no longer trust The Great Suspender",
+  "body": "Is there a tool which will automatically reload all your extensions from disk, as described in the OP? Seems like a sensible default, from a security perspective.",
+  "url": "https://news.ycombinator.com/item?id=25848940"
+ },
+ {
+  "id": "hn:20425754",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "1Password: Standalone / Local Vault Option Gone?",
+  "body": "Disclosure: I work for 1Password on the security team. First, lets discuss what the Secret Key actually does. I'm going to simplify this greatly simply because I don't want to end up in the weeds here. But I think it's important to know what it does and why. When we designed 1Password's online service we knew that our servers would be a big target if it were storing a lot of user data. And we knew",
+  "url": "https://news.ycombinator.com/item?id=20425754"
+ },
+ {
+  "id": "hn:6476619",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (October 2013)",
+  "body": "Addepar is Hiring - Security Engineer - Mountain View, Ca We are engineers rebuilding the infrastructure that powers global finance. The current technology in the space is broken and opaque; it empowers scandals like Bernie Madoff to go on for a decade while $64 billion vanishes from the economy, affecting endowments, institutions, and notable individuals. Our platform provides increased transpare",
+  "url": "https://news.ycombinator.com/item?id=6476619"
+ },
+ {
+  "id": "hn:6311169",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (September 2013)",
+  "body": "Addepar is Hiring - Security Engineer - Mountain View, Ca We are engineers rebuilding the infrastructure that powers global finance. The current technology in the space is broken and opaque; it empowers scandals like Bernie Madoff to go on for a decade while $64 billion vanishes from the economy, affecting endowments, institutions, and notable individuals. Our platform provides increased transpare",
+  "url": "https://news.ycombinator.com/item?id=6311169"
+ },
+ {
+  "id": "hn:6141605",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (August 2013)",
+  "body": "Addepar is Hiring - Security Engineer - Mountain View, Ca We are engineers rebuilding the infrastructure that powers global finance. The current technology in the space is broken and opaque; it empowers scandals like Bernie Madoff to go on for a decade while $64 billion vanishes from the economy, affecting endowments, institutions, and notable individuals. Our platform provides increased transpare",
+  "url": "https://news.ycombinator.com/item?id=6141605"
+ },
+ {
+  "id": "hn:4993476",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (January 2013)",
+  "body": "San Francisco, Full-time At Coverity ( http://coverity.com ) we are looking for a security researcher with interest in static analysis. The candidate must be a strong in websec, doesn't be afraid to write code (checker prototypes, etc.), and the best would be to have some prior knowledge in static analysis (which doesn't need to be you wrote your own static analysis tool for brainf*ck or something",
+  "url": "https://news.ycombinator.com/item?id=4993476"
+ },
+ {
+  "id": "hn:47607180",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (April 2026)",
+  "body": "Always Further, founded by team who created https://sigstore.dev , used to secure npm, pypi, brew, and provide attestations for github releases, nvidia and google for AI model signing - we and are now building https://nono.sh agent security tooling. We have roles open for a principal software engineer: We're looking for a Principal Software Engineer to join as a founding engineer. You'll work dire",
+  "url": "https://news.ycombinator.com/item?id=47607180"
+ },
+ {
+  "id": "hn:45932388",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Anthropic Rides an Artificial Wave",
+  "body": "> The entire industry lacks security experts. Disagree. I think you mean \"cheap experts\", in which case I withdraw. The most talented security professionals I've seen so far are from Europe. But they get paid dirt by comparison to the US. Here in the US as well, for over a decade now there is this cry about \"skills shortage\". Plenty of skilled people. But companies want to pay them dirt, have them",
+  "url": "https://news.ycombinator.com/item?id=45932388"
+ },
+ {
+  "id": "hn:42928549",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (February 2025)",
+  "body": "Scribd | Software Engineers | US, Canada | ONSITE or REMOTE Scribd is a reading subscription that gives you access to the best books, audiobooks, magazines, podcasts, and more. Our mission is to change how the world reads. We have 2M+ paying subscribers. In 2020 we acquired SlideShare. Last year we launched www.everand.com/. We are one of the oldest YC startups (YC '06), operating one of the large",
+  "url": "https://news.ycombinator.com/item?id=42928549"
+ },
+ {
+  "id": "hn:42409306",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (December 2024)",
+  "body": "Codean Labs | Security Analyst | Netherlands, Amsterdam | Full-Time | REMOTE | https://codeanlabs.com/jobs/ Codean Labs is the counterpart of Codean. While at Codean we make tools for security experts, at Codean Labs we use those tools (and others) to do research and help improve the security of software (and sometimes hardware). We are looking for a security analyst to join our small team of (cur",
+  "url": "https://news.ycombinator.com/item?id=42409306"
+ },
+ {
+  "id": "hn:41132744",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (August 2024)",
+  "body": "Stanford University IT | Stanford, CA (near Palo Alto) | Full-time | Three positions | 2 HYBRID & 1 REMOTE Stanford University IT ( https://uit.stanford.edu ) provides a large number of IT-related services to campus. From typically enterprise-y stuff (financials software, HR software, AD, O365, Google, Zoom, etc.), to networking (building/core switches, firewall, campus wifi, residential networkin",
+  "url": "https://news.ycombinator.com/item?id=41132744"
+ },
+ {
+  "id": "hn:39222220",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (February 2024)",
+  "body": "Graphistry | Viz engineer | Security engineer | Contract | REMOTE - GLOBAL | https://www.graphistry.com + https://www.louie.ai Graphistry is a Gartner-awarded startup used by fraud/cyber/BI/supplychain/misinfo/... analysts to see and correlate using our visual graph AI platform. Now piloting with enterprise & gov teams around the world, louie.ai adds a genAI-first notebooks & dashboards with the a",
+  "url": "https://news.ycombinator.com/item?id=39222220"
+ },
+ {
+  "id": "hn:38845537",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (January 2024)",
+  "body": "Graphistry | Viz engineer | Security engineer | Contract | REMOTE - GLOBAL | https://www.graphistry.com + https://www.louie.ai Graphistry is a Gartner-awarded startup used by fraud/cyber/BI/supplychain/misinfo/... analysts to see and correlate using our visual graph AI platform. With louie.ai (generative AI), they can now talk with their many databases in natural language while having L.O.U.I.E. g",
+  "url": "https://news.ycombinator.com/item?id=38845537"
+ },
+ {
+  "id": "hn:32307014",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (August 2022)",
+  "body": "Atomic Financial | Multiple roles (Senior Application Security Engineer, Senior Platform Security Engineer) | Remote or Salt Lake City, Utah | Full time At Atomic we're focused on building an incredible business while also having a huge social impact. Financial struggles are a leading cause of stress for people around the world. Our business is helping solve those financial issues for the most vul",
+  "url": "https://news.ycombinator.com/item?id=32307014"
+ },
+ {
+  "id": "hn:31988131",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (July 2022)",
+  "body": "Atomic Financial | Multiple roles (Senior Application Security Engineer, Senior Platform Security Engineer) | Remote or Salt Lake City, Utah | Full time At Atomic we're focused on building an incredible business while also having a huge social impact. Financial struggles are a leading cause of stress for people around the world. Our business is helping solve those financial issues for the most vul",
+  "url": "https://news.ycombinator.com/item?id=31988131"
+ },
+ {
+  "id": "hn:31949067",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who wants to be hired? (July 2022)",
+  "body": "Location: Berlin, DE Position: Werkstudent/Working Student (20h/week) Remote: Yes (only Germany though) Willing to relocate: No R\u00e9sum\u00e9/CV: on request Email:hn@ruebezahl.mozmail.com Third year Bachelor's student looking for a cyber-security job. Python, JS/TS, Go, Rust. Interested in: Reverse Engineering Hardware Web Security Static Analysis / Security Tooling Linux",
+  "url": "https://news.ycombinator.com/item?id=31949067"
+ },
+ {
+  "id": "hn:31725363",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (June 2022)",
+  "body": "Atomic Financial | Multiple roles (Senior Application Security Engineer, Senior Platform Security Engineer) | Remote or Salt Lake City, Utah | Full time At Atomic we're focused on building an incredible business while also having a huge social impact. Financial struggles are a leading cause of stress for people around the world. Our business is helping solve those financial issues for the most vul",
+  "url": "https://news.ycombinator.com/item?id=31725363"
+ },
+ {
+  "id": "hn:29474302",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (December 2021)",
+  "body": "Greenhouse Software | Senior Security Engineer| Full-time | REMOTE within United States Greenhouse is looking for a Senior Security Engineer to join our team! Security at Greenhouse is important to our success and for building & maintaining customer trust. From influencing how we write our software, deploy our infrastructure, and make architecture decisions, security is a major focus, and we want ",
+  "url": "https://news.ycombinator.com/item?id=29474302"
+ },
+ {
+  "id": "hn:26709356",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is hiring? (April 2021)",
+  "body": "Apple | Security Engineer | Austin | Full Time | On Site Apple are looking for a security engineer to work on Apple's critical Retail and Online Store applications. As a security engineer in Apple Retail Security, you will have a wide range of responsibilities including: * Threat Modeling & security architecture reviews. * Partnering with engineering teams to provide security advice and guidance. ",
+  "url": "https://news.ycombinator.com/item?id=26709356"
+ },
+ {
+  "id": "hn:2607627",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who is Hiring? (June 2011)",
+  "body": "Brooklyn, NY Etsy is hiring! -- http://www.etsy.com/jobs I'm hiring a Web Application Security Engineer, if you enjoy webapp pentesting and writing custom security tools you should drop me a line. Also, we're looking for a number of both junior and senior software engineers so if the posts on our tech blog ( http://codeascraft.etsy.com/ ) are interesting to you come apply online.",
+  "url": "https://news.ycombinator.com/item?id=2607627"
+ },
+ {
+  "id": "hn:9759573",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: What's the best programming language to learn for security?",
+  "body": "Go is a great programming tool but it is not the first language you should learn if you're looking for a career in security.",
+  "url": "https://news.ycombinator.com/item?id=9759573"
+ },
+ {
+  "id": "hn:50387713",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who wants to be hired? (November 2026)",
+  "body": "Location: Toronto (moving to San Francisco or New York, January 2027) Remote: Open for a standout AI team; prefer in person Willing to relocate: Yes, SF or NYC Technologies: Python, TypeScript/Node.js, Rust, SQL, Inspect AI, PyRIT, Docker, Linux (ptrace/seccomp), PostgreSQL, GitHub Actions R\u00e9sum\u00e9/CV: https://drive.google.com/file/d/179REr5d9oPvLWqvJ1V9m-JSaRIh... Email: yusef.syed@mail.utoronto.ca",
+  "url": "https://news.ycombinator.com/item?id=50387713"
+ },
+ {
+  "id": "hn:49928134",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who wants to be hired? (October 2026)",
+  "body": "Location: EMEA Remote: Yes Willing to relocate: No (occasional travel is fine) Technologies: Go, Python, JavaScript, C, C++, Bash, HTML/CSS, SQL, ES6+, GNU/Linux, PostgreSQL, MySQL, SQLite, GraphQL, gRPC, Docker, Docker Compose, Git, CI/CD, Flask, FastAPI, Node.js, React, Next.js, Grafana, Prometheus, Kafka, Elasticsearch, Redis, KVM, Kubernetes, Nomad, Digital Ocean, Scaleway, AWS, GCP, Azure, St",
+  "url": "https://news.ycombinator.com/item?id=49928134"
+ },
+ {
+  "id": "hn:49577195",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Who wants to be hired? (September 2026)",
+  "body": "Location: EMEA Remote: Yes Willing to relocate: No (occasional travel is fine) Technologies: Go, Python, JavaScript, C, C++, Bash, HTML/CSS, SQL, ES6+, GNU/Linux, PostgreSQL, MySQL, SQLite, GraphQL, gRPC, Docker, Docker Compose, Git, CI/CD, Flask, FastAPI, Node.js, React, Next.js, Grafana, Prometheus, Kafka, Elasticsearch, Redis, KVM, Kubernetes, Nomad, Digital Ocean, Scaleway, AWS, GCP, Azure, St",
+  "url": "https://news.ycombinator.com/item?id=49577195"
+ },
+ {
+  "id": "hn:39169437",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "I looked through attacks in my access logs",
+  "body": "I\u2019m looking for a secure authentication/proxy application to put in front of the webservers that have to be exposed to the internet. The application will authenticate the user with SSO or hardware key, before forwarding the traffic to the right internal address. Cloudflare Tunnels are great, but CF doesn\u2019t allow the TLS pass through. CF man in the middles and decrypts the traffic. So far I have lo",
+  "url": "https://news.ycombinator.com/item?id=39169437"
+ },
+ {
+  "id": "hn:7600715",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Dozens of teenagers are now tweeting bomb jokes to American Airlines",
+  "body": "Isnt that the problem? Why should be joking about bombs so serious? We pay airlines security to protect us, to use brains, not to simply enforce policies.",
+  "url": "https://news.ycombinator.com/item?id=7600715"
+ },
+ {
+  "id": "hn:45452560",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Went to prison for 18 months, lost access to my GitHub. What can I do?",
+  "body": "> I can't, however, provide any 2FA codes or backup codes because they are printed on paper that has, I assume, been destroyed. The situation you are in is very unfortunate and I am sympathetic but in GitHub's defence, this is exactly what I hope would happen when I enable 2FA. I would be very perturbed to find out that GitHub would grant access to my account given identity documents. There are so",
+  "url": "https://news.ycombinator.com/item?id=45452560"
+ },
+ {
+  "id": "hn:37422138",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "ASML to Ship First High-NA EUV Tool This Year: $300M per Scanner",
+  "body": "> As a Dutch citizen it's scary to watch our government and the rest of the EU go against it's own best interests. We are vassals of the USA and it would appear our elites are completely captured. I'm in the EU too. I don't like US hegemony either, but what's the alternative? We are not strong enough alone to avoid being under the influence of either the USA, Russia, or China. We could tell the US",
+  "url": "https://news.ycombinator.com/item?id=37422138"
+ },
+ {
+  "id": "hn:33881867",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "No one wants to have kids anymore",
+  "body": "Before 100 years ago there was precious little nation-state level social security, so families were far more dependent upon other family members. Middle age parents needed to support their parents directly, so there was an obvious quid-pro-quo for the grandparent to take care of the child. Our forefathers changed this dynamic by making this arrangement somewhat invisible, in that we pay social sec",
+  "url": "https://news.ycombinator.com/item?id=33881867"
+ },
+ {
+  "id": "hn:28204624",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "How to Hack Apple ID",
+  "body": "This is such a great hack and a great write up. Thanks for posting it. Shocked at how little Apple paid for it. I\u2019m a CTO at a tiny company and we pay security researchers 10% of what you got for things 100x less severe than what you found.",
+  "url": "https://news.ycombinator.com/item?id=28204624"
+ },
+ {
+  "id": "hn:21101773",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Cash/Consent: The war on sex work",
+  "body": "I think it's a little hyperbolic to draw military service into the equation - as that is almost universally seen as exceptional. Now for fire and police work - I would argue the difference is one of necessity - even the most fundamental libertarians would probably agree that sex work is a luxury good or service - not something fundamental for survival or law and order; it is closer to working at a",
+  "url": "https://news.ycombinator.com/item?id=21101773"
+ },
+ {
+  "id": "hn:19589233",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Buy Yourself a Latte",
+  "body": "We do. It's called social security. Technically, it should be enough to pay the bare minimum of your needs upon retirement, if you're in a low cost-of-living area. It does not ensure a comfortable retirement, and we have enough problems in our government to erode our trust in getting the full payout from the system. It's also \"100%\" paid out if you wait until 67, or 75% at 62. Also, I note you sai",
+  "url": "https://news.ycombinator.com/item?id=19589233"
+ },
+ {
+  "id": "hn:18178863",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "DOD Just Beginning to Grapple with Scale of Weapon Systems Vulnerabilities",
+  "body": "A technology/security/defense product that the DoD is, should be more product focused rather than just metrics, metrics are important, but product, usability, security is more important. The wrong metrics can lead you astray[1]. The amount we pay for security, it is appalling some of the data in OP's report just to hit some arbitrary number over security and understanding of a defense product. > T",
+  "url": "https://news.ycombinator.com/item?id=18178863"
+ },
+ {
+  "id": "hn:9921988",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Hackers Remotely Attack a Jeep on the Highway",
+  "body": "People, and businesses, respond to incentives. The company probably did the economically rational thing here - the money they make from their remote-access features is more than the money they will lose for the insecurity. Companies in industries that need to find ways to make secure software; it's not a hard problem if you're willing to throw enough money at it. But as long as customers don't car",
+  "url": "https://news.ycombinator.com/item?id=9921988"
+ },
+ {
+  "id": "hn:8395437",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Germany\u2019s great tuition fees U-turn",
+  "body": "Actually, calculations on the social cost of smoking are complicated. We pay more for their healthcare initially, but they die younger so we pay their social security for less time. Depending on how you calculate it, smoking can be seen to be cost neutral, or even to save the country money. http://www.huffingtonpost.com/2009/04/08/how-much-does-smoki...",
+  "url": "https://news.ycombinator.com/item?id=8395437"
+ },
+ {
+  "id": "hn:6278612",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Spain begins disciplinary proceedings against site for violating Cookie Law",
+  "body": "A bit of fun about all this: The local government site of my spanish country, uses even javascript to record your mouse clicks in US (and cookies without advise, of course), pixel based tracking in case you block javascript, and more on the same line... And it has been said in their \"opengob\" sessions two years ago... and you know what? the local gov does not have any proceeding about their faults",
+  "url": "https://news.ycombinator.com/item?id=6278612"
+ },
+ {
+  "id": "hn:47967271",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "For Linux kernel vulnerabilities, there is no heads-up to distributions",
+  "body": "> Anyway, this is a disaster. It was extremely irresponsible to share the exploit with the world before the distributions shipped the fix. Who knows how many shared hosting providers were hacked with this. Maybe it is irresponsible how little attention we pay to software security. Maybe, software developers of all kind should spend an entire year not developing any features at all, but fix all the",
+  "url": "https://news.ycombinator.com/item?id=47967271"
+ },
+ {
+  "id": "hn:45561808",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "GitHub Copilot: Remote Code Execution via Prompt Injection (CVE-2025-53773)",
+  "body": "I don't use VSCode or Copilot, so I'm hoping someone can answer these questions for me - chmod: does Copilot run as the user? Who's file permissions does it respect? - Can Copilot get root access? - Can autoApprove be enabled via the standard interface? Making it possible to batch approve code changes along with this setting change?[0] - Can it read settings from multiple files? (e.g. `.vscode/set",
+  "url": "https://news.ycombinator.com/item?id=45561808"
+ },
+ {
+  "id": "hn:44709118",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Big agriculture mislead the public about the benefits of biofuels",
+  "body": "We saw what happens when you use just-in-time manufacturing and keep minimal stock of material when covid collapsed supply chains a few years ago. Imagine if that was our food supply instead. The over production is the price we pay for food security.",
+  "url": "https://news.ycombinator.com/item?id=44709118"
+ },
+ {
+  "id": "hn:4175629",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "SwipeGood (YC W11) Is Now Elastic, A Sales-As-A-Service Platform For Startups",
+  "body": "Right now we solve conflict of interests by not working with competitive customers in the exact same space. There are long term solutions for this. Regarding contacts - yes you keep all of them :) We use contracts and processes that make it tough for our sales reps to steal any of your data. But beyond security we pay a lot of attention on who we hire in the first place :)",
+  "url": "https://news.ycombinator.com/item?id=4175629"
+ },
+ {
+  "id": "hn:41247776",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "It's Not Just You. No One Wants Kids Anymore [video]",
+  "body": "Sub-replacement fertility is human extinction. When people talk about it at all, they're always yammering about \"how will we pay for social security\" and other nonsense, like any of that matters. > in 2022 the population peak was estimated to peak in 2080 but later corrections point more towards 2060. It will be revised earlier and earlier. This problem is accelerating.",
+  "url": "https://news.ycombinator.com/item?id=41247776"
+ },
+ {
+  "id": "hn:37976048",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "I live in my car: Parking lots open for those who can afford a car but not rent",
+  "body": "the biggest drag on the west right now is the excessive amount of resources that we allocate to the elderly. We funnel capital from young people to old to pay for drastically increasing healthcare costs while putting forward minimal effort to ensure young people can start families. Anecdotally, my family's health insurance (early 30s, 1 child; mostly paid for by my employer; 2k a month) costs more",
+  "url": "https://news.ycombinator.com/item?id=37976048"
+ },
+ {
+  "id": "hn:28138761",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "The Problem with Ethereum",
+  "body": "Why is it wrong? Ethereum has had the plan to move to proof of stake for years, and the purpose of the network is to serve its users not to enrich miners. We pay miners for security. That's great, but if we find a cheaper way to do security, there's nothing wrong with choosing a different security solution.",
+  "url": "https://news.ycombinator.com/item?id=28138761"
+ },
+ {
+  "id": "hn:28085891",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "SAML Is Insecure by Design",
+  "body": "We recommend OIDC, but support SAML because customers. We implemented our own SAML processing library, too: https://github.com/FusionAuth/fusionauth-samlv2 (We pay for valid security bugs.)",
+  "url": "https://news.ycombinator.com/item?id=28085891"
+ },
+ {
+  "id": "hn:27384939",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "The declining U.S. birthrate has implications beyond Social Security",
+  "body": "How will we pay for Social Security where it becomes even larger, and the tax base becomes even smaller? I\u2019ve thought about this, and it seems like there is no good option.",
+  "url": "https://news.ycombinator.com/item?id=27384939"
+ },
+ {
+  "id": "hn:25350821",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "OpenSSL Security Advisory \u2013 EDIPARTYNAME null pointer de-reference",
+  "body": "Does anyone ever actually use EDIPARTYNAME? Or is it just legacy cruft in X.509 that we pay for through security vulnerabilities like this? It is in obscure, rarely or never used features that vulnerabilities tend to lurk, since bugs in the more commonly used features get discovered and fixed much faster. If hardly anyone is using EDIPARTYNAME, maybe support for it should just be dropped? Reject a",
+  "url": "https://news.ycombinator.com/item?id=25350821"
+ },
+ {
+  "id": "hn:18385151",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Why [Insert Thing Here] Is Not a Password Killer",
+  "body": "Of course I feel a lot better using ssh than using telnet. I just don't want people to discount that this added complexity is the price we pay for the security.",
+  "url": "https://news.ycombinator.com/item?id=18385151"
+ },
+ {
+  "id": "hn:15971571",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Microsoft Moves to End Secrecy in Sexual Harassment Claims",
+  "body": "I think you need to consider the second order effects. If we create a world where people have the power to destroy others with a mere accusation, that will change how people behave. It will create an atmosphere of vindictiveness, fear, and distrust. Having to deal with people who have wronged you, but who you can't prove have wronged you, is just an unfortunate reality of the world. That's how all",
+  "url": "https://news.ycombinator.com/item?id=15971571"
+ },
+ {
+  "id": "hn:8029771",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Beware Keyloggers at Hotel Business Centers",
+  "body": ">Bad corporate policies or something? We have a winner. When I try to explain keylogging to them, they assure me that the vendor is first rate thanks to the money we pay and the webmail security is \"unbreakable\" on our system.",
+  "url": "https://news.ycombinator.com/item?id=8029771"
+ },
+ {
+  "id": "hn:50212461",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "No Need for Retirement When Utopia Is Around the Corner",
+  "body": "GP was confused probably. In EU when we hear a \"pension plan\" we usually think \"social security\", since we* pay a significant part of our earnings for this, so this is something we definitely count on and, at least in theory, it should be enough for good retirement (in practice it really varies). Many countries also have mandatory private plans that companies have to pay for, but I think people* t",
+  "url": "https://news.ycombinator.com/item?id=50212461"
+ },
+ {
+  "id": "hn:47715138",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "We've raised $17M to build what comes after Git",
+  "body": "But then again, for a fraction of the money US-Americans pay for health insurance, we actually have public health insurance here... Yes, we have higher taxes, yes, we pay more in social security... but in the end we have far less \"Working Poor\" and I know very, very, very, very few people who have more than 1 job. But I guess that's just socialist bullshit. What I am trying to convey is: The US li",
+  "url": "https://news.ycombinator.com/item?id=47715138"
+ },
+ {
+  "id": "hn:47581553",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Android Developer Verification",
+  "body": "Me too. But we, owners, collectively choose that. We choose the security company, we pay then, we can vote them out. Most importantly: the construction company has zero say in this. Also, no one actually check the IDs of my friends, and they don't have to pay the construction company when they first come. I give the codes, they ring, I open. I hire a company to monitor the building but I can kick ",
+  "url": "https://news.ycombinator.com/item?id=47581553"
+ },
+ {
+  "id": "hn:48203373",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Mullvad exit IPs are surprisingly identifying",
+  "body": "No software is free from bugs. Category of software that undergo extensive verification like aerospace are priced far higher to accommodate the additional QA. If such extensive verification are added to average consumer or even business software, the massive costs will pass down to average users making it too expensive. Security practices need to improve but I don't think 0-day droppers are the an",
+  "url": "https://news.ycombinator.com/item?id=48203373"
+ },
+ {
+  "id": "hn:5350235",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Google I/O costs too much for developers, Where to go instead?",
+  "body": "You know, when computer security conferences started getting too expensive, the BSides Security conferences were born. The idea was this: security conferences are too expensive, but all the speakers are in town. Let's ask them to come and talk for free at a free conference in the same town at the same time ... and it worked! Today, there are BSides conferences that take place all over the world. L",
+  "url": "https://news.ycombinator.com/item?id=5350235"
+ },
+ {
+  "id": "hn:31532487",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Can growth continue?",
+  "body": "The free market is pretty phenomenal at ensuring that technological growth will continue until we hit theoretical limits. Shortages cause price increases. Price increases make it more economical to pay up-front costs to develop technology whose per-unit costs permit extracting a profit compared to competitors who are not as technologically advanced, who die out and are replaced by new competitors ",
+  "url": "https://news.ycombinator.com/item?id=31532487"
+ },
+ {
+  "id": "hn:8887556",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Bitcoin crashes over 25% in 24 hours, under $180",
+  "body": "People might want to ask the question why the Bitcoin price goes down so much. One reason might be that keeping up network security is too expensive with Bitcoin (proof of work) and the miners have to sell their bitcoins to cover their electricity costs. Now if there is not enough demand for bitcoins then the price declines since miners continuously have to sell to cover costs. This also has been ",
+  "url": "https://news.ycombinator.com/item?id=8887556"
+ },
+ {
+  "id": "hn:43814236",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Did 5G kill the IMSI catcher?",
+  "body": "In the beginning of cell phones, security was too expensive. Telcos also like to do their own things, so GSM encryption wasn't built on best practices. And some countries forbid use of even GSM encryption. Early mobile phone networks suffered from cloning, so work was done to improve verification of clients, but verifying the network wasn't seen as required. Telcos have been historically light on ",
+  "url": "https://news.ycombinator.com/item?id=43814236"
+ },
+ {
+  "id": "hn:38809331",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Travel routers improve your life [video]",
+  "body": "It doesn't matter if the policies COULD be easily defeated. If you live in a country of 5 million people, and say \"only connections from smallstan are allowed into this sensitive infrastructure\", you've probably wiped out 99% of automated attacks. Security measures are judged by how much they cost to implement, and how effectively they reduce the threats you will actually face, and geolocation blo",
+  "url": "https://news.ycombinator.com/item?id=38809331"
+ },
+ {
+  "id": "hn:25689046",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Facebook Indefinitely Suspends Trump",
+  "body": "Which ones don't make sense? > > Universities that advocate equality, discriminate against Asian-Americans in favor of African-Americans. There is a pretty fundamental divergence between most people and the left about how to define \"discrimination\" (a critical thing in a multi-ethnic society). To most people, the absence of \"discrimination\" means race-neutrality. Most people on the left have embra",
+  "url": "https://news.ycombinator.com/item?id=25689046"
+ },
+ {
+  "id": "hn:25687702",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Facebook Indefinitely Suspends Trump",
+  "body": "My wife's grandma just posted a screed on FB that I think is telling. She's an average non-college educated white lady in her 80s. She's always voted Republican because of abortion. She's pretty smart, tech-savvy, maintains a household by her self in a rural area. She's probably less prejudiced than your average 80-year old American--insofar as she still thinks its okay to make the occasional off-",
+  "url": "https://news.ycombinator.com/item?id=25687702"
+ },
+ {
+  "id": "hn:21718437",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "The best Cyber Monday deals according to Alexa: any Amazon-owned brand",
+  "body": "Sure, it's certainly better than nothing. However, it's not really altruistic on Amazon's part. They avoid significant unionization, workplace democratization, or material social change by paying their workers a tiny bit more, while still extracting enormous surplus value from them. Furthermore, when they increased wages they cut benefits. Regardless, this doesn't invalidate my point. $15/hr is st",
+  "url": "https://news.ycombinator.com/item?id=21718437"
+ },
+ {
+  "id": "hn:17841741",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: Security at my company is horrible, what can I do?",
+  "body": "Decide whether you're willing to leave the company or lose your job over this. It's not popular to say, but there are enough companies that will manage out individuals that bring up issues like this because there's no management backing and then it just becomes disruptive. It sucks. Think about it and based on that decide on how hard you want to push security issues and awareness. In terms of best",
+  "url": "https://news.ycombinator.com/item?id=17841741"
+ },
+ {
+  "id": "hn:4767711",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Submittable (YC S12) raises $750K to replace email",
+  "body": "> It makes writing an e-mail client too expensive and also means that security issues are more likely to creep in. I disagree: Libraries to render HTML already exist and will continue to be developed, since they are used in web browsers anyway. The development effort would be greater if we introduce another (new) format specifically for email. Every E-Mail Client that wants to do so already implem",
+  "url": "https://news.ycombinator.com/item?id=4767711"
+ },
+ {
+  "id": "hn:4766765",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Submittable (YC S12) raises $750K to replace email",
+  "body": "Because the HTML supported by e-mail is too massive. It makes writing an e-mail client too expensive and also means that security issues are more likely to creep in. Plain text should stay as is. HTML is the problematic format that needs addressing. When they first started using HTML for e-mails it was just the natural thing to do, but with the benefit of hindsight it was a mistake. So I am sugges",
+  "url": "https://news.ycombinator.com/item?id=4766765"
+ },
+ {
+  "id": "hn:47504380",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "FCC updates covered list to include foreign-made consumer routers",
+  "body": "A Palo Alto 440 is what I would consider a baseline for 'real' security. Way too expensive and complicated for most if not all home users. I keep recommending the free version of Sophos firewall for home users. It's still a bit of a bear to configure.",
+  "url": "https://news.ycombinator.com/item?id=47504380"
+ },
+ {
+  "id": "hn:35536048",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "People with severe mental illness have been failed by a dysfunctional system",
+  "body": "> and you know the American right would rip it to shreds, given they already see social security/medicare as too expensive. So let them complain! Might as well try and do the things we want to do. They'll find something to complain about, regardlessly. A certain tan suit comes to mind.",
+  "url": "https://news.ycombinator.com/item?id=35536048"
+ },
+ {
+  "id": "hn:35529139",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "People with severe mental illness have been failed by a dysfunctional system",
+  "body": "> Does \"free homes for the homeless\" possibly work in the US without becoming \"free basic homes for everyone\"? No. Free basic homes for everyone is exactly what I want. > It is ludicrously easy to attack politically otherwise (\"you're working two jobs to make rent for you and your family, and now they want to give these people a free home that's new and nicer than your crappy old apartment!\"), and",
+  "url": "https://news.ycombinator.com/item?id=35529139"
+ },
+ {
+  "id": "hn:35527826",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "People with severe mental illness have been failed by a dysfunctional system",
+  "body": "Does \"free homes for the homeless\" possibly work in the US without becoming \"free basic homes for everyone\"? It is ludicrously easy to attack politically otherwise (\"you're working two jobs to make rent for you and your family, and now they want to give these people a free home that's new and nicer than your crappy old apartment!\"), and you know the American right would rip it to shreds, given the",
+  "url": "https://news.ycombinator.com/item?id=35527826"
+ },
+ {
+  "id": "hn:27903542",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "A case against security nihilism",
+  "body": "> The problem is that state-level actors don't just have a lot of money; they (and their decision makers) also put a much much lower value on their money than you do. I think you have a false perception of the budgetary constraints mid-level state actors are dealing with. Most security agencies have set budgets and a large number of objectives to achieve, so they'll prioritize cost-effective solut",
+  "url": "https://news.ycombinator.com/item?id=27903542"
+ },
+ {
+  "id": "hn:2693687",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Puppet 2.7 Released",
+  "body": "I've been using Puppet for Linux servers and SCCM for Windows stuff... what's missing for me is good out of band configuration verification. Is there a good replacement for Tripwire out there? It's a great toolset for change management and security, but is too expensive for my current endeavours. I played with an open source tool a couple of years ago that kind of sucked.",
+  "url": "https://news.ycombinator.com/item?id=2693687"
+ },
+ {
+  "id": "hn:25814940",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "That's not how 2FA works",
+  "body": "They author makes a few good points, but I find the author's critique of Yubikey weak: >Cost. The average YubiKey is \u00a350... If that's too expensive for ensuring your internet security, then either you underestimate the risks, or undervalue your information. If a Yubikey cost 10 times more it would still be a bargain. >Usability. Buy a device, register it, install the app, configure it, find the se",
+  "url": "https://news.ycombinator.com/item?id=25814940"
+ },
+ {
+  "id": "hn:22180382",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Nuclear power is the only green solution (2004)",
+  "body": "You are talking about reactors I am talking about power plant ; one nuclear power plant has generally multiple reactors A lot of active nuclear power plant are old and based on old design. This article was written before Fukushima ! Many new projects are canceled because nuclear is now too expensive, partly due to the security constraint",
+  "url": "https://news.ycombinator.com/item?id=22180382"
+ },
+ {
+  "id": "hn:18213111",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Disguised user location data collection on Huawei phone?",
+  "body": "I have a family friend that is 70+ yr olds. Unfortunately, the best deal I could find for him via his AT&T prepaid plan was a $70 Huawei Ascend XT2 @ Walmart (locked to AT&T). It's performance is great: fast charging, long-lasting battery, 2G of RAM, and intuitive UI (despite being Huawei's custom modifications of stock Android). What are the best alternatives (in terms of security updates and pri",
+  "url": "https://news.ycombinator.com/item?id=18213111"
+ },
+ {
+  "id": "hn:17881903",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Krypton: phone-based U2F Authenticator",
+  "body": "I think you don't get security. Security is literally spending resources to protect something. Time is a resource. Space in your brain is a resource. If I want to secure a city, I spend labor and materials to build a wall. If I want to secure my documents, I spend money on a safe. If I want to secure my emails, I spend brain space and time dealing with passwords. You can argue that the resource <-",
+  "url": "https://news.ycombinator.com/item?id=17881903"
+ },
+ {
+  "id": "hn:46987737",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "ContractShield \u2013 \u20ac19 security scan for indie SaaS (2,500 CVEs, Nuclei-powered)",
+  "body": "Hey HN, I built PTaaS ContractShield because I kept seeing the same pattern: indie devs and small SaaS teams ship fast, but security testing is either too expensive (pentest firms charge \u20ac5K-\u20ac20K) or too complex (setting up your own Nuclei/Nmap pipeline). Most early-stage products have zero security testing until a client or investor asks for a report. What it does: PTaaS ContractShield runs autom",
+  "url": "https://news.ycombinator.com/item?id=46987737"
+ },
+ {
+  "id": "hn:45661976",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "What do we do if SETI is successful?",
+  "body": "The decision to not respond should not be considered an option for the UN. They can get a week max to decide what to respond, but a response needs to be sent quick. Otherwise you can assume someone will take the choice away and respond anyway. That someone could be a nation not liking the UN discussions, or it could be a rogue scientists with access to the powerful radios. (I doubt most of us coul",
+  "url": "https://news.ycombinator.com/item?id=45661976"
+ },
+ {
+  "id": "hn:43745978",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "I Do Not Recommend Proton Mail",
+  "body": "I wish there were a summary up front. Or at the end. Software didn't work? Security problems? Bad support? Too expensive? I can't tell.",
+  "url": "https://news.ycombinator.com/item?id=43745978"
+ },
+ {
+  "id": "hn:29896217",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "The optional chaining operator, \u201cmodern\u201d browsers, and my mom",
+  "body": "I got bit by this obsolescence. My understanding of the gist of it: 1) Chromebook is a \"secure platform\" => including drivers, firmware, etc. etc. 2) Supporting \"security\" across the browser is the first point, but additionally, there's security required across the whole hardware footprint 3) \"when it's too expensive to keep track of / backport security fixes\" or \"the latest kernel won't build any",
+  "url": "https://news.ycombinator.com/item?id=29896217"
+ },
+ {
+  "id": "hn:26828158",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: How can a unhireable person get a job?",
+  "body": "If this is essay is a representative sample of how you express yourself in general, then one recommendation is to improve your communication ability/style [1]. Stream-of-conscious may work in online chatrooms, but not in professional settings. In any team-oriented setting, clear and organized communication is non-negotiable. Your writing here signals intelligent, but manic, frantic, and maybe not ",
+  "url": "https://news.ycombinator.com/item?id=26828158"
+ },
+ {
+  "id": "hn:26827513",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 0,
+  "title": "Ask HN: How can a unhireable person get a job?",
+  "body": "> I've interviewed at Google, Facebook, Dell, NSA, CIA, DoE (E=Energy), Airbnb, Palantir Those are some pretty impressive names for places you've interviewed at, but they also have the highest bars to get in. Why not try just some average, run-of-the-mill companies off job sites? There's nothing embarrassing about starting at those. I worked for a no name exercise tracking app company my first job",
+  "url": "https://news.ycombinator.com/item?id=26827513"
+ },
+ {
+  "id": "stackexchange:security:121062",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": -1,
+  "title": "What are all the IT security concerns of a small business?",
+  "body": "We are in the process of updating our IT infrastructure and part of this will be a security review. I want to make sure we review every relevant security point. So, what are all the IT security concerns a small business should address? Assume the business has a typical network, fileserver, backup drives, internet access, company email, wifi, and all manner of software. To keep this focused, please",
+  "url": "https://security.stackexchange.com/questions/121062/what-are-all-the-it-security-concerns-of-a-small-business"
+ }
+]

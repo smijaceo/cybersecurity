@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "hn:44270104",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 3,
+  "title": "Microsoft Copilot zero-click attack raises alarms about AI agent security",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=44270104"
+ },
+ {
+  "id": "hn:45805304",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 3,
+  "title": "LLM Security Guide \u2013 100 tools and real-world attacks from 370 experts",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=45805304"
+ },
+ {
+  "id": "stackexchange:security:240858",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 3,
+  "title": "Information disclosure via ktpass tool",
+  "body": "The Microsoft ktpass tool can be used to generate a .keytab file that contains a secret key. I'd like to understand the output of the tool. An example output can be found here . I'm interested in the following part: keylength 16 (0xdd74540caa4a230af2ed75558a37995d) The Microsoft documentation is quite vague on the exact meaning of this output. Is this the actual key that has been generated? What w",
+  "url": "https://security.stackexchange.com/questions/240858/information-disclosure-via-ktpass-tool"
+ },
+ {
+  "id": "stackexchange:security:267900",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 3,
+  "title": "PCI-DSS Compliance",
+  "body": "Recently I had to implement a website that had to be PCI-DSS compliant. I am only transferring card details over SSL (encrypted with a random RSA 2048 key generated each time, as well.) The data is then transferred to Stripe. Nothing is stored on my backend in relation to card data. If I am only handling a few transactions, would a self-assessment suffice?",
+  "url": "https://security.stackexchange.com/questions/267900/pci-dss-compliance"
+ },
+ {
+  "id": "stackexchange:security:220536",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 3,
+  "title": "How can I maintain and automate a list of download URLs with known hashes?",
+  "body": "I'm familiar with the concept of downloading a file and manually checking it against a published checksum. See How to verify the checksum of a downloaded file (pgp, sha, etc.)? and Is there a command line method by which I can check whether a downloaded file is complete or broken? for examples. I would now like to maintain my own list of target URLs and expected checksums, something like: https://",
+  "url": "https://security.stackexchange.com/questions/220536/how-can-i-maintain-and-automate-a-list-of-download-urls-with-known-hashes"
+ },
+ {
+  "id": "serverfault:serverfault:1193146",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Exclusion Group for SCIM Provisioning in Entra ID",
+  "body": "We have an All Staff group that we use for provisioning apps (via SCIM in Entra ID) that the whole company should have, but recently we've realized that a few of our staff may not need a particular app. I know we could completely change up the way we provision, but my boss isn't willing to go that route. I asked ChatGPT if there was a way to setup exclusions in SCIM and it told me to use Assignmen",
+  "url": "https://serverfault.com/questions/1193146/exclusion-group-for-scim-provisioning-in-entra-id"
+ },
+ {
+  "id": "serverfault:serverfault:1171594",
+  "segment": "smb-security-ops",
+  "segment_description": "Small teams with no SOC \u2014 alert overload, affordable detection, compliance.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Best Open-Source SIEM for Monitoring 100-150 Assets?",
+  "body": "I'm working on a small IT architecture with around 100-150 assets, including firewalls and servers. I want to monitor all of this effectively using a good open-source SIEM solution. Could you please help me choose the best option based on ease of deployment, scalability, and threat detection capabilities?",
+  "url": "https://serverfault.com/questions/1171594/best-open-source-siem-for-monitoring-100-150-assets"
+ },
+ {
+  "id": "serverfault:serverfault:207938",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Network audit tracker",
+  "body": "I'm looking for a tool like PBNJ ( http://pbnj.sourceforge.net/ ) but not quite. The functionality I'm looking for is something I can throw into cron to run daily or weekly, scan a network(s), store the findings and produce a diff-like report of hosts and ports that (dis)appeared since the prior scan. Any recommendation?",
+  "url": "https://serverfault.com/questions/207938/network-audit-tracker"
+ },
+ {
+  "id": "serverfault:serverfault:489280",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Win 2008r2 Audit",
+  "body": "I'm trying to turn on auditing but every time i check Success and failure in Local policy / Computer Conf/Windows settings/security settings/local policies/Audit Policy/ Audit Object access , it turns on audit for every files/folders. I have just enabled auditing on some folders.... any ideas?",
+  "url": "https://serverfault.com/questions/489280/win-2008r2-audit"
+ },
+ {
+  "id": "serverfault:serverfault:775038",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Printer Audit 64bit",
+  "body": "I'm running the following script to get a report on installed printers : https://community.spiceworks.com/scripts/show/2186-export-printer-information-to-spreadsheet?page=1 However when the script is working it scans for the 64 bit driver retrieves it, copy's to the excel output and then scans for the 32 bit and overwrites the original 64bit. I have tried unsuccessfully to come up with a solution ",
+  "url": "https://serverfault.com/questions/775038/printer-audit-64bit"
+ },
+ {
+  "id": "serverfault:serverfault:426517",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Exchange Admin Audit log",
+  "body": "i was looking at the admin audit logs today and found it very usefull. But it doesn't include the source computer launching the commands. An example, i have the EMC on my computer modifying some distribution list on exchange which is a different machine. In the logs it will say source as being the exchange server and not my computer. Is there a way to change taht? or have more details? Thanks",
+  "url": "https://serverfault.com/questions/426517/exchange-admin-audit-log"
+ },
+ {
+  "id": "serverfault:serverfault:1147510",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "OpenShift action audit log",
+  "body": "Good day everyone ! I am looking if there is any way to audit or look at a audit log for any specific actions done by a specific user on a deployment for example. My goal would be to see, who scaled up or down a specific deployment or statefulSet, change storage size or settings. Something along theses lines. Thank you OpenShift version: Latest 4.14 P.S: I am looking for a CLI example. Not even su",
+  "url": "https://serverfault.com/questions/1147510/openshift-action-audit-log"
+ },
+ {
+  "id": "serverfault:serverfault:1030704",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Still getting Audit Failures",
+  "body": "I have a machine running at Digital Ocean that has been getting failed RDP login attempts. I thought I had RDP Firewall rules set such that I should only allow connections from 3 IP's that I want to RDP from. Have I set my firewalls up correctly? Does anyone know why I would still be getting Failed Login attempts when my Firewall rule is in place? The Remote Desktop -User Mode (TCP-in) and The Rem",
+  "url": "https://serverfault.com/questions/1030704/still-getting-audit-failures"
+ },
+ {
+  "id": "serverfault:serverfault:314713",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Network Change Control & Compliance",
+  "body": "I'm looking for a network change management & compliance audit tool, I know that SolarWinds and tufin are very know. Do you have any experience that you can share regarding these two or other?",
+  "url": "https://serverfault.com/questions/314713/network-change-control-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:988839",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Managing MSP Tenants for Anti-Phishing Controls",
+  "body": "I'm trying to find a simple way to report on our tenants' settings regarding Microsoft's recently introduced Anti-Phishing controls. If possible, I'm looking to find an easy GUI method to report on these, with any management considered a very happy bonus. Otherwise I'll just use the cmdlet that they detail in their docs on a ' Get-AntiPhishPolicy ' and (where necessary) ' Set-AntiPhishPolicy ' bas",
+  "url": "https://serverfault.com/questions/988839/managing-msp-tenants-for-anti-phishing-controls"
+ },
+ {
+  "id": "serverfault:serverfault:884321",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Google Safe Browsing detect Zimbra as phishing (or deceptive) site",
+  "body": "Since today, a (relatively old) Zimbra installation of a specific customer is detected by Google Safe Browsing as a phishing/deceptive site, with the classical red screen and all. We suspect an email account was compromised and sent some small amount of spam, but is this sufficient to explain the site listing in Safe Browsing? Unfortunately, I can not find many informations on Google's site tools ",
+  "url": "https://serverfault.com/questions/884321/google-safe-browsing-detect-zimbra-as-phishing-or-deceptive-site"
+ },
+ {
+  "id": "serverfault:serverfault:909043",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "I think I just found the encryption key used by ransomware on my server... how can I check?",
+  "body": "Long story short, server ended up with a ton of encrypted files. IDRansomware thinks it was GlobeImposter 2.0, see here . I'm not 100% sure on that as I ended up with a ..rtf file extension on my files (intentional double-dots there) and that isnt stated on the info sheet for globe imposter 2.0. Anyway, I have been tidying up the FS and I've come across this file... The timestamp on the file puts ",
+  "url": "https://serverfault.com/questions/909043/i-think-i-just-found-the-encryption-key-used-by-ransomware-on-my-server-how-c"
+ },
+ {
+  "id": "github:3253211623",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Support for Rust",
+  "body": "Rust usage in embedded systems is growing specifically for safety and security critical applications. A tool to support code review looking for possible vulnerabilities is very much welcome despide the better memory model of Rust.",
+  "url": "https://github.com/arm/metis/issues/21"
+ },
+ {
+  "id": "github:2942953756",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "evaluating the effectivness of mapping Maven projects to source repository",
+  "body": "\"Packages with no source code URL\" is a strong contribution for this project. If you are looking for a baseline tool to evaluate this in your thesis, see RQ3 of [Macaron: A Logic-based Framework for Software Supply Chain Security Assurance](https://dl.acm.org/doi/pdf/10.1145/3605770.3625213).",
+  "url": "https://github.com/chains-project/dirty-waters/issues/129"
+ },
+ {
+  "id": "github:620112459",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Getting the deb up to Debian standards",
+  "body": "I attach here the research that @ThomasGoirand did to get it up to par: > I'm an experienced Debian Developer. I'm used to maintain big Python > suites, and I'm not really scared by the amount of work needed to > package AW in Debian. FYI, I'm also the maintainer of OpenStack in > Debian, for which I maintain about 400+ packages. > > (REDACTED PARAGRAPH) > > Being not happy with this [using a prop",
+  "url": "https://github.com/ActivityWatch/deb-activitywatch-bin/issues/2"
+ },
+ {
+  "id": "github:6510968959",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Thoughts / Suggestions",
+  "body": "A few ideas I have, not really directed into a single issue since this repo seems brand-new and I'm not sure what you have in mind going forward. I'm looking for a tool that could track my personal activity long term and short term. (I have a rare sleep/circadian rhythm disorder) - (Remove Limitation) The `today.dat` being encoded is good for compression/security, but is not readable. Saving the `",
+  "url": "https://github.com/I-9028/ScreenTime/issues/1"
+ },
+ {
+  "id": "github:4994794070",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "P1 follow-up: prompt-injection through telemetry is structurally prevented and never tested",
+  "body": "## Parent PRD #1 ## Context Raised while tightening the P1 slice (#16). P1's acceptance criterion \"Telemetry is passed as tool-result content, never as instructions\" is enforced by construction and has never been tested against an adversary. A structural guarantee nobody has attacked is a belief, not a property. ## What is actually true after P1 Telemetry reaches the model only as the content of a",
+  "url": "https://github.com/ghantakiran/OTEL/issues/54"
+ },
+ {
+  "id": "github:5595441040",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Threat model: jailed model proposes off-grant tool args; current tools-integration example invokes as written because tool messages skip input rails.",
+  "body": "### Please also confirm the following - [x] I have searched the [main issue tracker](https://github.com/NVIDIA-NeMo/Guardrails/issues) of NeMo Guardrails repository and believe that this is not a duplicate ### Issue Kind Improving documentation ### Existing Link https://github.com/NVIDIA-NeMo/Guardrails/blob/develop/README.md https://github.com/NVIDIA-NeMo/Guardrails/blob/develop/docs/integration/",
+  "url": "https://github.com/NVIDIA-NeMo/Guardrails/issues/2409"
+ },
+ {
+  "id": "github:4973111474",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[Feature]: Configurable instruction files injected into the system prompt, per provider and per project",
+  "body": "### Before submitting - [x] I searched existing issues and did not find a duplicate. - [x] I am describing a concrete problem or use case, not just a vague idea. ### Area apps/desktop ### Problem or use case T3 Code delegates instruction loading to each provider's native discovery of hard-coded filenames: `CLAUDE.md` via `settingSources` for Claude, `AGENTS.md` for Codex. There is no way to say \"a",
+  "url": "https://github.com/pingdotgg/t3code/issues/4490"
+ },
+ {
+  "id": "github:4514697761",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[Feature]: Proposal: Integrate Purple Swan v3.0 Meta-Core as an OpenClaw Advanced Cognitive Module",
+  "body": "### Summary Purple Swan is an enhanced fork of OpenClaw that fully preserves every message channel, CLI tool, and plugin system while adding a \u201cFive-in-One Meta-Core\u201d composed of hierarchical semantic memory (LanceDB), a self-evolution engine (EvoSkills), pre-action reflection (MIRROR), cross-session user/project profiling, and a self-correction loop. This proposal outlines a non-invasive plan to ",
+  "url": "https://github.com/openclaw/openclaw/issues/86348"
+ },
+ {
+  "id": "github:4635323390",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Decompose workflows services: workflow-executor (2,606) + workflow-engine-adapter (2,362)",
+  "body": "## Summary Two sibling services in `apps/server/api/src/collections/workflows/services/` have each grown past the decomposition bar: - `workflow-executor.service.ts` (**2,606 lines**) conflates graph-execution orchestration, the review-gate lifecycle (~10 methods over ~700 lines), execution finalisation (a block copy-pasted four times), and ETA/progress tracking with its own WebSocket adapter. - `",
+  "url": "https://github.com/genfeedai/genfeed.ai/issues/521"
+ },
+ {
+  "id": "github:2869491611",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Prompt Injection on LlamaGuard is not considered a vulnerability",
+  "body": "I reported a vulnerability in LlamaGuard to a prompt injection that allowed one to bypass detection through the official Meta process. This report was closed as \"Reports describing methods to generate content that bypass the model's safeguards are not eligible for a reward under our program\". I was not looking for a bounty. I was simply trying to communicate about the issue through non-public chan",
+  "url": "https://github.com/meta-llama/PurpleLlama/issues/77"
+ },
+ {
+  "id": "github:5516419988",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "bug(guards): reach_declarations_test passes locally on a commit CI fails \u2014 a local pass is not evidence",
+  "body": "## Problem On #17072 head `ff296b7142`, CI fails: ``` ReachFloorError: [prompt-injection-detector-strict-mode] floor 2940 sits 304 below its live population of 3244 tracked backend python files (tests excluded), which exceeds the declared allowance of 300 (skips=0 + growth=300). FAILED repo_tests/reach_declarations_test.py::test_every_declared_floor_is_pinned_to_its_population[prompt-injection-det",
+  "url": "https://github.com/mrveiss/AutoBot-AI/issues/17144"
+ },
+ {
+  "id": "github:4848530931",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Compression re-serves system/environment block in-band, indistinguishable from prompt injection",
+  "body": "## Summary When compression is enabled, pxpipe appears to render/relay the Claude Code system/environment block (model id, knowledge cutoff, tool docs, etc.) back into the conversation through the normal assistant-visible content channel, in a form that is structurally indistinguishable from an in-band prompt injection. ## What we observed Across a long session, several messages arrived containing",
+  "url": "https://github.com/teamchong/pxpipe/issues/97"
+ },
+ {
+  "id": "github:6043643958",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Volunteers wanted: 10-minute offline MCP security-contract beta (Windows/Ubuntu)",
+  "body": "## Volunteer invitation \u2014 MCP Agent Security Test Suite (fictional offline beta) We are looking for **independent developers** willing to try a free, open-source, Node.js 20/22 MCP-shaped **offline security-contract test suite** and give candid usability feedback. **What we need:** One short clean-source checkout, five bundled synthetic checks, and a few notes on clarity, cross-platform setup, bug",
+  "url": "https://github.com/AndriiKhanin/mcp-agent-security-test-suite/issues/195"
+ },
+ {
+  "id": "github:5229562750",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[Feature Request]: Add an official HOL Guard tool-execution middleware example",
+  "body": "### Is your feature request related to a problem? Please describe. AG2 middleware already exposes `on_tool_execution()` specifically for validating tool arguments and enforcing policies before a tool runs, but there is no official example showing how to connect that boundary to an external agent-security runtime. HOL Guard is an open-source runtime security layer for AI agents and tools: https://g",
+  "url": "https://github.com/ag2ai/ag2/issues/3204"
+ },
+ {
+  "id": "github:6431620380",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Agent Governance Control Plane",
+  "body": "Problem: Teams deploying coding or operational agents have no way to enforce which tools an agent may call at runtime, require human approval before a high-risk action fires, or produce an audit trail that proves which agent did what. Today this is enforced ad-hoc by per-agent scripts, by running agents with full tool access, or by giving every agent the same account-level connector. Microsoft Ent",
+  "url": "https://github.com/awiseguy88/AgentWiseAI/issues/110"
+ },
+ {
+  "id": "github:4595130149",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "feat: governance guard for tool calls \u2014 deterministic policy evaluation, cost tracking, and audit",
+  "body": "### Description ## Feature request I'd like to propose/contribute a governance integration for Pydantic AI that evaluates deterministic security policies before tool execution, tracks cost, and produces structured audit records. ### Proposed API Pydantic AI's dependency injection system is a natural fit for governance \u2014 inject a governance guard as a dependency: ```python from pydantic_ai import A",
+  "url": "https://github.com/pydantic/pydantic-ai/issues/5789"
+ },
+ {
+  "id": "github:3715722530",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Added agentgateway to Awesome AI Agent Security list",
+  "body": "Hi team, I've featured agentgateway in my curated list of AI Agent Security tools: https://github.com/ProjectRecon/awesome-ai-agents-security. I think it's a critical tool for the ecosystem. If there is a specific description or link you'd prefer I use, let me know and I'll update it! Keep up the great work.",
+  "url": "https://github.com/agentgateway/agentgateway/issues/714"
+ },
+ {
+  "id": "github:4520556730",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[Bug]: Cron jobs fail with 503 overloaded error \u2014 no fallback model configured",
+  "body": "### Bug type Regression (worked before, now fails) ### Beta release blocker No ### Summary ## Bug Description Multiple cron jobs are failing with `FailoverError: The AI service is temporarily overloaded` when calling the MiniMax API. HTTP 503 returned but no fallback mechanism. ## Steps to Reproduce 1. Set up cron jobs with isolated session targets using `minimax-cn/MiniMax-M2.7` model 2. Wait for",
+  "url": "https://github.com/openclaw/openclaw/issues/86704"
+ },
+ {
+  "id": "github:4125130278",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2026-03-24",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082026-03-24\uff09 - SecWiki News - [SecWiki News 2026-03-23 Review](http://www.sec-wiki.com/?2026-03-23) - Tenable Blog - [The hidden cost of AI speed: Unmanaged cyber risk](https://www.tenable.com/blog/secure-ai-attack-surface-exposure-management) - Microsoft Security Blog - [Case study: How predictive shielding in Defender stopped GPO-based ransomware before it started](https://www.microsoft.",
+  "url": "https://github.com/ruohong2018/ruohong2018.github.io/issues/1138"
+ },
+ {
+  "id": "github:4125130988",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2026-03-24",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082026-03-24\uff09 - Reverse Engineering - [ ] [/r/ReverseEngineering's Weekly Questions Thread](https://www.reddit.com/r/ReverseEngineering/comments/1s19snm/rreverseengineerings_weekly_questions_thread/) - [ ] [We got Skype to log in - One major step in figuring out the popular 2000s IM client](https://www.reddit.com/r/ReverseEngineering/comments/1s1tphp/we_got_skype_to_log_in_one_major_step_in",
+  "url": "https://github.com/MM0x02/RSS-Push/issues/453"
+ },
+ {
+  "id": "github:4125138816",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2026-03-24",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082026-03-24\uff09 - Private Feed for M09Ic - [ ] [joaoviictorti starred microsoft/RustTraining](https://github.com/microsoft/RustTraining) - [ ] [spf13 starred obra/superpowers](https://github.com/obra/superpowers) - [ ] [bolucat released 202603232003 at bolucat/Archive](https://github.com/bolucat/Archive/releases/tag/202603232003) - [ ] [mgeeky starred shuvonsec/claude-bug-bounty](https://gith",
+  "url": "https://github.com/chainreactors/picker/issues/1187"
+ },
+ {
+  "id": "github:4152002261",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "enhancement proposal: Threat Remediation \u2014 LLM-driven investigation and response for security signals",
+  "body": "## Enhancement Proposal: Threat Remediation ### Vision Extend Kubernaut's signal \u2192 investigation \u2192 remediation \u2192 verification pipeline to handle **security signals** from existing detection tools (Falco, Trivy, OPA/Gatekeeper, audit logs, compliance scanners). The LLM provides the **contextual reasoning layer** between detection and response \u2014 the part that today requires a human security analyst.",
+  "url": "https://github.com/jordigilh/kubernaut/issues/554"
+ },
+ {
+  "id": "github:5057890599",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "rvoip-vapi: no tool-result control message forces an inbound HTTPS webhook",
+  "body": "## Summary `VapiCommand` supports `say`, `add-message`, and `control`, but there is no way to send a **tool result** back over the WebSocket. When an assistant invokes a tool, the application can observe the call via `VapiEvent::ToolCall` but cannot answer it in-band. The result must instead be returned over Vapi's HTTP `server.url` webhook. For an on-premises deployment that otherwise needs only ",
+  "url": "https://github.com/eisenzopf/rvoip/issues/164"
+ },
+ {
+  "id": "github:5209639620",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "feat: meta-broker \u2014 proxy jupyter-mcp-server tools through jupyterlab-mcp",
+  "body": "## Goal Turn `af-jupyterlab-mcp` into a **meta-broker**: in addition to managing notebook lifecycle (create/get/list/delete), it proxies tool calls directly to the `jupyter-mcp-server` endpoint that runs inside each notebook pod. The LLM gets a single, coherent tool surface \u2014 it never holds the raw JupyterLab token, never constructs tokenized URLs, and never speaks MCP directly to the notebook. `j",
+  "url": "https://github.com/maniaclab/af-jupyterlab-mcp/issues/4"
+ },
+ {
+  "id": "github:4832803199",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "DESIGN: dynamic (agentic) job handler \u2014 schedule an LLM prompt + scoped tools as a job",
+  "body": "**DESIGN \u2014 iterate before building (not ready to build as-is; the security model is load-bearing).** Companion to the jobs cleanup (part A, shipped 96e750b). A is: a job is one-shot, recurrence = a public.schedules row. B adds a second way to say WHAT a job does. ## Today A job's work = its `job_type`, resolved to a **registered code handler** (`register_handler`, from manifest `job_types:`). Deve",
+  "url": "https://github.com/familycaptain/skipperbot-platform/issues/109"
+ },
+ {
+  "id": "github:5077263638",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[Feature]: Kubernetes session-pod terminal backend",
+  "body": "### Problem or Use Case When Hermes runs inside Kubernetes, it has no isolated execution option: - `local` runs model-generated commands in the agent's own container, sharing its filesystem, its `~/.hermes` directory (credentials, sessions, memories), and its projected ServiceAccount token. - `docker` needs a Docker socket. On a Kubernetes node that is either absent (containerd/CRI-O) or equivalen",
+  "url": "https://github.com/NousResearch/hermes-agent/issues/79869"
+ },
+ {
+  "id": "github:4673590620",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Epic: Improve AI reliability, persistent memory, and personality scaffolding",
+  "body": "Summary This epic aims to make the AI features in Dimensional Wellness AI reliable, resilient, and consistent by: (1) stabilizing the LLM integration and API connectivity, (2) implementing a persistent semantic memory layer (vector DB + embeddings + memory lifecycle), and (3) introducing formalized personality scaffolds (system-prompt management and testing). It also includes infra for monitoring,",
+  "url": "https://github.com/dimensionalwellnessai-lang/DW-Ai-/issues/298"
+ },
+ {
+  "id": "github:4328164494",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[Feature] Webhook/event hook for unauthorized-sender events (notify_unauthorized_to_url)",
+  "body": "# [Feature] Webhook/event hook for unauthorized-sender events (`notify_unauthorized_to_url`) ## Problem When `[security] mode = \"allowlist\"`, the bridge correctly blocks unauthorized senders and (optionally) sends them the configured `deny_message`. The deny event is logged to stderr as: ``` guard: blocked unauthorized sender +6281234567 ``` That's all the operator sees. There's no built-in way to",
+  "url": "https://github.com/Enriquefft/openclaw-kapso-whatsapp/issues/34"
+ },
+ {
+  "id": "github:5081689219",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[Feature]: TealTiger governance plugin \u2014 deterministic policy enforcement, PII detection, cost caps, and tool authorization without external API keys",
+  "body": "### Prerequisites - [x] I have searched existing issues and discussions to avoid duplicates ### Problem to solve Bifrost's guardrail layer currently integrates with external providers (AWS Bedrock Guardrails, Azure AI Content Safety, GraySwan Cygnal, Patronus AI) that all require external API keys and network round-trips. This creates gaps for three user groups: **1. Air-gapped / data-sovereignty ",
+  "url": "https://github.com/maximhq/bifrost/issues/5903"
+ },
+ {
+  "id": "github:4673347606",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "\u26a1 Claude Token Optimization2026-06-16 \u2014 Smoke Claude",
+  "body": "## Target Workflow: `smoke-claude` **Source report:** #5105 **Estimated cost per run:** ~$0.041 (data-bearing runs only; 14/28 runs recorded token data) **Total tokens per run:** ~62,500 tokens (range: 62,346\u201362,674; 0.5% variance \u2014 fully deterministic) **Cache read rate:** 62.1% (38,673 / 62,346 tokens) **Cache write rate:** 36.4% (22,721 / 62,346 tokens) **LLM turns:** 2 (despite `max-turns: 1` ",
+  "url": "https://github.com/github/gh-aw-firewall/issues/5109"
+ },
+ {
+  "id": "github:5765648567",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[RegisterSec] Fighting GenAI with GenAI: The New Email Security Landscape",
+  "body": "The use of phishing emails as a means of stealing information or implanting damaging malware dates back to the mid-1990s. Although almost as old as the Internet, it remains the instrument of choice for threat actors wanting to pose as trusted organizations or individuals for the purposes of corporate infiltration. In fact its use is on the rise: according to the most recent figures from the Federa",
+  "url": "https://github.com/SecOpsNews/news/issues/74869"
+ },
+ {
+  "id": "github:4363685053",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[Enhancement]: MCP Client Support \u2014 Connect PentAGI to External Security Tools via Model Context Protocol",
+  "body": "### Target Component Core Services (Frontend UI/Backend API) ### Enhancement Description ## Summary Add a generic MCP (Model Context Protocol) client to PentAGI so that agents can use any MCP-compatible external tool as a first-class tool \u2014 starting with Burp Suite Pro as a concrete use case. ## Motivation PentAGI's current toolset covers most of the pentest lifecycle well, but there is a growing ",
+  "url": "https://github.com/vxcontrol/pentagi/issues/296"
+ },
+ {
+  "id": "github:4522031849",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Add pre-execution trust verification hook for MCP tool calls",
+  "body": "## Problem When DocsGPT connects to an MCP server to execute a tool call, there is currently no framework-level hook to verify the server's trustworthiness before execution. This means a misconfigured or malicious MCP server could execute arbitrary operations without any pre-flight safety check. As MCP adoption grows and users connect to third-party servers, this becomes an increasingly important ",
+  "url": "https://github.com/arc53/DocsGPT/issues/2501"
+ },
+ {
+  "id": "github:5177201397",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "security(mcp): wildcard subagents inherit all 16 MCP servers incl. mail-send and file-delete, and every mcp__* call default-allows because mcp_security_validator does not exist",
+  "body": "## Summary Three agent types in this repo carry a wildcard tool config (`general-purpose`, `claude`, `Explore`). A subagent dispatched with a wildcard config inherits **every MCP server the parent session has connected** \u2014 not merely the one relevant to its task. A subagent asked to read code therefore holds live mail-send, calendar-write, and file-delete capability across 16 servers. Compounding ",
+  "url": "https://github.com/akaszubski/autonomous-dev/issues/1549"
+ },
+ {
+  "id": "github:4333439421",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "superbased flagged as suspicious \u2014 VT clean, markdown-only developer toolkit",
+  "body": "## Skill `superbased` \u2014 https://clawhub.ai/marmutapp/superbased (current version: `2.0.2`) Homepage: https://superbased.app Repo: https://github.com/marmutapp/superbased-openclaw-plugin npm CLI: https://www.npmjs.com/package/superbased (the MCP server the skill orchestrates) ## Flag - **ClawHub Security:** Suspicious patterns detected - **OpenClaw scanner:** Suspicious (concurs with ClawHub) - **V",
+  "url": "https://github.com/openclaw/clawhub/issues/1829"
+ },
+ {
+  "id": "github:6053626801",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[Feature]: Let a CLI-backend harness redact tool output before the backend writes its own native transcript",
+  "body": "## Summary Give a CLI-backend harness a way to transform tool output **before** the backend persists its own native record, so secrets that appear in tool results can be redacted at the boundary instead of swept up afterwards. ## Problem to solve OpenClaw already has the right hook. `tool_result_persist` is a synchronous tool-result transform, and the bundled 1Password extension uses it to redact.",
+  "url": "https://github.com/openclaw/openclaw/issues/185518"
+ },
+ {
+  "id": "github:3904659240",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Review secret-handling CLI options and document associated risks",
+  "body": "## Summary Review the current mechanisms for providing secrets (access key, secret key) to the server, evaluate their security properties, and ensure risks are documented in both the CLI help text and project documentation. ## Context PR #70 introduced CLI flags (`--access-key`, `--secret-key`) as the highest-precedence credential source. A [review comment](https://github.com/altendky/onshape-mcp/",
+  "url": "https://github.com/altendky/onshape-mcp/issues/72"
+ },
+ {
+  "id": "github:4147329835",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[linter] Security Review",
+  "body": "> **Parent Issue:** #5518 \u2014 Security Review ## \ud83e\udd16 Agent Task: `linter` Complete the work assigned to the `linter` agent. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable pattern/behavior, not tied to specific function or line numbers. Phase 1 \u2014 Critical (Fix Immediately) 1. Sessio",
+  "url": "https://github.com/Boykai/github-workflows/issues/5526"
+ },
+ {
+  "id": "github:4147329616",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[judge] Security Review",
+  "body": "> **Parent Issue:** #5518 \u2014 Security Review ## \ud83e\udd16 Agent Task: `judge` Complete the work assigned to the `judge` agent. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable pattern/behavior, not tied to specific function or line numbers. Phase 1 \u2014 Critical (Fix Immediately) 1. Session ",
+  "url": "https://github.com/Boykai/github-workflows/issues/5525"
+ },
+ {
+  "id": "github:4147329152",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[speckit.implement] Security Review",
+  "body": "> **Parent Issue:** #5518 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.implement` Implement the feature based on the specification, plan, and tasks. Write production-quality code with tests. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable pattern/behavior, not tied to specific fu",
+  "url": "https://github.com/Boykai/github-workflows/issues/5523"
+ },
+ {
+  "id": "github:4147328903",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[speckit.analyze] Security Review",
+  "body": "> **Parent Issue:** #5518 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.analyze` Analyze the generated specification artifacts for consistency, coverage, ambiguity, and constitution compliance. This task is strictly read-only and should return an analysis report without modifying files. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014",
+  "url": "https://github.com/Boykai/github-workflows/issues/5522"
+ },
+ {
+  "id": "github:4077333108",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[speckit.tasks] Security Review",
+  "body": "> **Parent Issue:** #3916 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.tasks` Generate granular implementation tasks from the plan. Each task should be a well-defined unit of work with clear inputs, outputs, and acceptance criteria. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable",
+  "url": "https://github.com/Boykai/github-workflows/issues/3919"
+ },
+ {
+  "id": "github:4065230540",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[speckit.tasks] Security Review",
+  "body": "> **Parent Issue:** #3588 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.tasks` Generate granular implementation tasks from the plan. Each task should be a well-defined unit of work with clear inputs, outputs, and acceptance criteria. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable",
+  "url": "https://github.com/Boykai/github-workflows/issues/3591"
+ },
+ {
+  "id": "github:4058902875",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[speckit.implement] Security Review",
+  "body": "> **Parent Issue:** #3246 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.implement` Implement the feature based on the specification, plan, and tasks. Write production-quality code with tests. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable pattern/behavior, not tied to specific fu",
+  "url": "https://github.com/Boykai/github-workflows/issues/3251"
+ },
+ {
+  "id": "github:4058902285",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[speckit.tasks] Security Review",
+  "body": "> **Parent Issue:** #3246 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.tasks` Generate granular implementation tasks from the plan. Each task should be a well-defined unit of work with clear inputs, outputs, and acceptance criteria. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable",
+  "url": "https://github.com/Boykai/github-workflows/issues/3249"
+ },
+ {
+  "id": "github:4905401795",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Submit to MCP server directories/registries",
+  "body": "## Problem \"Defacto\" tools get found, not just built. This project currently isn't listed anywhere someone would go looking for an MCP server for a given job. ## Scope Once #16 (SECURITY.md) and #17 (comparison table) are done \u2014 do not submit before those land, a listing without them undercuts the safety positioning \u2014 submit wpguard-mcp to: - Anthropic's official MCP server directory / examples li",
+  "url": "https://github.com/cgallic/wpguard-mcp/issues/18"
+ },
+ {
+  "id": "hn:31078029",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Ask HN: Should I switch from SRE to Security?",
+  "body": "I have been working as SRE for about 6 years. Being SRE also means you have to be mindful of good security practices. As an SRE, I\u2019ve built a number of internal tools to monitor resources and permissions on cloud. Also I have been involved with security incident response as part of my role. I have always been fascinated with offensive security dipping my toe in CTFs in my spare time. But I would c",
+  "url": "https://news.ycombinator.com/item?id=31078029"
+ },
+ {
+  "id": "hn:50562525",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Did the attack work? Auditing AI-agent security benchmark verdicts",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=50562525"
+ },
+ {
+  "id": "hn:50033190",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "AI Agent Security: Six Controls from Nine Real Incidents",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=50033190"
+ },
+ {
+  "id": "hn:49893815",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Why Secret Collaboration Is an AI Agent Security Risk",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=49893815"
+ },
+ {
+  "id": "hn:47766739",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "AI Agent Security Vulnerabilities: Risks, Attacks, and Protection Strategies",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=47766739"
+ },
+ {
+  "id": "hn:47600592",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "AI Agent Security: What SoC 2, ISO 27001, and HIPAA Mean in Production",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=47600592"
+ },
+ {
+  "id": "hn:47001730",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "OpenClaw: The AI Agent Security Crisis Unfolding Right Now",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=47001730"
+ },
+ {
+  "id": "hn:44737879",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Hardening AI Agent Security with Toxic Flow Analysis",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=44737879"
+ },
+ {
+  "id": "hn:47643236",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "ShieldStack TS \u2013 LLM security middleware for TypeScript",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=47643236"
+ },
+ {
+  "id": "hn:45339212",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Hacking with AI SASTs: An investigation and overview of LLM security scanners",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=45339212"
+ },
+ {
+  "id": "hn:41292533",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "LLM Security: Risks, Vulnerabilities, and Mitigation Measures",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=41292533"
+ },
+ {
+  "id": "hn:40762188",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "A survey of LLM security and privacy: The Good, The Bad, and The Ugly",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=40762188"
+ },
+ {
+  "id": "hn:39761066",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "A Primer on LLM Security \u2013 Hacking Large Language Models for Beginners",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=39761066"
+ },
+ {
+  "id": "hn:39388063",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Abstraction Layers for LLM Security",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=39388063"
+ },
+ {
+  "id": "hn:38781803",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Intro to LLM Security",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=38781803"
+ },
+ {
+  "id": "hn:38533289",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Large Language Model (LLM) Security and Privacy: The Good, the Bad, and the Ugly",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=38533289"
+ },
+ {
+  "id": "hn:37292473",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "LLM Security",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=37292473"
+ },
+ {
+  "id": "hn:46070525",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Looking for 10\u201315 apps to test my LLM security scanner (pre-launch,free reports)",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=46070525"
+ },
+ {
+  "id": "hn:45596086",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "The Ultimate LLM Security Guide",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=45596086"
+ },
+ {
+  "id": "hn:44464105",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "LLM Security: A New Challenge for Companies",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=44464105"
+ },
+ {
+  "id": "hn:44013005",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Modular LLM Security Framework for Enterprise Use (Risk, Logging, Compliance)",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=44013005"
+ },
+ {
+  "id": "hn:42311983",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Policy Driven LLM Security Service",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=42311983"
+ },
+ {
+  "id": "hn:49819532",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "The state of MCP server security, after reading thirteen of them",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=49819532"
+ },
+ {
+  "id": "hn:49605950",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "ToolHive Is Open-Source",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=49605950"
+ },
+ {
+  "id": "hn:47516552",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "We scanned 763 MCP servers \u2013 31% have exploitable schema vulnerabilities",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=47516552"
+ },
+ {
+  "id": "stackexchange:security:246047",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 2,
+  "title": "Shuffle Tool / Software",
+  "body": "I use GPG symmetric, to encrypt text file. Is it possible to use GPG symmetric, to encrypt a text file, and at the same time, add additional setting to the encrypted file, to give us 2 conditions: correct password will decrypt it. incorrect password will give fake decryption result, instead of indicator \"decryption failed, bad session key\"",
+  "url": "https://security.stackexchange.com/questions/246047/shuffle-tool-software"
+ },
+ {
+  "id": "stackexchange:security:120402",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 2,
+  "title": "Tool for HPP testing?",
+  "body": "Is there an automated vulnerability scanner that supports HPP (HTTP Parameter Pollution)? Since all I need is to take a query string and perform basic modifications / add new parameters, I was surprised to not find any. I can make my own in python, but I'm afraid it wouldn't be as effective as any other - if there is one out.",
+  "url": "https://security.stackexchange.com/questions/120402/tool-for-hpp-testing"
+ },
+ {
+  "id": "stackexchange:security:192173",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 2,
+  "title": "HIPAA compliant BI reporting tool?",
+  "body": "We are building an application for healthcare industry and we are planning to use a 3rd party BI tool for reporting which will directly connect to our postgres DB and generate the desired reports which we should be able to download as CSV or PDF. Reports will contain PHI data like list of patient in a particular zip (this is a simple example, complex scenarios will be there and even complete adhoc",
+  "url": "https://security.stackexchange.com/questions/192173/hipaa-compliant-bi-reporting-tool"
+ },
+ {
+  "id": "ted:411742-2026",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "RFT for Sonatype Nexus Repository Manager, Lifecycle and Firewall for Security Vulnerability Checking, License Compliance and Architectural Governance",
+  "body": "In summary, the Services comprise: (1) supply of a three Sonatype tools: Nexus Repository, Lifecycle and Firewall, for the purpose of (a) binary repository management, (b) security vulnerability checking of 3rd party open source libraries, (c) license compliance checking of those libraries, and (d) architectural governance to manage the use of such 3rd party libraries; (2) support/maintenance cont",
+  "url": "https://ted.europa.eu/en/notice/-/detail/411742-2026"
+ },
+ {
+  "id": "ted:312755-2026",
+  "segment": "appsec-supply-chain",
+  "segment_description": "Secrets in code, dependency risk, SBOM, CI/CD pipeline security.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Software-Audit und Pentest der im Rahmen des LaDaDi-ProDi-Projekts erstellten Software",
+  "body": "Gegenstand der Ausschreibung ist die unabh\u00e4ngige sicherheitstechnische Pr\u00fcfung der im Projekt \u201eLaDaDi-ProDi\u201c entwickelten Softwarekomponenten einschlie\u00dflich der zugeh\u00f6rigen Konfigurationen und bereitgestellten Testumgebungen. Der Auftrag umfasst insbesondere: - ein White-Box-Quellcodeaudit der neu entwickelten Backend-Komponenten, - ein White-Box-Quellcodeaudit der mobilen und Desktop-Clients, - e",
+  "url": "https://ted.europa.eu/en/notice/-/detail/312755-2026"
+ },
+ {
+  "id": "ted:807381-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Fourniture et mise en service d'une solution Privileged Access Management (PAM)",
+  "body": "Fourniture et mise en service d'une solution Privileged Access Management (PAM) pour les deux sites hospitaliers de l\u2019Association Hospitali\u00e8re Sambre et Meuse (dit \u00ab AHSM \u00bb). La dur\u00e9e de ce march\u00e9 public est fix\u00e9e \u00e0 3 ans + 1 an + 1 an. Le pr\u00e9sent march\u00e9 sera reconduit tacitement. Il pourra \u00eatre r\u00e9sili\u00e9 \u00e0 l\u2019issue de la troisi\u00e8me ann\u00e9e moyennant le respect d\u2019un d\u00e9lai de pr\u00e9avis de 1 mois. Lieu de l",
+  "url": "https://ted.europa.eu/en/notice/-/detail/807381-2026"
+ },
+ {
+  "id": "ted:723566-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Fourniture et mise en service d'une solution Privileged Access Management (PAM)",
+  "body": "Fourniture et mise en service d'une solution Privileged Access Management (PAM) pour les deux sites hospitaliers de l\u2019Association Hospitali\u00e8re Sambre et Meuse (dit \u00ab AHSM \u00bb). La dur\u00e9e de ce march\u00e9 public est fix\u00e9e \u00e0 3 ans + 1 an + 1 an. Le pr\u00e9sent march\u00e9 sera reconduit tacitement. Il pourra \u00eatre r\u00e9sili\u00e9 \u00e0 l\u2019issue de la troisi\u00e8me ann\u00e9e moyennant le respect d\u2019un d\u00e9lai de pr\u00e9avis de 1 mois. Lieu de l",
+  "url": "https://ted.europa.eu/en/notice/-/detail/723566-2026"
+ },
+ {
+  "id": "ted:655038-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "(VPP-268) Privilegijuotos prieigos valdymo programin\u0117s \u012frangos (angl. Privileged Access Management, toliau \u2013 PAM) licencij\u0173 \u012fsigijimas, PAM sprendimo diegimo, prie\u017ei\u016bros ir vystymo paslaugos",
+  "body": "Perkamos privilegijuotos prieigos valdymo programin\u0117s \u012frangos (angl. Privileged Access Management, toliau \u2013 PAM) licencij\u0173 \u012fsigijimas, PAM sprendimo diegimo, prie\u017ei\u016bros ir vystymo paslaugos. Perkamos privilegijuotos prieigos valdymo programin\u0117s \u012frangos (angl. Privileged Access Management, toliau \u2013 PAM) licencij\u0173 \u012fsigijimas, PAM sprendimo diegimo, prie\u017ei\u016bros ir vystymo paslaugos.",
+  "url": "https://ted.europa.eu/en/notice/-/detail/655038-2026"
+ },
+ {
+  "id": "ted:625533-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Gestion des identit\u00e9s et des habilitations (IAM)",
+  "body": "Mise en place d'une solution modulaire de gestion des identit\u00e9s et des acc\u00e8s (IAM), int\u00e9grant en priorit\u00e9 un module IGA (Identity Governance and Administration) ainsi qu'un module PAM (Privileged Access Management). La solution doit permettre \u00e0 Coallia de disposer d'un socle IAM complet, avec une premi\u00e8re mise en oeuvre centr\u00e9e sur l'IGA et l'impl\u00e9mentation d'un premier niveau de fonctionnalit\u00e9s P",
+  "url": "https://ted.europa.eu/en/notice/-/detail/625533-2026"
+ },
+ {
+  "id": "ted:571060-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Gestion des identit\u00e9s et des habilitations (IAM)",
+  "body": "Mise en place d'une solution modulaire de gestion des identit\u00e9s et des acc\u00e8s (IAM), int\u00e9grant en priorit\u00e9 un module IGA (Identity Governance and Administration) ainsi qu'un module PAM (Privileged Access Management). La solution doit permettre \u00e0 Coallia de disposer d'un socle IAM complet, avec une premi\u00e8re mise en oeuvre centr\u00e9e sur l'IGA et l'impl\u00e9mentation d'un premier niveau de fonctionnalit\u00e9s P",
+  "url": "https://ted.europa.eu/en/notice/-/detail/571060-2026"
+ },
+ {
+  "id": "ted:570330-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "\u03a0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1 \u03b5\u03be\u03bf\u03c0\u03bb\u03b9\u03c3\u03bc\u03bf\u03cd, \u03bb\u03bf\u03b3\u03b9\u03c3\u03bc\u03b9\u03ba\u03bf\u03cd \u03ba\u03b1\u03b9 \u03c0\u03b1\u03c1\u03bf\u03c7\u03ae \u03c5\u03c0\u03b7\u03c1\u03b5\u03c3\u03b9\u03ce\u03bd \u03b5\u03bd\u03af\u03c3\u03c7\u03c5\u03c3\u03b7\u03c2 \u03c4\u03b7\u03c2 \u03b1\u03c3\u03c6\u03ac\u03bb\u03b5\u03b9\u03b1\u03c2 \u03c4\u03bf\u03c5 \u03b4\u03b9\u03ba\u03c4\u03cd\u03bf\u03c5 \u03b4\u03b5\u03b4\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd \u03c4\u03b7\u03c2 \u039c\u039f\u0394 \u0391.\u0395.",
+  "body": "\u0391\u03bd\u03c4\u03b9\u03ba\u03b5\u03af\u03bc\u03b5\u03bd\u03bf \u03c4\u03b7\u03c2 \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7\u03c2 \u03b1\u03c0\u03bf\u03c4\u03b5\u03bb\u03b5\u03af \u03b7 \u03c0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1 \u03b5\u03be\u03bf\u03c0\u03bb\u03b9\u03c3\u03bc\u03bf\u03cd \u03ba\u03b1\u03b9 \u03bb\u03bf\u03b3\u03b9\u03c3\u03bc\u03b9\u03ba\u03bf\u03cd \u03b5\u03bd\u03af\u03c3\u03c7\u03c5\u03c3\u03b7\u03c2 \u03c4\u03b7\u03c2 \u03b1\u03c3\u03c6\u03ac\u03bb\u03b5\u03b9\u03b1\u03c2 \u03c4\u03bf\u03c5 \u03b4\u03b9\u03ba\u03c4\u03cd\u03bf\u03c5 \u03b4\u03b5\u03b4\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd \u03c4\u03b7\u03c2 \u039c\u039f\u0394 \u0391.\u0395., \u03c0\u03bf\u03c5 \u03b1\u03bd\u03b1\u03bb\u03cd\u03b5\u03c4\u03b1\u03b9 \u03c0\u03b5\u03c1\u03b1\u03b9\u03c4\u03ad\u03c1\u03c9 \u03c3\u03b5: 1. \u03a0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1 \u03b4\u03cd\u03bf (2) \u03c3\u03c5\u03c3\u03ba\u03b5\u03c5\u03ce\u03bd Next Generation Firewall (NGF) 2. \u03a0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1 Web Application Firewall \u03bc\u03b5 \u03c4\u03b7\u03bd \u03bc\u03bf\u03c1\u03c6\u03ae virtual appliance (WAF) 3. \u03a0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1 \u03b4\u03cd\u03bf (2) Virtual appliances \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03c0\u03c1\u03bf\u03c3\u03c4\u03b1\u03c3\u03af\u03b1 \u03c4\u03c9\u03bd \u03c7\u03c1\u03b7\u03c3\u03c4\u03ce\u03bd \u03ba\u03b1\u03c4\u03ac \u03c4\u03b7\u03bd \u03c0\u03b5\u03c1\u03b9\u03ae\u03b3\u03b7\u03c3\u03b7 \u03c3\u03c4\u03bf \u03b4\u03b9\u03b1\u03b4\u03af\u03ba\u03c4\u03c5\u03bf (",
+  "url": "https://ted.europa.eu/en/notice/-/detail/570330-2026"
+ },
+ {
+  "id": "ted:520847-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Gestion des identit\u00e9s et des habilitations (IAM)",
+  "body": "Mise en place d'une solution modulaire de gestion des identit\u00e9s et des acc\u00e8s (IAM), int\u00e9grant en priorit\u00e9 un module IGA (Identity Governance and Administration) ainsi qu'un module PAM (Privileged Access Management). La solution doit permettre \u00e0 Coallia de disposer d'un socle IAM complet, avec une premi\u00e8re mise en oeuvre centr\u00e9e sur l'IGA et l'impl\u00e9mentation d'un premier niveau de fonctionnalit\u00e9s P",
+  "url": "https://ted.europa.eu/en/notice/-/detail/520847-2026"
+ },
+ {
+  "id": "ted:488804-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Subsisteme pentru Solu\u021bie acces centralizat si securizat la experimente si resurse digitale asociate sistemului Gamma",
+  "body": "Scopul acestei proceduri de atribuire este achizi\u021bionarea de subsisteme ce contin produse hardware si software, care vor fi integrate func\u021bional de c\u0103tre personalul de specialitate al Autorit\u0103\u021bii Contractante \u00eentr-o solu\u021bie centralizat\u0103 de control \u0219i facilitare a accesului securizat la experimente, sisteme, aplica\u021bii, date \u0219i resurse digitale asociate sistemului Gamma al ELI-NP, conform cerintelor",
+  "url": "https://ted.europa.eu/en/notice/-/detail/488804-2026"
+ },
+ {
+  "id": "ted:383187-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Markterkundung: Privileged Access Management",
+  "body": "Markterkundung f\u00fcr die Einf\u00fchrung eines zentralen Privilegierten Zugriffsmanagement-Tools (Privileged Access Management-Tool, PAM-Tool) Hinweis: Es wird im Anschluss an dieses Markterkundungsverfahren kein Auftrag automatisch vergeben. M\u00f6glicherweise wird eine \u00f6ffentliches Ausschreibungsverfahren durchgef\u00fchrt. PAM ist ein wesentlicher Bestandteil eines ganzheitlichen IT-Sicherheitskonzepts und die",
+  "url": "https://ted.europa.eu/en/notice/-/detail/383187-2026"
+ },
+ {
+  "id": "ted:332012-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Kyberbezpe\u010dnost m\u011bsta Litom\u011b\u0159ice - software, dokumentace a slu\u017eby",
+  "body": "Dod\u00e1n\u00ed syst\u00e9mu kybernetick\u00e9 bezpe\u010dnosti s t\u00edm, \u017ee zadavatel popt\u00e1v\u00e1 hotov\u00fd syst\u00e9m nikoli v\u00fdvoj na zak\u00e1zku zahrnuj\u00edc\u00ed dod\u00e1n\u00ed, instalaci a implementaci v\u010detn\u011b proveden\u00ed za\u0161kolen\u00ed, p\u0159ed\u00e1n\u00ed dokumentace k software a zaji\u0161t\u011bn\u00ed (umo\u017en\u011bn\u00ed) testovac\u00edho provozu software (PAM - Privileged Access Management, N\u00e1stroj pro centr\u00e1ln\u00ed \u0159\u00edzen\u00ed p\u0159\u00edstup\u016f do aplikac\u00ed; UEM - Unified Endpoint Management, N\u00e1stroj pro \u0159\u00edze",
+  "url": "https://ted.europa.eu/en/notice/-/detail/332012-2026"
+ },
+ {
+  "id": "ted:268441-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Kyberbezpe\u010dnost m\u011bsta Litom\u011b\u0159ice - software, dokumentace a slu\u017eby",
+  "body": "Dod\u00e1n\u00ed syst\u00e9mu kybernetick\u00e9 bezpe\u010dnosti s t\u00edm, \u017ee zadavatel popt\u00e1v\u00e1 hotov\u00fd syst\u00e9m nikoli v\u00fdvoj na zak\u00e1zku zahrnuj\u00edc\u00ed dod\u00e1n\u00ed, instalaci a implementaci v\u010detn\u011b proveden\u00ed za\u0161kolen\u00ed, p\u0159ed\u00e1n\u00ed dokumentace k software a zaji\u0161t\u011bn\u00ed (umo\u017en\u011bn\u00ed) testovac\u00edho provozu software (PAM - Privileged Access Management, N\u00e1stroj pro centr\u00e1ln\u00ed \u0159\u00edzen\u00ed p\u0159\u00edstup\u016f do aplikac\u00ed; UEM - Unified Endpoint Management, N\u00e1stroj pro \u0159\u00edze",
+  "url": "https://ted.europa.eu/en/notice/-/detail/268441-2026"
+ },
+ {
+  "id": "ted:252742-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Accord-cadre pour la fourniture, le d\u00e9ploiement, et le maintien en conditions op\u00e9rationnelles de Solutions de Bastion d'administration",
+  "body": "L'objet du March\u00e9 porte sur la fourniture, le d\u00e9ploiement, et le maintien en conditions op\u00e9rationnelles de Solutions de Bastion d'administration et gestion des comptes \u00e0 privil\u00e8ges pour le Groupe EDF. Le March\u00e9 sera contractualis\u00e9 sous la forme d'un accord-cadre pour une dur\u00e9e de 13 ann\u00e9es dont 5 ann\u00e9es fermes et 8 options d'une ann\u00e9e chacune. Le lot 1 op\u00e8re le service bastion du SI de gestion et ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/252742-2026"
+ },
+ {
+  "id": "ted:193065-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Post\u0119powanie o udzielenie zam\u00f3wienia publicznego w trybie przetargu nieograniczonego na rozbudow\u0119 i modernizacj\u0119 infrastruktury sieciowej oraz system\u00f3w bezpiecze\u0144stwa cybernetycznego - 3 zadania",
+  "body": "Zakres przedmiotu zam\u00f3wienia obejmuje: 1. zadanie 1: dostawa i wdro\u017cenie osprz\u0119tu sieciowego (sie\u0107 LAN) wraz z oprogramowaniem zarz\u0105dzaj\u0105cym i opiek\u0105 serwisow\u0105 (zakup osprz\u0119tu sieciowego - sie\u0107 LAN - 1 kpl, zakup opieki serwisowej posprzeda\u017cowej w okresie trwa\u0142o\u015bci 36 mc-y na switche - sie\u0107 LAN - 1 kpl., zakup licencji oprogramowania do zarz\u0105dzania switchami - sie\u0107 LAN wraz z wdro\u017ceniem - 1 kpl.),",
+  "url": "https://ted.europa.eu/en/notice/-/detail/193065-2026"
+ },
+ {
+  "id": "ted:192622-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Beschaffung einer PAM-Software",
+  "body": "Die KfW ben\u00f6tigt eine Privileged Access Management Software (nachfolgend \u201ePAM-Software\u201c), welche On Premise betrieben wird, um das Sicherheitsniveau im Kontext der Informationssicherheit zu steigern. Mit der PAM-Software sollen administrative T\u00e4tigkeiten an kritischen Systemen \u00fcberwacht werden. Im \u00dcbrigen siehe Vergabeunterlagen. Die KfW ben\u00f6tigt eine Privileged Access Management Software (nachfol",
+  "url": "https://ted.europa.eu/en/notice/-/detail/192622-2026"
+ },
+ {
+  "id": "ted:166023-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa infrastruktury serwerowej, urz\u0105dze\u0144 do kopii zapasowych, urz\u0105dze\u0144 UTM, sprz\u0119tu komputerowego, oprogramowania, oraz \u015bwiadczenia us\u0142ugi SOC, w podziale na cz\u0119\u015bci",
+  "body": "Przedmiotem zam\u00f3wienia jest dostawa infrastruktury serwerowej, urz\u0105dze\u0144 do kopii zapasowych, urz\u0105dze\u0144 UTM, sprz\u0119tu komputerowego, oprogramowania, oraz \u015bwiadczenia us\u0142ugi SOC, w podziale na cz\u0119\u015bci. Szczeg\u00f3\u0142owy zakres oraz opis przedmiotu zam\u00f3wienia stanowi Za\u0142\u0105cznik nr 2a, 2b, 2c, 2d do SWZ. Wsp\u00f3lny s\u0142ownik Zam\u00f3wie\u0144 CPV: Zakres nr 1: 48820000-2\u2013 Serwery; 37453300-1 \u2013 Dyski; 30233000-1 \u2013 Urz\u0105dzenia ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/166023-2026"
+ },
+ {
+  "id": "ted:163659-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa infrastruktury serwerowej, urz\u0105dze\u0144 do kopii zapasowych, urz\u0105dze\u0144 UTM, sprz\u0119tu komputerowego, oprogramowania, oraz \u015bwiadczenia us\u0142ugi SOC, w podziale na cz\u0119\u015bci",
+  "body": "Przedmiotem zam\u00f3wienia jest dostawa infrastruktury serwerowej, urz\u0105dze\u0144 do kopii zapasowych, urz\u0105dze\u0144 UTM, sprz\u0119tu komputerowego, oprogramowania, oraz \u015bwiadczenia us\u0142ugi SOC, w podziale na cz\u0119\u015bci. Szczeg\u00f3\u0142owy zakres oraz opis przedmiotu zam\u00f3wienia stanowi Za\u0142\u0105cznik nr 2a, 2b, 2c, 2d do SWZ. Wsp\u00f3lny s\u0142ownik Zam\u00f3wie\u0144 CPV: Zakres nr 1: 48820000-2\u2013 Serwery; 37453300-1 \u2013 Dyski; 30233000-1 \u2013 Urz\u0105dzenia ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/163659-2026"
+ },
+ {
+  "id": "ted:146123-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa, wdro\u017cenie i integracja system\u00f3w cyberbezpiecze\u0144stwa oraz monitorowania infrastruktury IT",
+  "body": "1.Przedmiotem niniejszego zam\u00f3wienia jest zakup, dostawa i integracja system\u00f3w cyberbezpiecze\u0144stwa oraz monitorowania infrastruktury IT. Niniejszy przedmiot zam\u00f3wienia obejmuje 8 cz\u0119\u015bci zam\u00f3wienia: Pakiet 1: Klaster HA systemu ochrony pracowniczej poczty elektronicznej e-mail Pakiet 2: System centralnego logowania, raportowania oraz korelacji Pakiet 3: System zaawansowanej analizy zagro\u017ce\u0144 w tzw. ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/146123-2026"
+ },
+ {
+  "id": "ted:134944-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Post\u0119powanie o udzielenie zam\u00f3wienia publicznego w trybie przetargu nieograniczonego na rozbudow\u0119 i modernizacj\u0119 infrastruktury sieciowej oraz system\u00f3w bezpiecze\u0144stwa cybernetycznego - 3 zadania",
+  "body": "Zakres przedmiotu zam\u00f3wienia obejmuje: 1. zadanie 1: dostawa i wdro\u017cenie osprz\u0119tu sieciowego (sie\u0107 LAN) wraz z oprogramowaniem zarz\u0105dzaj\u0105cym i opiek\u0105 serwisow\u0105 (zakup osprz\u0119tu sieciowego - sie\u0107 LAN - 1 kpl, zakup opieki serwisowej posprzeda\u017cowej w okresie trwa\u0142o\u015bci 36 mc-y na switche - sie\u0107 LAN - 1 kpl., zakup licencji oprogramowania do zarz\u0105dzania switchami - sie\u0107 LAN wraz z wdro\u017ceniem - 1 kpl.),",
+  "url": "https://ted.europa.eu/en/notice/-/detail/134944-2026"
+ },
+ {
+  "id": "ted:106085-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dzia\u0142ania zwi\u0119kszaj\u0105ce poziom cyberbezpiecze\u0144stwa Wielospecjalistycznego Szpitala Miejskiego im. J\u00f3zefa Strusia z podzia\u0142em na Pakiety",
+  "body": "1. Przedmiotem zam\u00f3wienia jest: 1) dostawa i wdro\u017cenie system kontroli wydruk\u00f3w poprzez udzielenie licencji/sublicencji wieczystej na systemowe rozwi\u0105zanie do zarz\u0105dzania dystrybucj\u0105 kolejek wydruk\u00f3w, zliczania koszt\u00f3w druku oraz kopii ze wszystkich urz\u0105dze\u0144 drukuj\u0105cych i kopiuj\u0105cych w Wielospecjalistycznym Szpitalu Miejskim im. J\u00f3zefa Strusia z Zak\u0142adem Opieku\u0144czo-Leczniczym SPZOZ w Poznaniu oraz",
+  "url": "https://ted.europa.eu/en/notice/-/detail/106085-2026"
+ },
+ {
+  "id": "ted:89702-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa infrastruktury serwerowej, urz\u0105dze\u0144 do kopii zapasowych, urz\u0105dze\u0144 UTM, sprz\u0119tu komputerowego, oprogramowania, oraz \u015bwiadczenia us\u0142ugi SOC, w podziale na cz\u0119\u015bci",
+  "body": "Przedmiotem zam\u00f3wienia jest dostawa infrastruktury serwerowej, urz\u0105dze\u0144 do kopii zapasowych, urz\u0105dze\u0144 UTM, sprz\u0119tu komputerowego, oprogramowania, oraz \u015bwiadczenia us\u0142ugi SOC, w podziale na cz\u0119\u015bci. Szczeg\u00f3\u0142owy zakres oraz opis przedmiotu zam\u00f3wienia stanowi Za\u0142\u0105cznik nr 2a, 2b, 2c, 2d do SWZ. Wsp\u00f3lny s\u0142ownik Zam\u00f3wie\u0144 CPV: Zakres nr 1: 48820000-2\u2013 Serwery; 37453300-1 \u2013 Dyski; 30233000-1 \u2013 Urz\u0105dzenia ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/89702-2026"
+ },
+ {
+  "id": "ted:82108-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa, wdro\u017cenie i integracja system\u00f3w cyberbezpiecze\u0144stwa oraz monitorowania infrastruktury IT",
+  "body": "1.Przedmiotem niniejszego zam\u00f3wienia jest zakup, dostawa i integracja system\u00f3w cyberbezpiecze\u0144stwa oraz monitorowania infrastruktury IT. Niniejszy przedmiot zam\u00f3wienia obejmuje 8 cz\u0119\u015bci zam\u00f3wienia: Pakiet 1: Klaster HA systemu ochrony pracowniczej poczty elektronicznej e-mail Pakiet 2: System centralnego logowania, raportowania oraz korelacji Pakiet 3: System zaawansowanej analizy zagro\u017ce\u0144 w tzw. ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/82108-2026"
+ },
+ {
+  "id": "ted:75958-2026",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dzia\u0142ania zwi\u0119kszaj\u0105ce poziom cyberbezpiecze\u0144stwa Wielospecjalistycznego Szpitala Miejskiego im. J\u00f3zefa Strusia z podzia\u0142em na Pakiety",
+  "body": "1. Przedmiotem zam\u00f3wienia jest: 1) dostawa i wdro\u017cenie system kontroli wydruk\u00f3w poprzez udzielenie licencji/sublicencji wieczystej na systemowe rozwi\u0105zanie do zarz\u0105dzania dystrybucj\u0105 kolejek wydruk\u00f3w, zliczania koszt\u00f3w druku oraz kopii ze wszystkich urz\u0105dze\u0144 drukuj\u0105cych i kopiuj\u0105cych w Wielospecjalistycznym Szpitalu Miejskim im. J\u00f3zefa Strusia z Zak\u0142adem Opieku\u0144czo-Leczniczym SPZOZ w Poznaniu oraz",
+  "url": "https://ted.europa.eu/en/notice/-/detail/75958-2026"
+ },
+ {
+  "id": "ted:866867-2025",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dod\u00e1vka a implementace syst\u00e9mu \u0159\u00edzen\u00ed privilegovan\u00e9ho p\u0159\u00edstupu",
+  "body": "P\u0159edm\u011btem po\u017eadovan\u00e9ho pln\u011bn\u00ed je dod\u00e1vka, implementace, konfigurace a zaji\u0161t\u011bn\u00ed n\u00e1sledn\u00e9 technick\u00e9 podpory syst\u00e9mu pro \u0159\u00edzen\u00ed privilegovan\u00fdch p\u0159\u00edstup\u016f (Privileged Access Management) P\u0159edm\u011btem po\u017eadovan\u00e9ho pln\u011bn\u00ed je dod\u00e1vka, implementace, konfigurace a zaji\u0161t\u011bn\u00ed n\u00e1sledn\u00e9 technick\u00e9 podpory syst\u00e9mu pro \u0159\u00edzen\u00ed privilegovan\u00fdch p\u0159\u00edstup\u016f (Privileged Access Management)",
+  "url": "https://ted.europa.eu/en/notice/-/detail/866867-2025"
+ },
+ {
+  "id": "ted:828281-2025",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dod\u00e1vka a implementace syst\u00e9mu \u0159\u00edzen\u00ed privilegovan\u00e9ho p\u0159\u00edstupu",
+  "body": "P\u0159edm\u011btem po\u017eadovan\u00e9ho pln\u011bn\u00ed je dod\u00e1vka, implementace, konfigurace a zaji\u0161t\u011bn\u00ed n\u00e1sledn\u00e9 technick\u00e9 podpory syst\u00e9mu pro \u0159\u00edzen\u00ed privilegovan\u00fdch p\u0159\u00edstup\u016f (Privileged Access Management) P\u0159edm\u011btem po\u017eadovan\u00e9ho pln\u011bn\u00ed je dod\u00e1vka, implementace, konfigurace a zaji\u0161t\u011bn\u00ed n\u00e1sledn\u00e9 technick\u00e9 podpory syst\u00e9mu pro \u0159\u00edzen\u00ed privilegovan\u00fdch p\u0159\u00edstup\u016f (Privileged Access Management)",
+  "url": "https://ted.europa.eu/en/notice/-/detail/828281-2025"
+ },
+ {
+  "id": "ted:785318-2025",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dod\u00e1vka a implementace syst\u00e9mu \u0159\u00edzen\u00ed privilegovan\u00e9ho p\u0159\u00edstupu",
+  "body": "P\u0159edm\u011btem po\u017eadovan\u00e9ho pln\u011bn\u00ed je dod\u00e1vka, implementace, konfigurace a zaji\u0161t\u011bn\u00ed n\u00e1sledn\u00e9 technick\u00e9 podpory syst\u00e9mu pro \u0159\u00edzen\u00ed privilegovan\u00fdch p\u0159\u00edstup\u016f (Privileged Access Management) P\u0159edm\u011btem po\u017eadovan\u00e9ho pln\u011bn\u00ed je dod\u00e1vka, implementace, konfigurace a zaji\u0161t\u011bn\u00ed n\u00e1sledn\u00e9 technick\u00e9 podpory syst\u00e9mu pro \u0159\u00edzen\u00ed privilegovan\u00fdch p\u0159\u00edstup\u016f (Privileged Access Management)",
+  "url": "https://ted.europa.eu/en/notice/-/detail/785318-2025"
+ },
+ {
+  "id": "ted:769877-2025",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Software zur \u00dcberwachung privilegierter Zugriffe",
+  "body": "Die KfW ben\u00f6tigt eine Privileged Access Management L\u00f6sung (nachfolgend \u201ePAM-L\u00f6sung\u201c), welche On Premise betrieben wird, um das Sicherheitsniveau im Kontext der Informationssicherheit zu steigern. Mit der Software sollen administrative T\u00e4tigkeiten an kritischen Systemen \u00fcberwacht werden. Die \u00dcberlassung der Nutzer- oder Systemlizenzen an die KfW f\u00fcr eine standardisierte Software-L\u00f6sung f\u00fcr PAM kann",
+  "url": "https://ted.europa.eu/en/notice/-/detail/769877-2025"
+ },
+ {
+  "id": "ted:733711-2025",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "160/PN/ZP/D/2025 \u2013 Dostawa system\u00f3w zapewniaj\u0105cych bezpiecze\u0144stwo infrastruktury szpitala i przetwarzanych danych (DLP, NAC, PAM, Sandbox) realizowana w ramach projektu \u201eRozw\u00f3j us\u0142ug cyfrowych w Uniwersyteckim Szpitalu Klinicznym nr 2 Uniwersytetu Medycznego w \u0141odzi\u201d",
+  "body": "Przedmiotem zam\u00f3wienia niniejszego post\u0119powania przetargowego jest: Dostawa system\u00f3w (zwanych dalej r\u00f3wnie\u017c oprogramowaniem) zapewniaj\u0105cych bezpiecze\u0144stwo infrastruktury szpitala i przetwarzanych danych (DLP, NAC, PAM, Sandbox) \u2013 z podzia\u0142em na 4 pakiety, zwanych dalej towarem, zgodnie z rodzajem asortymentu i ilo\u015bciami okre\u015blonymi w \u201eFormularzu asortymentowo-cenowym\u201d stanowi\u0105cym za\u0142\u0105cznik nr 2 do",
+  "url": "https://ted.europa.eu/en/notice/-/detail/733711-2025"
+ },
+ {
+  "id": "ted:716359-2025",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Software zur \u00dcberwachung privilegierter Zugriffe",
+  "body": "Die KfW ben\u00f6tigt eine Privileged Access Management L\u00f6sung (nachfolgend \u201ePAM-L\u00f6sung\u201c), welche On Premise betrieben wird, um das Sicherheitsniveau im Kontext der Informationssicherheit zu steigern. Mit der Software sollen administrative T\u00e4tigkeiten an kritischen Systemen \u00fcberwacht werden. Die \u00dcberlassung der Nutzer- oder Systemlizenzen an die KfW f\u00fcr eine standardisierte Software-L\u00f6sung f\u00fcr PAM kann",
+  "url": "https://ted.europa.eu/en/notice/-/detail/716359-2025"
+ },
+ {
+  "id": "ted:572895-2025",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "\u0391\u03bd\u03ac\u03b8\u03b5\u03c3\u03b7 \u03a3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7\u03c2 \u03bc\u03b5 \u03c4\u03af\u03c4\u03bb\u03bf: \u00ab\u03a0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1 \u03c3\u03c5\u03bd\u03cc\u03bb\u03bf\u03c5 \u03bb\u03cd\u03c3\u03b5\u03c9\u03bd \u03c5\u03bb\u03b9\u03ba\u03bf\u03cd \u03ba\u03b1\u03b9 \u03bb\u03bf\u03b3\u03b9\u03c3\u03bc\u03b9\u03ba\u03bf\u03cd \u03b1\u03c3\u03c6\u03ac\u03bb\u03b5\u03b9\u03b1\u03c2\u00bb",
+  "body": "\u0391\u03bd\u03c4\u03b9\u03ba\u03b5\u03af\u03bc\u03b5\u03bd\u03bf \u03c4\u03b7\u03c2 \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b7 \u03a0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1 \u03c3\u03c5\u03bd\u03cc\u03bb\u03bf\u03c5 \u03bb\u03cd\u03c3\u03b5\u03c9\u03bd \u03c5\u03bb\u03b9\u03ba\u03bf\u03cd \u03ba\u03b1\u03b9 \u03bb\u03bf\u03b3\u03b9\u03c3\u03bc\u03b9\u03ba\u03bf\u03cd \u03b1\u03c3\u03c6\u03ac\u03bb\u03b5\u03b9\u03b1\u03c2. \u03a4\u03bf \u03b5\u03be\u03b5\u03b9\u03b4\u03b9\u03ba\u03b5\u03c5\u03bc\u03ad\u03bd\u03bf \u03bb\u03bf\u03b3\u03b9\u03c3\u03bc\u03b9\u03ba\u03cc \u03c0\u03bf\u03c5 \u03b8\u03b1 \u03b5\u03b3\u03ba\u03b1\u03c4\u03b1\u03c3\u03c4\u03b1\u03b8\u03b5\u03af \u03c3\u03c4\u03bf \u03c0\u03bb\u03b1\u03af\u03c3\u03b9\u03bf \u03c4\u03bf\u03c5 \u0388\u03c1\u03b3\u03bf\u03c5 \u03c0\u03b5\u03c1\u03b9\u03bb\u03b1\u03bc\u03b2\u03ac\u03bd\u03b5\u03b9: \u2022 \u03a0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1 \u03bb\u03bf\u03b3\u03b9\u03c3\u03bc\u03b9\u03ba\u03bf\u03cd \u0394\u03b9\u03b1\u03c7\u03b5\u03af\u03c1\u03b9\u03c3\u03b7\u03c2 \u039b\u03bf\u03b3\u03b1\u03c1\u03b9\u03b1\u03c3\u03bc\u03ce\u03bd \u03ba\u03b1\u03b9 \u0394\u03b9\u03ba\u03b1\u03b9\u03c9\u03bc\u03ac\u03c4\u03c9\u03bd \u03a0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2 \u03a7\u03c1\u03b7\u03c3\u03c4\u03ce\u03bd \u03b3\u03b9\u03b1 \u03c4\u03bf\u03bd \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf \u03c4\u03b7\u03c2 \u03c0\u03c1\u03cc\u03c3\u03b2\u03b1\u03c3\u03b7\u03c2 \u03c4\u03c9\u03bd \u03c7\u03c1\u03b7\u03c3\u03c4\u03ce\u03bd \u03c3\u03c4\u03b9\u03c2 \u03b7\u03bb\u03b5\u03ba\u03c4\u03c1\u03bf\u03bd\u03b9\u03ba\u03ad\u03c2 \u03b5\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ad\u03c2, \u2022 \u03a0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1 \u03bb\u03bf\u03b3\u03b9\u03c3\u03bc\u03b9\u03ba\u03bf\u03cd \u03b4\u03b9\u03b1\u03c7\u03b5\u03af\u03c1\u03b9\u03c3\u03b7\u03c2 \u03c4\u03c9\u03bd \u03c0\u03c1\u03bf\u03c3\u03b2\u03ac\u03c3\u03b5\u03c9\u03bd \u03c4\u03c9\u03bd \u0394\u03b9\u03b1\u03c7\u03b5\u03b9\u03c1\u03b9\u03c3\u03c4\u03ce\u03bd (Privile",
+  "url": "https://ted.europa.eu/en/notice/-/detail/572895-2025"
+ },
+ {
+  "id": "ted:556562-2025",
+  "segment": "identity-access",
+  "segment_description": "SSO, MFA rollout, access reviews, privileged access, offboarding.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "SYST\u00c9M PRO \u0158\u00cdZEN\u00cd P\u0158\u00cdSTUPU PRIVILEGOVAN\u00ddCH U\u017dIVATEL\u016e K TECHNICK\u00ddM AKTIV\u016eM M\u011a\u00da HODON\u00cdN",
+  "body": "P\u0159edm\u011btem ve\u0159ejn\u00e9 zak\u00e1zky je dod\u00e1vka a zprovozn\u011bn\u00ed syst\u00e9mu PAM (Privileged Access Management) pro \u0159\u00edzen\u00ed p\u0159\u00edstupu u\u017eivatel\u016f s roz\u0161\u00ed\u0159en\u00fdmi nebo administr\u00e1torsk\u00fdmi pr\u00e1vy z \u0159ad zam\u011bstnanc\u016f m\u011bsta a dodavatel\u016f k technick\u00fdm aktiv\u016fm M\u011b\u00da Hodon\u00edn v rozsahu \u0159\u00edzen\u00ed privilegovan\u00fdch \u00fa\u010dt\u016f a relac\u00ed (Privileged Account and Session Management - PASM) zaji\u0161\u0165uj\u00edc\u00ed automatickou zabezpe\u010denou spr\u00e1vu a \u0159\u00edzen\u00ed hesel a SS",
+  "url": "https://ted.europa.eu/en/notice/-/detail/556562-2025"
+ },
+ {
+  "id": "ted:476317-2026",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Tietoturvatestauspalvelut",
+  "body": "HUS-yhtym\u00e4 (j\u00e4ljemp\u00e4n\u00e4 my\u00f6s tilaaja tai hankintayksikk\u00f6) pyyt\u00e4\u00e4 tarjouksia tietoturvatestauspalveluista t\u00e4m\u00e4n tarjouspyynn\u00f6n ja sen liitteiden ehtojen mukaisesti. Tietoturvatestauksessa k\u00e4ytet\u00e4\u00e4n p\u00e4\u00e4s\u00e4\u00e4nt\u00f6isesti m\u00e4\u00e4r\u00e4muotoista tietoturvamallia. Testaus noudattaa tarvittavia ja yleisesti hyv\u00e4ksyttyj\u00e4 viitekehyksi\u00e4 ja standardeja kuten CC (Common Criteria for Information Technology Security Evaluati",
+  "url": "https://ted.europa.eu/en/notice/-/detail/476317-2026"
+ },
+ {
+  "id": "ted:814242-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "TR6170-Provision of an IT Multi Party Framework Agreement for Delivery and Strategy",
+  "body": "The Contracting Entity intends to procure a multi party framework agreement with suppliers to provide IT Services to support the delivery of its IT capability. Successfully appointed suppliers will work in-house as part of multi-party teams, on a range of enterprise frameworks, business applications and technical architectures in a secure and data sensitive environment. The framework will be divid",
+  "url": "https://ted.europa.eu/en/notice/-/detail/814242-2026"
+ },
+ {
+  "id": "ted:814236-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "CP n\u00ba18/2026 - Aquisi\u00e7\u00e3o de servi\u00e7o de prote\u00e7\u00e3o Anti-DDoS",
+  "body": "CP n\u00ba 18/2026 - Aquisi\u00e7\u00e3o de servi\u00e7o de prote\u00e7\u00e3o Anti-DDoS CP n\u00ba 18/2026 - Aquisi\u00e7\u00e3o de servi\u00e7o de prote\u00e7\u00e3o Anti-DDoS",
+  "url": "https://ted.europa.eu/en/notice/-/detail/814236-2026"
+ },
+ {
+  "id": "ted:813679-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Po\u0159\u00edzen\u00ed a implementace integrovan\u00e9ho \u0159e\u0161en\u00ed EDR/XDR a SIEM",
+  "body": "P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky (VZ) je dod\u00e1vka, implementace a podpora n\u00e1stroje pro ochranu koncov\u00fdch stanic a server\u016f p\u0159ed \u0161kodliv\u00fdm k\u00f3dem a dal\u0161\u00edmi kybernetick\u00fdmi \u00fatoky s mo\u017enost\u00ed reakce na bezpe\u010dnostn\u00ed incidenty (Endpoint Detection & Response \u2013 EDR, resp. eXtended Detection & Response \u2013 XDR) s integrovan\u00fdm modulem pro detekci kybernetick\u00fdch bezpe\u010dnostn\u00edch incident\u016f (Security Information and E",
+  "url": "https://ted.europa.eu/en/notice/-/detail/813679-2026"
+ },
+ {
+  "id": "ted:810949-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Kyberbezpe\u010dnost p\u0159\u00edstrojov\u00e9 techniky Nemocnice Pelh\u0159imov",
+  "body": "P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky v r\u00e1mci tohoto zad\u00e1vac\u00edho \u0159\u00edzen\u00ed je dod\u00e1vka, instalace, konfigurace a implementace CPS \u0159e\u0161en\u00ed (Cyber-Physical System) ur\u010den\u00e9ho k pasivn\u00edmu monitoringu, evidenci, klasifikaci, ochran\u011b a vyhodnocov\u00e1n\u00ed kybernetick\u00fdch, provozn\u00edch a konfigura\u010dn\u00edch rizik s\u00ed\u0165ov\u011b p\u0159ipojen\u00e9 zdravotnick\u00e9 p\u0159\u00edstrojov\u00e9 techniky a souvisej\u00edc\u00edch provozn\u00edch technologi\u00ed (Operational Technology, d\u00e1l",
+  "url": "https://ted.europa.eu/en/notice/-/detail/810949-2026"
+ },
+ {
+  "id": "ted:813699-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "\u03a0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1 \u0395\u03be\u03bf\u03c0\u03bb\u03b9\u03c3\u03bc\u03bf\u03cd \u03b3\u03b9\u03b1 \u03c4\u03bf \u03a5\u03952: \u03a5\u03c0\u03bf\u03b4\u03bf\u03bc\u03ae \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03b1\u03bd\u03ac\u03c0\u03c4\u03c5\u03be\u03b7 \u03c4\u03b5\u03c7\u03bd\u03bf\u03bb\u03bf\u03b3\u03b9\u03ce\u03bd \u03c0\u03b1\u03c1\u03b1\u03b3\u03c9\u03b3\u03ae\u03c2 \u03b2\u03b9\u03bf\u03ba\u03b1\u03c5\u03c3\u03af\u03bc\u03c9\u03bd \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03b1\u03be\u03b9\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7 \u03c5\u03c6\u03b9\u03c3\u03c4\u03ac\u03bc\u03b5\u03bd\u03c9\u03bd \u03b8\u03b5\u03c1\u03bc\u03b9\u03ba\u03ce\u03bd \u03bc\u03b7\u03c7\u03b1\u03bd\u03ce\u03bd \u03c0\u03c1\u03bf\u03c2 \u03c4\u03b7\u03bd \u03c0\u03c1\u03ac\u03c3\u03b9\u03bd\u03b7 \u03bc\u03b5\u03c4\u03ac\u03b2\u03b1\u03c3\u03b7 \u03c4\u03b7\u03c2 \u03b2\u03b9\u03bf\u03bc\u03b7\u03c7\u03b1\u03bd\u03b9\u03ba\u03ae\u03c2 \u03c0\u03b1\u03c1\u03b1\u03b3\u03c9\u03b3\u03ae\u03c2 \u03ba\u03b1\u03b9 \u03c4\u03c9\u03bd \u03bc\u03b5\u03c4\u03b1\u03c6\u03bf\u03c1\u03ce\u03bd",
+  "body": "\u0391\u03bd\u03c4\u03b9\u03ba\u03b5\u03af\u03bc\u03b5\u03bd\u03bf \u03c4\u03b7\u03c2 \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b7 \u201c\u03a0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1 \u0395\u03be\u03bf\u03c0\u03bb\u03b9\u03c3\u03bc\u03bf\u03cd \u03b3\u03b9\u03b1 \u03c4\u03bf \u03a5\u03952: \u03a5\u03c0\u03bf\u03b4\u03bf\u03bc\u03ae \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03b1\u03bd\u03ac\u03c0\u03c4\u03c5\u03be\u03b7 \u03c4\u03b5\u03c7\u03bd\u03bf\u03bb\u03bf\u03b3\u03b9\u03ce\u03bd \u03c0\u03b1\u03c1\u03b1\u03b3\u03c9\u03b3\u03ae\u03c2 \u03b2\u03b9\u03bf\u03ba\u03b1\u03c5\u03c3\u03af\u03bc\u03c9\u03bd \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03b1\u03be\u03b9\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7 \u03c5\u03c6\u03b9\u03c3\u03c4\u03ac\u03bc\u03b5\u03bd\u03c9\u03bd \u03b8\u03b5\u03c1\u03bc\u03b9\u03ba\u03ce\u03bd \u03bc\u03b7\u03c7\u03b1\u03bd\u03ce\u03bd \u03c0\u03c1\u03bf\u03c2 \u03c4\u03b7\u03bd \u03c0\u03c1\u03ac\u03c3\u03b9\u03bd\u03b7 \u03bc\u03b5\u03c4\u03ac\u03b2\u03b1\u03c3\u03b7 \u03c4\u03b7\u03c2 \u03b2\u03b9\u03bf\u03bc\u03b7\u03c7\u03b1\u03bd\u03b9\u03ba\u03ae\u03c2 \u03c0\u03b1\u03c1\u03b1\u03b3\u03c9\u03b3\u03ae\u03c2 \u03ba\u03b1\u03b9 \u03c4\u03c9\u03bd \u03bc\u03b5\u03c4\u03b1\u03c6\u03bf\u03c1\u03ce\u03bd\u201d \u03c3\u03cd\u03bc\u03c6\u03c9\u03bd\u03b1 \u03bc\u03b5 \u03c4\u03bf\u03c5\u03c2 \u03cc\u03c1\u03bf\u03c5\u03c2 \u03ba\u03b1\u03b9 \u03c4\u03b9\u03c2 \u03b1\u03c0\u03b1\u03b9\u03c4\u03ae\u03c3\u03b5\u03b9\u03c2 \u03c4\u03b7\u03c2 \u03c0\u03b1\u03c1\u03bf\u03cd\u03c3\u03b1\u03c2 \u03b4\u03b9\u03b1\u03ba\u03ae\u03c1\u03c5\u03be\u03b7\u03c2 \u03cc\u03c0\u03c9\u03c2 \u03ba\u03b1\u03c4\u03ac \u03c0\u03b5\u03c1\u03af\u03c0\u03c4\u03c9\u03c3\u03b7 \u03bf\u03c1\u03af\u03b6\u03b5\u03c4\u03b1\u03b9 \u03b1\u03bd\u03ac \u03a4\u03bc\u03ae\u03bc\u03b1 \u03ba\u03b1\u03b9 \u03bf \u0391\u03bd\u03ac\u03b4\u03bf\u03c7\u03bf\u03c2 \u03bf\u03c6\u03b5\u03af\u03bb\u03b5\u03b9 \u03bd\u03b1 \u03c5\u03bb\u03bf\u03c0\u03bf\u03b9\u03ae\u03c3\u03b5\u03b9 \u03c4\u03b7\u03bd \u03c0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1",
+  "url": "https://ted.europa.eu/en/notice/-/detail/813699-2026"
+ },
+ {
+  "id": "ted:814121-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Kyberbezpe\u010dnost p\u0159\u00edstrojov\u00e9 techniky Nemocnice Nov\u00e9 M\u011bsto na Morav\u011b",
+  "body": "P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky v r\u00e1mci tohoto zad\u00e1vac\u00edho \u0159\u00edzen\u00ed je dod\u00e1vka, instalace, konfigurace a implementace CPS \u0159e\u0161en\u00ed (Cyber-Physical System) ur\u010den\u00e9ho k pasivn\u00edmu monitoringu, evidenci, klasifikaci, ochran\u011b a vyhodnocov\u00e1n\u00ed kybernetick\u00fdch, provozn\u00edch a konfigura\u010dn\u00edch rizik s\u00ed\u0165ov\u011b p\u0159ipojen\u00e9 zdravotnick\u00e9 p\u0159\u00edstrojov\u00e9 techniky a souvisej\u00edc\u00edch provozn\u00edch technologi\u00ed (Operational Technology), za",
+  "url": "https://ted.europa.eu/en/notice/-/detail/814121-2026"
+ },
+ {
+  "id": "ted:811789-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Zv\u00fd\u0161en\u00ed kyberbezpe\u010dnosti v NMB \u2013 technologie II",
+  "body": "P\u0159edm\u011btem zak\u00e1zky jsou dod\u00e1vky a implementace technologi\u00ed, dod\u00e1vky SW, HW a infrastruktury pro realizaci technick\u00fdch bezpe\u010dnostn\u00edch opat\u0159en\u00ed dle z\u00e1kona o kybernetick\u00e9 bezpe\u010dnosti (ZKB) pro zabezpe\u010den\u00ed IS provozovan\u00fdch zadavatelem. Sou\u010d\u00e1st\u00ed pln\u011bn\u00ed zak\u00e1zky jsou d\u00e1le servisn\u00ed slu\u017eby po dobu udr\u017eitelnosti projektu. Ve\u0159ejn\u00e1 zak\u00e1zka je rozd\u011blena na p\u011bt d\u00edl\u010d\u00edch \u010d\u00e1st\u00ed. P\u0159edm\u011btem \u010d\u00e1sti 4 jsou n\u00e1sleduj\u00edc\u00ed p",
+  "url": "https://ted.europa.eu/en/notice/-/detail/811789-2026"
+ },
+ {
+  "id": "ted:812152-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Rozbudowa posiadanego systemu bezpiecze\u0144stwa wraz z us\u0142ugami towarzysz\u0105cymi",
+  "body": "1. Przedmiotem zam\u00f3wienia jest rozbudowa posiadanego systemu bezpiecze\u0144stwa Centrali oraz Oddzia\u0142\u00f3w NFZ wraz z us\u0142ugami towarzysz\u0105cymi, a w szczeg\u00f3lno\u015bci: a) udzielenie licencji lub zapewnienie Zamawiaj\u0105cemu przez Wykonawc\u0119 udzielenia licencji do wykorzystywanego systemu bezpiecze\u0144stwa zgodnie ze szczeg\u00f3\u0142owym opisem przedmiotu zam\u00f3wienia zawartym, w rozdziale I. Za\u0142\u0105cznika nr 1 do SWZ (opis przedm",
+  "url": "https://ted.europa.eu/en/notice/-/detail/812152-2026"
+ },
+ {
+  "id": "ted:812660-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Diskov\u00e1 pole a platforma ochrany dat pro zaji\u0161t\u011bn\u00ed provozu syst\u00e9m\u016f 2026",
+  "body": "P\u0159edm\u011btem ve\u0159ejn\u00e9 zak\u00e1zky je dod\u00e1n\u00ed dvou v\u00fdkonn\u00fdch diskov\u00fdch pol\u00ed ur\u010den\u00fdch pro ukl\u00e1d\u00e1n\u00ed l\u00e9ka\u0159sk\u00fdch obrazov\u00fdch dat (PACS \u2013 Tier 3) a dvou all-flash diskov\u00fdch pol\u00ed pro ukl\u00e1d\u00e1n\u00ed provozn\u00edch a u\u017eivatelsk\u00fdch dat infrastruktury Krajsk\u00e9 zdravotn\u00ed, a.s. (Tier 2), v\u010detn\u011b jejich implementace, migrace dat ze st\u00e1vaj\u00edc\u00edch diskov\u00fdch pol\u00ed, pro\u0161kolen\u00ed administr\u00e1tor\u016f a poskytov\u00e1n\u00ed technick\u00e9 podpory po dobu 60 m\u011bs\u00edc",
+  "url": "https://ted.europa.eu/en/notice/-/detail/812660-2026"
+ },
+ {
+  "id": "ted:809167-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Perustietotekniikkapalveluiden hankinta - Osallistumispyynt\u00f6",
+  "body": "Jyv\u00e4skyl\u00e4n kaupunki (j\u00e4ljemp\u00e4n\u00e4 \"Hankintayksikk\u00f6\" tai \"Tilaaja\") j\u00e4rjest\u00e4\u00e4 hankintalain (1397/2016) mukaisen tarjouskilpailun perustietotekniikkapalveluiden hankinnassa. Hankintayksikk\u00f6 pyyt\u00e4\u00e4 ehdokkaita l\u00e4hett\u00e4m\u00e4\u00e4n osallistumishakemuksen kilpailulliseen neuvottelumenettelyyn t\u00e4m\u00e4n osallistumispyynn\u00f6n ja sen liitteiden mukaisesti. Hankinnan kohteena ovat seuraavat perustietotekniikkapalveluiden pa",
+  "url": "https://ted.europa.eu/en/notice/-/detail/809167-2026"
+ },
+ {
+  "id": "ted:809343-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dod\u00e1vka komplexn\u00e9ho rie\u0161enia Next Gen Firewall vr\u00e1tane centr\u00e1lneho mana\u017ementu, podpory a s\u00favisiacich slu\u017eieb",
+  "body": "Predmetom z\u00e1kazky je dod\u00e1vka, implement\u00e1cia a sprev\u00e1dzkovanie komplexn\u00e9ho rie\u0161enia novej gener\u00e1cie firewallov (Next Generation Firewall \u2013 NGFW) vr\u00e1tane: \u2022 dod\u00e1vky hardv\u00e9rov\u00fdch bezpe\u010dnostn\u00fdch zariaden\u00ed (firewall appliance) troch v\u00fdkonnostn\u00fdch a funk\u010dn\u00fdch typov (Firewall typ 1, Firewall typ 2 a Firewall typ 3) vr\u00e1tane potrebn\u00fdch licenci\u00ed a bezpe\u010dnostn\u00fdch funkci\u00ed, \u2022 dod\u00e1vky rie\u0161enia centr\u00e1lneho mana\u017e",
+  "url": "https://ted.europa.eu/en/notice/-/detail/809343-2026"
+ },
+ {
+  "id": "ted:808080-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "SIEM, SOC, SOAR-dienstverlening",
+  "body": "Veiligheidsregio Noord- en Oost-Gelderland (VNOG) wenst een raamovereenkomst te sluiten met \u00e9\u00e9n opdrachtnemer voor de levering, implementatie, inrichting, het beheer en de doorontwikkeling van ge\u00efntegreerde SIEM-, SOC- en SOAR-dienstverlening. De dienstverlening is gericht op het monitoren, detecteren, analyseren en opvolgen van cybersecuritydreigingen en beveiligingsincidenten, ter versterking va",
+  "url": "https://ted.europa.eu/en/notice/-/detail/808080-2026"
+ },
+ {
+  "id": "ted:807414-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Przed\u0142u\u017cenie wsparcia dla systemu NDR (Network Detection and Response)",
+  "body": "1. Nazwa zam\u00f3wienia: Przed\u0142u\u017cenie wsparcia dla systemu NDR (Network Detection and Response). 2. Przedmiotem zam\u00f3wienia jest*: 2.1. zakup i dostarczenie przez Wykonawc\u0119 Licencji dla posiadanego przez Zamawiaj\u0105cego Systemu, uwzgl\u0119dniaj\u0105cych Wsparcie Techniczne Producenta wraz z dokumentami potwierdzaj\u0105cymi udzielenie Licencji; 2.2. \u015bwiadczenia Us\u0142ug Konsultacyjnych Zamawianych. 3. Szczeg\u00f3\u0142owy opis p",
+  "url": "https://ted.europa.eu/en/notice/-/detail/807414-2026"
+ },
+ {
+  "id": "ted:808596-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "AOO SIE",
+  "body": "R\u00e9alisation et maintenance des services applicatifs relatifs \u00e0 l'interop\u00e9rabilit\u00e9 des syst\u00e8mes d'information europ\u00e9ens R\u00e9alisation et maintenance des services applicatifs relatifs \u00e0 l'interop\u00e9rabilit\u00e9 des syst\u00e8mes d'information europ\u00e9ens",
+  "url": "https://ted.europa.eu/en/notice/-/detail/808596-2026"
+ },
+ {
+  "id": "ted:809412-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "SOC - Security Operations Center",
+  "body": "EU-weite Ausschreibung zur Beschaffung eines Security Information and Event Management (SIEM) Systems f\u00fcr die Hamburger Energienetze sowie externe Security Services zur Unterst\u00fctzung der Sicherheits\u00fcberwachung, Incident Response, digitalen Forensik sowie der Erkennung externer und netzwerkbasierter Bedrohungen im Umfeld der Hamburger Energienetze. Die Ausschreibung erfolgt in zwei Losen: Los 1: SI",
+  "url": "https://ted.europa.eu/en/notice/-/detail/809412-2026"
+ },
+ {
+  "id": "ted:809510-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Obnova podpory bezpe\u010dnostn\u00e9ho n\u00e1stroja Next Generation IPS a jeho roz\u0161\u00edrenie",
+  "body": "Predmetom z\u00e1kazky je obnova hardv\u00e9rovej a licen\u010dnej podpory bezpe\u010dnostn\u00e9ho n\u00e1stroja Next Generation IPS (NGIPS) a jeho roz\u0161\u00edrenie licencovanej in\u0161pek\u010dnej priepustnosti existuj\u00faceho syst\u00e9mu ochrany pred prienikmi (NGIPS) Objedn\u00e1vate\u013ea z 5 Gbps na 10 Gbps (s cie\u013eom zv\u00fd\u0161enia in\u0161pek\u010dnej kapacity na maximum podporovan\u00e9 existuj\u00facim hardv\u00e9rom a z\u00e1rove\u0148 zachova\u0165 kontinuitu ochrany po cel\u00fa dobu \u017eivotnosti ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/809510-2026"
+ },
+ {
+  "id": "ted:810701-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Gemeente Vijfheerenlanden - SIEM SOC",
+  "body": "De opdracht omvat het ontwerpen, implementeren, leveren en beheren van een ge\u00efntegreerde SIEM/SOC-dienstverlening voor de gemeente Vijfheerenlanden. Doel is het realiseren van een centrale voorziening voor het verzamelen, analyseren en monitoren van beveiligingsrelevante log- en eventdata, zodat cyberdreigingen en beveiligingsincidenten tijdig worden gedetecteerd, geanalyseerd en opgevolgd. - De o",
+  "url": "https://ted.europa.eu/en/notice/-/detail/810701-2026"
+ },
+ {
+  "id": "ted:807628-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Servicii solu\u021bie informatic\u0103 integrat\u0103 \u00een cadrul Proiectului \u201dPlatforma de Servicii Publice Digitale pentru Agen\u021bia Na\u021bional\u0103 Anti-Doping\"",
+  "body": "Achizitia serviciilor de dezvoltare si implementare a Platformei de Servicii Publice Digitale pentru Agentia Nationala Anti-Doping, precum si a produselor hardware, a licentelor software si a solutiilor de securitate cibernetica necesare functionarii acesteia, in cadrul proiectului cod SMIS 342867. Prin prestarea serviciilor solicitate, autoritatea contractanta urmareste digitalizarea serviciilor ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/807628-2026"
+ },
+ {
+  "id": "ted:810715-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Erweiterung der Endpoint-Sicherheitsplattform auf TrendAI Vision One (EDR/XDR)",
+  "body": "Erweiterung der Endpoint-Sicherheitsplattform auf TrendAI Vision One (EDR/XDR) Auftragsgegenst\u00e4ndlich ist die Lieferung von Hardware, Lizenzen und Supportleistungen sowie die Erbringung von Implementierungs-, Migrations- und Serviceleistungen f\u00fcr die Erneuerung einer Firewall- und Management-Infrastruktur auf Basis von Produkten der Palo Alto Networks Inc. Die Produktfestlegung ist vergaberechtsko",
+  "url": "https://ted.europa.eu/en/notice/-/detail/810715-2026"
+ },
+ {
+  "id": "ted:809583-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Managed Security Services Provider (MSSP)",
+  "body": "Upphandling av Managed Security Services Provider (MSSP) som med h\u00f6g kvalitet ska leverera en sammanh\u00e5llen, styrbar och v\u00e4rdeskapande MSS-tj\u00e4nst omfattande Exposure Management, Security Operations och Incident Response i en teknisk milj\u00f6 best\u00e5ende av molntj\u00e4nster och lokala system och som bygger p\u00e5 Microsoft Azure och Microsoft 365 samt p\u00e5 Google Cloud och GitHub. Vid behov och efter avrop ska \u00e4ve",
+  "url": "https://ted.europa.eu/en/notice/-/detail/809583-2026"
+ },
+ {
+  "id": "ted:807191-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Beschaffung und Einf\u00fchrung einer Mobile-Device-Management-L\u00f6sung (On-Premise)",
+  "body": "Beschaffung und Einf\u00fchrung einer Mobile-Device-Management-L\u00f6sung (On-Premise) Gegenstand des Auftrags sind Leistungen zur Beschaffung und Einf\u00fchrung einer Mobile-Device-Management-L\u00f6sung (On-Premise). Die L\u00f6sung muss den Betrieb von aktuell rund 5.000 mobilen Endger\u00e4ten (Smartphones, Tablets) zentral verwalten, absichern und kontrollieren. Es werden zu 95% iOS Ger\u00e4te einsetzt und zu 5% Android. Im",
+  "url": "https://ted.europa.eu/en/notice/-/detail/807191-2026"
+ },
+ {
+  "id": "ted:805925-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "\u00ab\u0391\u03bd\u03ac\u03c0\u03c4\u03c5\u03be\u03b7 \u03ba\u03b1\u03b9 \u0395\u03b3\u03ba\u03b1\u03c4\u03ac\u03c3\u03c4\u03b1\u03c3\u03b7 \u03a8\u03b7\u03c6\u03b9\u03b1\u03ba\u03ce\u03bd \u03a5\u03c0\u03bf\u03b4\u03bf\u03bc\u03ce\u03bd \u03b3\u03b9\u03b1 \u03c4\u03b7 \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03c4\u03bf\u03c5 \u03a3\u03c5\u03c3\u03c4\u03ae\u03bc\u03b1\u03c4\u03bf\u03c2 \u03c4\u03b7\u03c2 \u039a\u03ac\u03c1\u03c4\u03b1\u03c2 \u0395\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2 \u03c3\u03c4\u03bf\u03bd \u0394\u03b7\u03bc\u03cc\u03c3\u03b9\u03bf \u03a4\u03bf\u03bc\u03ad\u03b1\u00bb",
+  "body": "\u0391\u03bd\u03c4\u03b9\u03ba\u03b5\u03af\u03bc\u03b5\u03bd\u03bf \u03c4\u03b7\u03c2 \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b7 \u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03ba\u03b1\u03b9 \u03b5\u03b3\u03ba\u03b1\u03c4\u03ac\u03c3\u03c4\u03b1\u03c3\u03b7 \u03b5\u03bd\u03cc\u03c2 \u03bf\u03bb\u03bf\u03ba\u03bb\u03b7\u03c1\u03c9\u03bc\u03ad\u03bd\u03bf\u03c5 \u03c3\u03c5\u03c3\u03c4\u03ae\u03bc\u03b1\u03c4\u03bf\u03c2 \u03ba\u03b1\u03b9 \u03c4\u03b5\u03c7\u03bd\u03bf\u03bb\u03bf\u03b3\u03b9\u03ba\u03bf\u03cd \u03b5\u03be\u03bf\u03c0\u03bb\u03b9\u03c3\u03bc\u03bf\u03cd \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03b1\u03ba\u03c1\u03b9\u03b2\u03ae \u03ba\u03b1\u03b9 \u03b4\u03b9\u03b1\u03c6\u03b1\u03bd\u03ae \u03c8\u03b7\u03c6\u03b9\u03b1\u03ba\u03ae \u03ba\u03b1\u03c4\u03b1\u03b3\u03c1\u03b1\u03c6\u03ae \u03c4\u03b7\u03c2 \u03c0\u03c1\u03bf\u03c3\u03ad\u03bb\u03b5\u03c5\u03c3\u03b7\u03c2 \u03ba\u03b1\u03b9 \u03b1\u03c0\u03bf\u03c7\u03ce\u03c1\u03b7\u03c3\u03b7\u03c2 \u03b1\u03c0\u03cc \u03c4\u03b7\u03bd \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1 \u03c4\u03c9\u03bd \u03c5\u03c0\u03b1\u03bb\u03bb\u03ae\u03bb\u03c9\u03bd \u03c3\u03c4\u03bf\u03bd \u03b4\u03b7\u03bc\u03cc\u03c3\u03b9\u03bf \u03c4\u03bf\u03bc\u03ad\u03b1, \u03bc\u03b5 \u03b4\u03c5\u03bd\u03b1\u03c4\u03cc\u03c4\u03b7\u03c4\u03b1 \u03ba\u03b1\u03b9 \u03b2\u03b9\u03bf\u03bc\u03b5\u03c4\u03c1\u03b9\u03ba\u03ae\u03c2 \u03c4\u03b1\u03c5\u03c4\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7\u03c2 \u03b1\u03bb\u03bb\u03ac \u03ba\u03b1\u03b9 \u03c4\u03b7\u03c2 \u03b4\u03b9\u03b1\u03c3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2 \u03bc\u03b5 \u03c4\u03bf \u03a3\u0394\u0391\u0394 \u03ba\u03b1\u03b9 \u03c4\u03b1 \u03c4\u03bf\u03c0\u03b9\u03ba\u03ac HRMS \u03c4\u03c9\u03bd \u03c6\u03bf\u03c1\u03ad\u03c9\u03bd \u03b3\u03b9\u03b1 \u03c4\u03b7 \u03b4\u03b9\u03ac\u03b8\u03b5\u03c3\u03b7 \u03c4\u03c9\u03bd \u03c0\u03c1\u03c9\u03c4\u03bf\u03b3\u03b5\u03bd\u03ce\u03bd \u03b4\u03b5\u03b4\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd. [\u03c0\u03b1\u03c1. ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/805925-2026"
+ },
+ {
+  "id": "ted:806547-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Ochrana za\u0159\u00edzen\u00ed proti malware a zaji\u0161t\u011bn\u00ed viditelnosti \u00fatok\u016f vyu\u017e\u00edvaj\u00edc\u00edch slu\u017eeb DNS",
+  "body": "P\u0159edm\u011btem ve\u0159ejn\u00e9 zak\u00e1zky je dod\u00e1vka cloudov\u00e9ho \u0159e\u0161en\u00ed pro zabezpe\u010den\u00ed DNS komunikace a ochranu u\u017eivatel\u016f, koncov\u00fdch za\u0159\u00edzen\u00ed a lokalit zadavatele p\u0159ed \u0161kodliv\u00fdmi a ne\u017e\u00e1douc\u00edmi internetov\u00fdmi hrozbami, v\u010detn\u011b poskytnut\u00ed licenc\u00ed (subskripc\u00ed) pro 3 000 u\u017eivatel\u016f a v\u0161echna koncov\u00e1 za\u0159\u00edzen\u00ed a lokality zadavatele na dobu 5 let. Sou\u010d\u00e1st\u00ed pln\u011bn\u00ed je rovn\u011b\u017e zaji\u0161t\u011bn\u00ed standardn\u00ed z\u00e1ru\u010dn\u00ed a servisn\u00ed podpory po",
+  "url": "https://ted.europa.eu/en/notice/-/detail/806547-2026"
+ },
+ {
+  "id": "ted:805467-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Upphandling av Publika certifikat",
+  "body": "Omfattar tillhandah\u00e5llande av publika certifikat inklusive tillh\u00f6rande tj\u00e4nster. Omfattar tillhandah\u00e5llande av publika certifikat inklusive tillh\u00f6rande tj\u00e4nster.",
+  "url": "https://ted.europa.eu/en/notice/-/detail/805467-2026"
+ },
+ {
+  "id": "ted:803347-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Servicio gestionado de ciberseguridad y CISOaaS y SOC 24x7 para Radiotelevisi\u00f3n del Principado de Asturias",
+  "body": "Seg\u00fan pliego de prescripciones t\u00e9cnicas Seg\u00fan pliego de prescripciones t\u00e9cnicas",
+  "url": "https://ted.europa.eu/en/notice/-/detail/803347-2026"
+ },
+ {
+  "id": "ted:800869-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "ITDZ Berlin: OV RV Datenschleuse",
+  "body": "Gegenstand ist die Lieferung, Installation und Konfiguration einer umfassenden Softwarel\u00f6sung auf der Hardware des Auftraggebers f\u00fcr den sicheren Datenaustausch und die Datensynchronisation zur eigenen Nutzung sowie zur Kundennutzung. Ein Weiterverkauf von Lizenzen ist nicht Teil dieses Rahmenvertrags. Des Weiteren ist ausschlie\u00dflich der Auftraggeber einziger Ansprechpartner f\u00fcr Abrufe von Support",
+  "url": "https://ted.europa.eu/en/notice/-/detail/800869-2026"
+ },
+ {
+  "id": "ted:801725-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Nabava dodatnih sustava za kiberneti\u010dku sigurnost sukladno NIS2 prilagodbi",
+  "body": "Nabava dodatnih sustava za kiberneti\u010dku sigurnost sukladno NIS2 prilagodbi - SIEM. Predmet ove nabave je nabava dodatnih sustava za kiberneti\u010dku sigurnost sukladno NIS2 prilagodbi, njihovog odr\u017eavanja i implementacije. Nabava dodatnih sustava za kiberneti\u010dku sigurnost sukladno NIS2 prilagodbi - SIEM.",
+  "url": "https://ted.europa.eu/en/notice/-/detail/801725-2026"
+ },
+ {
+  "id": "ted:800380-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Renouvellement de la solution applicative de gouvernance et de protection des donn\u00e9es",
+  "body": "Comme toute organisation publique, la Ville de Mouscron g\u00e8re un volume croissant et h\u00e9t\u00e9rog\u00e8ne de donn\u00e9es num\u00e9riques, tant structur\u00e9es que non structur\u00e9es. Ces donn\u00e9es sont h\u00e9berg\u00e9es au sein d\u2019un SI hybride comprenant notamment : - Des serveurs de fichiers locaux et des espaces de stockage r\u00e9seau ; - Des \u00e9quipements NAS (notamment Synology) ; - L\u2019environnement cloud Microsoft 365 ; - Des annuaires",
+  "url": "https://ted.europa.eu/en/notice/-/detail/800380-2026"
+ },
+ {
+  "id": "ted:796909-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Zv\u00fd\u0161en\u00ed kyberbezpe\u010dnosti v NMB \u2013 technologie II",
+  "body": "P\u0159edm\u011btem zak\u00e1zky jsou dod\u00e1vky a implementace technologi\u00ed, dod\u00e1vky SW, HW a infrastruktury pro realizaci technick\u00fdch bezpe\u010dnostn\u00edch opat\u0159en\u00ed dle z\u00e1kona o kybernetick\u00e9 bezpe\u010dnosti (ZKB) pro zabezpe\u010den\u00ed IS provozovan\u00fdch zadavatelem. Sou\u010d\u00e1st\u00ed pln\u011bn\u00ed zak\u00e1zky jsou d\u00e1le servisn\u00ed slu\u017eby po dobu udr\u017eitelnosti projektu. Ve\u0159ejn\u00e1 zak\u00e1zka je rozd\u011blena na p\u011bt d\u00edl\u010d\u00edch \u010d\u00e1st\u00ed. P\u0159edm\u011btem \u010d\u00e1sti 4 jsou n\u00e1sleduj\u00edc\u00ed p",
+  "url": "https://ted.europa.eu/en/notice/-/detail/796909-2026"
+ },
+ {
+  "id": "jobs:hn-50338907",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "PostHog",
+  "body": "PostHog | Full-Time | Technical CSMs, SRE, Product Manager, AI Research Engineer | REMOTE (all remote) | Hiring GMT-8 to GMT+2 | PostHog makes your product self-driving. * we have a public handbook (posthog.com/handbook) if you want to learn how we work, pay and more in complete detail. * we are growing through more autonomy and transparency not through process. * we have a ton of scale and a bunc",
+  "url": "https://news.ycombinator.com/item?id=50338907"
+ },
+ {
+  "id": "jobs:hn-49978570",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "PostHog",
+  "body": "PostHog | Full-Time | Technical CSMs, Product Managers, AI Research Engineer | REMOTE (all remote) | Hiring GMT-8 to GMT+2 | PostHog makes your product self-driving. * we have a public handbook (posthog.com/handbook) if you want to learn how we work, pay and more in complete detail. * we are growing through more autonomy and transparency not through process. * we have a ton of scale and a bunch of",
+  "url": "https://news.ycombinator.com/item?id=49978570"
+ },
+ {
+  "id": "jobs:hn-49524781",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "PostHog",
+  "body": "PostHog | Full-Time | Technical CSMs, Technical Content Writers, AI Research Engineer | REMOTE (all remote) | Hiring GMT-8 to GMT+2 | PostHog makes your product self-driving. * we have a public handbook (posthog.com/handbook) if you want to learn how we work, pay and more in complete detail. * we are growing through more autonomy and transparency not through process. * we have a ton of scale and a",
+  "url": "https://news.ycombinator.com/item?id=49524781"
+ },
+ {
+  "id": "jobs:hn-50348055",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Tech Mahindra\u2019s Cloud Advisory division is hiring engineers (4+YoE) and cloud solution architects (8+YoE) to help enterprises modernize and operate at scale on AWS, Azure, and GCP. We value folks with",
+  "body": "Tech Mahindra\u2019s Cloud Advisory division is hiring engineers (4+YoE) and cloud solution architects (8+YoE) to help enterprises modernize and operate at scale on AWS, Azure, and GCP. We value folks with a strong software development background who have grown into cloud and platform engineering roles. Our work spans cloud application modernization, platform engineering, DevOps, SRE, SecOps, and FinOp",
+  "url": "https://news.ycombinator.com/item?id=50348055"
+ },
+ {
+  "id": "jobs:remotive-2091177",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Content Reviewer - United States \u2014 TELUS Digital",
+  "body": "Every search represents someone seeking reliable information. They depend on search results being accurate, trustworthy, and relevant to their local context. But search engines only learn to return trustworthy information if human evaluators with deep research expertise and cultural knowledge verify and correct them. Your linguistic precision, fact-checking rigor, and understanding of how your cul",
+  "url": "https://remotive.com/remote-jobs/all-others/content-reviewer-united-states-2091177"
+ },
+ {
+  "id": "jobs:remotive-2069746",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Tech Lead Full-Stack Rails Engineer \u2014 Mitre Media",
+  "body": "About Mitre Media Mitre Media is redefining FinTech with AI-driven tools that empower millions of investors. Our portfolio, including Dividend.com and MutualFunds.com, leverages LLMs to deliver novel data insights and visually rich user experiences. For over a decade, we\u2019ve served individual investors, financial advisors, and top asset managers like BlackRock and Vanguard through our premium data,",
+  "url": "https://remotive.com/remote-jobs/software-development/tech-lead-full-stack-rails-engineer-2069746"
+ },
+ {
+  "id": "jobs:remotive-2091173",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Content Creator - YouTube \u2014 Metics Media",
+  "body": "Important: Applications without an intro video will not be considered. Job Overview Create engaging YouTube tutorials about software, digital marketing, and AI tools that reach millions of people around the world every month through our YouTube channel, Metics Media. About us Metics Media is a small, fully remote team creating high-quality YouTube videos about software, digital marketing, and AI t",
+  "url": "https://remotive.com/remote-jobs/marketing/content-creator-youtube-2091173"
+ },
+ {
+  "id": "jobs:remotive-1680495",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Remote Office Assistant \u2014 Coalition Technologies",
+  "body": "Coalition Technologies is seeking a reliable, detail-oriented, and highly organized Remote Office Assistant to support administrative, bookkeeping, billing, reporting, data entry, and internal operations tasks. This role is ideal for someone with strong communication skills, discretion, attention to detail, and a willingness to learn and grow within a fast-paced remote work environment. As an Offi",
+  "url": "https://remotive.com/remote-jobs/marketing/remote-office-assistant-1680495"
+ },
+ {
+  "id": "jobs:remotive-2091137",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Senior Data Engineer \u2014 Lemon.io",
+  "body": "Lemon.io helps companies in the US and Europe hire experienced engineers, from funded startups to teams like Klarna, Retool, and Pinterest. We\u2019ve been doing this since 2015, and more than 1,500 companies have hired engineers through us. New roles for Senior React Full-stack Engineers come in all the time, and several are open right now. Two ways to work with clients Contract: most roles are contra",
+  "url": "https://remotive.com/remote-jobs/data/senior-data-engineer-2091137"
+ },
+ {
+  "id": "jobs:remotive-2091171",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Customer Service Representative \u2014 ShyftOff",
+  "body": "Work From Home. Pick Your Schedule. Get Paid Weekly. Welcome to ShyftOff! Tired of traditional jobs that expect you to build your life around a fixed schedule? At ShyftOff, we believe work should fit into your life, not the other way around! We're changing the way customer service works by connecting independent professionals with exciting opportunities to support established businesses, all from ",
+  "url": "https://remotive.com/remote-jobs/customer-service/customer-service-representative-2091171"
+ },
+ {
+  "id": "jobs:remotive-2091136",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Senior React Full-stack Developer \u2014 Lemon.io",
+  "body": "Lemon.io helps companies in the US and Europe hire experienced engineers, from funded startups to teams like Klarna, Retool, and Pinterest. We\u2019ve been doing this since 2015, and more than 1,500 companies have hired engineers through us. New roles for Senior React Full-stack Engineers come in all the time, and several are open right now. Two ways to work with clients Contract: most roles are contra",
+  "url": "https://remotive.com/remote-jobs/software-development/senior-react-full-stack-developer-2091136"
+ },
+ {
+  "id": "jobs:remotive-2086540",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Inside Sales Contractor \u2014 Credit Wellness, LLC",
+  "body": "About Us We are a financial services start up focusing on helping to improve consumer credit profiles. We are currently seeking KPI driven sales representatives looking to earn up to 45K in their first year while working remotely. We offer comprehensive training and continuous sales coaching to help you meet your financial goals. During our training period we offer a guaranteed training stipend wh",
+  "url": "https://remotive.com/remote-jobs/sales/inside-sales-contractor-2086540"
+ },
+ {
+  "id": "jobs:remotive-2091045",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Tier III Service Desk Engineer \u2014 Unio Digital",
+  "body": "Uni\u00f3 Digital is an Arizona-based managed service provider (MSP) delivering Managed IT Services, Low Voltage Cabling, Access Control, Video Surveillance, and Intrusion Services. We believe technology should be intuitive, not intimidating. We are looking for an experienced Tier 3 Service Desk Technician with exceptional problem-solving skills. You will serve as the escalation point within the team, ",
+  "url": "https://remotive.com/remote-jobs/information-technology/tier-iii-service-desk-engineer-2091045"
+ },
+ {
+  "id": "jobs:remotive-2091168",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "US Remote Patient Care Advocate (Customer Service) \u2014 VXI Global Solutions",
+  "body": "Job Title: Patient Care Advocate Job Location: Remote About Us: We are a dedicated team focused on improving access to affordable prescription medications for patients. By partnering with insurance companies, healthcare providers, and pharmacies, we work to reduce the financial burden of medications, ensuring that patients can access the treatments they need without excessive costs. Role Overview:",
+  "url": "https://remotive.com/remote-jobs/customer-service/us-remote-patient-care-advocate-customer-service-2091168"
+ },
+ {
+  "id": "jobs:remotive-1185979",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Freelance Writer \u2014 IAPWE",
+  "body": "Our organization is seeking content writers to create articles and blog posts on a variety of topics. The rate of pay is $20 per 100 words (this comes out to approximately $100 per article or $50 per hour). Some topics you may be asked to write about include the following (you can always turn down a topic if you do not feel comfortable writing about it, however if you have experience or expertise ",
+  "url": "https://remotive.com/remote-jobs/writing/freelance-writer-1185979"
+ },
+ {
+  "id": "jobs:remotive-2091166",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Content Reviewer - United States \u2014 TELUS Digital",
+  "body": "We are looking for an independent, flexible, remote opportunity where you can help improve AI-powered search technology from the comfort of your home? If you're curious, internet-savvy, and enjoy evaluating online content, this freelance project could be a great fit. A Day in the Life of a Content Reviewer - US In this role, you will analyze and provide feedback on text, webpages, images, and othe",
+  "url": "https://remotive.com/remote-jobs/all-others/content-reviewer-united-states-2091166"
+ },
+ {
+  "id": "jobs:remotive-1749306",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Freelance Copywriter \u2014 Coalition Technologies",
+  "body": "CT Marketing Agency is seeking skilled Freelance Copywriters to write high-quality, SEO-driven content for eCommerce and lead generation websites. This is a freelance, project-based writing role. The ideal candidate has excellent English writing skills, strong research ability, and experience writing content that follows detailed, client-specific guidelines. Projects commonly include category page",
+  "url": "https://remotive.com/remote-jobs/writing/freelance-copywriter-1749306"
+ },
+ {
+  "id": "jobs:remotive-2091165",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Full-Stack Developer \u2014 Fluence International, Inc.",
+  "body": "We\u2019re looking for a pragmatic, security-minded Full-Stack Developer to help build and scale Fluence\u2019s B2B products used by clinicians, researchers, and organizations in psychedelic-assisted therapy and mental health. You\u2019ll work closely with and report to our Senior AI & Design Lead to turn product requirements into robust, secure, and well-documented applications, as well as maintain existing one",
+  "url": "https://remotive.com/remote-jobs/software-development/full-stack-developer-2091165"
+ },
+ {
+  "id": "jobs:remotive-2091135",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Senior Back-end Developer \u2014 Lemon.io",
+  "body": "Lemon.io helps companies in the US and Europe hire experienced engineers, from funded startups to teams like Klarna, Retool, and Pinterest. We\u2019ve been doing this since 2015, and more than 1,500 companies have hired engineers through us. Currently, we have a few open positions from our client, an AI-native cloud company. AI teams use its platform to run inference on open-source models, fine-tune th",
+  "url": "https://remotive.com/remote-jobs/software-development/senior-back-end-developer-2091135"
+ },
+ {
+  "id": "jobs:remotive-2091161",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "AI Trainer - Video Annotation \u2014 iMerit Technology",
+  "body": "AI Trainer - Video Annotation Remote | Independent Contractor Prove your skills. Get certified. Robotics AI is advancing rapidly, and high-quality video data helps intelligent systems better understand the world around them. We are inviting detail-oriented professionals to complete our certification process for potential robotics AI projects. \u258c What you will do As part of the certification process",
+  "url": "https://remotive.com/remote-jobs/artificial-intelligence/ai-trainer-video-annotation-2091161"
+ },
+ {
+  "id": "jobs:hn-50429861",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Stealth Health-Tech Startup",
+  "body": "Stealth Health-Tech Startup | Senior Backend/Infrastructure Engineer | San Francisco | ONSITE | Full-time | [salary range] + generous equity We're a rapidly growing, venture-backed stealth startup helping people understand their medical records and lab results. We need an engineer to own security (HIPAA/SOC 2, KMS, IAM, audit logging), indexing and querying large volumes of medical data in Postgre",
+  "url": "https://news.ycombinator.com/item?id=50429861"
+ },
+ {
+  "id": "jobs:hn-50348022",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Splash Tech",
+  "body": "Splash Tech | DevOps Mid/Senior / Frontend | Remote (LATAM and EU) | Full Time | https://splash.tech/ We're a small UK-based free-to-play gaming company with a distributed team, growing fast after recent success and scaling our backend platform. We\u2019re looking for a DevOps engineer with 5+ years of experience. Most of the work is AWS-focused. You should have hands-on experience with: - AWS, particu",
+  "url": "https://news.ycombinator.com/item?id=50348022"
+ },
+ {
+  "id": "jobs:hn-50346358",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "GovStar",
+  "body": "GovStar | https://govstar.us | Remote (U.S. Eastern/Central Time) | Security Engineer + Data Engineer | U.S. Citizens GovStar is hiring two talented, mission-focused, courageous engineers to build and protect mission-critical data, AI, and analytics capabilities supporting U.S. national security missions. Security Engineer \u2014 Design, implement, and operate security controls across applications, dat",
+  "url": "https://news.ycombinator.com/item?id=50346358"
+ },
+ {
+  "id": "jobs:hn-50345025",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Railway",
+  "body": "Railway | Senior Growth Marketer, Senior Product Marketer, Account Executive, Scale, Senior Product Eng (full-stack) | REMOTE (Worldwide) | https://railway.com/careers Do you feel scared and alone when opening the AWS console? Do you wish you could just tell Claude to manage your infra, and it would just work? Do you dream of a future where software is abundant and developers and normies alike are",
+  "url": "https://news.ycombinator.com/item?id=50345025"
+ },
+ {
+  "id": "jobs:hn-49528608",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Railway",
+  "body": "Railway | Senior Product Eng (full-stack), Brand Designer - Web, Senior Growth Marketer, Senior Product Marketer, Account Executive, Scale| REMOTE (Worldwide) | https://railway.com/careers Do you feel scared and alone when opening the AWS console? Do you wish you could just tell Claude to manage your infra, and it would just work? Do you dream of a future where software is abundant and developers ",
+  "url": "https://news.ycombinator.com/item?id=49528608"
+ },
+ {
+  "id": "jobs:hn-49525544",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "DAT",
+  "body": "DAT | Frontline Engineering Manager, Senior Engineering Manager | Seattle, Portland, Denver | Hybrid 2-3 days/week | Full-time | $192k - $261k I'm hiring for a frontline EM building the automation and trust layer for freight pricing, matching, onboarding, and settlement.Lead 1-3 teams (FTE + contractors), own delivery end-to-end, ~8 yrs exp typical. I expect everyone in my eng org (myself included",
+  "url": "https://news.ycombinator.com/item?id=49525544"
+ },
+ {
+  "id": "jobs:hn-50454490",
+  "segment": "cloud-security",
+  "segment_description": "Cloud posture, misconfiguration, IAM sprawl, cloud cost of security tooling.",
+  "source": "jobs",
+  "engagement": 1,
+  "title": "Hemant Singh",
+  "body": "Hemant Singh | Software Engineer / Backend Engineer | India (REMOTE / ONSITE) I'm a software engineer focused on backend development, primarily working with Java, Spring Boot, and Python. I enjoy building backend systems, REST APIs, and distributed applications, with an interest in system design and Agentic AI. Technical Skills: - Languages: Java, Python, C++, JavaScript - Backend: Spring Boot, Sp",
+  "url": "https://news.ycombinator.com/item?id=50454490"
+ }
+]

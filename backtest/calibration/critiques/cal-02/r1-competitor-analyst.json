@@ -1,0 +1,53 @@
+{
+ "concept_id": "cal-02",
+ "lens": "competitor-analyst",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "Crowded on both sides: runtime CSPM is consolidating into well-funded platforms that will add IaC scanning, and the IaC scanner wedge is already free (cfn_nag, tfsec, conftest/OPA, HashiCorp Sentinel). The open gap is unifying code and runtime with fixes as PRs, but that lead is likely only 12-18 months before a platform copies or acquires it.",
+ "objections": [
+  {
+   "objection": "The free IaC scanner wedge is already commoditised. cfn_nag (MIT, around since 2016) lints CloudFormation for open security groups, wildcard IAM and missing encryption; tfsec (MIT) does the same for Terraform; conftest runs OPA policies over Terraform. The concept's OSS scanner adds nothing new, so community adoption has to be won against tools engineers already run.",
+   "severity": "major",
+   "evidence": "https://github.com/stelligent/cfn_nag ; https://github.com/aquasecurity/tfsec ; https://github.com/open-policy-agent/conftest"
+  },
+  {
+   "objection": "HashiCorp owns the Terraform workflow and already sells Sentinel policy as code. It runs between plan and apply in Terraform Cloud/Enterprise, which is exactly the concept's pre-deployment checkpoint. HashiCorp could ship a library of security policies next quarter and sell it bundled to the same platform teams. The concept's competitor table doesn't mention HashiCorp at all.",
+   "severity": "major",
+   "evidence": "https://www.hashicorp.com/sentinel ; concept:competitors"
+  },
+  {
+   "objection": "Most dangerous competitor: the consolidating CSPM platforms, above all Palo Alto Networks, which bought RedLock and Evident.io in 2018, plus Check Point/Dome9. They already have CISO relationships, compliance mapping and runtime scanning across clouds. All they lack is IaC scanning, which they can bolt on or acquire. The concept's top-down CISO sale meets them head-on.",
+   "severity": "major",
+   "evidence": "concept:competitors ; concept:go_to_market.channel ; concept:risks"
+  },
+  {
+   "objection": "Cloud providers bundle posture checks: AWS Config rules and Security Hub CIS checks, Azure Security Center, GCP Security Command Center. Bundling caps how much buyers will pay for the runtime-scan and CIS-mapping features, and $10 per resource per month looks high against them.",
+   "severity": "major",
+   "evidence": "concept:competitors[1] ; concept:pricing.entry_price"
+  },
+  {
+   "objection": "Developer-first security vendors with distribution in pull requests, Snyk above all, can extend into IaC configuration. Snyk is listed as a differentiator, but it is really a fast follower with the same bottom-up motion and an existing installed base.",
+   "severity": "minor",
+   "evidence": "concept:competitors[3]"
+  },
+  {
+   "objection": "Other dedicated cloud-governance startups (DivvyCloud, Fugue, CloudCheckr, Accurics/Terrascan-type IaC entrants) are missing from the table. That understates how crowded the field is and how hard the market will be to explain.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "No incumbent unified IaC and runtime under one policy set with fixes as pull requests. Runtime CSPM consoles target security teams, which leaves a real developer-workflow opening.",
+ "what_would_change_my_mind": [
+  "The OSS scanner beats cfn_nag/tfsec on adoption (more GitHub stars and CI installs within 6 months).",
+  "Design partners who already run Prisma/Dome9 or Sentinel say they would add or switch for code-to-runtime mapping and PR fixes.",
+  "A remediation PR success rate above 80% that incumbents cannot show."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://github.com/stelligent/cfn_nag",
+  "https://github.com/aquasecurity/tfsec",
+  "https://github.com/open-policy-agent/conftest",
+  "https://www.hashicorp.com/sentinel"
+ ]
+}

@@ -1,0 +1,1802 @@
+[
+ {
+  "id": "github:6518575014",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "feature: optional delayed, cancellable transfers for guarded accounts",
+  "body": "### The problem When a hot key, session key or delegated (proxy/agent) key leaks, an attacker can drain an account within minutes. By the time anyone notices, the funds have usually been bridged out or mixed. FLOP's escrow, HTLC and voucher flows already use challenge windows, but plain account-to-account transfers have no equivalent safety window. ### What you would like An opt-in runtime pallet ",
+  "url": "https://github.com/flop-labs/network/issues/478"
+ },
+ {
+  "id": "github:650763793",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Deterministic DSA (Java Errors)",
+  "body": "Hello. I'm having trouble launching this code. It seems to provide two errors and I'm not sure my platform is set up correctly to load the script (appears fine, not sure). Is there anyone available that could help me troubleshoot the following script and get it operational without upsetting its integrity? My errors are, ``` javac deterministicdsa.java deterministicdsa.java:1: error: class, interfa",
+  "url": "https://github.com/ImLostPleaseHelpThx/Deterministic-DSA-Java-erros-/issues/1"
+ },
+ {
+  "id": "github:5574709563",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Add a redaction system for tool output",
+  "body": "## Proposed Docs ### Introduction linux-mcp-server contains a simple redaction system that is applied to data returned from the target system before it reaches the chat model, both for fixed tools and for Guarded Command Execution. The goal of this system is to avoid sending certain information from the target system back to the chat model. There are a number of types of information that we might ",
+  "url": "https://github.com/rhel-lightspeed/linux-mcp-server/issues/626"
+ },
+ {
+  "id": "github:6138965961",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Agent that investigates each project in depth and produces a structured assessment",
+  "body": "Jos\u00e9's request on October 31: in the future, an agent that digs into each project and returns a detailed assessment, much more structured than today's (5 checks + guide). ## What the agent would do For each project, with tools (GitHub API, reading the repo files and a sandbox): - **Entry:** README, CONTRIBUTING, issue/PR templates, code of conduct, AI policy, roadmap. - **Environment:** clone the ",
+  "url": "https://github.com/jose-victor/opendoor/issues/86"
+ },
+ {
+  "id": "github:5813059509",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "A `clerk` model tag: a decision-model endpoint as the consult engine / `clerk` \u6a21\u578b\u6807\u7b7e\uff1a\u4f5c\u4e3a\u54a8\u8be2\u5f15\u64ce\u7684\u51b3\u7b56\u6a21\u578b\u7aef\u70b9",
+  "body": "### Use case and current limitation / \u4f7f\u7528\u573a\u666f\u4e0e\u5f53\u524d\u9650\u5236 English: The consult protocol (#88) needs an engine. Running each consult as a full resident run on the main model costs an entire LLM call with city context per question \u2014 too slow and too expensive for something a run should be able to do at every decision point \u2014 and a prompted LLM's self-reported percentages are not calibrated probabilities: meas",
+  "url": "https://github.com/2youg1/sprawling-agents/issues/89"
+ },
+ {
+  "id": "github:5399391007",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Idea] MCP Transcript Commitment Ledger for Tamper-Evident AI Agent Actions in DAO Treasury Ops",
+  "body": "## Idea Summary - **Idea Title**: MCP Transcript Commitment Ledger for Tamper-Evident AI Agent Actions in DAO Treasury Ops - **Core Analysis**: The real problem is not just sandbox escape; it is that agent actions are too easy to dispute after the fact. DeepSeek Harness-style failures prove that execution logs, prompts, and tool calls need to become first-class security artifacts now. Web3 teams r",
+  "url": "https://github.com/MosslandOpenDevs/agentic-orchestrator/issues/5005"
+ },
+ {
+  "id": "github:5162697570",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[AUDIT-001] Strategic audit memo: retire the custom cascade and prove a harness-first K3-cost stack",
+  "body": "# [AUDIT-001] Strategic audit memo: retire the custom cascade and prove a harness-first K3-cost stack ## Stable key AUDIT-001 ## Category Strategic audit / architecture decision / make-vs-buy review ## Status **Decision proposed:** stop investing in the bespoke static-cascade controller as the production path. Preserve only useful measurement and task-fixture concepts, rebuild the evaluator so it ",
+  "url": "https://github.com/dachent/model_proctor/issues/13"
+ },
+ {
+  "id": "github:4311726722",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "EC-8: ContextAssembler \u2014 cache-disciplined dynamic prompt injection",
+  "body": "# EC-8: `ContextAssembler` \u2014 cache-disciplined dynamic prompt injection > Part of umbrella: #34 [UMBRELLA] Epistemic Cortex > Depends on: **EC-1**, **EC-2**, **EC-3**, **EC-4**, **EC-5**, **EC-6**, **EC-7** > Lands in: `crates/rigor/src/memory/epistemic/context.rs` ## Scope The presentation layer. After this lands: - `ContextAssembler` takes epistemic state and produces the structured system-promp",
+  "url": "https://github.com/Rigor-Cloud/rigor/issues/42"
+ },
+ {
+  "id": "github:5571266791",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "MY STUDY",
+  "body": "# MY STUDY \u2014 Learn \u2022 Teach \u2022 Research \u2022 Innovate **Local Development:** `http://127.0.0.1:8000/` ## Objective Make the **MY STUDY** platform fully functional, secure, tested, responsive, accessible, and production-ready. The existing project already has a FastAPI backend, SQLAlchemy database layer, JWT/RBAC authentication, multiple education/research domains, and an automated test suite. The exist",
+  "url": "https://github.com/microsoft/vscode-edge-devtools/issues/5028"
+ },
+ {
+  "id": "github:4259838324",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Feature]: Revisit tool lease size in prompt-heavy flows",
+  "body": "### Surface Conversation / session runtime ### Problem statement While reading the tool discovery and invocation flow, I noticed that the current tool lease format appears to be a self-contained signed token carrying claims such as tool id, catalog digest, expiry, and optional session/turn bindings. That design makes sense from a safety and validation perspective. However, I am wondering whether t",
+  "url": "https://github.com/eastreams/loong/issues/1252"
+ },
+ {
+  "id": "github:5079200662",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "praisonai wrapper: async-bridge deadlocks event loop, agent-facing file tools bypass security deny-list, A2U server fail-open with unbounded queues",
+  "body": "## Summary Three concrete, high-impact gaps in `src/praisonai/praisonai/` that each break one of the stated pillars (async-safe by default \u00b7 safe by default \u00b7 production-ready). Every finding below was read out of the current tree, cited with file:line, and includes a working repro shape and a minimal fix. The three are deliberately from **different** subsystems (async runtime, agent-facing file t",
+  "url": "https://github.com/MervinPraison/PraisonAI/issues/3709"
+ },
+ {
+  "id": "github:3999963373",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[TASK] Layer 1 unit tests for build_module_v3 pipeline",
+  "body": "## Parent: #667 ## Why Every bug found during Phase D testing (#660) was deterministic code \u2014 routing logic, regex parsing, arithmetic, template rendering. Zero test coverage means each bug costs 10-30 min of pipeline runs to discover. We're about to run hundreds of modules through this pipeline. ## Acceptance Criteria ### Citation extraction & verification - [x] Test `_extract_ukrainian_citations",
+  "url": "https://github.com/learn-ukrainian/learn-ukrainian.github.io/issues/668"
+ },
+ {
+  "id": "github:4429893058",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "feat(extraction): opt-in LLM fallback adapter for extract_data",
+  "body": "## Summary Add an **explicit opt-in** LLM fallback path for `extract_data` that runs only after deterministic extraction fails to meet a caller-specified field coverage threshold. The fallback must be provider-neutral, disabled by default, budgeted, schema-validated, and unable to mutate the live page. This borrows `llm-scraper`'s strongest idea \u2014 schema-guided semantic extraction \u2014 without replac",
+  "url": "https://github.com/shaun0927/openchrome/issues/976"
+ },
+ {
+  "id": "github:6061578149",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "skillaudit INTENT_EXFILTRATION, vague-name and A2A findings on reference-skill prose that documents mod components",
+  "body": "Filed by the main Claude agent working in the mods-expert-developer-plugin repository (TRDD-04ZJ9E90), on behalf of the owner. CPV v5.22.3 and v5.23.0 `--strict` report three findings on reference-only skills that DOCUMENT how Claude Code mods are built. All three sit on our own descriptive prose (no excerpt, no executable code), and under the no-suppression policy each blocks the publish. ## 1. M",
+  "url": "https://github.com/Emasoft/claude-plugins-validation/issues/268"
+ },
+ {
+  "id": "github:5791798711",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "discord: fetch_messages cannot page past the newest 100 messages",
+  "body": "## Summary In the `discord` plugin, `fetch_messages` can only ever return the newest 100 messages of a channel. There is no cursor parameter, so history older than that is unreachable \u2014 and since Discord's search API isn't available to bots, `fetch_messages` is the only way to read history at all. This also makes the server hint unactionable: > fetch_messages pulls real Discord history. [\u2026] if the",
+  "url": "https://github.com/anthropics/claude-plugins-official/issues/6406"
+ },
+ {
+  "id": "github:6132306902",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[P1] Cover banking prompt injection, malformed actions and stateful policy attacks",
+  "body": "## Current delivery review \u2014 2026-11-02 **Close: delivered adversarial/fault-control implementation and scoped evidence.** Schema/malformed/state/replay controls, original upstream attack/effect oracles, released scripted extra-transfer denial, real native reviewer-error and cancellation/late-allow non-execution are implemented and validated. Reports keep utility, guard correctness, errors/unknown",
+  "url": "https://github.com/caldeirav/sub15-breaker/issues/16"
+ },
+ {
+  "id": "github:4117461737",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "\ud83d\udcc8 AI Open Source Trends 2026-03-23",
+  "body": "# AI Open Source Trends 2026-03-23 > Sources: GitHub Trending + GitHub Search API | Generated: 2026-03-23 00:11 UTC --- # AI Open Source Trends Report **Date:** 2026-03-23 | **Source:** GitHub Trending & Topic Search ## 1. Today's Highlights The open-source AI ecosystem is undergoing a massive shift towards **\"Agent Capabilities\"** and **\"Claude Engineering.\"** Today's trending data reveals an exp",
+  "url": "https://github.com/jstamagal/agents-radar/issues/85"
+ },
+ {
+  "id": "github:5399417576",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Idea] Cloudflare Zero Trust Ephemeral Agent Relay for Mossland Web3 Signoffs",
+  "body": "## Idea Summary - **Idea Title**: Cloudflare Zero Trust Ephemeral Agent Relay for Mossland Web3 Signoffs - **Core Analysis**: The real problem is not just a DeepSeek Harness patch gap; it is that LLM agents are being treated like trusted backend workers while they remain externally steerable. Once prompt injection can alter execution paths, file sandboxing alone is insufficient. Web3 teams now rou",
+  "url": "https://github.com/MosslandOpenDevs/agentic-orchestrator/issues/5008"
+ },
+ {
+  "id": "github:5158504463",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Feature: expose the MCP surface for multi-function (tabbed) and `steps` apps \u2014 composing >1 callback locks agents out entirely",
+  "body": "## Motivation Two of Fast Dash's headline features are individually documented and prominent, but **mutually exclusive**: - **Multi-function / tabbed apps** \u2014 `FastDash([greet, add], tab_titles=[...])` composes several callbacks into one app (README \u2192 *\"Multiple functions in a single tabbed app\"*), and `steps=[...]` chains them into a wizard. - **MCP** \u2014 `mcp_server=True` lets an agent introspect ",
+  "url": "https://github.com/dkedar7/fast_dash/issues/206"
+ },
+ {
+  "id": "github:5342828782",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Idea] Mossland Polygon zkML Security Hotline for Low-End Wallet Users and Local DAOs",
+  "body": "## Idea Summary - **Idea Title**: Mossland Polygon zkML Security Hotline for Low-End Wallet Users and Local DAOs - **Core Analysis**: The current AI security wave is being built for teams that already have money, engineers, and reliable infrastructure. That leaves out small token holders, local DAO operators, and mobile-first users who cannot afford continuous audits, expensive monitoring, or full",
+  "url": "https://github.com/MosslandOpenDevs/agentic-orchestrator/issues/4644"
+ },
+ {
+  "id": "github:3161773388",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Feature Request: Support Claude Flow Integration",
+  "body": "**Summary** Request to add support for Claude Flow as an alternative backend in Claude Code WebUI, allowing users to leverage multi-agent orchestration capabilities alongside the existing Claude Code functionality. **Background** https://github.com/ruvnet/claude-code-flow is an advanced AI agent orchestration system that provides: - Multi-agent coordination (Architect, Coder, TDD, Security, DevOps",
+  "url": "https://github.com/sugyan/claude-code-webui/issues/76"
+ },
+ {
+  "id": "github:4230180372",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[broken-links] Broken external links detected (2 confirmed 404s)",
+  "body": "Automated link validation scan run on **2026-04-09** found **2 confirmed broken links** (HTTP 404) across the site source files. --- ## \ud83d\udd34 Broken Links (HTTP 404) | URL | Status | Page(s) | Line(s) | Suggested Fix | |-----|--------|---------|---------|---------------| | `https://github.github.io/gh-aw/security/` | 404 | `src/content/pages/resources.mdx` | 143, 441 | Page may have been removed or re",
+  "url": "https://github.com/htekdev/gh-aw-overview/issues/30"
+ },
+ {
+  "id": "github:3519794177",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Feature] Implement repository selection for GitHub App authorization",
+  "body": "### What would you like to be added? The ability to select specific repositories for auggie to have access during the GitHub App authorization flow. Currently, it requests read and write permissions for all public and private repositories. ### Why is this needed? Granting a new tool, especially an AI agent, blanket write access to all repositories is a significant security concern and a major barr",
+  "url": "https://github.com/augmentcode/auggie/issues/23"
+ },
+ {
+  "id": "github:5222982624",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Feature] Support LiteLLM routing natively inside the Policy Engine",
+  "body": "### Description Currently, Aegisora's runtime proxy intercepts AI agent actions before execution and relies on a default inference provider (Groq/OpenAI) for certain risk evaluation tasks. As we expand our multi-agent governance capabilities, we want to allow developers to route these internal policy evaluations through `litellm`, so they can dynamically switch models or handle fallbacks without c",
+  "url": "https://github.com/aegisora-ai/aegisora/issues/19"
+ },
+ {
+  "id": "github:4755236244",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Feature: On-Device Conversational Speech Loop",
+  "body": "# On-Device Conversational Speech Loop (Full-Duplex Voice Assistant) Implement a completely on-device, real-time, full-duplex voice assistant in Flutter that combines local Voice Activity Detection (VAD), streaming Automatic Speech Recognition (ASR), local LLM inference (using LiteRT-LM), and streaming Text-to-Speech (TTS). This will remove the sequential \"push-to-talk\" and text-translation latenc",
+  "url": "https://github.com/DevelopersCoffee/airo/issues/357"
+ },
+ {
+  "id": "github:3138677810",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[\u6bcf\u65e5\u4fe1\u606f\u6d41] 2025-06-12",
+  "body": "# \u6bcf\u65e5\u5b89\u5168\u8d44\u8baf\uff082025-06-12\uff09 - \u5148\u77e5\u5b89\u5168\u6280\u672f\u793e\u533a - [\u5951\u7ea6\u9501\u7535\u5b50\u7b7e\u7ae0\u7cfb\u7edfRCE\u7b80\u5355\u5206\u6790](https://xz.aliyun.com/news/18245) - Recent Commits to cve:main - [Update Wed Jun 11 16:05:08 UTC 2025](https://github.com/trickest/cve/commit/17b4435f70169e5e8b9980b234898b5e58c7212c) - SecWiki News - [SecWiki News 2025-06-11 Review](http://www.sec-wiki.com/?2025-06-11) - \u5148\u77e5\u5b89\u5168\u6280\u672f\u793e\u533a - [\u5951\u7ea6\u9501\u7535\u5b50\u7b7e\u7ae0\u7cfb\u7edfRCE\u7b80\u5355\u5206\u6790](https://xz.aliyun.com/news/18245) - Der Flou",
+  "url": "https://github.com/ruohong2018/ruohong2018.github.io/issues/852"
+ },
+ {
+  "id": "github:3386794713",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Daily Content Summary 2025-09-05",
+  "body": "# \ud83d\udcf0 Daily Content Summary - 2025-09-05 ### Executive Summary This executive summary synthesizes recent developments across technology, highlighting surprising shifts in infrastructure, the dual nature of AI, and evolving perspectives on digital engagement. **Key Insights** * **Attention as Abundance, Not Scarcity:** Contrary to the prevailing \"attention economy\" narrative, sustained attention is p",
+  "url": "https://github.com/jhengy/content-aggregator/issues/226"
+ },
+ {
+  "id": "github:4413868324",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Support fine-grained tool control: read-only mode and per-tool toggles",
+  "body": "## Problem The current `THINGSBOARD_TOOLS_*` environment variables only allow enabling or disabling entire tool groups (`Telemetry`, `Devices`, `Assets`, etc.). However, every group mixes read operations with state-changing operations. For example, the `Telemetry` group includes both: - Read tools: `getAttributes`, `getTimeseries`, `getLatestTimeseries`, `getAttributeKeys`, etc. - Write tools: `sa",
+  "url": "https://github.com/thingsboard/thingsboard-mcp/issues/36"
+ },
+ {
+  "id": "github:5757028885",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[feat] generate llms.txt from the existing documentation sitemap",
+  "body": "### Summary Add a generated `/llms.txt` file to the site root, derived from the existing documentation sitemap. This gives AI agents and LLM-powered tools (Claude Desktop, Perplexity, Cursor, Windsurf, Cline, Aider, GitHub Copilot) a curated, machine-readable index of the project's most important pages, without requiring them to re-derive structure from the full sitemap. ### Context `llms.txt` is ",
+  "url": "https://github.com/xidl/xidl/issues/292"
+ },
+ {
+  "id": "github:4736908131",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Add Domain whitelisting for a stagehand session",
+  "body": "I want to enforce a guardrail to terminate a session if an agent clicks on a link that is outside of an allowed list of domains. See claude proposal: When running an autonomous agent.execute() loop, the agent can freely navigate to any URL. The goto tool calls page.goto(url) with no validation ([goto.ts:25](/packages/core/lib/v3/agent/tools/goto.ts#L25)), as does the CUA handler ([v3CuaAgentHandle",
+  "url": "https://github.com/browserbase/stagehand/issues/2272"
+ },
+ {
+  "id": "github:3820767468",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Security] Integrate PKIKeyProvider for LoRA Adapter Encryption",
+  "body": "## \ud83d\udccb Description Integrate the existing `PKIKeyProvider` implementation with LoRA adapter storage to enable certificate-based key management. This approach uses X.509 certificates and public/private key pairs for encryption, suitable for environments where PKI infrastructure is already established. **Related Files**: - `include/security/pki_key_provider.h` - Existing PKIKeyProvider implementation ",
+  "url": "https://github.com/makr-code/ThemisDB/issues/555"
+ },
+ {
+  "id": "github:5080799542",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Idea] Idea: zkTLS Supply-Chain Tamper Proofing Network for Mossland Asset Authenticity and Fraud Response",
+  "body": "## Idea Summary - **Idea Title**: ## Idea: zkTLS Supply-Chain Tamper Proofing Network for Mossland Asset Authenticity and Fraud Response - **Core Analysis**: The real problem is not just malicious LLM use against code; it is the collapse of trust in digital claims. In Web3-adjacent markets, asset authenticity, provenance, and operational integrity are still verified through fragmented evidence, ma",
+  "url": "https://github.com/MosslandOpenDevs/agentic-orchestrator/issues/3016"
+ },
+ {
+  "id": "github:5560101758",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Add a built-in security-audit skill",
+  "body": "Add a competent, built-in security audit to steiner that needs no external tooling beyond what steiner provides. It audits either a diff (the current branch against its base, plus local changes) or the repository or a subtree. Deeper, specialised scanning is left to third-party skills. GitHub issue #795 was a starting point, not a specification. The design here supersedes it where they differ. ## ",
+  "url": "https://github.com/luispabon/steiner/issues/795"
+ },
+ {
+  "id": "github:5028687653",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "\ud83c\udf10 Global Tech Briefing - 2026-07-31",
+  "body": "# \ud83c\udf10 Global Tech Intelligence Briefing - 2026-07-31 **Date:** 2026-07-31 **Generated At:** 10:17 **Data Sources:** Hacker News, GitHub Trending, ArXiv --- ## \ud83d\udcf0 Hacker News (Top Stories) ### 1. [The session you cannot take with you](https://earendil.com/posts/session-portability/) \ud83d\udd25 355 | \ud83d\udd52 2026-07-31 03:47 \ud83d\udcd6 Summary: The Session You Cannot Take With You | EARENDIL The Session You Cannot Take With Y",
+  "url": "https://github.com/AtomChen0425/Global_Trends/issues/164"
+ },
+ {
+  "id": "github:3588469279",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Optimize GenAI UAT costs: Switch to cheaper LLM models via OpenRouter",
+  "body": "## Priority: \ud83d\udfe1 TIER-2 (Important - Cost Optimization) **Depends on:** Issue #48 (Phase 2.5 - GenAI UAT implementation) --- ## Problem Statement **Current Cost (Claude Sonnet 4.5 via OpenRouter):** - Per evaluation: ~$0.02 (2K input + 1K output tokens) - Per test run (20 tests): $0.40 - Monthly (30 nightly runs): **$12/month** - Annual: **$144/year** **Opportunity:** Switch to cheaper models = **90",
+  "url": "https://github.com/akaszubski/autonomous-dev/issues/49"
+ },
+ {
+  "id": "github:1870891106",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Remote] Yodayo Hiring Staff Software Engineer $120-150k/year",
+  "body": "## \u516c\u53f8/\u56e2\u961f\u4ecb\u7ecd Hiring for Portfolio Company Yodayo is an AI-driven art platform tailored for vTubers and anime fans, offering AI-generated anime art, prompts, and a vibrant community to share creations. Looking for a staff software engineer who can potentially lead projects or initiatives end-to-end including leading other engineers. We have an anime focused text-to-image generator, AI chatbots and so",
+  "url": "https://github.com/rebase-network/who-is-hiring/issues/334"
+ },
+ {
+  "id": "github:4488095914",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Session Recording App Session Chunk UX Improvements",
+  "body": "### What would you like Teleport to do? App session recordings (app-chunk) are confusing for users, especially Beams.run users, and have several data-quality issues. ### Issues Found - [ ] Single session split across multiple unordered chunks. - Session sid: afbd8d3b... produced 2 chunk IDs across different server_ids - Session sid: 686a4f68... (shining-outpost) has 4+ chunks in recordings ls - Tw",
+  "url": "https://github.com/gravitational/teleport/issues/66904"
+ },
+ {
+  "id": "github:5116744747",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Support per-tool authorization for MCP tools in Helidon MP",
+  "body": "We have an existing Helidon MP application secured with OIDC, where JAX-RS controllers use method-level ABAC authorization such as: ```java @PolicyValidator.PolicyStatement(\"...\") ``` For Helidon MCP, we would like to apply equivalent authorization to individual `@Mcp.Tool` methods and ideally reuse our existing `PolicyStatement` declarations and policies. We understand that authorization can be c",
+  "url": "https://github.com/helidon-io/helidon-mcp/issues/201"
+ },
+ {
+  "id": "github:6269128015",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "MCP server: scoping, security, tool gaps, resource inventory, scanner rationalization, latest-protocol conformance, sync/async parity",
+  "body": "# MCP server: scoping, security, tool gaps, resource inventory, scanner rationalization, latest-protocol conformance, sync/async parity ## Agent #clo-arsi ## Problem The platform's MCP server (`openaimp`, `https://agent.openaimp.com/mcp`) is the single surface through which chat, Copilot, and external MCP clients reach platform capabilities \u2014 116 tools, 14 resources, 5 prompts, across 6 permission",
+  "url": "https://github.com/Qunsultant/cfagent/issues/3748"
+ },
+ {
+  "id": "github:5337589587",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Investigate: llama-server now natively hosts stdio MCP servers (--mcp-servers-config) \u2014 overlap with our own tool-loop?",
+  "body": "## Finding llama-server merged native MCP support upstream (`ggml-org/llama.cpp#26062`, \"server: support MCP stdio\", merged 2026-07-25 \u2014 verified via `gh api`, not a paraphrase). Confirmed live in the current `tools/server/README.md`: - `--mcp-servers-config PATH` / `--mcp-servers-json JSON` \u2014 Cursor-compatible server definitions, stdio transport only. - Every configured server is spawned once at ",
+  "url": "https://github.com/baylitoo/slm_benchmark/issues/401"
+ },
+ {
+  "id": "github:3772020571",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Unclear Documentation: Do Plugin MCP Servers Automatically Receive Permissions?",
+  "body": "## Description The current documentation is unclear about whether plugins that include MCP servers automatically grant Claude permission to use those MCP server tools, or whether they go through the standard permission system. ## Problem When reading the documentation for plugins with MCP servers, it's ambiguous whether: 1. **Automatic Permission**: Plugin MCP tools are automatically permitted whe",
+  "url": "https://github.com/anthropics/claude-agent-sdk-python/issues/448"
+ },
+ {
+  "id": "github:5174370421",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[Bug]: ARM64 hermes install wont tool call properly with MOE llms (it does call tools properly with dense models)",
+  "body": "### Bug Description I have a fresh install of a all local hermes on ubuntu 26.04 ARM64. tested the setup to work reasonably well with a small dense llm, installed a larger MOE (mixture of experts) llm and tool calls broke. it just loops its reasoning and prints the python it should be executing for the tool call to screen. task never completes and the loop continues until the context window fill c",
+  "url": "https://github.com/NousResearch/hermes-agent/issues/88574"
+ },
+ {
+  "id": "github:4414918365",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Proposal: ingest_external_rule_pack tool for open rule sources (ATR)",
+  "body": "Today the SecOps MCP server exposes Chronicle rule management primitives (list_security_rules, search, rule_exclusions, etc.) that operate on rules already deployed in a customer Chronicle tenant. There is currently no tool that helps a SOC analyst pull in an external open detection rule pack and load it into Chronicle through the MCP interface. I would like to propose a new tool, ingest_external_",
+  "url": "https://github.com/google/mcp-security/issues/255"
+ },
+ {
+  "id": "github:3208025676",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "\ud83d\udd0d Code Review Feedback",
+  "body": "# \ud83d\udd0d Code Review Feedback ## \ud83d\udccb Overall Assessment Anany, your project, 'Build Your Own MCP Server,' successfully lays down the foundational architecture for an MCP server using the Vercel adapter, demonstrating a clear understanding of exposing tools for LLM interaction. You've implemented commendable code organization with a logical separation of concerns between API routes and external service in",
+  "url": "https://github.com/ananyd36/trade-mcp/issues/1"
+ },
+ {
+  "id": "github:6520283524",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[E41.2] Tool families and a capability-first run agent: \"Your tools\", the routing rule, the toolbox line",
+  "body": "**Phase:** E41 \u2022 **Parent:** #697 \u2022 **Sequence:** 2 \u2022 **Prerequisites:** E41.1 (#698) (the routing scenarios and the baseline) \u2022 **Kind:** Console (agent packages, runner host) ### Objective Introduce tool families and make the run agent choose by capability. The agent's instructions start from a neutral identity, list the families it has with when to use each, state one routing rule, and every ro",
+  "url": "https://github.com/marinoscar/hexactra/issues/699"
+ },
+ {
+  "id": "github:5031447798",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "repo: add SECURITY.md with a private reporting channel (plus CONTRIBUTING, CoC, CHANGELOG, dependabot)",
+  "body": "## Summary The repository has no `SECURITY.md`, so there is no way to report a vulnerability privately. For a tool that executes shell commands, spawns subprocesses from config, hosts MCP servers, and handles API keys, this is the first file a security researcher looks for. Also missing: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `CHANGELOG.md`, `.github/dependabot.yml`, and issue/PR templates. ## S",
+  "url": "https://github.com/vedantnimbarte/Wingman/issues/98"
+ },
+ {
+  "id": "github:4281836073",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "research(mcp): per-tool result size override via _meta annotation \u2014 Claude Code pattern",
+  "body": "## Description Claude Code v2.1.108 added support for MCP servers to annotate tool results with `_meta[\\\"anthropic/maxResultSizeChars\\\"]` to override the default result size limit (up to 500K chars). This allows large results like DB schemas or full file trees to pass through without truncation on a per-call basis. Zeph currently has a global `[tools.overflow]` threshold (default 50000 chars) that",
+  "url": "https://github.com/bug-ops/zeph/issues/3079"
+ },
+ {
+  "id": "github:4199095312",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Ergonomics & extensibility improvements from building a production CLI agent",
+  "body": "## Context We built [zavora-cli](https://github.com/zavora-ai/zavora-cli) \u2014 a Rust CLI AI agent on ADK-Rust 0.5.0 with 12 tools, MCP server/client, multi-agent orchestration, and a layered permission system. During implementation of 9 major features (MCP server mode, bash security pipeline, LSP integration, parallel tool execution, etc.), we hit several friction points in the ADK API. This issue d",
+  "url": "https://github.com/zavora-ai/adk-rust/issues/256"
+ },
+ {
+  "id": "github:4055244044",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Allow project switching with scoped Personal API Keys",
+  "body": "## Is your feature request related to a problem? When using the PostHog MCP server with Personal API Keys for scoped security, we cannot dynamically switch between projects during an agentic development session. Currently, there are two authentication options: - **OAuth** \u2014 Allows in-session project switching via the `switch-project` tool, but provides no scope control - **Personal API Key** \u2014 Pro",
+  "url": "https://github.com/PostHog/posthog/issues/50589"
+ },
+ {
+  "id": "github:4233800491",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Octocode - MemPalace Security Hardening",
+  "body": "# RFC: MemPalace Security Hardening --- ## Summary The MemPalace MCP server exposes 17 tools to AI agents with write access to ChromaDB, SQLite, and the local filesystem. A security audit found 9 issues across input validation, argument injection, concurrency safety, resource exhaustion, data leakage, and error handling. This RFC proposes a phased hardening plan that addresses all findings \u2014 from ",
+  "url": "https://github.com/MemPalace/mempalace/issues/401"
+ },
+ {
+  "id": "github:3324316231",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "create gemini cli markdown and settings",
+  "body": "# Gemini CLI Configuration Gemini CLI offers several ways to configure its behavior, including environment variables, command-line arguments, and settings files. This document outlines the different configuration methods and available settings. ## Configuration layers Configuration is applied in the following order of precedence (lower numbers are overridden by higher numbers): 1. **Default values",
+  "url": "https://github.com/HerringtonDarkholme/megarepo/issues/13"
+ },
+ {
+  "id": "github:5699534451",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "JWT token verifier as an alternative to the shared token",
+  "body": "The shared bearer token is right for one operator and one client. Multi-tenant deployments issue JWTs. Where to look: typescript/src/http.ts, typescript/src/config.ts, typescript/test/http.test.ts, python/src/secure_mcp_server/auth.py, python/src/secure_mcp_server/config.py, python/src/secure_mcp_server/http.py, python/tests/test_http.py, SECURITY.md. Acceptance: - `MCP_AUTH_MODE=jwt` with `MCP_JW",
+  "url": "https://github.com/basitalisandhu/mcp-server-template/issues/12"
+ },
+ {
+  "id": "github:3948666119",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "CAMARA Security, Privacy, and Consent guidance for MCP",
+  "body": "**Problem description** As proposed in https://github.com/camaraproject/Governance/issues/210, the Identity and Consent Management working group is responsible for defining MCP Security, Privacy, and Consent guidance for MCP tool servers (v0.1). **Possible evolution** - Analyse the existing security and authentication guidelines defined in MCP. - MCP [Auth spec](https://modelcontextprotocol.io/spe",
+  "url": "https://github.com/camaraproject/IdentityAndConsentManagement/issues/347"
+ },
+ {
+  "id": "github:4147328678",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[speckit.tasks] Security Review",
+  "body": "> **Parent Issue:** #5518 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.tasks` Generate granular implementation tasks from the plan. Each task should be a well-defined unit of work with clear inputs, outputs, and acceptance criteria. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable",
+  "url": "https://github.com/Boykai/github-workflows/issues/5521"
+ },
+ {
+  "id": "github:4065231335",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[speckit.implement] Security Review",
+  "body": "> **Parent Issue:** #3588 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.implement` Implement the feature based on the specification, plan, and tasks. Write production-quality code with tests. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable pattern/behavior, not tied to specific fu",
+  "url": "https://github.com/Boykai/github-workflows/issues/3593"
+ },
+ {
+  "id": "github:4065230810",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[speckit.analyze] Security Review",
+  "body": "> **Parent Issue:** #3588 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.analyze` Complete the work assigned to the `speckit.analyze` agent. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable pattern/behavior, not tied to specific function or line numbers. Phase 1 \u2014 Critical (Fix Imme",
+  "url": "https://github.com/Boykai/github-workflows/issues/3592"
+ },
+ {
+  "id": "github:4058902618",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[speckit.analyze] Security Review",
+  "body": "> **Parent Issue:** #3246 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.analyze` Complete the work assigned to the `speckit.analyze` agent. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable pattern/behavior, not tied to specific function or line numbers. Phase 1 \u2014 Critical (Fix Imme",
+  "url": "https://github.com/Boykai/github-workflows/issues/3250"
+ },
+ {
+  "id": "github:4042041249",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[speckit.specify] Security Review",
+  "body": "> **Parent Issue:** #2498 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.specify` Write a detailed specification for this feature. Analyze requirements, define acceptance criteria, and document the technical approach. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable pattern/behavior",
+  "url": "https://github.com/Boykai/github-workflows/issues/2499"
+ },
+ {
+  "id": "github:4036839483",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[speckit.implement] Security Review",
+  "body": "> **Parent Issue:** #1926 \u2014 Security Review ## \ud83e\udd16 Agent Task: `speckit.implement` Implement the feature based on the specification, plan, and tasks. Write production-quality code with tests. --- ## Parent Issue Context Plan: Security, Privacy & Vulnerability Audit 3 Critical \u00b7 8 High \u00b7 9 Medium \u00b7 2 Low \u2014 across OWASP Top 10. Findings describe the vulnerable pattern/behavior, not tied to specific fu",
+  "url": "https://github.com/Boykai/github-workflows/issues/1930"
+ },
+ {
+  "id": "github:4042938335",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Daily News Digest - 2026-03-09",
+  "body": "# 2026-03-09 ## RedditGo 1. [Flask's creator on why Go works better than Python for AI agents](https://www.reddit.com/r/golang/comments/1rn675y/flasks_creator_on_why_go_works_better_than_python/) 2. [I built an open-source ngrok alternative \u2014 no signup, no config, free custom subdomains](https://www.reddit.com/r/golang/comments/1rnd78x/i_built_an_opensource_ngrok_alternative_no_signup/) 3. [Who's ",
+  "url": "https://github.com/ducminhgd/gossip-bot/issues/255"
+ },
+ {
+  "id": "github:4385665707",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Private security disclosure route? (pub_antv@antgroup.com bounced)",
+  "body": "## Private security disclosure route? Hi maintainers, I have a security-relevant report on `antvis/mcp-server-chart` (default Docker deployment configuration). Looking for a private disclosure channel before sharing details. I checked: - The repo doesn't have `SECURITY.md` at the root or under `.github/`. - GitHub Private Vulnerability Reporting is disabled for the repo (per `gh api /repos/antvis/",
+  "url": "https://github.com/antvis/mcp-server-chart/issues/300"
+ },
+ {
+  "id": "github:5513094354",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "[ordering-review] workshop order graph: one confirmed ordering gap in Step 05 (.lock.yml referenced before it exists)",
+  "body": "## Summary An automated graph-health review of `workshop/*.md` mapped 96 pages, 334 edges, and 334 derived ordering constraints, then flagged 56 potential ordering anomalies (3 cycles / 3 feedback loops / 3 \"weird\" mixed-edge cycles, plus 50 heuristic prerequisite-link findings). After manually re-checking the flagged pages against their actual \"Before You Start\" and \"Next\" links, most heuristic f",
+  "url": "https://github.com/githubnext/gh-aw-workshop/issues/3577"
+ },
+ {
+  "id": "github:4584843314",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Security disclosure fastmcp-http: missing Origin/Host validation enables DNS-rebinding (please respond with private channel)",
+  "body": "Hi @ARadRareness , I'm reaching out as a coordinated security disclosure for `fastmcp-http` v0.1.4 on PyPI. Filing as a public issue because no private channel is published the PyPI email is the GitHub-noreply address, this repo's private vulnerability reporting is disabled, and there's no contact email/site on your GitHub profile. **Please reply with a private channel you'd prefer (email, signal,",
+  "url": "https://github.com/ARadRareness/mcp-registry/issues/3"
+ },
+ {
+  "id": "hn:5953139",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Is there a tool to verify browser TLS/SSL configuration? SSL Labs for clients?",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=5953139"
+ },
+ {
+  "id": "hn:43507897",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Ask HN: Beyond YC Match Making: How Do We Find a US CEO Co-Founder?",
+  "body": "We\u2019re building Plexicus\u2014an AI-powered ASPM platform that integrates open-source and commercial security tools with an agent that cuts remediation time by 95%. We\u2019ve secured funding and have paying customers, but we\u2019re based in Madrid, which sometimes limits our visibility in the US. We\u2019re looking for a US-based CEO co-founder to lead sales, fundraising, and our go-to-market strategy. Beyond YC mat",
+  "url": "https://news.ycombinator.com/item?id=43507897"
+ },
+ {
+  "id": "hn:3614557",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Defense against the Black Arts",
+  "body": "If there ever was a book that should not be judged by its title, Defense against the Black Arts: How Hackers Do What They Do and How to Protect against It, is that book. According to Wikipedia, black art can refer to: * art forms by persons of African descent * black magic * optical effect in stage magic * typesetting * process that is mysterious or difficult to master or describe Even if one uses",
+  "url": "https://news.ycombinator.com/item?id=3614557"
+ },
+ {
+  "id": "hn:28284751",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "White Paper \u2013 Cloud Security \u2013 Too Expensive to Get Wrong",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=28284751"
+ },
+ {
+  "id": "hn:49929341",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Autonomous AI Agent Security Incidents of 2026: Dataset and Monograph",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=49929341"
+ },
+ {
+  "id": "hn:49247374",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "AIUC-1: The standard for AI agent security, safety and reliability",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=49247374"
+ },
+ {
+  "id": "hn:47876985",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "The NCSC's AI threat warning and the gap in AI agent security",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=47876985"
+ },
+ {
+  "id": "hn:46183738",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Navigating the future of AI agent security with Dan Moore [audio]",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=46183738"
+ },
+ {
+  "id": "hn:46127735",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Navigating the future of AI agent security [audio]",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=46127735"
+ },
+ {
+  "id": "hn:46010603",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "AI Agent Security: Why Reliability Is the Missing Defense Against Data",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=46010603"
+ },
+ {
+  "id": "hn:45100029",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "AI Agent Security \u2013 Why You Should Pay Attention",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=45100029"
+ },
+ {
+  "id": "hn:43621588",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "AI Security Posture Management (Aispm): How to Handle AI Agent Security",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=43621588"
+ },
+ {
+  "id": "hn:49323197",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Does Fixing Break Security? An Empirical Study of LLM Security Degradation",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=49323197"
+ },
+ {
+  "id": "hn:47750422",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Mitre ATLAS technique detection for LLM security in Rust",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=47750422"
+ },
+ {
+  "id": "hn:45431877",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "LLM security agent finds vulnerability in LLM engineering platform",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=45431877"
+ },
+ {
+  "id": "hn:42962981",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "DeepSeek May Have Achieved AI on a Budget, but Don't Forget LLM Security",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=42962981"
+ },
+ {
+  "id": "hn:50439228",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "MCP server security: a census of every host in the official MCP Registry",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=50439228"
+ },
+ {
+  "id": "hn:45463388",
+  "segment": "ai-agent-security",
+  "segment_description": "Securing AI/LLM systems and agents \u2014 prompt injection, agent permissions and tool access, MCP servers, model/data leakage, AI governance and policy enforcement.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Securing MCP Servers with Spring AI",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=45463388"
+ },
+ {
+  "id": "stackexchange:security:159218",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 1,
+  "title": "DLP Tool for requirement",
+  "body": "Is there any DLP tool with default policies to comply with south african laws and regulations on PII ?",
+  "url": "https://security.stackexchange.com/questions/159218/dlp-tool-for-requirement"
+ },
+ {
+  "id": "stackexchange:security:222007",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 1,
+  "title": "Key storage and Password Management Tool",
+  "body": "Passwords are not stored in plain text. So we hash them. But for hashing we need a key if we use a keyed hash function. In unix system passwords were stored in etc\\password file but now the location has changed. Where the keys for the hash functions are stored and does the password management tool handles the key storage? Zulfi.",
+  "url": "https://security.stackexchange.com/questions/222007/key-storage-and-password-management-tool"
+ },
+ {
+  "id": "stackexchange:security:199238",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 1,
+  "title": "window operating system vulnerability scanner tool",
+  "body": "I want to use window operating system vulnerability scanner tool, just like lynis tools which scans on local os i.e like misconfiguration, os version, like firewall and AV configured. please recommend me the tools which do this kind of scan?",
+  "url": "https://security.stackexchange.com/questions/199238/window-operating-system-vulnerability-scanner-tool"
+ },
+ {
+  "id": "ted:799260-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa sprz\u0119tu komputerowego i oprogramowania dla Gminy Lublin w ramach realizacji projekt\u00f3w \u201eZakup sprz\u0119tu komputerowego dla Gminy Lublin i jej jednostek o\u015bwiatowych\u201d oraz \u201eModernizacja i rozbudowa infrastruktury sieciowej oraz serwerowej na potrzeby Gminy Lublin i jednostek o\u015bwiatowych\u201d.",
+  "body": "Zakres zam\u00f3wienia obejmuje: 1. Dostaw\u0119 sprz\u0119tu komputerowego. 2. Rozbudow\u0119 posiadanego przez Zamawiaj\u0105cego systemu do zarz\u0105dzania urz\u0105dzeniami o nowe licencje wieczyste dla 1403 stacji roboczych i urz\u0105dze\u0144 mobilnych oraz o modu\u0142 do szyfrowania dla 340 urz\u0105dze\u0144 mobilnych w ramach posiadanego przez Zamawiaj\u0105cego systemu. 3. Dostaw\u0119 zintegrowanego systemu bezpiecze\u0144stwa klasy XDR do proaktywnej ochro",
+  "url": "https://ted.europa.eu/en/notice/-/detail/799260-2026"
+ },
+ {
+  "id": "ted:799599-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Wzmocnienie cyberbezpiecze\u0144stwa infrastruktury wodoci\u0105gowej w BPWIK Sp. z o.o. Brwinowie",
+  "body": "Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia zawiera za\u0142\u0105cznik nr 2 do SWZ Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia zawiera za\u0142\u0105cznik nr 2 do SWZ Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia zawiera za\u0142\u0105cznik nr 2 do SWZ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/799599-2026"
+ },
+ {
+  "id": "ted:793656-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Diskov\u00e1 pole a platforma ochrany dat pro zaji\u0161t\u011bn\u00ed provozu syst\u00e9m\u016f 2026",
+  "body": "P\u0159edm\u011btem ve\u0159ejn\u00e9 zak\u00e1zky je dod\u00e1n\u00ed dvou v\u00fdkonn\u00fdch diskov\u00fdch pol\u00ed ur\u010den\u00fdch pro ukl\u00e1d\u00e1n\u00ed l\u00e9ka\u0159sk\u00fdch obrazov\u00fdch dat (PACS \u2013 Tier 3) a dvou all-flash diskov\u00fdch pol\u00ed pro ukl\u00e1d\u00e1n\u00ed provozn\u00edch a u\u017eivatelsk\u00fdch dat infrastruktury Krajsk\u00e9 zdravotn\u00ed, a.s. (Tier 2), v\u010detn\u011b jejich implementace, migrace dat ze st\u00e1vaj\u00edc\u00edch diskov\u00fdch pol\u00ed, pro\u0161kolen\u00ed administr\u00e1tor\u016f a poskytov\u00e1n\u00ed technick\u00e9 podpory po dobu 60 m\u011bs\u00edc",
+  "url": "https://ted.europa.eu/en/notice/-/detail/793656-2026"
+ },
+ {
+  "id": "ted:796135-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "45/2026 - Progetto SMARTWING - Fornitura hardware, servizi di assistenza e formazione per una capacit\u00e0 di CROSS DOMAIN SOLUTION (CDS)",
+  "body": "45/2026 - Progetto SMARTWING - Fornitura hardware, servizi di assistenza e formazione per una capacit\u00e0 di CROSS DOMAIN SOLUTION (CDS) 6753146 - lotto 1",
+  "url": "https://ted.europa.eu/en/notice/-/detail/796135-2026"
+ },
+ {
+  "id": "ted:793260-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Acuerdo marco para la prestacion del servicio de oficina de seguridad para el Servicio Cantabro de Salud y resto de entidades sanitarias del sistema sanitario publico de Cantabria mediante Procedimiento Abierto",
+  "body": "El objeto de la presente licitaci\u00f3n es la celebraci\u00f3n de un Acuerdo Marco por procedimiento abierto para la ejecuci\u00f3n del servicio integral de Oficina de Seguridad de la Informaci\u00f3n del Servicio C\u00e1ntabro de Salud (SCS), as\u00ed como del resto entidades sanitarias (IDIVAL, Fundaci\u00f3n Marqu\u00e9s de Valdecilla, Consejer\u00eda de Salud y Hospital Virtual) del Sistema Sanitario P\u00fablico de Cantabria (SSPC), que gar",
+  "url": "https://ted.europa.eu/en/notice/-/detail/793260-2026"
+ },
+ {
+  "id": "ted:794954-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Zakup i dostawa firewalli aplikacji webowych (WAF) wraz ze wsparciem technicznym na 3 lata",
+  "body": "Zakup i dostawa firewalli aplikacji webowych (WAF) wraz ze wsparciem technicznym na 3 lata Zakup i dostawa firewalli aplikacji webowych (WAF) wraz ze wsparciem technicznym na 3 lata",
+  "url": "https://ted.europa.eu/en/notice/-/detail/794954-2026"
+ },
+ {
+  "id": "ted:792930-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Beschaffung einer neuen XDR-L\u00f6sung",
+  "body": "Beschaffung, Bereitstellung, Einf\u00fchrung und Betriebsunterst\u00fctzung einer neuen Extended-Detection-and-Response-L\u00f6sung (XDR) f\u00fcr die Heinrich-Heine-Universit\u00e4t D\u00fcsseldorf. Die L\u00f6sung dient der Absicherung der IT-Endpunkte, insbesondere der Mitarbeitenden-Clients und zentralen Server, sowie der St\u00e4rkung der Cyber-Resilienz der Universit\u00e4t. Der Leistungsumfang umfasst insbesondere die XDR-Plattform, e",
+  "url": "https://ted.europa.eu/en/notice/-/detail/792930-2026"
+ },
+ {
+  "id": "ted:789715-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Kryptographiebasierte Services",
+  "body": "Ziel dieses Vergabeverfahrens ist der Abschluss eines Rahmenvertrags mit einem Unternehmen, f\u00fcr die Erbringung von Dienst \u2013 sowie (untergeordnet) Lieferleistungen im Bereich der Kryptographie basierten Services f\u00fcr die Krankenanstalten der Gesundheit Burgenland. Auftragsgegenstand dieses Vergabeverfahrens ist der Abschluss eines Rahmenvertrags mit dem nach dem Zuschlagsschema bestgereihten Unterne",
+  "url": "https://ted.europa.eu/en/notice/-/detail/789715-2026"
+ },
+ {
+  "id": "ted:789806-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Ochrona przed zagro\u017ceniami z sieci Internet klasy Web Application Firewall (WAF)",
+  "body": "1. Przedmiotem zam\u00f3wienia jest ochrona przed zagro\u017ceniami z sieci Internet klasy Web Application Firewall (WAF). 2. Szczeg\u00f3\u0142owe informacje dotycz\u0105ce opisu, zakresu i warunk\u00f3w realizacji przedmiotu zam\u00f3wienia okre\u015bla \u201eOpis Przedmiotu Zam\u00f3wienia (OPZ)\u201d stanowi\u0105cy za\u0142\u0105cznik nr 2 do SWZ oraz \u201eProjektowane postanowienia umowy, kt\u00f3re zostan\u0105 wprowadzone do tre\u015bci zawieranej umowy (PPU)\u201d stanowi\u0105ce za\u0142\u0105c",
+  "url": "https://ted.europa.eu/en/notice/-/detail/789806-2026"
+ },
+ {
+  "id": "ted:792782-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "2026 - EEA System for monitoring and event management (MDR) - Qualification part",
+  "body": "Ask\u00f8y and \u00d8ygarden municipalities shall procure a general, 24 hour (24/7/365) MDR service for proactive security monitoring and support for handling IT security incidents. The service shall reduce the time from a security incident occurring until it is discovered, assessed, notified and handled, and give municipalities qualified and prioritised events over untreated alarms. Tenderers shall ensure ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/792782-2026"
+ },
+ {
+  "id": "ted:790408-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Beschaffungen f\u00fcr die Implementierung und den Betrieb einer \u00f6sterreichweiten LTE450-MHz-Sprachl\u00f6sung in drei Losen",
+  "body": "Gegenstand des Vergabeverfahrens ist der Abschluss einer Rahmenvereinbarung pro Los f\u00fcr die Beschaffung von Leistungen zur Bereitstellung und Integration einer MCX-L\u00f6sung auf Basis eines LTE450-Mobilfunknetzes. Die Bereitstellung, Integration und Weiterentwicklung einer f\u00fcr eine MCX-L\u00f6sung erforderlichen Client-Software (Mobile & Dispatcher) und Serversoftware sowie die Erbringung der zugeh\u00f6rigen ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/790408-2026"
+ },
+ {
+  "id": "ted:791424-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "GARA EUROPEA A PROCEDURA APERTA, PER L\u2019AFFIDAMENTO DI FORNITURE PER IL REFRESH FIREWALL CHECK POINT, DELLA MANUTENZIONE DI LICENZE WORKSPACE SECURITY E DEI RELATIVI SERVIZI DI SUPPORTO",
+  "body": "lL'oggetto del presente affidamento si sostanzia nelle forniture per il refresh firewall Check Point, nella manutenzione delle licenze Workspace Security e nei relativi servizi di supporto e comprende, nello specifico, le forniture e i servizi, declinati negli artt. 1, 4 e 5 del Capitolato Speciale lL'oggetto del presente affidamento si sostanzia nelle forniture per il refresh firewall Check Point",
+  "url": "https://ted.europa.eu/en/notice/-/detail/791424-2026"
+ },
+ {
+  "id": "ted:792460-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Beschaffung von Netzwerk- und IT-Komponenten f\u00fcr die Knappschaft Kliniken",
+  "body": "Gegenstand der Ausschreibung ist der Abschluss eines Rahmenvertrages \u00fcber die Lieferung von Netzwerk- und IT-Komponenten einschlie\u00dflich zugeh\u00f6riger Software, Herstellerleistungen sowie erg\u00e4nzender Dienstleistungen f\u00fcr die Gesellschaften des Verbundes der Knappschaft Kliniken in zwei Losen. Die Grundlaufzeit betr\u00e4gt 48 Monate. Der Rahmenvertrag sieht zwei Verl\u00e4ngerungsoptionen von jeweils zw\u00f6lf Mon",
+  "url": "https://ted.europa.eu/en/notice/-/detail/792460-2026"
+ },
+ {
+  "id": "ted:791698-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Zakup us\u0142ug rozszerzonego serwisu urz\u0105dze\u0144 sieciowych Palo Alto wraz z wymaganymi subskrypcjami i licencjami",
+  "body": "1. Nazwa zam\u00f3wienia: Zakup us\u0142ug rozszerzonego serwisu urz\u0105dze\u0144 sieciowych Palo Alto wraz z wymaganymi subskrypcjami i licencjami. 2. Przedmiotem zam\u00f3wienia* jest zakup i dostarczenie przez Wykonawc\u0119 Pakiet\u00f3w Serwisowych i Subskrypcji Licencji Oprogramowania na eksploatowane przez Zamawiaj\u0105cego Urz\u0105dzenia oraz Kredyt\u00f3w Software NGFW, z zachowaniem ci\u0105g\u0142o\u015bci dla poprzednich okres\u00f3w obowi\u0105zywania Pa",
+  "url": "https://ted.europa.eu/en/notice/-/detail/791698-2026"
+ },
+ {
+  "id": "ted:790838-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Cyfryzacja us\u0142ug komunalnych oraz sposobu obs\u0142ugi klient\u00f3w Przedsi\u0119biorstwa In\u017cynierii Komunalnej Sp. z o.o. w Pszczynie",
+  "body": "Przedmiotem zam\u00f3wienia jest realizacja projektu pn. ,,Cyfryzacja us\u0142ug komunalnych oraz sposobu obs\u0142ugi klient\u00f3w Przedsi\u0119biorstwa In\u017cynierii Komunalnej Sp. z o.o. w Pszczynie. Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia okre\u015blono w Za\u0142\u0105cznik nr 1 do SWZ. Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia okre\u015blono w Za\u0142\u0105cznik nr 1 do SWZ Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia okre\u015blono w Za\u0142\u0105cznik nr 1 do SWZ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/790838-2026"
+ },
+ {
+  "id": "ted:791023-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa subskrypcji u\u017cytkowanego przez Zamawiaj\u0105cego rozwi\u0105zania o nazwie Infoblox Threat Defense (zwanego dalej Systemem) oraz \u015bwiadczenie us\u0142ugi wsparcia technicznego przez okres 36 miesi\u0119cy lub dostawa rozwi\u0105zania r\u00f3wnowa\u017cnego",
+  "body": "1.Przedmiotem zam\u00f3wienia jest dostawa subskrypcji u\u017cytkowanego przez Zamawiaj\u0105cego rozwi\u0105zania o nazwie Infoblox Threat Defense (zwanego dalej Systemem) oraz \u015bwiadczenie us\u0142ugi wsparcia technicznego przez okres 36 miesi\u0119cy lub dostawa rozwi\u0105zania r\u00f3wnowa\u017cnego. 2.W ramach realizacji zam\u00f3wienia Wykonawca zobowi\u0105zany jest w szczeg\u00f3lno\u015bci do: 1)Udzielenia wszelkich subskrypcji, licencji oraz dost\u0119pu d",
+  "url": "https://ted.europa.eu/en/notice/-/detail/791023-2026"
+ },
+ {
+  "id": "ted:788086-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "PROGRAMIN\u0116 \u012eRANGA",
+  "body": "Perkan\u010dioji organizacija pirks turim\u0173 licencij\u0173 palaikym\u0105 ir naujas licencijas, kuri\u0173 reik\u0117s Perkan\u010diosios organizacijos veikloje. Dinamin\u0117 pirkimo sistema skaidoma \u012f 3 kategorijas: I kategorija - Taikomoji programin\u0117 \u012franga; II kategorija - Sistemin\u0117 ir tinklo programin\u0117 \u012franga; III kategorija - Programavimo programin\u0117 \u012franga. D\u0117l CVP IS funkcini\u0173 galimybi\u0173 apribojim\u0173 DPS suk\u016brimo metu skiltyje \u201e",
+  "url": "https://ted.europa.eu/en/notice/-/detail/788086-2026"
+ },
+ {
+  "id": "ted:789149-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Digit\u00e1lna transform\u00e1cia a moderniz\u00e1cia IKT infra\u0161trukt\u00fary a IT syst\u00e9mov DCVaV CVTI SR",
+  "body": "Predmet z\u00e1kazky predstavuje dod\u00e1vku a uvedenie do prev\u00e1dzky komplexn\u00e9ho d\u00e1tov\u00e9ho centra ako jedn\u00e9ho architektonicky ucelen\u00e9ho rie\u0161enia pozost\u00e1vaj\u00faceho z NON-IT technol\u00f3gi\u00ed (elektrick\u00e9 nap\u00e1janie, z\u00e1lohovanie, chladenie/VZT, po\u017eiarna ochrana, bezpe\u010dnos\u0165, monitoring), IT hardv\u00e9ru (v\u00fdpo\u010dtov\u00e9, \u00falo\u017en\u00e9, sie\u0165ov\u00e9 a GPU zdroje) a nadv\u00e4zuj\u00faceho softv\u00e9ru (virtualiz\u00e1cia, kontajneriz\u00e1cia, objektov\u00e9 \u00falo\u017eisko, ri",
+  "url": "https://ted.europa.eu/en/notice/-/detail/789149-2026"
+ },
+ {
+  "id": "ted:787674-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "20260010 Operation and further development of system for a-krimsamarbeidet",
+  "body": "A-krimsamarbeidet is a formalised, inter-agency cooperation between the Norwegian Tax Administration, Nav, the Norwegian Labour Inspection Authority and the police for combating work-life crime. The Norwegian Tax Administration is responsible for providing a cooperation system for a-krimsamarbeidet, in accordance with a-kriminformasjonsforskriftens \u00a7 8. The procurement comprises of services regard",
+  "url": "https://ted.europa.eu/en/notice/-/detail/787674-2026"
+ },
+ {
+  "id": "ted:789052-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Modernizarea administra\u021biei publice prin implementarea unui Sistem Informatic Integrat \u00een Comuna Filipe\u0219tii de T\u00e2rg",
+  "body": "U.A.T. Comuna Filipe\u0219tii de T\u00e2rg, constituie beneficiarul direct al investi\u021biei, \u00een timp ce cet\u0103\u021benii \u0219i operatorii economici din Comuna Filipe\u0219tii de T\u00e2rg reprezint\u0103 beneficiarii indirec\u021bi ai acestei investi\u021bii. Realizarea implementarii proiectului la nivelul primariei comunei Filipe\u0219tii de T\u00e2rg va contribui, pe de o parte, la cre\u015fterea eficientei administratiei locale si implicit a nivelului de ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/789052-2026"
+ },
+ {
+  "id": "ted:786942-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Servicio de Fecha Secure Posture Management (DSPM) para Ferrocarriles de la Generalitat de Catalu\u00f1a (Ref: PO134/26)",
+  "body": "Servicio de Fecha Secure Posture Management (DSPM) para Ferrocarriles de la Generalitat de Catalu\u00f1a (Ref: PO134/26) Servicio de Fecha Secure Posture Management (DSPM) para Ferrocarriles de la Generalitat de Catalu\u00f1a (Ref: PO134/26)",
+  "url": "https://ted.europa.eu/en/notice/-/detail/786942-2026"
+ },
+ {
+  "id": "ted:788187-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "MXDR (Managed Extended Detection and Response)",
+  "body": "Leveren en implementeren van een Managed Detection en Response (MDR) voor GGD HN boven de EU drempel voor levering en diensten Leveren en implementeren van een Managed Detection en Response (MDR) voor GGD HN boven de EU drempel voor levering en diensten",
+  "url": "https://ted.europa.eu/en/notice/-/detail/788187-2026"
+ },
+ {
+  "id": "ted:785334-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Wzmocnienie cyberbezpiecze\u0144stwa infrastruktury wodoci\u0105gowej w BPWIK Sp. z o.o. Brwinowie",
+  "body": "Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia zawiera za\u0142\u0105cznik nr 2 do SWZ Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia zawiera za\u0142\u0105cznik nr 2 do SWZ Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia zawiera za\u0142\u0105cznik nr 2 do SWZ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/785334-2026"
+ },
+ {
+  "id": "ted:783149-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Kyberbezpe\u010dnost p\u0159\u00edstrojov\u00e9 techniky Nemocnice Nov\u00e9 M\u011bsto na Morav\u011b",
+  "body": "P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky v r\u00e1mci tohoto zad\u00e1vac\u00edho \u0159\u00edzen\u00ed je dod\u00e1vka, instalace, konfigurace a implementace CPS \u0159e\u0161en\u00ed (Cyber-Physical System) ur\u010den\u00e9ho k pasivn\u00edmu monitoringu, evidenci, klasifikaci, ochran\u011b a vyhodnocov\u00e1n\u00ed kybernetick\u00fdch, provozn\u00edch a konfigura\u010dn\u00edch rizik s\u00ed\u0165ov\u011b p\u0159ipojen\u00e9 zdravotnick\u00e9 p\u0159\u00edstrojov\u00e9 techniky a souvisej\u00edc\u00edch provozn\u00edch technologi\u00ed (Operational Technology), za",
+  "url": "https://ted.europa.eu/en/notice/-/detail/783149-2026"
+ },
+ {
+  "id": "ted:784116-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Zakup narz\u0119dzia analitycznego wspieraj\u0105cego cyberbezpiecze\u0144stwo poprzez identyfikacj\u0119 zagro\u017ce\u0144 informacyjnych w Internecie",
+  "body": "1. Nazwa zam\u00f3wienia: Zakup narz\u0119dzia analitycznego wspieraj\u0105cego cyberbezpiecze\u0144stwo poprzez identyfikacj\u0119 zagro\u017ce\u0144 informacyjnych w Internecie. 2. Przedmiotem zam\u00f3wienia jest*: 2.1. Zakup i dostarczenie przez Wykonawc\u0119 Subskrypcji licencji dost\u0119powych do Platformy Monitorowania Informacji, uwzgl\u0119dniaj\u0105cych wsparcie Producenta wraz z dokumentami potwierdzaj\u0105cymi udzielenie Subskrypcji licencji dos",
+  "url": "https://ted.europa.eu/en/notice/-/detail/784116-2026"
+ },
+ {
+  "id": "ted:784617-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa licencji bezpiecze\u0144stwa dla S\u0105du Apelacyjnego Szczecinie",
+  "body": "Przedmiotem zam\u00f3wienia jest dostawa licencji bezpiecze\u0144stwa dla S\u0105du Apelacyjnego Szczecinie na zasadach okre\u015blonych w Za\u0142\u0105cznikach do SWZ. Przedmiotem zam\u00f3wienia w ramach zam\u00f3wienia podstawowego jest dostawa 1 sztuki licencji na system cyberdecepcji. Przedmiotem zam\u00f3wienia w ramach zam\u00f3wienia podstawowego jest dostawa 1 sztuki licencji na system ochrony aplikacji webowych. Przedmiotem zam\u00f3wienia ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/784617-2026"
+ },
+ {
+  "id": "ted:783479-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "PR26INF073 | Lotto 1 Procedura aperta sopra soglia comunitaria indetta su piattaforma telematica eAppalti SAT FVG, ai sensi dell\u2019art. 71 D.lgs. n. 36/2023, per l\u2019affidamento della fornitura di Licenze Firewall, sottoscrizioni e servizi di supporto FORTINET destinati all\u2019infrastruttura di sicurezza i",
+  "body": "PR26INF073 | Lotto 1 Procedura aperta per l\u2019affidamento della fornitura di Licenze Firewall, sottoscrizioni e servizi di supporto FORTINET destinati all\u2019infrastruttura di sicurezza informatica installata presso ASUFC per un periodo di 48 mesi. PR26INF073 | Lotto 1 Procedura aperta per l\u2019affidamento della fornitura di Licenze Firewall, sottoscrizioni e servizi di supporto FORTINET destinati all\u2019inf",
+  "url": "https://ted.europa.eu/en/notice/-/detail/783479-2026"
+ },
+ {
+  "id": "ted:784569-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Cameratoezicht gemeente Gouda",
+  "body": "De aanleiding voor de aanbesteding is het expireren van de huidige overeenkomsten inzake het Videomanagementsysteem. De Gemeente Gouda wil een nieuw contract aangaan met \u00e9\u00e9n partij voor het leveren, onderhouden en ter beschikking stellen van een Cameratoezicht oplossing (software en hardware), Zie aanbestedingsleidraad De aanleiding voor de aanbesteding is het expireren van de huidige overeenkomst",
+  "url": "https://ted.europa.eu/en/notice/-/detail/784569-2026"
+ },
+ {
+  "id": "ted:783656-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Kyberbezpe\u010dnost p\u0159\u00edstrojov\u00e9 techniky Nemocnice Pelh\u0159imov",
+  "body": "P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky v r\u00e1mci tohoto zad\u00e1vac\u00edho \u0159\u00edzen\u00ed je dod\u00e1vka, instalace, konfigurace a implementace CPS \u0159e\u0161en\u00ed (Cyber-Physical System) ur\u010den\u00e9ho k pasivn\u00edmu monitoringu, evidenci, klasifikaci, ochran\u011b a vyhodnocov\u00e1n\u00ed kybernetick\u00fdch, provozn\u00edch a konfigura\u010dn\u00edch rizik s\u00ed\u0165ov\u011b p\u0159ipojen\u00e9 zdravotnick\u00e9 p\u0159\u00edstrojov\u00e9 techniky a souvisej\u00edc\u00edch provozn\u00edch technologi\u00ed (Operational Technology, d\u00e1l",
+  "url": "https://ted.europa.eu/en/notice/-/detail/783656-2026"
+ },
+ {
+  "id": "ted:782135-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa sprz\u0119tu komputerowego i oprogramowania dla Gminy Lublin w ramach realizacji projekt\u00f3w \u201eZakup sprz\u0119tu komputerowego dla Gminy Lublin i jej jednostek o\u015bwiatowych\u201d oraz \u201eModernizacja i rozbudowa infrastruktury sieciowej oraz serwerowej na potrzeby Gminy Lublin i jednostek o\u015bwiatowych\u201d.",
+  "body": "Zakres zam\u00f3wienia obejmuje: 1. Dostaw\u0119 sprz\u0119tu komputerowego. 2. Rozbudow\u0119 posiadanego przez Zamawiaj\u0105cego systemu do zarz\u0105dzania urz\u0105dzeniami o nowe licencje wieczyste dla 1403 stacji roboczych i urz\u0105dze\u0144 mobilnych oraz o modu\u0142 do szyfrowania dla 340 urz\u0105dze\u0144 mobilnych w ramach posiadanego przez Zamawiaj\u0105cego systemu. 3. Dostaw\u0119 zintegrowanego systemu bezpiecze\u0144stwa klasy XDR do proaktywnej ochro",
+  "url": "https://ted.europa.eu/en/notice/-/detail/782135-2026"
+ },
+ {
+  "id": "ted:779691-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "\u201e\u0414\u043e\u0441\u0442\u0430\u0432\u043a\u0430 \u043d\u0430 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u043e \u043e\u0431\u043e\u0440\u0443\u0434\u0432\u0430\u043d\u0435 \u043f\u043e \u043f\u0440\u043e\u0435\u043a\u0442 \u201e\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0438\u043d\u0442\u0435\u0433\u0440\u0438\u0440\u0430\u043d\u0430 \u0438\u043d\u043e\u0432\u0430\u0442\u0438\u0432\u043d\u0430 \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430 \u0437\u0430 \u043d\u0430\u0443\u043a\u0430, \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0438 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u0435\u043c\u0430\u0447\u0435\u0441\u0442\u0432\u043e \u0432 \u0411\u0443\u0440\u0433\u0430\u0441 \u2013 \u0418\u043d\u043e\u0411\u0443\u0440\u0433\u0430\u0441 \u2013 \u0411\u044a\u0434\u0435\u0449\u0435\u0442\u043e \u0437\u0430\u043f\u043e\u0447\u0432\u0430 \u043e\u0442 \u0442\u0443\u043a\u201c \u043f\u043e 4 \u043e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0438 \u043f\u043e\u0437\u0438\u0446\u0438\u0438\u201c",
+  "body": "\u200b\u200b\u200b\u200b\u200b\u200b\u200b\u201e\u0414\u043e\u0441\u0442\u0430\u0432\u043a\u0430 \u043d\u0430 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u043e \u043e\u0431\u043e\u0440\u0443\u0434\u0432\u0430\u043d\u0435 \u043f\u043e \u043f\u0440\u043e\u0435\u043a\u0442 \u201e\u0421\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u0438\u043d\u0442\u0435\u0433\u0440\u0438\u0440\u0430\u043d\u0430 \u0438\u043d\u043e\u0432\u0430\u0442\u0438\u0432\u043d\u0430 \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430 \u0437\u0430 \u043d\u0430\u0443\u043a\u0430, \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438 \u0438 \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u0435\u043c\u0430\u0447\u0435\u0441\u0442\u0432\u043e \u0432 \u0411\u0443\u0440\u0433\u0430\u0441 \u2013 \u0418\u043d\u043e\u0411\u0443\u0440\u0433\u0430\u0441 \u2013 \u0411\u044a\u0434\u0435\u0449\u0435\u0442\u043e \u0437\u0430\u043f\u043e\u0447\u0432\u0430 \u043e\u0442 \u0442\u0443\u043a\u201c \u043f\u043e 4 \u043e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0438 \u043f\u043e\u0437\u0438\u0446\u0438\u0438: \u041e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0430 \u043f\u043e\u0437\u0438\u0446\u0438\u044f \u2116 1 \u2013 \u0414\u043e\u0441\u0442\u0430\u0432\u043a\u0430 \u043d\u0430 \u043e\u0431\u043e\u0440\u0443\u0434\u0432\u0430\u043d\u0435 \u0437\u0430 \u043d\u0435\u043f\u0440\u0435\u043a\u044a\u0441\u0432\u0430\u0435\u043c\u043e \u0435\u043b\u0435\u043a\u0442\u0440\u043e\u0437\u0430\u0445\u0440\u0430\u043d\u0432\u0430\u043d\u0435 \u041e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0430 \u043f\u043e\u0437\u0438\u0446\u0438\u044f \u2116 2 \u2013 \u0414\u043e\u0441\u0442\u0430\u0432\u043a\u0430 \u043d\u0430 \u043a\u043e\u043c\u043f\u044e\u0442\u044a\u0440\u043d\u0430 \u0438 \u043f\u0435\u0440\u0438\u0444\u0435\u0440\u043d\u0430 \u0442\u0435\u0445\u043d\u0438\u043a\u0430, \u043b\u0438\u0446\u0435\u043d\u0437\u0438 \u0437\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d \u0441\u043e\u0444\u0442\u0443\u0435\u0440 \u041e\u0431\u043e\u0441\u043e\u0431",
+  "url": "https://ted.europa.eu/en/notice/-/detail/779691-2026"
+ },
+ {
+  "id": "ted:781434-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Nowoczesny e-urz\u0105d w gminie Tusz\u00f3w Narodowy",
+  "body": "Przedmiotem zam\u00f3wienia jest realizacja projektu pn. \u201eNowoczesny e-urz\u0105d w gminie Tusz\u00f3w Narodowy\u201d Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia zawiera za\u0142\u0105cznik nr 1 do SWZ Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia zawiera za\u0142\u0105cznik nr 1 do SWZ Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia zawiera za\u0142\u0105cznik nr 1 do SWZ Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia zawiera za\u0142\u0105cznik nr 1 do SWZ Szczeg\u00f3\u0142owy opis przedmiot",
+  "url": "https://ted.europa.eu/en/notice/-/detail/781434-2026"
+ },
+ {
+  "id": "ted:781450-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Zkvalitn\u011bn\u00ed v\u00fduky na Gymn\u00e1zium Josefa Jungmanna Litom\u011b\u0159ice p.o., v r\u00e1mci programu Spravedliv\u00e1 transformace",
+  "body": "P\u0159edm\u011btem pln\u011bn\u00ed je: 1. \u010d\u00e1st: Konektivita zaji\u0161t\u011bn\u00ed konektivity (dod\u00e1vka s\u00ed\u0165ov\u00e9 infrastruktury) zahrnuj\u00edc\u00ed dopravu, dod\u00e1vku, mont\u00e1\u017e, sezn\u00e1men\u00ed s obsluhou a zprovozn\u011bn\u00ed 2. \u010d\u00e1st: Koncov\u00e9 prvky dod\u00e1vka koncov\u00fdch IT za\u0159\u00edzen\u00ed v\u010d. mont\u00e1\u017ee P\u0159edm\u011bt ve\u0159ejn\u00e9 zak\u00e1zky je podrobn\u011b specifikov\u00e1n p\u0159\u00edlohami zad\u00e1vac\u00ed dokumentace. P\u0159edm\u011btem pln\u011bn\u00ed t\u00e9to \u010d\u00e1sti ve\u0159ejn\u00e9 zak\u00e1zky je zaji\u0161t\u011bn\u00ed konektivity (dod\u00e1vka s\u00ed\u0165ov\u00e9 i",
+  "url": "https://ted.europa.eu/en/notice/-/detail/781450-2026"
+ },
+ {
+  "id": "ted:780827-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa subskrypcji oprogramowania do ochrony poczty elektronicznej wraz ze wsparciem technicznym oraz platform\u0105 szkoleniow\u0105",
+  "body": "Przedmiotem zam\u00f3wienia jest dostawa subskrypcji oprogramowania do ochrony poczty elektronicznej wraz ze wsparciem technicznym oraz platform\u0105 szkoleniow\u0105. Szczeg\u00f3\u0142owy zakres i przedmiot zosta\u0142 okre\u015blony w dokumentach zam\u00f3wienia w szczeg\u00f3lno\u015bci w za\u0142. 2 i 3 do SWZ zamieszczonych na stronie prowadzonego post\u0119powania https://brodnowski.eb2b.com.pl/open-preview-auction.html/ Przedmiotem zam\u00f3wienia jest",
+  "url": "https://ted.europa.eu/en/notice/-/detail/780827-2026"
+ },
+ {
+  "id": "ted:782829-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dod\u00e1vka a zaveden\u00ed s\u00ed\u0165ov\u00e9 behavior\u00e1ln\u00ed anal\u00fdzy",
+  "body": "P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky je dod\u00e1vka, instalace, implementace, uveden\u00ed do provozu a n\u00e1sledn\u00e1 technick\u00e1 a servisn\u00ed podpora syst\u00e9mu pro behavior\u00e1ln\u00ed anal\u00fdzu s\u00ed\u0165ov\u00e9ho provozu a bezpe\u010dnostn\u00ed monitoring, v\u010detn\u011b zaji\u0161t\u011bn\u00ed podpory v\u00fdrobce, \u00fadr\u017eby a aktualizac\u00ed syst\u00e9mu. Bli\u017e\u0161\u00ed specifikace je uvedena v zad\u00e1vac\u00ed dokumentaci. P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky je dod\u00e1vka, instalace, implementace, uveden",
+  "url": "https://ted.europa.eu/en/notice/-/detail/782829-2026"
+ },
+ {
+  "id": "ted:781270-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Diskov\u00e1 pole a platforma ochrany dat pro zaji\u0161t\u011bn\u00ed provozu syst\u00e9m\u016f 2026",
+  "body": "P\u0159edm\u011btem ve\u0159ejn\u00e9 zak\u00e1zky je dod\u00e1n\u00ed dvou v\u00fdkonn\u00fdch diskov\u00fdch pol\u00ed ur\u010den\u00fdch pro ukl\u00e1d\u00e1n\u00ed l\u00e9ka\u0159sk\u00fdch obrazov\u00fdch dat (PACS \u2013 Tier 3) a dvou all-flash diskov\u00fdch pol\u00ed pro ukl\u00e1d\u00e1n\u00ed provozn\u00edch a u\u017eivatelsk\u00fdch dat infrastruktury Krajsk\u00e9 zdravotn\u00ed, a.s. (Tier 2), v\u010detn\u011b jejich implementace, migrace dat ze st\u00e1vaj\u00edc\u00edch diskov\u00fdch pol\u00ed, pro\u0161kolen\u00ed administr\u00e1tor\u016f a poskytov\u00e1n\u00ed technick\u00e9 podpory po dobu 60 m\u011bs\u00edc",
+  "url": "https://ted.europa.eu/en/notice/-/detail/781270-2026"
+ },
+ {
+  "id": "ted:781832-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "ICT-603 - Provision and implementation of a Continuous Pen Test Tool Suite and ongoing associated support and maintenance",
+  "body": "HIQA are looking to procure a secure, scalable, and operationally efficient platform that facilitates the execution of continuous and ad-hoc penetration testing in response to emerging threats, security change initiatives, and periodic assurance requirements. The platform shall enable the identification, validation, prioritisation, and reporting of cybersecurity vulnerabilities across HIQAs author",
+  "url": "https://ted.europa.eu/en/notice/-/detail/781832-2026"
+ },
+ {
+  "id": "ted:777715-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Accord Cadre relatif \u00e0 la conception, la fourniture et l\u2019installation d\u2019\u00e9quipements destin\u00e9s \u00e0 la s\u00e9curisation physique du site et de ses b\u00e2timents, \u00e0 la fourniture et \u00e0 la mise en \u0153uvre d\u2019un logiciel central de gestion, \u00e0 la gestion du cycle de vie des mat\u00e9riels et logiciels associ\u00e9s, ainsi qu\u2019\u00e0 la",
+  "body": "Le march\u00e9 comprend: - le projet de renouvellement du logiciel central de gestion ; - la conception et l\u2019installation des syst\u00e8mes de s\u00e9curit\u00e9 physique ; - la gestion du cycle de vie des technologies de s\u00e9curit\u00e9 existantes ; - la gestion OT (Operational Technology) et la cybers\u00e9curit\u00e9 de l\u2019ensemble des actifs, y compris la mise en conformit\u00e9 avec l\u2019Arr\u00eat\u00e9 royal relatif \u00e0 la cybers\u00e9curit\u00e9 nucl\u00e9aire ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/777715-2026"
+ },
+ {
+  "id": "ted:777795-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Raamovereenkomst voor de uitrol, beheer en onderhoud van CCTV in het ambtsgebied van De Vlaamse Waterweg",
+  "body": "Het voorwerp van de opdracht is de verdere uitrol van CCTV-systemen incl. VMS, het onderhoud en beheer van CCTV-(deel)systemen in het ambtsgebied van De Vlaamse Waterweg nv. Het voorwerp van de opdracht is de verdere uitrol van CCTV-systemen incl. VMS, het onderhoud en beheer van CCTV-(deel)systemen in het ambtsgebied van De Vlaamse Waterweg nv. De Vlaamse Waterweg maakt gebruik van CCTV-systemen ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/777795-2026"
+ },
+ {
+  "id": "ted:777825-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Cameratoezicht gemeente Gouda",
+  "body": "De aanleiding voor de aanbesteding is het expireren van de huidige overeenkomsten inzake het Videomanagementsysteem. De Gemeente Gouda wil een nieuw contract aangaan met \u00e9\u00e9n partij voor het leveren, onderhouden en ter beschikking stellen van een Cameratoezicht oplossing (software en hardware), Zie aanbestedingsleidraad De aanleiding voor de aanbesteding is het expireren van de huidige overeenkomst",
+  "url": "https://ted.europa.eu/en/notice/-/detail/777825-2026"
+ },
+ {
+  "id": "ted:778156-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Crowdstrike Security Plattform",
+  "body": "Beschaffungsverfahren der Berliner Feuerwehr \u00fcber die Lieferung von Erweiterungsmodulen und Subskriptionen der CrowdStrike Falcon Security Plattform (Falcon Exposure Management, Falcon Next-Gen Identity Security Privileged, Erweiterung Falcon Next-Gen SIEM) einschlie\u00dflich Threat Graph Extended Elite und Herstellersupport Beschaffungsverfahren der Berliner Feuerwehr \u00fcber die Lieferung von Erweiteru",
+  "url": "https://ted.europa.eu/en/notice/-/detail/778156-2026"
+ },
+ {
+  "id": "ted:777283-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "IT-Security diensten",
+  "body": "Procedure Aanbesteding middels de Europees openbare procedure conform de (gewijzigde) aanbestedingswet 2012. Opdrachtgever De opdrachtgever bij deze aanbesteding is de Gemeente Breda. Voor meer informatie over de Gemeente Breda verwijzen wij u naar de website van de gemeente: www.breda.nl. Opdracht De opdracht betreft: Incident Response Retainer (IRR), Computer Emergency Response Team (CERT), digi",
+  "url": "https://ted.europa.eu/en/notice/-/detail/777283-2026"
+ },
+ {
+  "id": "ted:779163-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Fourniture, int\u00e9gration, exploitation, administration, supervision, maintien en condition op\u00e9rationnelle (MCO), maintien en condition de s\u00e9curit\u00e9 (MCS) et \u00e9volution du socle d'infrastructures des syst\u00e8mes d'information et de communication (SIC) du Service Militaire Adapt\u00e9 (SMA).",
+  "body": "Fourniture, int\u00e9gration, exploitation, administration, supervision, maintien en condition op\u00e9rationnelle (MCO), maintien en condition de s\u00e9curit\u00e9 (MCS) et \u00e9volution du socle d'infrastructures des syst\u00e8mes d'information et de communication (SIC) du Service Militaire Adapt\u00e9 (SMA). Fourniture, int\u00e9gration, exploitation, administration, supervision, maintien en condition op\u00e9rationnelle (MCO), maintien",
+  "url": "https://ted.europa.eu/en/notice/-/detail/779163-2026"
+ },
+ {
+  "id": "ted:778665-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Verl\u00e4ngerung / Erweiterung ivanti EPMM Lizenzen",
+  "body": "Das Essener Systemhaus (ESH), als eigenbetriebs\u00e4hnliche Einrichtung und IT-Dienstleister der kreisfreien Stadt Essen, beabsichtigt die Beschaffung (Verl\u00e4ngerung/Erweiterung) von ivanti EPMM Lizenzen Das Essener Systemhaus (ESH), als eigenbetriebs\u00e4hnliche Einrichtung und IT-Dienstleister der kreisfreien Stadt Essen beabsichtigt die Beschaffung von 4.400 ivanti EPMM Lizenzen mit einer Laufzeit vom 0",
+  "url": "https://ted.europa.eu/en/notice/-/detail/778665-2026"
+ },
+ {
+  "id": "ted:775795-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "ITDZ Berlin: OV RV Datenschleuse",
+  "body": "Gegenstand ist die Lieferung, Installation und Konfiguration einer umfassenden Softwarel\u00f6sung auf der Hardware des Auftraggebers f\u00fcr den sicheren Datenaustausch und die Datensynchronisation zur eigenen Nutzung sowie zur Kundennutzung. Ein Weiterverkauf von Lizenzen ist nicht Teil dieses Rahmenvertrags. Des Weiteren ist ausschlie\u00dflich der Auftraggeber einziger Ansprechpartner f\u00fcr Abrufe von Support",
+  "url": "https://ted.europa.eu/en/notice/-/detail/775795-2026"
+ },
+ {
+  "id": "ted:771788-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Slapta\u017eod\u017ei\u0173 valdymo programin\u0117 \u012franga",
+  "body": "Perkan\u010dioji organizacija numato \u012fsigyti slapta\u017eod\u017ei\u0173 valdymo programin\u0119 \u012frang\u0105 (430 licencij\u0173). Reikalavimai pirkimo objektui nustatyti Pirkimo s\u0105lyg\u0173 2 priede \u201eTechnin\u0117 specifikacija Perkan\u010dioji organizacija numato \u012fsigyti slapta\u017eod\u017ei\u0173 valdymo programin\u0119 \u012frang\u0105 (430 licencij\u0173). Reikalavimai pirkimo objektui nustatyti Pirkimo s\u0105lyg\u0173 2 priede \u201eTechnin\u0117 specifikacija",
+  "url": "https://ted.europa.eu/en/notice/-/detail/771788-2026"
+ },
+ {
+  "id": "ted:771943-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Raamovereenkomst Elektromechanisch toegangs- en sluitsysteem voor WSRL",
+  "body": "Waterschap Rivierenland (WSRL) heeft vanuit haar verantwoordelijkheid voor de veiligheid en continu\u00efteit van bedrijfsvoering en vitale installaties te maken met wettelijke verplichtingen op het gebied van risicobeheersing en beveiliging. In dat kader is het noodzakelijk om passende maatregelen te treffen ter voorkoming van ongeautoriseerde toegang tot locaties en installaties. Hiervoor is WSRL op ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/771943-2026"
+ },
+ {
+  "id": "ted:769188-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Zintegrowany system bezpiecze\u0144stwa infrastruktury IT",
+  "body": "Przedmiotem zam\u00f3wienia jest dostawa Zintegrowanego systemu bezpiecze\u0144stwa dla infrastruktury IT PSP poprzez zapewnienie Licencji dost\u0119powej dla 22 000 urz\u0105dze\u0144 na pe\u0142ne 60 miesi\u0119cy do zintegrowanego Systemu typu SOC (Security Operations Center) dzia\u0142aj\u0105cego w modelu SaaS (software as a service), umo\u017cliwiaj\u0105cego kompleksow\u0105 detekcj\u0119, analiz\u0119 oraz obs\u0142ug\u0119 incydent\u00f3w bezpiecze\u0144stwa w infrastrukturze ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/769188-2026"
+ },
+ {
+  "id": "ted:769297-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Prestation d'externalisation de la fonction de responsable de la s\u00e9curit\u00e9 des syst\u00e8mes d'information (RSSI)",
+  "body": "Les prestations comprennent notamment : la gouvernance de la s\u00e9curit\u00e9 des syst\u00e8mes d'information, la conformit\u00e9 r\u00e9glementaire, la s\u00e9curit\u00e9 op\u00e9rationnelle et la gestion des incidents, la sensibilisation des utilisateurs, le suivi des audits et tests de s\u00e9curit\u00e9, ainsi que le pilotage, le reporting et la comitologie de la fonction RSSI Les prestations comprennent notamment : la gouvernance de la s\u00e9c",
+  "url": "https://ted.europa.eu/en/notice/-/detail/769297-2026"
+ },
+ {
+  "id": "ted:768434-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "FURNIZAREA \u0218I INTEGRAREA SISTEMELOR ITS (INTELLIGENT TRANSPORT SYSTEM) DE INFORMARE A C\u0102L\u0102TORILOR, MONITORIZARE VIDEO \u0218I NUM\u0102RARE A C\u0102L\u0102TORILOR PENTRU FLOTA DE AUTOBUZE \u0218I MICROBUZE DESTINAT\u0102 TRANSPORTULUI PUBLIC DE PERSOANE DIN MUNICIPIUL BAC\u0102U",
+  "body": "Se va asigura dotarea celor 33 de vehicule din flota entitatii contractante S.C TRANSPORT PUBLIC S.A BACAU, respectiv: 29 de autobuze \u0219i 4 microbuze, cu calculatoare de bord cu ecran \u0219ofer pentru gestiune \u0219i management trafic (CGMT) si AVL, sisteme de supraveghere video, cu stocare local\u0103 si licen\u021b\u0103 cu acces de la distan\u021b\u0103, sisteme audio-video de informare a c\u0103l\u0103torilor, sisteme pentru num\u0103rarea c",
+  "url": "https://ted.europa.eu/en/notice/-/detail/768434-2026"
+ },
+ {
+  "id": "ted:768517-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Beratungsleistungen zur Vor- und Nachbereitung eines Re-Zertifizierungs- bzw. \u00dcberwachungsaudits nach dem IT-Grundschutz BSI",
+  "body": "F\u00fcr den Informationsverbund \"Servicezentrum Landentwicklung und Agrarf\u00f6rderung\" (SLA) und die EU-Zahlstelle Niedersachsen/Bremen soll ein Vertrag f\u00fcr die Vorbereitung und Nachbereitung der ben\u00f6tig-ten j\u00e4hrlichen Zertifizierungsaudits vergeben werden. N\u00e4here Einzelheiten zu Art und Umfang des Auftrags sind der Leistungsbeschreibung - Fachlicher Teil (Teil B) zu entnehmen. F\u00fcr den Informationsverbun",
+  "url": "https://ted.europa.eu/en/notice/-/detail/768517-2026"
+ },
+ {
+  "id": "ted:770796-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Ohuintelligentsi platvormi kasutuslitsents koos tootetoega",
+  "body": "Hanke eesm\u00e4rk on soetada 12 kuuks ohuintelligentsi platvormi kasutuslitsents koos tootetoega k\u00fcberohuteabe kogumiseks, anal\u00fc\u00fcsimiseks ja kasutamiseks hankija turvaseire ning intsidentide k\u00e4sitlemise protsessides. / K\u00f5rvaldamise alused ja kvalifitseerimistingimused: Vaata hanke alusdokumentidest Hanke eesm\u00e4rk on soetada 12 kuuks ohuintelligentsi platvormi kasutuslitsents koos tootetoega k\u00fcberohutea",
+  "url": "https://ted.europa.eu/en/notice/-/detail/770796-2026"
+ },
+ {
+  "id": "ted:770496-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Solu\u021bie de monitorizare, detec\u021bie \u0219i protec\u021bie a traficului de date de intrare/ie\u0219ire din re\u021beaua de comunica\u021bii a Transelectrica",
+  "body": "Obiectivul investi\u021biei este acela de a \u00eenlocui echipamentele vechi vulnerabile pentru a reduce riscul la expunerea dat\u0103 de lipsa suportului pentru echipamente de securitate cibernetic\u0103 \u00eenvechite existente la nivelul Companiei, precum \u0219i pentru a m\u0103ri disponibilitatea, monitorizarea infrastructurii \u0219i eficien\u021ba securit\u0103\u021bii \u00een vederea exploat\u0103rii superioare. Sistemul denumit \u201cSolu\u021bie de monitorizare",
+  "url": "https://ted.europa.eu/en/notice/-/detail/770496-2026"
+ },
+ {
+  "id": "ted:769728-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Cyfryzacja us\u0142ug komunalnych oraz sposobu obs\u0142ugi klient\u00f3w Przedsi\u0119biorstwa In\u017cynierii Komunalnej Sp. z o.o. w Pszczynie",
+  "body": "Przedmiotem zam\u00f3wienia jest realizacja projektu pn. ,,Cyfryzacja us\u0142ug komunalnych oraz sposobu obs\u0142ugi klient\u00f3w Przedsi\u0119biorstwa In\u017cynierii Komunalnej Sp. z o.o. w Pszczynie. Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia okre\u015blono w Za\u0142\u0105cznik nr 1 do SWZ. Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia okre\u015blono w Za\u0142\u0105cznik nr 1 do SWZ Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia okre\u015blono w Za\u0142\u0105cznik nr 1 do SWZ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/769728-2026"
+ },
+ {
+  "id": "ted:768150-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "PR26INF073 | Procedura aperta sopra soglia comunitaria per l\u2019affidamento della fornitura di Licenze Firewall, sottoscrizioni e servizi di supporto FORTINET destinati all\u2019infrastruttura di sicurezza in",
+  "body": "PR26INF073 | Lotto 1 - Procedura aperta sopra soglia comunitaria indetta su piattaforma telematica eAppalti SAT - FVG, ai sensi dell\u2019art. 71 D.lgs. n. 36/2023, per l\u2019affidamento della fornitura di Licenze Firewall, sottoscrizioni e servizi di supporto FORTINET destinati all\u2019infrastruttura di sicurezza informatica installata presso l\u2019Azienda Sanitaria Universitaria Friuli Centrale per un periodo di",
+  "url": "https://ted.europa.eu/en/notice/-/detail/768150-2026"
+ },
+ {
+  "id": "ted:769126-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "March\u00e9 public de services en vue de la maintenance et de l\u2019entretien des equipements de securite physique des batiments du SPF Chancellerie du Premier Ministre",
+  "body": "March\u00e9 public de services en vue de la maintenance et de l\u2019entretien des equipements de securite physique des batiments du SPF Chancellerie du Premier Ministre March\u00e9 public de services en vue de la maintenance et de l\u2019entretien des equipements de securite physique des batiments du SPF Chancellerie du Premier Ministre",
+  "url": "https://ted.europa.eu/en/notice/-/detail/769126-2026"
+ },
+ {
+  "id": "ted:770277-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Zakup licencji, wdro\u017cenie i uruchomienie e-us\u0142ug wraz z zakupem szkole\u0144 i sprz\u0119tu w ramach projektu \u201eCyfryzacja administracji publicznej w Gminie Jan\u00f3w\u201d",
+  "body": "1. Przedmiotem zam\u00f3wienia jest zakup licencji, wdro\u017cenie i uruchomienie e-us\u0142ug wraz z zakupem szkole\u0144 i sprz\u0119tu w ramach projektu \u201eCyfryzacja administracji publicznej w Gminie Jan\u00f3w\u201d. 2. Zamawiaj\u0105cy zgodnie z art. 91 ust. 1 ustawy Pzp dopuszcza sk\u0142adanie ofert cz\u0119\u015bciowych z podzia\u0142em na 2 (dwie) cz\u0119\u015bci, jak poni\u017cej: 2.1. cz\u0119\u015b\u0107 1 zam\u00f3wienia \u2013 \u201eCyfryzacja proces\u00f3w back-office oraz wdro\u017cenie e-us\u0142ug",
+  "url": "https://ted.europa.eu/en/notice/-/detail/770277-2026"
+ },
+ {
+  "id": "ted:769429-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "ICT-voorzieningen",
+  "body": "De aanbesteding betreft ICT-voorzieningen voor de in februari 2026 gestarte organisatie NEO NL. De gevraagde diensten zijn opgedeeld in zes percelen: 1) beheerde colocatiediensten; 2) beheerde WAN- en LAN-diensten; 3) beheerde HSM en PKI-diensten; 4) beheerde SOC- en SIEM-diensten; 5) ge\u00efntegreerde IT-diensten en beheer; 6) beheerde mobiele connectiviteitsdiensten. Bij aanvang van de opdracht is h",
+  "url": "https://ted.europa.eu/en/notice/-/detail/769429-2026"
+ },
+ {
+  "id": "ted:771104-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "FOURNITURE DE SERVICES DE PROTECTION DU PATRIMOINE INFORMATIONNEL LI\u00c9S \u00c0 LA CONFORMIT\u00c9 R\u00c9GLEMENTAIRE ET \u00c0 LA S\u00c9CURIT\u00c9 DES DONN\u00c9ES",
+  "body": "FOURNITURE DE SERVICES DE PROTECTION DU PATRIMOINE INFORMATIONNEL LI\u00c9S \u00c0 LA CONFORMIT\u00c9 R\u00c9GLEMENTAIRE ET \u00c0 LA S\u00c9CURIT\u00c9 DES DONN\u00c9ES Conformit\u00e9 r\u00e9glementaire et anticorruption - Zone \u00cele-de-France Conformit\u00e9 r\u00e9glementaire et anticorruption - Zone Nord-Ouest Conformit\u00e9 r\u00e9glementaire et anticorruption - Zone Nord-Est Conformit\u00e9 r\u00e9glementaire et anticorruption - Zone Sud-Ouest Conformit\u00e9 r\u00e9glementaire e",
+  "url": "https://ted.europa.eu/en/notice/-/detail/771104-2026"
+ },
+ {
+  "id": "ted:768259-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "\u0394\u0399\u0391\u039a\u0397\u03a1\u03a5\u039e\u0397 \u0394\u0399\u0395\u0398\u039d\u039f\u03a5\u03a3 \u0397\u039b\u0395\u039a\u03a4\u03a1\u039f\u039d\u0399\u039a\u039f\u03a5 \u0394\u0397\u039c\u039f\u03a3\u0399\u039f\u03a5 \u0391\u039d\u039f\u0399\u039a\u03a4\u039f\u03a5 \u0394\u0399\u0391\u0393\u03a9\u039d\u0399\u03a3\u039c\u039f\u03a5 \u0393\u0399\u0391 \u03a4\u0397\u039d \u03a0\u03a1\u039f\u039c\u0397\u0398\u0395\u0399\u0391 \u0391\u0394\u0395\u0399\u03a9\u039d \u03a0\u039f\u039b\u03a5-\u03a0\u0391\u03a1\u0391\u0393\u039f\u039d\u03a4\u0399\u039a\u039f\u03a5 \u0395\u039b\u0395\u0393\u03a7\u039f\u03a5 \u03a4\u0391\u03a5\u03a4\u039f\u03a4\u0397\u03a4\u0391\u03a3 (multifactor authentication \u2013 MFA) \u0393\u0399\u0391 \u03a4\u0397\u039d \u0391\u03a3\u03a6\u0391\u039b\u0397 \u0391\u03a0\u039f\u039c\u0391\u039a\u03a1\u03a5\u03a3\u039c\u0395\u039d\u0397 \u03a3\u03a5\u039d\u0394\u0395\u03a3\u0397 \u03a7\u03a1\u0397\u03a3\u03a4\u03a9\u039d, \u0393\u0399\u0391 \u0395\u039d\u0391 (1) \u0395\u03a4\u039f\u03a3 \u039a\u0391\u0399 \u03a4\u0397\u039d \u03a0\u03a1\u039f\u039c\u0397\u0398\u0395\u0399\u0391 \u0391\u0394\u0395\u0399\u03a9\u039d \u03a4\u039f\u03a5 \u039b\u039f\u0393\u0399\u03a3\u039c\u0399\u039a\u039f\u03a5 MICROSOFT TEAMS ESSENTIALS, \u0393\u0399\u0391 \u03a4\u03a1\u0399\u0391 (",
+  "body": "\u0391\u03bd\u03c4\u03b9\u03ba\u03b5\u03af\u03bc\u03b5\u03bd\u03bf \u03c4\u03b7\u03c2 \u03c0\u03b1\u03c1\u03bf\u03cd\u03c3\u03b1\u03c2 \u03b4\u03b9\u03b1\u03ba\u03ae\u03c1\u03c5\u03be\u03b7\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03c4\u03bf \u03ad\u03c1\u03b3\u03bf \u03c0\u03bf\u03c5 \u03b1\u03c6\u03bf\u03c1\u03ac \u03c3\u03c4\u03b7\u03bd: \u0391) \u03a0\u03a1\u039f\u039c\u0397\u0398\u0395\u0399\u0391 \u0394\u0399\u0391\u039a\u039f\u03a3\u0399\u03a9\u039d (200) \u0391\u0394\u0395\u0399\u03a9\u039d \u03a0\u039f\u039b\u03a5-\u03a0\u0391\u03a1\u0391\u0393\u039f\u039d\u03a4\u0399\u039a\u039f\u03a5 \u0395\u039b\u0395\u0393\u03a7\u039f\u03a5 \u03a4\u0391\u03a5\u03a4\u039f\u03a4\u0397\u03a4\u0391\u03a3 (multifactor authentication \u2013 MFA) \u0393\u0399\u0391 \u03a4\u0397\u039d \u0391\u03a3\u03a6\u0391\u039b\u0397 \u0391\u03a0\u039f\u039c\u0391\u039a\u03a1\u03a5\u03a3\u039c\u0395\u039d\u0397 \u03a3\u03a5\u039d\u0394\u0395\u03a3\u0397 \u03a7\u03a1\u0397\u03a3\u03a4\u03a9\u039d, \u0393\u0399\u0391 \u0395\u039d\u0391 (1) \u0395\u03a4\u039f\u03a3, \u0392) \u03a0\u03a1\u039f\u039c\u0397\u0398\u0395\u0399\u0391 \u03a4\u0395\u03a4\u03a1\u0391\u039a\u039f\u03a3\u0399\u03a9\u039d \u03a0\u0395\u039d\u0397\u039d\u03a4\u0391 (450) \u0391\u0394\u0395\u0399\u03a9\u039d \u03a4\u039f\u03a5 \u039b\u039f\u0393\u0399\u03a3\u039c\u0399\u039a\u039f\u03a5 MICROSOFT TEAMS ESSENTIALS, \u0393\u0399\u0391 \u03a4\u03a1\u0399\u0391 (3) \u0395\u03a4\u0397. \u0391\u03c6\u03bf\u03c1\u03ac \u03c3\u03c4\u03b7\u03bd \u03c0\u03c1\u03bf\u03bc\u03ae\u03b8\u03b5\u03b9\u03b1 \u03b4\u03b9\u03b1\u03ba\u03bf\u03c3\u03af\u03c9\u03bd (200) \u03b1\u03b4\u03b5\u03b9\u03ce\u03bd \u03c4\u03bf\u03c5 \u03bb\u03bf\u03b3\u03b9\u03c3\u03bc\u03b9",
+  "url": "https://ted.europa.eu/en/notice/-/detail/768259-2026"
+ },
+ {
+  "id": "ted:769032-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Cyberbezpieczne wodoci\u0105gi w Gminie Rajgr\u00f3d",
+  "body": "Przedmiot zam\u00f3wienia obejmuje opracowanie i wdro\u017cenie SZBI, BCP i DRP, przeprowadzenie audyt\u00f3w oraz szkole\u0144, a tak\u017ce dostaw\u0119 sprz\u0119tu komputerowego i oprogramowania oraz dostaw\u0119 agregatu pr\u0105dotw\u00f3rczego. Przedmiot zam\u00f3wienia zosta\u0142 podzielony na trzy cz\u0119\u015bci: Zadanie nr 1, Zadanie nr 2 i Zadanie nr 3. W ramach realizacji przedmiotowego zadania Wykonawca wykona us\u0142ug\u0119 polegaj\u0105ca na kompleksowym wdro\u017ce",
+  "url": "https://ted.europa.eu/en/notice/-/detail/769032-2026"
+ },
+ {
+  "id": "ted:765881-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Solu\u021bie de monitorizare, detec\u021bie \u0219i protec\u021bie a traficului de date de intrare/ie\u0219ire din re\u021beaua de comunica\u021bii a Transelectrica",
+  "body": "Obiectivul investi\u021biei este acela de a \u00eenlocui echipamentele vechi vulnerabile pentru a reduce riscul la expunerea dat\u0103 de lipsa suportului pentru echipamente de securitate cibernetic\u0103 \u00eenvechite existente la nivelul Companiei, precum \u0219i pentru a m\u0103ri disponibilitatea, monitorizarea infrastructurii \u0219i eficien\u021ba securit\u0103\u021bii \u00een vederea exploat\u0103rii superioare. Sistemul denumit \u201cSolu\u021bie de monitorizare",
+  "url": "https://ted.europa.eu/en/notice/-/detail/765881-2026"
+ },
+ {
+  "id": "ted:766413-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Tender No 20 SIEM-SOC Solution 2026",
+  "body": "The Irish Air Navigation Service (AirNav) wish to tender for a SIEM/SOC Solution for a period of three (3) years The Irish Air Navigation Service (AirNav) wish to tender for a SIEM/SOC Solution for a period of three (3) years",
+  "url": "https://ted.europa.eu/en/notice/-/detail/766413-2026"
+ },
+ {
+  "id": "ted:764029-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Erbringung von Softwaresupport-, Hardwarewartungs- und sonstigen Dienstleistungen sowie die Lieferung von Softwarelizenzen des Herstellers F5 Networks, Inc.",
+  "body": "Vertragsgegenstand ist die Erbringung von Softwaresupport-, Hardwarewartungs- und sonstigen Dienstleistungen sowie die Lieferung von Softwarelizenzen f\u00fcr eine Firewall- und Web-Applikations-L\u00f6sung der Firma F5 Networks, Inc. Neben einer Anschlusserneuerung zum 31.12.2026 endender Softwarewartungs-, Hardwarewartungs- und Cloud-Dienstleistungsvereinbarungen f\u00fcr die im Einsatz befindliche L\u00f6sung soll",
+  "url": "https://ted.europa.eu/en/notice/-/detail/764029-2026"
+ },
+ {
+  "id": "ted:764285-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Zv\u00fd\u0161en\u00ed kybernetick\u00e9 bezpe\u010dnosti SSHMP \u2013 Centr\u00e1ln\u00ed detekce, reakce a ochrana dat",
+  "body": "P\u0159edm\u011btem ve\u0159ejn\u00e9 zak\u00e1zky je dod\u00e1vka, poskytnut\u00ed licenc\u00ed, implementace, konfigurace, integrace, ov\u011b\u0159en\u00ed funk\u010dnosti a n\u00e1sledn\u00e9 poskytov\u00e1n\u00ed podpory v\u00fdrobc\u016f, provozn\u00ed podpory dodavatele a roz\u0161\u00ed\u0159en\u00e9 podpory dodavatele pro bezpe\u010dnostn\u00ed softwarov\u00e9 n\u00e1stroje SIEM, XDR a DLP. Sou\u010d\u00e1st\u00ed \u0159e\u0161en\u00ed XDR je rovn\u011b\u017e dod\u00e1vka ve\u0161ker\u00e9ho pot\u0159ebn\u00e9ho hardwaru, syst\u00e9mov\u00e9ho softwaru a firmwaru. Roz\u0161\u00ed\u0159en\u00e1 podpora dodavatele b",
+  "url": "https://ted.europa.eu/en/notice/-/detail/764285-2026"
+ },
+ {
+  "id": "ted:766734-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Servicii solu\u021bie informatic\u0103 integrat\u0103 \u00een cadrul Proiectului \u201dPlatforma de Servicii Publice Digitale pentru Agen\u021bia Na\u021bional\u0103 Anti-Doping\"",
+  "body": "Achizitia serviciilor de dezvoltare si implementare a Platformei de Servicii Publice Digitale pentru Agentia Nationala Anti-Doping, precum si a produselor hardware, a licentelor software si a solutiilor de securitate cibernetica necesare functionarii acesteia, in cadrul proiectului cod SMIS 342867. Prin prestarea serviciilor solicitate, autoritatea contractanta urmareste digitalizarea serviciilor ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/766734-2026"
+ },
+ {
+  "id": "ted:766895-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "R\u00e9alisation d'audits dans le r\u00e9seau des chambres d'agriculture",
+  "body": "L'accord-cadre a pour objet la r\u00e9alisation d'audits dans l'ensemble du r\u00e9seau des chambres d'agriculture. Audits financiers Audits th\u00e9matiques Audits SI Audits g\u00e9n\u00e9ralistes",
+  "url": "https://ted.europa.eu/en/notice/-/detail/766895-2026"
+ },
+ {
+  "id": "ted:763852-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "FORNITURA DI BENI E SERVIZI PER LA GESTIONE INTEGRATA DELLE POSTAZIONI DI LAVORO (PDL) SUDDIVISA IN 5 LOTTI",
+  "body": "FORNITURA DI BENI E SERVIZI PER LA GESTIONE INTEGRATA DELLE POSTAZIONI DI LAVORO (PDL) SUDDIVISA IN 5 LOTTI Lotto 1 - Fornitura di Personal Computer (conformi al DM MISE 11marzo 2026 GU 70 del 25/03/2026) e dispositivi aggiuntivi a ridotto impatto ambientale Lotto 2 - Servizi di assistenza e manutenzione per la gestione integrata delle Postazioni di Lavoro (PdL) per Regione Toscana Giunta Regional",
+  "url": "https://ted.europa.eu/en/notice/-/detail/763852-2026"
+ },
+ {
+  "id": "ted:761959-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "\u201e\u041e\u0441\u0438\u0433\u0443\u0440\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u0440\u0435\u0448\u0435\u043d\u0438\u044f \u0437\u0430 \u0437\u0430\u0449\u0438\u0442\u0430 \u0438 \u0438\u043d\u0441\u043f\u0435\u043a\u0442\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 DNS \u0442\u0440\u0430\u0444\u0438\u043a\u0430 \u043f\u043e \u0434\u0432\u0435 \u043e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0438 \u043f\u043e\u0437\u0438\u0446\u0438\u0438\u201d",
+  "body": "\u041f\u0440\u0435\u0434\u043c\u0435\u0442\u044a\u0442 \u043d\u0430 \u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043d\u0430\u0442\u0430 \u043f\u043e\u0440\u044a\u0447\u043a\u0430 \u0435 \u043e\u0441\u0438\u0433\u0443\u0440\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u0440\u0435\u0448\u0435\u043d\u0438\u044f \u0437\u0430 \u0437\u0430\u0449\u0438\u0442\u0430 \u0438 \u0438\u043d\u0441\u043f\u0435\u043a\u0442\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 DNS \u0442\u0440\u0430\u0444\u0438\u043a\u0430 \u043f\u043e \u0434\u0432\u0435 \u043e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0438 \u043f\u043e\u0437\u0438\u0446\u0438\u0438, \u043a\u0430\u043a\u0442\u043e \u0441\u043b\u0435\u0434\u0432\u0430: 1. \u041e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0430 \u043f\u043e\u0437\u0438\u0446\u0438\u044f \u2116 1: \u201e\u0420\u0435\u0448\u0435\u043d\u0438\u0435 \u0437\u0430 \u0437\u0430\u0449\u0438\u0442\u0430 \u0438 \u0438\u043d\u0441\u043f\u0435\u043a\u0446\u0438\u044f \u043d\u0430 DNS \u0442\u0440\u0430\u0444\u0438\u043a\u0430 \u0437\u0430 \u043d\u0443\u0436\u0434\u0438\u0442\u0435 \u043d\u0430 \u0410\u0433\u0435\u043d\u0446\u0438\u044f \u043f\u043e \u0433\u0435\u043e\u0434\u0435\u0437\u0438\u044f, \u043a\u0430\u0440\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u044f \u0438 \u043a\u0430\u0434\u0430\u0441\u0442\u044a\u0440 (\u0410\u0413\u041a\u041a)\u201c; 2. \u041e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0430 \u043f\u043e\u0437\u0438\u0446\u0438\u044f \u2116 2: \u201e\u0420\u0435\u0448\u0435\u043d\u0438\u0435 \u0437\u0430 \u0437\u0430\u0449\u0438\u0442\u0430 \u0438 \u0438\u043d\u0441\u043f\u0435\u043a\u0442\u0438\u0440\u0430\u043d\u0435 \u043d\u0430 DNS \u0442\u0440\u0430\u0444\u0438\u043a\u0430 \u0437\u0430 \u043d\u0443\u0436\u0434\u0438\u0442\u0435 \u043d\u0430 \u0410\u0433\u0435\u043d\u0446\u0438\u044f \u043f\u043e \u0432\u043f\u0438\u0441\u0432\u0430\u043d\u0438\u044f\u0442\u0430 (\u0410\u0412)\u201c. \u0418\u0437\u0438",
+  "url": "https://ted.europa.eu/en/notice/-/detail/761959-2026"
+ },
+ {
+  "id": "ted:763467-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Contrato de servicio de Ciberseguridad Gestionada - OTC (SARA). Expte. 51/26-C.",
+  "body": "Constituye el objeto del presente contrato de servicios la prestaci\u00f3n de un Servicio de Ciberseguridad Gestionada a incorporar e implantar en el Ayuntamiento de Sagunto, con el fin de conseguir su protecci\u00f3n integral. Con este contrato se pretende definir y poner en marcha la OTC oficina T\u00e9cnica de Ciberseguridad, que ser\u00e1 conformada por el \u00e1rea de Nuevas Tecnolog\u00edas del Ayuntamiento de Sagunto ju",
+  "url": "https://ted.europa.eu/en/notice/-/detail/763467-2026"
+ },
+ {
+  "id": "ted:761293-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Pravo kori\u0161tenje rje\u0161enja za nadzor i analitiku kiberneti\u010dkih prijetnji i ugroza",
+  "body": "Pravo kori\u0161tenja rje\u0161enja za nadzor i analitiku kiberneti\u010dkih prijetnji i ugroza Pravo kori\u0161tenja rje\u0161enja za nadzor i analitiku kiberneti\u010dkih prijetnji i ugroza",
+  "url": "https://ted.europa.eu/en/notice/-/detail/761293-2026"
+ },
+ {
+  "id": "ted:762542-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "\u00ab\u0391\u03bd\u03ac\u03c0\u03c4\u03c5\u03be\u03b7 \u03ba\u03b1\u03b9 \u0395\u03b3\u03ba\u03b1\u03c4\u03ac\u03c3\u03c4\u03b1\u03c3\u03b7 \u03a8\u03b7\u03c6\u03b9\u03b1\u03ba\u03ce\u03bd \u03a5\u03c0\u03bf\u03b4\u03bf\u03bc\u03ce\u03bd \u03b3\u03b9\u03b1 \u03c4\u03b7 \u039b\u03b5\u03b9\u03c4\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03c4\u03bf\u03c5 \u03a3\u03c5\u03c3\u03c4\u03ae\u03bc\u03b1\u03c4\u03bf\u03c2 \u03c4\u03b7\u03c2 \u039a\u03ac\u03c1\u03c4\u03b1\u03c2 \u0395\u03c1\u03b3\u03b1\u03c3\u03af\u03b1\u03c2 \u03c3\u03c4\u03bf\u03bd \u0394\u03b7\u03bc\u03cc\u03c3\u03b9\u03bf \u03a4\u03bf\u03bc\u03ad\u03b1\u00bb",
+  "body": "\u0391\u03bd\u03c4\u03b9\u03ba\u03b5\u03af\u03bc\u03b5\u03bd\u03bf \u03c4\u03b7\u03c2 \u03c3\u03cd\u03bc\u03b2\u03b1\u03c3\u03b7\u03c2 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b7 \u03b4\u03b7\u03bc\u03b9\u03bf\u03c5\u03c1\u03b3\u03af\u03b1 \u03ba\u03b1\u03b9 \u03b5\u03b3\u03ba\u03b1\u03c4\u03ac\u03c3\u03c4\u03b1\u03c3\u03b7 \u03b5\u03bd\u03cc\u03c2 \u03bf\u03bb\u03bf\u03ba\u03bb\u03b7\u03c1\u03c9\u03bc\u03ad\u03bd\u03bf\u03c5 \u03c3\u03c5\u03c3\u03c4\u03ae\u03bc\u03b1\u03c4\u03bf\u03c2 \u03ba\u03b1\u03b9 \u03c4\u03b5\u03c7\u03bd\u03bf\u03bb\u03bf\u03b3\u03b9\u03ba\u03bf\u03cd \u03b5\u03be\u03bf\u03c0\u03bb\u03b9\u03c3\u03bc\u03bf\u03cd \u03b3\u03b9\u03b1 \u03c4\u03b7\u03bd \u03b1\u03ba\u03c1\u03b9\u03b2\u03ae \u03ba\u03b1\u03b9 \u03b4\u03b9\u03b1\u03c6\u03b1\u03bd\u03ae \u03c8\u03b7\u03c6\u03b9\u03b1\u03ba\u03ae \u03ba\u03b1\u03c4\u03b1\u03b3\u03c1\u03b1\u03c6\u03ae \u03c4\u03b7\u03c2 \u03c0\u03c1\u03bf\u03c3\u03ad\u03bb\u03b5\u03c5\u03c3\u03b7\u03c2 \u03ba\u03b1\u03b9 \u03b1\u03c0\u03bf\u03c7\u03ce\u03c1\u03b7\u03c3\u03b7\u03c2 \u03b1\u03c0\u03cc \u03c4\u03b7\u03bd \u03b5\u03c1\u03b3\u03b1\u03c3\u03af\u03b1 \u03c4\u03c9\u03bd \u03c5\u03c0\u03b1\u03bb\u03bb\u03ae\u03bb\u03c9\u03bd \u03c3\u03c4\u03bf\u03bd \u03b4\u03b7\u03bc\u03cc\u03c3\u03b9\u03bf \u03c4\u03bf\u03bc\u03ad\u03b1, \u03bc\u03b5 \u03b4\u03c5\u03bd\u03b1\u03c4\u03cc\u03c4\u03b7\u03c4\u03b1 \u03ba\u03b1\u03b9 \u03b2\u03b9\u03bf\u03bc\u03b5\u03c4\u03c1\u03b9\u03ba\u03ae\u03c2 \u03c4\u03b1\u03c5\u03c4\u03bf\u03c0\u03bf\u03af\u03b7\u03c3\u03b7\u03c2 \u03b1\u03bb\u03bb\u03ac \u03ba\u03b1\u03b9 \u03c4\u03b7\u03c2 \u03b4\u03b9\u03b1\u03c3\u03cd\u03bd\u03b4\u03b5\u03c3\u03b7\u03c2 \u03bc\u03b5 \u03c4\u03bf \u03a3\u0394\u0391\u0394 \u03ba\u03b1\u03b9 \u03c4\u03b1 \u03c4\u03bf\u03c0\u03b9\u03ba\u03ac HRMS \u03c4\u03c9\u03bd \u03c6\u03bf\u03c1\u03ad\u03c9\u03bd \u03b3\u03b9\u03b1 \u03c4\u03b7 \u03b4\u03b9\u03ac\u03b8\u03b5\u03c3\u03b7 \u03c4\u03c9\u03bd \u03c0\u03c1\u03c9\u03c4\u03bf\u03b3\u03b5\u03bd\u03ce\u03bd \u03b4\u03b5\u03b4\u03bf\u03bc\u03ad\u03bd\u03c9\u03bd. [\u03c0\u03b1\u03c1. ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/762542-2026"
+ },
+ {
+  "id": "ted:759708-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "\u201eCyfryzacja powiatu bieru\u0144sko-l\u0119dzi\u0144skiego oraz podleg\u0142ych jednostek\" - w zakresie system\u00f3w geodezyjnych [vol.2]",
+  "body": "1. Przedmiotem zam\u00f3wienia jest wykonanie dostaw wchodz\u0105cych w zakres zam\u00f3wienia pn.: \u201eCyfryzacja powiatu bieru\u0144sko-l\u0119dzi\u0144skiego oraz podleg\u0142ych jednostek\u201d \u2013 w zakresie system\u00f3w geodezyjnych. Celem przedmiotu zam\u00f3wienia jest udost\u0119pnienie nowych oraz podniesienie poziomu dojrza\u0142o\u015bci istniej\u0105cych e-us\u0142ug publicznych do pi\u0105tego poziomu dojrza\u0142o\u015bci tak, aby usprawni\u0107 i u\u0142atwi\u0107 realizacje zada\u0144 geodezy",
+  "url": "https://ted.europa.eu/en/notice/-/detail/759708-2026"
+ },
+ {
+  "id": "ted:757502-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Achizitie Centru de date",
+  "body": "Universitatea de Medicina, Farmacie, Stiinte si Tehnologie \u201cGeorge Emil Palade\u201d din Targu Mures (UMFST G.E. Palade Targu Mures) lanseaza procedura de atribuire a contractului de achizitie publica de produse, avand ca obiect: Achizitie Centru de date in cadrul proiectului \u201cDEEP_AI \u2013 Solutii bazate pe inteligenta artificiala, potentate de sisteme de calcul de inalta performanta (HPC) pentru economia",
+  "url": "https://ted.europa.eu/en/notice/-/detail/757502-2026"
+ },
+ {
+  "id": "ted:756864-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa i wdro\u017cenie oprogramowania wraz ze sprz\u0119tem w ramach realizacji projektu \"Cyberbezpieczny wodoci\u0105g w Gminie Ryman\u00f3w\"",
+  "body": "Przedmiotem zam\u00f3wienia jest dostawa i wdro\u017cenie oprogramowania wraz ze sprz\u0119tem w zwi\u0105zku z realizacj\u0105 projektu grantowego pn.: Cyberbezpieczny wodoci\u0105g w Gminie Ryman\u00f3w\", finansowanym w ramach Krajowego Planu Odbudowy i Zwi\u0119kszania Odporno\u015bci , Priorytet C3 Cyberbezpiecze\u0144stwo, Dzia\u0142anie C3.1.1 Cyberbezpiecze\u0144stwo, CyberPL, konkurs grantowy \"Cyberbezpieczne Wodoci\u0105gi\". Zakres zam\u00f3wienia obejmuje ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/756864-2026"
+ },
+ {
+  "id": "ted:758644-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Utrzymanie w ruchu i rozw\u00f3j systemu informatycznego SIOEZ w tym prace programistyczne oraz us\u0142ugi im towarzysz\u0105ce",
+  "body": "1. Przedmiotem zam\u00f3wienia jest \u015bwiadczenie us\u0142ugi utrzymywania w ruchu (w \u015brodowisku produkcyjnym, PREPROD) oraz rozwoju, w tym wprowadzania modyfikacji zwi\u0105zanych z rozwojem wdro\u017conego i funkcjonuj\u0105cego w CKE systemu informatycznego obs\u0142uguj\u0105cego egzaminy zawodowe, zwanego SIOEZ. 2. Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia (OPZ) okre\u015bla za\u0142\u0105cznik nr 1 do SWZ. 1. Przedmiotem zam\u00f3wienia jest \u015bwiadcze",
+  "url": "https://ted.europa.eu/en/notice/-/detail/758644-2026"
+ },
+ {
+  "id": "ted:758884-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Po\u0159\u00edzen\u00ed a obnova p\u0159edplatn\u00e9ho bezpe\u010dnostn\u00edch slu\u017eeb a technick\u00e9 podpory Check Point",
+  "body": "P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky je prodlou\u017een\u00ed podpor a subskripc\u00ed, kter\u00e9 se t\u00fdkaj\u00ed bezpe\u010dnostn\u00edch slu\u017eeb s\u00ed\u0165ov\u00fdch za\u0159\u00edzen\u00ed a koncov\u00fdch a mobiln\u00edch stanic pro MmP, MP a \u00daMO dle p\u0159\u00edlohy \u010d. 1 t\u00e9to zad\u00e1vac\u00ed dokumentace. P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky je prodlou\u017een\u00ed podpor a subskripc\u00ed, kter\u00e9 se t\u00fdkaj\u00ed bezpe\u010dnostn\u00edch slu\u017eeb s\u00ed\u0165ov\u00fdch za\u0159\u00edzen\u00ed a koncov\u00fdch a mobiln\u00edch stanic pro MmP, MP a \u00daMO dle p\u0159\u00edl",
+  "url": "https://ted.europa.eu/en/notice/-/detail/758884-2026"
+ },
+ {
+  "id": "ted:758885-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa sprz\u0119tu komputerowego i oprogramowania dla Gminy Lublin w ramach realizacji projekt\u00f3w \u201eZakup sprz\u0119tu komputerowego dla Gminy Lublin i jej jednostek o\u015bwiatowych\u201d oraz \u201eModernizacja i rozbudowa infrastruktury sieciowej oraz serwerowej na potrzeby Gminy Lublin i jednostek o\u015bwiatowych\u201d.",
+  "body": "Zakres zam\u00f3wienia obejmuje: 1. Dostaw\u0119 sprz\u0119tu komputerowego. 2. Rozbudow\u0119 posiadanego przez Zamawiaj\u0105cego systemu do zarz\u0105dzania urz\u0105dzeniami o nowe licencje wieczyste dla 1403 stacji roboczych i urz\u0105dze\u0144 mobilnych oraz o modu\u0142 do szyfrowania dla 340 urz\u0105dze\u0144 mobilnych w ramach posiadanego przez Zamawiaj\u0105cego systemu. 3. Dostaw\u0119 zintegrowanego systemu bezpiecze\u0144stwa klasy XDR do proaktywnej ochro",
+  "url": "https://ted.europa.eu/en/notice/-/detail/758885-2026"
+ },
+ {
+  "id": "ted:754374-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Raamovereenkomst voor de uitrol, beheer en onderhoud van CCTV in het ambtsgebied van De Vlaamse Waterweg",
+  "body": "Het voorwerp van de opdracht is de verdere uitrol van CCTV-systemen incl. VMS, het onderhoud en beheer van CCTV-(deel)systemen in het ambtsgebied van De Vlaamse Waterweg nv. Het voorwerp van de opdracht is de verdere uitrol van CCTV-systemen incl. VMS, het onderhoud en beheer van CCTV-(deel)systemen in het ambtsgebied van De Vlaamse Waterweg nv. De Vlaamse Waterweg maakt gebruik van CCTV-systemen ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/754374-2026"
+ },
+ {
+  "id": "ted:755747-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Cybersecurity - soluzioni e servizi per la protezione e resilienza di reti e sistemi informativi (ID 2733)",
+  "body": "Gara a procedura aperta per l\u2019affidamento di un Accordo Quadro avente ad oggetto la fornitura di soluzioni per protezione e resilienza delle reti e dei sistemi informativi ed erogazione di servizi connessi per le pubbliche amministrazioni Servizi di Technical Advising Fornitura di prodotti per la sicurezza perimetrale e delle interconnessioni ed erogazione di servizi connessi (obbligatori ed opzio",
+  "url": "https://ted.europa.eu/en/notice/-/detail/755747-2026"
+ },
+ {
+  "id": "ted:753734-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa i wdro\u017cenie oprogramowania wraz ze sprz\u0119tem w ramach realizacji projektu \"Cyberbezpieczny wodoci\u0105g w Gminie Ryman\u00f3w\"",
+  "body": "Przedmiotem zam\u00f3wienia jest dostawa i wdro\u017cenie oprogramowania wraz ze sprz\u0119tem w zwi\u0105zku z realizacj\u0105 projektu grantowego pn.: Cyberbezpieczny wodoci\u0105g w Gminie Ryman\u00f3w\", finansowanym w ramach Krajowego Planu Odbudowy i Zwi\u0119kszania Odporno\u015bci , Priorytet C3 Cyberbezpiecze\u0144stwo, Dzia\u0142anie C3.1.1 Cyberbezpiecze\u0144stwo, CyberPL, konkurs grantowy \"Cyberbezpieczne Wodoci\u0105gi\". Zakres zam\u00f3wienia obejmuje ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/753734-2026"
+ },
+ {
+  "id": "ted:752712-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa urz\u0105dze\u0144 sieciowych",
+  "body": "1. Przedmiotem zam\u00f3wienia jest dostawa urz\u0105dze\u0144 sieciowych. 2. Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia, w tym zakres i ilo\u015b\u0107, zosta\u0142 zawarty w Za\u0142\u0105czniku nr 1 do SWZ - SOPZ. 1. Przedmiotem zam\u00f3wienia jest dostawa urz\u0105dze\u0144 sieciowych. 2. Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia, w tym zakres i ilo\u015b\u0107, zosta\u0142 zawarty w Za\u0142\u0105czniku nr 1 do SWZ - SOPZ.",
+  "url": "https://ted.europa.eu/en/notice/-/detail/752712-2026"
+ },
+ {
+  "id": "ted:755800-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Odnowienie us\u0142ugi wsparcia dla systemu Darktrace dla identyfikacji anomalii zwi\u0105zanych z cyberzagro\u017ceniami",
+  "body": "1. Nazwa zam\u00f3wienia: Odnowienie us\u0142ugi wsparcia dla systemu Darktrace dla identyfikacji anomalii zwi\u0105zanych z cyberzagro\u017ceniami. 2. Przedmiotem zam\u00f3wienia jest*: 2.1. odnowienie przez Wykonawc\u0119 Licencji i Wsparcia Technicznego Producenta dla posiadanego przez Zamawiaj\u0105cego Oprogramowania Systemu, z zachowaniem ci\u0105g\u0142o\u015bci dla poprzedniego okresu \u015bwiadczenia Wsparcia Technicznego Producenta; 2.2. \u015bwi",
+  "url": "https://ted.europa.eu/en/notice/-/detail/755800-2026"
+ },
+ {
+  "id": "ted:755484-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Solu\u021bie de securitate cibernetic\u0103 tip WAF destinat\u0103 protec\u021biei aplica\u021biilor web ale A.S.F.",
+  "body": "Contractul are ca obiect furnizarea, instalarea, punerea \u00een func\u021biune \u0219i asigurarea suportului tehnic pentru o solu\u021bie de securitate cibernetic\u0103 de tip WAF destinat\u0103 protec\u021biei aplica\u021biilor web ale A.S.F., compus\u0103 din echipamente hardware, licen\u021be software specializate, subscrip\u021bii de securitate cibernetic\u0103 \u0219i servicii de suport tehnic pe o perioad\u0103 de 36 de luni. Caracteristicile detaliate ale so",
+  "url": "https://ted.europa.eu/en/notice/-/detail/755484-2026"
+ },
+ {
+  "id": "ted:754903-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "\u201e\u0414\u043e\u0441\u0442\u0430\u0432\u043a\u0430, \u0432\u043d\u0435\u0434\u0440\u044f\u0432\u0430\u043d\u0435 \u0438 \u0433\u0430\u0440\u0430\u043d\u0446\u0438\u043e\u043d\u043d\u0430 \u043f\u043e\u0434\u0434\u0440\u044a\u0436\u043a\u0430 \u043d\u0430 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0441\u043d\u043e \u0440\u0435\u0448\u0435\u043d\u0438\u0435 \u043e\u0442 \u0441\u0438\u0441\u0442\u0435\u043c\u0438 \u0437\u0430 \u043a\u0438\u0431\u0435\u0440\u0441\u0438\u0433\u0443\u0440\u043d\u043e\u0441\u0442 \u0438 \u0437\u0430\u0449\u0438\u0442\u0430 \u043d\u0430 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u0430\u0442\u0430 \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430 \u043d\u0430 \u0411\u041d\u0420\u201c",
+  "body": "\u041f\u0440\u0435\u0434\u043c\u0435\u0442\u044a\u0442 \u043d\u0430 \u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043d\u0430\u0442\u0430 \u043f\u043e\u0440\u044a\u0447\u043a\u0430: \u043e\u0431\u0445\u0432\u0430\u0449\u0430 \u0434\u043e\u0441\u0442\u0430\u0432\u043a\u0430, \u0438\u043d\u0441\u0442\u0430\u043b\u0438\u0440\u0430\u043d\u0435 \u0438 \u0438\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044f \u0432 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u0430\u0442\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u0430 \u043d\u0430 \u0411\u041d\u0420 \u043d\u0430 \u0441\u044a\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u0438, \u0440\u0435\u0448\u0435\u043d\u0438\u044f \u0438 \u0441\u043e\u0444\u0442\u0443\u0435\u0440\u0438 \u0432 \u043e\u0431\u043b\u0430\u0441\u0442\u0442\u0430 \u043d\u0430 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u043e\u043d\u043d\u0430\u0442\u0430 \u0441\u0438\u0433\u0443\u0440\u043d\u043e\u0441\u0442, \u0441\u044a\u043f\u044a\u0442\u0441\u0442\u0432\u0430\u0449\u043e \u0445\u0430\u0440\u0434\u0443\u0435\u0440\u043d\u043e \u043e\u0431\u043e\u0440\u0443\u0434\u0432\u0430\u043d\u0435, \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u0437\u0430 \u0438\u0437\u043f\u043e\u043b\u0437\u0432\u0430\u043d\u0435 \u0432 \u0441\u0438\u0441\u0442\u0435\u043c\u0438\u0442\u0435, \u0441\u0432\u044a\u0440\u0437\u0432\u0430\u043d\u0435 \u043d\u0430 \u043e\u0442\u0434\u0435\u043b\u043d\u0438\u0442\u0435 \u043a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442\u0438 \u0438 \u0432\u044a\u0432\u0435\u0436\u0434\u0430\u043d\u0435 \u0432 \u0435\u043a\u0441\u043f\u043b\u043e\u0430\u0442\u0430\u0446\u0438\u044f \u043d\u0430 \u0438\u043d\u0442\u0435\u0433\u0440\u0438\u0440\u0430\u043d\u0430 \u043c\u043e\u0434\u0443\u043b\u043d\u0430 \u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u0430 \u0437\u0430 \u0441\u044a\u0437\u0434\u0430\u0432\u0430\u043d\u0435 \u043d\u0430 \u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u0435\u043d \u0446\u0435\u043d\u0442\u044a\u0440 \u0437\u0430 \u043a\u0438\u0431",
+  "url": "https://ted.europa.eu/en/notice/-/detail/754903-2026"
+ },
+ {
+  "id": "ted:754632-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Zintegrowany system bezpiecze\u0144stwa infrastruktury IT",
+  "body": "Przedmiotem zam\u00f3wienia jest dostawa Zintegrowanego systemu bezpiecze\u0144stwa dla infrastruktury IT PSP poprzez zapewnienie Licencji dost\u0119powej dla 22 000 urz\u0105dze\u0144 na pe\u0142ne 60 miesi\u0119cy do zintegrowanego Systemu typu SOC (Security Operations Center) dzia\u0142aj\u0105cego w modelu SaaS (software as a service), umo\u017cliwiaj\u0105cego kompleksow\u0105 detekcj\u0119, analiz\u0119 oraz obs\u0142ug\u0119 incydent\u00f3w bezpiecze\u0144stwa w infrastrukturze ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/754632-2026"
+ },
+ {
+  "id": "ted:756363-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Zv\u00fd\u0161en\u00ed kyberbezpe\u010dnosti v NMB \u2013 technologie II",
+  "body": "P\u0159edm\u011btem zak\u00e1zky jsou dod\u00e1vky a implementace technologi\u00ed, dod\u00e1vky SW, HW a infrastruktury pro realizaci technick\u00fdch bezpe\u010dnostn\u00edch opat\u0159en\u00ed dle z\u00e1kona o kybernetick\u00e9 bezpe\u010dnosti (ZKB) pro zabezpe\u010den\u00ed IS provozovan\u00fdch zadavatelem. Sou\u010d\u00e1st\u00ed pln\u011bn\u00ed zak\u00e1zky jsou d\u00e1le servisn\u00ed slu\u017eby po dobu udr\u017eitelnosti projektu. Ve\u0159ejn\u00e1 zak\u00e1zka je rozd\u011blena na p\u011bt d\u00edl\u010d\u00edch \u010d\u00e1st\u00ed. P\u0159edm\u011btem \u010d\u00e1sti 4 jsou n\u00e1sleduj\u00edc\u00ed p",
+  "url": "https://ted.europa.eu/en/notice/-/detail/756363-2026"
+ },
+ {
+  "id": "ted:755589-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Informatiebeveiligingsonderzoeken (RVICTO-PT) 2026-II",
+  "body": "Deze aanbesteding betreft het sluiten van een raamovereenkomst voor het uitvoeren van informatiebeveiligingsonderzoeken (penetratietesten). Het doel is het identificeren van digitale kwetsbaarheden in systemen, applicaties en andere objecten, teneinde deze te verhelpen of te mitigeren. De penetratietesten worden uitgevoerd via geautomatiseerde \u00e9n handmatige methoden en vloeien voort uit de zorgpli",
+  "url": "https://ted.europa.eu/en/notice/-/detail/755589-2026"
+ },
+ {
+  "id": "ted:750852-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Digit\u00e1lna transform\u00e1cia a moderniz\u00e1cia IKT infra\u0161trukt\u00fary a IT syst\u00e9mov DCVaV CVTI SR",
+  "body": "Predmet z\u00e1kazky predstavuje dod\u00e1vku a uvedenie do prev\u00e1dzky komplexn\u00e9ho d\u00e1tov\u00e9ho centra ako jedn\u00e9ho architektonicky ucelen\u00e9ho rie\u0161enia pozost\u00e1vaj\u00faceho z NON-IT technol\u00f3gi\u00ed (elektrick\u00e9 nap\u00e1janie, z\u00e1lohovanie, chladenie/VZT, po\u017eiarna ochrana, bezpe\u010dnos\u0165, monitoring), IT hardv\u00e9ru (v\u00fdpo\u010dtov\u00e9, \u00falo\u017en\u00e9, sie\u0165ov\u00e9 a GPU zdroje) a nadv\u00e4zuj\u00faceho softv\u00e9ru (virtualiz\u00e1cia, kontajneriz\u00e1cia, objektov\u00e9 \u00falo\u017eisko, ri",
+  "url": "https://ted.europa.eu/en/notice/-/detail/750852-2026"
+ },
+ {
+  "id": "ted:750323-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Zakup infrastruktury informatycznej na potrzeby e-us\u0142ug publicznych oraz poprawy cyberbezpiecze\u0144stwa Urz\u0119du Miasta w ramach projektu Cyfryzacja Urz\u0119du Miasta w Jastrz\u0119biu-Zdroju",
+  "body": "1. Przedmiotem niniejszego post\u0119powania jest dostawa zestaw\u00f3w komputerowych, laptopa, serwer\u00f3w, tablet\u00f3w, skaner\u00f3w, zasilaczy, monitor\u00f3w interaktywnych oraz niezb\u0119dnego oprogramowania. Cz\u0119\u015b\u0107 I : Zakup sprz\u0119tu komputerowego Cz\u0119\u015b\u0107 II : Zakup serwer\u00f3w i UPS Cz\u0119\u015b\u0107 III : Zakup oprogramowania Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia zawiera za\u0142\u0105cznik nr 3 do SWZ. Zgodnie z art. 101 ust. 4 ustawy z dnia 11",
+  "url": "https://ted.europa.eu/en/notice/-/detail/750323-2026"
+ },
+ {
+  "id": "ted:750327-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": ",,\u041d\u0430\u0434\u0433\u0440\u0430\u0436\u0434\u0430\u043d\u0435 \u043d\u0430 \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430\u0442\u0430 \u043d\u0430 \u041d\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u043d\u0430 \u0437\u0434\u0440\u0430\u0432\u043d\u043e\u043e\u0441\u0438\u0433\u0443\u0440\u0438\u0442\u0435\u043b\u043d\u0430 \u043a\u0430\u0441\u0430 (\u041d\u0417\u041e\u041a) \u043f\u043e \u043e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0438 \u043f\u043e\u0437\u0438\u0446\u0438\u0438\u201c",
+  "body": "\u041f\u0440\u0435\u0434\u043c\u0435\u0442\u044a\u0442 \u043d\u0430 \u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043d\u0430\u0442\u0430 \u043f\u043e\u0440\u044a\u0447\u043a\u0430 \u0435 ,,\u041d\u0430\u0434\u0433\u0440\u0430\u0436\u0434\u0430\u043d\u0435 \u043d\u0430 \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430\u0442\u0430 \u043d\u0430 \u041d\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u043d\u0430 \u0437\u0434\u0440\u0430\u0432\u043d\u043e\u043e\u0441\u0438\u0433\u0443\u0440\u0438\u0442\u0435\u043b\u043d\u0430 \u043a\u0430\u0441\u0430 (\u041d\u0417\u041e\u041a) \u043f\u043e \u043e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0438 \u043f\u043e\u0437\u0438\u0446\u0438\u0438\u201c \u0438 \u0432\u043a\u043b\u044e\u0447\u0432\u0430 \u0441\u043b\u0435\u0434\u043d\u0438\u0442\u0435 \u043e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0438 \u043f\u043e\u0437\u0438\u0446\u0438\u0438: 1. \u041e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0430 \u043f\u043e\u0437\u0438\u0446\u0438\u044f \u2116 1: ,,\u041e\u0441\u0438\u0433\u0443\u0440\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u043b\u0438\u0446\u0435\u043d\u0437\u0438 \u0437\u0430 \u0441\u043e\u0444\u0442\u0443\u0435\u0440 \u0437\u0430 \u0430\u0440\u0445\u0438\u0432\u0438\u0440\u0430\u043d\u0435''; 2. \u041e\u0431\u043e\u0441\u043e\u0431\u0435\u043d\u0430 \u043f\u043e\u0437\u0438\u0446\u0438\u044f \u2116 2: ,,\u041e\u0441\u0438\u0433\u0443\u0440\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 WAF \u0440\u0435\u0448\u0435\u043d\u0438\u0435 \u0437\u0430 \u0437\u0430\u0449\u0438\u0442\u0430 \u043d\u0430 \u0443\u0435\u0431 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u2018\u2018. \u0418\u0437\u0438\u0441\u043a\u0432\u0430\u043d\u0438\u044f\u0442\u0430 \u043a\u044a\u043c \u0438\u0437\u043f\u044a\u043b\u043d\u0435\u043d\u0438\u0435\u0442\u043e \u0441\u0430 \u043f\u043e\u0434\u0440\u043e\u0431\u043d\u043e \u043e\u043f\u0438\u0441\u0430\u043d\u0438 \u0432 \u0422\u0435\u0445\u043d\u0438\u0447\u0435",
+  "url": "https://ted.europa.eu/en/notice/-/detail/750327-2026"
+ },
+ {
+  "id": "ted:752016-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "\u201e\u0420\u0430\u0437\u0448\u0438\u0440\u044f\u0432\u0430\u043d\u0435 \u043d\u0430 \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430\u0442\u0430 \u043d\u0430 \u041d\u0430\u0446\u0438\u043e\u043d\u0430\u043b\u0435\u043d \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u0438\u043d\u0441\u0442\u0438\u0442\u0443\u0442 \u2013 \u0437\u0430\u043a\u0443\u043f\u0443\u0432\u0430\u043d\u0435 \u043d\u0430 2 \u0431\u0440\u043e\u044f \u0441\u044a\u0440\u0432\u044a\u0440\u0438\u201c",
+  "body": "\u0426\u0435\u043b\u0442\u0430 \u043d\u0430 \u0432\u044a\u0437\u043b\u0430\u0433\u0430\u043d\u0435\u0442\u043e \u043d\u0430 \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0430\u0442\u0430 \u043e\u0431\u0449\u0435\u0441\u0442\u0432\u0435\u043d\u0430 \u043f\u043e\u0440\u044a\u0447\u043a\u0430 \u0435 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0441\u043a\u043b\u044e\u0447\u0435\u043d \u0434\u043e\u0433\u043e\u0432\u043e\u0440 \u0438 \u0434\u0430 \u0431\u044a\u0434\u0435 \u0438\u0437\u0431\u0440\u0430\u043d \u0438\u0437\u043f\u044a\u043b\u043d\u0438\u0442\u0435\u043b, \u043f\u0440\u0438\u0442\u0435\u0436\u0430\u0432\u0430\u0449 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u0438\u0442\u0435 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438 \u0432\u044a\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0438, \u043e\u043f\u0438\u0442 \u0438 \u043a\u0432\u0430\u043b\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u044f \u043f\u043e \u043f\u0440\u0435\u0434\u043c\u0435\u0442\u0430 \u0439, \u043d\u0430 \u043a\u043e\u0433\u043e\u0442\u043e \u0434\u0430 \u0431\u044a\u0434\u0435 \u0432\u044a\u0437\u043b\u043e\u0436\u0435\u043d\u043e \u043e\u0441\u044a\u0449\u0435\u0441\u0442\u0432\u044f\u0432\u0430\u043d\u0435\u0442\u043e \u043d\u0430 \u0434\u0435\u0439\u043d\u043e\u0441\u0442\u0438\u0442\u0435, \u043f\u043e\u043f\u0430\u0434\u0430\u0449\u0438 \u0432 \u043e\u0431\u0445\u0432\u0430\u0442\u0430, \u0432 \u043f\u044a\u043b\u0435\u043d \u043e\u0431\u0435\u043c \u0438 \u043f\u0440\u0438 \u043f\u044a\u043b\u043d\u043e \u0441\u044a\u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0435 \u0441 \u0438\u0437\u0438\u0441\u043a\u0432\u0430\u043d\u0438\u044f\u0442\u0430 \u0438 \u0443\u0441\u043b\u043e\u0432\u0438\u044f\u0442\u0430 \u043d\u0430 \u0412\u044a\u0437\u043b\u043e\u0436\u0438\u0442\u0435\u043b\u044f, \u043e\u0431\u0435\u043a\u0442\u0438\u0432\u0438\u0440\u0430\u043d\u0438 \u0432 \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0430\u0442\u0430 \u0422\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0430 \u0441\u043f\u0435\u0446\u0438\u0444\u0438\u043a\u0430\u0446\u0438",
+  "url": "https://ted.europa.eu/en/notice/-/detail/752016-2026"
+ },
+ {
+  "id": "ted:752053-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa klastra urz\u0105dze\u0144 bezpiecze\u0144stwa sieciowego Next-Generation Firewall (NGFW) wraz z oprogramowaniem, wsparciem technicznym oraz us\u0142ug\u0105 wdro\u017cenia i relokacji urz\u0105dze\u0144.",
+  "body": "1. Przedmiotem zam\u00f3wienia jest dostawa klastra urz\u0105dze\u0144 bezpiecze\u0144stwa sieciowego Next-Generation Firewall (NGFW) wraz z oprogramowaniem, wsparciem technicznym oraz us\u0142ug\u0105 wdro\u017cenia i relokacji urz\u0105dze\u0144. 2. Zamawiaj\u0105cy nie dopuszcza sk\u0142adania ofert cz\u0119\u015bciowych. 3. Szczeg\u00f3\u0142owy opis przedmiotu zam\u00f3wienia zawiera za\u0142\u0105cznik nr 3 do swz. Dostawa klastra urz\u0105dze\u0144 bezpiecze\u0144stwa sieciowego Next-Generatio",
+  "url": "https://ted.europa.eu/en/notice/-/detail/752053-2026"
+ },
+ {
+  "id": "ted:751277-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Modernizarea administra\u021biei publice prin implementarea unui Sistem Informatic Integrat \u00een Comuna Filipe\u0219tii de T\u00e2rg",
+  "body": "U.A.T. Comuna Filipe\u0219tii de T\u00e2rg, constituie beneficiarul direct al investi\u021biei, \u00een timp ce cet\u0103\u021benii \u0219i operatorii economici din Comuna Filipe\u0219tii de T\u00e2rg reprezint\u0103 beneficiarii indirec\u021bi ai acestei investi\u021bii. Realizarea implementarii proiectului la nivelul primariei comunei Filipe\u0219tii de T\u00e2rg va contribui, pe de o parte, la cre\u015fterea eficientei administratiei locale si implicit a nivelului de ",
+  "url": "https://ted.europa.eu/en/notice/-/detail/751277-2026"
+ },
+ {
+  "id": "ted:748437-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Solu\u021bie de securitate cibernetic\u0103 tip WAF destinat\u0103 protec\u021biei aplica\u021biilor web ale A.S.F.",
+  "body": "Contractul are ca obiect furnizarea, instalarea, punerea \u00een func\u021biune \u0219i asigurarea suportului tehnic pentru o solu\u021bie de securitate cibernetic\u0103 de tip WAF destinat\u0103 protec\u021biei aplica\u021biilor web ale A.S.F., compus\u0103 din echipamente hardware, licen\u021be software specializate, subscrip\u021bii de securitate cibernetic\u0103 \u0219i servicii de suport tehnic pe o perioad\u0103 de 36 de luni. Caracteristicile detaliate ale so",
+  "url": "https://ted.europa.eu/en/notice/-/detail/748437-2026"
+ },
+ {
+  "id": "ted:745822-2026",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Dostawa, wdro\u017cenie, uruchomienie, konfiguracja urz\u0105dze\u0144 b\u0119d\u0105cych elementami systemu bezpiecze\u0144stwa informacji i infrastruktury IT oraz OT Miejskich Wodoci\u0105g\u00f3w i Kanalizacji w Bydgoszczy - sp\u00f3\u0142ka z o.o. Zadanie 2. Cz\u0119\u015b\u0107 3.",
+  "body": "Przedmiotem zam\u00f3wienia jest dostawa, wdro\u017cenie, uruchomienie oraz konfiguracj\u0119 urz\u0105dzenia typu firewall. Urz\u0105dzenie typu firewall klasy NGFW (Next Generation Firewall) przeznaczone do ochrony sieci LAN/WAN. Szczeg\u00f3\u0142owo przedmiot zam\u00f3wienia opisany zosta\u0142 w Opisie Przedmiotu Zam\u00f3wienia, stanowi\u0105cym za\u0142\u0105cznik nr 8 do SWZ (dalej jako: \u201eOPZ\u201d). Przedmiotem zam\u00f3wienia jest dostawa, wdro\u017cenie, uruchomien",
+  "url": "https://ted.europa.eu/en/notice/-/detail/745822-2026"
+ }
+]

@@ -1,0 +1,170 @@
+{
+ "opening_id": "ai-agent-access-control",
+ "slug": "agent-run-guard",
+ "name": "RunGuard",
+ "one_liner": "A drop-in GitHub Action that puts headless AI agent runs in CI under a read-only-by-default tool policy and keeps a signed audit record of each run.",
+ "buyer": {
+  "role": "DevOps / platform engineering lead (budget often via the engineering manager's tooling card)",
+  "company_profile": "Company with 20-200 engineers on GitHub that runs AI coding agents unattended in CI (issue triage, PR review, auto-fix bots via Claude Code, Codex, Copilot cloud agent or Gemini CLI) on repositories that receive untrusted input such as public issues, PR bodies or dependency content."
+ },
+ "user": "Platform engineers who add the Action and tune the policy file; repository maintainers who read the per-run audit summary on the PR or workflow run.",
+ "problem": {
+  "summary": "Agents run headless in CI auto-approve tool calls, often with no read-only or plan mode, while reading attacker-controllable text (issues, PR bodies, tool output). One injected instruction can write files, push code or leak the CI token. Interactive permission prompts do not exist in CI, and gateways focus on MCP traffic, not the agent's shell and file tools on a runner. Teams need a deterministic policy and evidence for every unattended agent run.",
+  "evidence": [
+   {
+    "claim": "In non-interactive -p runs the Antigravity CLI auto-approves all tool calls including write_file, making it unsafe for automation that processes untrusted input.",
+    "url": "https://github.com/google-antigravity/antigravity-cli/issues/45"
+   },
+   {
+    "claim": "User-registered MCP servers get blanket tool auto-approval in headless claude runs.",
+    "url": "https://github.com/currentbits/solenta/issues/126"
+   },
+   {
+    "claim": "Background task notifications in Claude Code triggered autonomous calls under bypassPermissions, with the model responding as if it were the user.",
+    "url": "https://github.com/anthropics/claude-code/issues/39027"
+   },
+   {
+    "claim": "A user giving a sandboxed agent access to gh wants to enforce which subcommands are allowed or denied.",
+    "url": "https://github.com/cli/cli/issues/12912"
+   },
+   {
+    "claim": "Agent sessions in GitHub-hosted runners hit provider prompt-injection blocks and become unrecoverable, showing injected content reaching CI agents.",
+    "url": "https://github.com/OpenHands/OpenHands/issues/19018"
+   },
+   {
+    "claim": "Agent tool calls are executed from LLM output that is influenced by user input and earlier tool results, both attacker-controlled, and frameworks lack an authorization hook.",
+    "url": "https://github.com/prajwalsuryawanshi/agentapi/issues/88"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "Coding agents now run as unattended cloud/CI agents (Copilot cloud agent, Cursor cloud agents) and all of them expose pre-tool-use hooks that also run in those environments: Copilot cloud agent supports a subset of hook events, Cursor cloud agents run repository hooks, Claude Code hooks cover MCP tools. That makes in-runner enforcement possible without forking agents. OWASP's Top 10 for Agentic Applications (Dec 2025) names tool misuse as a core risk.",
+  "sources": [
+   "https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-hooks",
+   "https://cursor.com/docs/agent/hooks",
+   "https://code.claude.com/docs/en/hooks",
+   "https://geminicli.com/docs/core/policy-engine/",
+   "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "GitHub Action that wraps an agent step and installs its native hooks with a repo policy file (.github/agent-policy.yml): read-only by default, explicit write paths, allowed commands parsed as shell AST, allowed MCP tools",
+    "why": "Gives headless runs the read-only/plan mode they lack, in one line of workflow YAML."
+   },
+   {
+    "feature": "Taint mode: when the job input comes from untrusted sources (issue/PR from non-members), automatically downgrade to read-only and block network egress tools",
+    "why": "Targets the actual attack path: prompt injection through untrusted text."
+   },
+   {
+    "feature": "Per-run audit record: every tool call, decision and blocked attempt, secrets redacted, signed and attached as a workflow artifact plus a job summary",
+    "why": "Evidence of what an unattended agent did, readable on the PR."
+   },
+   {
+    "feature": "Canary secret planted in the runner environment; the run fails if it appears in any tool input or output",
+    "why": "Cheap, deterministic exfiltration detection."
+   },
+   {
+    "feature": "Paid hosted dashboard: runs across repos, blocked-call trends, 1-year retention, Slack alert on blocks",
+    "why": "The part an org pays for; the Action stays free."
+   }
+  ],
+  "out_of_scope": [
+   "Developer laptops and IDE agents",
+   "GitLab CI, Jenkins and self-hosted orchestration in v1",
+   "LLM-based injection classifiers",
+   "MCP network gateway and credential vault",
+   "Enterprise SSO and SIEM export until asked"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "Native agent settings (Claude Code permissions, Gemini CLI policy engine, Copilot hooks)",
+   "url": "https://code.claude.com/docs/en/permissions.md",
+   "how_we_differ": "Free and per-agent; each team must hand-write rules in four formats and gets no run-level audit. We ship tested defaults and the evidence trail."
+  },
+  {
+   "name": "Knostic Kirin",
+   "url": "https://www.knostic.ai/pricing",
+   "how_we_differ": "Focused on developer IDEs and laptops priced per user; we cover unattended CI runs priced per repository."
+  },
+  {
+   "name": "Amazon Bedrock AgentCore Policy",
+   "url": "https://aws.amazon.com/bedrock/agentcore/pricing/",
+   "how_we_differ": "Cedar policy for agents built on AgentCore Gateway; does not apply to off-the-shelf coding agents in GitHub Actions."
+  },
+  {
+   "name": "Docker MCP Gateway (open source)",
+   "url": "https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/",
+   "how_we_differ": "Isolates MCP servers in containers; does not govern the agent's shell and file tools on the runner. Can be used together."
+  },
+  {
+   "name": "Pillar Security / Lasso Security",
+   "url": "https://www.pillar.security/blog/introducing-pillar-for-ai-coding-agents",
+   "how_we_differ": "Enterprise platforms with annual commits; we are a marketplace Action with a free tier and per-repo pricing."
+  }
+ ],
+ "differentiation": "Built for the one place agents run with nobody watching: CI. One line of workflow YAML gives a read-only default, taint-aware downgrade on untrusted input, canary-based exfiltration detection and a signed per-run audit record. It is free to adopt as an Action and paid for retention and cross-repo visibility, priced per repository rather than per developer seat.",
+ "build": {
+  "team": "1 technical founder (solo, bootstrapped)",
+  "months_to_mvp": 2,
+  "hardest_parts": [
+   "Supporting several agents' headless modes and hook semantics on runners, and keeping up as they change",
+   "Ensuring the agent cannot rewrite or bypass its own hooks during the run (file permissions, immutable config, running hooks as a separate user)",
+   "Taint detection that is strict enough to matter but does not break legitimate bot workflows",
+   "Earning trust for a third-party Action that sits next to CI secrets (supply-chain scrutiny)"
+  ]
+ },
+ "pricing": {
+  "model": "Open-core: free Action (open source); paid hosted dashboard billed per active repository through GitHub Marketplace",
+  "entry_price": "$49/month for up to 10 repositories with agent runs (1-year audit retention, Slack alerts); $5/month per extra repository",
+  "rationale": "Below Descope Pro ($249/mo) and a fraction of enterprise commits (Lasso $20k/yr), so a platform lead can buy on a card via GitHub Marketplace. Per-repository pricing matches how CI agents are deployed and avoids competing with Knostic's per-seat model. Running cost is low: only audit records are stored.",
+  "comparables": [
+   {
+    "vendor": "Descope Agentic Identity Hub",
+    "price": "Free (2,000 consents/tokens); Pro from $249/mo",
+    "source": "https://www.descope.com/pricing"
+   },
+   {
+    "vendor": "Knostic Kirin",
+    "price": "Team $15/user/month",
+    "source": "https://www.knostic.ai/pricing"
+   },
+   {
+    "vendor": "TrueFoundry MCP Gateway",
+    "price": "Pro $25 per user/month incl. 20K requests",
+    "source": "https://www.truefoundry.com/pricing"
+   },
+   {
+    "vendor": "Lasso Security",
+    "price": "AWS Marketplace annual commit $20,000 (GenAI Chatbots)",
+    "source": "https://aws.amazon.com/marketplace/pp/prodview-7ygm7pa3k5agg"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten organisations that already run an AI agent in GitHub Actions on issue or PR events, especially open-source projects and dev-tool startups with public repositories (most exposed to injected issue text). Found by searching public workflow files for agent actions and through maintainers' discussions of agent bots.",
+  "channel": "GitHub Marketplace listing plus the open-source Action; write-ups demonstrating prompt-injection attacks against unprotected agent workflows (the founder's offensive-testing background); direct outreach to maintainers of affected public workflows.",
+  "wedge": "A free 'agent workflow scanner' that reads a repo's .github/workflows, flags agent steps triggered by untrusted events with write permissions or secrets, and opens a PR adding the Action."
+ },
+ "risks": [
+  "Bundling: GitHub, Anthropic or Google may ship a read-only/safe mode for CI agents themselves (e.g. built into the official Actions), removing the core need.",
+  "Market size: the number of organisations running unattended agents on untrusted input may still be small in 2026, and open-source maintainers rarely pay.",
+  "Technical: enforcement inside the same runner as the agent is a guardrail, not a sandbox; a determined injection may find paths the hooks do not see. Must be positioned with a sandboxing recommendation.",
+  "Trust: a security Action with access to CI context is itself a supply-chain target; one incident would end the business.",
+  "Founder fit: CI/GitHub Actions and agent internals are adjacent to, but not the founder's core Windows detection skills; offensive testing experience helps with demos."
+ ],
+ "riskiest_assumption": {
+  "assumption": "Enough companies already run AI agents unattended in CI on untrusted input, and care enough about it, to pay ~$49/month for policy and audit beyond the free Action.",
+  "test": "Search public GitHub workflow files for agent actions triggered by issues/PR events; count them and contact 40 owners with a short report of their exposure plus a link to a pre-order page ($49/month, first month free). Publish one injection demo write-up.",
+  "success_signal": "At least 300 public repositories found with exposed agent workflows, and at least 5 of the 40 contacted owners sign up for the paid pre-order or book a call within 2 weeks."
+ },
+ "open_questions": [
+  "How quickly will agent vendors add a hard read-only mode for headless runs?",
+  "Is enforcement through hooks reliable in each agent's cloud mode (Copilot cloud agent supports only a subset of events)?",
+  "Will private-repo companies (who pay) feel the injection risk as strongly as public-repo maintainers (who are most exposed)?",
+  "Should the product extend to GitLab CI before adding laptops?"
+ ],
+ "revision_log": []
+}

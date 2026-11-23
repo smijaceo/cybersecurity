@@ -1,0 +1,173 @@
+{
+ "opening_id": "msp-windows-detection",
+ "slug": "logon-ledger",
+ "name": "Logon Ledger",
+ "one_liner": "Multi-tenant Windows server logon, RDP-session and admin-change audit for MSPs, priced per server, with built-in Sysmon telemetry pre-filtered to what matters.",
+ "buyer": {
+  "role": "MSP owner or service manager (often the MSP's vCISO / security lead)",
+  "company_profile": "MSP with 3-30 technicians managing 20-200 small-business clients, each with 1-5 Windows servers (DC, file server, RDS host); already runs an RMM and is asked by clients' cyber insurers and auditors for logon and admin-activity evidence."
+ },
+ "user": "MSP technicians and the client's office manager reading a monthly per-client report; the MSP's security lead triaging alerts.",
+ "problem": {
+  "summary": "Small businesses' servers hold the evidence of who logged in and what admins changed, but default Windows logs are noisy, local and rolled over in days. Per-source licensing (ADAudit Plus, Netwrix per-user) is priced per client environment, not per MSP, and full SIEMs bill on volume. MSPs need cheap, multi-tenant, per-server logon and change auditing that produces client-readable reports without a SIEM.",
+  "evidence": [
+   {
+    "claim": "Admins ask for a simple way to track terminal server logins, session durations, disconnections and failed logons and cannot find one.",
+    "url": "https://serverfault.com/questions/13451/terminal-server-logging"
+   },
+   {
+    "claim": "Windows file-server object auditing forwarded to Graylog floods the collector with noise from routine access, burying the events the admin wanted.",
+    "url": "https://serverfault.com/questions/1078821/windows-server-audit-logs"
+   },
+   {
+    "claim": "Small IT teams want a daily list of who actually logged in to compare against AD, and ask whether a SIEM is the only way to get it.",
+    "url": "https://security.stackexchange.com/questions/9684/siem-system-what-are-the-benefits"
+   },
+   {
+    "claim": "ManageEngine ADAudit Plus prices each source separately (DCs, file servers, Azure AD tenant), inflating cost for a mixed small estate.",
+    "url": "https://www.manageengine.com/products/active-directory-audit/pricing-details.html"
+   },
+   {
+    "claim": "Pipeline tools that cut SIEM volume are priced for enterprises (per-vCPU tiers, credits) and leave small teams to author filters themselves.",
+    "url": "https://www.datadoghq.com/pricing/list/"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "Microsoft is shipping Sysmon as a built-in optional feature of Windows 11 and Windows Server 2025, serviced by Windows Update, but it 'doesn't analyze the events it generates' and is off by default. Every MSP now gets free, supported telemetry and still needs configs, collection and detections on top. Insurers increasingly ask SMBs for stronger controls before approving or renewing cover, and MSPs are pulled into that readiness conversation.",
+  "sources": [
+   "https://learn.microsoft.com/windows/security/operating-system-security/sysmon/overview",
+   "https://techcommunity.microsoft.com/blog/windows-itpro-blog/native-sysmon-functionality-coming-to-windows/4468112",
+   "https://www.channele2e.com/news/channel-brief-smb-ai-gap-is-the-next-msp-opportunity"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Lightweight Windows collector (WEF subscription or small service) deployed by an RMM script, forwarding only a curated logon/RDP/admin-change event set",
+    "why": "No per-endpoint agent sprawl; MSPs already push scripts through RMMs."
+   },
+   {
+    "feature": "Per-server session timeline: logons, RDP sessions with duration and disconnects, failed logons, privilege use, group-membership and GPO changes",
+    "why": "Directly answers the most common need statements (terminal server logging, who logged in today)."
+   },
+   {
+    "feature": "Multi-tenant MSP console with one view per client and per-server billing",
+    "why": "Competitors are licensed per client environment; MSPs need one pane and one invoice."
+   },
+   {
+    "feature": "Monthly branded PDF 'access review' per client, ready to hand to an insurer or auditor",
+    "why": "Turns logging into a billable, visible deliverable for the MSP."
+   },
+   {
+    "feature": "A handful of high-signal alerts (new admin, logon from new country/host, brute force against RDP, audit log cleared)",
+    "why": "Gives value beyond reports without becoming a noisy SIEM."
+   },
+   {
+    "feature": "13-month cheap archive of the curated events with export",
+    "why": "Default Windows logs roll over; evidence must survive until an incident is noticed."
+   }
+  ],
+  "out_of_scope": [
+   "24/7 SOC or managed response",
+   "Linux, database and SaaS (M365) audit in v1",
+   "Session video recording",
+   "General-purpose SIEM search over arbitrary logs",
+   "File-level access auditing beyond share-level summaries"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "ManageEngine ADAudit Plus",
+   "url": "https://www.manageengine.com/products/active-directory-audit/",
+   "how_we_differ": "Installed and licensed per client estate with per-source add-ons; we are multi-tenant SaaS billed per server to the MSP."
+  },
+  {
+   "name": "Netwrix Auditor",
+   "url": "https://netwrix.com",
+   "how_we_differ": "Per-enabled-user pricing and heavier setup; we price per server and ship opinionated defaults."
+  },
+  {
+   "name": "Blumira",
+   "url": "https://www.blumira.com/pricing",
+   "how_we_differ": "Full SMB SIEM priced per employee; we are a narrow audit-and-report product an MSP can add for a few dollars per server, or feed into Blumira."
+  },
+  {
+   "name": "Huntress Managed SIEM",
+   "url": "https://www.huntress.com/pricing/siem",
+   "how_we_differ": "SOC-backed SIEM priced per data source; we sell evidence and reports, not managed response, at a lower price point."
+  },
+  {
+   "name": "Wazuh (open source)",
+   "url": "https://wazuh.com/",
+   "how_we_differ": "Free but the MSP must host, tune and write reports; we are zero-ops and report-first."
+  },
+  {
+   "name": "Built-in Windows Sysmon + Event Viewer (free)",
+   "url": "https://learn.microsoft.com/windows/security/operating-system-security/sysmon/overview",
+   "how_we_differ": "Generates telemetry but does not analyse it; we configure it, collect a curated subset and turn it into reports and alerts."
+  }
+ ],
+ "differentiation": "Priced and built for the MSP, not the end client: one multi-tenant console, per-server billing, RMM-script deployment and a monthly client-ready access report. It is narrower and cheaper than a SIEM and lighter than ADAudit/Netwrix, and it uses Windows' own built-in Sysmon and audit policy, so there is no new agent to justify.",
+ "build": {
+  "team": "1 technical founder (Windows/detection) + a part-time contractor for the web console after first revenue",
+  "months_to_mvp": 4,
+  "hardest_parts": [
+   "Reliable, low-touch event collection from many small, messy client networks (WEF over the internet, NAT, offline servers)",
+   "Choosing an event set small enough to be cheap but complete enough to survive an incident review",
+   "Multi-tenant data isolation and security of a product that holds MSP clients' logs (a juicy target)",
+   "Report wording a non-technical client and an insurer both accept"
+  ]
+ },
+ "pricing": {
+  "model": "Per protected Windows server per month, billed to the MSP; MSP resells at its own margin",
+  "entry_price": "$6/server/month, minimum $60/month per MSP (10 servers), 13-month retention included",
+  "rationale": "ADAudit Plus lists $495/year for 2 Windows file servers and $595/year for 2 DCs per client estate (~$20-25/server/month); at $6 the MSP can resell at $15-20 and still undercut per-client licences, while the curated event set keeps storage cost per server to cents.",
+  "comparables": [
+   {
+    "vendor": "ManageEngine ADAudit Plus",
+    "price": "2 DCs $595/yr Standard; 2 Windows file servers $495/yr",
+    "source": "https://www.manageengine.com/products/active-directory-audit/pricing-details.html"
+   },
+   {
+    "vendor": "Netwrix Auditor Essentials",
+    "price": "from $20 per enabled AD user (up to 250 identities)",
+    "source": "https://netwrix.com/en/buy-now"
+   },
+   {
+    "vendor": "Blumira",
+    "price": "~$12-$21/employee/month (third-party estimate)",
+    "source": "https://www.capterra.com/p/208225/Blumira/pricing/"
+   },
+   {
+    "vendor": "ManageEngine DataSecurity Plus",
+    "price": "file server auditing from $745/yr for 2 Windows file servers",
+    "source": "https://www.manageengine.com/in/data-security/compare-editions.html"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten US/UK MSPs with 5-20 technicians and mostly 10-100 seat clients, no in-house SOC, already selling a 'security' tier, found in r/msp, MSPGeek and local MSP peer groups; ideally ones with clients facing insurance renewal questionnaires.",
+  "channel": "Founder-led community selling to MSPs (r/msp, MSPGeek, peer groups), free RMM deployment scripts as lead magnet, later RMM marketplace listings (NinjaOne, ConnectWise).",
+  "wedge": "'Show your client's insurer who logged into their servers last month' - a free 30-day report for one client, generated from built-in Sysmon and Windows audit events."
+ },
+ "risks": [
+  "Bundling: Huntress, Blumira and RMM vendors could add a logon report to existing SIEM/EDR bundles MSPs already pay for.",
+  "MSPs may see logon auditing as a nice-to-have and not pay unless an insurer or auditor explicitly demands it.",
+  "Holding many MSPs' clients' logs makes the product a high-value supply-chain target; one breach ends the company.",
+  "Built-in Sysmon is new and not yet broadly deployed on older Windows Server versions still common in small businesses, so collection must also work from classic audit policy.",
+  "MSP channel concentration: a few RMM/PSA platforms control distribution and integration terms."
+ ],
+ "riskiest_assumption": {
+  "assumption": "MSPs will pay a separate per-server fee for logon/admin-activity reports rather than relying on the SIEM/EDR bundle they already buy.",
+  "test": "Post a mock client-ready monthly access report and a $6/server price in r/msp and two MSP peer groups; offer a paid 30-day pilot ($60) to the first 15 MSPs that reply, delivered by the founder by hand with scripts.",
+  "success_signal": "At least 5 MSPs pay for the pilot within 2 weeks and at least 3 say an insurer, auditor or client has asked them for this evidence."
+ },
+ "open_questions": [
+  "Do insurers' questionnaires actually ask for server logon evidence, or only MFA/EDR?",
+  "How many MSP clients still run Server 2016/2019 without built-in Sysmon?",
+  "Will MSPs accept a SaaS holding client logs, or demand self-hosted?",
+  "Is M365 sign-in audit a must-have for the first ten customers?"
+ ],
+ "revision_log": []
+}

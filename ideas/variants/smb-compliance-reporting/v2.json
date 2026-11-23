@@ -1,0 +1,179 @@
+{
+ "opening_id": "smb-compliance-reporting",
+ "slug": "clockwatch",
+ "name": "ClockWatch",
+ "one_liner": "Multi-tenant incident reporting clock for MSPs and MSSPs: one intake per client incident, every regulatory deadline (FTC, SEC Reg S-P, NIS2/BSIG) tracked and drafted.",
+ "buyer": {
+  "role": "Owner, service-delivery manager or vCISO lead at an MSP/MSSP that already sells compliance or incident response to regulated small clients",
+  "company_profile": "MSPs and MSSPs with 5-100 staff managing 30-500 small business clients, a meaningful share of them regulated (tax/accounting, mortgage and lending, auto dealers, small RIAs and broker-dealers, or EU NIS2 'important entities' for European MSPs), already running a PSA and possibly a compliance-as-a-service tool, and the first call their clients make when something goes wrong."
+ },
+ "user": "The MSP's incident handler or vCISO, who opens a case during a client incident, answers the triage questions, and hands the client a dated list of filings and drafts; the client's owner signs off.",
+ "problem": {
+  "summary": "When a regulated small client is hit, its MSP becomes the de facto incident lead but has no tool that says which regulators must hear what by when. One incident can trigger several regimes with different clocks (24h/72h/1 month under NIS2/BSIG, 30 days under the FTC rule and Reg S-P, 72h service-provider notice). Enterprise breach-decisioning tools are quote-only and single-company; MSP compliance platforms manage policies, not incident deadlines.",
+  "evidence": [
+   {
+    "claim": "Modern cyberattacks can create hundreds of simultaneous reporting obligations that overwhelm incident processes.",
+    "url": "https://www.nasdaq.com/press-release/breachrx-research-modern-cyberattacks-create-hundreds-simultaneous-reporting"
+   },
+   {
+    "claim": "NIS2 requires an early warning within 24 hours, a notification within 72 hours and a final report within one month.",
+    "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+   },
+   {
+    "claim": "Amended SEC Regulation S-P requires notifying affected individuals within 30 days and expects service providers to notify the covered institution within 72 hours.",
+    "url": "https://www.federalregister.gov/documents/2024/06/03/2024-11116/regulation-s-p-privacy-of-consumer-financial-information-and-safeguarding-customer-information"
+   },
+   {
+    "claim": "The FTC Safeguards Rule requires notice to the FTC within 30 days of discovering a security event involving 500+ consumers.",
+    "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314/section-314.4"
+   },
+   {
+    "claim": "Enterprise breach-decisioning tools are quote-only, with no self-serve product for small covered firms.",
+    "url": "https://www.capterra.com/p/187954/RADAR/"
+   },
+   {
+    "claim": "Public buyers procure services that shorten the time from incident to discovery, assessment, notification and handling.",
+    "url": "https://ted.europa.eu/en/notice/-/detail/792782-2026"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "Several small-firm clocks started within two years: the FTC's 30-day reporting duty for non-bank financial institutions took effect on 13 May 2024; amended Reg S-P applied to larger firms from 3 December 2025 and to smaller ones (e.g. RIAs under $1.5bn AUM) from 3 June 2026; Germany's NIS2 implementation took effect on 6 December 2025 with 24h/72h/1-month reporting to the BSI and covers an estimated ~29,000-30,000 companies, of which about 11,500 had registered by the deadline. MSP platforms (ScalePad ControlMap, Compliance Scorecard, Cynomi) are productizing compliance-as-a-service, priced per client per month, but focus on policies and programs, not incident deadlines.",
+  "sources": [
+   "https://www.hoganlovells.com/en/publications/ftc-amends-safeguards-rule-to-require-non-banking-financial-institutions-to-report-data-breaches",
+   "https://datamatters.sidley.com/2026/04/30/u-s-sec-regulation-s-p-compliance-deadline-approaching-for-smaller-entities/",
+   "https://www.channelpartner.de/article/4142460/cybersicherheit-11-500-unternehmen-haben-pflicht-erfullt.html",
+   "https://scalepad.com/controlmap/pricing",
+   "https://cynomi.com/compare/cynomi-vs-compliance-scorecard/"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Per-client regulatory profile (set once at onboarding): which regimes apply (FTC Safeguards, Reg S-P smaller/larger, NIS2/BSIG important/essential, plus a US state-law checklist), contacts, counsel and insurer.",
+    "why": "The MSP should not be working out on the day of an incident which rules apply."
+   },
+   {
+    "feature": "Incident intake with a triage questionnaire (data types, encryption, consumer counts, service impact, discovery and awareness times) that computes every applicable deadline and its legal basis, and shows them on one timeline.",
+    "why": "This is the core multi-regime gap the enterprise tools fill only for large companies."
+   },
+   {
+    "feature": "Pre-filled drafts for each filing (FTC notification fields, BSI early-warning / notification / final-report content, Reg S-P customer notice and service-provider 72h notice), exported for copy into the authority's portal.",
+    "why": "Authorities' portals are free but manual; drafts save hours under time pressure without promising automated submission."
+   },
+   {
+    "feature": "Multi-tenant MSP dashboard: all open client incidents and next deadlines, alerts via email/Teams/Slack, and PSA ticket links (ConnectWise, Autotask, HaloPSA).",
+    "why": "Fits how MSPs already work and gives one view across clients."
+   },
+   {
+    "feature": "Audit-ready incident record per client: timeline, decisions, who approved, what was filed when.",
+    "why": "Examiners and insurers ask for it, and it protects the MSP if a deadline is disputed."
+   },
+   {
+    "feature": "Annual tabletop pack per regime that the MSP can run with each client (billable for the MSP).",
+    "why": "Gives the MSP recurring revenue from the tool between incidents."
+   }
+  ],
+  "out_of_scope": [
+   "Direct API submission to authority portals (FTC, BSI MUK/ELSTER), deferred until portals expose APIs",
+   "Final legal determination of reportability (client and counsel decide)",
+   "DORA, HIPAA and SEC 8-K materiality in v1",
+   "Notification mailing and call centres",
+   "Policy/WISP management, left to the MSP's existing compliance tool"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "BreachRx (Rex)",
+   "url": "https://www.breachrx.com/",
+   "how_we_differ": "Enterprise-grade regulatory mapping across 200+ regulations, quote-only, single-company; we are multi-tenant for MSPs, cover the few regimes small clients face, and are priced per client per month."
+  },
+  {
+   "name": "RadarFirst",
+   "url": "https://www.radarfirst.com/",
+   "how_we_differ": "Quote-only incident decisioning sold to privacy teams; we are for MSP incident handlers acting for clients with no privacy team."
+  },
+  {
+   "name": "OneTrust Incident & Breach Response",
+   "url": "https://www.onetrust.com/manage-incident-and-breach-response-with-onetrust",
+   "how_we_differ": "Part of a large privacy suite; small firms and MSPs do not buy OneTrust."
+  },
+  {
+   "name": "ScalePad ControlMap",
+   "url": "https://scalepad.com/controlmap/pricing",
+   "how_we_differ": "MSP compliance-as-a-service for policies, risks and evidence, priced per client per month; it has no incident deadline engine, so we integrate rather than replace."
+  },
+  {
+   "name": "Compliance Scorecard / Cynomi",
+   "url": "https://cynomi.com/compare/cynomi-vs-compliance-scorecard/",
+   "how_we_differ": "Governance and vCISO program platforms for MSPs; incident reporting is not their focus. Both are also the most likely to add it (bundling risk)."
+  },
+  {
+   "name": "Free authority portals and spreadsheets",
+   "url": "https://www.computerweekly.com/de/news/366636992/NIS2-Unternehmen-koennen-sich-registrieren-und-anmelden",
+   "how_we_differ": "Portals take a filing but do not tell you which ones you owe or track clocks across regimes and clients."
+  }
+ ],
+ "differentiation": "The only incident-deadline tool built for the people who actually run small-firm incidents: MSPs. One intake computes every clock across FTC, Reg S-P and NIS2/BSIG, drafts each filing and tracks them across all clients, at per-client pricing that fits an MSP's existing compliance-as-a-service bundle instead of an enterprise quote.",
+ "build": {
+  "team": "1 technical founder for the MVP, plus a part-time regulatory reviewer (contract lawyer) for the rule library; a channel/partner manager after ~20 MSPs",
+  "months_to_mvp": 4,
+  "hardest_parts": [
+   "Maintaining a correct, versioned rule library across regimes (and US state laws later) without legal liability",
+   "PSA integrations (ConnectWise, Autotask, HaloPSA) and partner-marketplace listing requirements",
+   "Low usage frequency: incidents are rare per client, so value must be proven in onboarding and tabletops",
+   "Selling to MSPs who already juggle many vendor tools"
+  ]
+ },
+ "pricing": {
+  "model": "SaaS for MSPs: per regulated client per month, free internal use for the MSP, minimum monthly commitment; MSP marks up to its clients",
+  "entry_price": "$12 per regulated client per month, minimum $120/month (10 clients); first incident per client per year included",
+  "rationale": "An MSP can bundle it into a compliance-as-a-service package for ≈$25-$50/client/month margin; a 40-client MSP pays ≈$5.8k/year, far below enterprise quote-only tools and the €10k entry price SECJUR states for its own NIS2 platform. 60 MSPs × 40 clients ≈ $350k ARR.",
+  "comparables": [
+   {
+    "vendor": "SECJUR Digital Compliance Office (vendor's own guide; one vendor's price, not a market floor)",
+    "price": "from EUR 10,000",
+    "source": "https://www.secjur.com/blog/nis2-software"
+   },
+   {
+    "vendor": "Secureframe Fundamentals",
+    "price": "starting at $7,500/year",
+    "source": "https://secureframe.com/pricing"
+   },
+   {
+    "vendor": "Drata Foundation (AWS Marketplace)",
+    "price": "$15,000 list for 1-50 FTE companies",
+    "source": "https://aws.amazon.com/marketplace/pp/prodview-3xw4sjqv2pb22"
+   },
+   {
+    "vendor": "KnowBe4 Security Awareness Training",
+    "price": "$2.40/seat/month at 25-50 seats, 3-year term",
+    "source": "https://knowbe4.com/pricing-security-awareness-training"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten US MSPs with 10-50 staff whose client base includes tax/accounting, mortgage, auto-dealer or small RIA clients and that already sell a compliance or vCISO package; reached through the founder's industry contacts, MSP peer groups and communities (r/msp, MSP Discord/Slack groups), with two German/Austrian MSSPs as the NIS2 test.",
+  "channel": "Partner-led: direct founder outreach to MSPs, then listing in MSP distribution marketplaces and integrations with MSP compliance platforms; content and free regulatory-clock calculators for SEO.",
+  "wedge": "The Reg S-P smaller-entity compliance date (June 2026) and FTC 30-day rule give MSPs serving RIAs and non-banks a concrete new service to sell; a free per-incident deadline calculator converts to the paid multi-tenant tool."
+ },
+ "risks": [
+  "Bundling: ControlMap, Compliance Scorecard or Cynomi could add an incident-deadline module, and MDR vendors (e.g. Huntress) may bundle reporting help; the defence is depth of the rule library and PSA integration, and partnering early.",
+  "Low incident frequency per client makes the value feel abstract; churn risk if an MSP sees no incident in year one.",
+  "Legal liability if a computed deadline is wrong; needs disclaimers, lawyer-reviewed rules and E&O insurance.",
+  "Multi-jurisdiction scope (US federal, US states, EU member states) can explode maintenance cost for a solo founder.",
+  "MSP sales cycles and tool fatigue may be slower than expected for a non-revenue-generating tool."
+ ],
+ "riskiest_assumption": {
+  "assumption": "MSPs serving regulated small clients see incident-deadline tracking as a gap worth a per-client fee, rather than something they handle with a spreadsheet, counsel or the insurer's breach coach.",
+  "test": "Interview 15 MSP owners/vCISO leads from peer groups about their last client incident and who handled regulatory notice; show a clickable mock and a deadline-calculator spreadsheet; ask for a signed letter of intent at $12/client/month with a 3-month paid pilot.",
+  "success_signal": "At least 4 of 15 MSPs sign a paid pilot or LOI, and at least 8 of 15 report having handled a client incident with a regulatory deadline in the last 12 months."
+ },
+ "open_questions": [
+  "How often do small regulated clients actually have reportable incidents, and how often does the insurer's breach coach take over?",
+  "Will MSPs accept liability-adjacent work on regulatory notice, or push it to counsel?",
+  "Which partner marketplace or compliance platform would integrate or resell first?",
+  "Is US-only enough for the first year, or are EU MSPs the stronger early market?"
+ ],
+ "revision_log": []
+}

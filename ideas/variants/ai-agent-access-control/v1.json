@@ -1,0 +1,175 @@
+{
+ "opening_id": "ai-agent-access-control",
+ "slug": "hookwall",
+ "name": "Hookwall",
+ "one_liner": "One policy file enforced across Claude Code, Cursor, Copilot and Gemini CLI through their native hooks, with a team audit log, for small dev teams.",
+ "buyer": {
+  "role": "CTO or head of engineering (in larger teams, the platform/DevEx lead)",
+  "company_profile": "Software company with 10-100 developers using two or more AI coding agents at once (e.g. Claude Code and Cursor), connecting MCP servers to GitHub, databases and cloud consoles; no security team or one generalist; too small for $20k+ annual AI-security commits, but asked about AI tooling in customer security questionnaires."
+ },
+ "user": "Developers (who never notice it until a call is blocked or needs approval) and the engineering lead who edits the shared policy and reads the weekly audit digest.",
+ "problem": {
+  "summary": "Each coding agent has its own permission format, and teams use several. Rules are per-developer, pattern-based and bypassable by compound commands; MCP tools are often auto-approved wholesale, and nobody can answer which agent ran what. Enterprise AI-security platforms sell through large annual commits; Knostic is one of very few self-serve options. Small teams need one shared, enforceable policy and one audit trail across agents.",
+  "evidence": [
+   {
+    "claim": "Native permission rules are pattern-based, and argument rules can be bypassed with compound commands, pushing users towards sandboxing.",
+    "url": "https://code.claude.com/docs/en/permissions.md"
+   },
+   {
+    "claim": "Users ask for wildcard support for MCP tool permissions because configuring them per tool is inflexible.",
+    "url": "https://github.com/anthropics/claude-code/issues/6010"
+   },
+   {
+    "claim": "Claude Code documentation covers single-developer MCP setup but gives no governance guidance for teams adopting MCP at scale.",
+    "url": "https://github.com/anthropics/claude-code/issues/60246"
+   },
+   {
+    "claim": "An agent's approval system only gated dangerous shell commands; file writes, code execution, browser automation and memory writes ran without confirmation.",
+    "url": "https://github.com/NousResearch/hermes-agent/issues/21849"
+   },
+   {
+    "claim": "Teams deploying agents have no way to enforce which tools an agent may call at runtime, require approval for high-risk actions, or keep an audit trail of which agent did what.",
+    "url": "https://github.com/awiseguy88/AgentWiseAI/issues/110"
+   },
+   {
+    "claim": "Enterprise agent-security platforms sell through large annual commits, leaving small teams with few paid options besides Knostic.",
+    "url": "https://aws.amazon.com/marketplace/pp/prodview-xphnsjsox7vjw"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "In the past year every major coding agent opened a pre-tool-call hook or policy engine: Claude Code PreToolUse hooks (allow/deny/ask, MCP tools included), Cursor beforeShellExecution/beforeMCPExecution, GitHub Copilot preToolUse hooks for CLI and cloud agent, and Gemini CLI's TOML policy engine. A third party can now enforce policy inside each agent without a network proxy. OWASP published a Top 10 for Agentic Applications (Dec 2025), giving buyers a checklist to answer.",
+  "sources": [
+   "https://code.claude.com/docs/en/hooks",
+   "https://cursor.com/docs/agent/hooks",
+   "https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-hooks",
+   "https://geminicli.com/docs/core/policy-engine/",
+   "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "One YAML policy (tool allow/deny/ask, MCP server and tool allowlists, path and command rules, read-only mode) compiled into each agent's native hook or policy format",
+    "why": "Teams run several agents; one source of truth is the core value and avoids a proxy."
+   },
+   {
+    "feature": "Small local hook binary that evaluates calls by parsing the full command (shell AST), not string patterns",
+    "why": "Pattern-based native rules are bypassable by compound commands."
+   },
+   {
+    "feature": "Policy distribution via the repo (committed hook config) plus a CLI that installs user-level hooks on each laptop",
+    "why": "No MDM needed; fits how small teams already share config."
+   },
+   {
+    "feature": "Hosted audit log: who, which agent, which tool/MCP call, decision, with secrets redacted before upload; weekly digest email",
+    "why": "Answers 'which agent did what' and customer questionnaire questions."
+   },
+   {
+    "feature": "Starter policy packs mapped to OWASP agentic risks (no network egress tools in untrusted repos, no prod-credential MCP servers, etc.)",
+    "why": "Small teams have no one to write policy from scratch."
+   }
+  ],
+  "out_of_scope": [
+   "Network MCP gateway/proxy and credential vault",
+   "LLM-based prompt-injection detection",
+   "Custom agent frameworks (LangChain, Pydantic AI) in v1",
+   "SSO/SCIM and SIEM connectors until first larger customer asks",
+   "Endpoint discovery of unmanaged agents"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "Knostic Kirin",
+   "url": "https://www.knostic.ai/pricing",
+   "how_we_differ": "Closest rival: free up to 5 users, $15/user/month with audit logs. We compete on policy-as-code in the repo, shell-AST evaluation and covering headless agent runs, at a lower per-seat price."
+  },
+  {
+   "name": "Native agent permissions and managed settings (Claude Code, Cursor, Gemini CLI, Copilot)",
+   "url": "https://code.claude.com/docs/en/permissions.md",
+   "how_we_differ": "Free but one format per agent, pattern-based and with no shared audit log; we compile to them and add team audit."
+  },
+  {
+   "name": "Permit MCP Gateway",
+   "url": "https://docs.permit.io/permit-mcp-gateway/overview",
+   "how_we_differ": "Network proxy for MCP calls only; we also cover shell, file and built-in tools inside the agent, without rerouting traffic."
+  },
+  {
+   "name": "TrueFoundry MCP Gateway",
+   "url": "https://www.truefoundry.com/pricing",
+   "how_we_differ": "An AI/MCP gateway priced per user with request quotas; we are agent-side policy, not a gateway, and need no infrastructure change."
+  },
+  {
+   "name": "Docker MCP Gateway (open source)",
+   "url": "https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/",
+   "how_we_differ": "Free container isolation for MCP servers; no cross-agent policy or per-user audit without the enterprise version. Complementary."
+  },
+  {
+   "name": "Lasso Security / Pillar Security",
+   "url": "https://www.lasso.security/use-cases/ai-coding-assistants",
+   "how_we_differ": "Enterprise platforms bought through annual commits; we are self-serve and priced for 10-100 developer teams."
+  }
+ ],
+ "differentiation": "Policy as code that lives in the repo and is enforced by each agent's own hook system, so there is nothing to proxy and nothing to reroute. Commands are evaluated by parsing them, not by pattern matching. One audit log covers every agent the team uses, local and headless. It is self-serve and cheaper per seat than Knostic Team.",
+ "build": {
+  "team": "1 technical founder for the MVP; a second engineer after ~20 paying teams",
+  "months_to_mvp": 4,
+  "hardest_parts": [
+   "Keeping up with four agents' hook APIs, which change monthly and differ in semantics (e.g. Claude Code hook timeouts do not block a call)",
+   "Robust shell-command parsing across bash/zsh/PowerShell without false positives that make developers uninstall it",
+   "Making sure hooks cannot be trivially disabled by the agent itself (it can edit config files)",
+   "Redacting secrets from audit events before upload"
+  ]
+ },
+ "pricing": {
+  "model": "Per developer seat per month, self-serve card checkout; free tier for individuals",
+  "entry_price": "Free for up to 3 developers (local enforcement, 7-day audit); Team $9/developer/month with shared policy, 90-day audit log and digest",
+  "rationale": "Priced under Knostic Team ($15/user) and TrueFoundry Pro ($25/user) to win cost-sensitive small teams; a 30-developer team pays $270/month, an amount a CTO can expense without procurement. Low running cost: enforcement runs locally, only small audit events reach the server.",
+  "comparables": [
+   {
+    "vendor": "Knostic Kirin",
+    "price": "Free for 1-5 users; Team $15/user/month",
+    "source": "https://www.knostic.ai/pricing"
+   },
+   {
+    "vendor": "TrueFoundry MCP Gateway",
+    "price": "Pro $25 per user/month incl. 20K requests",
+    "source": "https://www.truefoundry.com/pricing"
+   },
+   {
+    "vendor": "Descope Agentic Identity Hub",
+    "price": "Pro from $249/mo; Growth from $799/mo",
+    "source": "https://www.descope.com/pricing"
+   },
+   {
+    "vendor": "Lasso Security",
+    "price": "AWS Marketplace annual commit $20,000 (GenAI Chatbots)",
+    "source": "https://aws.amazon.com/marketplace/pp/prodview-7ygm7pa3k5agg"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten 10-60 developer startups (often post-seed to Series B) that use both Claude Code and Cursor, connect MCP servers to GitHub and production databases, and have recently been asked about AI coding tools in a SOC 2 audit or customer security questionnaire. Found through GitHub issues and discussions about agent permissions, Hacker News and developer communities.",
+  "channel": "Open-source hook binary and policy packs on GitHub as the funnel; self-serve upgrade to Team for the shared policy and audit log; content (bypass write-ups of native permission rules) for reach.",
+  "wedge": "'Write your agent policy once': a free CLI that converts an existing Claude Code permissions file into Cursor, Copilot and Gemini CLI equivalents and shows which calls each agent would have allowed."
+ },
+ "risks": [
+  "Bundling: agent vendors keep improving native rules and managed settings, and Knostic already sells self-serve at $15/user; the cross-agent layer may become a commodity within 12-18 months.",
+  "Demand comes almost entirely from developers, who tolerate free tools but rarely pay; conversion from the open-source CLI to paid Team may be low.",
+  "Technical: hooks run inside the agent's process model and can be edited or skipped by the agent or the user; it is a guardrail, not a hard security boundary, and must be sold honestly as such.",
+  "Hook APIs are young and change often; four integrations mean constant maintenance for a solo founder.",
+  "Founder fit: the founder's depth is Windows detection and offensive testing; AI-agent internals and developer-tool UX must be learned (est. 1-2 months)."
+ ],
+ "riskiest_assumption": {
+  "assumption": "Engineering leads at 10-100 developer companies will pay ~$9/developer/month for one shared, cross-agent policy and audit log rather than rely on free native settings or Knostic's free tier.",
+  "test": "Publish a landing page and a free policy-conversion CLI; post a write-up of native-permission bypasses in developer communities; offer a $99 founding-team prepay for the first 3 months; run 15 interviews with engineering leads from sign-ups.",
+  "success_signal": "At least 5 teams pay the $99 prepay, or 10 of 15 interviewees name cross-agent policy plus audit as a current problem they already spend time on, within 2 weeks."
+ },
+ "open_questions": [
+  "How many small teams really run two or more coding agents at once, versus standardising on one (which removes the cross-agent value)?",
+  "Can hooks be made tamper-resistant enough on unmanaged laptops to satisfy an auditor?",
+  "Will Anthropic, Cursor or GitHub ship organisation-wide policy and audit dashboards to small-team tiers for free?",
+  "Is the true buyer the CTO (budget) or the developer (adoption), and does per-seat pricing fit either?"
+ ],
+ "revision_log": []
+}

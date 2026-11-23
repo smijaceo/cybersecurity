@@ -1,0 +1,175 @@
+{
+ "opening_id": "ai-agent-access-control",
+ "slug": "agent-hardening-sprint",
+ "name": "Agent Hardening Sprint",
+ "one_liner": "Fixed-fee assessment that red-teams a small company's coding agents and MCP servers, then installs an enforced tool policy and audit trail, with monthly upkeep.",
+ "buyer": {
+  "role": "CTO / VP Engineering, or the person who owns SOC 2 or ISO 27001 evidence",
+  "company_profile": "B2B SaaS company with 15-150 employees, developers using Claude Code, Cursor or Copilot with MCP servers wired to GitHub, cloud and production data; preparing for or maintaining SOC 2 and receiving customer questionnaires asking how AI coding tools are controlled; no in-house AppSec engineer."
+ },
+ "user": "The CTO and engineering leads who receive the findings report and policy pack; developers who work under the installed policy; the compliance owner who files the audit evidence.",
+ "problem": {
+  "summary": "Small companies adopted coding agents and MCP servers faster than they set rules for them. Permissions are per-developer, MCP tools are auto-approved, secrets reach tool inputs, and there is no audit trail. Enterprise platforms sell through large annual commits, and the leading MCP governance vendors publish no prices and offer no self-serve. These companies need someone to find the real exposure and set up controls they can show an auditor, without buying a platform.",
+  "evidence": [
+   {
+    "claim": "Teams adopting MCP in Claude Code get single-developer setup docs but no governance or security guidance for team adoption.",
+    "url": "https://github.com/anthropics/claude-code/issues/60246"
+   },
+   {
+    "claim": "Wildcard subagents inherited all 16 MCP servers including mail-send and file-delete, and every MCP call default-allowed because the validator did not exist.",
+    "url": "https://github.com/akaszubski/autonomous-dev/issues/1549"
+   },
+   {
+    "claim": "Passing secrets as raw input to an MCP tool is a security anti-pattern found in a widely used developer platform.",
+    "url": "https://github.com/backstage/backstage/issues/34728"
+   },
+   {
+    "claim": "Users want hooks to stop secrets leaving the machine to the LLM provider and to attackers.",
+    "url": "https://github.com/anthropics/claude-code/issues/39882"
+   },
+   {
+    "claim": "A static capability audit of an MCP server found tools with no operation filtering and SQL tools accepting arbitrary DDL/DML.",
+    "url": "https://github.com/oracle/mcp/issues/164"
+   },
+   {
+    "claim": "Leading MCP governance vendors (Runlayer, MintMCP) publish no prices and offer no self-serve, so small teams cannot evaluate or buy.",
+    "url": "https://www.truefoundry.com/blog/runlayer-pricing"
+   },
+   {
+    "claim": "External audit connectors and fine-grained authorization require Descope Growth at $799/mo; lower tiers keep audit for 1 week to 1 month.",
+    "url": "https://www.descope.com/pricing"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "All major coding agents now expose enforceable pre-tool-call hooks or policy engines (Claude Code, Cursor, Copilot, Gemini CLI), so a consultant can install real controls with free building blocks instead of selling a platform. OWASP's Top 10 for Agentic Applications (Dec 2025) gives auditors and buyers a reference list to ask about, and clouds (AWS AgentCore Policy GA, March 2026) are normalising per-tool-call authorization as an expected control.",
+  "sources": [
+   "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+   "https://code.claude.com/docs/en/hooks",
+   "https://cursor.com/docs/agent/hooks",
+   "https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-hooks",
+   "https://geminicli.com/docs/core/policy-engine/",
+   "https://aws.amazon.com/about-aws/whats-new/2026/03/policy-amazon-bedrock-agentcore-generally-available"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Inventory script (run by the client) that collects each developer's agent configs, permission rules, hooks and MCP server list, and each repo's CI agent workflows, with secrets stripped",
+    "why": "Most teams do not know which agents and MCP servers are in use; this scopes the engagement in a day."
+   },
+   {
+    "feature": "Hands-on prompt-injection red team: planted issues, poisoned files and malicious MCP tool output against the client's real agent setup, documented as reproducible findings",
+    "why": "Turns abstract risk into evidence a CTO acts on; uses the founder's offensive-testing skills."
+   },
+   {
+    "feature": "Policy pack installed through each agent's native hooks/managed settings (open-source hook scripts maintained by the founder), plus read-only mode for headless runs",
+    "why": "Delivers enforced controls using free building blocks, no platform licence."
+   },
+   {
+    "feature": "Audit logging from hooks into the client's existing log store, plus a control narrative mapped to OWASP agentic risks and SOC 2 change-management evidence",
+    "why": "The compliance owner gets something to file and show customers."
+   },
+   {
+    "feature": "Monthly retainer: policy updates as agents change, review of blocked-call logs, re-test after new MCP servers",
+    "why": "Recurring revenue and the data to later productise the most repeated work."
+   }
+  ],
+  "out_of_scope": [
+   "Building a hosted SaaS platform in year one",
+   "24/7 monitoring or incident response",
+   "Security of the client's own AI product (LLM app pentests) beyond the developer toolchain",
+   "Enterprise-wide rollouts over 300 developers",
+   "Formal SOC 2 audit or attestation"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "Knostic Kirin",
+   "url": "https://www.knostic.ai/pricing",
+   "how_we_differ": "A self-serve tool for scanning and policy; we deliver a tested setup, red-team findings and audit evidence, and can recommend Kirin where it fits."
+  },
+  {
+   "name": "Native agent permissions and managed settings",
+   "url": "https://code.claude.com/docs/en/permissions.md",
+   "how_we_differ": "Free but someone has to design, test and maintain the rules across agents; that is the service."
+  },
+  {
+   "name": "Pillar Security / Lasso Security",
+   "url": "https://www.lasso.security/use-cases/ai-coding-assistants",
+   "how_we_differ": "Enterprise platforms bought through annual commits; we are a fixed-fee engagement priced for small companies."
+  },
+  {
+   "name": "Runlayer / MintMCP",
+   "url": "https://www.mintmcp.com/pricing",
+   "how_we_differ": "Enterprise MCP gateways with unpublished, quote-only pricing; we set up controls without a new gateway."
+  },
+  {
+   "name": "General pentest and vCISO firms",
+   "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+   "how_we_differ": "Usually test the product, not the developer toolchain; we specialise in coding-agent and MCP exposure with a reusable policy kit."
+  }
+ ],
+ "differentiation": "A narrow specialist service with a productised kit: inventory, real prompt-injection tests against the client's own agents, and enforced controls installed through native hooks at a fixed price, with audit evidence the client can hand to a SOC 2 auditor. No platform to buy or gateway to run. The open-source policy kit, refined across engagements, becomes the seed of a later product.",
+ "build": {
+  "team": "1 technical founder (solo, bootstrapped); subcontract a second tester only once demand exceeds 2 engagements per month",
+  "months_to_mvp": 1,
+  "hardest_parts": [
+   "Building credibility in AI-agent security quickly, since the founder's track record is Windows detection and CTFs rather than LLM tooling",
+   "Making the red-team phase reproducible and safe on clients' real repos and credentials",
+   "Keeping the hook-based policy kit current across four fast-changing agents",
+   "Finding buyers without paid ads or an existing client base"
+  ]
+ },
+ "pricing": {
+  "model": "Fixed-fee assessment and setup, then optional monthly retainer",
+  "entry_price": "$3,500 fixed fee for up to 25 developers (2-week sprint: inventory, red team, policy pack, audit setup); retainer $400/month",
+  "rationale": "Well under enterprise annual commits (Lasso $20k, Pillar platform $175k) and comparable to a year of Descope Growth, but one-off and tied to evidence the buyer needs now. Three to four sprints a month plus a handful of retainers reaches a solo founder's income target in months, with near-zero running cost.",
+  "comparables": [
+   {
+    "vendor": "Lasso Security",
+    "price": "AWS Marketplace annual commit $20,000 (GenAI Chatbots), $50,000 (LLM gateway)",
+    "source": "https://aws.amazon.com/marketplace/pp/prodview-7ygm7pa3k5agg"
+   },
+   {
+    "vendor": "Pillar Security Platform (whole platform, not coding-agent specific)",
+    "price": "AWS Marketplace $175,000/12 months",
+    "source": "https://aws.amazon.com/marketplace/pp/prodview-xphnsjsox7vjw"
+   },
+   {
+    "vendor": "Descope Agentic Identity Hub",
+    "price": "Pro from $249/mo; Growth from $799/mo",
+    "source": "https://www.descope.com/pricing"
+   },
+   {
+    "vendor": "Knostic Kirin",
+    "price": "Team $15/user/month",
+    "source": "https://www.knostic.ai/pricing"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten 15-150 person B2B SaaS companies that use coding agents with MCP servers and are in a SOC 2 cycle or answering enterprise customer questionnaires about AI tooling; reached first through the founder's few industry contacts, then through referrals from SOC 2 readiness consultants and vCISOs who lack agent expertise.",
+  "channel": "Founder-led: public red-team write-ups and talks at local security meetups and BSides, partnerships with SOC 2 readiness consultants/vCISOs who resell the sprint, and LinkedIn outreach to CTOs at companies hiring for AI tooling.",
+  "wedge": "A free 30-minute 'agent exposure check' using the inventory script, ending with a one-page list of the three worst findings and a quote for the sprint."
+ },
+ "risks": [
+  "Services do not scale and depend entirely on the founder's time; productising the kit later may take longer than planned.",
+  "Credibility: buyers may prefer established AppSec firms; the founder must build public proof (write-ups, open-source kit) before deals close.",
+  "Bundling: as agent vendors ship organisation-wide managed policies and dashboards, the setup work shrinks and the buyer may do it alone.",
+  "Demand risk: small companies may treat agent security as a low priority until an incident or an auditor forces it.",
+  "Liability: red-teaming clients' real agents with production credentials could cause damage; needs scoped rules of engagement and insurance."
+ ],
+ "riskiest_assumption": {
+  "assumption": "CTOs or compliance owners at 15-150 person SaaS companies will pay a few thousand dollars now for coding-agent and MCP hardening, before an incident or explicit auditor requirement.",
+  "test": "Offer the free agent exposure check to 30 companies via the founder's contacts, two SOC 2 consultants and LinkedIn; run the checks with the inventory script and quote the $3,500 sprint at the end of each.",
+  "success_signal": "At least 8 checks booked and at least 2 signed sprints (or deposits) within 2 weeks."
+ },
+ "open_questions": [
+  "Do SOC 2 auditors and enterprise questionnaires already ask specific questions about coding agents, or is this still optional?",
+  "Which work is repeated across engagements and could become a product (variant v1 or v2)?",
+  "Will SOC 2 consultants partner or see this as competition?",
+  "How long will it take the founder to build recognised credibility in AI-agent security?"
+ ],
+ "revision_log": []
+}

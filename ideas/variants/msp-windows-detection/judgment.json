@@ -1,0 +1,42 @@
+{
+ "opening_id": "msp-windows-detection",
+ "scores": [
+  {
+   "variant": "v1",
+   "angle": "Multi-tenant SaaS for MSPs: per-server logon/RDP/admin-change audit with monthly client-ready access reports",
+   "buyer_budget": 3,
+   "defensibility": 2,
+   "founder_fit": 4,
+   "time_to_revenue": 3,
+   "risk": 2,
+   "note": "Strongest theme (gap 0.59, bundling medium) and ADAudit/Netwrix prices show SMBs pay for this; the insurer forcing function is asserted, not shown. Founder's WEF/Sysmon logon work fits exactly, but a 4-month multi-tenant SaaS that holds many MSPs' client logs is a costly supply-chain target and Huntress/Blumira/RMMs can bundle a logon report."
+  },
+  {
+   "variant": "v2",
+   "angle": "Content, not a platform: maintained detection-mapped Windows audit policy/Sysmon/WEF packs that cut SIEM volume, open-core plus fixed-fee tuning for MSSPs",
+   "buyer_budget": 2,
+   "defensibility": 2,
+   "founder_fit": 5,
+   "time_to_revenue": 5,
+   "risk": 3,
+   "note": "Best founder fit (pure Windows detection engineering, no hosting, no hires) and fastest revenue (2-month MVP, paid tuning from month one). Weaker budget: theme 16 bundling is high, WTP evidence is enterprise-heavy and flat-priced SMB SIEMs have no volume pain. Configs are copyable; value rests on maintenance and coverage proof. No customer data held, so lower technical/legal risk."
+  },
+  {
+   "variant": "v3",
+   "angle": "Self-serve file-share ransomware canaries for SMB IT generalists with session cut-off and guided restore",
+   "buyer_budget": 3,
+   "defensibility": 2,
+   "founder_fit": 3,
+   "time_to_revenue": 3,
+   "risk": 2,
+   "note": "Highest threat relevance (T1486/T1490) and a real incident forcing function, but bundling is high (Defender for Business attack disruption, NAS snapshots, Canarytokens free). Self-serve SMB acquisition without ad spend is slow for a solo founder, and a privileged auto-cut-off service carries liability on a false trigger or a miss."
+  }
+ ],
+ "winner": "v2",
+ "grafted": [
+  "[variant v1] Logon/RDP/admin-change evidence pack: curated event set plus per-client monthly access-review report queries for each supported SIEM, aimed at insurer and auditor requests",
+  "[variant v1] RMM-script deployment of packs and ADAudit Plus as a priced comparable/competitor for the logon use case",
+  "[variant v3] Ransomware-precursor content: shadow-copy deletion (vssadmin/wmic) detections and audited canary folders on file shares, delivered as config, not a running service"
+ ],
+ "reasoning": "v2 totals 17 against 14 for v1 and 13 for v3. It is the only variant a solo, bootstrapped founder can sell within weeks without hosting client logs or running a privileged service, and it sits squarely in the founder's WEF/Sysmon detection work. Its weakness is buyer budget: theme 16 bundling is high and many small MSSPs pay flat SIEM prices. Grafting v1's logon evidence pack ties it to the strongest theme (gap 0.59, medium bundling) and to buyers with a reporting need regardless of SIEM pricing. Grafting v3's shadow-copy and canary-folder detections adds the highest-threat-relevance use case as content, without v3's liability."
+}

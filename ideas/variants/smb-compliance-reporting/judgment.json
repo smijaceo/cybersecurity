@@ -1,0 +1,42 @@
+{
+ "opening_id": "smb-compliance-reporting",
+ "scores": [
+  {
+   "variant": "v1",
+   "angle": "Practitioner-delivered FTC Safeguards program (tailored WISP, tabletop, annual review) plus a 30-day FTC reporting clock for 1-20 person US tax, bookkeeping and mortgage-broker offices",
+   "buyer_budget": 4,
+   "defensibility": 2,
+   "founder_fit": 5,
+   "time_to_revenue": 5,
+   "risk": 3,
+   "note": "Clear forcing function in the input (16 CFR 314.4 30-day FTC notice; owner is the named Qualified Individual) and theme 12 gaps (no-IT firms lack a done-for-you program; platforms $7.5k-$15k). Services-first, 1-month MVP in the founder's Windows/M365 domain, sellable to a few contacts. Defensibility is low: free IRS template and $699 managed WISPs cap price, and delivery is copyable. Legal-advice risk on reportability is real but bounded by scope (one regime, prepare-not-decide)."
+  },
+  {
+   "variant": "v2",
+   "angle": "Multi-tenant incident-deadline SaaS for MSPs/MSSPs covering FTC, Reg S-P and NIS2/BSIG per regulated client",
+   "buyer_budget": 3,
+   "defensibility": 3,
+   "founder_fit": 3,
+   "time_to_revenue": 3,
+   "risk": 2,
+   "note": "Hits the input's multi-regime gap and the thesis's MSP channel; a versioned rule library plus PSA integrations is harder to copy. But MSP willingness to pay per client is asserted, not shown, and incidents are rare per client. Needs a contract lawyer, a 4-month build and three jurisdictions' maintenance; theme 50 bundling is medium and the named MSP compliance platforms are the likeliest to add it. Liability for a wrong deadline spans every client."
+  },
+  {
+   "variant": "v3",
+   "angle": "Self-serve German-language NIS2/BSIG three-stage BSI reporting tool for Mittelstand 'important entities'",
+   "buyer_budget": 4,
+   "defensibility": 2,
+   "founder_fit": 1,
+   "time_to_revenue": 2,
+   "risk": 2,
+   "note": "Strong statutory forcing function (BSIG s.32 24h/72h/1-month) and a large late-registering population, but the only price anchor is SECJUR's self-reported EUR 10,000 (flagged as one vendor's price). The founder has no German language or regulatory background, so the variant depends on finding a partner; over 20 vendors already advertise NIS2 and SECJUR includes BSI reporting. Slow, partner-led sales in a foreign market."
+  }
+ ],
+ "winner": "v1",
+ "grafted": [
+  "[variant v2] Audit-ready incident record (timeline, decisions, who approved, what was filed when) and an onboarding contact profile naming counsel, cyber insurer/breach coach and applicable state laws",
+  "[variant v2] Free FTC 30-day deadline calculator as top-of-funnel, MSP white-label as later channel, and SEC Reg S-P small RIAs (compliance date June 2026) as the next segment to test",
+  "[variant v3] Documented reportability reasoning and a one-page owner sign-off summary per incident, plus a preparedness escalation tree (who decides, who files, who calls the insurer)"
+ ],
+ "reasoning": "v1 totals 19 against 14 for v2 and 11 for v3. It is the only variant this solo, bootstrapped founder can sell within weeks: services-first, one regime with a statutory 30-day clock, buyers reachable through contacts and practitioner associations, and delivery in his Windows/M365 strengths. Its weakness is defensibility and price ceiling (free IRS template, $699 WISPs). v2's incident record and free deadline calculator strengthen the incident clock and give a cheap acquisition channel; its Reg S-P segment is kept as a test, not v1 scope. v3's documented reasoning and owner sign-off add the management-evidence angle without its German-market dependency."
+}

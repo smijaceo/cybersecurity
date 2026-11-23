@@ -1,0 +1,173 @@
+{
+ "opening_id": "msp-windows-detection",
+ "slug": "sharetripwire",
+ "name": "ShareTripwire",
+ "one_liner": "Self-serve ransomware tripwire for small-business Windows file servers: canary files catch encryption in seconds, cut off the attacking session and guide restore.",
+ "buyer": {
+  "role": "IT manager or sole in-house IT generalist (or the owner) at a small business",
+  "company_profile": "10-150 employee firm (architecture, engineering, legal, accounting, manufacturing) with 1-3 on-prem Windows file servers or a NAS-backed share, no SOC and often no EDR on servers; has seen peers hit by ransomware and cannot afford Varonis or Thinkst."
+ },
+ "user": "The same IT generalist, plus whoever receives the SMS/Teams alert out of hours.",
+ "problem": {
+  "summary": "Ransomware typically reaches file servers through one infected PC, encrypts shared folders and deletes shadow copies before anyone notices. File-server behaviour detection is enterprise-priced, deception tools cost thousands per year, and endpoint anti-ransomware on shares blocks legitimate writes like CAD exports. Small firms need cheap, low-false-positive early warning on their shares that tells them which machine is attacking and how to restore.",
+  "evidence": [
+   {
+    "claim": "A Server 2008 R2 file server was encrypted after ransomware spread from one PC; the malware deleted the shadow copies the admin hoped to restore from.",
+    "url": "https://serverfault.com/questions/874140/restore-shadow-copy-deleted-by-ransomware"
+   },
+   {
+    "claim": "Admins whose file-server folders were encrypted cannot tell which of several PCs with access was the infected source.",
+    "url": "https://serverfault.com/questions/671954/how-to-remove-crypto-ransomware-on-my-network-domain"
+   },
+   {
+    "claim": "A time-delayed Dharma variant hit a Windows Server 2019 box; the team asks how to detect it earlier.",
+    "url": "https://serverfault.com/questions/995772/detecting-money-ransomware-on-windows-server-2019"
+   },
+   {
+    "claim": "File-server behaviour detection from Varonis is quote-only and reviewers call it expensive, leaving little for 1-3 server shops.",
+    "url": "https://www.peerspot.com/questions/what-is-your-experience-regarding-pricing-and-costs-for-varonis-platform"
+   },
+   {
+    "claim": "Endpoint anti-ransomware on file shares produces false positives that block legitimate writes such as AutoCAD exports.",
+    "url": "https://community.sophos.com/products/intercept/f/feedback/94130/intercept-x-block-access-from-client-when-start-export-in-autocad"
+   },
+   {
+    "claim": "Deception/canary detection is costly for small teams; the median Thinkst Canary deal is about $9,900/year.",
+    "url": "https://vendr.com/marketplace/thinkst-canary"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "Microsoft's built-in Sysmon on Windows Server 2025 adds free, supported file and process telemetry a tripwire can use to name the attacking process and host, with no third-party driver. Insurers keep asking SMBs for stronger controls before renewal, and canary detection remains priced for larger teams.",
+  "sources": [
+   "https://learn.microsoft.com/windows/security/operating-system-security/sysmon/overview",
+   "https://techcommunity.microsoft.com/blog/windows-itpro-blog/native-sysmon-functionality-coming-to-windows/4468112",
+   "https://www.channele2e.com/news/channel-brief-smb-ai-gap-is-the-next-msp-opportunity",
+   "https://canarytokens.org/"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Windows service that plants hidden, plausibly named canary files and folders across shares and watches them for modify/rename/delete",
+    "why": "Canaries give near-zero false positives compared with entropy or rate heuristics that trip on CAD exports."
+   },
+   {
+    "feature": "On trigger: identify the SMB session, user and source host, and optionally close the session and disable the share write (one-click or automatic)",
+    "why": "Directly answers 'which PC is infecting the share' and stops spread."
+   },
+   {
+    "feature": "Out-of-band alerts by SMS, email and Teams with plain-language next steps",
+    "why": "The buyer has no SOC; alerts must be actionable by a generalist at 2 a.m."
+   },
+   {
+    "feature": "Snapshot guard: scheduled VSS snapshots plus an alert when shadow copies are deleted or vssadmin/wmic shadow commands run",
+    "why": "Shadow-copy deletion is the classic precursor; keeping a restore point is the cheapest recovery."
+   },
+   {
+    "feature": "Guided restore checklist that lists affected files by canary timestamps and the last clean snapshot",
+    "why": "Turns panic into a sequence a small team can follow."
+   }
+  ],
+  "out_of_scope": [
+   "Full EDR or malware removal",
+   "Backup storage (integrates with existing backup instead)",
+   "Linux/NAS-native agents in v1 (Windows file servers first)",
+   "Managed 24/7 response"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "Thinkst Canary",
+   "url": "https://vendr.com/marketplace/thinkst-canary",
+   "how_we_differ": "Network-wide deception hardware/software at a ~$9,900/yr median deal; we are file-share-only and priced per server for tiny shops."
+  },
+  {
+   "name": "Canarytokens (free)",
+   "url": "https://canarytokens.org/",
+   "how_we_differ": "Free tokens alert on open but do not watch mass encryption, name the SMB session or block it; we add response and restore."
+  },
+  {
+   "name": "ManageEngine DataSecurity Plus",
+   "url": "https://www.manageengine.com/data-security/",
+   "how_we_differ": "Full file-server auditing suite from $745/yr for 2 servers that the generalist must configure; we are a 10-minute install focused on one job."
+  },
+  {
+   "name": "Varonis Data Security Platform",
+   "url": "https://www.varonis.com/it/solutions/ransomware-prevention?hsLang=it",
+   "how_we_differ": "Enterprise, quote-only; we target firms Varonis never calls."
+  },
+  {
+   "name": "Microsoft Defender for Business",
+   "url": "https://www.microsoft.com/en-us/security/business/endpoint-security/microsoft-defender-business",
+   "how_we_differ": "EDR with automatic attack disruption for SMBs up to 300 users, but servers need an add-on and many small file servers run without it; we add share-level canaries and restore guidance alongside it."
+  },
+  {
+   "name": "Acronis Cyber Protect",
+   "url": "https://www.acronis.com/en/products/cyber-protect/purchasing/",
+   "how_we_differ": "Backup-centric anti-ransomware per device; we are detection and session cut-off on the share, usable alongside any backup."
+  }
+ ],
+ "differentiation": "One job done for the smallest buyers: canary-based detection on the file share that almost never fires falsely, names the attacking PC, cuts its session and walks a generalist through restore. Cheaper than Thinkst or Varonis, narrower and simpler than ManageEngine, and complementary to whatever backup or EDR they already have.",
+ "build": {
+  "team": "1 technical founder (Windows internals); contractor for a small web dashboard later",
+  "months_to_mvp": 3,
+  "hardest_parts": [
+   "Making canaries attractive to ransomware traversal order yet invisible and harmless to users, indexers and backup software",
+   "Safe automatic response: closing SMB sessions without disrupting legitimate users on a false trigger",
+   "Earning trust for a small vendor's service running with high privilege on file servers",
+   "Out-of-band alerting that still works when the network is under attack"
+  ]
+ },
+ "pricing": {
+  "model": "Self-serve per protected file server, monthly or annual, card payment; MSP pricing later",
+  "entry_price": "$39/file server/month (or $390/year), first server free for 30 days",
+  "rationale": "ManageEngine DataSecurity Plus starts at $745/year for 2 file servers and Thinkst's median deal is about $9,900/year; $390/year per server sits under the generalist's own sign-off limit while covering a solo founder's low running costs.",
+  "comparables": [
+   {
+    "vendor": "ManageEngine DataSecurity Plus",
+    "price": "file server auditing from $745/year for 2 Windows file servers",
+    "source": "https://www.manageengine.com/in/data-security/compare-editions.html"
+   },
+   {
+    "vendor": "Thinkst Canary",
+    "price": "median deal about $9,900/year",
+    "source": "https://vendr.com/marketplace/thinkst-canary"
+   },
+   {
+    "vendor": "Acronis Cyber Protect",
+    "price": "Standard from $85/year, Advanced from $129/year per device (list)",
+    "source": "https://www.acronis.com/en/products/cyber-protect/purchasing/"
+   },
+   {
+    "vendor": "Veeam Data Platform Foundation",
+    "price": "10-instance pack $1,630/12 months incl. support",
+    "source": "https://aws.amazon.com/marketplace/pp/prodview-5khxcjnxp7xoq"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten small firms (10-150 staff) with on-prem Windows file servers holding large working files - architecture, engineering, accounting - with one in-house IT person, found via sysadmin communities and IT-generalist forums; a few via the founder's contacts.",
+  "channel": "Self-serve download with free trial, content marketing (ransomware-on-file-server how-tos ranking for the questions in the evidence), r/sysadmin and Spiceworks community presence; MSP resale later.",
+  "wedge": "Free 'shadow-copy deletion and canary' check script that tells an admin in 5 minutes whether their file server would notice encryption tonight."
+ },
+ "risks": [
+  "Bundling is high: Defender for Business attack disruption, Synology immutable snapshots and backup vendors' ransomware detection all cover parts of this.",
+  "Self-serve SMB acquisition without ad spend is slow; the founder must rely on content and community.",
+  "A false-positive session cut-off or a missed detection during a real attack would destroy trust and invite liability claims.",
+  "Many small firms are moving files to SharePoint/OneDrive, shrinking the on-prem file-server market.",
+  "Ransomware operators may learn to skip or detect canary files."
+ ],
+ "riskiest_assumption": {
+  "assumption": "Small-business IT generalists will pay $39/server/month for file-share canaries when Defender, backups and free Canarytokens exist.",
+  "test": "Publish the free check script and a landing page with the price and a 'reserve founder pricing' paid deposit ($39); promote in r/sysadmin, Spiceworks and two IT-generalist newsletters for 2 weeks.",
+  "success_signal": "At least 500 script downloads and 15 paid deposits within 2 weeks, with at least half from firms of 10-150 employees."
+ },
+ "open_questions": [
+  "How many target firms still run on-prem file servers versus SharePoint?",
+  "How often do modern ransomware families touch canary-style files before the bulk of data?",
+  "Will MSPs, not end clients, be the real buyer here?",
+  "Which insurers accept canary detection as a control?"
+ ],
+ "revision_log": []
+}

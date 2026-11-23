@@ -1,0 +1,42 @@
+{
+ "opening_id": "ai-agent-access-control",
+ "scores": [
+  {
+   "variant": "v1",
+   "angle": "Self-serve per-seat SaaS: one policy file compiled into every coding agent's native hooks, with a hosted team audit log",
+   "buyer_budget": 2,
+   "defensibility": 1,
+   "founder_fit": 2,
+   "time_to_revenue": 2,
+   "risk": 2,
+   "note": "Head-on with Knostic Kirin, which the input shows already does in-agent policy across Cursor, Claude Code and Copilot, free to 5 users and $15/user. Both themes rate WTP 2 and bundling high; the questionnaire forcing function is asserted. A 4-month developer-tool build outside the founder's Windows/offensive depth, with conversion from free developers as the main bet."
+  },
+  {
+   "variant": "v2",
+   "angle": "Open-core GitHub Action for unattended CI agent runs: read-only default, taint downgrade, canary exfiltration check, per-repo paid dashboard",
+   "buyer_budget": 2,
+   "defensibility": 2,
+   "founder_fit": 3,
+   "time_to_revenue": 3,
+   "risk": 2,
+   "note": "Targets the one gap the input names explicitly (headless runs auto-approve all tool calls, issue 45) and avoids Knostic's per-seat space. 2-month MVP and injection demos suit an offensive tester. But no budget owner or forcing function is evidenced, early adopters are OSS maintainers who rarely pay, agent vendors can ship a CI safe mode, and a security Action next to CI secrets is a supply-chain target."
+  },
+  {
+   "variant": "v3",
+   "angle": "Founder-led fixed-fee service: inventory, prompt-injection red team, hook-based policy pack and audit evidence, then monthly retainer",
+   "buyer_budget": 3,
+   "defensibility": 2,
+   "founder_fit": 4,
+   "time_to_revenue": 4,
+   "risk": 3,
+   "note": "Sells to a named buyer (CTO/SOC 2 owner) with existing assessment budgets; input shows the self-serve gap (Runlayer/MintMCP quote-only, Descope audit only at $799/mo) and a team-governance gap (issue 60246). Uses the founder's offensive skills, 1 month to first sale, no hosted data. Services don't scale, AI-agent credibility must be built, and bundling shrinks setup work over time."
+  }
+ ],
+ "winner": "v3",
+ "grafted": [
+  "[variant v2] Headless/CI coverage in the policy pack: read-only default for CI agent runs, automatic downgrade when the job input is untrusted issue/PR text, and a planted canary secret that fails the run if it appears in tool input or output",
+  "[variant v2] Agent-workflow scanner: reads .github/workflows and flags agent steps triggered by untrusted events with write permissions or secrets; used in the inventory and, on public repos, as an outbound lead source",
+  "[variant v1] Hook scripts evaluate commands by parsing them (shell AST) instead of string patterns, and the kit keeps one YAML policy compiled into each agent's native hook/policy format as the path to a later product"
+ ],
+ "reasoning": "v3 totals 16 against 12 for v2 and 9 for v1. With bundling high and willingness to pay rated 2 in both themes, a per-seat SaaS (v1) collides with Knostic and native controls, and v2 lacks a paying buyer. v3 is the only variant a solo, bootstrapped founder can sell within weeks, using offensive-testing skills, to a buyer with an assessment budget, and it needs no hosted data. Grafting v2's headless/CI controls and workflow scanner covers the gap the input names explicitly and gives the founder an outbound lead source. Grafting v1's parsed-command evaluation and single compiled policy closes the documented compound-command bypass and keeps a product path open."
+}

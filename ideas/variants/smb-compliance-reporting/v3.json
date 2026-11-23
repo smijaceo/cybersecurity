@@ -1,0 +1,163 @@
+{
+ "opening_id": "smb-compliance-reporting",
+ "slug": "meldeklar",
+ "name": "Meldeklar",
+ "one_liner": "Self-serve NIS2/BSIG incident-reporting workflow for German 'important entities' with 50-250 staff: 24h/72h/1-month BSI reports drafted, timed and evidenced, from €149/month.",
+ "buyer": {
+  "role": "Managing director (Geschäftsleitung, personally accountable under the BSIG) or the IT lead / information-security officer acting for them",
+  "company_profile": "German mid-sized companies (Mittelstand) with 50-250 employees that became 'wichtige Einrichtungen' under the NIS2 implementation act in December 2025: manufacturers, logistics, food, waste management, digital providers and similar. They have a small IT team or outsource IT to a regional Systemhaus, no dedicated security staff, have (or should have) registered in the BSI portal, and are not ready to buy a €10k+ compliance platform."
+ },
+ "user": "The internal IT lead or the Systemhaus technician who handles an incident: opens the case, answers the significance questions, and prepares each BSI report for management sign-off.",
+ "problem": {
+  "summary": "German important entities must report significant incidents to the BSI in three stages (24h, 72h, one month), but small IT teams have no ready workflow: enterprise GRC offers this only as an add-on or configuration, NIS2 platforms start around €10k, and the BSI portal sits behind ELSTER-based company accounts with manual submission. Under time pressure they need to know whether an incident is 'significant', what each report must contain, and when it is due.",
+  "evidence": [
+   {
+    "claim": "The German BSIG requires an early report within 24 hours, a notification within 72 hours and a final report within one month to the BSI/BBK reporting office.",
+    "url": "https://www.gesetze-im-internet.de/bsig_2025/__32.html"
+   },
+   {
+    "claim": "NIS2 sets the 24h early warning / 72h notification / one-month final report cascade for essential and important entities.",
+    "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+   },
+   {
+    "claim": "Enterprise GRC offers NIS2 three-stage BSI reporting only as an add-on or configuration, not a ready workflow.",
+    "url": "https://www.secjur.com/blog/nis2-software"
+   },
+   {
+    "claim": "No tool drafts filings straight into national portals; BSI portal access runs through ELSTER-based company accounts.",
+    "url": "https://www.computerweekly.com/de/news/366636992/NIS2-Unternehmen-koennen-sich-registrieren-und-anmelden"
+   },
+   {
+    "claim": "Enterprise incident-decisioning tools are quote-only, with no self-serve product for small NIS2 firms.",
+    "url": "https://www.capterra.com/p/187954/RADAR/"
+   },
+   {
+    "claim": "European public bodies procure 24/7 services to shorten the time until an incident is discovered, assessed and notified.",
+    "url": "https://ted.europa.eu/en/notice/-/detail/792782-2026"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "Germany's NIS2 implementation act took effect on 6 December 2025 with no transition period. The federal government estimates almost 30,000 companies are affected, but only about 11,500 had registered with the BSI by the registration deadline, which suggests many in-scope firms are behind. Registration is two-step (ELSTER-based 'Mein Unternehmenskonto', then the BSI portal opened on 6 January 2026), and the same portal is the reporting channel for significant incidents with 24h/72h/1-month stages. SECJUR's own buyer's guide lists BSI reporting integration as a selection criterion and notes over 20 vendors advertising NIS2 compliance, mostly as broad platforms.",
+  "sources": [
+   "https://www.channelpartner.de/article/4142460/cybersicherheit-11-500-unternehmen-haben-pflicht-erfullt.html",
+   "https://www.reedsmith.com/our-insights/blogs/technology-law-dispatch/102lxfr/finally-germany-enacts-its-nis2-law/",
+   "https://www.secjur.com/blog/nis2-software"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Significance check (in German): a guided questionnaire based on the BSIG and the EU/BSI guidance on 'erheblicher Sicherheitsvorfall' that records the answers, the time of awareness and the reasoning.",
+    "why": "The first hours go to deciding whether to report at all; a documented reasoning protects management."
+   },
+   {
+    "feature": "Three-stage reporting clock with drafts of the early report, notification (initial assessment, indicators of compromise) and final report in the BSI's field structure, ready to paste into the portal.",
+    "why": "Ready workflow instead of GRC configuration; no portal API exists, so drafts are the realistic v1."
+   },
+   {
+    "feature": "Preparedness pack: registration checklist, role/contact list (who holds the ELSTER certificate, who signs), escalation tree and an annual tabletop scenario.",
+    "why": "Many firms registered late or not at all; the pack is the entry point before any incident."
+   },
+   {
+    "feature": "Management evidence: a tamper-evident incident log and a one-page board summary per incident.",
+    "why": "Management is personally accountable for the risk-management duties and must be able to show what was done."
+   },
+   {
+    "feature": "Systemhaus/MSSP mode: one partner account managing several client companies.",
+    "why": "Most Mittelstand firms rely on a regional IT service provider, which is the natural channel."
+   }
+  ],
+  "out_of_scope": [
+   "The full §30 BSIG risk-management catalogue (ISMS, supplier security, crypto policies)",
+   "Automated portal submission",
+   "Other EU member states' NIS2 regimes in v1",
+   "Legal advice on entity classification",
+   "Detection, SOC or MDR"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "SECJUR Digital Compliance Office",
+   "url": "https://www.secjur.com/",
+   "how_we_differ": "Full NIS2 compliance platform with BSI reporting workflow, from €10,000 per its own guide; we do only incident reporting and preparedness at a fraction of the price, and can sit beside it."
+  },
+  {
+   "name": "OneTrust Incident & Breach Response",
+   "url": "https://www.onetrust.com/manage-incident-and-breach-response-with-onetrust",
+   "how_we_differ": "Enterprise privacy suite with jurisdiction workflows; out of reach and overbuilt for a 120-person manufacturer."
+  },
+  {
+   "name": "BreachRx (Rex)",
+   "url": "https://www.breachrx.com/",
+   "how_we_differ": "US-centric enterprise IR coordination; no German-language BSI workflow aimed at the Mittelstand."
+  },
+  {
+   "name": "BSI portal and online form (free)",
+   "url": "https://www.computerweekly.com/de/news/366636992/NIS2-Unternehmen-koennen-sich-registrieren-und-anmelden",
+   "how_we_differ": "Accepts reports but does not decide significance, track the three deadlines or keep management evidence."
+  },
+  {
+   "name": "MDR / incident-response retainers",
+   "url": "https://ted.europa.eu/en/notice/-/detail/792782-2026",
+   "how_we_differ": "MDR providers include notification support in larger contracts; we serve firms without a retainer and can be white-labelled by smaller MSSPs."
+  }
+ ],
+ "differentiation": "A narrow, German-language tool for the one NIS2 duty that has a stopwatch: significance check, three BSI deadlines, drafted reports and management evidence, sold self-serve or through the regional Systemhaus for under €2,000 a year, instead of a €10k+ platform or an MDR contract.",
+ "build": {
+  "team": "1 technical founder + a German-speaking co-founder or contractor with NIS2/BSI compliance background (legal review of content); later one partner manager",
+  "months_to_mvp": 4,
+  "hardest_parts": [
+   "Getting the significance criteria and BSI report contents right and current as BSI guidance evolves",
+   "German-language product, sales and support; the solo founder would need a native-speaking partner",
+   "Data-protection expectations of German buyers: EU hosting, DPA, possibly on-premises option",
+   "Winning trust against established German consultancies and platforms"
+  ]
+ },
+ "pricing": {
+  "model": "SaaS subscription per company per month, annual billing; partner discount for Systemhäuser/MSSPs managing several clients",
+  "entry_price": "€149/month (billed annually, €1,788/year) per company up to 250 employees, including unlimited incidents and one tabletop template per year",
+  "rationale": "An order of magnitude below the €10k SECJUR states for its own platform and below SMB compliance platforms ($7.5k-$15k/year), so a managing director can approve it without procurement; narrow scope keeps support cost low. 300 companies ≈ €540k ARR.",
+  "comparables": [
+   {
+    "vendor": "SECJUR Digital Compliance Office (vendor's own guide; one vendor's price, not a market floor)",
+    "price": "from EUR 10,000",
+    "source": "https://www.secjur.com/blog/nis2-software"
+   },
+   {
+    "vendor": "Secureframe Fundamentals",
+    "price": "starting at $7,500/year",
+    "source": "https://secureframe.com/pricing"
+   },
+   {
+    "vendor": "Sprinto Starter (AWS Marketplace)",
+    "price": "$8,500 per 12 months, up to 25 employees",
+    "source": "https://aws.amazon.com/marketplace/pp/prodview-upzeowcpyofas"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten German manufacturers, logistics or food companies with 80-250 employees that are 'wichtige Einrichtungen', have one to three IT staff and no security officer, reached through two or three regional Systemhäuser and IHK NIS2 information events.",
+  "channel": "Partner-led through regional IT service providers and small MSSPs (white-label option), supported by German-language content on the BSI reporting stages and IHK/association webinars.",
+  "wedge": "A free 'Meldebereitschaft' (reporting readiness) check against the BSIG three-stage duty, converting to the paid tool; the many companies that registered late or not yet are the first target."
+ },
+ "risks": [
+  "Founder fit: the founder has no stated German language or German regulatory background, so this variant depends on finding a native-speaking partner.",
+  "Crowding and bundling: over 20 vendors advertise NIS2 compliance, and platforms like SECJUR already include BSI reporting; MDR retainers bundle notification support.",
+  "Regulatory: BSI guidance, reporting forms or a future portal API could change the product's scope, or the BSI could make the portal guide users well enough for free.",
+  "Low incident frequency may make a reporting-only tool feel like insurance; preparedness features must carry the value.",
+  "Liability if the significance check leads a customer to under-report."
+ ],
+ "riskiest_assumption": {
+  "assumption": "German important entities without a compliance platform will pay ~€150/month for a reporting-only tool rather than relying on their Systemhaus, the free BSI form or a broader platform.",
+  "test": "With a German-speaking partner, publish a German landing page and the free readiness check, and pitch 5 regional Systemhäuser plus 30 in-scope companies from public sector lists; ask for paid pilot commitments at the stated price.",
+  "success_signal": "At least 2 Systemhäuser agree to a paid white-label pilot or at least 5 companies commit to a paid annual plan within 2 weeks."
+ },
+ "open_questions": [
+  "How many significant incidents has the BSI received from important entities since December 2025, and how often are they mid-sized firms?",
+  "Will the BSI publish an API or structured upload for its portal, and when?",
+  "Can a non-German founder build credibility with German Mittelstand buyers?",
+  "Are Austrian and other member-state NIS2 regimes similar enough to expand cheaply?"
+ ],
+ "revision_log": []
+}

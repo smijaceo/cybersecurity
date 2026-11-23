@@ -1,0 +1,1502 @@
+[
+ {
+  "id": "github:460208388",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 31,
+  "title": "Badge request: GitHub Package Registry, NPM variants",
+  "body": ":clipboard: **Description** Recently, GitHub has launched a new beta feature: the [GitHub Package Registry (GPR)](https://github.com/features/package-registry)! :tada: It currently supports alternative registries for NPM, Docker, Maven, NuGet, and RubyGems. For this issue, I would like to focus specifically on the NPM registry variant of GPR. Ideally, Shields would support GPR support for all NPM-",
+  "url": "https://github.com/badges/shields/issues/3608"
+ },
+ {
+  "id": "stackexchange:security:9761",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 31,
+  "title": "HIPAA compliance without PII",
+  "body": "I have a web site where people fill medical syndrome questioners. They can see how their condition changes during the time period. I am not storing ANY PII information, just user name. I can store in encrypted (if I have to). My question is \u2013 Do I have to be HIPAA compliant? Remember NO PII. If I would store email address (encrypted) \u2013 will it change my regulatory situation? Thanks Aaron",
+  "url": "https://security.stackexchange.com/questions/9761/hipaa-compliance-without-pii"
+ },
+ {
+  "id": "stackexchange:security:43009",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 31,
+  "title": "ReverseProxy and PCI Compliance",
+  "body": "My company has a PCI compliant billing gateway and they expose a service for submitting credit card payment details. I am writing a (Single Page Application/end-to-end javascript) website for them that is on a different domain than this billing gateway so naturally calling this service from javascript in the client (browser) violates the same-origin policy. In the past, I have used proxies to get ",
+  "url": "https://security.stackexchange.com/questions/43009/reverseproxy-and-pci-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:887548",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 31,
+  "title": "Ansible enable audit logging",
+  "body": "I am looking for audit logging in Ansible. I am running my playbook as root, but i want to write in log who the local user is executing the playbook. Please help in enabling logs to show user.",
+  "url": "https://serverfault.com/questions/887548/ansible-enable-audit-logging"
+ },
+ {
+  "id": "stackexchange:security:173062",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 29,
+  "title": "what does \"HasSession\" means in bloodhound tool",
+  "body": "I'm exploring the Bloodhound Active Directory reconnaissance tool. There are few labels in this tool such as \"AdminTo, MemberOf, HasSession\" the first two is obvious to me. However, I didn't get the concept of \"HasSession\". Does it mean a user has RDP connection on that machine or executed something on that machine with psexec or totally something else?",
+  "url": "https://security.stackexchange.com/questions/173062/what-does-hassession-means-in-bloodhound-tool"
+ },
+ {
+  "id": "stackexchange:security:72764",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 29,
+  "title": "PCI Compliance and PayPal",
+  "body": "First, please forgive my ignorance. Until this week, the only \"credit card security\" I understood was how to hack systems and why to write PHP pages with the types of features I do (msqli, pdo, parameterized query, etc..). As per my involved ignorance, I will make this question as robust as I can, attempting to not over-complicate it. (Maybe too late now) I've checked every PCI Compliance Q on her",
+  "url": "https://security.stackexchange.com/questions/72764/pci-compliance-and-paypal"
+ },
+ {
+  "id": "serverfault:serverfault:208951",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 29,
+  "title": "iptables logging question",
+  "body": "I am wondering what the best approach should be in relation to handling logging of items within iptables. For example, I have a rule such as the following: $IPT -A BADTCP -p tcp -m tcp --tcp-flags ACK,FIN FIN -m limit --limit 5/min --limit-burst 5 -j LOG --log-prefix \"Denied ACK-FIN Scan: \" --log-ip-options --log-tcp-sequence --log-tcp-options --log-level 7 $IPT -A BADTCP -p tcp -m tcp --tcp-flags",
+  "url": "https://serverfault.com/questions/208951/iptables-logging-question"
+ },
+ {
+  "id": "hn:12801974",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 28,
+  "title": "Ask HN: IT Security",
+  "body": "I recently have been attending and researching anything and everything about IT security, primarily windows. Are there any books/resources/etc. that you would recommend for an individual who is passionate about learning? I have seen countless books on the subject, but I would rather not waste the limited time I have reading something that isn't helpful. I have a degree in Management Information Sy",
+  "url": "https://news.ycombinator.com/item?id=12801974"
+ },
+ {
+  "id": "hn:1812632",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 28,
+  "title": "Ask HN: Found security vulnerability at work. rebuked. was I wrong?",
+  "body": "Obviously this is a throwaway account. OK, so I have a question about security testing and whether or not I crossed a line... I work at a very small company and we have a test environment running on virtual machines firewalled off from the rest of the network running under another devs desk. I have to jump into another server first to get into this environment and the only sensitive data is our so",
+  "url": "https://news.ycombinator.com/item?id=1812632"
+ },
+ {
+  "id": "stackexchange:security:171131",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 28,
+  "title": "Online Diffie-Hellman Tool",
+  "body": "I stumbled upon this website which provides a service to generate Diffie-Hellman parameters online for free to the public. Surely using a website like this would be a bad idea to use in a production environment to generate the DH parameters instead of generating them yourself? Or does it actually make no difference where they come from?",
+  "url": "https://security.stackexchange.com/questions/171131/online-diffie-hellman-tool"
+ },
+ {
+  "id": "stackexchange:security:45695",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 28,
+  "title": "Using Selenium tool for xss scripts",
+  "body": "Ok, so i need to know can Selenium webdriver tool be used for testing xss vulnerabilities and exploits. If its possible, then pleasee provide me with some example or tutorial. Apologizes, if am wrong to ask this question.",
+  "url": "https://security.stackexchange.com/questions/45695/using-selenium-tool-for-xss-scripts"
+ },
+ {
+  "id": "stackexchange:security:22564",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 28,
+  "title": "Could a computer program be used to automate testing for trapdoors?",
+  "body": "Could a computer program given the source or object version of another program be used to automate testing for trapdoors/backdoors?",
+  "url": "https://security.stackexchange.com/questions/22564/could-a-computer-program-be-used-to-automate-testing-for-trapdoors"
+ },
+ {
+  "id": "serverfault:serverfault:303926",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 28,
+  "title": "How to Isolate PCI Compliance",
+  "body": "We currently process, but do not store, credit card data. We authorize the cards via a self developed application using the authorize.net API. If possible, we would like to limit all requirements of PCI that effect our servers (such as installing Anti-Virus) to an isolated separate environment. Is that possible to do while still maintaining compliance? If so, what would constitute sufficent isolat",
+  "url": "https://serverfault.com/questions/303926/how-to-isolate-pci-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:737860",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 28,
+  "title": "PCI Compliance: install Apache 2.4.17 on Ubuntu 14.04.3?",
+  "body": "I have a VPS running Ubuntu 14.04.3. The latest Ubuntu-supported version of Apache for this release is Apache 2.4.7. But the company for which I configured the server is seeking PCI compliance, and has been denied due to security vulnerabilities patched in Apache 2.4.14. The latest stable release of Apache is currently 2.4.17. Would it be advisable/viable for me to install Apache 2.4.17 on the ser",
+  "url": "https://serverfault.com/questions/737860/pci-compliance-install-apache-2-4-17-on-ubuntu-14-04-3"
+ },
+ {
+  "id": "github:225717629",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 27,
+  "title": "Security Review of TLS1.3 0-RTT",
+  "body": "# Introduction At the Eurocrypt/IACR TLS:DIV workshop on 2017-04-30, kindly facilitated by the Everest team, I presented the results of a security review of the TLS 1.3 0-RTT section. The security review was performed as part of the process of implementing TLS1.3 in [s2n](https://github.com/awslabs/s2n). The review focused on two known-issues: the absence of forward secrecy for all data, and the r",
+  "url": "https://github.com/tlswg/tls13-spec/issues/1001"
+ },
+ {
+  "id": "hn:9279326",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 27,
+  "title": "Ask HN: Best security practices for startups",
+  "body": "Hi, My partner and I plan to launch a healthcare-related web app in the coming months. We'll be hosting on AWS, with the database on an encrypted EBS volume, all conncetions over HTTPS and we should have two-factor authentication by SMS. We're mostly using the MEAN stack. I'm not technical, so I'd appreciate some guidance on best security practices that are relevant and feasible for a startup. I d",
+  "url": "https://news.ycombinator.com/item?id=9279326"
+ },
+ {
+  "id": "stackexchange:security:64795",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 27,
+  "title": "TrustWave PCI Compliance - OpenSSH",
+  "body": "First time 'asker' on here, but wanted to say thanks to how much I've used this site and reading answers to questions I've had! Anyway, lately I've been having issues with a customer of ours who's server is failing the PCI Compliance scan from Trustwave. The problem in particular is with OpenSSH being vulnerable and needing to update to the latest 4.4. However according to the CVE numbers they pro",
+  "url": "https://security.stackexchange.com/questions/64795/trustwave-pci-compliance-openssh"
+ },
+ {
+  "id": "serverfault:serverfault:862261",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 27,
+  "title": "Spamassassin logging scores",
+  "body": "I have the Spamassassin 3.4 + Ubuntu 14 + Qmail + Clamav. All are running OK. When a SPAM is detected, it is marked as [spam] and delivered to recipients. Readind the spamd log (mail.log for me), I grep these lines: Jul 14 17:32:36 mail spamd[2575]: spamd: identified spam (11.3/7.0) for foo.user@foodomain.com.br:89 in 1.9 seconds, 5217 bytes. Jul 14 17:32:36 mail spamd[2575]: spamd: result: Y 11 -",
+  "url": "https://serverfault.com/questions/862261/spamassassin-logging-scores"
+ },
+ {
+  "id": "github:529076990",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 26,
+  "title": "Provide an environment variable to disable IMDSv2 path",
+  "body": "### Is this related to a problem? The IMDS code has a 5-second timeout in fetching data from the IMDS, which includes trying to fetch the IMDSv2 session token. This can cause slowness when running inside of a Docker container, especially when multiple calls to the IMDS are involved in serial each of which uses a different EC2Metadata client. This seems to have been reported in #2972 I'm a HashiCor",
+  "url": "https://github.com/aws/aws-sdk-go/issues/2980"
+ },
+ {
+  "id": "hn:14637190",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 26,
+  "title": "Ask HN: Do I need a bug bounty program? Feeling a bit threatened by HackerOne",
+  "body": "I got a sales email recently from someone at Hacker One and they said that \"Teams who push code on a regular basis need continuous coverage on their attack surfaces. \" and that, \"If security is a priority for you and [COMPANY NAME], I want to make sure you and I connect.\" I understand how the sales process works, but I'm kind of starting to feel after the second cold email that this is a bit mafia",
+  "url": "https://news.ycombinator.com/item?id=14637190"
+ },
+ {
+  "id": "stackexchange:security:86241",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 26,
+  "title": "Linux random number compliance",
+  "body": "Not sure if this is the right forum, and I am pretty sure that his must have been answered before (I searched a lot but I haven't found a definitive answer). Do the Linux random number generators ( /dev/random and /dev/urandom ) comply to any industry standards? More specifically, if my application uses /dev/random , can I achieve compliance with regulations that require the employed random number",
+  "url": "https://security.stackexchange.com/questions/86241/linux-random-number-compliance"
+ },
+ {
+  "id": "stackexchange:security:7965",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 26,
+  "title": "HIPAA compliance in web forums?",
+  "body": "If a website has a private forum (membership is not free) where people may ask health questions and paid Doctors are around to answer them, do normal HIPAA compliance rules apply? In any forum, people are aware (or at least, they ought to be aware) that anyone else with access to the forums will see their posting. So I see little expectation of privacy, and people must be careful of the informatio",
+  "url": "https://security.stackexchange.com/questions/7965/hipaa-compliance-in-web-forums"
+ },
+ {
+  "id": "stackexchange:security:38863",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 26,
+  "title": "Is it possible to automate use of passphrase-encrypted private keys?",
+  "body": "Suppose I have a public/private keypair, which I would like to use to serve HTTPS from a webserver. The part I'm worried about is this: the private key is encrypted with a passphrase, so that if an attacker gains access to my webserver he doesn't get the private key. But I want some automated system to launch the webserver: say, monit to restart the server if it crashes, or puppet to deploy it to ",
+  "url": "https://security.stackexchange.com/questions/38863/is-it-possible-to-automate-use-of-passphrase-encrypted-private-keys"
+ },
+ {
+  "id": "github:520520769",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 25,
+  "title": "Pattern-Based XML Literals",
+  "body": "This proposal is a follow-up to the idea introduced in #110 and in [this blog post](https://anthonydgreen.net/2019/06/13/pattern-based-xml-literals-introduction/). I got the idea from Lucian, who got the idea from Jonathan, who got the idea from a VB user whose name is lost to history. Could also be part of a solution addressing #397. VB.NET's existing XML literal syntax was added in VB2008 to pro",
+  "url": "https://github.com/dotnet/vblang/issues/483"
+ },
+ {
+  "id": "stackexchange:security:49561",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 25,
+  "title": "Distributed IMAP-Dictionary-Attack-Tool?",
+  "body": "I have a client with a hacked IMAP-Account, and the attacker(s) made thousands of password-attempts, probably with a fixed set of passwords, from different IPs before they got in. After successful password guessing I see 10-15 different IPs connecting and pushing out spams, simply killing that little ol' post-fix server :(. After flushing 440.000 mails from the queue and resetting all passwords to",
+  "url": "https://security.stackexchange.com/questions/49561/distributed-imap-dictionary-attack-tool"
+ },
+ {
+  "id": "stackexchange:security:172020",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 25,
+  "title": "Metasploit automate actions when reverse shell connects",
+  "body": "I have used metasploit's netgear_wnr2000_rce to gain root shell access on a linux embedded device (no option for payloads). I am currently automating the process, and want to run a bash script when shell access is gained. I have investigated the metasploit AutoRunScript option however it appears that this only works for meterpreter shells. Is there any way to automatically run bash commands when c",
+  "url": "https://security.stackexchange.com/questions/172020/metasploit-automate-actions-when-reverse-shell-connects"
+ },
+ {
+  "id": "hn:17840003",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 24,
+  "title": "Ask HN: Security at my company is horrible, what can I do?",
+  "body": "I have joined a team working on maintaining and improving an old project around 4 months ago. The code is old and with horrible practices and no regard for security. I was OK-ish with it tho, since the app is B2B and can only be accessed via a whitelisted IP. Now we have been told that on our product road-map we will be managing clients private keys and sensitive data that is used to communicate w",
+  "url": "https://news.ycombinator.com/item?id=17840003"
+ },
+ {
+  "id": "stackexchange:security:14613",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 24,
+  "title": "Security web scanner tool for IIS/SQL Server",
+  "body": "I'm trying to do penetration testing of our ASP.NET web-site to check for security loopholes (specifically for SQL injections). We bought a commercial web scanner tool (IBM Rational AppScan), however it only does black box scanning for IIS and fails to detect SQL injections in certain scenarios. What we're looking for is a similar tool to AppScan, but it should also be able to 'attach' to an IIS p",
+  "url": "https://security.stackexchange.com/questions/14613/security-web-scanner-tool-for-iis-sql-server"
+ },
+ {
+  "id": "stackexchange:security:16072",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 24,
+  "title": "Tool to grab sensitive information from command lines",
+  "body": "Of the information entered on the command line (command name and arguments) have to be considered public (everyone can access it using commands like ps). Is there a known tool to automate this kind of information gathering? This tool would look regularly at the process list, would parse command lines and gather information like usernames and passwords. I am willing to run this kind of tool on my c",
+  "url": "https://security.stackexchange.com/questions/16072/tool-to-grab-sensitive-information-from-command-lines"
+ },
+ {
+  "id": "serverfault:serverfault:9558",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 24,
+  "title": "Remote Desktop Security",
+  "body": "I currently run Remote Desktop on my home computer (Vista Ultimate). It is always on so I can access things from my home computer when I am not there. I have a linksys firewall and use port forwarding to allow access to the correct ports. How secure is the RDP protocol? It seems to be as secure as the username/password combination you use but I am not sure. Is there a more secure alternative that ",
+  "url": "https://serverfault.com/questions/9558/remote-desktop-security"
+ },
+ {
+  "id": "serverfault:serverfault:579102",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 24,
+  "title": "Audit access to USB drives",
+  "body": "Is there a way to audit access to USB drives with built-in windows logging? We already do GP based auditing on our server's NTFS file system, but how do we extend that to workstations? There are no guaranteed of what kind of file system will be plugged into the workstations through USB. It may be NTFS or FAT32. The reason we need to do this is to have a record of potentially unauthorized copying o",
+  "url": "https://serverfault.com/questions/579102/audit-access-to-usb-drives"
+ },
+ {
+  "id": "serverfault:serverfault:785181",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 24,
+  "title": "Restarting audit on El Capitan",
+  "body": "I want to monitor process startup on El Capitan. Darwin MaeLucirdosiMac.home 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT 2016; root:xnu-3248.50.21~8/RELEASE_X86_64 x86_64 Below is my configuration. I have added the ,pc to line 2 bash-3.2# cat /etc/security/audit_control # # $P4: //depot/projects/trustedbsd/openbsm/etc/audit_control#8 $ # dir:/var/audit flags:lo,aa,pc minfree:5 naf",
+  "url": "https://serverfault.com/questions/785181/restarting-audit-on-el-capitan"
+ },
+ {
+  "id": "serverfault:serverfault:103058",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 24,
+  "title": "pci compliance on IIS 6.0",
+  "body": "I have a website that has just failed a PCI Compliance check - The report said that the site supported weak ciphers. I thought I'd already disabled that by turning off SSL 2.0 on the webservers. (It refuses to load a web page if I tell the browser to use only SSL 2.0) Is there anything else I need to disable or check? (It is a web farm, is there anything on the load balancer I need to look at - In",
+  "url": "https://serverfault.com/questions/103058/pci-compliance-on-iis-6-0"
+ },
+ {
+  "id": "serverfault:serverfault:181892",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 24,
+  "title": "IIS 6.0 PCI Compliance - \"Information Disclosure Vulnerability\"",
+  "body": "We're trying to pass PCI compliance on a few of our websites. After an outside scan, we still have this vulnerability: Synopsis : The remote web server is affected by an information disclosure vulnerability. Description : The remote host appears to be running a version of IIS which allows remote users to determine which authentication schemes are required for confidential web pages. That is, by re",
+  "url": "https://serverfault.com/questions/181892/iis-6-0-pci-compliance-information-disclosure-vulnerability"
+ },
+ {
+  "id": "stackexchange:security:17357",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 23,
+  "title": "PCI Compliance network scope",
+  "body": "I was wondering if anyone could clarify the scope of PCI compliance with regard to multiple networks. At present, there's one PCI compliant network to which another network connects via VPN. The PCI compliant network will eventually store customer data and credit card information. I read this article which suggests that as long as you don't store credit card numbers locally on the office network t",
+  "url": "https://security.stackexchange.com/questions/17357/pci-compliance-network-scope"
+ },
+ {
+  "id": "stackexchange:security:25096",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 23,
+  "title": "A bit confused about PCI compliance",
+  "body": "I have a client that wants me to build her a simple e-commerce site for her small quilt store. I'm going to use Stripe for the credit card handling. The only info I'm going to keep on my system is the user's name. Everything else will simply be funneled to Stripe. Because the payment processing will be handled offsite, am I required to be PCI compliant? I'm basically just worried about any hidden ",
+  "url": "https://security.stackexchange.com/questions/25096/a-bit-confused-about-pci-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:544448",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 23,
+  "title": "Simple Printer Audit Script",
+  "body": "I'm working on Windows Server 2008 R2 and I want to create a simple script to audit the printing carried out in the company. I would like these details to be audited in an text file in a share and for the script to be run after someone sends something to print: \"user name, computer name, document name and path, number of pages, printer name, date, time\" Any suggestions would be greatly appreciated",
+  "url": "https://serverfault.com/questions/544448/simple-printer-audit-script"
+ },
+ {
+  "id": "github:177388457",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 22,
+  "title": "[OEP 10] Disk-based transactions with record/index key granularity.",
+  "body": "Reference: https://github.com/orientechnologies/orientdb-labs/blob/master/OEP_10.md **Summary:** Disk-based transactions with record/index key granularity. **Goals:** Create transaction processing engine which supports following features: 1. Log records are created during transaction processing should be logged on disk not into memory to reduce memory consumption and avoid a risk of OOM and data c",
+  "url": "https://github.com/orientechnologies/orientdb-labs/issues/10"
+ },
+ {
+  "id": "stackexchange:security:14120",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 22,
+  "title": "Open Source tool to block email attachments",
+  "body": "Is there any way to stop users from sending attachments over Gmail or any web based email including private mail servers, if internet access is through a Linux box running Ip Tables/Squid etc. We are looking for a free/open source tool. Can this be achieved through Squid or IPTables/Shorewall?",
+  "url": "https://security.stackexchange.com/questions/14120/open-source-tool-to-block-email-attachments"
+ },
+ {
+  "id": "stackexchange:security:18338",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 22,
+  "title": "unix config scanner / compliance checks",
+  "body": "I'm looking for a tool, that scans unix operating systems for configuration issues. E.g. a script that finds PermitRootLogin yes in the ssh config file or with other words: a script that automates compliance checks. Since there are quite a few configuration files with security relevant configurations, that lie in all sorts of different places already differing from linux distribution to linux dist",
+  "url": "https://security.stackexchange.com/questions/18338/unix-config-scanner-compliance-checks"
+ },
+ {
+  "id": "serverfault:serverfault:502466",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 22,
+  "title": "Integrity checking vs. audit",
+  "body": "In RHEL5 Security Guide using of AIDE for checking software integrity is recomended. And also built-in RPM integrity checking functionality. But frequent checking can be resource demanding and rare might not be very useful. On the other hand, constant audit of crucial parts is relatively cheap. And it still ensures integrity to some extent. So basically my question is: in which cases integrity che",
+  "url": "https://serverfault.com/questions/502466/integrity-checking-vs-audit"
+ },
+ {
+  "id": "serverfault:serverfault:169188",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 22,
+  "title": "Apache Remote Logging",
+  "body": "I am investigating the possibility of logging Apache access & error_logs into one central repository, as opposed to each server having their own log files. Does anyone have any ideas or best practises on how to do this? Anyone can push me in the right direction? Steve",
+  "url": "https://serverfault.com/questions/169188/apache-remote-logging"
+ },
+ {
+  "id": "hn:19494700",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 21,
+  "title": "Ask HN: Laptops Security for a 40 Startups \u2013 What are you using?",
+  "body": "What tools are you using to protect your laptops (Mac/Linux and Windows 10)? As long as we were a small team, with mainly linux and some Macs, we were \"fine\".. However, now as we grow, I need to get a unified security platform to protect them all. Would appreciate if you can share what tools are you using for this purpose. Edit: Security needs - Identity (keys) as well as malware/virus protection.",
+  "url": "https://news.ycombinator.com/item?id=19494700"
+ },
+ {
+  "id": "hn:12387694",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 21,
+  "title": "Ask HN: Which security vulnerability feeds should I Monitor?",
+  "body": "Hi, I'm building a security vulnerability alerts service (details below), to use myself, and I'll make it available to others too. For server and client side (incl. Javascript) vulnerabilities, and dev/ops' operating systems and tools (e.g. IntelliJ, Chrome) vulnerabilities. Which vulnerability feeds would you recommend that I monitor, to get to know about \"all\" vulnerabilities and exploits? I've ",
+  "url": "https://news.ycombinator.com/item?id=12387694"
+ },
+ {
+  "id": "serverfault:serverfault:568256",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 21,
+  "title": "Audit files on a Debian box",
+  "body": "Is it possible to list every file on the system that does not belong to a package? or if they have been modified? Might need to use something like: apt-get, apt-files, dpkg-query, etc For context, imagine inheriting an old server that can't be formatted, and you want to check that every file is as it should be... I know this won't be the case when upgrading between versions of Debian, or after rem",
+  "url": "https://serverfault.com/questions/568256/audit-files-on-a-debian-box"
+ },
+ {
+  "id": "serverfault:serverfault:564259",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 21,
+  "title": "Ubuntu PCI-DSS Compliance Issue",
+  "body": "I'm trying to get PCI compliant and the PCI scanning company is flagging our Ubuntu 12.04 PHP 5.3.10-1ubuntu3.9 for CVE-2013-1635. According to http://people.canonical.com/~ubuntu-security/cve/2013/CVE-2013-1635.html the Ubuntu response is \"We do not support the user of open_basedir\" and all version have been marked as ignored. I'm at a loss for what to do here. I've pointed my scanning company to",
+  "url": "https://serverfault.com/questions/564259/ubuntu-pci-dss-compliance-issue"
+ },
+ {
+  "id": "hn:1844323",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 20,
+  "title": "Ask HN: website security app (sanity check)",
+  "body": "Hey HNers, I've received less than excited responses from friends about what I'm building and need a sanity check from you guys. I've been working on some automated security testing software that would crawl and scan sites for open web exploites (sql inject, xss, xsrf etc..). Initially I'd offer free scans to HNer sites and the bigger goal is to create a paid service. Would you use this service? W",
+  "url": "https://news.ycombinator.com/item?id=1844323"
+ },
+ {
+  "id": "stackexchange:security:155780",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 20,
+  "title": "PCI Compliance with scanned checks?",
+  "body": "Client want's to store scanned checks on his publicly accessible server that is NOT PCI compliant. I told him it's a bad idea. I need to present him with the laws / FTC guidelines / government regulations that specifically outline the requirements for storing scanned checks or else find the portion of the PCI DSS specifications that says: \"This means for checks too.\" Does anyone know what that is?",
+  "url": "https://security.stackexchange.com/questions/155780/pci-compliance-with-scanned-checks"
+ },
+ {
+  "id": "serverfault:serverfault:232937",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 20,
+  "title": "PCI-DSS Compliance",
+  "body": "We're developing a new piece of software (really just a single php script) that collects cardholder information and stores it in a MySQL database. Obviously we're taking every precaution with security (Firewall, Anti-Virus, SELinux, restrictive access to the machines), but we're trying to understand what steps we need to take next before taking it live. As the client is a Level 4 Merchant (no actu",
+  "url": "https://serverfault.com/questions/232937/pci-dss-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:901694",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 20,
+  "title": "Checking DMARC Non-compliance, 4 Examples",
+  "body": "We have set up DMARC and have been getting reports (policy is still set as \"none\"). I loaded them up in the DMARC XML-to-Human Converter (dmarcian.com) and most look great and 100% compliance. But we have gotten some from Google that showed up as Forwarder and some of those did not have DMARC compliance. I want to figure out if some of those are legit and things we need to work on, or they are cor",
+  "url": "https://serverfault.com/questions/901694/checking-dmarc-non-compliance-4-examples"
+ },
+ {
+  "id": "github:344959190",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 19,
+  "title": "ERC 1261:Membership Verification Token",
+  "body": "--- eip: 1261 title: Membership Verification Token (MVT) author: Chaitanya Potti (@chaitanyapotti), Partha Bhattacharya (@pb25193) type: Standards Track category: ERC status: Draft created: 2018-07-14 requires: 165, 173 discussions-to: https://github.com/ethereum/EIPs/issues/1261 --- ## Simple Summary A standard interface for Membership Verification Token(MVT). ## Abstract The following standard a",
+  "url": "https://github.com/ethereum/EIPs/issues/1261"
+ },
+ {
+  "id": "hn:5444402",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 19,
+  "title": "Ask HN: Submitted security flaw. Was pressed for employer.",
+  "body": "Recently I submitted a security hole to the creators of a large piece of medical software. This software provides access to sensitive information about patients, as well as privileges such as ordering prescriptions. The flaw I found, and reported, related to password storage. The passwords use a reversible algorithm which I wrote about on my blog [1]. After submitting the hole I was contacted by t",
+  "url": "https://news.ycombinator.com/item?id=5444402"
+ },
+ {
+  "id": "hn:5053590",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 19,
+  "title": "Ask HN: \"Java security exploit\" vs \"Python security exploit\"",
+  "body": "Google shows 2.51M results for \"Java security exploit\" versus 5.03M for \"Python security exploit\". Any thoughts about why so many news stories concentrate on Java's flaws compared to other languages? Is Python really more secure or better suited for enterprise development? Comments welcome.",
+  "url": "https://news.ycombinator.com/item?id=5053590"
+ },
+ {
+  "id": "stackexchange:security:86271",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 19,
+  "title": "What is the alternative tool for Honeypots?",
+  "body": "Nowadays the tools of Honeypots are not reliable as before, because an attacker with some knowledge can detect it and override its power. So if I want something with the same characteristics as the honeypot, what would I use ?",
+  "url": "https://security.stackexchange.com/questions/86271/what-is-the-alternative-tool-for-honeypots"
+ },
+ {
+  "id": "stackexchange:security:108469",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 19,
+  "title": "How to understand QEBEK (Honeypot Monitoring Tool)?",
+  "body": "I've been trying for some time to find recent or meaningful documentation regarding QEBEK, but all I've found is the Intro and KYT Paper for Installation 2010 . The links are just a formal introduction, and a very old installation guide (which unfortunately doesn't seem to work). I'd like to know what happened with QEBEK, since it's now about five years after the release of the KYT paper linked ab",
+  "url": "https://security.stackexchange.com/questions/108469/how-to-understand-qebek-honeypot-monitoring-tool"
+ },
+ {
+  "id": "stackexchange:security:179263",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 19,
+  "title": "PCI Compliance ISP requirements",
+  "body": "I am setting up a PCI compliance call center. I am wondering if my internet service provider has to be certified PCI compliant? I am only connecting to a cloud service that uses SSL and that cloud service is PCI compliant. Will I run into any issues if the ISP is not certified?",
+  "url": "https://security.stackexchange.com/questions/179263/pci-compliance-isp-requirements"
+ },
+ {
+  "id": "stackexchange:security:104352",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 19,
+  "title": "Automate certificate signing in Linux",
+  "body": "In a private network I wish to automate signing for new clients/servers. Something like this: New client is created (dockers & etc) The client create a new private key and a CSR The client send the CSR to a different server which sign it using the CA (???) Is there a solid solution for providing automated signing services?",
+  "url": "https://security.stackexchange.com/questions/104352/automate-certificate-signing-in-linux"
+ },
+ {
+  "id": "serverfault:serverfault:331015",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 19,
+  "title": "Survive a Software Audit",
+  "body": "I received a letter from Autodesk asking for a \"License Assessment\". I understand it as a software audit. They plan to do it remotely. The thing is, I'm a freelancer, I don't use any Software Asset Mangment software, and I just recently swap out my hard drive for a new one, and did a complete clean install, and then I received this request from Autodesk. There is almost nothing on my hard drive no",
+  "url": "https://serverfault.com/questions/331015/survive-a-software-audit"
+ },
+ {
+  "id": "serverfault:serverfault:294909",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 19,
+  "title": "Has anyone achieved Level 1 PCI compliance on AWS?",
+  "body": "All the FAQs, documents and statements published by AWS aside, did any Level 1 merchant actually achieve PCI compliance on AWS yet? We're evaluating moving some of our services to EC2/VPC, but our auditor is saying that AWS hadn't been cooperative when their other clients were trying to achieve compliance and had to go to Rackspace instead. The issues they ran into were, AWS isn't providing itemiz",
+  "url": "https://serverfault.com/questions/294909/has-anyone-achieved-level-1-pci-compliance-on-aws"
+ },
+ {
+  "id": "github:1347254973",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 18,
+  "title": "Fix frame injection bug in javadocs generated with Java 6 (and Java 7 prior u25) [LUCENE-5072]",
+  "body": "The Apache Infra / Security team posted to all committers: > Hi All, > > Oracle has announced [1], [2] a frame injection vulnerability in Javadoc generated by Java 5, Java 6 and Java 7 before update 22\\. > > [\\.\\.\\.] > > Please take the necessary steps to fix any currently published Javadoc and to ensure that any future Javadoc published by your project does not contain the vulnerability\\. The ann",
+  "url": "https://github.com/apache/lucene/issues/6136"
+ },
+ {
+  "id": "stackexchange:security:143347",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 18,
+  "title": "Fingerprint ssh attack tool",
+  "body": "I noticed a high volume of SSH password attempts on my server and installed the Cowrie honeypot to see what the attacker(s) would do if they actually got access. I've identified consistent patterns across many attacks that I believe are automated. Immediately upon identifying a working username/password, the remote system sends the following commands, with a 4 second delay between commands: uname ",
+  "url": "https://security.stackexchange.com/questions/143347/fingerprint-ssh-attack-tool"
+ },
+ {
+  "id": "stackexchange:security:33763",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 18,
+  "title": "rancid like tool for config files",
+  "body": "I need to be able to watch directories on our servers, and track changes to files as part of our audit compliance. I have adjusted auditd to watch the directories, and send all writes and attribute changes to syslog (which immediately forwards on to my splunk server) this is helpful, it shows who changed a file, but does not actually show you what was changed. If I do a \"vi app.conf\" and make a ch",
+  "url": "https://security.stackexchange.com/questions/33763/rancid-like-tool-for-config-files"
+ },
+ {
+  "id": "stackexchange:security:216211",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 18,
+  "title": "Using Selenium to automate data entry",
+  "body": "We have a report that generates ~100 rows daily and our customers have to enter the data into third-party software. We hoped that the software allows some kind of data upload so that our customers don't have to do the tedious data-entry, but it's not happening. So, we are thinking to provide a solution to our customer by implementing an automated data entry system utilizing Selenium (I'm very new ",
+  "url": "https://security.stackexchange.com/questions/216211/using-selenium-to-automate-data-entry"
+ },
+ {
+  "id": "serverfault:serverfault:237038",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 18,
+  "title": "Beginners security question",
+  "body": "I'm still pretty new to web development, and have a question about security. Every day I look at the \"Latest Visitors\" in my CPanel, and today there were some strange entries (one is pasted below). Not knowing any better, it looks to me like there is some site that's referring users to my site, for some reason. Can someone explain what these really are, and if it's something to be concerned about?",
+  "url": "https://serverfault.com/questions/237038/beginners-security-question"
+ },
+ {
+  "id": "serverfault:serverfault:16259",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 18,
+  "title": "Wireless Hotspot Security",
+  "body": "We have concerns about our staff using wireless hotspots to connect to our LAN. We use a VPN to connect to our network and they can then transfer data using a proprietary application. What little web browsing they do is directed to our proxy server and hence requires the VPN to be established first. So my question is this: How do we best secure the laptop from the time they start it to the time th",
+  "url": "https://serverfault.com/questions/16259/wireless-hotspot-security"
+ },
+ {
+  "id": "serverfault:serverfault:96986",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 18,
+  "title": "How to audit folder permissions",
+  "body": "Is there an easy way to list out the permissions granted to a folder (and sub folders) on a Windows 2003 server? I want to know which users/groups have what permissions for c:\\myfolder and all the folders within it. Thanks",
+  "url": "https://serverfault.com/questions/96986/how-to-audit-folder-permissions"
+ },
+ {
+  "id": "serverfault:serverfault:166123",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 18,
+  "title": "Server Temperature Logging",
+  "body": "As a bit of background, over the weekend the main air conditioning system for our server room went down. As I was out of town I was unable to stop in and check to make sure the auxiliary system was functioning properly. When I got to work this morning all the servers seem happy. The question I have, is there any sort of temperature logging functionality that runs on unix based servers? I would lov",
+  "url": "https://serverfault.com/questions/166123/server-temperature-logging"
+ },
+ {
+  "id": "hn:14666584",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 17,
+  "title": "Ask HN: Security tools used to test AWS infrastructure",
+  "body": "What security tools are you using to test your AWS infrastructure in 2017? Some people recommend Netflix SimianArmy, but I'd be happy to learn about other tools also.",
+  "url": "https://news.ycombinator.com/item?id=14666584"
+ },
+ {
+  "id": "stackexchange:security:35578",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 17,
+  "title": "Failed PCI-DSS Compliance | Submitting Evidence",
+  "body": "One of our web servers that is managed by a service provider (completely in their control, we have no login access) just failed PCI-DSS vuln. scan by TrustKeeper. The vuln scan detected the box as a Windows Server 2003 SP1 OS (extremely out of date). I submitted the report to our service provider (along with an angry email). They responded with a simple cropped screenshot of sysinfo screen showing",
+  "url": "https://security.stackexchange.com/questions/35578/failed-pci-dss-compliance-submitting-evidence"
+ },
+ {
+  "id": "stackexchange:security:44863",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 17,
+  "title": "Phone Privacy for Small Business",
+  "body": "I'm a small business operator and I'm looking for ways to provide security and reasonable privacy for my own business communications and communications of customers. All these businesses operate outside the U.S. and have no need to export their data to U.S. servers. All the smartphones I've seen seem awful. Before somebody says \"let me google that for you\", remember, we're talking a business with ",
+  "url": "https://security.stackexchange.com/questions/44863/phone-privacy-for-small-business"
+ },
+ {
+  "id": "stackexchange:security:140088",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 17,
+  "title": "Why can't scanners usually detect stored XSS? Is there a way to automate the detection of stored (persistent) xss,?",
+  "body": "I'm desperately looking for tools, preferably with some guide, also preferably open-source, to detect stored xss vulnerabilities. It is observed that a handful of them doesn't give the expected results with stored XSS. I have tried with ZAP Proxy and xsser , but only found documentation on reflected XSS for those tools. For stored XSS the \"injected\" page may be different from the vulnerable page. ",
+  "url": "https://security.stackexchange.com/questions/140088/why-cant-scanners-usually-detect-stored-xss-is-there-a-way-to-automate-the-det"
+ },
+ {
+  "id": "serverfault:serverfault:271000",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 17,
+  "title": "Exchange 2010 mailbox actions audit",
+  "body": "Can somebody please link me to or provide me with instructions on how to enable auditing on all Exchange 2010 mailboxes so we can view when somebody accesses a mailbox that they are not the owner of. Additionally, what sort of performance impact will this have on an environment with 200 mailboxes? How much disk space will these logs potentially use? Also, how can I specify exactly where I want the",
+  "url": "https://serverfault.com/questions/271000/exchange-2010-mailbox-actions-audit"
+ },
+ {
+  "id": "serverfault:serverfault:558994",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 17,
+  "title": "PHP and PCI Compliance",
+  "body": "I have a web server that needs to pass a PCI compiance scan by ControlScan. Everything is good except for a scan they did of the PHP version. I believe I have the latest version that CentOS provides. Here's what they had to say: THREAT REFERENCE Summary: vulnerable PHP version: 5.2.6 Risk: High (3) Port: 80/tcp Protocol: tcp Threat ID: web_prog_php_version <---REALLY LONG LIST OF PHP Vulnerabiliti",
+  "url": "https://serverfault.com/questions/558994/php-and-pci-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:184230",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 17,
+  "title": "Apache mod_ssl configuration for PCI compliance",
+  "body": "I need to ensure PCI compliance by limiting mod_ssl to SSLv3 and TLSv1, and ensuring long keys. I've tried the following configuration, but certain combinations of SSLv2 seems to still be valid: SSLCipherSuite HIGH:MEDIUM:!aNULL:+SHA1:+MD5:+HIGH:+MEDIUM What should the SSLCipherSuite configuration look like to completely disable SSLv2 and meet the PCI requirements?",
+  "url": "https://serverfault.com/questions/184230/apache-mod-ssl-configuration-for-pci-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:276039",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 17,
+  "title": "Compliance/e-discovery - message and SMS text archiving",
+  "body": "I work in the financial trading industry and have a forthcoming regulatory requirement to begin archiving electronic communications. This includes social media, instant messaging (e.g. AIM and Yahoo Messenger) and SMS/text messages. We have a good email archiving solution using MailArchiva running with Microsoft Exchange. It seems as though the social media side of things and instant messaging are",
+  "url": "https://serverfault.com/questions/276039/compliance-e-discovery-message-and-sms-text-archiving"
+ },
+ {
+  "id": "serverfault:serverfault:422529",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 17,
+  "title": "Mod_security Logging",
+  "body": "Im trying to run mod_security as standalone service with nginx as reverse proxy everything works fine except logging. Mod_security logs reverse proxys ip addres instead of clients ip address. I would appreciate if someone can help. The following is an example of logfile where mod_security is logging 127.0.0.1 instead of clients ip address. 2012/08/29 14:18:13 [info] 206862#0: [client 127.0.0.1] Mo",
+  "url": "https://serverfault.com/questions/422529/mod-security-logging"
+ },
+ {
+  "id": "serverfault:serverfault:541054",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 17,
+  "title": "Is IIS Advanced Logging faster than ODBC logging?",
+  "body": "I believe ODBC logging is slowing my website down. I read that IIS Advanced Logging can give me what I need with the Log Parser (I think). Is the Advanced Logging worth the time to implement? Will it be a lot faster than ODBC logging? Is LogParser the same as IIS Advanced Logging? edit: can anyone tell me why I'd want to use this, http://blogs.iis.net/bills/archive/2007/05/01/building-an-iis7-sql-",
+  "url": "https://serverfault.com/questions/541054/is-iis-advanced-logging-faster-than-odbc-logging"
+ },
+ {
+  "id": "github:473790395",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 16,
+  "title": "Enhancement idea: A different location proposal for administrators seems sensible",
+  "body": "If it is possible to configure the setup in a way that it may distinguish administrative permissions from normal user permissions then it should be considered to propose a more central target location with common access rather than a user-specific AppData subfolder. If this automatic detection is not viable (not possible, too expensive or simply unwanted) then perhaps an additional setup step or c",
+  "url": "https://github.com/fesch/Upla/issues/2"
+ },
+ {
+  "id": "stackexchange:security:25550",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 16,
+  "title": "PCI compliance can prevent fines?",
+  "body": "We're working really hard to achieve PCI compliance for a project and will likely be spending hundreds of dollars each month, but I was wondering what if, god forbid, something unlikely happens and there is a breach somehow, do we still pay for the \"inquiries\" and the exposed card holder data although we were PCI compliant? I'm just considering the worst case scenario, because if companies like So",
+  "url": "https://security.stackexchange.com/questions/25550/pci-compliance-can-prevent-fines"
+ },
+ {
+  "id": "serverfault:serverfault:328968",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 16,
+  "title": "Domain controller audit log",
+  "body": "I am part of an internal software development group for an enterprise. We are being asked to build an Active Directory management web application. 1 of the primary reasons is the need to generate audit logs for operations that users do such as creating/deleteing objects, updating attributes, adding/removing members, etc. My initial position is that all this functionality is already available in so",
+  "url": "https://serverfault.com/questions/328968/domain-controller-audit-log"
+ },
+ {
+  "id": "serverfault:serverfault:929938",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 16,
+  "title": "Password change audit on solaris",
+  "body": "Is it possible for the Solaris audit sub system to log all password resets for local Solaris accounts? I can't find anything in Oracle's docs, or through general googling, so I'm curious whether this can be done, or if this is a technical limitation of the operating system.",
+  "url": "https://serverfault.com/questions/929938/password-change-audit-on-solaris"
+ },
+ {
+  "id": "serverfault:serverfault:731657",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 16,
+  "title": "PCI compliance Apache versions",
+  "body": "We are working with current version of Apache 2.4. 6 available in a Centos 7 repos. Installed with yum. and we are dealing with the PCI compliance and the report says: IP Address: x Host: x Path: THREAT REFERENCE Summary: vulnerable Apache version: 2.4.6 Risk: High (3) Port: 443/tcp Protocol: tcp Threat ID: web_server_apache_version Details: Apache HTTP Server mod_proxy_fcgi Response Handling Vuln",
+  "url": "https://serverfault.com/questions/731657/pci-compliance-apache-versions"
+ },
+ {
+  "id": "serverfault:serverfault:375183",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 16,
+  "title": "PCI Compliance SSL Certificate Cannot Be Trusted fail",
+  "body": "The server is a CentOS box with the default LAMP stack running. A PCI scan lists this as a fail: SSL Certificate Cannot Be Trusted https (443/tcp) Severity: Medium Notes: none We don't actually have an SSL cert, nor do we attempt to use SSL on this box. Is it just a case of closing port 443? If so, what's the best way to go about that, Apache conf? Update I have commented out Listen 443 from /etc/",
+  "url": "https://serverfault.com/questions/375183/pci-compliance-ssl-certificate-cannot-be-trusted-fail"
+ },
+ {
+  "id": "serverfault:serverfault:416207",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 16,
+  "title": "IIS 408 Logging",
+  "body": "We have some web systems that in the past have experienced HTTP 408 response codes when making a request. They can happen at any time, there doesn't seem to be any pattern to them. The problem we have is that the client request goes through a TMG gateway, and IIS never logs the 408. The last request I see is a 200, and subsequently a client received a 408. Do 408's make it to IIS logs, or are 408'",
+  "url": "https://serverfault.com/questions/416207/iis-408-logging"
+ },
+ {
+  "id": "hn:4687889",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 15,
+  "title": "Ask HN: Dropbox security bug?",
+  "body": "I had always thought that my Dropbox shared folders required an invitation, to see the files, or at least I could copy the invitation link and send it directly to someone, who would then have to register to see the folder and files. But no, apparently if I send a link to a folder (\"Copy link to this folder\"), they can go straight in and download anything they like without having to register at all",
+  "url": "https://news.ycombinator.com/item?id=4687889"
+ },
+ {
+  "id": "serverfault:serverfault:348110",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 15,
+  "title": "HAProxy and Stunnel PCI Compliance",
+  "body": "I am setting up HAProxy to load balance between two web servers. Some of the pages on the site require SSL. Stunnel is handling the https connections and passing them off to haproxy (Stunnel contains the cert). HAProxy will hand off requests to the web servers using http. Will containing the web servers and haproxy in an internal network be enough to be PCI compliant? Is there anything I need to w",
+  "url": "https://serverfault.com/questions/348110/haproxy-and-stunnel-pci-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:690378",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 15,
+  "title": "How to use Group Policy to force user compliance",
+  "body": "I need recommendations for using group policy to restrict a user's computer/network access until the user takes an action, in this case acknowledging he has read an acceptable use policy. The user will be in a group containing users who have not complied. Upon completion he will be removed. What are good ideas for using Group Policy to limit what this user can do, or to annoy them with popups, to ",
+  "url": "https://serverfault.com/questions/690378/how-to-use-group-policy-to-force-user-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:993803",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 15,
+  "title": "Can anyone purchase a SSL certificate?If so what is it's significance in identifying phishing?",
+  "body": "I have read a lot that a phishing site will not be having an SSL certificate installed.As far as I know, anybody can purchase an SSL certificate and install it in their website, irrespective of the site being genuine or fraud. In this scenario, what is the role of SSL certificates in identifying phishing ?",
+  "url": "https://serverfault.com/questions/993803/can-anyone-purchase-a-ssl-certificateif-so-what-is-its-significance-in-identif"
+ },
+ {
+  "id": "serverfault:serverfault:874140",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 15,
+  "title": "Restore Shadow Copy Deleted by Ransomware",
+  "body": "I got hit by the latest version of Crysis ransom ware on 14/09. I was lucky enough to pull the cable on the infected PC before it could spread to all servers on my network. However, it did spread to a file server (Server 2008 R2). The server has been taken offline and The malware managed to deleted the shadow copies. Is there a way to recover deleted shadow copies- I need to restore from 13/09? Th",
+  "url": "https://serverfault.com/questions/874140/restore-shadow-copy-deleted-by-ransomware"
+ },
+ {
+  "id": "serverfault:serverfault:25244",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 15,
+  "title": "IIS logging troubleshooting",
+  "body": "We've got an IIS server that hosts about a dozen small websites. A couple of the websites do not log activity. We've gone into the IIS Admin console and each website is configured to log daily into Drive:\\logs\\w3svcXXXX\\ where XXXX is the numberic site ID. We've stopped/started the websites in question, and even restarted the IIS Service. But we do not get any log files. We've looking the the Serv",
+  "url": "https://serverfault.com/questions/25244/iis-logging-troubleshooting"
+ },
+ {
+  "id": "serverfault:serverfault:408461",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 15,
+  "title": "MySQL binary logging",
+  "body": "My server is telling my that binary logging is disabled. When I do a mysqladmin variables , I see this: log_bin | OFF . This is my configuration file: [mysqld] # These are some standard (Plesk) options needed: datadir = /var/lib/mysql socket = /var/lib/mysql/mysql.sock user = mysql old_passwords = 1 # Some general options: default_storage_engine = MyISAM # We want to make sure eventual data loss i",
+  "url": "https://serverfault.com/questions/408461/mysql-binary-logging"
+ },
+ {
+  "id": "github:491558523",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 14,
+  "title": "The kubelet /stats/summary is too expensive on windows",
+  "body": "**What happened**: Collect host and container information via kubelet stats/summay. By looking the kubelet code ,it's collected by cadvisor and the stats/summary request is kept within 50 ms. But the implementation in the Windows environment is very cumbersome\u3002First it will get all the pods managed by kubelet \uff0cand call docker stats request one by one (very very expensive) This is my set of test da",
+  "url": "https://github.com/kubernetes/kubernetes/issues/82522"
+ },
+ {
+  "id": "hn:2976216",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 14,
+  "title": "Ask HN: Block based cloud storage application. Promising - or not?",
+  "body": "I've built a fairly complete prototype of a block-level virtual disk backed by commodity cloud storage. It provides robust, efficient, zero-maintenance offsite storage ie. it delivers data security. It works by implementing a massive virtual disk volume (up to 256 Terabytes) formatted with the platform filesystem-of-choice - NTFS/Windows only at this stage. Block updates are encrypted and compress",
+  "url": "https://news.ycombinator.com/item?id=2976216"
+ },
+ {
+  "id": "hn:2873597",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 14,
+  "title": "Ask HN: What security issues should I be worried about with Node.js?",
+  "body": "I'm thinking about writing a website in Express.js with MongoDB. What types of concerns do people have and how much of a threat is Server Side Javascript Injection?",
+  "url": "https://news.ycombinator.com/item?id=2873597"
+ },
+ {
+  "id": "stackexchange:security:51062",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 14,
+  "title": "what freeware tool for java source code review?",
+  "body": "I need freeware tool for source code review for my application which used WebSphere Portal and Java as technology. Please provide me relevant information or links regarding this.",
+  "url": "https://security.stackexchange.com/questions/51062/what-freeware-tool-for-java-source-code-review"
+ },
+ {
+  "id": "stackexchange:security:153346",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 14,
+  "title": "OpenSSL version causes PCI Compliance failure",
+  "body": "We have a client on AMI Linux (Amazon), which is currently using OpenSSL 1.0.1k-15.99. As far as I can tell Amazon is very good about backporting security patches as per this page: https://alas.aws.amazon.com/ And they have stated in more than one place that they in fact do and will continue to do so per this thread: https://forums.aws.amazon.com/thread.jspa?messageID=759633#759633 The PCI complia",
+  "url": "https://security.stackexchange.com/questions/153346/openssl-version-causes-pci-compliance-failure"
+ },
+ {
+  "id": "stackexchange:security:194368",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 14,
+  "title": "SOC 2 audit for small business (6 employees) with no IT department",
+  "body": "One of our clients is demanding that we complete a SOC 2 Type II audit. There is no way we will meet the standard, and, considering we only handle publicly available data, it is ridiculous that they are asking for one. We're talking about 6-8 Excel files per year that represent a very small but critical part of our business. Unfortunately, we have no choice but to comply. I am looking for some gui",
+  "url": "https://security.stackexchange.com/questions/194368/soc-2-audit-for-small-business-6-employees-with-no-it-department"
+ },
+ {
+  "id": "stackexchange:security:24849",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 14,
+  "title": "What is the most common default security setting on most consumer and small business Wi-Fi routers?",
+  "body": "I am writing a paper right now which involves Wi-Fi security (I'll spare you the details). A major argument in this area depends on the assertion that Wi-Fi routers come defaulted as open networks (ie no encryption of any sort). Basically the argument is that since many users are ignorant of how to set up an AP properly, whatever the default setting is should be assumed as the permanent state of c",
+  "url": "https://security.stackexchange.com/questions/24849/what-is-the-most-common-default-security-setting-on-most-consumer-and-small-busi"
+ },
+ {
+  "id": "serverfault:serverfault:171918",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 14,
+  "title": "Capistrano security",
+  "body": "We are using Capistrano in some systems as a deploy system. The new sysadmin we have says that our setup is really dangerous and I would like to know how to fix it. We have a deploy user called \"foo\" which we use to do the deployment\": cap deploy This foo user is able to restart apache, clean tmp files and so on. The problem is that if someone steals our private ssh key and acces to our machines a",
+  "url": "https://serverfault.com/questions/171918/capistrano-security"
+ },
+ {
+  "id": "serverfault:serverfault:385401",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 14,
+  "title": "PCI Compliance Scans",
+  "body": "I'm hoping to find a piece of software to assist me in catching PCI compliance failures in advance of the actual ASV scans. I would much prefer to run the scans against myself before I request another company to do so. Is there any software out there that is written to do this sort of thing?",
+  "url": "https://serverfault.com/questions/385401/pci-compliance-scans"
+ },
+ {
+  "id": "serverfault:serverfault:64280",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 14,
+  "title": "My website was used by a freak hacker as a phishing site! What can I do?",
+  "body": "My website was taken down a day back - got a message form the host saying that they recieved a complaint from the Bank of America that my website was being used for phishing customers. I managed to bring my site online and found a number of weird code snippets and files on the site that I didn't put there. They were definitely put by a hacker but now I'm scared with regards to how did the hacker g",
+  "url": "https://serverfault.com/questions/64280/my-website-was-used-by-a-freak-hacker-as-a-phishing-site-what-can-i-do"
+ },
+ {
+  "id": "serverfault:serverfault:255186",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 14,
+  "title": "Linux Traffic Logging",
+  "body": "I'm looking for a good free method of logging IP heading information (src/dest IP with timestamp) passing through a Linux router. I know I can do this with tcpdump -i eth0 > log.txt However I'm looking for something a bit more substantial, as this will be running all the time.",
+  "url": "https://serverfault.com/questions/255186/linux-traffic-logging"
+ },
+ {
+  "id": "github:265145937",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 13,
+  "title": "Investigate into a fully separated peril system, by using AWS Lambda for a Danger run",
+  "body": "I once had a great chat with @bkeepers once about Lamba as a option for user security, today this really clicked into place as to how this could work with Peril. In Danger JS, there is a tool called `danger process` - http://danger.systems/js/usage/danger-process - by separating the danger setup, vs the danger run then it allows any language to create their own runtime without all the faffing. By ",
+  "url": "https://github.com/danger/peril/issues/159"
+ },
+ {
+  "id": "hn:16255598",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 13,
+  "title": "Ask HN: Security assessment for small non-profit",
+  "body": "Hey all, I work with a small non-profit (~10 people) and we'd like an assessment done on our online presence (Wordpress, Roundcube email, Google Docs, Mailchimp, Twitter, Facebook) to ensure that it cannot be hijacked or destroyed. While, I have a programming background, I'd like a professional's take on how vulnerable we are to, for instance, ransomware or hijacking. Are there any companies that ",
+  "url": "https://news.ycombinator.com/item?id=16255598"
+ },
+ {
+  "id": "stackexchange:security:1539",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 13,
+  "title": "IP reputation services \u2013 valuable tool for detecting compromises?",
+  "body": "anyone have anecdotes on how subscribing to an IP reputation service led them to discover internal compromises? services like: https://www.iptrust.com/ http://ipremoval.sms.symantec.com/lookup/",
+  "url": "https://security.stackexchange.com/questions/1539/ip-reputation-services-valuable-tool-for-detecting-compromises"
+ },
+ {
+  "id": "stackexchange:security:38754",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 13,
+  "title": "PCI compliance simple questions",
+  "body": "For now I read PCI compliance document and I don't understand any things. I have a program, which takes sensitive and cardholder data as input (some of them are in encrypted form) and then returned back (some of them are in encrypted form). I have 2 simple questions: What elements need to be encrypted as input and output? For now - how I understand it - only PIN, PAN, track2data and CVV code need ",
+  "url": "https://security.stackexchange.com/questions/38754/pci-compliance-simple-questions"
+ },
+ {
+  "id": "stackexchange:security:71570",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 13,
+  "title": "Shared Database and PCI Compliance",
+  "body": "Say we have a cloud based web application which is SaaS. This application is to be made PCI compliant as a service provider, as client card data passes through the application. This application uses a database for its configuration information. Please note that the database only contains configuration information. No card holder or personal details are stored here. However, we also have a manageme",
+  "url": "https://security.stackexchange.com/questions/71570/shared-database-and-pci-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:457573",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 13,
+  "title": "DNS security (hijacking?)",
+  "body": "I am hosting my website on Linode and am also using their DNS/naming servers. (ns1.linode.com etc.) It occurred to me that I never have had to authenticate that the domain is mine when I added it to the domain to the DNS manager, or at any other point. I now wonder whether it would be possible for other Linode users to 'hijack' my domain by simply adding the same domain zone and pointing it to the",
+  "url": "https://serverfault.com/questions/457573/dns-security-hijacking"
+ },
+ {
+  "id": "serverfault:serverfault:113129",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 13,
+  "title": "Sysprep without audit mode?",
+  "body": "In preparing a (windows 7) machine for cloning, does one need to run it in audit mode before installing/customising? I have a customised machine I would like to sysprep and clone, without having to re-create in audit mode. And from where does one run sysprep? Is the command included in the windows distro, or do I need to run it from the AIK, or from a PE environment?",
+  "url": "https://serverfault.com/questions/113129/sysprep-without-audit-mode"
+ },
+ {
+  "id": "serverfault:serverfault:62878",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 13,
+  "title": "Dedicated \"Logging\" Server",
+  "body": "My Question: Does such a service currently exist, and if so, where on the web? Details: I understand that I can pay a consultant to build and host such a system, but I am wanting something that is subsidized by \"enterprises\" paying $$$$$ for stuff and power users getting to piggy-back on the infrastructure for only $. A \"non-commercial\" option for us power geeks. I'm looking for a service to secur",
+  "url": "https://serverfault.com/questions/62878/dedicated-logging-server"
+ },
+ {
+  "id": "hn:15112084",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 12,
+  "title": "Ask HN: Secure email provider",
+  "body": "I was looking for a secure email address. After some research, Protonmail, although it looks good, and has a A+ SSL rating, can't be used with POP3/IMAP, only with their proprietary API with their web client or mobile client, and that is a deal breaker for me. Countermail allows to upload your public key so that any non-encrypted incoming email es encrypted in the inbox. A few others also looked g",
+  "url": "https://news.ycombinator.com/item?id=15112084"
+ },
+ {
+  "id": "stackexchange:security:36413",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 12,
+  "title": "WPA2 audit tool",
+  "body": "For the purposes of my own research, I have a very modest budget to set up a modest WPA2 brute-forcer supported by GPU(s). I've done some homework: Brute-Force GPU Password Crackers How to setup GPU for Cracking WPA/WPA2? oclHascat? No. But I am still left with some questions on how to proceed. Is Pyrit a good WPA2 auditor tool? The current Backtrack 5 R3 distribution has it installed by default, ",
+  "url": "https://security.stackexchange.com/questions/36413/wpa2-audit-tool"
+ },
+ {
+  "id": "stackexchange:security:86298",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 12,
+  "title": "RSnake's Slow Loris tool",
+  "body": "I was looking at RSnakes implementation of his Slow Loris done on perl which can be seen here . I set up a little server to listen to his packets, and at first found this GET / HTTP/1.1\\r\\nHost: David-PC\\r\\nUser-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.503l3; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; MSOffice 12)\\r\\nContent-Length: 42",
+  "url": "https://security.stackexchange.com/questions/86298/rsnakes-slow-loris-tool"
+ },
+ {
+  "id": "stackexchange:security:93217",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 12,
+  "title": "PCI Compliance and fines",
+  "body": "Our organisation has validated compliance with PCI DSS. What are the consequences to us if we had been breached by a security incident related to credit card information, considering we have validated PCI DSS compliance? Would any fine apply to us?",
+  "url": "https://security.stackexchange.com/questions/93217/pci-compliance-and-fines"
+ },
+ {
+  "id": "stackexchange:security:195833",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 12,
+  "title": "PCI compliance of a SaaS provider",
+  "body": "We (merchant) will be using a SaaS to sell learning modules and accept credit card payments through a redirect to a service provider that will process the credit card payments. The SaaS will be hosted by Amazon web services. Should the SaaS provider needs to be PCI compliant (because since PCI v.3.1 those who redirects are in scope). Or should the Amazon who will be hosting the Saas should be the ",
+  "url": "https://security.stackexchange.com/questions/195833/pci-compliance-of-a-saas-provider"
+ },
+ {
+  "id": "stackexchange:security:197668",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 12,
+  "title": "Is PCI compliance required by law?",
+  "body": "Is PCI compliance required by law? We are creating a website where we will accept customer card data and pass it to merchant API. Everywhere on the internet you will find PCI is required. But what if my website is not PCI compliant and I am still receiving customers card data? Is that illegal to accept card data without being PCI compliant? We do not ever store customer card we just transmit. What",
+  "url": "https://security.stackexchange.com/questions/197668/is-pci-compliance-required-by-law"
+ },
+ {
+  "id": "serverfault:serverfault:379285",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 12,
+  "title": "logrotate security",
+  "body": "Are there any concerns about the security of logrotate running as root? Had someone ask couldn't a malicious user subvert the config to overwrite anything? Is is okay to run logrotate out of the cron of another user?",
+  "url": "https://serverfault.com/questions/379285/logrotate-security"
+ },
+ {
+  "id": "serverfault:serverfault:620032",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 12,
+  "title": "Amazon Workspaces - Audit",
+  "body": "Is it possible to record Amazon Workspaces for audit purpose? I think that it's a common uses case but I couldn't find any documentation nor other solutions. Basically I would like to review the client activity by recording its screen 24/7 and perhaps store the recordings on S3.",
+  "url": "https://serverfault.com/questions/620032/amazon-workspaces-audit"
+ },
+ {
+  "id": "serverfault:serverfault:889622",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 12,
+  "title": "About GCP Console login audit",
+  "body": "How to get \"audit log\" GCP Console ( https://console.cloud.google.com ) login failure?",
+  "url": "https://serverfault.com/questions/889622/about-gcp-console-login-audit"
+ },
+ {
+  "id": "serverfault:serverfault:765368",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 12,
+  "title": "mod_authz_core.c Logging",
+  "body": "So I'm pretty new to the whole server admin world and just got a fresh install of a server up and running. While looking at my apache2 logs, I've seen a lot of mod_authz_core.c lines. Another guy I work with says that I've some debug setting turned on. Doing a lot of research, I was told to change the Loglevel in the apache2.conf. I tried the following values: error ssl:warn error notice It was or",
+  "url": "https://serverfault.com/questions/765368/mod-authz-core-c-logging"
+ },
+ {
+  "id": "serverfault:serverfault:54941",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 12,
+  "title": "Checkpoint FW1 logging",
+  "body": "When I view the logs created for my checkpoint fw1, does it log connections on receiving the syn, or does it wait till the three way handshake completes? If it logs after the syn, is there anyway of telling where the three way handshake has not completed?",
+  "url": "https://serverfault.com/questions/54941/checkpoint-fw1-logging"
+ },
+ {
+  "id": "github:381362725",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 11,
+  "title": "Ability to get accessible namespaces based on RBAC",
+  "body": "Originally created the issue in kubernetes/community and asked to open the issue here instead. The old issue is available here: https://github.com/kubernetes/community/issues/2942 **What would you like to be added**: The ability to be able to get a list of namespaces that a current user has access to based on their RBAC permissions. This is manly for being able to give users a list of namespaces w",
+  "url": "https://github.com/kubernetes/kubernetes/issues/71097"
+ },
+ {
+  "id": "github:445416100",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 11,
+  "title": "Debian package shouldn't install demo configuration by default",
+  "body": "The Debian package **opendistro-security** is installing the demo configuration by default via the *postinst* script. This causes problems with the [Puppet Forge Elasticsearch](https://forge.puppet.com/elastic/elasticsearch) module which installs the configuration by default to `/etc/elasticsearch/$instance_name`: ``` Setting up opendistro-security (0.9.0.0-0) ... OpenDistro for Elasticsearch Secu",
+  "url": "https://github.com/opensearch-project/security/issues/48"
+ },
+ {
+  "id": "hn:10657097",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 11,
+  "title": "Ask HN: Is security consulting a good market/career path?",
+  "body": "I've always been interested in security consulting (for instance, working for a company like Matasano). I'm curious what the market is like for security consultants/penetration testers. Is it profitable? Easy to find jobs (assuming you're decent at what you do)?",
+  "url": "https://news.ycombinator.com/item?id=10657097"
+ },
+ {
+  "id": "hn:1115235",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 11,
+  "title": "Ask HN: server security intro/reference?",
+  "body": "I'm just starting out in server land. Prior to this, everything I've built has been on top of an infrastructure that someone else secured and maintained. Last couple days I've been perusing security related posts here, and following links. And I have to say: gaaa! Admin/security is a firehose. My problem is that waiting until I know that I know enough would mean that I'll never get anything done, ",
+  "url": "https://news.ycombinator.com/item?id=1115235"
+ },
+ {
+  "id": "stackexchange:security:153420",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 11,
+  "title": "Does the Dreamy Smurf tool really exist?",
+  "body": "Dreamy Smurf is a program that allows its user to activate a target's phone when it is apparently turned off. Is it real or not, and how can this work?",
+  "url": "https://security.stackexchange.com/questions/153420/does-the-dreamy-smurf-tool-really-exist"
+ },
+ {
+  "id": "stackexchange:security:25059",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 11,
+  "title": "PCI Compliance Problem",
+  "body": "My company is trying to become fully PCI Compliant and we are switching our outdated systems to use Authorize.net CIM among other things. But, currently we're all over the place and until our new database management system gets updated, I don't have a place that I can temporarily store credit cards for payments to a bill. Currently, when a customer calls up and wants to pay their bill, they fill o",
+  "url": "https://security.stackexchange.com/questions/25059/pci-compliance-problem"
+ },
+ {
+  "id": "stackexchange:security:46142",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 11,
+  "title": "PCI Compliance Distibution",
+  "body": "I run a small e-commerce website hosted on a dedicated server with Debian 6 Squeeze. I need to become PCI compliant (the card industry standard for security). Therefore I have registered with TrustWave TrustKeeper which scans my site for potential security vulnerabilities. The scan reported plenty of vulnerabilities and I need to upgrade PHP (which I did) and Apache. The issue is that the Apache v",
+  "url": "https://security.stackexchange.com/questions/46142/pci-compliance-distibution"
+ },
+ {
+  "id": "stackexchange:security:69033",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 11,
+  "title": "PCI Compliance Check-list",
+  "body": "I'm currently attempting to wrap my head around PCI compliance - and what I need to do for my business to be compliant. I would like some confirmation on what I've found so far. I accept payments in a mobile application. We take payment details and pass them to our own REST service (over HTTPS), and then that service instantly passes them on to a third-party payment gateway to handle the payment. ",
+  "url": "https://security.stackexchange.com/questions/69033/pci-compliance-check-list"
+ },
+ {
+  "id": "stackexchange:security:31246",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 11,
+  "title": "How to enforce NTFS permission compliance?",
+  "body": "I have to enforce NTFS permissions based on business roles. Each role (group in ADS) can be granted the permission to read or write a file server directory. I do not care about share permissions. I care about permissions stored in the NTFS. I have to ensure that the NTFS permissions are compliant to the policy. An entry in the policy could be for example: Users in the Support group have read acces",
+  "url": "https://security.stackexchange.com/questions/31246/how-to-enforce-ntfs-permission-compliance"
+ },
+ {
+  "id": "stackexchange:security:221186",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 11,
+  "title": "PCI compliance with multiple AWS VPCs",
+  "body": "If I have VPC which is in-scope (the \"PCI VPC\") and another which is not (the \"NON-PCI VPC\"), would peering them bring the non-pci vpc in-scope? Is there a way to avoid this? I have an aurora RDS inside the PCI VPC. It does not actually contain sensitive information, but is used by services which do. What is the best way to share this non-pci data with the non-pci VPC without inadvertently bringin",
+  "url": "https://security.stackexchange.com/questions/221186/pci-compliance-with-multiple-aws-vpcs"
+ },
+ {
+  "id": "serverfault:serverfault:70282",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 11,
+  "title": "Mac Security vs Windows Security",
+  "body": "Is the Mac OS rapidly coming up to a point where it has the same amount of security flaws as windows machines? The more macs in the world means the more people have them, and if more people have them, people can find the flaws in the OS, is this correct?",
+  "url": "https://serverfault.com/questions/70282/mac-security-vs-windows-security"
+ },
+ {
+  "id": "serverfault:serverfault:195570",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 11,
+  "title": ".htaccess security",
+  "body": "In my .htaccess file I've been trying to figure out if I should use: Options None which of course would disable all extra options, but I've been reading mixed opinions concerning the use of \"Options None\", because some people claim that +FollowSymlinks is needed for better security and performance, while some people claim that FollowSymlinks is a big security risk. Should I use \"Options None\" for ",
+  "url": "https://serverfault.com/questions/195570/htaccess-security"
+ },
+ {
+  "id": "serverfault:serverfault:807154",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 11,
+  "title": "Selinux audit log - translate",
+  "body": "I would like to centralize all audit logs trough syslog in one server. I did setup it up and install setroubleshoot-server . In order to translate audit.log into human language, I would like to use sealert . Command : sealert -a /var/log/audit/audit.log But I got error [Errno 22] Invalid argument",
+  "url": "https://serverfault.com/questions/807154/selinux-audit-log-translate"
+ },
+ {
+  "id": "serverfault:serverfault:85907",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 11,
+  "title": "SQL Server 2005 Performance Audit",
+  "body": "Do you guys have any good step by step type links for performing an SQL Server 2005 Performance Audit? Something like this link would be great but for SQL Server 2005.",
+  "url": "https://serverfault.com/questions/85907/sql-server-2005-performance-audit"
+ },
+ {
+  "id": "serverfault:serverfault:704781",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 11,
+  "title": "Virtual terminal PCI compliance",
+  "body": "The PCI DSS compliance rules say that if we use any computers to take card payments via a web based virtual terminal, then those PCs must be isolated from the rest of the IT network (otherwise the entire IT network comes under the scope of PCI compliance). We need multiple people in a call centre to be able to to take customer card payments over the phone using the virtual terminal. The trouble is",
+  "url": "https://serverfault.com/questions/704781/virtual-terminal-pci-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:349843",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 11,
+  "title": "PCI DSS compliance on a virtualized server running Xen",
+  "body": "I have a server running xen with HVM and would like to make one VM PCI compliant. I've read the PCI virtualization guide and it says that I need to make sure there is no information leakage between VM's. How can I make sure each OS is unable to intercept data from other DomU's?",
+  "url": "https://serverfault.com/questions/349843/pci-dss-compliance-on-a-virtualized-server-running-xen"
+ },
+ {
+  "id": "serverfault:serverfault:920349",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 11,
+  "title": "Report phishing websites",
+  "body": "Is there a central place to report domains that have made phishing attempts against my users? I usually make a report to the host of the domain (GoDaddy, generally) but I was wondering if there is a more effective place to send a report?",
+  "url": "https://serverfault.com/questions/920349/report-phishing-websites"
+ },
+ {
+  "id": "serverfault:serverfault:545832",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 11,
+  "title": "Is Sender Policy Framework (SPF) effective in preventing Phishing emails?",
+  "body": "As defined in RFC4408 , Sender Policy Framework only checks the envelope sender (aka MAIL FROM ). The From: header is not being tested. As it is the value of the From: header which is usually displayed in email-clients, the attacker may use a random envelope sender which might even have a valid SPF-record for the used IP. Recipients will only find out about a forged From: header if they check the ",
+  "url": "https://serverfault.com/questions/545832/is-sender-policy-framework-spf-effective-in-preventing-phishing-emails"
+ },
+ {
+  "id": "serverfault:serverfault:102449",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 11,
+  "title": "Apache logging issues",
+  "body": "I'm trying to parse apache log files, but I'm finding some strange results and I'm not sure what they mean. Hopefully someone can provide some insight. (all of the IP addresses were altered. none actually start with 192, I didn't figure the search engines mattered though.) In the first example, multiple ip addresses are showing up in the host field: 192.249.71.25 - - [04/Aug/2009:04:21:44 -0500] \"",
+  "url": "https://serverfault.com/questions/102449/apache-logging-issues"
+ },
+ {
+  "id": "github:148397581",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 10,
+  "title": "ERROR: Python DPKT is not installed, aborting PCAP analysis.",
+  "body": "Hi, I'm using cuckoo on windows, and everything works except the DPKT package which is used to analysis the pcap files, which have been captured successfully. The error shows: Python DPKT is not installed, aborting PCAP analysis. But I have already installed DPKT using \"pip install dpkt\" and \"pip list\" shows it is installed (dpkt 1.8.7). Only that during installation, there is a warning says: ``` ",
+  "url": "https://github.com/cuckoosandbox/cuckoo/issues/860"
+ },
+ {
+  "id": "hn:1221341",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 10,
+  "title": "Ask HN: what document management tools to use?",
+  "body": "A friend is looking for a simple document management tool. (I searched here and found a similar question with no answers a little while back?). Docley (http://docley.com/) looks good but isn't released and thus well tested as yet. A full CMS like Joomla might work, but seems poorly focussed. KnowledgeTree is definitely overkill and the MS integration wouldn't be suitable. The community (free-grati",
+  "url": "https://news.ycombinator.com/item?id=1221341"
+ },
+ {
+  "id": "hn:3278791",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 10,
+  "title": "Ask HN: Security Researcher Jobs",
+  "body": "Hello, My name is Rafael. I am a third year college student studying math. I am trying to learn about careers in computer security but I can\u2019t find any good resources. Maybe you could help me out? I would really appreciate it. 1) Where have you worked? Where are you currently working? 2) What are the major differences between working in software development and computer security? 3) What security ",
+  "url": "https://news.ycombinator.com/item?id=3278791"
+ },
+ {
+  "id": "hn:91259",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 10,
+  "title": "Reseller hosting options?",
+  "body": "My company provides domains for some of our clients, which we pay for entirely. We take care of the domain name purchasing, the design, the hosting; everthing. We're currently using Yahoo! Small Business to do this, which is very good. However, it turns out that you can only host a finite number of domains per user ID - They say it's for security purposes, but I'm not sure I believe that line... A",
+  "url": "https://news.ycombinator.com/item?id=91259"
+ },
+ {
+  "id": "stackexchange:security:83849",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 10,
+  "title": "Simple open-source file encryption tool",
+  "body": "I want to securely encrypt files, with an open algorithm. So, i've constructed the simple openSSL shell command. How secure is it? function aes-enc() { openssl enc -aes-256-cbc -e -in $1 -out \"$1.aes\" } # Now, encrypt zip archive. aes-enc hello.zip What could be improved here? How long should the passphrase be in order to make the brute force unfeasible? Should I use something else instead of Open",
+  "url": "https://security.stackexchange.com/questions/83849/simple-open-source-file-encryption-tool"
+ },
+ {
+  "id": "stackexchange:security:197022",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 10,
+  "title": "Linux tool for monitoring network activity by application",
+  "body": "My laptop have been hacked a few months ago and my data is being to uploaded to some remote server without my knowledge. Is there a way I can find it out and prevent it from happening? I have changed my hard disk and installed a new distribution but its not helping. I have installed some applications like wireshark but I am not able to pin point the applications and prevent it from uploading my da",
+  "url": "https://security.stackexchange.com/questions/197022/linux-tool-for-monitoring-network-activity-by-application"
+ },
+ {
+  "id": "stackexchange:security:31602",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 10,
+  "title": "Understanding nibbles & encoding using owasp EnDe tool?",
+  "body": "I'm using owasp EnDe web-based tool to understand nibbles and encoding in general. This online utility in my knowledge is the best free resource avaiable for anyone who is interested to learn encoding techniques. I'm testing a sample input which is abcdwxyz. Now, the results of encoding it based upon first nibble and second nibble is given as 36,1,36,2,36,3,36,4,37,7,37,8,37,9,37,A and 6,31,6,32,6",
+  "url": "https://security.stackexchange.com/questions/31602/understanding-nibbles-encoding-using-owasp-ende-tool"
+ },
+ {
+  "id": "stackexchange:security:211247",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 10,
+  "title": "Paypal and PCI Compliance",
+  "body": "I currently manage a few of my client's websites on a couple shared hosting providers \"A2Hosting\" and \"Interserver\". My client wants to make a simple webstore and accept payments from said webstore. I was going to implement this by passing off the transaction to PayPal, letting them handle the entire checkout part and handle all credit card information. Will this be PCI Compliant (SAQ-A I hope) on",
+  "url": "https://security.stackexchange.com/questions/211247/paypal-and-pci-compliance"
+ },
+ {
+  "id": "stackexchange:security:16690",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 10,
+  "title": "What drives FIPS140-2 compliance?",
+  "body": "I guess this questions is directed at Product Managers, but I would be very interested to learn what people in the know think. What are the most common factors that drives FIPS140-2 compliance for hardware modules? Why do you want/need to implement FIPS140 compliant security in your products? Here are a few reasons I can think of: Market Demand: Customer (government) demand Customer (individuals) ",
+  "url": "https://security.stackexchange.com/questions/16690/what-drives-fips140-2-compliance"
+ },
+ {
+  "id": "stackexchange:security:175815",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 10,
+  "title": "PCI Compliance question from a merchant",
+  "body": "I'm a new business that conducts online auctions for estate sales. When searching for software to use, I had no idea about PCI Compliance. My merchant account told me it was easy. It would be if the developer of the software had created a hosted form from my site to my payment gateway. Because they didn't, I was required to have an AVS scan which failed. The software developer (who is different th",
+  "url": "https://security.stackexchange.com/questions/175815/pci-compliance-question-from-a-merchant"
+ }
+]

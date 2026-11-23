@@ -16,6 +16,21 @@ class PostSession(FakeSession):
         return self.responses.pop(0)
 
 
+def _notice(i):
+    return {"publication-number": f"{i}-2026", "title-proc": {"eng": f"T{i}"},
+            "publication-date": "2026-01-01+01:00"}
+
+
+def test_ted_pages_and_retries_on_429():
+    page1 = {"notices": [_notice(i) for i in range(100)]}
+    page2 = {"notices": [_notice(i) for i in range(100, 130)]}
+    session = PostSession(FakeResponse({}, 429, {"Retry-After": "1"}), FakeResponse(page1),
+                          FakeResponse(page2))
+    sigs = list(TedCollector(session=session, sleep=no_sleep).collect("s", '"security"', 250))
+    assert len(sigs) == 130                       # stopped when page 2 came back short
+    assert [c[1]["page"] for c in session.calls] == [1, 1, 2]   # retried page 1 after 429
+
+
 def test_ted_query_and_parsing():
     payload = {"notices": [{
         "publication-number": "123-2026",

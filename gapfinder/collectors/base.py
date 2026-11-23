@@ -34,12 +34,20 @@ class Collector:
         self._last = 0.0
 
     def get_json(self, url: str, params: dict, retries: int = 3) -> dict:
+        return self.request_json("GET", url, params=params, retries=retries)
+
+    def request_json(self, method: str, url: str, params: dict | None = None,
+                     json_body: dict | None = None, retries: int = 3) -> dict:
+        """Rate-limited request with backoff on 429/403 (shared by GET and POST collectors)."""
         for attempt in range(retries):
             wait = self.min_interval - (time.monotonic() - self._last)
             if wait > 0:
                 self._sleep(wait)
             self._last = time.monotonic()
-            resp = self.session.get(url, params=params, timeout=30)
+            if method == "GET":
+                resp = self.session.get(url, params=params, timeout=30)
+            else:
+                resp = self.session.post(url, json=json_body, timeout=60)
             if resp.status_code in (429, 403) and attempt < retries - 1:
                 delay = self.backoff(resp, attempt)
                 log.warning("%s: HTTP %s, backing off %.0fs", self.name, resp.status_code, delay)

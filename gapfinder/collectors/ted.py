@@ -40,7 +40,6 @@ def _pick(multilang, prefer=("eng",)) -> str:
 
 class TedCollector(Collector):
     name = "ted"
-    min_interval = 1.0
 
     def build_query(self, query: str) -> str:
         q = f"classification-cpv IN ({' '.join(SECURITY_CPV)}) AND notice-type IN (cn-standard cn-social)"
@@ -50,22 +49,26 @@ class TedCollector(Collector):
             q += f" AND PD<{self.before.strftime('%Y%m%d')}"
         return q + " SORT BY publication-date DESC"
 
-    def post_json(self, payload: dict) -> dict:
-        import time
-
-        wait = self.min_interval - (time.monotonic() - self._last)
-        if wait > 0:
-            self._sleep(wait)
-        self._last = time.monotonic()
-        resp = self.session.post(URL, json=payload, timeout=60)
-        resp.raise_for_status()
-        return resp.json()
+    min_interval = 2.0     # TED returns 429 when hit faster
+    page_size = 100
 
     def collect(self, segment: str, query: str, limit: int = 50) -> Iterable[Signal]:
-        data = self.post_json({"query": self.build_query(query), "fields": FIELDS,
-                               "limit": min(limit, 100), "page": 1,
-                               "scope": "ALL", "paginationMode": "PAGE_NUMBER"})
-        for n in data.get("notices", []):
+        """Newest notices first; pages through results until `limit` notices."""
+        page, seen = 1, 0
+        while seen < limit:
+            size = min(self.page_size, limit - seen)
+            data = self.request_json("POST", URL, json_body={
+                "query": self.build_query(query), "fields": FIELDS, "limit": size, "page": page,
+                "scope": "ALL", "paginationMode": "PAGE_NUMBER"})
+            notices = data.get("notices", [])
+            yield from self._parse(segment, query, notices)
+            seen += len(notices)
+            if len(notices) < size:
+                break
+            page += 1
+
+    def _parse(self, segment: str, query: str, notices: list[dict]) -> Iterable[Signal]:
+        for n in notices:
             buyers = n.get("buyer-name") or {}
             buyer = _pick(buyers)
             yield Signal(

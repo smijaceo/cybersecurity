@@ -1,0 +1,1502 @@
+[
+ {
+  "id": "serverfault:serverfault:882025",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 4,
+  "title": "reporting abuse of phishing site (email not monitored)",
+  "body": "The following server is phishing our university site: http://webmailadm-unipi-it-src-login-php.mywap.lt/main.php?z=1 Looking into WHOIS database I find a contact email (which coincides with registrar email). I send an email and the response was: Hello, This is a system mailbox which is not monitored, your e-mail will not be read or replied. If you wish to contact UAB \"[omissis]\", please visit: htt",
+  "url": "https://serverfault.com/questions/882025/reporting-abuse-of-phishing-site-email-not-monitored"
+ },
+ {
+  "id": "serverfault:serverfault:803092",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 4,
+  "title": "WP in docker container hacked - Server sends Phishing mails - disable container from other OS with the server volume mounted?",
+  "body": "Wordpress that has not been updated in a docker container on a vServer has probably been hacked since the provider notified me about the server sending phishing mails and deactivated my machine. Now they let me run a rescue linux from where I can mount the former server SSD. Can anyone tell me how to prevent the specific container from running when the original OS is powered up again? Cause obviou",
+  "url": "https://serverfault.com/questions/803092/wp-in-docker-container-hacked-server-sends-phishing-mails-disable-container"
+ },
+ {
+  "id": "github:447802010",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 3,
+  "title": "How to convert your Xcode plugins to Xcode extensions",
+  "body": "Original post https://medium.freecodecamp.org/how-to-convert-your-xcode-plugins-to-xcode-extensions-ac90f32ae0e3 --- Xcode is an indispensable IDE for iOS and macOS developers. From the early days, the ability to build and install custom plugins had given us a huge boost in productivity. It was not long before Apple introduced Xcode extension due to privacy concerns. I have built a few Xcode plugi",
+  "url": "https://github.com/onmyway133/blog/issues/267"
+ },
+ {
+  "id": "github:294166894",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 3,
+  "title": "Offline use",
+  "body": "For maximum security it is best never to expose keys to an online machine, by generating wallets, and signing transactions completely offline. This client is very close to being able to do that, but doesn't quite work offline. If I download the page as a single file with all dependencies and scripts inlined using the plugin [Save Page WE](https://chrome.google.com/webstore/detail/save-page-we/dhhp",
+  "url": "https://github.com/stellar-deprecated/account-viewer/issues/56"
+ },
+ {
+  "id": "github:345239186",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 3,
+  "title": "RFC: Pull Requests",
+  "body": "I suggest we model Pull Requests as a CRDT Each Pull Request should have - author - base repo - base branch - comparison repo - comparison branch - comments - name - status `open/closed/deleted` Each Comment should have - author - text - created timestamp - updated timestamp #### Access Control Anyone should be able to open a pull request. The PR author and the repo maintainers should be able to u",
+  "url": "https://github.com/ipfs-shipyard/IGiS/issues/46"
+ },
+ {
+  "id": "github:64956985",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 3,
+  "title": "Issue with large volume of Profile Metadata",
+  "body": "I just tried using the force-meta-backup on our salesforce org, and ran into the following error: C:\\force-meta-backup\\build\\profile-packages-target.xml:11: Failed to process the request successfully. Cause(LIMIT_EXCEEDED): LIMIT_EXCEEDED: The retrieved zip file exceeded the limit of 419430400 bytes. The likely reason for this is our org has 242 profiles and 451 custom objects. I'm assuming the to",
+  "url": "https://github.com/alan-morey/force-meta-backup/issues/34"
+ },
+ {
+  "id": "github:336059071",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 3,
+  "title": "Allow Images to be uploaded by external URL",
+  "body": "(Original issue name: Allow Images to be hosted on another website) ## Motivation In the grand scheme of things, benthic image storage isn't one of the biggest challenges for today's servers and computers. But: - Uploading takes time - Some research groups already have their own image hosting - We do still have finite funding - Based on the SOI workshop I was at last week, there is a fair bit of i",
+  "url": "https://github.com/coralnet/coralnet/issues/191"
+ },
+ {
+  "id": "github:419237250",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 3,
+  "title": "Name? \ud83d\udcad\ud83d\udca1",
+  "body": "# \"_What's in a name? That which we call a rose_ \ud83c\udf39 _By any other word would smell as sweet;_\" \ud83c\udf6c ~ [_Bill S._](https://en.wikipedia.org/wiki/A_rose_by_any_other_name_would_smell_as_sweet) Naming things is often the _most_ difficult part of the project. This is a _widely_ known fact in the tech community see: [martinfowler.com/bliki/TwoHardThings.html](https://martinfowler.com/bliki/TwoHardThings.ht",
+  "url": "https://github.com/dwyl/home/issues/51"
+ },
+ {
+  "id": "github:156490486",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 3,
+  "title": "some problems when integrate into pentaho and saiku",
+  "body": "**Hi, Corn\u00e9 , Firstly, thank you for giving us such a good tool. These days I am looking for jdbc tool for elasticsearch. Sql4es is what I am searching for. But I encounter some problems. could you help me for that? Maybe this is not a defect of sql4es. I use the sql4es in SQLWorkbench and it works well. 1. I followed the article [https://www.anchormen.nl/elasticsearch-as-a-pentaho-source-through-",
+  "url": "https://github.com/Anchormen/sql4es/issues/9"
+ },
+ {
+  "id": "github:502871605",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 3,
+  "title": "Need bot for euro (4game)",
+  "body": "Hello openkore team. As i wrote on title we all need an openkore bot for 4game euro server with frost security bypass. Someone already made a bypass solution but they are selling their method too expensive for avarage ragnarok user. We need your help. Regards.",
+  "url": "https://github.com/OpenKore/openkore/issues/2926"
+ },
+ {
+  "id": "github:214838097",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 3,
+  "title": "receipe to install and run a slick-2 powered blog site in AWS 24x7 at low costs",
+  "body": "Hi Chris, I was trying to find my own route to a blog based on apache sling - IMHO this great software is completely underrated and I dislike the fact that I deal with AEM at work but used then wordpress for my own blog. So I found your project - I guess that is similar to your own story My first idea (slick-2 without commenting option at that time) was to start an EC2 with java only for the time ",
+  "url": "https://github.com/auniverseaway/slick-2/issues/24"
+ },
+ {
+  "id": "github:476583435",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 3,
+  "title": "Users dont show after upgrade to PHP 7.3",
+  "body": "### Steps to reproduce 1. Update to PHP 7.3 2. 3. ### Expected behaviour Listing Nextcloud Users when clicking at Users (as an Administrator) ### Actual behaviour 1. Displaying Nextcloud users does not work anymore; 2. MariaDB gives the following error, when looking at table oc_addressbooks: \"Warning in ./libraries/sql.lib.php#613 count(): Parameter must be an array or an object that implements Co",
+  "url": "https://github.com/nextcloud/server/issues/16652"
+ },
+ {
+  "id": "hn:8762502",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 3,
+  "title": "JavaScript / Data Visualization Engineer \u2013 Boston, MA",
+  "body": "A Boston-based cloud security start-up, which recently launched it\u2019s product at AWS Re:invent is looking for a JavaScript / Data Visualization Engineer to join its growing team. After raising $9 million last year and a hugely successful Re:invent appearance they need to ramp up their engineering team for 2015 and finding this engineer is their highest priority. What\u2019s in it for you: -The opportuni",
+  "url": "https://news.ycombinator.com/item?id=8762502"
+ },
+ {
+  "id": "hn:15661056",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 3,
+  "title": "Ask HN: Web security/pentesting as a hobby",
+  "body": "I have a CS degree, been a developer for a while but turned into management quite quickly. Now I'd like to brush up on my security skills in my free time - how can I start?",
+  "url": "https://news.ycombinator.com/item?id=15661056"
+ },
+ {
+  "id": "hn:14873692",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 3,
+  "title": "Ask HN: Security cameras for a rented home?",
+  "body": "So, our neighborhood has had a rash of thefts in the recent weeks and we have some upcoming vacations. I'd like to get a system of Wifi cameras setup for the house with a DVR recorder. I despise IoT in general, especially with regards to security, so I'm hoping the HN community can steer me towards a brand or particular model to go for? I was also looking at the open source project ZoneMinder as a",
+  "url": "https://news.ycombinator.com/item?id=14873692"
+ },
+ {
+  "id": "hn:11046760",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 3,
+  "title": "Ask HN: Security analysis of everykey?",
+  "body": "This : https://everykey.com/#tech-specs It seems cool and interesting. Guessing it works by the software on the device ( the phone, computer or other thing being locked ) implementing some kind of access-control / FDE, which is then unlocked by some kind of certificate on the lock, with communication occurring over wireless. Then if the everykey ( the \"lock\" ), is lost, it can be neutered remotely",
+  "url": "https://news.ycombinator.com/item?id=11046760"
+ },
+ {
+  "id": "hn:8094468",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 3,
+  "title": "Ask HN: Computer security / hacker",
+  "body": "I want to learn more about compute security or in other words I would like to become a hacker. Maybe white hat or black hat in the long Idk if being a Blackhat is illegal or not but I want to learn more about computer security and fully understand everything. Any good books,tutorials or videos on this matter?",
+  "url": "https://news.ycombinator.com/item?id=8094468"
+ },
+ {
+  "id": "hn:4695131",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 3,
+  "title": "Ask HN: security impact of HTTP POST resubmission?",
+  "body": "Web browsers remember the content of the forms submitted to a web site, including the user name and password in there, if any. We know this because pressing \"refresh\" button will resubmit the form, and we can see the password resubmitted on the server. So if you sign in to a site, then navigate away, then sign out, then close the browser, you think you're pretty safe. A hacker comes to the same ma",
+  "url": "https://news.ycombinator.com/item?id=4695131"
+ },
+ {
+  "id": "hn:466594",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 3,
+  "title": "Ask HN: P2P Wireless",
+  "body": "Reading this post ( http://news.ycombinator.com/item?id=462525 ) the other day about wiring \u201cthe sticks\u201d got me thinking. Actually rethinking about something I\u2019ve thought about for a long time. Some background: I live in Alaska, so reliable, high-speed Internet is something most people in the US take for granted and Alaskans consider themselves lucky when they have it. I live in Fairbanks, a borou",
+  "url": "https://news.ycombinator.com/item?id=466594"
+ },
+ {
+  "id": "stackexchange:security:213464",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 3,
+  "title": "Tool to prepare report of security auditing",
+  "body": "I was doing dorking on my friend's website to make sure there is no leak of information that is not meant to be. I found domains and sub-domains in search results. Is their a tool which can help me to prepare the report? Report like domains and subdomains are represented in some graphical format something like tree structure? And also what tools should be used for reporting during target enumerati",
+  "url": "https://security.stackexchange.com/questions/213464/tool-to-prepare-report-of-security-auditing"
+ },
+ {
+  "id": "stackexchange:security:220536",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 3,
+  "title": "How can I maintain and automate a list of download URLs with known hashes?",
+  "body": "I'm familiar with the concept of downloading a file and manually checking it against a published checksum. See How to verify the checksum of a downloaded file (pgp, sha, etc.)? and Is there a command line method by which I can check whether a downloaded file is complete or broken? for examples. I would now like to maintain my own list of target URLs and expected checksums, something like: https://",
+  "url": "https://security.stackexchange.com/questions/220536/how-can-i-maintain-and-automate-a-list-of-download-urls-with-known-hashes"
+ },
+ {
+  "id": "serverfault:serverfault:192041",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "images security",
+  "body": "How I can check all my images on server, they don't prepared with maulicious code ? I mean for example Gif PHP exploits and so on...",
+  "url": "https://serverfault.com/questions/192041/images-security"
+ },
+ {
+  "id": "serverfault:serverfault:516137",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Difference between \"Security Configuration Manager\" and \"Security Configuration Wizard\"",
+  "body": "I want some clarifications about differences between SCW and SCM. strictly Speaking when I use SCM baseline for specific Server Role (domain controller, ftp server, ...), I get for example 200 gpo's and when I use scw for same server role, I get 300 gpo's. And between these gpo's there are very little similarity (after comparing these two gpo's). Is not this a contradiction? if no, what is the jus",
+  "url": "https://serverfault.com/questions/516137/difference-between-security-configuration-manager-and-security-configuration"
+ },
+ {
+  "id": "serverfault:serverfault:594311",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Exchange 2010 security audit",
+  "body": "Our IT department has received reports from HR that managers are reading their subordinates email, and we've been tasked with identifying if there is a technical way to achieve this. I'm looking for help identifying if this is possible or not. We have confirmed that the Full Access Permission and delegated control is not enabled, but we do see that the Exchange Control Panel is accessible to all u",
+  "url": "https://serverfault.com/questions/594311/exchange-2010-security-audit"
+ },
+ {
+  "id": "serverfault:serverfault:232297",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "SQL Server 2008 Audit Service",
+  "body": "I'm designing an application that will run on SQL Server 2008 R2. There's a requirement to audit any updates to a customer table. The new Audit service that was release as part of SQL Server 2008 seemed to be a great fit. Unfortunately, although I have been able to setup a Database Audit Specification so that it logs details of any update - it does not log parameters to the update. For example, I ",
+  "url": "https://serverfault.com/questions/232297/sql-server-2008-audit-service"
+ },
+ {
+  "id": "serverfault:serverfault:773509",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Audit only changes to files",
+  "body": "I'm using Auditd to record any changes to files. Here is rule: # auditctl -l LIST_RULES: exit,always dir=/var/local/ (0x1e) perm=w key=state-files but if I run: # ausearch -i -k state-files command I got: ... type=PATH msg=audit(04/27/16 12:51:42.793:8700) : item=0 name=/var/local/some/path/file inode=6100653 dev=08:01 mode=file,644 ouid=someuser ogid=admin rdev=00:00 type=CWD msg=audit(04/27/16 1",
+  "url": "https://serverfault.com/questions/773509/audit-only-changes-to-files"
+ },
+ {
+  "id": "serverfault:serverfault:831587",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Keep Root Account Audit Trail",
+  "body": "I am the owner of a company. I want to keep an audit trail of our Unix administrator who has root access to the CentOS system. How can I configure it such that the audit trail cannot be bypassed and erased even for Root user? Thanks in advance!",
+  "url": "https://serverfault.com/questions/831587/keep-root-account-audit-trail"
+ },
+ {
+  "id": "serverfault:serverfault:497961",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Microsoft Security Compliance Manager terms",
+  "body": "Recently i have installed Microsoft Security Compliance Manager. But i am confused with some terms. As per the print-screen ( which is mark in Red-Colour Round ) 1st - the 'Default' here means the default setting - which we get out of the box. 2nd - here 'Microsoft' means as per the Microsoft Best Practise & 3rd - What does 'Customized' means ( the Third Red circle )",
+  "url": "https://serverfault.com/questions/497961/microsoft-security-compliance-manager-terms"
+ },
+ {
+  "id": "serverfault:serverfault:766906",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Does Office365 Compliance hold Outlook OWA ChatMessages?",
+  "body": "In Office365 (pure), if you setup an In-Place hold on an Exchange online mailbox you can do searches in Compliance Admin Centre for kind:im to get IM messages. Such searches only return Skype for Business Online chats, apparently, not OWA IM's as per: 0. open OWA app 1. select a contact 2. send an IM Should this be working, or this just not supported? (I'm using an E3 trial)",
+  "url": "https://serverfault.com/questions/766906/does-office365-compliance-hold-outlook-owa-chatmessages"
+ },
+ {
+  "id": "serverfault:serverfault:885774",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Resolving FIPS Compliance Issues with Oracle 11g",
+  "body": "Problem I am working with Oracle DB 11g (11.2.0.4.0 - 64bit), Jenkins, Windows PowerShell plugin, and VsTestRunner plugin to automate running unit tests. While setting this up I stumbled upon a huge problem running vstest.console.exe in which I would get the following error: ORA-01017: invalid username/password; logon denied . Through all my research, it has come to be proven to be caused by a FIP",
+  "url": "https://serverfault.com/questions/885774/resolving-fips-compliance-issues-with-oracle-11g"
+ },
+ {
+  "id": "serverfault:serverfault:324981",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Win XP Pro, IIS 5.1, PCI Compliance",
+  "body": "I have a client that was scanned and determined not to be PCI Compliant. I looked and they had IIS setup to allow a program from central office to push/pull info from their server. Many of the reasons they failed appeared to have been fixed in SPs (they were on SP2) or security updates. I fully patched the server to (Windows XP Pro) SP3 with all optional updates. I had them scan again and again th",
+  "url": "https://serverfault.com/questions/324981/win-xp-pro-iis-5-1-pci-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:174039",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Mail sent from local Postfix marked as \"possible phishing\" in Outlook",
+  "body": "Sorry for the newbie question--this is not my area of expertise by a long shot. I work at a small development shop and we finally got around to doing code reviews. (Yay!) I set up an instance of Review Board -- an open-source code review tool -- on one of our local servers but it doesn't seem to like talking to our hosted Exchange server to send notification emails. I decided to just install Postf",
+  "url": "https://serverfault.com/questions/174039/mail-sent-from-local-postfix-marked-as-possible-phishing-in-outlook"
+ },
+ {
+  "id": "serverfault:serverfault:584384",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Why does domain hosted with no-ip.org get rejected by browser's phishing filter/malware detection",
+  "body": "I'm trying to host a tiny website on my home server (Windows 2012) and I am using a domain hosted with no-ip.org. That domain is forwarded to my server here at home, which is only hooked up to a simple DSL router, but people tell me that when browsing the site it is often (if not always) rejected, or simply would not load at all. Upon reloading and/or turning off the security warnings the site wor",
+  "url": "https://serverfault.com/questions/584384/why-does-domain-hosted-with-no-ip-org-get-rejected-by-browsers-phishing-filter"
+ },
+ {
+  "id": "serverfault:serverfault:790394",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Ransomware infection: What to do",
+  "body": "t seems that somehow our domain computers have been infected by rasomware, turning files into encrypted files ending with .crypted. Lots of file have been changed and we do have back up. At the same time, scanning for actual malware/virus/trojan have so far not resulted with anything. I haven't scanned all the computers, but I did notice that the files that have been changed were only on shared fo",
+  "url": "https://serverfault.com/questions/790394/ransomware-infection-what-to-do"
+ },
+ {
+  "id": "serverfault:serverfault:995772",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Detecting .Money Ransomware on Windows Server 2019",
+  "body": "Problem A few weeks back we got hit with a Dharma Ransomware variant called \"Money\". We made the incorrect assumption that this variant began right at the time the user opened the malicious attachment or link. Saturday we found out that it was actually time-delayed like a lot of them are these days, so although we have decent backup policies and backup retention, we don't have any way to confident",
+  "url": "https://serverfault.com/questions/995772/detecting-money-ransomware-on-windows-server-2019"
+ },
+ {
+  "id": "serverfault:serverfault:571477",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 3,
+  "title": "Logging in iptables",
+  "body": "I have created rules in iptables to log and edited the rsyslog.conf file to output any message which contains \"iptables\" to a different log file. It seems that it is logging to both places, the default messages files and the new ip.log files i have. How can I log to just the new one? This is the content of the rsyslog file: :msg, contains, \"iptables\" -/var/log/iptables.log & ~ This is the rule I p",
+  "url": "https://serverfault.com/questions/571477/logging-in-iptables"
+ },
+ {
+  "id": "github:427803769",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Cybersecurity Learning",
+  "body": "**Name** Kate O'Brien **Describe the problem you'd like to solve** There can be huge pressures on small development teams to deploy without knowing anything about cybersecurity. You might have a team of one. You can't afford to have a cybersecurity expert. Everything in cybersecurity sounds super scary and the tools they use look really complicated. **Who are the stakeholders?** - FAC (us) - futur",
+  "url": "https://github.com/FAC-Sixteen/student-project-ideas/issues/1"
+ },
+ {
+  "id": "github:541065932",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Replace the soon-to-be-deprecated TSLint with ESLint",
+  "body": "TSLint will stop receiving security fixes on December 1, 2020 ([roadmap](https://github.com/palantir/tslint/issues/4534#issue-413722441)). There is a tool ([tslint-to-eslint-config](https://github.com/typescript-eslint/tslint-to-eslint-config)) dedicated to help with this migration already. It does not yet support all the TSLint rules used by Imperative (4 rules do not yet have ESLint equivalents)",
+  "url": "https://github.com/zowe/imperative/issues/343"
+ },
+ {
+  "id": "github:495021718",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Included OpenSC tool (pkcs11-tool) is not usable",
+  "body": "I can't change the installation, as it would break ID-card support. ``` $ codesign -dv --verbose=4 /Library/OpenSC/bin/pkcs11-tool Executable=/Library/OpenSC/bin/pkcs11-tool Identifier=pkcs11-tool Format=Mach-O thin (x86_64) CodeDirectory v=20500 size=15383 flags=0x10000(runtime) hashes=475+2 location=embedded VersionPlatform=1 VersionMin=658176 VersionSDK=658944 Hash type=sha256 size=32 Candidate",
+  "url": "https://github.com/open-eid/osx-installer/issues/36"
+ },
+ {
+  "id": "github:410671367",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Is there a plan to update istanbul",
+  "body": "Because of a recent NPM security advisory https://www.npmjs.com/advisories/755 , I stumbled over the Deprecation of `istanbul`: https://github.com/gotwarlost/istanbul#istanbul---a-js-code-coverage-tool-written-in-js Is there a plan to switch to `nyc` because istanbul has been deprecated for almost 2 years now?",
+  "url": "https://github.com/karma-runner/karma-coverage/issues/368"
+ },
+ {
+  "id": "github:389036431",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Formatting/linting tools",
+  "body": "It would be a good idea if a code formatter was used and we switched to using prospector instead of pylama (which seems to have more momentum behind it and fixes some of the annoyances with pylama like having different error codes for every tool). There is a big list of these here: https://github.com/vintasoftware/python-linters-and-code-analysis I would go with - [black](https://github.com/ambv/b",
+  "url": "https://github.com/taverntesting/tavern/issues/215"
+ },
+ {
+  "id": "github:365073731",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Scala Support",
+  "body": "**As a** Scala user **I want** linting and dependencies checked by Hawkeye **So that** I can include it in my for that toolchain. ### Description There is an `sbt` plugin for the OWASP deps checker that would cover scanning Scala projects for outdated and vulnerable dependencies. ### Acceptance Criteria * `sbt` projects are coveres by the dependency check. * `scalastyle` for linting scala projects",
+  "url": "https://github.com/hawkeyesec/scanner-cli/issues/75"
+ },
+ {
+  "id": "github:238096402",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Not able to create the SFTP connection when security tools like TACACS and Radius is configured over the device. Normal SFTP using terminal works fine",
+  "body": "I am using the paramiko library in order to transfer the file from Device to my server. But having the trouble when there is a security tools like tacacs and radius is configured. it fails to open the sftp connection. Although in case of Device which does not have the tacacs and Radius configured it works file . any thing we have to provide extra parameter. The code i am using given below client =",
+  "url": "https://github.com/paramiko/paramiko/issues/1003"
+ },
+ {
+  "id": "github:424638831",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Setup a fuzzer",
+  "body": "I know very little about java fuzzers, but should be a great way yo find test cases for things like #22. Based on a quick search, here are some possibles. I'm most interested in a coverage based pure jvm solution preferably that is easy to setup with maven. * https://github.com/cretz/javan-warty-pig * https://github.com/rohanpadhye/jqf * https://github.com/cphr/javafuzz * https://sourceforge.net/p",
+  "url": "https://github.com/bcl/aisparser/issues/23"
+ },
+ {
+  "id": "github:242153275",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "SQL Injection False Positive",
+  "body": "I'm encountering a false positive SQL injection. When I run an active scan against any of my sites it will trigger alerts indicating a potential SQL injection. Upon examination of the situation I'm unable to find any evidence of vulnerability. The alerts tab does not highlight or flag any of the response as indicative of a possible injection. In the headers and HTML output of the page I can find n",
+  "url": "https://github.com/zaproxy/zaproxy/issues/3744"
+ },
+ {
+  "id": "github:462306332",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "[Question] Is a database using VRT which provide description, remediation and associeted risk exist?",
+  "body": "There are tons of open-source projects to build a CVE database. But that's not what I'm interested in. I am looking for a tool that would allow me to build a database of bugs/vulns for pentest or bug bounty. For example, the DB could be already populated or it would be just to help build it. For example, there would be fields for description (describes the type of vuln), test (the tools or methods",
+  "url": "https://github.com/bugcrowd/vulnerability-rating-taxonomy/issues/252"
+ },
+ {
+  "id": "github:272042394",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "Tour of Duty Hiring Authorities",
+  "body": "\"You can do this too. We are not special snowflakes; these are hiring authorities that are available to every agency in government.\" - Jennifer Anastasoff, Founding Member at U.S. Digital Service # Summary ## Purpose and Outcomes **Purpose:** Agencies have the authority to recruit and hire talented individuals on a temporary basis to help bolster strategic initiatives in their organization. The qu",
+  "url": "https://github.com/GSA/innovation.gov/issues/25"
+ },
+ {
+  "id": "github:509322490",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "RBAC integration tests to use MTLS",
+  "body": "(This is used to request new product features, please visit for questions on using Istio) **Describe the feature request** Currently RBAC integration tests are relying on Istio deploys with mtls out of the box, but this is not the case. We need to apply mtls policies and test them with RBAC, since these two features are used together in most cases. **Describe alternatives you've considered** Have ",
+  "url": "https://github.com/istio/istio/issues/18067"
+ },
+ {
+  "id": "github:435542376",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "www.icloud.com - site is not usable",
+  "body": "**URL**: https://www.icloud.com/unsupported_mobile/ **Browser / Version**: Firefox Mobile 68.0 **Operating System**: Android 8.1.0 **Tested Another Browser**: Yes **Problem type**: Site is not usable **Description**: It seems to be Apple, inc - deciding that this browser, along with most Android OS supported browsers - like Chrome - are not compatible with icloud.com/findmyiphone.com - somebody be",
+  "url": "https://github.com/webcompat/web-bugs/issues/29815"
+ },
+ {
+  "id": "github:253112989",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 2,
+  "title": "CPU threads is limited to one",
+  "body": "Hey folks Just tried you textbox container. I can see that it only use 1 CPU. Would it be possible to make it multi-cpu ? Cheers! --- A few months ago Parker Thompson, a well known Silicon Valley VC, tweeted that \"the concept of crypto-economics is stupid. It's economics. Inventing your own word is just an excuse to ignore well-understood concepts.\" The term \"cryptoeconomics\" causes a lot of confu",
+  "url": "https://github.com/machinebox/issues/issues/5"
+ },
+ {
+  "id": "hn:5104916",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Keek, the fastest growing social video site, is looking for a Senior Linux Admin",
+  "body": "We're hiring! Join a fast-paced social media startup. Keek is looking for a Senior Linux Systems Administrator to help support our rapid growth. Keek is the easiest way to share video updates with friends, family and the world. Upload video status updates (\"keeks\") using your webcam or the Keek app for Android and iPhone. Reply back with text or video comments (\"keekbacks\"), push your keeks to oth",
+  "url": "https://news.ycombinator.com/item?id=5104916"
+ },
+ {
+  "id": "hn:15482089",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Anonymisation attack challenge \u2013 up to 5000 USD per attack",
+  "body": "Working with sensitive personal data is difficult at best of times, and anonymising such data properly devilishly tricky. At Aircloak we have built a software layer that anonymises answers to SQL queries on the fly. We believe that the proof is in the pudding. Anyone can claim they are safely anonymising data but very few understand what it actually entails. Deleting names or social security numbe",
+  "url": "https://news.ycombinator.com/item?id=15482089"
+ },
+ {
+  "id": "hn:15481446",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Anonymisation attack challenge \u2013 up to 5000 USD per attack",
+  "body": "Working with sensitive personal data is difficult at best of times, and anonymising such data properly devilishly tricky. At Aircloak we have built a software layer that dynamically anonymises the answers to SQL queries on the fly. We believe that the proof is in the pudding. Anyone can claim they are safely anonymising data, but very few understand what it actually entails. Deleting names or soci",
+  "url": "https://news.ycombinator.com/item?id=15481446"
+ },
+ {
+  "id": "hn:21869200",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Ryan's Note \u2013 Final Scene S03E08 \u2013 Halt and Catch Fire",
+  "body": "I, Ryan Ray, released the MacMillan source code. I acted alone and nobody told me to do it. I did this because security is a myth. Contrary to what you might have heard, my friend, you are not safe. Safety is a story, it's something we teach our kids so they can sleep at night, but we know it's not real. Beware baffled humans, beware false prophets who will sell you a fake future of bad teachers, ",
+  "url": "https://news.ycombinator.com/item?id=21869200"
+ },
+ {
+  "id": "hn:17971496",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 2,
+  "title": "Ask HN: Why doesn't HN offer a Tor hidden service?",
+  "body": "Would an onion service be too expensive to setup and maintain, at least compared to the minor theoretical security advantages?",
+  "url": "https://news.ycombinator.com/item?id=17971496"
+ },
+ {
+  "id": "stackexchange:security:120402",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 2,
+  "title": "Tool for HPP testing?",
+  "body": "Is there an automated vulnerability scanner that supports HPP (HTTP Parameter Pollution)? Since all I need is to take a query string and perform basic modifications / add new parameters, I was surprised to not find any. I can make my own in python, but I'm afraid it wouldn't be as effective as any other - if there is one out.",
+  "url": "https://security.stackexchange.com/questions/120402/tool-for-hpp-testing"
+ },
+ {
+  "id": "stackexchange:security:192173",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 2,
+  "title": "HIPAA compliant BI reporting tool?",
+  "body": "We are building an application for healthcare industry and we are planning to use a 3rd party BI tool for reporting which will directly connect to our postgres DB and generate the desired reports which we should be able to download as CSV or PDF. Reports will contain PHI data like list of patient in a particular zip (this is a simple example, complex scenarios will be there and even complete adhoc",
+  "url": "https://security.stackexchange.com/questions/192173/hipaa-compliant-bi-reporting-tool"
+ },
+ {
+  "id": "stackexchange:security:110651",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 2,
+  "title": "Encryption tool that supports multiple separate decryptions?",
+  "body": "Is there a tool that will allow me to encrypt n plaintexts with n corresponding keys such that: the cipher text is one file with no clue as to the value of n. decrypting with key i (1<=i<=n) produces plaintext i. n > 1 Edit: an example of a scheme that meets the second and third criteria but not the first would be a tar file containing n separate GPG-encrypted files. Edit 2: an example of a scheme",
+  "url": "https://security.stackexchange.com/questions/110651/encryption-tool-that-supports-multiple-separate-decryptions"
+ },
+ {
+  "id": "stackexchange:security:180956",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 2,
+  "title": "Securing pattern for tool for customer frontend",
+  "body": "As a beginner in developing web APIs and other web technologies I'm wondering what could be the best approach for securing a tool in a customer's frontend. Let's say I'm offering a tool that can be used in other website's frontend and would want to secure the usage of it. So a customer has to register, login at my server and generate an API key and secret. Then the customer implements the tool in ",
+  "url": "https://security.stackexchange.com/questions/180956/securing-pattern-for-tool-for-customer-frontend"
+ },
+ {
+  "id": "stackexchange:security:196445",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 2,
+  "title": "Hosting statistic tool on heroku with flask secure?",
+  "body": "I am working on a statistic tool for our company, millions of datasets. Now I need to upload the project, so all company members can request data from everywhere. I am working with Python 3/Flask and I plan to upload the project on heroku. Heroku offers by default an SSL certificate (I do not plan to use a custom domain). In addition I integrated Flask-BasicAuth . It works on localhost fine, one c",
+  "url": "https://security.stackexchange.com/questions/196445/hosting-statistic-tool-on-heroku-with-flask-secure"
+ },
+ {
+  "id": "stackexchange:security:185220",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 2,
+  "title": "SQL RLS for NIST compliance",
+  "body": "Is there specific NIST documentation advising about implementing MS SQL Row-Level security for 800-53 compliance?",
+  "url": "https://security.stackexchange.com/questions/185220/sql-rls-for-nist-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:207938",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Network audit tracker",
+  "body": "I'm looking for a tool like PBNJ ( http://pbnj.sourceforge.net/ ) but not quite. The functionality I'm looking for is something I can throw into cron to run daily or weekly, scan a network(s), store the findings and produce a diff-like report of hosts and ports that (dis)appeared since the prior scan. Any recommendation?",
+  "url": "https://serverfault.com/questions/207938/network-audit-tracker"
+ },
+ {
+  "id": "serverfault:serverfault:489280",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Win 2008r2 Audit",
+  "body": "I'm trying to turn on auditing but every time i check Success and failure in Local policy / Computer Conf/Windows settings/security settings/local policies/Audit Policy/ Audit Object access , it turns on audit for every files/folders. I have just enabled auditing on some folders.... any ideas?",
+  "url": "https://serverfault.com/questions/489280/win-2008r2-audit"
+ },
+ {
+  "id": "serverfault:serverfault:775038",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Printer Audit 64bit",
+  "body": "I'm running the following script to get a report on installed printers : https://community.spiceworks.com/scripts/show/2186-export-printer-information-to-spreadsheet?page=1 However when the script is working it scans for the 64 bit driver retrieves it, copy's to the excel output and then scans for the 32 bit and overwrites the original 64bit. I have tried unsuccessfully to come up with a solution ",
+  "url": "https://serverfault.com/questions/775038/printer-audit-64bit"
+ },
+ {
+  "id": "serverfault:serverfault:426517",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Exchange Admin Audit log",
+  "body": "i was looking at the admin audit logs today and found it very usefull. But it doesn't include the source computer launching the commands. An example, i have the EMC on my computer modifying some distribution list on exchange which is a different machine. In the logs it will say source as being the exchange server and not my computer. Is there a way to change taht? or have more details? Thanks",
+  "url": "https://serverfault.com/questions/426517/exchange-admin-audit-log"
+ },
+ {
+  "id": "serverfault:serverfault:758563",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "MariaDB audit log empty host",
+  "body": "I'm running MariaDB 10.0.23 with the audit plugin logging CONNECT type. The audit log is showing a failed connect with error 1042. Does the host field not show the IP address when a host cannot be resolved? Any insight would be appreciated. Log Entry 20160220 00:47:26,XXXXHOSTXXXXX,,,642901,0,FAILED_CONNECT,,,1042 20160220 00:47:26,XXXXHOSTXXXXX,,,642901,0,DISCONNECT,,,0",
+  "url": "https://serverfault.com/questions/758563/mariadb-audit-log-empty-host"
+ },
+ {
+  "id": "serverfault:serverfault:314713",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Network Change Control & Compliance",
+  "body": "I'm looking for a network change management & compliance audit tool, I know that SolarWinds and tufin are very know. Do you have any experience that you can share regarding these two or other?",
+  "url": "https://serverfault.com/questions/314713/network-change-control-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:988839",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Managing MSP Tenants for Anti-Phishing Controls",
+  "body": "I'm trying to find a simple way to report on our tenants' settings regarding Microsoft's recently introduced Anti-Phishing controls. If possible, I'm looking to find an easy GUI method to report on these, with any management considered a very happy bonus. Otherwise I'll just use the cmdlet that they detail in their docs on a ' Get-AntiPhishPolicy ' and (where necessary) ' Set-AntiPhishPolicy ' bas",
+  "url": "https://serverfault.com/questions/988839/managing-msp-tenants-for-anti-phishing-controls"
+ },
+ {
+  "id": "serverfault:serverfault:884321",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "Google Safe Browsing detect Zimbra as phishing (or deceptive) site",
+  "body": "Since today, a (relatively old) Zimbra installation of a specific customer is detected by Google Safe Browsing as a phishing/deceptive site, with the classical red screen and all. We suspect an email account was compromised and sent some small amount of spam, but is this sufficient to explain the site listing in Safe Browsing? Unfortunately, I can not find many informations on Google's site tools ",
+  "url": "https://serverfault.com/questions/884321/google-safe-browsing-detect-zimbra-as-phishing-or-deceptive-site"
+ },
+ {
+  "id": "serverfault:serverfault:909043",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "I think I just found the encryption key used by ransomware on my server... how can I check?",
+  "body": "Long story short, server ended up with a ton of encrypted files. IDRansomware thinks it was GlobeImposter 2.0, see here . I'm not 100% sure on that as I ended up with a ..rtf file extension on my files (intentional double-dots there) and that isnt stated on the info sheet for globe imposter 2.0. Anyway, I have been tidying up the FS and I've come across this file... The timestamp on the file puts ",
+  "url": "https://serverfault.com/questions/909043/i-think-i-just-found-the-encryption-key-used-by-ransomware-on-my-server-how-c"
+ },
+ {
+  "id": "serverfault:serverfault:356248",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 2,
+  "title": "HTTP Logging Proxies",
+  "body": "I want to implement a proxy that records and replays requests made to specific hosts. So that I can stub out external service requests when testing an application. What is the best way to do this? I have tried modifying the hosts file so that domain.com goes to my localhost, but then this prevents my proxy from then making requests to that domain. Is there some combination of /etc/hosts change and",
+  "url": "https://serverfault.com/questions/356248/http-logging-proxies"
+ },
+ {
+  "id": "github:330808972",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Add/use visual indicator of VPN connection status in Gnome system tray.",
+  "body": "When connecting to a VPN using the Gnome desktop network manager, a visual indicator of the VPN connection status is displayed in the persistent menubar at the top of the screen. However, this tool only allows one to specify a single OpenVPN connection to make. openpyn gives lots of dynamic connection options for use with NordVPN, but doesn't provide a persistent visual indication of the VPN conne",
+  "url": "https://github.com/jotyGill/openpyn-nordvpn/issues/162"
+ },
+ {
+  "id": "github:394341692",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Set of issues",
+  "body": "1. The excellent idea of learning analytics walkthrough refer the following \u201cPress \u201dCreate new session\u201d button..\u201d but there is no such a button in learning analytics tool. 2. The excellent idea of learning analytics walkthrough refer the \u201cThe session id will be sent to you by email that you provide\u201d when a teacher and student give this email? It is not clear. 3. When you go to social you cannot un",
+  "url": "https://github.com/ecraft2learn/learning-analytics/issues/6"
+ },
+ {
+  "id": "github:205142843",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "debugging notes",
+  "body": "I put a hold for a few days on debugging. Its to the point where the scripts can be compiled and attaching the current debugger appears to work, but I don't see it getting out of the `while (isDebuggerAttached == false) {sleep}` and into a breakpoint. Maybe because i dont have a breakpoint - i dont exactly have the exact source available prior to attaching. Perhaps just set one at the top, or try ",
+  "url": "https://github.com/StingyJack/Scripty/issues/8"
+ },
+ {
+  "id": "github:535175483",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Feedback on Idea Jolters",
+  "body": "Re: https://docs.google.com/document/d/177YrqXs6DzGFeOpey1eGmSMJZ3pWHOpZPil2yIU_x7c/edit# > Are we answering \u201cDoc Downers\u201d: Hannah McKenzie 13:50 14 Nov Common examples of doc-writing negativity: let's start with \"DO NOT BE AFRAID\" we're here to help! (from Ruth) > My **writing's not** good enough. Hannah McKenzie 13:50 14 Nov writing isn't (slightly easier to read) > 1 My writing's not good enoug",
+  "url": "https://github.com/thegooddocsproject/templates/issues/93"
+ },
+ {
+  "id": "github:426846119",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Does this project have a roadmap",
+  "body": "I would like to know if there is a plan with set of prioritized features for the project? I am looking for a visualization tool on janusgraph which can support some enterprise features like scale and security. thanks",
+  "url": "https://github.com/bricaud/graphexp/issues/62"
+ },
+ {
+  "id": "github:309140442",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "How copy file from a document library to another one Keeping the same security",
+  "body": "I'm looking for a free tool that can be used to copy file from one document library to another one keeping the same sharing security configuration. We are on SharePoint Online (office 365) Kind regards AP",
+  "url": "https://github.com/mwiedemeyer/SPDeployment/issues/8"
+ },
+ {
+  "id": "github:287021384",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "TOP 4 RISING AND TRENDING CLOUD PROVIDERS WITH THEIR LINKS",
+  "body": "**TOP 4 RISING AND TRENDING CLOUD PROVIDERS AND THEIR FULL INFORMATION WITH THEIR LINKS TO SEARCH ON-** SO HERE 1st comes - AMAZON WEB SERVICES ![icon-cloud-aws](https://user-images.githubusercontent.com/34793004/34712507-080400bc-f549-11e7-8a89-27f319be869d.png) Amazon Web Service provides cloud computing services, including IaaS and PaaS, and is widely considered the leading cloud vendor. By all",
+  "url": "https://github.com/leopardslab/gocloud/issues/22"
+ },
+ {
+  "id": "github:374187367",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "The Cook and the Chef: Musk's Secret Sauce",
+  "body": "The Cook and the Chef: Musk's Secret Sauce https://ift.tt/2sSxbYA About Tim Urban View all posts by Tim Urban \u2192 This is the last part of a four-part series on Elon Musk\u2019s companies. For an explanation of why this series is happening and how Musk is involved, start with Part 1 . 1 1 \u2190 also click these Three quick notes: 1) PDF and ebook options: We made a fancy PDF of this post for printing and off",
+  "url": "https://github.com/guevara/read-it-later/issues/1224"
+ },
+ {
+  "id": "github:269224740",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Use walker for legal, costs, maintenance reasons. Fix #3",
+  "body": "Foundation for such a big movable tower was too expensive and big. Security was an issue (fence mandatory). Static installation as a tower meant no other use possible. Illegal because a tower is only permitted for radio transmission, energy harvest (e.g. wind). Mobile walker fixes all these issues and reduces the amount of machines to maintain. Blocks constructing prototype because there is a depe",
+  "url": "https://github.com/faerietree/fruit_nut_vegetable_robot/issues/5"
+ },
+ {
+  "id": "github:539122609",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Roman D.'s IESG COMMENTS",
+  "body": "---------------------------------------------------------------------- COMMENT: ---------------------------------------------------------------------- > * Section 4. Per \u201cthe DTLS connections SHOULD only be kept alive for EST > messages that are relatively close to each other\u201d, I think the text means that > some EST messages are more likely to occur one after another. It would be > worth being cle",
+  "url": "https://github.com/SanKumar2015/EST-coaps/issues/154"
+ },
+ {
+  "id": "github:373954055",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Public comment from ITAPS",
+  "body": "Follow us on Twitter @ITAlliancePS | Learn more at itaps.itic.org IT Alliance for Public Sector | 1101 K St. NW, Suite 610 | Washington, DC 20005 October 24, 2018 Ms. Suzette Kuhlow Kent Administrator and Federal Chief Information Officer Office of E-Government and Information Technology Office of Management and Budget Executive Office of the President 1650 Pennsylvania Avenue, NW Washington, DC 2",
+  "url": "https://github.com/ombegov/cloud.cio.gov/issues/33"
+ },
+ {
+  "id": "github:274928530",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "The Software Engineering Code of Ethics and Professional Practice",
+  "body": "http://ethics.acm.org/code-of-ethics/software-engineering-code/ The Software Engineering Code of Ethics and Professional Practice Software Engineering Code of Ethics and Professional Practice (Version 5.2) as recommended by the ACM/IEEE-CS Joint Task Force on Software Engineering Ethics and Professional Practices and jointly approved by the ACM and the IEEE-CS as the standard for teaching and prac",
+  "url": "https://github.com/tieubao/til/issues/332"
+ },
+ {
+  "id": "github:491871942",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "How To Become A Hacker",
+  "body": "How To Become A Hacker How To Become A Hacker ---------------------- ### Eric Steven Raymond [Thyrsus Enterprises](http://catb.org/~esr/) ` ` Copyright \u00a9 2001 Eric S. Raymond | **Revision History** | | :-- | | Revision 1.51 | 06 October 2017 | esr | | Link to \"Things Every Hacker Once Knew.\" Mention USB-stick distros. Many updated translation links. | | Revision 1.50 | 19 July 2015 | esr | | Added",
+  "url": "https://github.com/tg-z/web-clip/issues/40"
+ },
+ {
+  "id": "github:137960938",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Library items include huge overhead",
+  "body": "Library blocks and library questions include a lot of unused list_names and other sheet details if they were imported from a large Excel library file. This causes annoying delays to view or edit these assets. ![image](https://cloud.githubusercontent.com/assets/673511/13471544/fea1657c-e07e-11e5-8dbd-7148d78e10b6.png) For example, this single library question includes all of the following (125,000 ",
+  "url": "https://github.com/kobotoolbox/kpi/issues/542"
+ },
+ {
+  "id": "github:428691270",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "QuTiP notebooks online with JupyterHub and BinderHub",
+  "body": "Opening this issue to collect ideas toward enhancing server capabilities for the QuTiP users community. For example, I would find it useful to have some tools for an online interactive classroom using QuTiP. Online notebooks can already be run with [My Binder](https://mybinder.readthedocs.io/en/latest/index.html), but setting up more persistent features could be desirable during educational activi",
+  "url": "https://github.com/qutip/qutip-notebooks/issues/69"
+ },
+ {
+  "id": "github:380795984",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Allow for easier withdrawals and re-using payouts",
+  "body": "## Simple Summary This change removes the cooling period (thus allowing user's to withdraw any time) and minimizes the gas cost for user's to withdraw their payouts across multiple events. It also makes it possible to reuse a payout as a deposit for a new event without having to withdraw it first. ## Motivation Our current setup requires the user to manually withdraw their ETH payout from an event",
+  "url": "https://github.com/wearekickback/KIPs/issues/2"
+ },
+ {
+  "id": "github:274644632",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Innovative Acquisitions and Procurement (includes tables)",
+  "body": "\"Innovations arise when people are given a problem to solve instead of being told to implement a known solution.\" - Partnership for Public Service, \"[Innovation is a Contract Sport](https://ourpublicservice.org/publications/viewcontentdetails.php?id=918)\" # Summary ## Purpose and Outcomes **Purpose:** Innovative acquisitions and procurement methods help the government get the most value of its pur",
+  "url": "https://github.com/GSA/innovation.gov/issues/35"
+ },
+ {
+  "id": "github:273618635",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "github",
+  "engagement": 1,
+  "title": "Section 5 Editorial",
+  "body": "Additional comments received on Section 5 | Organization / Program | PDF Line | Comment | Change | | --- | --- | --- | --- | | Scott S. Perry CPA, PLLC|1187|Typo for and shown as \"adn\"|fix typo | | Scott S. Perry CPA, PLLC|1234|Tense is inconsistent|Delegated Third Parties are not allowed under this policy | | Scott S. Perry CPA, PLLC|2233|Tense is inconsistent|Delegated Third Parties are not allo",
+  "url": "https://github.com/uspki/policies/issues/468"
+ },
+ {
+  "id": "hn:5953139",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Is there a tool to verify browser TLS/SSL configuration? SSL Labs for clients?",
+  "body": "",
+  "url": "https://news.ycombinator.com/item?id=5953139"
+ },
+ {
+  "id": "hn:3614557",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Defense against the Black Arts",
+  "body": "If there ever was a book that should not be judged by its title, Defense against the Black Arts: How Hackers Do What They Do and How to Protect against It, is that book. According to Wikipedia, black art can refer to: * art forms by persons of African descent * black magic * optical effect in stage magic * typesetting * process that is mysterious or difficult to master or describe Even if one uses",
+  "url": "https://news.ycombinator.com/item?id=3614557"
+ },
+ {
+  "id": "hn:7913422",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Ask HN: Tools for collating and creating digests from multiple emails",
+  "body": "For some time our team has been looking for a tool to take all the emails from our servers & external services and perform collation / pattern grokking / send out digests & perform general magic. * We must be able to run this tool ourselves (i.e. not a cloud service) * We'd like to receive digested / grokked emails from cron jobs / builds / package updates etc... rather than getting individual ema",
+  "url": "https://news.ycombinator.com/item?id=7913422"
+ },
+ {
+  "id": "hn:19378615",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Ask HN: How should I disclose this use-after-free bug to a small vendor?",
+  "body": "Hello everyone! I work at a small company and we deal with other small(ish) companies to fill our workstations with lots of enterprise ERP stuff. Today I discovered a pretty diesel credential bypass bug in an expensive tool we pay maintenance on. The thing is, this bug could also be exploited as a use-after-free bug, depending on who's using it. So by having this bug we could potentially use the s",
+  "url": "https://news.ycombinator.com/item?id=19378615"
+ },
+ {
+  "id": "hn:278786",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "hn",
+  "engagement": 1,
+  "title": "Speeding up the robot revolution",
+  "body": "What's holding back robots is perception - you have machines that can physically do just about anything, but what's lacking is object recognition. And the problem for that is really just a matter of marketing current technology (machine learning techniques such as neural networks) so that more people use them. I'd like to see a marketplace for perception tasks created. Basic Premise Small companie",
+  "url": "https://news.ycombinator.com/item?id=278786"
+ },
+ {
+  "id": "stackexchange:security:159218",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 1,
+  "title": "DLP Tool for requirement",
+  "body": "Is there any DLP tool with default policies to comply with south african laws and regulations on PII ?",
+  "url": "https://security.stackexchange.com/questions/159218/dlp-tool-for-requirement"
+ },
+ {
+  "id": "stackexchange:security:222007",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 1,
+  "title": "Key storage and Password Management Tool",
+  "body": "Passwords are not stored in plain text. So we hash them. But for hashing we need a key if we use a keyed hash function. In unix system passwords were stored in etc\\password file but now the location has changed. Where the keys for the hash functions are stored and does the password management tool handles the key storage? Zulfi.",
+  "url": "https://security.stackexchange.com/questions/222007/key-storage-and-password-management-tool"
+ },
+ {
+  "id": "stackexchange:security:199238",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "stackexchange",
+  "engagement": 1,
+  "title": "window operating system vulnerability scanner tool",
+  "body": "I want to use window operating system vulnerability scanner tool, just like lynis tools which scans on local os i.e like misconfiguration, os version, like firewall and AV configured. please recommend me the tools which do this kind of scan?",
+  "url": "https://security.stackexchange.com/questions/199238/window-operating-system-vulnerability-scanner-tool"
+ },
+ {
+  "id": "serverfault:serverfault:592872",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1,
+  "title": "Security Recommendation",
+  "body": "We have bunch of linux servers dedicated to do some tasks. Periodically we need to run certain commands which requires root access. So we have developed a web panel from which these administration can be done. Now the problem is we need to give the username/passwords to the developers of the web application, which we are not very comfortable with. So we are seeking a solution such that the authent",
+  "url": "https://serverfault.com/questions/592872/security-recommendation"
+ },
+ {
+  "id": "serverfault:serverfault:344996",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1,
+  "title": "Apache security",
+  "body": "Possible Duplicate: Apache security I've been reading up on server/apache security and I've run into a contradiction. I read that you shouldn't serve any files that aren't inside Apache's scope, but I've been told that you should keep files outside Apache's scope. My current setup is: Apache's scope: public_html/front . In the front folder I keep html, css, and javascript files. I also have a fold",
+  "url": "https://serverfault.com/questions/344996/apache-security"
+ },
+ {
+  "id": "serverfault:serverfault:981094",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1,
+  "title": "Enterprise Wide GPO Audit",
+  "body": "How can I generate a report of users who are exempt from a specific GPO? HR is asking me for a report of users who are exempt from an inactivity lockout group policy. Is there a way to run an automated report or is this something I'll need to do manually? We have over 500 end-points across three sites, so I really wouldn't want to run around to each system in the company to get this data? Thanx...",
+  "url": "https://serverfault.com/questions/981094/enterprise-wide-gpo-audit"
+ },
+ {
+  "id": "serverfault:serverfault:274175",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1,
+  "title": "Service to help with PCI compliance?",
+  "body": "We received an alert that we need to correct some issues with PCI compliance. Is there a service we can use to quickly resolve these issues? The auditing firm issuing the alert provides uninformative messages and instructions on how to correct the errors. For instance, we got flagged on this security violation, \"Description: Cross-site scripting vulnerability in category parameter to URL X.\" But t",
+  "url": "https://serverfault.com/questions/274175/service-to-help-with-pci-compliance"
+ },
+ {
+  "id": "serverfault:serverfault:587931",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1,
+  "title": "How to better block phishing spam due to heartbleed?",
+  "body": "I imagine it won't take long for spammers to recognize that Heartbleed is an ideal way to do phishing. I am thinking of ways to mitigate the phishing risk, I mean just this time for the heartbleed bug, not generally. End-users will likely receive many official emails asking to go to a website and reset the password. Maybe this even becomes advertised in radio or television. If spammers do a good j",
+  "url": "https://serverfault.com/questions/587931/how-to-better-block-phishing-spam-due-to-heartbleed"
+ },
+ {
+  "id": "serverfault:serverfault:840511",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "serverfault",
+  "engagement": 1,
+  "title": "Sage2.0 Ransomware and Tomcat 7",
+  "body": "We have a tomcat server running on window 2012 server which seems to be constantly being attached by Sage 2.0 ransomeware. Some details of the sever, 1) Tomcat is running on port 80 and 8080. 2) Cygwin is also running. 3) There is no other ports open externally. We are not sure how the infection is reaching the server in the first place. We formatted our server and re-installed everything, but it ",
+  "url": "https://serverfault.com/questions/840511/sage2-0-ransomware-and-tomcat-7"
+ },
+ {
+  "id": "ted:620655-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "France-Lyon: Software testing",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/620655-2019"
+ },
+ {
+  "id": "ted:618633-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Belgium-Herent: IT services: consulting, software development, Internet and support",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/618633-2019"
+ },
+ {
+  "id": "ted:617653-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Czechia-Pardubice: Security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/617653-2019"
+ },
+ {
+  "id": "ted:617759-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Germany-Hamburg: Security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/617759-2019"
+ },
+ {
+  "id": "ted:614141-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "France-Le Havre: Computer audit consultancy and hardware consultancy services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/614141-2019"
+ },
+ {
+  "id": "ted:612838-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Czechia-Prague: Security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/612838-2019"
+ },
+ {
+  "id": "ted:611281-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Netherlands-Amsterdam: Provision of External Service Providers for IT Infrastructure Administration, Security Implementation and End User Equipment and Software Management",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/611281-2019"
+ },
+ {
+  "id": "ted:617149-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Norway-Oslo: Application service providers",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/617149-2019"
+ },
+ {
+  "id": "ted:612566-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Poland-Warsaw: Data security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/612566-2019"
+ },
+ {
+  "id": "ted:611169-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Norway-H\u00f8nefoss: Custom software development services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/611169-2019"
+ },
+ {
+  "id": "ted:609820-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Netherlands-Utrecht: Computer audit and testing services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/609820-2019"
+ },
+ {
+  "id": "ted:597548-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Ireland-Swords: Mobile-telephone services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/597548-2019"
+ },
+ {
+  "id": "ted:598793-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Spain-Seville: Auditing services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/598793-2019"
+ },
+ {
+  "id": "ted:594084-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Spain-Santiago de Compostela: Data security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/594084-2019"
+ },
+ {
+  "id": "ted:591179-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Germany-Frankfurt-on-Main: Security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/591179-2019"
+ },
+ {
+  "id": "ted:592199-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Netherlands-Amersfoort: Computer audit and testing services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/592199-2019"
+ },
+ {
+  "id": "ted:589095-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Romania-Arad: Systems analysis and programming services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/589095-2019"
+ },
+ {
+  "id": "ted:589168-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Spain-Madrid: IT services: consulting, software development, Internet and support",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/589168-2019"
+ },
+ {
+  "id": "ted:586754-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "France-Modane: Computer audit services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/586754-2019"
+ },
+ {
+  "id": "ted:585908-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "United Kingdom-Caerphilly: Office and computing machinery, equipment and supplies except furniture and software packages",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/585908-2019"
+ },
+ {
+  "id": "ted:581475-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Germany-Cologne: Security software development services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/581475-2019"
+ },
+ {
+  "id": "ted:578046-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Bulgaria-Sofia: Data security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/578046-2019"
+ },
+ {
+  "id": "ted:573334-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Poland-Warsaw: Personal computers",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/573334-2019"
+ },
+ {
+  "id": "ted:573166-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Ireland-Dublin: Security equipment",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/573166-2019"
+ },
+ {
+  "id": "ted:569449-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Finland-Hyvink\u00e4\u00e4: Wide area network services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/569449-2019"
+ },
+ {
+  "id": "ted:568447-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Ireland-Dublin: Software package and information systems",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/568447-2019"
+ },
+ {
+  "id": "ted:565792-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Spain-Campanillas: Virus protection software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/565792-2019"
+ },
+ {
+  "id": "ted:563670-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Spain-Madrid: Security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/563670-2019"
+ },
+ {
+  "id": "ted:563315-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Norway-Oslo: Networks",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/563315-2019"
+ },
+ {
+  "id": "ted:558958-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Belgium-Brussels: Security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/558958-2019"
+ },
+ {
+  "id": "ted:559737-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Slovakia-Bratislava: Storage media loading software development services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/559737-2019"
+ },
+ {
+  "id": "ted:556641-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Czechia-Pardubice: Software supply services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/556641-2019"
+ },
+ {
+  "id": "ted:554521-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Slovakia-Bratislava: Storage media loading software development services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/554521-2019"
+ },
+ {
+  "id": "ted:551207-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Sweden-Nyk\u00f6ping: Data security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/551207-2019"
+ },
+ {
+  "id": "ted:547495-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "United Kingdom-Greater London: IT services: consulting, software development, Internet and support",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/547495-2019"
+ },
+ {
+  "id": "ted:546517-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "France-Ajaccio: Telecommunications network",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/546517-2019"
+ },
+ {
+  "id": "ted:547156-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Spain-Vitoria-Gasteiz: Computer audit services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/547156-2019"
+ },
+ {
+  "id": "ted:544839-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "United Kingdom-Leeds: IT services: consulting, software development, Internet and support",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/544839-2019"
+ },
+ {
+  "id": "ted:545861-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Norway-Varhaug: Software consultancy services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/545861-2019"
+ },
+ {
+  "id": "ted:543956-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Croatia-Zagreb: Security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/543956-2019"
+ },
+ {
+  "id": "ted:542268-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "United Kingdom-Edinburgh: Software package and information systems",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/542268-2019"
+ },
+ {
+  "id": "ted:541620-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "United Kingdom-Edgbaston: Office and computing machinery, equipment and supplies except furniture and software packages",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/541620-2019"
+ },
+ {
+  "id": "ted:541505-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Bulgaria-Sofia: Data security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/541505-2019"
+ },
+ {
+  "id": "ted:541574-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Czechia-Prague: Security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/541574-2019"
+ },
+ {
+  "id": "ted:540807-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Poland-Gdansk: Security software package",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/540807-2019"
+ },
+ {
+  "id": "ted:540158-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "Hungary-Budapest: Security software development services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/540158-2019"
+ },
+ {
+  "id": "ted:540869-2019",
+  "segment": "open-discovery",
+  "segment_description": "Any cybersecurity need \u2014 tools, services, operations, compliance \u2014 not limited to a predefined segment.",
+  "source": "ted",
+  "engagement": 1,
+  "title": "France-Le Bourget-du-Lac: Computer audit services",
+  "body": "",
+  "url": "https://ted.europa.eu/en/notice/-/detail/540869-2019"
+ }
+]

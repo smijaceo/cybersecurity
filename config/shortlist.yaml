@@ -1,0 +1,27 @@
+# Phase 3 shortlist (decision D14, PM sign-off 2026-11-23). Each opening becomes one concept.
+# theme_ids refer to reports/phase2/themes.json; the thesis is the market researchers' opening.
+
+openings:
+  - id: cra-sbom-vex
+    priority: 1
+    theme_ids: [14, 11]
+    thesis: >-
+      Affordable SBOM/VEX compliance (vulnerability impact, VEX/CSAF, SBOM lifecycle) for
+      mid-size software and device makers facing EU Cyber Resilience Act obligations
+      (reporting from Sep 2026, main duties Dec 2027), between free Dependency-Track and
+      quote-only enterprise platforms.
+
+  - id: buyer-side-provisioning
+    priority: 2
+    theme_ids: [3]
+    thesis: >-
+      Buyer-side user provisioning and deprovisioning for SaaS apps that lack SCIM or lock it
+      behind enterprise tiers, sold to mid-market IT teams rather than to app developers.
+
+  - id: cross-cloud-workload-identity
+    priority: 3
+    theme_ids: [10]
+    thesis: >-
+      Cheap, self-serve cross-cloud workload identity (short-lived credentials instead of
+      static keys) for mid-market teams, priced against per-identity Vault/Infisical bills.
+      Provisional: theme 10 is unstable (0.41) and the space is consolidating.

@@ -266,6 +266,36 @@ def cmd_gaps(args) -> int:
     return 0
 
 
+def cmd_concept_prepare(args) -> int:
+    from . import concepts
+
+    shortlist = load_config(args.shortlist)
+    try:
+        paths = concepts.build_inputs(shortlist, DEFAULT_PHASE2, Store(args.db), args.ideas_dir)
+    except (ValueError, FileNotFoundError) as exc:
+        log.error("concept-prepare: %s", exc)
+        return 2
+    for p in paths:
+        print(p)
+    return 0
+
+
+def cmd_concept_render(args) -> int:
+    from . import concepts
+
+    results = concepts.render_all(args.ideas_dir, args.only)
+    ok = True
+    for oid, problems in results:
+        if problems:
+            ok = False
+            print(f"{oid}: {len(problems)} problem(s)")
+            for p in problems:
+                print(f"  - {p}")
+        else:
+            print(f"{oid}: ok")
+    return 0 if ok and results else 1
+
+
 def cmd_fetch(args) -> int:
     from .fetch import fetch_text
 
@@ -351,6 +381,16 @@ def main(argv: list[str] | None = None) -> int:
     gp.add_argument("--out-dir", type=Path, default=DEFAULT_PHASE2)
     gp.add_argument("--scoring", type=Path, default=DEFAULT_SCORING)
     gp.set_defaults(func=cmd_gaps)
+
+    cp = sub.add_parser("concept-prepare", help="Phase 3: write concept-writer inputs per opening")
+    cp.add_argument("--shortlist", type=Path, default=ROOT / "config" / "shortlist.yaml")
+    cp.add_argument("--ideas-dir", type=Path, default=ROOT / "ideas")
+    cp.set_defaults(func=cmd_concept_prepare)
+
+    cr = sub.add_parser("concept-render", help="Phase 3: validate concepts and write ideas/<slug>.md")
+    cr.add_argument("--ideas-dir", type=Path, default=ROOT / "ideas")
+    cr.add_argument("--only", help="validate/render just this opening id")
+    cr.set_defaults(func=cmd_concept_render)
 
     fp = sub.add_parser("fetch", help="print a web page's main text (for agents)")
     fp.add_argument("url")

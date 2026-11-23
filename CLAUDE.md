@@ -14,8 +14,7 @@ and stress-tests them with critic agents. The repository owner is the product ma
 
 ## Engineering
 
-- Python ≥3.11, package `gapfinder/`. Run: `python -m gapfinder --help` (collect, stats, export, sample, evaluate, judge-*, themes,
-  threat-prepare, gaps).
+- Python ≥3.11, package `gapfinder/`. Run: `python -m gapfinder --help` for all commands.
 - Tests: `python -m pytest`. Must pass before every commit. New collectors and scoring logic get
   tests with canned API responses (no network in tests).
 - Collectors use official APIs only, respect rate limits, and send no personal data.
@@ -23,9 +22,11 @@ and stress-tests them with critic agents. The repository owner is the product ma
 - LLM work (filtering, idea generation, critics) runs as Claude Code subagents per decision D2;
   don't add an Anthropic API dependency without a decision entry.
 - Agent steps are defined once in `.claude/agents/` (relevance-judge, theme-namer,
-  threat-mapper, market-researcher) and follow their rubric in [docs/rubrics/](docs/rubrics/).
+  threat-mapper, market-researcher, concept-writer) and follow their rubric in
+  [docs/rubrics/](docs/rubrics/).
   Use those definitions; don't write ad-hoc agent prompts for pipeline steps.
-- Re-run Phase 2 with the saved `gap-analysis` workflow (`.claude/workflows/`), not by hand.
+- Run pipeline phases with the saved workflows in `.claude/workflows/` (`gap-analysis` for
+  Phase 2, `concepts` for Phase 3), invoked by file path, not by hand.
 - Every agent output is validated against `gapfinder/schemas.py` (pydantic) and committed.
 - Reuse maintained open-source libraries before writing our own (D7); record any new
   dependency in `pyproject.toml`.

@@ -1,0 +1,225 @@
+{
+ "opening_id": "cross-cloud-workload-identity",
+ "priority": 3,
+ "thesis": "Cheap, self-serve cross-cloud workload identity (short-lived credentials instead of static keys) for mid-market teams, priced against per-identity Vault/Infisical bills. Provisional: theme 10 is unstable (0.41) and the space is consolidating.",
+ "themes": [
+  {
+   "theme_id": 10,
+   "name": "AWS role credentials for workloads",
+   "need": "Engineers running workloads in EKS, Lambda or outside AWS struggle to get tools to use role-based, short-lived credentials via the default chain instead of static or expiring keys.",
+   "gap_score": 0.606,
+   "stability": 0.41,
+   "need_statements": [
+    {
+     "title": "Obtain credentials from `cli/cache` json file",
+     "body": "### Is this related to a problem? Going upstream after creating this: https://github.com/kubernetes-sigs/aws-iam-authenticator/issues/296 ### Feature description Describe what you want to happen. If you use [AWS CLI 2.0 SSO integration](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-",
+     "url": "https://github.com/aws/aws-sdk-go/issues/3186",
+     "engagement": 104
+    },
+    {
+     "title": "[AWS] Support the new EKS Pod Identity Agent",
+     "body": "## Description of the bug External Secrets v0.9.9 installed in EKS does not work with the new [EKS Pod Identity Agent](https://docs.aws.amazon.com/eks/latest/userguide/pod-identities.html) feature (alternative to IRSA). EKS Pod Identity Agent injects the `AWS_CONTAINER_CREDENTIALS_FULL_URI: http://1",
+     "url": "https://github.com/external-secrets/external-secrets/issues/2951",
+     "engagement": 69
+    },
+    {
+     "title": "Support AWS_ROLE_ARN Environment Variable with Environment Credential Provider",
+     "body": "### Feature description The `AWS_ROLE_ARN` environment variable was recently added with the introduction of the web identity credential provider. It would be great if the `AWS_ROLE_ARN` environment variable could also be used with the environment credential provider. This allows environments where d",
+     "url": "https://github.com/aws/aws-sdk-go-v2/issues/2867",
+     "engagement": 44
+    },
+    {
+     "title": "Would you mind clarifying how to add additional Roles/Users to the AWS AUTH during EKS provisioning",
+     "body": "## Is your request related to a problem? Please describe. Could not add Roles arn:: to the aws_auth configmap during installation process hence there are no any ability to manage EKS cluster after provisioning ###Unauthorized ## Describe the solution you'd like. Add ability to manage aws_auth config",
+     "url": "https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1901",
+     "engagement": 35
+    },
+    {
+     "title": "Support AWS IAM Roles Anywhere for AWS Secrets Engine",
+     "body": "**Is your feature request related to a problem? Please describe.** Recently Amazon introduces [IAM Roles Anywhere for workloads outside of AWS](https://aws.amazon.com/blogs/security/extend-aws-iam-roles-to-workloads-outside-of-aws-with-iam-roles-anywhere/). It could solve the problem, when we have H",
+     "url": "https://github.com/hashicorp/vault/issues/16268",
+     "engagement": 27
+    },
+    {
+     "title": "S3 Client to be able to inherit IAM permissions from runtime / environment",
+     "body": "### What is the problem this feature would solve? Currently if you use the bun S3 client in say a lambda or fargate container, the only way to authorize the client is by explicilty passing in a accessKeyID and secretAccessKey. However, when running in a hosted environment say a lambda or docker cont",
+     "url": "https://github.com/oven-sh/bun/issues/22711",
+     "engagement": 19
+    },
+    {
+     "title": "AWS ECR Permanent Credentials Feature Request",
+     "body": "**Is your feature request related to a problem? Please describe.** I'm running into a frustrating issue with ECR's 12-hour credential expiration. We're still setting up our initial workflow, having to manually refresh these credentials is creating unnecessary overhead. Even with just a handful of mo",
+     "url": "https://github.com/runpod/runpod-python/issues/415",
+     "engagement": 18
+    },
+    {
+     "title": "Using env var in vault agent conf",
+     "body": "**Is your feature request related to a problem? Please describe.** I'd like to use an environment variable for my vault agent configuration. This var is the AWS role and vary on my deploy stage. **Describe the solution you'd like** Add an object `env` that contains all environment variables. ``` aut",
+     "url": "https://github.com/hashicorp/vault/issues/11571",
+     "engagement": 14
+    },
+    {
+     "title": "Enable specific role assumption in ProviderConfig",
+     "body": "### What problem are you facing? I would like to use specific and least privileged access roles for provisioning AWS resources without creating additional credentials wherever possible. ### How could Crossplane help solve your problem? Adding a field e.g. `assumeRoleARN` to the `ProviderConfig` woul",
+     "url": "https://github.com/crossplane-contrib/provider-aws/issues/606",
+     "engagement": 14
+    },
+    {
+     "title": "Vault client should use AWS-SDK default credential chain when using AWS auth method in iam mode",
+     "body": "**Is your feature request related to a problem? Please describe.** I have tried vault with multiple credential retrieval methods that the AWS SDK natively supports, namely: 1. ~/.aws/config with source_profile + using the AWS_PROFILE environment variable -> doesn't work 2. using ~/.aws/config with '",
+     "url": "https://github.com/hashicorp/vault/issues/12568",
+     "engagement": 13
+    },
+    {
+     "title": "Detailed list of permissions for AWS iam role too open",
+     "body": "## Do you already have an issue opened with F5 support? no ## Description Looking for a more granular list of permissions for the AWS IAM role. https://clouddocs.f5.com/products/extensions/f5-cloud-failover/latest/userguide/aws.html#create-and-assign-an-iam-role Example currently... EC2 Read/Write S",
+     "url": "https://github.com/F5Networks/f5-cloud-failover-extension/issues/57",
+     "engagement": 4
+    }
+   ],
+   "market_research": {
+    "theme_id": 10,
+    "vendors": [
+     {
+      "name": "Aembit Workload IAM",
+      "url": "https://aembit.io/pricing/",
+      "offering": "Workload IAM: secretless, policy-based access using native cloud identities across clouds",
+      "pricing": "free Starter tier (10 workloads or 3 AI agents); Teams starts at $20/workload/month (workloads) and $20/agent/month (agentic AI), per Aembit's FAQ; Enterprise priced by scale",
+      "segment": "mid-market / enterprise",
+      "source": "https://aembit.io/faq/"
+     },
+     {
+      "name": "Teleport Machine & Workload Identity",
+      "url": "https://goteleport.com/about/newsroom/press-releases/teleport-unveils-machine-and-workload-identity-solution/",
+      "offering": "Short-lived certificates and workload identity for machines, CI/CD and services",
+      "pricing": "not public (MWI bundled in Enterprise Standard; each tbot instance billed as a Teleport Protected Resource, hourly-averaged; no separate per-MWI price)",
+      "segment": "mid-market / enterprise",
+      "source": "https://goteleport.com/pricing/guide/"
+     },
+     {
+      "name": "Defakto (formerly SPIRL)",
+      "url": "https://www.kuppingercole.com/research/rs81394/rising-star-defakto",
+      "offering": "SPIFFE-based non-human identity platform issuing short-lived workload identities",
+      "pricing": "not public (subscription)",
+      "segment": "enterprise",
+      "source": "https://www.securityweek.com/defakto-raises-30-million-for-non-human-iam-platform/"
+     },
+     {
+      "name": "HCP Vault Dedicated (HashiCorp/IBM)",
+      "url": "https://hashicorp.com/pricing/all",
+      "offering": "Secrets manager with dynamic short-lived AWS credentials via AWS secrets engine",
+      "pricing": "hourly cluster fee plus ~$112.17/client/month (Standard and Plus tiers, official HashiCorp price list)",
+      "segment": "mid-market / enterprise",
+      "source": "https://hashicorp.com/pricing/all"
+     },
+     {
+      "name": "Akeyless",
+      "url": "https://www.akeyless.io/?p=1547",
+      "offering": "SaaS secrets and machine identity with workload identity federation across clouds",
+      "pricing": "free 5 clients; paid tiers not public",
+      "segment": "mid-market / enterprise",
+      "source": "https://www.akeyless.io/?p=1547"
+     },
+     {
+      "name": "Infisical",
+      "url": "https://infisical.com/pricing",
+      "offering": "Open-core secrets and machine identity with AWS IAM role-based auth",
+      "pricing": "free tier; Pro $20/identity/month billed annually ($23 monthly); Advanced $40 annually",
+      "segment": "SMB / developers / mid-market",
+      "source": "https://infisical.com/pricing.md"
+     },
+     {
+      "name": "Oasis NHI Security Cloud (now Cyera Identity)",
+      "url": "https://aws.amazon.com/marketplace/pp/prodview-wl52yxutluvma",
+      "offering": "Non-human identity discovery, posture and lifecycle management; Oasis acquired by Cyera (~$1B, 2026) and operates as Cyera Identity",
+      "pricing": "AWS Marketplace 'Cyera Identity (Oasis) Starter Pack' $100,000/12 months (legacy Oasis-branded listing showed $50,000/12 months)",
+      "segment": "enterprise",
+      "source": "https://aws.amazon.com/marketplace/pp/prodview-wl52yxutluvma"
+     },
+     {
+      "name": "CyberArk (Palo Alto Networks)",
+      "url": "https://paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era",
+      "offering": "Machine identity, secrets management and PAM, now part of Palo Alto platform",
+      "pricing": "not public",
+      "segment": "enterprise",
+      "source": "https://www.softwarereviews.com/vendor-technology-notes/palo-alto-networks-completes-cyberark-deal-expanding-zero-trust-to-machine-identity"
+     }
+    ],
+    "crowdedness": 3,
+    "paid_market_gaps": [
+     {
+      "gap": "Per-identity/per-client pricing scales with machine count, punishing workload-heavy teams (Infisical Pro $20-23/identity, HCP Vault ~$112/client, Aembit $20/workload).",
+      "evidence": "https://dev.to/beton/infisical-pricing-teardown-2026-1ang"
+     },
+     {
+      "gap": "Paid secrets tools lag new AWS mechanisms: Vault lacked IAM Roles Anywhere; External Secrets broke on EKS Pod Identity.",
+      "evidence": "https://github.com/hashicorp/vault/issues/16268"
+     },
+     {
+      "gap": "Workload identity is mostly sold as quote-only or large enterprise bundles (Teleport TPR-metered Enterprise, Defakto, Cyera Identity $100k/12-month starter); Aembit Teams at $20/workload is the main self-serve exception.",
+      "evidence": "https://goteleport.com/pricing/guide/"
+     },
+     {
+      "gap": "Consolidation (CyberArk to Palo Alto, Astrix to Cisco) leaves buyers wary of standalone NHI vendor roadmaps.",
+      "evidence": "https://startwithidentity.com/vendors/ai-identity/aembit/"
+     }
+    ],
+    "willingness_to_pay": 2,
+    "wtp_evidence": "Established paid products with public prices: HCP Vault Dedicated ~$112.17/client/month (Standard, official price list), Aembit Teams from $20/workload/month (Aembit FAQ), Cyera Identity (Oasis) Starter Pack $100,000/12 months on AWS Marketplace.",
+    "wtp_sources": [
+     "https://hashicorp.com/pricing/all",
+     "https://aembit.io/faq/",
+     "https://aws.amazon.com/marketplace/pp/prodview-wl52yxutluvma"
+    ],
+    "bundling_risk": "high",
+    "bundling_note": "AWS gives IRSA, EKS Pod Identity and IAM Roles Anywhere (no service charge) plus SDK default-chain support for free, covering the core in-AWS and off-AWS need.",
+    "summary": "AWS-only role credentials are free and native; paid money sits in multi-cloud workload identity/NHI platforms, already crowded and consolidating (Cyera-Oasis, Palo Alto-CyberArk). A narrow opening: cheap self-serve cross-cloud workload identity for mid-market teams, priced against per-identity Vault/Infisical bills and Aembit's $20/workload Teams tier."
+   },
+   "threat": {
+    "theme_id": 10,
+    "techniques": [],
+    "threat_relevance": 3,
+    "reason": "Leaked static AWS keys are a top cloud breach path; role-based short-lived credentials remove them. No candidate fits."
+   },
+   "open_source_leaders": [
+    {
+     "name": "aws/aws-workload-credentials-provider",
+     "url": "https://github.com/aws/aws-workload-credentials-provider",
+     "stars": 709,
+     "days_since_push": 4
+    },
+    {
+     "name": "jenkinsci/aws-secrets-manager-credentials-provider-plugin",
+     "url": "https://github.com/jenkinsci/aws-secrets-manager-credentials-provider-plugin",
+     "stars": 65,
+     "days_since_push": 8
+    },
+    {
+     "name": "61418/boto3-refresh-session",
+     "url": "https://github.com/61418/boto3-refresh-session",
+     "stars": 53,
+     "days_since_push": 5
+    },
+    {
+     "name": "jfrog/jfrog-credentials-provider",
+     "url": "https://github.com/jfrog/jfrog-credentials-provider",
+     "stars": 28,
+     "days_since_push": 52
+    },
+    {
+     "name": "geordielad/tableau-athena-credential-provider-examples",
+     "url": "https://github.com/geordielad/tableau-athena-credential-provider-examples",
+     "stars": 14,
+     "days_since_push": 2358
+    }
+   ]
+  }
+ ],
+ "flagged_claims": [
+  {
+   "theme_id": 10,
+   "claim": "WTP: 'HCP Vault Dedicated ~$112.17/client/month (Standard, official price list)' (source: hashicorp.com/pricing/all)",
+   "issue": "Unverified: the source could not be read. gapfinder fetch returned HTTP 429. fetch --render returned a bot challenge page ('Failed to verify your browser, Code 21'). WebFetch returned HTTP 404 for both hashicorp.com/pricing/all and www.hashicorp.com/en/pricing/all. No figure, tier or unit could be checked. The other WTP figures are confirmed: Aembit Teams from $20/workload/month and Cyera Identity (Oasis) Starter Pack $100,000 per 12 months."
+  }
+ ]
+}

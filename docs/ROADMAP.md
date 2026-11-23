@@ -94,7 +94,7 @@ Collect posts, questions and issues where people express a need, for the four se
   ("Show HN", "Launch HN"), essays and news. Phase 2's relevance filter must drop these before
   clustering, and should look past the top-engagement items.
 
-## Phase 2 — Gap analysis · `done — awaiting PM sign-off and Phase 3 shortlist`
+## Phase 2 — Gap analysis · `done` (PM sign-off 2026-11-23, D14)
 
 Turn raw signals into a ranked list of unmet needs, each with evidence.
 Output: **[reports/gaps-2026-11-23.md](../reports/gaps-2026-11-23.md)** (with paid market, D11). The first, open-source-only run is kept as [reports/gaps-2026-11-22.md](../reports/gaps-2026-11-22.md).
@@ -112,7 +112,7 @@ Output: **[reports/gaps-2026-11-23.md](../reports/gaps-2026-11-23.md)** (with pa
 
 **Exit criteria**
 - Each top gap links ≥ 5 real signals. ✅ (smallest coherent theme: 6)
-- The PM agrees the report is credible. ⏳ waiting on PM.
+- The PM agrees the report is credible. ✅ (2026-11-23, D14)
 
 **Pipeline** (decision D12). Re-run with the saved workflow — in a Claude Code session ask to
 "run the gap-analysis workflow" with `from` = `collect` | `judge` | `themes` | `enrich` | `score`:
@@ -187,13 +187,26 @@ automated readers (HashiCorp). The ranking was identical in all three rounds. De
   "projects keep being asked for X" rather than "no product does X". The Phase 4 competitor
   critic must test that.
 
-## Phase 3 — Idea generation · `not started` (next, after PM picks the shortlist)
+## Phase 3 — Idea generation · `in progress`
 
-For each top gap, a structured startup concept (decision D4: commercial product) saved to
-`ideas/<slug>.md`: target buyer and user, problem with evidence, MVP scope, differentiation vs the
-supply map, build effort, pricing and business model, riskiest assumption.
+One structured startup concept per opening on the PM's shortlist
+([config/shortlist.yaml](../config/shortlist.yaml), decision D14), commercial per D4:
 
-**Exit criteria:** 3–5 concepts from the top gaps, each following the template.
+1. Affordable SBOM/VEX compliance for mid-size makers facing the EU CRA (themes 14 + 11)
+2. Buyer-side provisioning for apps without SCIM or with enterprise-locked SCIM (theme 3)
+3. Cheap cross-cloud workload identity for mid-market teams (theme 10, provisional)
+
+| Deliverable | Status |
+|---|---|
+| Concept rubric and schema ([docs/rubrics/concept.md](rubrics/concept.md), `schemas.Concept`) | done |
+| `concept-prepare`: per-opening input with need statements, fact-checked market research, threat mapping, flagged claims | done |
+| `concept-writer` agent ([.claude/agents/concept-writer.md](../.claude/agents/concept-writer.md)) | done |
+| `concept-render`: schema + grounding check (evidence and price comparables must trace to collected, fact-checked data), writes `ideas/<slug>.md` | done |
+| `concepts` workflow ([.claude/workflows/concepts.js](../.claude/workflows/concepts.js)) | done |
+| Three concepts written and rendered | in progress |
+
+**Exit criteria:** 3–5 concepts from the shortlist, each passing `concept-render` (schema and
+grounding).
 
 ## Phase 4 — Critic panel · `not started`
 

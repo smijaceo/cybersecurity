@@ -1,7 +1,7 @@
 export const meta = {
   name: 'backtest',
   description: 'gapfinder D18: backtest the gap finder on pre-2020 data and calibrate the critic panel on historical startups',
-  whenToUse: 'Test whether the method works (config/backtest.yaml, pre-registered). args.part: "gap" | "panel" | "both" (default).',
+  whenToUse: 'Test whether the method works (config/backtest.yaml, pre-registered). args.part: "gap" | "panel" | "both" (default). args.gap_from: "collect" (default) or "verify" to redo only category checks, matching and the report.',
   phases: [
     { title: 'Collect', detail: 'open discovery before the cutoff, into data/backtest.db' },
     { title: 'Judge', detail: 'relevance-judge per batch' },
@@ -40,6 +40,11 @@ async function sh(command, phase, label) {
 const use = (name, task) => `Read .claude/agents/${name}.md and follow it exactly. It is your full instruction set.\n\n${task}`
 
 async function gapBacktest() {
+  const gapFrom = (args && args.gap_from) || 'collect'
+  if (gapFrom === 'verify') {
+    await sh(`python -m gapfinder --db ${DB} backtest rank --out-dir ${OUT}`, 'Themes', 'rank by demand')
+    return verifyAndMatch()
+  }
   phase('Collect')
   await sh(`python -m gapfinder --db ${DB} -v collect --segment open-discovery --before ${CUTOFF} --limit 50 ` +
            `--source github --source hn --source stackexchange --source serverfault --source ted --source jobs ` +
@@ -67,7 +72,10 @@ async function gapBacktest() {
     `Validate with: python -m gapfinder names-check --out-dir ${OUT}`), { phase: 'Themes', label: 'theme-namer' })
   if (!named) throw new Error('theme namer failed')
   await sh(`python -m gapfinder --db ${DB} backtest rank --out-dir ${OUT}`, 'Themes', 'rank by demand')
+  return verifyAndMatch()
+}
 
+async function verifyAndMatch() {
   phase('Verify')
   const checks = await parallel(CATEGORIES.map((c) => () => agent(use('backtest-verifier',
     `CATEGORY ID: ${c}\nOUTPUT: ${OUT}/category-checks/${c}.jsonl`), { phase: 'Verify', label: `verify ${c}` })))

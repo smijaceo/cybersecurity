@@ -1,0 +1,52 @@
+{
+  "concept_id": "cal-04",
+  "lens": "legal-ethics",
+  "round": 1,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "A defensive orchestration product with low abuse potential and no regulatory claims to get wrong. The legal exposure is contractual and operational: custody of admin credentials for every customer tool, liability when the bot runs a wrong containment action, and reuse of customers' incident data to train a cross-customer learning bot. All are fixable with design and contract work.",
+  "objections": [
+    {
+      "objection": "Credential custody: the platform stores API keys/admin credentials for SIEM, EDR and firewalls of every customer (and every MSSP tenant). A breach of a cloud instance is a breach of all of them, with processor liability under GDPR Art. 28/32 and contractual indemnity claims. Needs vault/HSM storage, least-privilege scopes, tenant isolation and an on-prem option before enterprise legal will sign.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[0] (integrations using customers' own credentials); https://gdpr-info.eu/art-32-gdpr/"
+    },
+    {
+      "objection": "Liability for automated actions: playbooks that isolate hosts, block IPs or disable accounts can cause outages if the bot (or an ML suggestion) is wrong. Without approval gates, a per-action audit of who/what authorised it, and contract terms that cap liability and keep the customer as decision-maker, one bad containment becomes a damages claim.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[1]; concept:riskiest_assumption.assumption (let a bot run response actions)"
+    },
+    {
+      "objection": "Cross-customer learning: the bot 'learns from analyst actions' and the concept asks how much learning generalises across customers. Incident data holds personal data (user names, emails, IPs, phishing mail contents). Pooling it to train a shared model needs explicit contractual rights, a lawful purpose beyond the processor's instructions, and anonymisation; otherwise it breaches DPAs and MSSP client contracts.",
+      "severity": "major",
+      "evidence": "concept:open_questions[1]; concept:mvp.features[3]; https://gdpr-info.eu/art-28-gdpr/"
+    },
+    {
+      "objection": "Chat war-room logs become discoverable records and possible evidence. Customers will need retention controls, legal hold, export with integrity (chain of custody) and the ability to route sensitive breach discussion under counsel privilege; 'natural audit trail' cuts both ways.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[2]; concept:mvp.features[4]"
+    },
+    {
+      "objection": "Integration terms: some security vendors restrict API use or require partner agreements for third-party products that orchestrate them; relying on customer credentials alone may breach vendor terms. Technology alliances are in the GTM plan but should be secured for the core integrations.",
+      "severity": "minor",
+      "evidence": "concept:go_to_market.channel"
+    },
+    {
+      "objection": "Dual-use is low but not nil: a platform holding admin access to the security stack is an attractive insider/attacker tool to silently disable controls. Needs RBAC, approval for destructive or control-disabling actions and tamper-evident logs.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "Defensive, customer-controlled software that makes no regulatory claims; a built-in immutable audit trail actually helps customers meet compliance and incident-reporting obligations.",
+  "what_would_change_my_mind": [
+    "A security architecture showing per-tenant credential vaulting, least-privilege API scopes and an on-prem deployment option, passing a third-party pen test",
+    "Standard MSA/DPA that excludes or explicitly licenses cross-customer model training, accepted by 3+ enterprise legal teams in beta",
+    "Destructive actions default to human approval, with liability caps accepted by beta customers"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Security_orchestration",
+    "https://gdpr-info.eu/art-28-gdpr/",
+    "https://gdpr-info.eu/art-32-gdpr/"
+  ]
+}

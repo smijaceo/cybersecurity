@@ -1,0 +1,52 @@
+{
+  "concept_id": "cal-02",
+  "lens": "legal-ethics",
+  "round": 1,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "Low legal and ethical exposure: it scans customers' own code and accounts, has little abuse potential and no regulated data. Fixable issues: CIS benchmark mapping needs a paid CIS vendor licence, cross-account roles and Terraform state hold secrets the concept never addresses, auto-remediation needs liability limits, and 'SOC 2 mapping' must not imply compliance.",
+  "objections": [
+    {
+      "objection": "Shipping CIS Benchmark checks and marketing CIS mapping in a commercial product requires a CIS SecureSuite Product Vendor membership (and CIS Benchmarks certification). The concept plans CIS mapping in both an open-source library and a paid SaaS with no licensing budget or step; using CIS content or naming without it invites a takedown or rework of the compliance feature that 'gives the security buyer a reason to pay'.",
+      "severity": "major",
+      "evidence": "https://www.cisecurity.org/cis-securesuite/pricing-and-categories/product-vendor; concept:mvp.features[4]"
+    },
+    {
+      "objection": "Data custody is unaddressed. Runtime scanning needs cross-account IAM roles into many customers' clouds (confused-deputy risk without external IDs, a high-value target if the vendor is breached), and IaC repos, plan and state files routinely contain plaintext secrets. The concept says nothing about least-privilege read-only roles, secret redaction, retention or the vendor's own SOC 2, which these buyers will demand before granting access.",
+      "severity": "major",
+      "evidence": "https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html; https://developer.hashicorp.com/terraform/language/state/sensitive-data; concept:mvp.features[1]"
+    },
+    {
+      "objection": "Automated remediation creates liability: a 'fix' that closes a port or enforces encryption can cause outages or data-access loss in production. The concept itself lists unreliable fixes as a hardest part. Delivering fixes as pull requests that humans merge mitigates this, but contracts need clear limitation of liability, and any direct write-access remediation must be opt-in.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts; concept:open_questions"
+    },
+    {
+      "objection": "Compliance claims can mislead: SOC 2 is an auditor's attestation against criteria the customer defines, not a benchmark, and PCI DSS compliance is assessed by a QSA. Marketing 'SOC 2/PCI mapping' must say it supports evidence for auditors, not that passing scans means compliance, or it risks misrepresentation claims.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[4]; concept:go_to_market.first_customers"
+    },
+    {
+      "objection": "Open-source licence choice is undecided. A permissive licence lets larger vendors or cloud providers fork the policy library into paid products; a copyleft or source-available licence slows enterprise adoption. The contributor and licence policy (CLA, trademark on the project name) needs deciding before launch.",
+      "severity": "minor",
+      "evidence": ""
+    },
+    {
+      "objection": "Dual-use is limited but not zero: a public, well-documented catalogue of misconfiguration checks and the runtime scanner could be pointed at accounts the user does not own if given leaked credentials. Risk is comparable to existing open-source tools like Prowler and is acceptable with standard terms of use.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "Defensive tool scanning the customer's own code and accounts, fixes delivered as reviewable pull requests, no PII or regulated data, and abuse potential no higher than existing open-source scanners.",
+  "what_would_change_my_mind": [
+    "A CIS SecureSuite Product Vendor membership (or a decision to map to CIS without using CIS content or trademarks, approved by counsel)",
+    "A documented data-handling design: read-only cross-account roles with external IDs, no storage of state files or secrets, secret redaction, retention limits and a SOC 2 Type I plan within the first year",
+    "Customer terms with limitation of liability and remediation limited to human-merged pull requests by default"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://www.cisecurity.org/cis-securesuite/pricing-and-categories/product-vendor",
+    "https://developer.hashicorp.com/terraform/language/state/sensitive-data",
+    "https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html"
+  ]
+}

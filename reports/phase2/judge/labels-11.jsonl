@@ -1,0 +1,180 @@
+{"id": "hn:44270104", "on_segment": "y", "need": "n", "reason": "News article about Copilot agent attack"}
+{"id": "hn:45805304", "on_segment": "y", "need": "n", "reason": "Guide/list of LLM security tools"}
+{"id": "stackexchange:security:240858", "on_segment": "y", "need": "n", "reason": "How-it-works question about ktpass output"}
+{"id": "stackexchange:security:267900", "on_segment": "y", "need": "n", "reason": "General PCI-DSS compliance question, no tool gap"}
+{"id": "stackexchange:security:220536", "on_segment": "y", "need": "y", "reason": "Wants a tool to automate URL checksum verification"}
+{"id": "serverfault:serverfault:1193146", "on_segment": "y", "need": "y", "reason": "SCIM provisioning lacks exclusion capability"}
+{"id": "serverfault:serverfault:1171594", "on_segment": "y", "need": "y", "reason": "Asks for suitable open-source SIEM for small estate"}
+{"id": "serverfault:serverfault:207938", "on_segment": "y", "need": "y", "reason": "Seeks tool for scheduled network scan diff reports"}
+{"id": "serverfault:serverfault:489280", "on_segment": "y", "need": "n", "reason": "Audit policy configuration problem"}
+{"id": "serverfault:serverfault:775038", "on_segment": "n", "need": "n", "reason": "Printer inventory script, not security"}
+{"id": "serverfault:serverfault:426517", "on_segment": "y", "need": "y", "reason": "Exchange audit log lacks source computer details"}
+{"id": "serverfault:serverfault:1147510", "on_segment": "y", "need": "y", "reason": "Asks how to audit user actions in OpenShift"}
+{"id": "serverfault:serverfault:1030704", "on_segment": "y", "need": "n", "reason": "Firewall configuration troubleshooting question"}
+{"id": "serverfault:serverfault:314713", "on_segment": "y", "need": "y", "reason": "Looking for network change compliance audit tool"}
+{"id": "serverfault:serverfault:988839", "on_segment": "y", "need": "y", "reason": "Wants easy multi-tenant anti-phishing policy reporting"}
+{"id": "serverfault:serverfault:884321", "on_segment": "y", "need": "n", "reason": "Question about Safe Browsing listing"}
+{"id": "serverfault:serverfault:909043", "on_segment": "y", "need": "n", "reason": "Ransomware incident question, no tool gap"}
+{"id": "github:3253211623", "on_segment": "y", "need": "y", "reason": "Feature request: Rust support in vuln code review tool"}
+{"id": "github:2942953756", "on_segment": "y", "need": "n", "reason": "Pointer to research paper, no need"}
+{"id": "github:620112459", "on_segment": "n", "need": "n", "reason": "Debian packaging discussion"}
+{"id": "github:6510968959", "on_segment": "n", "need": "n", "reason": "Personal activity tracker suggestions"}
+{"id": "github:4994794070", "on_segment": "y", "need": "n", "reason": "Internal follow-up task to test prompt injection"}
+{"id": "github:5595441040", "on_segment": "y", "need": "y", "reason": "Tool messages bypass guardrail input rails"}
+{"id": "github:4973111474", "on_segment": "n", "need": "n", "reason": "Instruction file configuration, not security"}
+{"id": "github:4514697761", "on_segment": "n", "need": "n", "reason": "Cognitive module proposal, not security"}
+{"id": "github:4635323390", "on_segment": "n", "need": "n", "reason": "Code refactoring task"}
+{"id": "github:2869491611", "on_segment": "y", "need": "y", "reason": "Complaint: guard model prompt-injection bypass dismissed"}
+{"id": "github:5516419988", "on_segment": "n", "need": "n", "reason": "CI test floor issue"}
+{"id": "github:4848530931", "on_segment": "y", "need": "n", "reason": "Bug report about injection-like output"}
+{"id": "github:6043643958", "on_segment": "y", "need": "n", "reason": "Recruiting beta testers for own tool"}
+{"id": "github:5229562750", "on_segment": "y", "need": "n", "reason": "Promotional request for integration example"}
+{"id": "github:6431620380", "on_segment": "y", "need": "y", "reason": "No runtime tool enforcement, approvals or audit for agents"}
+{"id": "github:4595130149", "on_segment": "y", "need": "y", "reason": "Feature request: policy guard for agent tool calls"}
+{"id": "github:3715722530", "on_segment": "y", "need": "n", "reason": "Awesome-list announcement"}
+{"id": "github:4520556730", "on_segment": "n", "need": "n", "reason": "Model fallback bug"}
+{"id": "github:4125130278", "on_segment": "n", "need": "n", "reason": "Daily security news feed"}
+{"id": "github:4125130988", "on_segment": "n", "need": "n", "reason": "Daily news feed"}
+{"id": "github:4125138816", "on_segment": "n", "need": "n", "reason": "Daily news feed"}
+{"id": "github:4152002261", "on_segment": "n", "need": "n", "reason": "AI for security remediation, not securing AI"}
+{"id": "github:5057890599", "on_segment": "n", "need": "n", "reason": "Voice API tool result feature"}
+{"id": "github:5209639620", "on_segment": "n", "need": "n", "reason": "Architecture proposal for MCP proxying"}
+{"id": "github:4832803199", "on_segment": "y", "need": "n", "reason": "Internal design doc for scoped agent jobs"}
+{"id": "github:5077263638", "on_segment": "y", "need": "y", "reason": "Agent commands share credentials; needs isolated execution"}
+{"id": "github:4673590620", "on_segment": "n", "need": "n", "reason": "AI reliability epic"}
+{"id": "github:4328164494", "on_segment": "y", "need": "y", "reason": "No alerting on blocked unauthorized senders"}
+{"id": "github:5081689219", "on_segment": "y", "need": "y", "reason": "Guardrails need offline policy enforcement"}
+{"id": "github:4673347606", "on_segment": "n", "need": "n", "reason": "Token cost optimization"}
+{"id": "github:5765648567", "on_segment": "n", "need": "n", "reason": "Email security article"}
+{"id": "github:4363685053", "on_segment": "n", "need": "n", "reason": "MCP client for pentest agent"}
+{"id": "github:4522031849", "on_segment": "y", "need": "y", "reason": "No pre-execution trust check for MCP servers"}
+{"id": "github:5177201397", "on_segment": "y", "need": "y", "reason": "Subagents inherit all MCP tools, default-allow"}
+{"id": "github:4333439421", "on_segment": "y", "need": "y", "reason": "Complaint: agent skill scanner false positive"}
+{"id": "github:6053626801", "on_segment": "y", "need": "y", "reason": "Need to redact secrets from agent tool output"}
+{"id": "github:3904659240", "on_segment": "y", "need": "n", "reason": "Internal review of secret CLI options"}
+{"id": "github:4147329835", "on_segment": "n", "need": "n", "reason": "Generic app security review agent task"}
+{"id": "github:4147329616", "on_segment": "n", "need": "n", "reason": "Generic app security review agent task"}
+{"id": "github:4147329152", "on_segment": "n", "need": "n", "reason": "Generic app security review agent task"}
+{"id": "github:4147328903", "on_segment": "n", "need": "n", "reason": "Generic app security review agent task"}
+{"id": "github:4077333108", "on_segment": "n", "need": "n", "reason": "Generic app security review agent task"}
+{"id": "github:4065230540", "on_segment": "n", "need": "n", "reason": "Generic app security review agent task"}
+{"id": "github:4058902875", "on_segment": "n", "need": "n", "reason": "Generic app security review agent task"}
+{"id": "github:4058902285", "on_segment": "n", "need": "n", "reason": "Generic app security review agent task"}
+{"id": "github:4905401795", "on_segment": "n", "need": "n", "reason": "Marketing listing task"}
+{"id": "hn:31078029", "on_segment": "y", "need": "n", "reason": "Career advice question"}
+{"id": "hn:50562525", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:50033190", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:49893815", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:47766739", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:47600592", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:47001730", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:44737879", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:47643236", "on_segment": "y", "need": "n", "reason": "Product launch"}
+{"id": "hn:45339212", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:41292533", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:40762188", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:39761066", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:39388063", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:38781803", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:38533289", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:37292473", "on_segment": "y", "need": "n", "reason": "Article or research, no stated need"}
+{"id": "hn:46070525", "on_segment": "y", "need": "n", "reason": "Pre-launch scanner promotion"}
+{"id": "hn:45596086", "on_segment": "y", "need": "n", "reason": "Guide"}
+{"id": "hn:44464105", "on_segment": "y", "need": "n", "reason": "Opinion article"}
+{"id": "hn:44013005", "on_segment": "y", "need": "n", "reason": "Framework launch"}
+{"id": "hn:42311983", "on_segment": "y", "need": "n", "reason": "Service launch"}
+{"id": "hn:49819532", "on_segment": "y", "need": "n", "reason": "Research write-up"}
+{"id": "hn:49605950", "on_segment": "y", "need": "n", "reason": "Open-source launch"}
+{"id": "hn:47516552", "on_segment": "y", "need": "n", "reason": "Research findings"}
+{"id": "stackexchange:security:246047", "on_segment": "y", "need": "y", "reason": "Asks whether deniable decryption capability exists"}
+{"id": "stackexchange:security:120402", "on_segment": "y", "need": "y", "reason": "No scanner found supporting HPP testing"}
+{"id": "stackexchange:security:192173", "on_segment": "y", "need": "y", "reason": "Seeks HIPAA-compliant reporting tool"}
+{"id": "ted:411742-2026", "on_segment": "y", "need": "y", "reason": "Tender for SCA and repository firewall"}
+{"id": "ted:312755-2026", "on_segment": "y", "need": "y", "reason": "Tender for software audit and pentest"}
+{"id": "ted:807381-2026", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:723566-2026", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:655038-2026", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:625533-2026", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:571060-2026", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:570330-2026", "on_segment": "n", "need": "n", "reason": "Firewall/WAF tender, not identity"}
+{"id": "ted:520847-2026", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:488804-2026", "on_segment": "y", "need": "y", "reason": "Tender for centralized secure access control"}
+{"id": "ted:383187-2026", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:332012-2026", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:268441-2026", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:252742-2026", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:193065-2026", "on_segment": "n", "need": "n", "reason": "Network infrastructure tender, no identity scope"}
+{"id": "ted:192622-2026", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:166023-2026", "on_segment": "n", "need": "n", "reason": "Server/UTM/SOC tender, no identity scope"}
+{"id": "ted:163659-2026", "on_segment": "n", "need": "n", "reason": "Server/UTM/SOC tender, no identity scope"}
+{"id": "ted:146123-2026", "on_segment": "n", "need": "n", "reason": "Security monitoring tender, not identity"}
+{"id": "ted:134944-2026", "on_segment": "n", "need": "n", "reason": "Network infrastructure tender, no identity scope"}
+{"id": "ted:106085-2026", "on_segment": "n", "need": "n", "reason": "Print control tender, not identity"}
+{"id": "ted:89702-2026", "on_segment": "n", "need": "n", "reason": "Server/UTM/SOC tender, no identity scope"}
+{"id": "ted:82108-2026", "on_segment": "n", "need": "n", "reason": "Security monitoring tender, not identity"}
+{"id": "ted:75958-2026", "on_segment": "n", "need": "n", "reason": "Print control tender, not identity"}
+{"id": "ted:866867-2025", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:828281-2025", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:785318-2025", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:769877-2025", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:733711-2025", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:716359-2025", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:572895-2025", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:556562-2025", "on_segment": "y", "need": "y", "reason": "Tender procuring PAM/IAM capability"}
+{"id": "ted:476317-2026", "on_segment": "n", "need": "n", "reason": "Security testing tender, not AI-related"}
+{"id": "ted:814242-2026", "on_segment": "n", "need": "n", "reason": "Generic IT services framework"}
+{"id": "ted:814236-2026", "on_segment": "y", "need": "y", "reason": "Tender for anti-DDoS protection"}
+{"id": "ted:813679-2026", "on_segment": "y", "need": "y", "reason": "Tender for EDR/XDR and SIEM"}
+{"id": "ted:810949-2026", "on_segment": "y", "need": "y", "reason": "Tender for medical device security monitoring"}
+{"id": "ted:813699-2026", "on_segment": "n", "need": "n", "reason": "Biofuel equipment tender"}
+{"id": "ted:814121-2026", "on_segment": "y", "need": "y", "reason": "Tender for medical device security monitoring"}
+{"id": "ted:811789-2026", "on_segment": "y", "need": "y", "reason": "Tender for cybersecurity technical measures"}
+{"id": "ted:812152-2026", "on_segment": "y", "need": "y", "reason": "Tender expanding security system"}
+{"id": "ted:812660-2026", "on_segment": "n", "need": "n", "reason": "Storage hardware tender, security incidental"}
+{"id": "ted:809167-2026", "on_segment": "n", "need": "n", "reason": "Basic IT services tender"}
+{"id": "ted:809343-2026", "on_segment": "y", "need": "y", "reason": "Tender for NGFW solution with management"}
+{"id": "ted:808080-2026", "on_segment": "y", "need": "y", "reason": "Tender for SIEM/SOC/SOAR services"}
+{"id": "ted:807414-2026", "on_segment": "y", "need": "y", "reason": "Tender renewing NDR support"}
+{"id": "ted:808596-2026", "on_segment": "n", "need": "n", "reason": "Application interoperability services"}
+{"id": "ted:809412-2026", "on_segment": "y", "need": "y", "reason": "Tender for SIEM and SOC services"}
+{"id": "ted:809510-2026", "on_segment": "y", "need": "y", "reason": "Tender for NGIPS renewal and expansion"}
+{"id": "ted:810701-2026", "on_segment": "y", "need": "y", "reason": "Tender for SIEM/SOC service"}
+{"id": "ted:807628-2026", "on_segment": "n", "need": "n", "reason": "Digital platform tender, security incidental"}
+{"id": "ted:810715-2026", "on_segment": "y", "need": "y", "reason": "Tender for EDR/XDR expansion"}
+{"id": "ted:809583-2026", "on_segment": "y", "need": "y", "reason": "Tender for managed security services"}
+{"id": "ted:807191-2026", "on_segment": "y", "need": "y", "reason": "Tender for MDM solution"}
+{"id": "ted:805925-2026", "on_segment": "n", "need": "n", "reason": "Attendance system tender"}
+{"id": "ted:806547-2026", "on_segment": "y", "need": "y", "reason": "Tender for DNS security"}
+{"id": "ted:805467-2026", "on_segment": "y", "need": "y", "reason": "Tender for public certificates"}
+{"id": "ted:803347-2026", "on_segment": "y", "need": "y", "reason": "Tender for managed SOC and CISOaaS"}
+{"id": "ted:800869-2026", "on_segment": "y", "need": "y", "reason": "Tender for secure data exchange software"}
+{"id": "ted:801725-2026", "on_segment": "y", "need": "y", "reason": "NIS2 SIEM procurement"}
+{"id": "ted:800380-2026", "on_segment": "y", "need": "y", "reason": "Tender for data governance and protection"}
+{"id": "ted:796909-2026", "on_segment": "y", "need": "y", "reason": "Tender for cybersecurity technical measures"}
+{"id": "jobs:hn-50338907", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:hn-49978570", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:hn-49524781", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:hn-50348055", "on_segment": "n", "need": "n", "reason": "Cloud advisory role, not security"}
+{"id": "jobs:remotive-2091177", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-2069746", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-2091173", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-1680495", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-2091137", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-2091171", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-2091136", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-2086540", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-2091045", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-2091168", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-1185979", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-2091166", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-1749306", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-2091165", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-2091135", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:remotive-2091161", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:hn-50429861", "on_segment": "y", "need": "y", "reason": "Hiring engineer to own IAM, KMS, audit logging"}
+{"id": "jobs:hn-50348022", "on_segment": "n", "need": "n", "reason": "DevOps role, tool list only"}
+{"id": "jobs:hn-50346358", "on_segment": "n", "need": "n", "reason": "Generic security engineer role, no cloud gap"}
+{"id": "jobs:hn-50345025", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:hn-49528608", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:hn-49525544", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}
+{"id": "jobs:hn-50454490", "on_segment": "n", "need": "n", "reason": "Job posting unrelated to cloud security"}

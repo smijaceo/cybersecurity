@@ -1,0 +1,47 @@
+{
+  "concept_id": "cal-05",
+  "lens": "economic-buyer",
+  "round": 1,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "For the privileged-admin wedge I can fund this from the PAW/second-laptop hardware line with a hard-dollar CFO case. Beyond that it is a nice-to-have competing with VDI and lockdown. A kernel-level hypervisor from an unproven startup on every bank endpoint needs compatibility, performance, independent security assurance and vendor-viability proof first; the 500-seat minimum misfits the wedge.",
+  "objections": [
+    {
+      "objection": "Outside privileged users there is no must-have driver. Locked-down endpoints are an accepted cost; 'employee frustration' does not win budget against audit findings. The fleet-wide case (open_questions) is unproven, so spend is capped at the small privileged population.",
+      "severity": "major",
+      "evidence": "concept:open_questions"
+    },
+    {
+      "objection": "The 500-endpoint minimum ($100k/yr) can exceed the number of privileged admins in many target firms, so the wedge buyer is asked to pay for seats they cannot deploy, or to commit before a pilot proves the product.",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price"
+    },
+    {
+      "objection": "Approval risk: a bare-metal hypervisor under the corporate OS touches every endpoint agent, the patch cycle and the help desk. If it breaks laptops, I own that outage. Bank vendor-risk management will require third-party pen tests, source escrow and financial-viability evidence that a 20-person startup lacks at first.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts"
+    },
+    {
+      "objection": "No buyer-side evidence in the input. There are no interviews, budget data or quantified dual-laptop costs, and the problem evidence is encyclopedia pages, so the ROI claim 'cheaper than a second laptop or VDI' is asserted rather than shown.",
+      "severity": "minor",
+      "evidence": "concept:problem.evidence"
+    },
+    {
+      "objection": "Microsoft's own PAW guidance can be implemented with tools I already license (Windows security features, Intune, Defender), so the CFO will ask why we can't do a dedicated device or native hardening instead of adding a new vendor.",
+      "severity": "minor",
+      "evidence": "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices"
+    }
+  ],
+  "strongest_point": "There is a hard-dollar, CFO-friendly case for admins carrying two laptops: $200/year replaces roughly $1,000+ in hardware plus support. That spend can come from an existing PAW budget.",
+  "what_would_change_my_mind": [
+    "At least 4 of 10 bank/tech CISOs commit to paid 50-seat pilots with named budget (the concept's own test).",
+    "A TCO model from real dual-device fleet costs at 3 customers shows more than 40% savings.",
+    "Pilots show compatibility with incumbent EDR/management agents and no measurable help-desk ticket increase.",
+    "An independent security assessment passes a bank vendor-risk review.",
+    "The minimum is lowered to fit privileged-user counts."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices"
+  ]
+}

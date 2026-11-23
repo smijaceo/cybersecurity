@@ -1,0 +1,47 @@
+{
+  "concept_id": "cal-03",
+  "lens": "market-skeptic",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Standards drift across many teams is a real platform-team pain, and 40 interviews with six design partners beat most concepts' evidence. But the documented evidence is four Wikipedia pages, the pain is framed as visibility rather than a budgeted must-have, the budget owner is unknown, and the concept itself admits policies may not generalise or the paying segment be large.",
+  "objections": [
+    {
+      "objection": "Documented demand evidence is generic background, not buyer pain. All evidence items are Wikipedia pages showing microservices, DevOps and code review exist; there is no quote, survey, incident or cost figure from a VP R&D or head of DevOps saying cross-team policy drift is urgent and funded. The 40 interviews and six design partners are asserted but their findings (what policies, what pain, what willingness to pay) are not reported.",
+      "severity": "major",
+      "evidence": "concept:problem.evidence; concept:go_to_market.first_customers; input:themes and flagged_claims are empty"
+    },
+    {
+      "objection": "The pain may not be budgeted. 'No central view' and 'problems found after commit' are inconvenience, not a compelling event like an audit finding, breach or regulation. Without a trigger, governance tooling for 50-500 engineer companies tends to be a nice-to-have that loses to headcount and feature work; the concept lists 'Unclear budget owner between security and engineering' and 'Is this a security product or a DevOps productivity product?' as open, which means no one has yet claimed the line item.",
+      "severity": "major",
+      "evidence": "concept:risks; concept:open_questions"
+    },
+    {
+      "objection": "Value may not generalise, shrinking the market to custom work. The concept's own hardest part is 'Defining policies that are valuable across very different companies'. If each customer needs bespoke rules, the product looks like a framework that platform teams can approximate with free per-repo tooling (Danger scripts, CI checks via GitHub's checks API, branch protection), and the paying segment is the subset that wants governance badly enough but cannot script it.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts; concept:competitors; https://docs.github.com/en/rest/checks"
+    },
+    {
+      "objection": "Segment size is unquantified. Companies with 50-500 engineers, many teams, microservices, GitHub-hosted and a platform team number perhaps in the low thousands globally; at $15/dev/month a 150-dev customer is about $27k/year. That can support a company, but only with high conversion, and the concept offers no count ('How large is the paying segment?' is open).",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price; concept:open_questions"
+    },
+    {
+      "objection": "The riskiest-assumption test is well designed (paid pilots from design partners) but the sample is the founders' own warm network and is small; 3 of 6 converting would show a pull among friendly scale-ups, not across the broader segment.",
+      "severity": "minor",
+      "evidence": "concept:riskiest_assumption"
+    }
+  ],
+  "strongest_point": "Real customer development: 40 discovery interviews, six named design partners and a paid-pilot test that measures purchase intent from the actual buyer, not developer curiosity.",
+  "what_would_change_my_mind": [
+    "3+ of the 6 design partners signing paid pilots at or near $15/dev/month after seeing the organisation-wide violation report",
+    "Interview data showing a recurring set of 5-10 default policies that most of the 40 companies want enforced, proving value generalises",
+    "A named budget owner and compelling event (SOC 2 or customer audit, post-incident mandate) in at least half of the design partners",
+    "A bottom-up count of companies in the 50-500 engineer, GitHub, multi-team segment"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Policy-based_management",
+    "https://docs.github.com/en/rest/checks"
+  ]
+}

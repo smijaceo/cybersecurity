@@ -1,0 +1,53 @@
+{
+  "concept_id": "cal-03",
+  "lens": "technical-feasibility",
+  "round": 1,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "Technically low-risk: a GitHub App on webhooks, the Checks API and a rules engine is well-trodden, and 8 people in 9 months is ample, arguably generous. The real build risks are the 'metadata only' promise conflicting with file-reading rules, multi-ecosystem manifest parsing for the catalogue, false-block control, GitHub API limits on large orgs, and GitHub Enterprise Server demand.",
+  "objections": [
+    {
+      "objection": "The 'metadata only, no source code extracted' promise is in tension with the MVP rules. Banned components, approved versions, required files and secrets detection all require fetching file contents (manifests, lockfiles, diffs) through the contents/PR-files APIs, which needs repository contents read permission. The product can avoid storing code, but it cannot avoid reading it, so the security-objection-free positioning must be re-engineered (ephemeral in-memory evaluation, or on-prem/runner-side evaluation) and the GitHub App will still request the same scope security teams worry about.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[0]; concept:mvp.features[1]; https://docs.github.com/en/rest/checks/runs"
+    },
+    {
+      "objection": "The component catalogue is a multi-ecosystem parsing problem. Building an accurate inventory of 'components' across a polyglot microservice estate means parsing npm, Maven/Gradle, pip/Poetry, Go modules, NuGet, Dockerfiles, Helm and Terraform, with lockfile vs manifest drift, monorepos and transitive dependencies. This is ongoing maintenance, not a one-off feature, and catalogue accuracy is what policy decisions rest on.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[0]; concept:build.hardest_parts"
+    },
+    {
+      "objection": "False blocks are the dominant operational risk. A required check that fails wrongly, or that goes down or times out, blocks every merge across the customer organisation. The service needs high availability on webhook processing, idempotent re-runs, a fail-open option and a fast exception path; secrets rules in particular are notoriously noisy. The concept names friction as a hardest part but the MVP has no explicit dry-run/report-only mode or reliability target.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts; concept:mvp.features[2]"
+    },
+    {
+      "objection": "GitHub API rate limits and webhook volume constrain the org-wide catalogue for 500-engineer customers with hundreds or thousands of repos: initial crawls and periodic re-scans of file contents across all repos must be throttled, cached and incrementally updated from push events.",
+      "severity": "minor",
+      "evidence": "https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/rate-limits-for-github-apps"
+    },
+    {
+      "objection": "Policy authoring model is undecided. Shipping a home-grown rule language is a trap; reusing an existing engine such as Open Policy Agent/Rego for custom rules plus a library of built-in rules would cut build time, but the concept does not say which, and 'policies valuable across very different companies' is a product problem engineering cannot solve alone.",
+      "severity": "minor",
+      "evidence": "https://www.openpolicyagent.org/docs/latest/"
+    },
+    {
+      "objection": "Target customers with stricter security postures often run GitHub Enterprise Server on-prem; a SaaS-only GitHub App excludes them, and an on-prem build roughly doubles deployment and support work. Not in v1 scope but likely to be asked for by early enterprise deals.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "Narrow, well-supported integration surface (GitHub App, webhooks, Checks API) and a team of eight with nine months make the MVP very buildable.",
+  "what_would_change_my_mind": [
+    "Catalogue accuracy above 95% against a manual inventory on two design partners' orgs across at least three language ecosystems.",
+    "Under 2% false blocks over a month of PRs in report-only mode, with p95 check latency under 30 seconds.",
+    "A data-handling design (ephemeral content reads, nothing stored) that a design partner's security team signs off."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://docs.github.com/en/rest/checks",
+    "https://docs.github.com/en/rest/checks/runs",
+    "https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/rate-limits-for-github-apps",
+    "https://www.openpolicyagent.org/docs/latest/"
+  ]
+}

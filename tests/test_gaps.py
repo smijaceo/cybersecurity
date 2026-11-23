@@ -71,3 +71,11 @@ def test_buyer_demand_outranks_same_count_of_developer_demand():
     buy = theme("buy", need=10)
     dev["demand"]["weighted_need"], buy["demand"]["weighted_need"] = 10, 25
     assert gaps.score([dev, buy], W)[0]["name"] == "buy"
+
+
+def test_demand_features_accepts_dates_without_timezone():
+    now = datetime(2026, 11, 22, tzinfo=timezone.utc)
+    sigs = [{"created_at": "2026-09-11", "engagement": 1, "segment": "a", "source": "regulation"},
+            {"created_at": "2026-11-01T10:00:00", "engagement": 1, "segment": "a", "source": "jobs"},
+            {"created_at": "2019-01-01T00:00:00+00:00", "engagement": 1, "segment": "a", "source": "hn"}]
+    assert gaps.demand_features(sigs, recent_years=2, now=now)["recent_share"] == 2 / 3

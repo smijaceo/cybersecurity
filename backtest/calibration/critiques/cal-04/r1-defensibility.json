@@ -1,0 +1,46 @@
+{
+ "concept_id": "cal-04",
+ "lens": "defensibility",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "Core orchestration (connectors plus playbooks) is copyable: SIEM vendors own the alert stream and the CISO, and open source (TheHive) can add automation. Real moats exist only if earned: a large integration library and community, playbooks and war-room history that become the SOC's system of record, and cross-customer learning. None exist at launch; the race is to build them before bundling.",
+ "objections": [
+  {
+   "objection": "Most likely copier: SIEM platform vendors (Splunk, IBM QRadar). They already sit on the alert stream and the analyst's screen and can buy or build a playbook-and-case module; a 'good enough' bundled module caps standalone deals. The concept itself lists this as its first risk and open question.",
+   "severity": "major",
+   "evidence": "concept:risks (SIEM and security platform vendors bundle orchestration); concept:open_questions[0]; concept:competitors (Phantom on splunk.com, IBM Resilient)"
+  },
+  {
+   "objection": "The claimed differentiators are features, not moats: a chat war room and next-step suggestions can be added by Phantom, Swimlane or a SIEM within a release or two, and ChatOps is generic (Slack bots). Combining orchestration, case management and chat is a bundle any rival can match.",
+   "severity": "major",
+   "evidence": "concept:differentiation; concept:why_now.summary (ChatOps is mainstream)"
+  },
+  {
+   "objection": "The learning moat is unproven: the concept's own open question asks how much learning generalises across customers. If on-prem deployments keep data siloed per customer, there is no cross-customer data network effect, only per-tenant tuning a rival could replicate.",
+   "severity": "major",
+   "evidence": "concept:open_questions[1]; concept:build.hardest_parts (ML accurate enough to be trusted; on-prem deployment)"
+  },
+  {
+   "objection": "Integration depth is a moat only at scale: hundreds of connectors with maintenance is the real barrier, but Phantom already pursues an open app ecosystem and SIEM vendors have partner programs; an 18-person team starts behind.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts[0]"
+  },
+  {
+   "objection": "Switching costs are real but delayed: once a SOC's playbooks, incident history and audit trail live in the platform, ripping it out is painful; that lock-in only exists after months of use, so early accounts are exposed to bundled alternatives.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features (ticketing, reporting, full audit log)"
+  }
+ ],
+ "strongest_point": "Becoming the SOC's system of record (playbooks, war-room history, audit log) plus a broad integration library creates genuine workflow lock-in and vendor-neutrality SIEM vendors can't credibly offer.",
+ "what_would_change_my_mind": [
+  "A community-contributed integration/playbook library growing faster than any rival's (e.g. 200+ maintained integrations within 18 months).",
+  "Beta SOCs running over 50% of incidents through the war room for 6+ months and renewing.",
+  "Evidence that cross-customer models measurably improve suggestions for new tenants.",
+  "MSSP customers standardising on it across their clients."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Security_orchestration"
+ ]
+}

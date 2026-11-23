@@ -1,0 +1,46 @@
+{
+  "concept_id": "cal-04",
+  "lens": "technical-feasibility",
+  "round": 1,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "An 18-person team with Israeli engineering can build a playbook engine, chat war room, case/ticketing and a first set of integrations in about 10 months. The risk is scope: hundreds of integrations, a learning bot with no training data at launch, and both on-prem and cloud delivery do not fit the MVP window and must be cut or staged.",
+  "objections": [
+    {
+      "objection": "MVP scope is five products in one (integration layer, playbook engine, real-time chat with command execution, ML recommender, ticketing/reporting/audit) plus two deployment models, in 10 months. Engineering is a subset of ~18 people that also includes founders and US sales, so realistically 8-12 engineers. Something will ship shallow unless the MVP is cut to integrations + playbooks + war room for one deployment model.",
+      "severity": "major",
+      "evidence": "concept:mvp.features; concept:build.team; concept:build.months_to_mvp; concept:build.hardest_parts"
+    },
+    {
+      "objection": "Integration breadth is the product, and the concept names 'hundreds of integrations' as the hardest part. Each vendor API (SIEM, EDR, firewall, threat intel) has its own auth, rate limits, schemas and version drift, and many are on-prem appliances that need lab instances to test. Without an SDK and a community/partner contribution model, maintenance grows linearly with every connector and starves core development.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts; concept:mvp.features[0]; https://en.wikipedia.org/wiki/Security_orchestration"
+    },
+    {
+      "objection": "The learning bot has a cold-start problem: at launch each customer has few incidents and few recorded analyst actions, and cross-customer learning is blocked by on-prem deployments and data sensitivity (the concept's own open question). Early 'learning' will in practice be frequency-based next-step suggestions and heuristic duplicate matching; marketing it as ML risks trust if suggestions are wrong.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[3]; concept:open_questions[1]; concept:build.hardest_parts[1]"
+    },
+    {
+      "objection": "Supporting on-prem and cloud from day one doubles packaging, upgrade, and support paths and complicates the bot (outbound connectivity, model updates) and the integrations (network reach into customer segments). Pick one for the MVP, likely on-prem/virtual appliance for enterprise SOCs, and add the other later.",
+      "severity": "minor",
+      "evidence": "concept:pricing.model; concept:build.hardest_parts[2]"
+    },
+    {
+      "objection": "Running containment actions from a chat with stored credentials for firewalls and endpoints needs a hardened credential vault, RBAC, approval gates and an immutable audit log; this is security-critical engineering that cannot be rushed and is not called out in the build plan.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "Core pieces (vendor APIs, workflow engine, chat with bot commands, audit log) use well-understood technology; the team size and security-domain founders are adequate if scope is staged.",
+  "what_would_change_my_mind": [
+    "A staged plan shipping 30-50 high-demand integrations plus a connector SDK at MVP, with one deployment model first.",
+    "A beta showing playbooks running reliably at 5 SOCs for 2+ weeks.",
+    "Heuristic duplicate detection reaching >80% precision on beta data before any ML claim."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Security_orchestration",
+    "https://thehive-project.org/"
+  ]
+}

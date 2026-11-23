@@ -1,0 +1,49 @@
+{
+  "concept_id": "cal-06",
+  "lens": "security-practitioner",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Inline payload inspection of east-west traffic does reduce real lateral-movement risk, and network teams understand the model. But production operators rarely let a new vendor sit inline between critical tiers in block mode: latency, fail-open/fail-closed behaviour, IPS false positives on internal protocols, east-west TLS key custody and hypervisor/cloud insertion privileges are all unaddressed, so most deployments would end up detect-only.",
+  "objections": [
+    {
+      "objection": "Inline blocking of east-west traffic is where operators are least tolerant of false positives. IPS signatures tuned for north-south traffic misfire on internal SMB, SQL, backup and replication flows; one blocked database or cluster heartbeat is an outage the security team owns. Realistically customers run it in alert mode for months, which turns the differentiator (prevention on allowed ports) into another IDS feed for an already overloaded SOC. The concept has no tuning, learning-mode or staged-enforcement workflow.",
+      "severity": "major",
+      "evidence": "concept:mvp.features (deep packet inspection with threat definitions on east-west traffic); concept:build.hardest_parts (performance, keeping threat definitions current)"
+    },
+    {
+      "objection": "Insertion and failure semantics are undefined. Getting traffic into the inspection microservices needs hypervisor-level hooks (vSwitch/service-insertion on VMware, OVS on OpenStack/KVM) or route manipulation in AWS VPCs, where the platform offers no native transparent inline steering for VM-to-VM traffic. Each path needs high-privilege access to the virtualisation layer and adds a hop; the concept never says whether the data path fails open (security gap) or fails closed (outage), which is the first question an infrastructure team asks before approving anything inline.",
+      "severity": "major",
+      "evidence": "concept:mvp.features (discovery and segmentation across VMware, OpenStack/KVM and AWS; containerised horizontally scaling security microservices); concept:open_questions"
+    },
+    {
+      "objection": "East-west TLS decryption requires the product to hold or broker private keys or act as an internal man-in-the-middle CA for service-to-service traffic. Many teams will not grant that for databases, payment or identity tiers, and mutual-TLS or certificate-pinned services break. As internal encryption grows, payload inspection sees less, eroding the core value; the concept lists this only as an open question.",
+      "severity": "major",
+      "evidence": "concept:open_questions ('How much east-west traffic is encrypted?'); concept:mvp.features (TLS decryption); https://en.wikipedia.org/wiki/Deep_packet_inspection"
+    },
+    {
+      "objection": "Workflow ownership is split. Segmentation policy lives with network/cloud infrastructure teams, threat signatures and alerts with the SOC, and REST/pipeline policy with DevOps. A product that spans all three needs a clear owner and integration with SIEM, ticketing and existing firewall policy managers; the MVP mentions only REST APIs, with no SIEM/SOAR export or import of existing firewall rules.",
+      "severity": "minor",
+      "evidence": "concept:user; concept:mvp.features (REST APIs for DevOps integration)"
+    },
+    {
+      "objection": "The headline example overstates the gap: WannaCry spread via an SMB exploit patched two months earlier, and workstation-to-workstation or server-to-workstation SMB is commonly deniable by plain segmentation. Inspection helps where the port must stay open server-to-server, which is a narrower slice than the problem statement implies.",
+      "severity": "minor",
+      "evidence": "https://en.wikipedia.org/wiki/WannaCry_ransomware_attack"
+    }
+  ],
+  "strongest_point": "Segmentation alone cannot stop exploits riding allowed ports; adding inspection and elastic per-workload enforcement addresses a real lateral-movement gap security teams recognise.",
+  "what_would_change_my_mind": [
+    "Three design-partner enterprises running it in blocking mode on production east-west traffic for 60+ days",
+    "Measured added latency under 1 ms at p99 on east-west paths",
+    "A documented fail-open/fail-closed design accepted by customers' infrastructure teams",
+    "A false-positive block rate operators call tolerable, with a staged learn-then-enforce workflow",
+    "A TLS inspection approach that does not require custody of production private keys"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/WannaCry_ransomware_attack",
+    "https://en.wikipedia.org/wiki/Deep_packet_inspection",
+    "https://en.wikipedia.org/wiki/Microsegmentation_(network_security)"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+ "concept_id": "cal-05",
+ "lens": "defensibility",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "Copying the product within a quarter is hard: a client hypervisor that runs well across laptops takes years of hardware compatibility work, and that is a real barrier. But the barrier cuts both ways. Microsoft owns the platform and already ships Hyper-V in Windows, and client-hypervisor teams (Citrix XenClient, Bromium) already exist. No data or network effect.",
+ "objections": [
+  {
+   "objection": "Most likely copier: Microsoft. Hyper-V already ships in Windows 8/10 Pro and Enterprise. Microsoft controls the OS, the boot chain and the Enterprise licence that the target banks already pay for. A managed 'locked corporate VM next to the user OS' fits naturally into its virtualisation-based security roadmap. If Microsoft bundles it at no extra cost, a $200 per-seat product built on a third-party hypervisor has little left to stand on.",
+   "severity": "major",
+   "evidence": "https://en.wikipedia.org/wiki/Hyper-V; concept:risks (Operating-system vendors build similar isolation natively)"
+  },
+  {
+   "objection": "The main moat, a thin hypervisor plus seamless window integration, is already owned by others. Citrix XenClient (a Type-1 client hypervisor with central management, VM isolation and USB filtering, built with Intel, Dell and HP) and Bromium (a Xen-based microvisor) already have this know-how and enterprise accounts. They can add a whole-environment dual-OS mode faster than a 20-person startup can match their hardware certification.",
+   "severity": "major",
+   "evidence": "https://en.wikipedia.org/wiki/XenClient; https://en.wikipedia.org/wiki/Bromium"
+  },
+  {
+   "objection": "The differentiation is 'cheaper than two laptops or VDI, stronger than single-OS hardening'. That is architecture plus price, not a moat. Xen is open source, and XenClient XT's lineage is available as open source (OpenXT), so a well-funded competitor or OEM can start from a free base.",
+   "severity": "major",
+   "evidence": "concept:differentiation; https://www.qubes-os.org/"
+  },
+  {
+   "objection": "Switching costs are real once deployed, because the product owns the endpoint stack and the OS images. But the concept does nothing to deepen them: no OEM pre-install, no certifications, no integration with endpoint management tools beyond what is listed as a hardest part. Lock-in would come from depth of integration with SCCM/endpoint management and from audit sign-off, and those are not yet planned.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts; concept:mvp.features"
+  },
+  {
+   "objection": "The product generates no proprietary data and has no network effect. Each deployment teaches the company about hardware compatibility, which is a learning-curve advantage, but incumbents with OEM relationships learn the same lessons faster.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Hardware-compatible, low-overhead client hypervisors take years of engineering and regulated-bank deployment trust. A startup that becomes the reference platform for privileged-access workstations would be hard to displace.",
+ "what_would_change_my_mind": [
+  "An OEM pre-install or Intel/Dell/HP partnership giving firmware-level access that rivals lack",
+  "Microsoft publicly scoping VBS to credential/kernel protection only, with no managed dual-OS offering for 2+ years",
+  "Deep integration with SCCM/Intune and major EDR agents, shown in 3+ bank deployments at over 1,000 seats each",
+  "A formal security certification (e.g., Common Criteria or a government accreditation for cross-domain use) that takes competitors 18+ months to obtain"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/XenClient",
+  "https://en.wikipedia.org/wiki/Hyper-V",
+  "https://en.wikipedia.org/wiki/Bromium"
+ ]
+}

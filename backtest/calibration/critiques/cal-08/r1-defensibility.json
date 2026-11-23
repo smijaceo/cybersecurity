@@ -1,0 +1,47 @@
+{
+ "concept_id": "cal-08",
+ "lens": "defensibility",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "Most of Fennel is copyable: connectors, prioritisation and ticket routing are what RBVM vendors and ServiceNow already do. The one candidate moat is a curated remediation database that compounds with every customer's fix outcomes, plus switching costs once it runs remediation workflows across IT and DevOps. Neither exists at launch, and scanner vendors already own fix data for their findings.",
+ "objections": [
+  {
+   "objection": "ServiceNow is the most likely copier. It owns the ticket, CMDB, change management and the IT teams who apply fixes, already imports scanner findings into Vulnerability Response, and bought security-workflow capability (Brightpoint, 2016). Adding remediation guidance and orchestration playbooks is an incremental release for it, and buyers prefer it inside the ITSM they already pay for.",
+   "severity": "major",
+   "evidence": "https://en.wikipedia.org/wiki/ServiceNow (Acquisitions: June 2016 Brightpoint Security); concept:competitors[2]; concept:risks[1]"
+  },
+  {
+   "objection": "The integration layer is not a moat. Scanner, CI, cloud and ticketing APIs are public, so Kenna, RiskSense or a scanner vendor can match the connector list; integration breadth is a cost of entry. Worse, Fennel depends on those vendors' APIs and partnership goodwill, which competitors (Qualys, Tenable, Rapid7) can throttle or price.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[0]; concept:differentiation; concept:go_to_market.channel; concept:build.hardest_parts[0]"
+  },
+  {
+   "objection": "The remediation database starts from public data that others already hold. Scanner plugins ship solution text and patch IDs per finding, vendor advisories and NVD references are public, and configuration-management communities publish fix playbooks. It becomes defensible only if Fennel captures proprietary outcome data (which fixes worked, broke things, or were validated in which environments) across many customers, and the concept does not describe that loop.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[2]; concept:build.hardest_parts[1]; https://en.wikipedia.org/wiki/Vulnerability_management (remediation = patch, reconfiguration, policy change)"
+  },
+  {
+   "objection": "Prioritisation using business and DevOps context is a feature, not a moat; RBVM vendors already blend threat intel with asset context and can add CMDB and CI signals within a release cycle.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[1]; concept:competitors[0]; concept:competitors[1]"
+  },
+  {
+   "objection": "The day-one wedge (deduplicated, prioritised plan within a day) creates no lock-in; it is easy to trial and easy to drop. Switching costs only appear once Fennel runs live remediation workflows, SLAs and audit reporting, which depends on IT accepting automated changes, a stated risk.",
+   "severity": "minor",
+   "evidence": "concept:go_to_market.wedge; concept:risks[3]"
+  }
+ ],
+ "strongest_point": "Vendor-neutral position across scanners and ITSM, plus a remediation database that could compound with fix-outcome data from many customers, is something no single scanner or ITSM vendor naturally builds.",
+ "what_would_change_my_mind": [
+  "A design for a cross-customer fix-outcome loop (fix success, breakage, validation time) feeding the remediation database, with early data from beta customers.",
+  "Remediation database coverage of 80%+ of top scanners' findings with tested scripts/workarounds beyond vendor solution text.",
+  "Beta customers embedding Fennel as the system of record for remediation SLAs and audit reporting, not just a prioritised list.",
+  "A scanner vendor or ITSM partnership/OEM that turns a likely copier into a distribution channel."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/ServiceNow",
+  "https://en.wikipedia.org/wiki/Vulnerability_management"
+ ]
+}

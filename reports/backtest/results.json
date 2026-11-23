@@ -1,0 +1,146 @@
+{
+ "gap_finder": null,
+ "calibration": {
+  "auc": 0.781,
+  "per_lens_auc": {
+   "market-skeptic": 0.75,
+   "competitor-analyst": 0.75,
+   "security-practitioner": 0.812,
+   "technical-feasibility": 0.75,
+   "gtm-pricing": 0.75,
+   "legal-ethics": 0.25,
+   "economic-buyer": 0.531,
+   "defensibility": 0.75
+  },
+  "concepts": [
+   {
+    "id": "cal-01",
+    "company": "Blue Hexagon",
+    "outcome": "failure",
+    "mean": 5.38,
+    "scores": {
+     "market-skeptic": 6,
+     "competitor-analyst": 4,
+     "security-practitioner": 6,
+     "technical-feasibility": 6,
+     "gtm-pricing": 5,
+     "legal-ethics": 7,
+     "economic-buyer": 5,
+     "defensibility": 4
+    }
+   },
+   {
+    "id": "cal-02",
+    "company": "Bridgecrew",
+    "outcome": "success",
+    "mean": 5.88,
+    "scores": {
+     "market-skeptic": 6,
+     "competitor-analyst": 5,
+     "security-practitioner": 7,
+     "technical-feasibility": 7,
+     "gtm-pricing": 6,
+     "legal-ethics": 7,
+     "economic-buyer": 5,
+     "defensibility": 4
+    }
+   },
+   {
+    "id": "cal-03",
+    "company": "Datree",
+    "outcome": "failure",
+    "mean": 5.5,
+    "scores": {
+     "market-skeptic": 5,
+     "competitor-analyst": 5,
+     "security-practitioner": 6,
+     "technical-feasibility": 7,
+     "gtm-pricing": 5,
+     "legal-ethics": 7,
+     "economic-buyer": 5,
+     "defensibility": 4
+    }
+   },
+   {
+    "id": "cal-04",
+    "company": "Demisto",
+    "outcome": "success",
+    "mean": 6,
+    "scores": {
+     "market-skeptic": 6,
+     "competitor-analyst": 5,
+     "security-practitioner": 7,
+     "technical-feasibility": 6,
+     "gtm-pricing": 6,
+     "legal-ethics": 7,
+     "economic-buyer": 6,
+     "defensibility": 5
+    }
+   },
+   {
+    "id": "cal-05",
+    "company": "Hysolate",
+    "outcome": "failure",
+    "mean": 5.5,
+    "scores": {
+     "market-skeptic": 5,
+     "competitor-analyst": 5,
+     "security-practitioner": 6,
+     "technical-feasibility": 5,
+     "gtm-pricing": 5,
+     "legal-ethics": 7,
+     "economic-buyer": 6,
+     "defensibility": 5
+    }
+   },
+   {
+    "id": "cal-06",
+    "company": "ShieldX Networks",
+    "outcome": "failure",
+    "mean": 5,
+    "scores": {
+     "market-skeptic": 5,
+     "competitor-analyst": 4,
+     "security-practitioner": 5,
+     "technical-feasibility": 5,
+     "gtm-pricing": 5,
+     "legal-ethics": 7,
+     "economic-buyer": 5,
+     "defensibility": 4
+    }
+   },
+   {
+    "id": "cal-07",
+    "company": "Vdoo",
+    "outcome": "success",
+    "mean": 5,
+    "scores": {
+     "market-skeptic": 5,
+     "competitor-analyst": 5,
+     "security-practitioner": 6,
+     "technical-feasibility": 6,
+     "gtm-pricing": 4,
+     "legal-ethics": 5,
+     "economic-buyer": 4,
+     "defensibility": 5
+    }
+   },
+   {
+    "id": "cal-08",
+    "company": "Vulcan Cyber",
+    "outcome": "success",
+    "mean": 5.88,
+    "scores": {
+     "market-skeptic": 6,
+     "competitor-analyst": 5,
+     "security-practitioner": 6,
+     "technical-feasibility": 7,
+     "gtm-pricing": 6,
+     "legal-ethics": 6,
+     "economic-buyer": 6,
+     "defensibility": 5
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,175 @@
+[
+ {
+  "theme_id": 8,
+  "name": "Achieving and maintaining PCI DSS compliance",
+  "need": "Merchants and admins struggle to pass PCI compliance scans and assessments and find tools to fix failures.",
+  "stability": 0.72,
+  "demand": {
+   "need_signals": 11,
+   "weighted_need": 16.5,
+   "audience_mix": {
+    "practitioner": 11
+   },
+   "engagement": 162,
+   "recent_share": 0.0,
+   "segments": [
+    "open-discovery"
+   ]
+  },
+  "demand_score": 0.762
+ },
+ {
+  "theme_id": 9,
+  "name": "PCI scan failures from package versions",
+  "need": "Server admins fail PCI ASV scans flagging Apache, PHP, OpenSSH or OpenSSL versions despite distro-backported patches.",
+  "stability": 0.86,
+  "demand": {
+   "need_signals": 11,
+   "weighted_need": 16.5,
+   "audience_mix": {
+    "practitioner": 11
+   },
+   "engagement": 149,
+   "recent_share": 0.0,
+   "segments": [
+    "open-discovery"
+   ]
+  },
+  "demand_score": 0.713
+ },
+ {
+  "theme_id": 13,
+  "name": "User activity and logon auditing",
+  "need": "Admins need to audit user logons, password changes, root activity and policy exemptions across Windows, Unix and Office365 without centralized logging.",
+  "stability": 0.56,
+  "demand": {
+   "need_signals": 8,
+   "weighted_need": 12.0,
+   "audience_mix": {
+    "practitioner": 8
+   },
+   "engagement": 8374,
+   "recent_share": 0.0,
+   "segments": [
+    "open-discovery"
+   ]
+  },
+  "demand_score": 0.7
+ },
+ {
+  "theme_id": 6,
+  "name": "Security compliance audits for small businesses",
+  "need": "Small businesses without IT staff struggle to meet SOC 2, ISO 27001 or customer security audit demands.",
+  "stability": 0.75,
+  "demand": {
+   "need_signals": 10,
+   "weighted_need": 15.0,
+   "audience_mix": {
+    "practitioner": 10
+   },
+   "engagement": 209,
+   "recent_share": 0.0,
+   "segments": [
+    "open-discovery"
+   ]
+  },
+  "demand_score": 0.662
+ },
+ {
+  "theme_id": 4,
+  "name": "Vulnerability scanning of software dependencies",
+  "need": "Development teams struggle to detect and update vulnerable dependencies, sub-dependencies and container images in their CI pipelines.",
+  "stability": 0.8,
+  "demand": {
+   "need_signals": 10,
+   "weighted_need": 11.5,
+   "audience_mix": {
+    "developer": 7,
+    "practitioner": 3
+   },
+   "engagement": 808,
+   "recent_share": 0.0,
+   "segments": [
+    "open-discovery"
+   ]
+  },
+  "demand_score": 0.575
+ },
+ {
+  "theme_id": 14,
+  "name": "Logging user sessions and logins",
+  "need": "Admins want simple ways to log and report terminal, SSH and login sessions of users on their servers.",
+  "stability": 0.57,
+  "demand": {
+   "need_signals": 8,
+   "weighted_need": 11.0,
+   "audience_mix": {
+    "developer": 2,
+    "practitioner": 6
+   },
+   "engagement": 262,
+   "recent_share": 0.0,
+   "segments": [
+    "open-discovery"
+   ]
+  },
+  "demand_score": 0.45
+ },
+ {
+  "theme_id": 11,
+  "name": "Outsourced computer audit and testing services",
+  "need": "European public bodies seek external providers for computer audit and testing services.",
+  "stability": 0.95,
+  "demand": {
+   "need_signals": 6,
+   "weighted_need": 15.0,
+   "audience_mix": {
+    "buyer": 6
+   },
+   "engagement": 6,
+   "recent_share": 0.0,
+   "segments": [
+    "open-discovery"
+   ]
+  },
+  "demand_score": 0.412
+ },
+ {
+  "theme_id": 15,
+  "name": "Isolating systems to reduce PCI scope",
+  "need": "Businesses handling card data struggle to isolate terminals, apps and containers to meet PCI DSS requirements.",
+  "stability": 0.76,
+  "demand": {
+   "need_signals": 5,
+   "weighted_need": 7.5,
+   "audience_mix": {
+    "practitioner": 5
+   },
+   "engagement": 60,
+   "recent_share": 0.0,
+   "segments": [
+    "open-discovery"
+   ]
+  },
+  "demand_score": 0.138
+ },
+ {
+  "theme_id": 16,
+  "name": "Ransomware detection and recovery on Windows",
+  "need": "Small Windows networks hit by ransomware struggle to prevent, detect and recover encrypted files on file servers.",
+  "stability": 1.0,
+  "demand": {
+   "need_signals": 5,
+   "weighted_need": 7.5,
+   "audience_mix": {
+    "practitioner": 5
+   },
+   "engagement": 27,
+   "recent_share": 0.0,
+   "segments": [
+    "open-discovery"
+   ]
+  },
+  "demand_score": 0.087
+ }
+]

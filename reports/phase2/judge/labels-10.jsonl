@@ -1,0 +1,180 @@
+{"id": "github:3774522606", "on_segment": "y", "need": "y", "reason": "Requests OS keychain storage for MCP credentials"}
+{"id": "github:4121523744", "on_segment": "n", "need": "n", "reason": "Generic app security audit agent task, not AI security"}
+{"id": "stackexchange:security:193363", "on_segment": "y", "need": "n", "reason": "Asks which standards govern customer data storage"}
+{"id": "stackexchange:security:92237", "on_segment": "y", "need": "n", "reason": "Troubleshooting Nessus custom audit, no capability gap"}
+{"id": "stackexchange:security:277069", "on_segment": "y", "need": "y", "reason": "Seeks tool for automated REST API pentest in CI/CD"}
+{"id": "serverfault:serverfault:924605", "on_segment": "n", "need": "n", "reason": "Terraform syntax question for attaching IAM policies"}
+{"id": "serverfault:serverfault:234427", "on_segment": "y", "need": "n", "reason": "Compares Microsoft hardening tools, how-it-works question"}
+{"id": "serverfault:serverfault:320563", "on_segment": "y", "need": "y", "reason": "Wants easy way to cross-reference security group usage in policies"}
+{"id": "serverfault:serverfault:512503", "on_segment": "y", "need": "n", "reason": "Configuration help for MySQL audit logging"}
+{"id": "serverfault:serverfault:355605", "on_segment": "y", "need": "n", "reason": "Server config fix for PCI scan finding"}
+{"id": "serverfault:serverfault:375291", "on_segment": "y", "need": "y", "reason": "PCI scanner flags absent software, false positive pain"}
+{"id": "serverfault:serverfault:1035094", "on_segment": "y", "need": "y", "reason": "Spoofed phishing mail delivered through own mail server"}
+{"id": "serverfault:serverfault:671954", "on_segment": "y", "need": "y", "reason": "Ransomware infection on domain, needs remediation help"}
+{"id": "serverfault:serverfault:882520", "on_segment": "y", "need": "n", "reason": "Asks whether backup design resists ransomware"}
+{"id": "github:1713440953", "on_segment": "n", "need": "n", "reason": "CI tool bug unrelated to security"}
+{"id": "github:1865385590", "on_segment": "y", "need": "n", "reason": "Internal hardening task in blockchain code, not tool need"}
+{"id": "github:520375344", "on_segment": "n", "need": "n", "reason": "CMS hook bug, not security"}
+{"id": "github:4891454049", "on_segment": "y", "need": "y", "reason": "MCP calls lack per-run identity for multi-tenant attribution"}
+{"id": "github:4259540104", "on_segment": "y", "need": "y", "reason": "Requests path scoping enforcement for agent filesystem tools"}
+{"id": "github:6317497212", "on_segment": "y", "need": "y", "reason": "Requests per-agent MCP credentials and identity"}
+{"id": "github:4406277138", "on_segment": "y", "need": "y", "reason": "Most agent tools run without permission gating"}
+{"id": "github:3994228976", "on_segment": "y", "need": "n", "reason": "Vendor offering a free security audit, sales pitch"}
+{"id": "github:4228014403", "on_segment": "n", "need": "n", "reason": "Path usability request for agent tools, not security"}
+{"id": "github:5200196385", "on_segment": "n", "need": "n", "reason": "OCR markdown correction feature, unrelated"}
+{"id": "github:6325410261", "on_segment": "n", "need": "n", "reason": "Qubes URL handling bug, not AI security"}
+{"id": "github:4469843453", "on_segment": "y", "need": "y", "reason": "No guidance for MCP shared tokens, audit, access control"}
+{"id": "github:3092943318", "on_segment": "n", "need": "n", "reason": "Kubernetes OIDC discovery request, not AI security"}
+{"id": "github:3929108513", "on_segment": "n", "need": "n", "reason": "Agent idea for MCP setup automation, not security"}
+{"id": "github:4147328449", "on_segment": "n", "need": "n", "reason": "Generic app security audit agent task, not AI security"}
+{"id": "github:4077333041", "on_segment": "n", "need": "n", "reason": "Generic app security audit agent task, not AI security"}
+{"id": "hn:48181324", "on_segment": "y", "need": "n", "reason": "Lecture on AI agent security, no need stated"}
+{"id": "stackexchange:security:194705", "on_segment": "y", "need": "y", "reason": "AV missed ransomware; unsure which protection tool to use"}
+{"id": "stackexchange:security:32489", "on_segment": "y", "need": "n", "reason": "Asks about recovering private keys, conceptual crypto question"}
+{"id": "stackexchange:security:270459", "on_segment": "y", "need": "n", "reason": "HIPAA hosting scope question"}
+{"id": "stackexchange:security:54696", "on_segment": "y", "need": "n", "reason": "PCI scope question for multi-domain checkout"}
+{"id": "stackexchange:security:201521", "on_segment": "y", "need": "y", "reason": "Asks how to automate ZAP fuzzing as test suite"}
+{"id": "serverfault:serverfault:514360", "on_segment": "y", "need": "n", "reason": "Active Directory permissions how-it-works question"}
+{"id": "serverfault:serverfault:245498", "on_segment": "y", "need": "n", "reason": "General database security best practices question"}
+{"id": "serverfault:serverfault:685607", "on_segment": "y", "need": "n", "reason": "Employee asks what RDP auditing records"}
+{"id": "serverfault:serverfault:537528", "on_segment": "y", "need": "n", "reason": "PCI scope question for remote database"}
+{"id": "serverfault:serverfault:1131750", "on_segment": "y", "need": "y", "reason": "Spoofed phishing still reaches inboxes despite SPF/DMARC"}
+{"id": "serverfault:serverfault:1092529", "on_segment": "y", "need": "n", "reason": "Syslog behaviour question"}
+{"id": "github:745607458", "on_segment": "y", "need": "n", "reason": "CVE announcement"}
+{"id": "github:1293926301", "on_segment": "n", "need": "n", "reason": "Grant proposal unrelated to security"}
+{"id": "github:892438469", "on_segment": "n", "need": "n", "reason": "Opinion essay about operating systems"}
+{"id": "github:622038385", "on_segment": "n", "need": "n", "reason": "Blockchain fee voting tool"}
+{"id": "github:5067231968", "on_segment": "n", "need": "n", "reason": "Release-note precommit tooling"}
+{"id": "github:2778374937", "on_segment": "n", "need": "n", "reason": "Language purity feature; security only in passing"}
+{"id": "github:5362912529", "on_segment": "n", "need": "n", "reason": "Commit attribution preference, not security"}
+{"id": "github:3795670798", "on_segment": "n", "need": "n", "reason": "Agent framework contribution proposal"}
+{"id": "github:3970812317", "on_segment": "n", "need": "n", "reason": "Mutable LLM hooks request, security not stated"}
+{"id": "github:4681569913", "on_segment": "n", "need": "n", "reason": "Lint watch mode developer convenience"}
+{"id": "github:4635577832", "on_segment": "y", "need": "y", "reason": "Feedback on MCP auth and conformance gaps in production"}
+{"id": "github:4065232000", "on_segment": "n", "need": "n", "reason": "Generic app security audit agent task, not AI security"}
+{"id": "github:4065230156", "on_segment": "n", "need": "n", "reason": "Generic app security audit agent task, not AI security"}
+{"id": "hn:46235141", "on_segment": "y", "need": "n", "reason": "Curated list of AI agent security tools"}
+{"id": "stackexchange:security:36971", "on_segment": "y", "need": "y", "reason": "Needs tool logging network user logins without DB access"}
+{"id": "stackexchange:security:17796", "on_segment": "y", "need": "y", "reason": "Seeks tool to audit Windows security policy files"}
+{"id": "stackexchange:security:187778", "on_segment": "y", "need": "n", "reason": "How wifi sniffing methods work"}
+{"id": "stackexchange:security:151565", "on_segment": "y", "need": "y", "reason": "Needs free tool to scan 1000 servers for weak TLS"}
+{"id": "stackexchange:security:185852", "on_segment": "y", "need": "y", "reason": "Small startup lacks credential continuity and incident plan"}
+{"id": "serverfault:serverfault:666692", "on_segment": "y", "need": "y", "reason": "Wants time-of-day conditions in AWS IAM policies"}
+{"id": "serverfault:serverfault:1034253", "on_segment": "y", "need": "n", "reason": "Log forwarding how-to for SIEM"}
+{"id": "serverfault:serverfault:344279", "on_segment": "y", "need": "n", "reason": "Apache file layout best-practice question"}
+{"id": "serverfault:serverfault:132301", "on_segment": "y", "need": "n", "reason": "General server hardening recommendations"}
+{"id": "serverfault:serverfault:260783", "on_segment": "y", "need": "n", "reason": "Questions an audit tool warning"}
+{"id": "serverfault:serverfault:1041767", "on_segment": "y", "need": "n", "reason": "Linux audit log field question"}
+{"id": "serverfault:serverfault:200078", "on_segment": "y", "need": "n", "reason": "How to see process run times"}
+{"id": "serverfault:serverfault:1126830", "on_segment": "y", "need": "n", "reason": "Integration error troubleshooting"}
+{"id": "serverfault:serverfault:709737", "on_segment": "y", "need": "n", "reason": "HIPAA home PC encryption question"}
+{"id": "serverfault:serverfault:765496", "on_segment": "y", "need": "y", "reason": "No guidance found on Docker and PCI compliance"}
+{"id": "serverfault:serverfault:490466", "on_segment": "y", "need": "n", "reason": "Hosting provider handling phishing complaint process"}
+{"id": "serverfault:serverfault:1198967", "on_segment": "y", "need": "n", "reason": "Forensic interpretation question about Entra timestamps"}
+{"id": "serverfault:serverfault:965981", "on_segment": "y", "need": "y", "reason": "Phishing bypasses Mimecast via direct delivery"}
+{"id": "serverfault:serverfault:1062989", "on_segment": "y", "need": "y", "reason": "Ransomware-encrypted backups, needs to recover older versions"}
+{"id": "serverfault:serverfault:849984", "on_segment": "y", "need": "y", "reason": "Wants air-gapped backup to protect against ransomware"}
+{"id": "serverfault:serverfault:1005057", "on_segment": "y", "need": "n", "reason": "Best practices for hardening file servers"}
+{"id": "github:127681123", "on_segment": "n", "need": "n", "reason": "Calendar app not working"}
+{"id": "github:4471661690", "on_segment": "n", "need": "n", "reason": "CLI output usability feedback"}
+{"id": "github:3381450426", "on_segment": "n", "need": "n", "reason": "Chat cancel bug"}
+{"id": "github:2513440525", "on_segment": "n", "need": "n", "reason": "3D viewer dependency config"}
+{"id": "github:3764808738", "on_segment": "n", "need": "n", "reason": "Game feature request"}
+{"id": "github:4062198470", "on_segment": "y", "need": "y", "reason": "Wants subcommand security policy for AI agents using gh"}
+{"id": "github:3828874474", "on_segment": "n", "need": "n", "reason": "Agent skills feature, not security"}
+{"id": "github:3638482158", "on_segment": "n", "need": "n", "reason": "Financial agent use case"}
+{"id": "github:4607021991", "on_segment": "y", "need": "y", "reason": "AI agent security skill false positive, needs better approval binding"}
+{"id": "github:4454993740", "on_segment": "n", "need": "n", "reason": "Language threat model, not AI agent security"}
+{"id": "github:3279217911", "on_segment": "n", "need": "n", "reason": "AI gateway install request, no security focus"}
+{"id": "github:3891225181", "on_segment": "n", "need": "n", "reason": "Shell tool follow-up; security mentioned in passing"}
+{"id": "github:4030426445", "on_segment": "y", "need": "y", "reason": "Needs hook points for agent security plugins"}
+{"id": "github:6014961350", "on_segment": "y", "need": "y", "reason": "Wants per-workspace tool, MCP and security settings"}
+{"id": "hn:19528905", "on_segment": "y", "need": "n", "reason": "Asks whether IP addresses are confidential"}
+{"id": "hn:45451084", "on_segment": "y", "need": "n", "reason": "Article about LLM security scanners"}
+{"id": "stackexchange:security:202332", "on_segment": "y", "need": "n", "reason": "PCI scope advice question"}
+{"id": "stackexchange:security:190402", "on_segment": "y", "need": "n", "reason": "PCI scope question for CI/CD"}
+{"id": "stackexchange:security:69159", "on_segment": "y", "need": "y", "reason": "PCI audit flagged card data handling, needs solution"}
+{"id": "stackexchange:security:136746", "on_segment": "y", "need": "n", "reason": "Seeks resources for writing security standards"}
+{"id": "stackexchange:security:99937", "on_segment": "y", "need": "n", "reason": "Whether ad-hoc testing helps small businesses"}
+{"id": "stackexchange:security:172592", "on_segment": "y", "need": "n", "reason": "Reviews own data security policy"}
+{"id": "stackexchange:security:252530", "on_segment": "y", "need": "y", "reason": "Small DIY team struggling to reach Cyber Essentials"}
+{"id": "stackexchange:security:277536", "on_segment": "y", "need": "y", "reason": "Wants to automate ASVS verification with ZAP"}
+{"id": "stackexchange:security:170341", "on_segment": "y", "need": "n", "reason": "Nikto output filtering how-to"}
+{"id": "stackexchange:security:59351", "on_segment": "y", "need": "n", "reason": "Application key recovery design question"}
+{"id": "serverfault:serverfault:1084793", "on_segment": "y", "need": "n", "reason": "How AWS handles MFA brute force"}
+{"id": "serverfault:serverfault:1034179", "on_segment": "n", "need": "n", "reason": "IAM console timeouts, connectivity issue"}
+{"id": "serverfault:serverfault:789451", "on_segment": "y", "need": "n", "reason": "IAM role design how-to for classroom"}
+{"id": "serverfault:serverfault:848502", "on_segment": "y", "need": "n", "reason": "Least privilege design best practice question"}
+{"id": "serverfault:serverfault:832648", "on_segment": "y", "need": "n", "reason": "Asks whether abandoned tool is safe"}
+{"id": "serverfault:serverfault:329692", "on_segment": "y", "need": "y", "reason": "Asks for maintained secure alternative to PsyBNC"}
+{"id": "serverfault:serverfault:966752", "on_segment": "y", "need": "y", "reason": "Office365 audit log retention limit blocks investigation"}
+{"id": "serverfault:serverfault:1024652", "on_segment": "y", "need": "n", "reason": "SOC2 question about end-of-life hardware"}
+{"id": "serverfault:serverfault:878848", "on_segment": "y", "need": "n", "reason": "HIPAA RDP session timeout question"}
+{"id": "serverfault:serverfault:398733", "on_segment": "y", "need": "y", "reason": "Server sending phishing mail, needs to find cause"}
+{"id": "serverfault:serverfault:882025", "on_segment": "y", "need": "y", "reason": "Cannot reach anyone to take down phishing site"}
+{"id": "serverfault:serverfault:803092", "on_segment": "y", "need": "y", "reason": "Hacked container sending phishing, needs recovery help"}
+{"id": "github:1551779443", "on_segment": "y", "need": "y", "reason": "RFP for automated code-level security verifier"}
+{"id": "github:5932033488", "on_segment": "n", "need": "n", "reason": "MCP admin server concept, not security"}
+{"id": "github:4086025348", "on_segment": "y", "need": "y", "reason": "MCP server tools lack operation filtering"}
+{"id": "github:4323324630", "on_segment": "y", "need": "y", "reason": "Needs scoped revocable service credentials for agents"}
+{"id": "github:4760094594", "on_segment": "n", "need": "n", "reason": "Token waste configuration, not security"}
+{"id": "github:4399153228", "on_segment": "y", "need": "y", "reason": "Teams reimplement AI interception and enforcement"}
+{"id": "github:3098591248", "on_segment": "y", "need": "y", "reason": "Requests granular permissions for agent tools"}
+{"id": "github:3928868119", "on_segment": "n", "need": "n", "reason": "Networking library proposal"}
+{"id": "github:3934106510", "on_segment": "n", "need": "n", "reason": "IDE integration bug"}
+{"id": "github:4905392724", "on_segment": "n", "need": "n", "reason": "Intune policy granularity, not AI security"}
+{"id": "github:2714779624", "on_segment": "y", "need": "y", "reason": "Proposes way to measure AI system security"}
+{"id": "github:2909299841", "on_segment": "n", "need": "n", "reason": "LLM resource list"}
+{"id": "github:4589232335", "on_segment": "n", "need": "n", "reason": "Spec workflow proposal"}
+{"id": "github:3400085902", "on_segment": "y", "need": "n", "reason": "Meeting notes"}
+{"id": "github:3486678023", "on_segment": "n", "need": "n", "reason": "MCP library for embedded OS"}
+{"id": "github:3188307734", "on_segment": "n", "need": "n", "reason": "API streaming bug"}
+{"id": "hn:49974784", "on_segment": "y", "need": "n", "reason": "Incident dataset release"}
+{"id": "hn:36620363", "on_segment": "y", "need": "n", "reason": "Video interview on LLM security"}
+{"id": "hn:37585578", "on_segment": "y", "need": "n", "reason": "Video on LLM security"}
+{"id": "stackexchange:security:167508", "on_segment": "y", "need": "n", "reason": "Asks risks of enabling RDP"}
+{"id": "stackexchange:security:161636", "on_segment": "y", "need": "n", "reason": "Conceptual question on trusting IR tools"}
+{"id": "stackexchange:security:79125", "on_segment": "y", "need": "n", "reason": "Pentest tool usage question"}
+{"id": "stackexchange:security:154254", "on_segment": "n", "need": "n", "reason": "Financial regulation question, not cybersecurity"}
+{"id": "stackexchange:security:210781", "on_segment": "y", "need": "n", "reason": "Best-practice question on password storage"}
+{"id": "serverfault:serverfault:858874", "on_segment": "y", "need": "n", "reason": "IAM policy how-to"}
+{"id": "serverfault:serverfault:594311", "on_segment": "y", "need": "n", "reason": "Investigating Exchange mailbox access"}
+{"id": "serverfault:serverfault:497961", "on_segment": "y", "need": "n", "reason": "Terminology question about compliance tool"}
+{"id": "serverfault:serverfault:174039", "on_segment": "n", "need": "n", "reason": "Email deliverability issue"}
+{"id": "serverfault:serverfault:584384", "on_segment": "n", "need": "n", "reason": "Site flagged by browser filter, reputation issue"}
+{"id": "serverfault:serverfault:790394", "on_segment": "y", "need": "y", "reason": "Ransomware infection, needs response help"}
+{"id": "serverfault:serverfault:995772", "on_segment": "y", "need": "y", "reason": "Struggles to detect time-delayed ransomware"}
+{"id": "github:559130741", "on_segment": "n", "need": "n", "reason": "BI custom expression request"}
+{"id": "github:1651179145", "on_segment": "y", "need": "y", "reason": "Requests smarter greylisting for spam defence"}
+{"id": "github:610636116", "on_segment": "n", "need": "n", "reason": "Database restore bug"}
+{"id": "github:3563705605", "on_segment": "n", "need": "n", "reason": "MCP server config issue, not security need"}
+{"id": "github:4452633626", "on_segment": "n", "need": "n", "reason": "Computer-use tool request"}
+{"id": "github:3989035139", "on_segment": "n", "need": "n", "reason": "WASM skill engine feature"}
+{"id": "github:4714584299", "on_segment": "y", "need": "y", "reason": "Host-side agent file tools lack access control"}
+{"id": "github:4494372782", "on_segment": "y", "need": "y", "reason": "Needs tool-call authorization hook against prompt injection"}
+{"id": "github:2449234501", "on_segment": "n", "need": "n", "reason": "Logging solution request, security not stated"}
+{"id": "github:4509598102", "on_segment": "n", "need": "n", "reason": "Code security triage tool, not securing AI"}
+{"id": "github:4201106816", "on_segment": "n", "need": "n", "reason": "Title generator bug"}
+{"id": "github:6061844422", "on_segment": "y", "need": "y", "reason": "Prompt-injection blocks leave agent sessions unrecoverable"}
+{"id": "github:5469790426", "on_segment": "y", "need": "y", "reason": "MCP tool trust boundaries need hardening"}
+{"id": "github:4991791026", "on_segment": "n", "need": "n", "reason": "Browser benchmark request"}
+{"id": "github:5009469243", "on_segment": "y", "need": "y", "reason": "Agents leak secrets to LLM providers"}
+{"id": "github:4133790078", "on_segment": "y", "need": "y", "reason": "Needs tool-level filtering for MCP servers"}
+{"id": "github:6445500911", "on_segment": "n", "need": "n", "reason": "Docs fix for securities providers"}
+{"id": "github:5928815225", "on_segment": "n", "need": "n", "reason": "Search API parameters"}
+{"id": "github:4982504566", "on_segment": "n", "need": "n", "reason": "Flaky LLM output parsing bug"}
+{"id": "github:6308106760", "on_segment": "y", "need": "y", "reason": "Wants injection testing for LLM code changes"}
+{"id": "github:4884406816", "on_segment": "n", "need": "n", "reason": "Settings builder refactor"}
+{"id": "github:4147328189", "on_segment": "n", "need": "n", "reason": "Generic app security audit agent task, not AI security"}
+{"id": "github:4121522833", "on_segment": "n", "need": "n", "reason": "Generic app security audit agent task, not AI security"}
+{"id": "github:4077333220", "on_segment": "n", "need": "n", "reason": "Generic app security audit agent task, not AI security"}
+{"id": "github:4077332976", "on_segment": "n", "need": "n", "reason": "Generic app security audit agent task, not AI security"}
+{"id": "github:4065229798", "on_segment": "n", "need": "n", "reason": "Generic app security audit agent task, not AI security"}
+{"id": "github:4058903393", "on_segment": "n", "need": "n", "reason": "Generic app security audit agent task, not AI security"}
+{"id": "github:4058901542", "on_segment": "n", "need": "n", "reason": "Generic app security audit agent task, not AI security"}
+{"id": "github:4016476694", "on_segment": "n", "need": "n", "reason": "Settings display bug"}
+{"id": "hn:49446376", "on_segment": "y", "need": "n", "reason": "Incident dataset release"}
+{"id": "hn:46003807", "on_segment": "y", "need": "n", "reason": "Article on AI agent security flaws"}
+{"id": "hn:45781928", "on_segment": "y", "need": "n", "reason": "Article on AI agent security approach"}
+{"id": "hn:45776416", "on_segment": "y", "need": "n", "reason": "Article on AI agent security approach"}
+{"id": "hn:47025096", "on_segment": "y", "need": "n", "reason": "Benchmark release of security tools"}

@@ -1,0 +1,49 @@
+{
+  "concept_id": "cal-03",
+  "lens": "security-practitioner",
+  "round": 1,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "Workflow fit is good: a GitHub App posting required checks on pull requests, with exceptions and Slack/CLI guidance, is how platform teams already gate merges. But the 'metadata only' promise contradicts the rules it sells (secrets, banned components), the secrets rule fires after the leak, and blocking only works if each repo is configured to require the check.",
+  "objections": [
+    {
+      "objection": "The 'metadata only, no source code extracted' access promise is inconsistent with the headline rules. Detecting secrets, banned components and approved versions in a PR requires reading diffs and manifest/lock files, so the GitHub App needs repository contents read access across the whole organisation. Security reviewers will treat it as a full-code-access third-party SaaS, which is exactly the objection the catalogue was designed to avoid.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[0] vs concept:mvp.features[1]; https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/choosing-permissions-for-a-github-app"
+    },
+    {
+      "objection": "Secret detection at PR time does not reduce the risk it claims to: once a commit with a secret is pushed to a branch it is in the repository history and must be treated as compromised and rotated. Blocking the merge only prevents it reaching main; real prevention needs a pre-commit/pre-push hook or rotation workflow, which is out of scope.",
+      "severity": "major",
+      "evidence": "https://docs.github.com/en/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/remediating-a-leaked-secret; concept:mvp.features[1]"
+    },
+    {
+      "objection": "'Blocks pull requests' depends on branch protection with the check marked required in every repository, configured by repo admins, and admins bypass by default. Org-wide enforcement therefore relies on the per-repo settings the product claims to replace; in a drifting 50-500 engineer org many repos will not have it, so the product degrades to advisory comments.",
+      "severity": "major",
+      "evidence": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches; concept:competitors[0].how_we_differ"
+    },
+    {
+      "objection": "False blocks are the adoption killer. Rules like 'required files' and 'approved versions' are company-specific and brittle; if early rules fire wrongly, developers route around them via the exception workflow or admin bypass, and the platform team turns enforcement off. The concept names this risk but has no plan to measure precision before switching from report to block.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts"
+    },
+    {
+      "objection": "Security depth is shallow by design (no static analysis, no runtime), so a security team already running SCA and secret scanning sees overlap rather than new risk reduction; the value is mostly hygiene and consistency, which weakens the security-budget case and leaves the 'security or DevOps product' question open.",
+      "severity": "minor",
+      "evidence": "concept:mvp.out_of_scope; concept:open_questions[1]"
+    }
+  ],
+  "strongest_point": "Lives exactly where developers already work (PR checks, Slack, CLI) with an exception workflow, so enforcement can be adopted incrementally starting from a read-only org report.",
+  "what_would_change_my_mind": [
+    "Design partners' security teams approve the app in writing with its real permission scope (repository contents read).",
+    "A report-only pilot across 3+ orgs shows under 5% of flagged PRs overridden as false positives.",
+    "A pre-push or rotation path for secrets, or secrets dropped from the pitch in favour of component and configuration governance."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://docs.github.com/en/rest/checks/runs",
+    "https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/choosing-permissions-for-a-github-app",
+    "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches",
+    "https://docs.github.com/en/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/remediating-a-leaked-secret",
+    "https://danger.systems/"
+  ]
+}

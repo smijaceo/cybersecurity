@@ -1,0 +1,48 @@
+{
+ "concept_id": "cal-03",
+ "lens": "competitor-analyst",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "The exact bundle (org-wide repo catalogue plus PR policy gate with exceptions) is not owned by anyone yet, but each piece is: GitHub controls the merge gate and can bundle org policies, SCA vendors already block banned components/versions on PRs, secret scanners and free tools (Danger, Probot, OPA) cover the rest. Viable only if the catalogue and governance layer is clearly deeper than platform settings.",
+ "objections": [
+  {
+   "objection": "Most dangerous competitor is GitHub itself: it owns the pull-request merge gate, branch protection and required checks, and builds app/checks APIs precisely so it can absorb popular third-party use cases. Organisation-level rules, dependency alerts and secret detection are natural roadmap items; the concept's own risk list names this. A product whose enforcement point is a platform API it does not control can be commoditised in one release.",
+   "severity": "major",
+   "evidence": "https://developer.github.com/v3/checks/ ; concept:risks[0] ; concept:competitors[0].how_we_differ"
+  },
+  {
+   "objection": "Three of the four example policies (banned components, approved versions, secrets) are already sold by entrenched SCA and secret-scanning vendors (Snyk, Black Duck, WhiteSource-type SCA policy engines, plus free secret scanners) that already sit on the PR and have security budget. The concept frames Snyk as 'only vulnerable dependencies', which understates SCA license/version policy features, leaving Tamarind with the residual 'required files / best practice' rules, which are low value.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[1] ; concept:competitors[2].how_we_differ ; https://snyk.io/"
+  },
+  {
+   "objection": "Free do-it-yourself substitutes are strong for a platform team at 50-500 engineers: Danger for PR rules, Probot apps for org-wide GitHub automation, and Open Policy Agent for centrally managed policy-as-code. Platform teams are the users who define policies and are exactly the people inclined to script this themselves, which caps price at $15/dev.",
+   "severity": "major",
+   "evidence": "https://probot.github.io/ ; https://www.openpolicyagent.org/ ; https://danger.systems/ ; concept:pricing.entry_price"
+  },
+  {
+   "objection": "Code-quality and DevSecOps suites (SonarQube quality gates, Code Climate, GitLab with push rules and built-in security) can extend into cross-repo policy dashboards; the differentiation 'policy rather than metrics' is a positioning statement, not a capability gap they cannot close.",
+   "severity": "minor",
+   "evidence": "concept:competitors[1] ; concept:competitors[3]"
+  },
+  {
+   "objection": "GitHub-only scope in v1 excludes GitLab/Bitbucket shops and ties the whole TAM to one platform's goodwill and API terms.",
+   "severity": "minor",
+   "evidence": "concept:mvp.out_of_scope[2]"
+  }
+ ],
+ "strongest_point": "No incumbent yet offers a metadata-only, organisation-wide catalogue of repos, teams and components joined to PR policy enforcement with exceptions; that governance layer is a genuine white space.",
+ "what_would_change_my_mind": [
+  "Design partners who already pay for an SCA tool still list cross-repo catalogue/governance as unmet",
+  "At least 3 of 6 design partners choose a paid Tamarind pilot over scripting Danger/Probot/OPA themselves",
+  "Most enforced policies are ones SCA and secret scanners don't cover (ownership, service metadata, required runbooks)"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://developer.github.com/v3/checks/",
+  "https://probot.github.io/",
+  "https://www.openpolicyagent.org/",
+  "https://danger.systems/"
+ ]
+}

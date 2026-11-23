@@ -1,0 +1,43 @@
+{
+ "concept_id": "cal-03",
+ "lens": "legal-ethics",
+ "round": 1,
+ "score": 7,
+ "verdict": "conditional",
+ "summary": "A defensive policy gate on pull requests has almost no dual-use or abuse potential and touches no regulated personal data. Legal risk sits in an over-claimed 'metadata only' promise that contradicts secret and file checks, custody of detected secrets and PR content, dependence on GitHub's platform terms, and liability or compliance claims if a missed violation ships.",
+ "objections": [
+  {
+   "objection": "The 'metadata only, no source code extracted' promise contradicts the MVP. Checking PRs for secrets, required files, banned components and approved versions means reading file contents, diffs and manifests. If marketing and contracts promise metadata-only access while the app requests content-read scope, that is a misrepresentation that customer security and legal reviews will catch, and a breach-of-contract or deceptive-practice exposure if code is ever processed or stored.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[0], concept:mvp.features[1], concept:differentiation"
+  },
+  {
+   "objection": "Custody of what the scanner finds is undefined. A secrets rule will surface live credentials; storing them in violation records, the compliance report, or pushing them to Slack and CLI spreads them to more systems and makes the vendor a breach target holding many customers' keys. Needs redaction, no-retention defaults, a DPA, and a security attestation before scale-ups' security teams approve the GitHub app.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[1], concept:mvp.features[3], concept:mvp.features[4]"
+  },
+  {
+   "objection": "Liability and compliance claims. A 'compliance report across all repositories' invites buyers to rely on it as audit evidence; if a policy passes code that later causes an incident or audit finding, the vendor may be blamed. Contracts need warranty disclaimers and capped liability, and marketing must not imply regulatory compliance the rules do not establish.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[4], concept:problem.summary"
+  },
+  {
+   "objection": "Platform dependence: the product runs entirely as a third-party GitHub app under GitHub's developer and marketplace terms and API rate limits; GitHub can change permissions, terms or ship the feature natively. Legal exposure is low but the business has a single counterparty that can unilaterally change the rules.",
+   "severity": "minor",
+   "evidence": "concept:why_now.summary, concept:risks[0]"
+  },
+  {
+   "objection": "Developer data: per-developer tracking of violations and exceptions is light employee monitoring; in EU or Israeli works-council settings, individual compliance scorecards may need notice or consultation. Report by repo/team rather than named developer by default.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Purely defensive governance tool with negligible abuse potential, no regulated personal data, and an explicit intent to minimise code access, which eases legal review.",
+ "what_would_change_my_mind": [
+  "A published GitHub app permission scope that matches stated data access: content read only for ephemeral PR processing, nothing persisted.",
+  "Secret findings redacted to fingerprints by default, never sent to Slack or stored in reports.",
+  "A standard DPA and a SOC 2 plan, and 3 of 6 design partners clearing security/legal review of the app without escalation."
+ ],
+ "resolved_prior": [],
+ "sources": []
+}

@@ -1,0 +1,46 @@
+{
+ "concept_id": "cal-07",
+ "lens": "technical-feasibility",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "A 25-person binary-analysis team can ship automated embedded-Linux firmware analysis in 12 months; unpacking, component identification and config checks are known techniques. But the MVP bundles five products, including per-architecture runtime protection and a certification scheme. RTOS/monolithic firmware coverage, low-false-positive findings and on-device agents will not all fit the timeline.",
+ "objections": [
+  {
+   "objection": "MVP scope is really three products: a firmware analysis SaaS, a requirements/certification programme, and a post-deployment on-device protection agent. The agent alone needs ports per CPU architecture, OS/RTOS and memory budget, plus field-safe deployment; it competes for the same scarce embedded engineers as the analyser and will not fit 12 months alongside it.",
+   "severity": "major",
+   "evidence": "concept:mvp.features (feature 5 'Lightweight on-device protection added post-deployment') vs concept:build.months_to_mvp = 12"
+  },
+  {
+   "objection": "Automated analysis 'without source code' works well for unpackable embedded Linux images (filesystem extraction, package/version fingerprinting, default credentials, open services). Monolithic RTOS and bare-metal blobs have no filesystem, stripped symbols, custom loaders and encrypted/signed images; coverage there needs per-vendor reverse engineering. The concept names medical and industrial devices, where RTOS dominates, so promised coverage will be uneven.",
+   "severity": "major",
+   "evidence": "concept:buyer.company_profile ('embedded Linux/RTOS firmware'); concept:build.hardest_parts[0]; https://en.wikipedia.org/wiki/Embedded_system"
+  },
+  {
+   "objection": "Deriving device-specific requirements 'fitted to the device and the maker's business constraints' needs inputs the firmware image does not contain: device function, threat environment, hardware capabilities (secure boot, TrustZone, crypto engines), update channel. Without a guided questionnaire and expert review loop this step becomes the generic checklist the concept criticises, or a consulting service that does not scale.",
+   "severity": "major",
+   "evidence": "concept:differentiation; concept:build.hardest_parts[1]"
+  },
+  {
+   "objection": "Certification issued from automated analysis is only as good as the analysis; false negatives on a certified device that is later compromised damage the mark. A certification needs a defined test methodology, re-test on every firmware release and human sign-off, which adds operational load not reflected in the team plan.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[3]; concept:risks[1]"
+  },
+  {
+   "objection": "Vulnerability matching depends on accurate component/version identification in stripped binaries with backported patches; naive version-to-CVE mapping yields high false positives that engineers will reject. A curated signature and patch-detection database is an ongoing maintenance cost.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Core firmware unpacking and analysis of embedded Linux is proven technique, and a 25-person team of binary-analysis researchers is well matched to build it.",
+ "what_would_change_my_mind": [
+  "A cut MVP limited to embedded Linux analysis plus requirements and guidance, with the on-device agent and certification deferred past the first release.",
+  "A prototype that unpacks and correctly fingerprints components in at least 80% of 100 real firmware images from three device categories.",
+  "Findings judged by makers' engineers with under 20% false positives."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Embedded_system",
+  "https://en.wikipedia.org/wiki/Firmware"
+ ]
+}

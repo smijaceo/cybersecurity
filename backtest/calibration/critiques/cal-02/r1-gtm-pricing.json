@@ -1,0 +1,47 @@
+{
+  "concept_id": "cal-02",
+  "lens": "gtm-pricing",
+  "round": 1,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "Credible bottom-up wedge (free IaC scanner in CI) and a sharp first-customer trigger (SOC 2 audit), but the $10/resource/month price is orders of magnitude off native tooling and would produce six-figure bills for mid-size accounts. Running OSS self-serve and CISO direct sales at once with 15 people, and an undecided budget owner, strain the motion.",
+  "objections": [
+    {
+      "objection": "Per-resource price is mis-set: $10/resource/month means a modest 3,000-resource estate costs ~$360k/yr, far above what a 100-500 person SaaS firm without a security team budgets, while AWS Config charges fractions of a cent per resource evaluation. Resource counting (IAM roles, security groups, ephemeral resources) also invites bill shock and customers excluding accounts.",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price; https://aws.amazon.com/config/pricing/"
+    },
+    {
+      "objection": "Two sales motions at once: OSS community feeding self-serve plus direct CISO sales. The named first customers have small or no security teams, so the CISO buyer often does not exist; the concept itself lists 'who owns the budget: engineering or security?' as open. Without a decided buyer, messaging, pricing page and sales comp split.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.channel; concept:open_questions; concept:buyer.role"
+    },
+    {
+      "objection": "Free OSS scanner may capture most of the value (PR-time checks) for the target segment; the paid tier's value (runtime drift, remediation PRs, compliance mapping) overlaps free Cloud Custodian and cloud-native posture checks, so conversion rates may be low.",
+      "severity": "major",
+      "evidence": "concept:risks; https://cloudcustodian.io/"
+    },
+    {
+      "objection": "Riskiest-assumption test runs only 2 weeks and counts repositories and inbound requests, not paid conversions or willingness to pay at the stated price; it cannot validate pricing.",
+      "severity": "minor",
+      "evidence": "concept:riskiest_assumption"
+    },
+    {
+      "objection": "No packaging for the compliance buyer (SOC 2/PCI report bundles, fixed per-account or per-tier pricing) even though compliance is named as the reason to pay; enterprise incumbents sell quote-based annual contracts that procurement understands.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features; concept:pricing.comparables"
+    }
+  ],
+  "strongest_point": "Free CI scanner gives zero-friction engineer adoption and usage data, and SOC 2-bound startups are a concrete, urgent first-customer segment whose spend grows with cloud footprint.",
+  "what_would_change_my_mind": [
+    "A tiered price (per cloud account or resource bands, roughly $1-3k/month for a mid-size estate) accepted by 5 of the first 10 design partners as signed paid pilots.",
+    "OSS-to-paid conversion of at least 2-3% of active organizations within a quarter.",
+    "A decision that engineering (VP Eng/platform) is the primary budget owner, with a self-serve-to-sales-assist motion."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://aws.amazon.com/config/pricing/",
+    "https://cloudcustodian.io/",
+    "https://www.checkpoint.com/cloudguard/"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+ "concept_id": "cal-05",
+ "lens": "security-practitioner",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "Architectural isolation genuinely reduces credential-theft risk for privileged admins and is a model security teams already trust (PAWs, Qubes). But desktop teams must accept a startup hypervisor as their new trusted base below Windows, coexist with VBS/Credential Guard, EDR and imaging tooling, and police the cross-side transfer channel. Adoption hinges on proving these.",
+ "objections": [
+  {
+   "objection": "A new, unproven bare-metal hypervisor becomes the single trusted computing base for the sensitive side. Security teams will demand independent audits, pen-test results and a patching story before trusting it more than hardened Windows; one escape bug collapses the whole value proposition.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[0]"
+  },
+  {
+   "objection": "Conflicts with controls practitioners already run: Microsoft's PAW model relies on Credential Guard, Device Guard and BitLocker, which depend on Windows' own virtualisation-based security and TPM access. A third-party hypervisor underneath can break or weaken VBS, nested virtualisation, measured boot and EDR kernel drivers, so the locked side may end up less hardened than a standard PAW.",
+   "severity": "major",
+   "evidence": "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices"
+  },
+  {
+   "objection": "The controlled data-transfer channel (clipboard, file drag, printing) is where real attacks and leaks will flow; the concept does not say how content is sanitised or which side hosts corporate email and Office, where phishing actually lands. If email lives on the locked side the phishing risk remains; if on the open side, sensitive data sits on the untrusted OS.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[3]"
+  },
+  {
+   "objection": "Operational burden doubles: two OS images to patch, two sets of agents (EDR, DLP, management), extra Windows licensing, plus hardware compatibility testing per laptop model. Desktop teams already stretched will resist unless it plugs into SCCM/Intune-style workflows on day one.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts"
+  },
+  {
+   "objection": "Shared hardware between the two sides leaves residual cross-VM risk (side channels, DMA from USB/peripherals on the open side), so it is not equivalent to two physical laptops for the most sensitive users.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Security by architecture: malware or a zero-day on the internet-facing OS cannot reach privileged credentials, a risk reduction detection tools cannot match.",
+ "what_would_change_my_mind": [
+  "An independent third-party audit/pen-test of the hypervisor with no escape found",
+  "A 50-admin bank pilot showing Credential Guard, BitLocker and the bank's EDR working on the locked side",
+  "A documented, sanitised cross-side transfer channel and clear placement of email/Office",
+  "Desktop team reporting no more than about one extra hour per month of image management"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices",
+  "https://www.qubes-os.org/"
+ ]
+}

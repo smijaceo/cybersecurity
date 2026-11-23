@@ -1,0 +1,51 @@
+{
+ "concept_id": "cal-06",
+ "lens": "gtm-pricing",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "$150k/yr for 1,000 workloads is plausible against virtual-firewall budgets and can carry direct enterprise sales. But 'per protected workload' is undefined for elastic containers, inspection compute is bundled, and the buyer must take budget from an incumbent firewall vendor. A 20-month build with 40 people plus 9-18 month cycles means a long, costly road to revenue.",
+ "objections": [
+  {
+   "objection": "Budget displacement: east-west inspection is usually funded from the network firewall line, which the incumbent firewall vendor already holds through renewals, ELAs and virtual firewall bundles. A new vendor must either win a new line or displace the incumbent. The concept names this as its riskiest assumption but has no displacement or co-existence pricing (e.g. priced below the virtual-firewall licences it replaces).",
+   "severity": "major",
+   "evidence": "concept:riskiest_assumption.assumption; concept:risks; concept:competitors"
+  },
+  {
+   "objection": "The pricing unit is ambiguous in exactly the environments targeted. 'Per protected workload' is unclear for autoscaling VMs and short-lived containers (peak, average or named?). 'Inspection capacity included' means heavy east-west DPI and TLS decryption, sized by traffic, is priced as if flat. Buyers fear true-up surprises, and the vendor risks margin or support costs if compute is in its scope.",
+   "severity": "major",
+   "evidence": "concept:pricing.model; concept:build.hardest_parts"
+  },
+  {
+   "objection": "Cash runway against sales motion: about 40 staff and 20 months to MVP before the first sale, then complex multi-platform deployments and proofs of concept that likely run 9-18 months in large enterprises. First meaningful revenue arrives roughly 2.5-3 years in. Ten $150k customers (about $1.5M ARR) does not cover a 40-person burn, so expansion must be fast.",
+   "severity": "major",
+   "evidence": "concept:build.team; concept:build.months_to_mvp; concept:risks"
+  },
+  {
+   "objection": "The land is small: a wedge in a 'new private-cloud or AWS environment' starts with a few hundred workloads, below the $150k entry tier. Either the entry price falls to around $50k, which strains SE-heavy direct sales, or the entry deal is oversized for the pilot. A smaller land tier and a defined expansion trigger (each new cloud or data-centre zone) are needed.",
+   "severity": "minor",
+   "evidence": "concept:go_to_market.wedge; concept:pricing.entry_price"
+  },
+  {
+   "objection": "System integrators earn their margin on services and on the incumbent firewall lines they resell. A new platform with no partner margin, certification or services playbook gets little push. Native security groups cost nothing extra on AWS, which anchors the price for the segmentation part of the value.",
+   "severity": "minor",
+   "evidence": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html"
+  },
+  {
+   "objection": "The riskiest-assumption test is unrealistic: 3 of 10 large enterprises agreeing to a funded proof of concept within 2 weeks does not match enterprise procurement. A null result would be uninformative and a positive one is unlikely before a working product exists.",
+   "severity": "minor",
+   "evidence": "concept:riskiest_assumption.success_signal"
+  }
+ ],
+ "strongest_point": "Six-figure ACV, a clear economic buyer and an expansion path that follows workload growth across clouds support direct enterprise sales, if the land converts.",
+ "what_would_change_my_mind": [
+  "3 design partners mid-migration sign paid pilots of $50k+ that convert to $150k+ ACV within 9 months of MVP.",
+  "Evidence that buyers would fund it by cutting virtual-firewall licences or deferring a firewall refresh.",
+  "A defined workload metric (e.g. average protected vCPUs or instances per month) that pilot customers accept, with modelled inspection compute cost showing 75%+ gross margin.",
+  "One large SI or cloud marketplace committed to resell or co-sell with a partner margin."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html"
+ ]
+}

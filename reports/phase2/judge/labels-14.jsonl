@@ -1,0 +1,180 @@
+{"id": "ted:748403-2026", "on_segment": "y", "need": "y", "reason": "Tender procures cybersecurity audits for metro system"}
+{"id": "ted:744264-2026", "on_segment": "n", "need": "n", "reason": "Storage arrays procurement; security not the subject"}
+{"id": "ted:743496-2026", "on_segment": "y", "need": "y", "reason": "Procures DNS threat defense subscription and support"}
+{"id": "ted:743306-2026", "on_segment": "y", "need": "y", "reason": "Procures NGFW firewall deployment and configuration"}
+{"id": "ted:744958-2026", "on_segment": "y", "need": "y", "reason": "Procures cybersecurity platform and SOC service"}
+{"id": "ted:743945-2026", "on_segment": "n", "need": "n", "reason": "Quality portal information system; not security"}
+{"id": "ted:742632-2026", "on_segment": "y", "need": "y", "reason": "Procures NDR threat detection platform expansion"}
+{"id": "ted:745089-2026", "on_segment": "y", "need": "y", "reason": "Procures password management software licences"}
+{"id": "ted:741403-2026", "on_segment": "y", "need": "y", "reason": "Procures outsourced CISO function"}
+{"id": "ted:739583-2026", "on_segment": "y", "need": "y", "reason": "Procures EDR/XDR with integrated SIEM"}
+{"id": "ted:737884-2026", "on_segment": "n", "need": "n", "reason": "Backup software procurement; generic IT resilience"}
+{"id": "ted:740858-2026", "on_segment": "y", "need": "y", "reason": "Procures NGFW firewall deployment and configuration"}
+{"id": "ted:739852-2026", "on_segment": "n", "need": "n", "reason": "Generic IT hardware and connectivity purchase"}
+{"id": "ted:739996-2026", "on_segment": "n", "need": "n", "reason": "CCTV physical surveillance; not cybersecurity"}
+{"id": "ted:733734-2026", "on_segment": "y", "need": "n", "reason": "Remote e-signature activation; security incidental"}
+{"id": "ted:734940-2026", "on_segment": "y", "need": "y", "reason": "Procures phishing test and awareness tool"}
+{"id": "ted:735396-2026", "on_segment": "y", "need": "y", "reason": "Procures secure email gateway renewal"}
+{"id": "ted:734993-2026", "on_segment": "y", "need": "y", "reason": "Procures NDR threat detection platform expansion"}
+{"id": "ted:735701-2026", "on_segment": "y", "need": "y", "reason": "Procures VS-NfD approved secure clients with VPN"}
+{"id": "ted:734663-2026", "on_segment": "y", "need": "y", "reason": "Procures SIEM/SOC monitoring service"}
+{"id": "ted:734951-2026", "on_segment": "y", "need": "y", "reason": "Procures threat intelligence platform licence"}
+{"id": "ted:736052-2026", "on_segment": "y", "need": "n", "reason": "Mostly IT hardware; cybersecurity mentioned only incidentally"}
+{"id": "ted:736115-2026", "on_segment": "y", "need": "y", "reason": "Procures network penetration testing"}
+{"id": "ted:733494-2026", "on_segment": "y", "need": "y", "reason": "Procures SIEM for NIS2 compliance"}
+{"id": "ted:730992-2026", "on_segment": "n", "need": "n", "reason": "Generic IT services procurement"}
+{"id": "ted:731299-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:732209-2026", "on_segment": "n", "need": "n", "reason": "LTE voice system; not security"}
+{"id": "ted:728939-2026", "on_segment": "y", "need": "y", "reason": "Procures managed SOC with EDR and XDR"}
+{"id": "ted:728255-2026", "on_segment": "y", "need": "n", "reason": "Cybersecurity hardware purchase, no capability detail"}
+{"id": "ted:726988-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:727695-2026", "on_segment": "y", "need": "y", "reason": "Procures information threat monitoring platform"}
+{"id": "ted:723770-2026", "on_segment": "y", "need": "y", "reason": "Procures cybersecurity strengthening for water utility"}
+{"id": "ted:724857-2026", "on_segment": "y", "need": "n", "reason": "Cybersecurity hardware purchase, no capability detail"}
+{"id": "ted:724189-2026", "on_segment": "y", "need": "y", "reason": "Procures managed detection and response"}
+{"id": "ted:722762-2026", "on_segment": "n", "need": "n", "reason": "IT system maintenance and development; not security"}
+{"id": "ted:724090-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:721611-2026", "on_segment": "y", "need": "y", "reason": "Procures network penetration testing"}
+{"id": "ted:720001-2026", "on_segment": "y", "need": "y", "reason": "Procures XDR solution"}
+{"id": "ted:721380-2026", "on_segment": "n", "need": "n", "reason": "Comprehensive IT outsourcing; security incidental"}
+{"id": "ted:722518-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:718668-2026", "on_segment": "y", "need": "y", "reason": "Procures NDR and change audit software"}
+{"id": "ted:721503-2026", "on_segment": "n", "need": "n", "reason": "Facial recognition and videoconference software; not cybersecurity"}
+{"id": "ted:721989-2026", "on_segment": "y", "need": "y", "reason": "Procures document classification system for data protection"}
+{"id": "ted:719274-2026", "on_segment": "y", "need": "y", "reason": "Procures EDR/XDR with integrated SIEM"}
+{"id": "ted:721222-2026", "on_segment": "y", "need": "y", "reason": "Procures OT-to-IT data diode"}
+{"id": "ted:720948-2026", "on_segment": "y", "need": "y", "reason": "Procures managed SOC with EDR and XDR"}
+{"id": "ted:716155-2026", "on_segment": "y", "need": "y", "reason": "Procures network penetration testing"}
+{"id": "ted:718067-2026", "on_segment": "y", "need": "y", "reason": "Procures 24/7 SIEM and SOC service"}
+{"id": "ted:716291-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:717256-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:716690-2026", "on_segment": "y", "need": "y", "reason": "Procures perimeter firewall with threat protection bundle"}
+{"id": "ted:716880-2026", "on_segment": "y", "need": "y", "reason": "Procures XDR endpoint protection and firewall support"}
+{"id": "ted:718592-2026", "on_segment": "y", "need": "y", "reason": "Procures unified vulnerability management platform"}
+{"id": "ted:717892-2026", "on_segment": "y", "need": "y", "reason": "Procures Check Point firewall refresh and licences"}
+{"id": "ted:711447-2026", "on_segment": "y", "need": "y", "reason": "Procures VS-NfD approved secure clients with VPN"}
+{"id": "ted:713734-2026", "on_segment": "y", "need": "y", "reason": "Procures APT threat intelligence subscription"}
+{"id": "ted:713005-2026", "on_segment": "y", "need": "y", "reason": "Procures multi-component security monitoring system"}
+{"id": "ted:714557-2026", "on_segment": "y", "need": "y", "reason": "Procures cybersecurity strengthening for water utility"}
+{"id": "ted:712641-2026", "on_segment": "y", "need": "y", "reason": "Procures cryptography-based services framework"}
+{"id": "ted:711969-2026", "on_segment": "y", "need": "n", "reason": "Digital services platform; security solutions incidental"}
+{"id": "ted:712448-2026", "on_segment": "n", "need": "n", "reason": "Generic IT services procurement"}
+{"id": "ted:712956-2026", "on_segment": "y", "need": "y", "reason": "Procures IT security review consultancy"}
+{"id": "ted:712325-2026", "on_segment": "y", "need": "y", "reason": "Procures IT-Grundschutz certification audit support"}
+{"id": "ted:714186-2026", "on_segment": "y", "need": "y", "reason": "Procures email protection and endpoint DLP"}
+{"id": "ted:714112-2026", "on_segment": "y", "need": "y", "reason": "Procures data governance and protection solution"}
+{"id": "ted:709586-2026", "on_segment": "y", "need": "n", "reason": "Telecom services; firewall only a minor component"}
+{"id": "ted:710480-2026", "on_segment": "y", "need": "n", "reason": "Splunk licence renewal; security use not stated"}
+{"id": "ted:711044-2026", "on_segment": "n", "need": "n", "reason": "Digital accessibility audits; not security"}
+{"id": "ted:708283-2026", "on_segment": "y", "need": "y", "reason": "Procures vulnerability management platform"}
+{"id": "ted:711229-2026", "on_segment": "n", "need": "n", "reason": "Empty error record"}
+{"id": "ted:710671-2026", "on_segment": "y", "need": "y", "reason": "Procures managed EDR, XDR and SOC services"}
+{"id": "ted:707247-2026", "on_segment": "n", "need": "n", "reason": "Generic IT services procurement"}
+{"id": "ted:705544-2026", "on_segment": "y", "need": "y", "reason": "Procures national authentication and identity service"}
+{"id": "ted:704642-2026", "on_segment": "y", "need": "y", "reason": "Procures secure network solutions and network security"}
+{"id": "ted:705585-2026", "on_segment": "y", "need": "n", "reason": "Financial and IT audit mandates; security not central"}
+{"id": "ted:706539-2026", "on_segment": "n", "need": "n", "reason": "IT system maintenance and development; not security"}
+{"id": "ted:702683-2026", "on_segment": "y", "need": "y", "reason": "Procures threat intelligence platform licence"}
+{"id": "ted:700388-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:701618-2026", "on_segment": "y", "need": "y", "reason": "Procures PKI/CA infrastructure and support"}
+{"id": "ted:702283-2026", "on_segment": "y", "need": "y", "reason": "Procures ISMS and continuity solutions"}
+{"id": "ted:702541-2026", "on_segment": "y", "need": "y", "reason": "Procures data diode securing signing service"}
+{"id": "ted:701345-2026", "on_segment": "y", "need": "y", "reason": "Procures VS-NfD approved secure clients with VPN"}
+{"id": "ted:701654-2026", "on_segment": "y", "need": "y", "reason": "Procures firewall, antivirus, MFA and patch management"}
+{"id": "ted:700734-2026", "on_segment": "y", "need": "y", "reason": "Procures qualified signature creation devices for trust service"}
+{"id": "ted:697900-2026", "on_segment": "n", "need": "n", "reason": "Smart city IoT software; not security"}
+{"id": "ted:699192-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:698307-2026", "on_segment": "y", "need": "y", "reason": "Procures ISMS, BCP/DRP, audits and training"}
+{"id": "ted:699111-2026", "on_segment": "y", "need": "y", "reason": "Procures SIEM/SOC monitoring service"}
+{"id": "ted:698996-2026", "on_segment": "y", "need": "y", "reason": "Procures security and penetration testing"}
+{"id": "ted:700016-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:698346-2026", "on_segment": "n", "need": "n", "reason": "Workstation supply and maintenance; generic IT"}
+{"id": "ted:695957-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:693522-2026", "on_segment": "y", "need": "y", "reason": "Procures malware sandbox analysis solution"}
+{"id": "ted:695046-2026", "on_segment": "y", "need": "y", "reason": "Procures mobile forensics licences"}
+{"id": "ted:695519-2026", "on_segment": "y", "need": "y", "reason": "Procures CrowdStrike detection and response licences"}
+{"id": "ted:694839-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:692661-2026", "on_segment": "y", "need": "y", "reason": "Procures web application firewall"}
+{"id": "ted:691494-2026", "on_segment": "y", "need": "y", "reason": "Procures network traffic monitoring and protection"}
+{"id": "ted:688760-2026", "on_segment": "y", "need": "y", "reason": "Procures secure data exchange gateway software"}
+{"id": "ted:685987-2026", "on_segment": "n", "need": "n", "reason": "Generic IT hardware and connectivity purchase"}
+{"id": "ted:686410-2026", "on_segment": "n", "need": "n", "reason": "CCTV physical surveillance; not cybersecurity"}
+{"id": "ted:687955-2026", "on_segment": "y", "need": "y", "reason": "Procures DDoS protection solution"}
+{"id": "ted:683745-2026", "on_segment": "n", "need": "n", "reason": "Generic IT services procurement"}
+{"id": "ted:684490-2026", "on_segment": "y", "need": "y", "reason": "Procures managed detection and response services"}
+{"id": "ted:684994-2026", "on_segment": "n", "need": "n", "reason": "Backup software procurement; generic IT resilience"}
+{"id": "ted:683329-2026", "on_segment": "y", "need": "y", "reason": "Procures PKI/CA infrastructure and support"}
+{"id": "ted:684427-2026", "on_segment": "y", "need": "y", "reason": "Procures perimeter firewall and Check Point licences"}
+{"id": "ted:685268-2026", "on_segment": "y", "need": "y", "reason": "Procures perimeter security management licences"}
+{"id": "ted:684366-2026", "on_segment": "y", "need": "y", "reason": "Procures cybersecurity strengthening for water utility"}
+{"id": "ted:684906-2026", "on_segment": "y", "need": "y", "reason": "Procures network microsegmentation software"}
+{"id": "ted:685395-2026", "on_segment": "y", "need": "y", "reason": "Procures malware analysis lab"}
+{"id": "ted:683558-2026", "on_segment": "y", "need": "y", "reason": "Procures perimeter firewall with threat protection bundle"}
+{"id": "ted:678302-2026", "on_segment": "n", "need": "n", "reason": "Generic IT infrastructure or support renewals"}
+{"id": "ted:680600-2026", "on_segment": "n", "need": "n", "reason": "Generic IT infrastructure or support renewals"}
+{"id": "ted:678011-2026", "on_segment": "y", "need": "y", "reason": "Procures SaaS SOC for 22,000 devices"}
+{"id": "ted:679367-2026", "on_segment": "y", "need": "y", "reason": "Procures ISMS and continuity solutions"}
+{"id": "ted:679620-2026", "on_segment": "n", "need": "n", "reason": "Data center build; security incidental"}
+{"id": "ted:675298-2026", "on_segment": "y", "need": "n", "reason": "Digital services platform; security solutions incidental"}
+{"id": "ted:674730-2026", "on_segment": "n", "need": "n", "reason": "Data center build; security incidental"}
+{"id": "ted:674254-2026", "on_segment": "y", "need": "y", "reason": "Procures cybersecurity solutions and services framework"}
+{"id": "ted:674231-2026", "on_segment": "y", "need": "y", "reason": "Procures SIEM software"}
+{"id": "ted:675788-2026", "on_segment": "y", "need": "n", "reason": "Mostly IT hardware; cybersecurity mentioned only incidentally"}
+{"id": "ted:671088-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:671005-2026", "on_segment": "n", "need": "n", "reason": "Workspace ONE device management renewal; generic IT"}
+{"id": "ted:673963-2026", "on_segment": "y", "need": "y", "reason": "Procures vulnerability management software"}
+{"id": "ted:671824-2026", "on_segment": "y", "need": "y", "reason": "Procures threat intelligence platform licence"}
+{"id": "ted:668566-2026", "on_segment": "n", "need": "n", "reason": "IT system maintenance and development; not security"}
+{"id": "ted:669250-2026", "on_segment": "y", "need": "y", "reason": "Procures security experts and attack surface management"}
+{"id": "ted:667920-2026", "on_segment": "n", "need": "n", "reason": "Data center build; security incidental"}
+{"id": "ted:663816-2026", "on_segment": "n", "need": "n", "reason": "Storage arrays procurement; security not the subject"}
+{"id": "ted:664663-2026", "on_segment": "y", "need": "y", "reason": "Procures OT-to-IT data diode"}
+{"id": "ted:665144-2026", "on_segment": "n", "need": "n", "reason": "Comprehensive IT outsourcing; security incidental"}
+{"id": "ted:664049-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:664486-2026", "on_segment": "y", "need": "y", "reason": "Procures network config archiving and change tracking"}
+{"id": "ted:665315-2026", "on_segment": "n", "need": "n", "reason": "IT assistance and expertise; security not stated"}
+{"id": "ted:665418-2026", "on_segment": "y", "need": "y", "reason": "Procures firewalls with MFA"}
+{"id": "ted:665118-2026", "on_segment": "y", "need": "n", "reason": "Cybersecurity hardware purchase, no capability detail"}
+{"id": "ted:666055-2026", "on_segment": "y", "need": "y", "reason": "Procures NGFW firewall deployment and configuration"}
+{"id": "ted:666193-2026", "on_segment": "y", "need": "y", "reason": "Procures cybersecurity software for water utility"}
+{"id": "ted:667234-2026", "on_segment": "y", "need": "y", "reason": "Procures industrial network IDS"}
+{"id": "ted:664800-2026", "on_segment": "y", "need": "y", "reason": "Procures centralized log management expansion"}
+{"id": "ted:663752-2026", "on_segment": "y", "need": "y", "reason": "Procures several cybersecurity systems"}
+{"id": "ted:661577-2026", "on_segment": "y", "need": "y", "reason": "Procures managed SOC"}
+{"id": "ted:662615-2026", "on_segment": "y", "need": "y", "reason": "Procures security systems support and monitoring"}
+{"id": "ted:658837-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:657981-2026", "on_segment": "y", "need": "y", "reason": "Procures SIEM software"}
+{"id": "ted:660342-2026", "on_segment": "y", "need": "y", "reason": "Procures NDR threat detection platform expansion"}
+{"id": "ted:658269-2026", "on_segment": "y", "need": "y", "reason": "Procures next-generation firewalls"}
+{"id": "ted:658387-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:659403-2026", "on_segment": "y", "need": "y", "reason": "Procures managed security services and SOC build"}
+{"id": "ted:659552-2026", "on_segment": "n", "need": "n", "reason": "SolarWinds IT monitoring licence renewal"}
+{"id": "ted:656329-2026", "on_segment": "y", "need": "y", "reason": "Procures PKI/CA infrastructure and support"}
+{"id": "ted:655292-2026", "on_segment": "y", "need": "y", "reason": "Procures identity and access management system"}
+{"id": "ted:653642-2026", "on_segment": "y", "need": "y", "reason": "Procures security incident response services"}
+{"id": "ted:653892-2026", "on_segment": "y", "need": "y", "reason": "Procures ISMS and SOC for hospital"}
+{"id": "ted:655319-2026", "on_segment": "y", "need": "y", "reason": "Procures XDR solution"}
+{"id": "ted:656196-2026", "on_segment": "y", "need": "y", "reason": "Procures VS-NfD approved secure clients with VPN"}
+{"id": "ted:651708-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:650850-2026", "on_segment": "n", "need": "n", "reason": "Facial recognition and videoconference software; not cybersecurity"}
+{"id": "ted:653218-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:652303-2026", "on_segment": "y", "need": "y", "reason": "Procures remote identity verification solution"}
+{"id": "ted:653554-2026", "on_segment": "y", "need": "y", "reason": "Procures cybersecurity management consulting"}
+{"id": "ted:653070-2026", "on_segment": "y", "need": "y", "reason": "Procures SIEM/SOAR and SOC services"}
+{"id": "ted:652493-2026", "on_segment": "y", "need": "y", "reason": "Procures cybersecurity strengthening for water utility"}
+{"id": "ted:648103-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:649174-2026", "on_segment": "y", "need": "y", "reason": "Procures SOC/MDR and cybersecurity tools"}
+{"id": "ted:648691-2026", "on_segment": "y", "need": "y", "reason": "Procures Splunk SIEM/SOAR for SOC"}
+{"id": "ted:645221-2026", "on_segment": "y", "need": "y", "reason": "Procures EDR/XDR with integrated SIEM"}
+{"id": "ted:642897-2026", "on_segment": "y", "need": "y", "reason": "Procures EDR and detection response platform"}
+{"id": "ted:643950-2026", "on_segment": "n", "need": "n", "reason": "Generic e-government digitalisation project"}
+{"id": "ted:641065-2026", "on_segment": "y", "need": "y", "reason": "Procures Check Point support and endpoint protection"}
+{"id": "ted:556766-2025", "on_segment": "y", "need": "y", "reason": "Procures PAM system for privileged accounts"}
+{"id": "ted:541066-2025", "on_segment": "y", "need": "y", "reason": "Procures PAM system for privileged accounts"}
+{"id": "ted:515870-2025", "on_segment": "y", "need": "y", "reason": "Procures CyberArk PAM licences and support"}
+{"id": "ted:513664-2025", "on_segment": "y", "need": "y", "reason": "Procures PAM system for privileged accounts"}
+{"id": "ted:500201-2025", "on_segment": "y", "need": "y", "reason": "Procures user access and privileged access management"}
+{"id": "ted:482267-2025", "on_segment": "y", "need": "y", "reason": "Procures 2FA VPN access tooling"}
+{"id": "ted:465231-2025", "on_segment": "y", "need": "y", "reason": "Procures PAM system for privileged accounts"}
+{"id": "ted:419568-2025", "on_segment": "y", "need": "y", "reason": "Procures user access and privileged access management"}
+{"id": "ted:364260-2025", "on_segment": "y", "need": "y", "reason": "Procures privileged access management package"}

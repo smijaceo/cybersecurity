@@ -1,0 +1,47 @@
+{
+  "concept_id": "cal-03",
+  "lens": "gtm-pricing",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Per-developer pricing at $15 gives a credible $20-90k ACV and six design partners are a real start. But the bottom-up free-app channel targets developers who see the product as friction, while the payer is a VP R&D with no assigned budget line. A hybrid motion can work only if the paid trigger and budget owner are pinned down.",
+  "objections": [
+    {
+      "objection": "Channel and buyer are mismatched. The wedge is a free GitHub app and developer community, but developers are the people being blocked; they will not champion a gatekeeper. The org-wide installation and policy authoring are done by platform/DevOps leads, so 'bottom-up' really means top-down outbound to platform teams, which needs inside sales from day one rather than as a later stage.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.channel; concept:go_to_market.wedge; concept:risks"
+    },
+    {
+      "objection": "No owned budget line. The concept itself cannot say whether this is a security or a DevOps productivity product, and lists the budget owner as unclear. At $15/dev/month a 200-engineer customer is about $36k/year, which needs a director-level signature and a justification; without a compelling event (audit, compliance, incident) deals stall in a two-department tug of war and sales cycles lengthen.",
+      "severity": "major",
+      "evidence": "concept:open_questions; concept:risks; concept:pricing.entry_price"
+    },
+    {
+      "objection": "Free tier and free wedge may cannibalise the paid product. The free app already 'reports policy violations across the organisation', which is the visibility value; the paid step is enforcement plus exceptions. Many buyers will be satisfied with the free report and enforce the few rules they care about with branch protection, required checks via the Checks API, or Danger scripts at zero cost.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.wedge; concept:competitors; https://docs.github.com/en/rest/checks"
+    },
+    {
+      "objection": "Per-developer pricing for a governance tool invites seat-count pushback: value accrues to a small platform team, while price scales with all engineers, so buyers will negotiate to platform-team or repo-based pricing. Comparables listed are a quote-only vendor and a free tool, so the $15 anchor is unvalidated.",
+      "severity": "minor",
+      "evidence": "concept:pricing.comparables"
+    },
+    {
+      "objection": "Burn versus revenue ramp: 3 founders plus 5 engineers for 9 months before MVP, then a mid-five-figure ACV sold by inside sales, means many quarters of funded runway before revenue covers the team; the plan depends on outside capital and fast conversion of design partners.",
+      "severity": "minor",
+      "evidence": "concept:build.team; concept:build.months_to_mvp"
+    }
+  ],
+  "strongest_point": "Credible first-ten plan: 40 discovery interviews, six design partners in a defined segment, and a paid-pilot test with a crisp 3-of-6 success signal.",
+  "what_would_change_my_mind": [
+    "3 or more of 6 design partners signing paid pilots at roughly $15/dev/month, with a named signer and budget line",
+    "Evidence that free-tier org reports convert to paid enforcement at 5%+ within a quarter",
+    "A recurring compelling event (SOC 2 or customer security questionnaire, audit finding) driving purchase in at least half of the design partners",
+    "Expansion data showing seat growth or add-on policy packs lift net revenue retention above 110%"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://docs.github.com/en/rest/checks",
+    "https://danger.systems/"
+  ]
+}

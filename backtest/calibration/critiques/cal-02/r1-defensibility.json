@@ -1,0 +1,48 @@
+{
+ "concept_id": "cal-02",
+ "lens": "defensibility",
+ "round": 1,
+ "score": 4,
+ "verdict": "conditional",
+ "summary": "The core assets are copyable: policy checks are public knowledge (CIS), the OSS scanner gives the engine away, and free tools (cfn_nag, tfsec, Cloud Custodian, AWS Config) already cover each half. The only plausible moats are community distribution and a code-to-runtime resource graph with trusted fix-PRs; neither exists yet, and CSPM platforms can buy or bolt them on.",
+ "objections": [
+  {
+   "objection": "The policy library is not a moat. Checks map to public benchmarks (CIS, SOC 2, PCI) and are the same rules cfn_nag and tfsec already ship under permissive licences. Publishing the scanner as open source hands competitors the rule set; a platform vendor can fork or rewrite hundreds of policies within a quarter.",
+   "severity": "major",
+   "evidence": "https://raw.githubusercontent.com/stelligent/cfn_nag/master/README.md ; https://raw.githubusercontent.com/aquasecurity/tfsec/master/README.md ; concept:mvp.features[0]"
+  },
+  {
+   "objection": "Most likely copier: a consolidating CSPM platform (Palo Alto Networks Prisma/RedLock, Check Point Dome9) adding IaC scanning to its runtime console, or simply acquiring the leading OSS IaC scanner. They already own the CISO relationship and compliance mapping the concept relies on for revenue, so the paid layer is where the incumbent is strongest.",
+   "severity": "major",
+   "evidence": "concept:competitors[0] ; concept:mvp.features[4] ; concept:risks"
+  },
+  {
+   "objection": "Platform owners can bundle each half. AWS Config already codifies compliance rules with remediation actions for free-to-cheap; HashiCorp controls the Terraform plan/apply checkpoint and sells Sentinel policy-as-code; Cloud Custodian already advertises Terraform 'shift left' integration. Any of them can close the code-and-runtime gap without a new vendor.",
+   "severity": "major",
+   "evidence": "https://aws.amazon.com/config/ ; https://cloudcustodian.io/ ; concept:competitors[1]"
+  },
+  {
+   "objection": "Open-source distribution cuts both ways: switching costs for the free scanner are near zero (swap one CI step for another), and engineers adopt whichever scanner is fastest. Community loyalty is a lead, not a lock, unless the paid tier holds state the customer cannot easily move.",
+   "severity": "major",
+   "evidence": "concept:pricing.model ; concept:open_questions[2]"
+  },
+  {
+   "objection": "The genuinely hard asset - reliably mapping runtime resources back to the code that created them and generating fixes that don't break infrastructure - is listed as a hardest part, not a capability. If it works it is the moat (accumulated per-customer resource graph, drift history, fix acceptance data); the concept doesn't plan to build or measure it as one.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts"
+  }
+ ],
+ "strongest_point": "Bottom-up OSS adoption in CI plus a code-to-cloud mapping and fix-PR engine could become a distribution and data lead that consoles built for security teams lack.",
+ "what_would_change_my_mind": [
+  "The OSS scanner becomes the default IaC scanner in its niche (e.g. more CI installs and GitHub stars than tfsec/cfn_nag within 12 months), giving distribution an incumbent would have to buy.",
+  "Runtime-to-code mapping working on 90%+ of resources for design partners, with fix PRs merged at 70%+ - data incumbents cannot show.",
+  "Paying customers storing drift history, exceptions and policy customisations in the platform, with low churn after 12 months (evidence of switching costs)."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://cloudcustodian.io/",
+  "https://aws.amazon.com/config/",
+  "https://raw.githubusercontent.com/stelligent/cfn_nag/master/README.md",
+  "https://raw.githubusercontent.com/aquasecurity/tfsec/master/README.md"
+ ]
+}

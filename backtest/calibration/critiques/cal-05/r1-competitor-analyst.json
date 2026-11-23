@@ -1,0 +1,54 @@
+{
+ "concept_id": "cal-05",
+ "lens": "competitor-analyst",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "The table misses the two most dangerous rivals: Microsoft, which already ships a client hypervisor (Hyper-V in Windows 8/10) and virtualization-based security in Windows 10, and Citrix XenClient XT, an existing managed client hypervisor for exactly this dual-domain use. Bromium is well funded and adjacent. A real but narrow window exists for privileged-user dual-OS.",
+ "objections": [
+  {
+   "objection": "Most dangerous competitor is Microsoft. Hyper-V ships in Windows 8 and 10 Pro/Enterprise, and Windows 10 adds virtualization-based security (Credential Guard) that hardware-isolates secrets from the main OS. The OS vendor owns the platform the product must run beneath, controls compatibility, and can bundle a 'protected corporate VM' into the Enterprise licence the same banks already pay for.",
+   "severity": "major",
+   "evidence": "https://en.wikipedia.org/wiki/Hyper-V; https://en.wikipedia.org/wiki/Credential_Guard; concept:risks (Operating-system vendors build similar isolation natively)"
+  },
+  {
+   "objection": "Direct incumbent omitted: Citrix XenClient (Enterprise and XT editions) is already a Type-1 client hypervisor with central management, isolated VMs, USB filtering and offline use, built with Intel, Dell and HP, and Citrix consolidated the category by buying Virtual Computer (NxTop) in 2012. The concept's 'local execution, no VDI' differentiation against VMware Horizon is precisely XenClient's pitch, so Citrix can reposition it as security isolation through its existing enterprise accounts.",
+   "severity": "major",
+   "evidence": "https://en.wikipedia.org/wiki/XenClient; concept:competitors (no client-hypervisor vendor listed)"
+  },
+  {
+   "objection": "Bromium (founded 2010, $75.7M raised by 2013, Xen-based late-load hypervisor, customers like NYSE) sells hardware isolation to the same financial-services CISOs. Its founders built Xen; adding a coarse 'whole corporate VM' mode is a smaller step for it than building a hypervisor is for a new entrant, and it already has an OEM-friendly story.",
+   "severity": "major",
+   "evidence": "https://en.wikipedia.org/wiki/Bromium; concept:competitors[Bromium]"
+  },
+  {
+   "objection": "The client-hypervisor category has a weak commercial track record (Virtual Computer sold to Citrix, XenClient a niche product), suggesting buyers have not paid at fleet scale for local dual-OS; the new entrant must prove the security framing changes that, not just repeat the architecture.",
+   "severity": "major",
+   "evidence": "https://en.wikipedia.org/wiki/XenClient (Virtual Computer acquired 2012, product folded into XenClient)"
+  },
+  {
+   "objection": "Free and cheap substitutes: Qubes OS for expert users, desktop hypervisors (VMware Workstation, Hyper-V client) with a locked guest image, and Microsoft's own privileged access workstation guidance which already allows a PAW host with a user VM on top.",
+   "severity": "minor",
+   "evidence": "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices; https://www.qubes-os.org/"
+  },
+  {
+   "objection": "Browser isolation vendors (Menlo and others) cover the largest share of untrusted activity, web, at lower deployment cost, shrinking the residual problem the full second OS addresses.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Whole-environment separation for privileged users who already carry two laptops is a concrete, costed wedge that task-level isolation (Bromium) and browser isolation do not directly address.",
+ "what_would_change_my_mind": [
+  "Evidence Microsoft's roadmap keeps VBS limited to credentials and does not offer a managed dual-OS mode within 2 years",
+  "Head-to-head pilots where 3 of 5 banks choose it over XenClient XT or Bromium for privileged admins",
+  "OEM or Intel partnership giving preferred hardware access that incumbents lack",
+  "Seamless single-desktop UX and battery life demonstrably better than existing client hypervisors"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Bromium",
+  "https://en.wikipedia.org/wiki/Hyper-V",
+  "https://en.wikipedia.org/wiki/XenClient",
+  "https://en.wikipedia.org/wiki/Credential_Guard"
+ ]
+}

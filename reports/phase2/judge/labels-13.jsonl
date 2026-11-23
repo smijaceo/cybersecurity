@@ -1,0 +1,180 @@
+{"id": "github:6518575014", "on_segment": "y", "need": "y", "reason": "Leaked agent/session keys drain accounts; requests delayed cancellable transfers"}
+{"id": "github:650763793", "on_segment": "n", "need": "n", "reason": "Troubleshooting Java compile errors, not a security need"}
+{"id": "github:5574709563", "on_segment": "y", "need": "y", "reason": "Needs redaction so tool output does not leak data to model"}
+{"id": "github:6138965961", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:5813059509", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:5399391007", "on_segment": "y", "need": "y", "reason": "Agent actions disputable; proposes tamper-evident MCP transcript ledger"}
+{"id": "github:5162697570", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:4311726722", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:5571266791", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:4259838324", "on_segment": "n", "need": "n", "reason": "Tool lease token size/performance concern, not a security gap"}
+{"id": "github:5079200662", "on_segment": "y", "need": "y", "reason": "Agent file tools bypass security deny-list; fail-open server"}
+{"id": "github:3999963373", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:4429893058", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:6061578149", "on_segment": "y", "need": "y", "reason": "Skill security scanner raises false positives on documentation prose"}
+{"id": "github:5791798711", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:6132306902", "on_segment": "y", "need": "n", "reason": "Delivery report on prompt-injection test coverage, no open need"}
+{"id": "github:4117461737", "on_segment": "n", "need": "n", "reason": "Automated news/trends digest"}
+{"id": "github:5399417576", "on_segment": "y", "need": "y", "reason": "LLM agents externally steerable yet trusted; needs ephemeral relay control"}
+{"id": "github:5158504463", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:5342828782", "on_segment": "n", "need": "n", "reason": "Wallet security hotline idea, not AI agent security"}
+{"id": "github:3161773388", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:4230180372", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:3519794177", "on_segment": "y", "need": "y", "reason": "AI agent GitHub App demands blanket repo write access; wants scoping"}
+{"id": "github:5222982624", "on_segment": "y", "need": "y", "reason": "Feature request on agent policy engine for model routing"}
+{"id": "github:4755236244", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:3138677810", "on_segment": "n", "need": "n", "reason": "Automated news/trends digest"}
+{"id": "github:3386794713", "on_segment": "n", "need": "n", "reason": "Automated news/trends digest"}
+{"id": "github:4413868324", "on_segment": "y", "need": "y", "reason": "MCP tools need read-only mode and per-tool toggles"}
+{"id": "github:5757028885", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:4736908131", "on_segment": "y", "need": "y", "reason": "Wants domain allowlist guardrail for autonomous browser agent"}
+{"id": "github:3820767468", "on_segment": "y", "need": "n", "reason": "Implementation task for LoRA adapter encryption, no stated gap"}
+{"id": "github:5080799542", "on_segment": "n", "need": "n", "reason": "Supply-chain provenance idea, AI security only in passing"}
+{"id": "github:5560101758", "on_segment": "n", "need": "n", "reason": "Code security audit skill, not securing AI systems"}
+{"id": "github:5028687653", "on_segment": "n", "need": "n", "reason": "Automated news/trends digest"}
+{"id": "github:3588469279", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:1870891106", "on_segment": "n", "need": "n", "reason": "Job advert for AI art platform"}
+{"id": "github:4488095914", "on_segment": "n", "need": "n", "reason": "Session recording UX issues, not AI agent security"}
+{"id": "github:5116744747", "on_segment": "y", "need": "y", "reason": "Needs per-tool authorization for MCP tools"}
+{"id": "github:6269128015", "on_segment": "y", "need": "y", "reason": "MCP server scoping and security gaps across many tools"}
+{"id": "github:5337589587", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:3772020571", "on_segment": "y", "need": "y", "reason": "Unclear whether plugin MCP servers bypass permission system"}
+{"id": "github:5174370421", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:4414918365", "on_segment": "n", "need": "n", "reason": "SOC rule-pack tool over MCP, not securing AI"}
+{"id": "github:3208025676", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:6520283524", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:5031447798", "on_segment": "n", "need": "n", "reason": "Repo hygiene files request, generic"}
+{"id": "github:4281836073", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:4199095312", "on_segment": "n", "need": "n", "reason": "Framework ergonomics feedback, security only in passing"}
+{"id": "github:4055244044", "on_segment": "y", "need": "y", "reason": "Scoped API keys block MCP project switching; security vs usability"}
+{"id": "github:4233800491", "on_segment": "y", "need": "y", "reason": "MCP server audit found injection, leakage, exhaustion issues"}
+{"id": "github:3324316231", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:5699534451", "on_segment": "y", "need": "y", "reason": "Feature request: JWT auth for secure MCP server multi-tenant"}
+{"id": "github:3948666119", "on_segment": "y", "need": "n", "reason": "Working-group task to write MCP security guidance"}
+{"id": "github:4147328678", "on_segment": "n", "need": "n", "reason": "Generic OWASP app security review task, not AI security"}
+{"id": "github:4065231335", "on_segment": "n", "need": "n", "reason": "Generic OWASP app security review task, not AI security"}
+{"id": "github:4065230810", "on_segment": "n", "need": "n", "reason": "Generic OWASP app security review task, not AI security"}
+{"id": "github:4058902618", "on_segment": "n", "need": "n", "reason": "Generic OWASP app security review task, not AI security"}
+{"id": "github:4042041249", "on_segment": "n", "need": "n", "reason": "Generic OWASP app security review task, not AI security"}
+{"id": "github:4036839483", "on_segment": "n", "need": "n", "reason": "Generic OWASP app security review task, not AI security"}
+{"id": "github:4042938335", "on_segment": "n", "need": "n", "reason": "Automated news/trends digest"}
+{"id": "github:4385665707", "on_segment": "n", "need": "n", "reason": "Asks for disclosure channel, not an AI security need"}
+{"id": "github:5513094354", "on_segment": "n", "need": "n", "reason": "Agent/LLM engineering task, not about securing AI systems"}
+{"id": "github:4584843314", "on_segment": "y", "need": "y", "reason": "MCP server lacks Origin/Host validation, DNS rebinding"}
+{"id": "hn:5953139", "on_segment": "y", "need": "y", "reason": "Asks whether a client-side TLS configuration checker exists"}
+{"id": "hn:43507897", "on_segment": "n", "need": "n", "reason": "Co-founder search, not a security need"}
+{"id": "hn:3614557", "on_segment": "y", "need": "n", "reason": "Book review on hacking defense"}
+{"id": "hn:28284751", "on_segment": "y", "need": "n", "reason": "Cloud security white paper"}
+{"id": "hn:49929341", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:49247374", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:47876985", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:46183738", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:46127735", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:46010603", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:45100029", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:43621588", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:49323197", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:47750422", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:45431877", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:42962981", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:50439228", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "hn:45463388", "on_segment": "y", "need": "n", "reason": "Article/announcement about AI or MCP security"}
+{"id": "stackexchange:security:159218", "on_segment": "y", "need": "y", "reason": "Seeks DLP tool with South African PII policies"}
+{"id": "stackexchange:security:222007", "on_segment": "y", "need": "n", "reason": "How-it-works question on password hash key storage"}
+{"id": "stackexchange:security:199238", "on_segment": "y", "need": "y", "reason": "Seeks Windows local misconfiguration scanner like lynis"}
+{"id": "ted:799260-2026", "on_segment": "y", "need": "y", "reason": "Tender includes XDR system and device encryption module"}
+{"id": "ted:799599-2026", "on_segment": "y", "need": "y", "reason": "Tender to strengthen cybersecurity of water infrastructure"}
+{"id": "ted:793656-2026", "on_segment": "n", "need": "n", "reason": "Storage arrays and backup procurement, security incidental"}
+{"id": "ted:796135-2026", "on_segment": "y", "need": "y", "reason": "Tender for cross domain solution capability with services"}
+{"id": "ted:793260-2026", "on_segment": "y", "need": "y", "reason": "Tender for information security office service"}
+{"id": "ted:794954-2026", "on_segment": "y", "need": "y", "reason": "Tender procures web application firewall"}
+{"id": "ted:792930-2026", "on_segment": "y", "need": "y", "reason": "Tender procures XDR solution"}
+{"id": "ted:789715-2026", "on_segment": "y", "need": "y", "reason": "Tender for cryptography-based services"}
+{"id": "ted:789806-2026", "on_segment": "y", "need": "y", "reason": "Tender procures web application firewall"}
+{"id": "ted:792782-2026", "on_segment": "y", "need": "y", "reason": "Tender procures managed detection and response"}
+{"id": "ted:790408-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:791424-2026", "on_segment": "y", "need": "y", "reason": "Tender for firewall/security subscriptions and support"}
+{"id": "ted:792460-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:791698-2026", "on_segment": "y", "need": "y", "reason": "Tender for firewall/security subscriptions and support"}
+{"id": "ted:790838-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:791023-2026", "on_segment": "y", "need": "y", "reason": "Tender for DNS threat defense subscription"}
+{"id": "ted:788086-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:789149-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:787674-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:789052-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:786942-2026", "on_segment": "y", "need": "y", "reason": "Tender for data security posture management service"}
+{"id": "ted:788187-2026", "on_segment": "y", "need": "y", "reason": "Tender procures managed detection and response"}
+{"id": "ted:785334-2026", "on_segment": "y", "need": "y", "reason": "Tender to strengthen cybersecurity of water infrastructure"}
+{"id": "ted:783149-2026", "on_segment": "y", "need": "y", "reason": "Tender for medical device cyber-physical security monitoring"}
+{"id": "ted:784116-2026", "on_segment": "y", "need": "y", "reason": "Tender for information-threat monitoring tool for cybersecurity"}
+{"id": "ted:784617-2026", "on_segment": "y", "need": "y", "reason": "Tender for cyber deception licence"}
+{"id": "ted:783479-2026", "on_segment": "y", "need": "y", "reason": "Tender for firewall/security subscriptions and support"}
+{"id": "ted:784569-2026", "on_segment": "n", "need": "n", "reason": "Physical security/CCTV procurement, not cybersecurity"}
+{"id": "ted:783656-2026", "on_segment": "y", "need": "y", "reason": "Tender for medical device cyber-physical security monitoring"}
+{"id": "ted:782135-2026", "on_segment": "y", "need": "y", "reason": "Tender includes XDR system and device encryption module"}
+{"id": "ted:779691-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:781434-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:781450-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:780827-2026", "on_segment": "y", "need": "y", "reason": "Tender for email protection with training platform"}
+{"id": "ted:782829-2026", "on_segment": "y", "need": "y", "reason": "Tender for network behaviour analysis and security monitoring"}
+{"id": "ted:781270-2026", "on_segment": "n", "need": "n", "reason": "Storage arrays and backup procurement, security incidental"}
+{"id": "ted:781832-2026", "on_segment": "y", "need": "y", "reason": "Tender for continuous penetration testing platform"}
+{"id": "ted:777715-2026", "on_segment": "y", "need": "y", "reason": "Tender includes OT cybersecurity and nuclear cyber compliance"}
+{"id": "ted:777795-2026", "on_segment": "n", "need": "n", "reason": "Physical security/CCTV procurement, not cybersecurity"}
+{"id": "ted:777825-2026", "on_segment": "n", "need": "n", "reason": "Physical security/CCTV procurement, not cybersecurity"}
+{"id": "ted:778156-2026", "on_segment": "y", "need": "y", "reason": "Tender for CrowdStrike security platform modules"}
+{"id": "ted:777283-2026", "on_segment": "y", "need": "y", "reason": "Tender for IT security services"}
+{"id": "ted:779163-2026", "on_segment": "n", "need": "n", "reason": "General infrastructure operations contract, security incidental"}
+{"id": "ted:778665-2026", "on_segment": "n", "need": "n", "reason": "Mobile device management licence renewal, generic IT"}
+{"id": "ted:775795-2026", "on_segment": "y", "need": "y", "reason": "Tender for secure data exchange gateway software"}
+{"id": "ted:771788-2026", "on_segment": "y", "need": "y", "reason": "Tender for password management software"}
+{"id": "ted:771943-2026", "on_segment": "n", "need": "n", "reason": "Physical security/CCTV procurement, not cybersecurity"}
+{"id": "ted:769188-2026", "on_segment": "y", "need": "y", "reason": "Tender for SOC-type integrated security system"}
+{"id": "ted:769297-2026", "on_segment": "y", "need": "y", "reason": "Tender for outsourced CISO function"}
+{"id": "ted:768434-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:768517-2026", "on_segment": "y", "need": "y", "reason": "Tender for IT-Grundschutz audit preparation consulting"}
+{"id": "ted:770796-2026", "on_segment": "y", "need": "y", "reason": "Tender for threat intelligence platform"}
+{"id": "ted:770496-2026", "on_segment": "y", "need": "y", "reason": "Tender for network traffic monitoring and protection"}
+{"id": "ted:769728-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:768150-2026", "on_segment": "y", "need": "y", "reason": "Tender for firewall/security subscriptions and support"}
+{"id": "ted:769126-2026", "on_segment": "n", "need": "n", "reason": "Physical security/CCTV procurement, not cybersecurity"}
+{"id": "ted:770277-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:769429-2026", "on_segment": "y", "need": "y", "reason": "Tender includes managed SOC/SIEM and HSM/PKI lots"}
+{"id": "ted:771104-2026", "on_segment": "y", "need": "y", "reason": "Tender for data security and compliance protection services"}
+{"id": "ted:768259-2026", "on_segment": "y", "need": "y", "reason": "Tender for MFA licences for remote access"}
+{"id": "ted:769032-2026", "on_segment": "y", "need": "y", "reason": "Tender for ISMS, BCP/DRP, audits for water utility"}
+{"id": "ted:765881-2026", "on_segment": "y", "need": "y", "reason": "Tender for network traffic monitoring and protection"}
+{"id": "ted:766413-2026", "on_segment": "y", "need": "y", "reason": "Tender for SIEM/SOC solution"}
+{"id": "ted:764029-2026", "on_segment": "y", "need": "y", "reason": "Tender for firewall/security subscriptions and support"}
+{"id": "ted:764285-2026", "on_segment": "y", "need": "y", "reason": "Tender for central detection, response and data protection"}
+{"id": "ted:766734-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:766895-2026", "on_segment": "n", "need": "n", "reason": "General audits framework, IS audits incidental"}
+{"id": "ted:763852-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:761959-2026", "on_segment": "y", "need": "y", "reason": "Tender for DNS traffic protection and inspection"}
+{"id": "ted:763467-2026", "on_segment": "y", "need": "y", "reason": "Tender for managed cybersecurity service"}
+{"id": "ted:761293-2026", "on_segment": "y", "need": "y", "reason": "Tender for cyber threat monitoring and analytics"}
+{"id": "ted:762542-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:759708-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:757502-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:756864-2026", "on_segment": "y", "need": "y", "reason": "Tender for cybersecurity software for water utility"}
+{"id": "ted:758644-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:758884-2026", "on_segment": "y", "need": "y", "reason": "Tender for firewall/security subscriptions and support"}
+{"id": "ted:758885-2026", "on_segment": "y", "need": "y", "reason": "Tender includes XDR system and device encryption module"}
+{"id": "ted:754374-2026", "on_segment": "n", "need": "n", "reason": "Physical security/CCTV procurement, not cybersecurity"}
+{"id": "ted:755747-2026", "on_segment": "y", "need": "y", "reason": "Framework for network and information system protection solutions"}
+{"id": "ted:753734-2026", "on_segment": "y", "need": "y", "reason": "Tender for cybersecurity software for water utility"}
+{"id": "ted:752712-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:755800-2026", "on_segment": "y", "need": "y", "reason": "Tender renews Darktrace anomaly detection"}
+{"id": "ted:755484-2026", "on_segment": "y", "need": "y", "reason": "Tender procures web application firewall"}
+{"id": "ted:754903-2026", "on_segment": "y", "need": "y", "reason": "Tender for comprehensive cybersecurity systems"}
+{"id": "ted:754632-2026", "on_segment": "y", "need": "y", "reason": "Tender for SOC-type integrated security system"}
+{"id": "ted:756363-2026", "on_segment": "y", "need": "y", "reason": "Tender for cybersecurity law technical measures"}
+{"id": "ted:755589-2026", "on_segment": "y", "need": "y", "reason": "Tender for penetration testing services"}
+{"id": "ted:750852-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:750323-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:750327-2026", "on_segment": "y", "need": "y", "reason": "Tender procures web application firewall"}
+{"id": "ted:752016-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:752053-2026", "on_segment": "y", "need": "y", "reason": "Tender for NGFW security appliances with deployment"}
+{"id": "ted:751277-2026", "on_segment": "n", "need": "n", "reason": "Generic IT/infrastructure procurement, security incidental"}
+{"id": "ted:748437-2026", "on_segment": "y", "need": "y", "reason": "Tender procures web application firewall"}
+{"id": "ted:745822-2026", "on_segment": "y", "need": "y", "reason": "Tender for NGFW security appliances with deployment"}

@@ -1,0 +1,52 @@
+{
+ "concept_id": "cal-08",
+ "lens": "legal-ethics",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "No regulatory claim is overstated and the product is defensive, so legal risk is manageable. But the SaaS would hold an aggregated map of every customer's open, exploitable flaws plus push credentials to Puppet/Chef/Ansible: a prime breach target and a liability magnet if a pushed fix causes an outage. Custody, contracts and change-control design must come before launch.",
+ "objections": [
+  {
+   "objection": "Data custody of a cross-customer 'attack map'. The platform centralises deduplicated, prioritised lists of unpatched vulnerabilities per asset, enriched with business context, for thousands of enterprises. A breach of the vendor hands attackers a ranked target list for every customer. Enterprise security reviews will demand SOC 2/ISO 27001, strict tenant isolation, encryption and possibly on-prem or single-tenant options, none of which are in the MVP or the 8-month plan.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[0]; concept:mvp.features[1]; concept:build.months_to_mvp"
+  },
+  {
+   "objection": "Privileged write access and liability for automated changes. Pushing fixes through Puppet/Chef/Ansible means the vendor holds credentials that can change production systems at scale; a bug, bad remediation script or compromise of the SaaS becomes a supply-chain incident across customers. If a pushed patch or workaround breaks production, the customer will look to the vendor. The concept has no human-approval gate, rollback, liability caps or warranty disclaimers.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[3]; concept:build.hardest_parts[2]; concept:risks[3]"
+  },
+  {
+   "objection": "Remediation database IP and accuracy. A curated database of patches, scripts and workarounds is likely seeded from vendor advisories, KB articles and community fixes whose terms may bar copying or redistribution; third-party scripts carry licence and warranty questions. A wrong 'how to fix' entry that leaves a system exposed or breaks it creates negligence exposure if marketed as authoritative.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[2]; concept:build.hardest_parts[1]"
+  },
+  {
+   "objection": "Personal data and cross-border transfer. Scanner and CMDB exports carry hostnames, IPs, user and owner names, which are personal data under GDPR for EU-operating enterprises. The vendor is a processor needing Art. 28 contracts, sub-processor controls and a transfer basis for data hosted in the US or accessed by an Israeli R&D team.",
+   "severity": "minor",
+   "evidence": "https://gdpr-info.eu/art-28-gdpr/; concept:build.team"
+  },
+  {
+   "objection": "Scanner-vendor API terms and channel conflict. Pulling data from commercial scanners to feed a product that competes with their own prioritisation modules depends on API terms the scanner vendors control; the concept plans 'partnerships with scanner vendors' that may not materialise and access could be restricted.",
+   "severity": "minor",
+   "evidence": "concept:go_to_market.channel; concept:competitors"
+  },
+  {
+   "objection": "Export controls and dual use are low risk but should be checked. Vulnerability intelligence without exploit code is unlikely to be 'intrusion software' under Wassenaar, but an Israeli R&D company selling security software abroad should confirm its classification under Israeli cyber export rules early.",
+   "severity": "minor",
+   "evidence": "https://en.wikipedia.org/wiki/Wassenaar_Arrangement"
+  }
+ ],
+ "strongest_point": "Purely defensive, agentless, uses data customers already own; no exploit content, no overstated regulatory claims, and it helps customers avoid Equifax-scale breach liability.",
+ "what_would_change_my_mind": [
+  "MVP design where automated pushes require per-change human approval with rollback, and customer contracts with liability caps accepted by 3+ beta enterprises' legal teams",
+  "A credible plan to reach SOC 2 Type II within 12 months plus a single-tenant or on-prem deployment option for regulated buyers",
+  "Remediation database built from openly licensed or self-authored content with documented provenance per entry"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://gdpr-info.eu/art-28-gdpr/",
+  "https://en.wikipedia.org/wiki/Wassenaar_Arrangement",
+  "https://en.wikipedia.org/wiki/2017_Equifax_data_breach"
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "concept_id": "cal-03",
+ "lens": "economic-buyer",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "As a VP R&D I would fund this from the developer-tooling line (~$36k/yr at 200 devs), but it is a nice-to-have: no regulation, audit finding or incident forces it, the concept admits the budget owner is unclear and the ROI unproven, and branch protection plus code review are already paid for. Six design partners are a real start.",
+ "objections": [
+  {
+   "objection": "No compelling event makes this a must-have. The problem is framed as standards drift and late discovery, not an audit finding, regulation, customer security questionnaire or incident, so it competes with headcount and other tooling for discretionary R&D budget and is easy to defer a quarter.",
+   "severity": "major",
+   "evidence": "concept:problem.summary"
+  },
+  {
+   "objection": "Unclear budget owner. The concept itself lists 'Unclear budget owner between security and engineering' and asks 'Is this a security product or a DevOps productivity product?'. Without a named line item, the VP R&D says 'security should pay' and the CISO says 'it is engineering hygiene', which stalls deals.",
+   "severity": "major",
+   "evidence": "concept:risks, concept:open_questions"
+  },
+  {
+   "objection": "No measurable outcome to justify the spend to a CFO. 'Showing a measurable outcome a buyer will pay for' is listed as a hardest part; a compliance percentage across repos is not a dollar figure (no reduced incidents, hours saved or audit cost avoided is quantified).",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts"
+  },
+  {
+   "objection": "I already pay for the status-quo substitute. GitHub branch protection with required status checks plus code review gate merges today, and Danger is free for scripted PR rules; the incremental value is central management and a catalogue, which is a convenience premium, not a new capability.",
+   "severity": "major",
+   "evidence": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches"
+  },
+  {
+   "objection": "Per-seat pricing over all developers means the cost scales with headcount while value accrues to a small platform team that writes the policies; at 300-500 engineers $54k-90k/yr invites pushback to price per repo or per platform engineer.",
+   "severity": "minor",
+   "evidence": "concept:pricing.entry_price"
+  }
+ ],
+ "strongest_point": "Forty discovery interviews and six design partners with platform teams, plus a metadata-only design that removes the code-access objection, give a credible path to a first paid pilot.",
+ "what_would_change_my_mind": [
+  "At least 3 of the 6 design partners sign paid pilots and name the budget line (security or platform).",
+  "One customer shows a quantified outcome: an audit/SOC 2 control satisfied by the report, fewer post-merge security fixes, or platform-team hours saved.",
+  "Evidence that policy enforcement is tied to a compliance requirement buyers already must meet."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches"
+ ]
+}

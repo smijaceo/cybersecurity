@@ -1,0 +1,45 @@
+{
+  "concept_id": "cal-05",
+  "lens": "market-skeptic",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "The dual-laptop privileged-access pain is real and budgeted in large regulated firms, but the concept's evidence is encyclopedia pages, not buyer voice. The wedge (privileged admins) is a small slice of seats, and the larger 'locked-down workforce' market is an employee complaint, not a CISO budget line. Demand at fleet scale is unproven.",
+  "objections": [
+    {
+      "objection": "No demand evidence from the named buyer: every problem citation is a Wikipedia article, the Qubes homepage or Microsoft guidance. None shows a CISO or desktop lead saying they would pay to replace dual devices or lockdown.",
+      "severity": "major",
+      "evidence": "concept:problem.evidence"
+    },
+    {
+      "objection": "The wedge is narrow. Privileged admins who carry two laptops are typically a low single-digit percentage of staff, so even a large bank yields a few hundred seats; at $200/seat and a 500-endpoint minimum, the wedge alone may not clear the minimum at many accounts.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.wedge; concept:pricing.entry_price"
+    },
+    {
+      "objection": "The large-market story (whole workforce freed from lockdown) rests on user frustration, which security buyers routinely tolerate; there is no budget owner for 'productivity lost to lockdown', and the concept itself lists this as an open question.",
+      "severity": "major",
+      "evidence": "concept:open_questions"
+    },
+    {
+      "objection": "The vendor-recommended answer to the privileged-user problem is a dedicated hardened workstation built with existing OS and management tools, so many target buyers already consider the problem solved with tooling they own.",
+      "severity": "minor",
+      "evidence": "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices"
+    },
+    {
+      "objection": "Target universe is small: large banks, financial firms and tech vendors with formal dual-device policies likely number in the low thousands worldwide, with long architecture-change sales cycles.",
+      "severity": "minor",
+      "evidence": "concept:buyer.company_profile"
+    }
+  ],
+  "strongest_point": "Dual laptops for privileged users is a concrete, already-funded cost; replacing a second device at below hardware cost is an easy-to-quantify saving.",
+  "what_would_change_my_mind": [
+    "At least 4 of 10 interviewed bank/infra leads quantify current dual-device or PAW spend and commit pilot budget for 50+ users.",
+    "At least 2 of those pilots plan expansion beyond admins to developers or traders within a year."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices",
+    "https://en.wikipedia.org/wiki/Air_gap_(networking)"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+ "concept_id": "cal-08",
+ "lens": "technical-feasibility",
+ "round": 1,
+ "score": 7,
+ "verdict": "conditional",
+ "summary": "Buildable: scanners, ticketing and config-management tools expose APIs, and a ~15-person R&D team can ship a read-only aggregation, prioritisation and ticketing MVP in 8 months. The risk is scope. Five features, many connectors, cross-tool asset correlation, a curated remediation database and automated fix pushing are too much at once. Push fixes and wide connector coverage should come later.",
+ "objections": [
+  {
+   "objection": "The MVP is too broad for 8 months: connectors to scanners, code-testing, cloud, CMDB and ticketing, plus prioritisation, a remediation database, an orchestration engine with Puppet/Chef/Ansible push, and validation reporting. Each is a product line. Without cuts, the MVP slips or ships shallow everywhere.",
+   "severity": "major",
+   "evidence": "concept:mvp.features; concept:build.months_to_mvp; concept:build.team"
+  },
+  {
+   "objection": "Deduplicating findings across scanners and code tools needs asset identity resolution: matching IPs, hostnames, cloud instance IDs and repos against an often-stale CMDB. Enterprise asset data is messy, so a 'prioritised, deduplicated plan within a day' is optimistic. Correlation errors will undermine trust in the prioritisation.",
+   "severity": "major",
+   "evidence": "concept:go_to_market.wedge; concept:mvp.features[0]"
+  },
+  {
+   "objection": "A remediation database of patches, scripts and workarounds for each vulnerability, across thousands of new CVEs a year and many OS and application versions, is a continuous content-engineering job. It needs a dedicated research team and QA, because a wrong script breaks production. It is not a one-time build.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts; https://en.wikipedia.org/wiki/Patch_(computing)"
+  },
+  {
+   "objection": "Pushing fixes through Puppet, Chef or Ansible needs write credentials into configuration management, change-window awareness and rollback. Patches can cause regressions. The MVP should create tickets and generate playbooks for humans to run, with automated push held back until customers ask for it.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[3]; concept:open_questions"
+  },
+  {
+   "objection": "Validation depends on scanner rescan cadence, which is often weekly or monthly. That makes closed-loop proof slow and the beta's 2-week time-to-fix measurement noisy.",
+   "severity": "minor",
+   "evidence": "concept:riskiest_assumption.test"
+  },
+  {
+   "objection": "Every scanner, ticketing system and cloud API change breaks connectors. Integration upkeep will take an increasing share of R&D.",
+   "severity": "minor",
+   "evidence": "concept:risks"
+  }
+ ],
+ "strongest_point": "Agentless and API-only, with no own scanning, agents or network taps. This avoids the hardest engineering and runs on data customers already have, which suits a small, strong R&D team.",
+ "what_would_change_my_mind": [
+  "A scoped MVP limited to the top 3 network scanners plus Jira and ServiceNow, with ticket and playbook generation but no automated push.",
+  "Asset correlation of 90% or better on 3 design partners' real data within the first day.",
+  "A remediation-content pipeline that drafts fixes from vendor advisories and NVD at a measured cost per CVE."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Vulnerability_management",
+  "https://en.wikipedia.org/wiki/Patch_(computing)"
+ ]
+}

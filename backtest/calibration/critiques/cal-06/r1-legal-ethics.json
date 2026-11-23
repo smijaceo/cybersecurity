@@ -1,0 +1,49 @@
+{
+  "concept_id": "cal-06",
+  "lens": "legal-ethics",
+  "round": 1,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "Defensive, enterprise-deployed inspection with low abuse potential and no obvious platform-terms conflict. Legal exposure centres on decrypting and inspecting east-west payloads (PHI, cardholder data, personal data), custody of the private keys TLS decryption needs, inline-blocking liability, and encryption export classification. All are manageable with architecture choices, contracts and compliance work, not redesign.",
+  "objections": [
+    {
+      "objection": "TLS decryption and DPI of internal traffic expose payloads holding PHI, cardholder data and employee personal data. That brings the inspection tier into HIPAA transmission-security and PCI DSS scope and into GDPR Article 32 security duties, and may count as employee monitoring in EU works-council jurisdictions. The product needs default bypass for sensitive categories, no payload retention, and DPIA and scoping templates, or deals stall in compliance review.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[2]; https://www.law.cornell.edu/cfr/text/45/164.312; https://gdpr-info.eu/art-32-gdpr/"
+    },
+    {
+      "objection": "East-west TLS decryption needs server private keys or an internal re-signing CA. The vendor's containers then become a high-value key store across every cloud. A compromise or a bug would be a breach the vendor helped cause. Key custody must stay with the customer (HSM/KMS integration, no vendor access), and contracts must cap liability for it.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[2]; concept:build.hardest_parts"
+    },
+    {
+      "objection": "Inline blocking on production east-west paths creates liability both ways. A false positive that drops SQL or SMB traffic causes an outage, and a missed worm draws a negligence claim when marketing says the product will 'stop lateral movement'. The product needs fail-open/fail-closed policy, SLAs that exclude consequential damages, and claims worded as risk reduction.",
+      "severity": "minor",
+      "evidence": "concept:one_liner; concept:risks"
+    },
+    {
+      "objection": "A product that does TLS decryption and inspection is an encryption item under the US EAR (5A002/5D002), and network-infrastructure functions may not qualify for the mass-market treatment. Export classification or reporting (License Exception ENC) is needed before selling to multinational enterprises, and some jurisdictions restrict importing interception-capable equipment.",
+      "severity": "minor",
+      "evidence": "https://www.law.cornell.edu/cfr/text/15/740.17"
+    },
+    {
+      "objection": "If cloud deployment sends telemetry or samples (malware-detection integrations, threat-definition feedback) to the vendor, the vendor becomes a GDPR processor or sub-processor. That requires Article 28 terms and sub-processor disclosure for any third-party detection engines.",
+      "severity": "minor",
+      "evidence": "https://gdpr-info.eu/art-28-gdpr/; concept:mvp.features[2]"
+    }
+  ],
+  "strongest_point": "Customer-operated, purely defensive control with negligible abuse potential and no dependence on fragile platform terms; its legal risks are familiar ones that NGFW vendors already handle routinely.",
+  "what_would_change_my_mind": [
+    "Architecture document showing private keys stay in customer KMS/HSM and payloads are never retained or sent to the vendor, reviewed by two pilot customers' security architects.",
+    "PCI DSS scoping and HIPAA mapping memo from a QSA/counsel, plus a DPIA template accepted by one EU customer's DPO or works council.",
+    "BIS classification (CCATS or self-classification report) completed before the first international sale."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://gdpr-info.eu/art-32-gdpr/",
+    "https://gdpr-info.eu/art-28-gdpr/",
+    "https://www.law.cornell.edu/cfr/text/45/164.312",
+    "https://www.law.cornell.edu/cfr/text/15/740.17",
+    "https://en.wikipedia.org/wiki/Deep_packet_inspection"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+ "concept_id": "cal-03",
+ "lens": "defensibility",
+ "round": 1,
+ "score": 4,
+ "verdict": "conditional",
+ "summary": "The product sits on GitHub's own checks API and enforces rules the platform owner can ship as org-wide settings; OPA and Danger already cover the policy-as-code core for free. The only moat candidates are the metadata catalogue as system of record and the accumulated policy and exception history, and the concept doesn't yet design for either.",
+ "objections": [
+  {
+   "objection": "GitHub is the most likely copier and owns the surface: the merge gate runs through its checks API, and moving branch protection from per-repo to organisation-level rules plus a repository inventory is a natural roadmap step for GitHub, which would also bundle it into the plan customers already pay for. The concept names this as a risk but gives no answer to it.",
+   "severity": "major",
+   "evidence": "https://docs.github.com/en/rest/checks; concept:risks[0]; concept:competitors[0]"
+  },
+  {
+   "objection": "The policy-evaluation core can be replicated with open source. OPA (a general policy engine with central policy management and audit trails) and Danger (PR rule scripting) let a platform team build per-PR gates themselves, so the engine itself is not a moat.",
+   "severity": "major",
+   "evidence": "https://www.openpolicyagent.org/; https://danger.systems/; concept:competitors[4]"
+  },
+  {
+   "objection": "Adjacent SCA and code-quality vendors already run as PR checks with org-wide dashboards and could add banned-component, approved-version and required-file rules as an extra feature. 'Broader internal rules' is a feature gap they can close, not a structural barrier.",
+   "severity": "major",
+   "evidence": "concept:competitors[1-3]; concept:differentiation"
+  },
+  {
+   "objection": "There is no data or network effect: policies are company-specific (the concept says so itself), so one customer's rules don't make the product better for the next, and a shared policy library is easy to copy.",
+   "severity": "minor",
+   "evidence": "concept:risks[1]; concept:open_questions[0]"
+  },
+  {
+   "objection": "Switching costs are low: the integration is a GitHub App plus a metadata-only catalogue, and the concept chose metadata-only to lower adoption friction. The same choice means a rival can rebuild the catalogue from the same APIs in days.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[0]"
+  }
+ ],
+ "strongest_point": "An org-wide catalogue plus exception workflow can become the system of record for engineering standards, with policy history and exception audit trails that are costly to migrate.",
+ "what_would_change_my_mind": [
+  "Design partners treat the catalogue and exception log as their compliance system of record, for example citing it in SOC 2 or customer audits.",
+  "Customers have more than 30 custom policies each after 6 months, so switching means rewriting them.",
+  "GitLab/Bitbucket support or CI/CD and cloud integrations make the product the cross-platform layer GitHub won't build.",
+  "A reusable policy library is adopted across customers and improves with each one."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://docs.github.com/en/rest/checks",
+  "https://www.openpolicyagent.org/",
+  "https://danger.systems/"
+ ]
+}

@@ -1,0 +1,54 @@
+{
+  "concept_id": "cal-07",
+  "lens": "legal-ethics",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Defensive and maker-facing, but three exposures need redesign before launch: a 'certified secure' mark from an unaccredited automated process creates misrepresentation liability once a certified device is hacked; open firmware upload with free reports produces exploit maps of other vendors' products; and custody of makers' firmware plus patching cleared medical devices carry contract and FDA risk.",
+  "objections": [
+    {
+      "objection": "Certifying devices (physical and digital mark) from automated analysis, with no recognised standard or accreditation behind it, invites negligent-misrepresentation claims from the maker's customers and end users when a certified device is breached. It also draws the certifier into FTC deception cases like the one against D-Link over security marketing claims. As a certification-mark owner the company must control and police the mark and apply its criteria to everyone. The concept treats certification as a product feature, not a liability-bearing assurance service.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[3]; concept:risks[1]; https://en.wikipedia.org/wiki/D-Link"
+    },
+    {
+      "objection": "The wedge is a free automated firmware report, and the concept never checks that the uploader owns the firmware. Vendor firmware is usually downloadable from the vendor's own site, so competitors, researchers or attackers could upload any maker's image and get a ranked list of exposures. That is a Mirai-style targeting aid and a dual-use problem. The product needs verification that the uploader is the maker, plus a coordinated-disclosure policy for reports about third parties.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.wedge; concept:mvp.features[0]; https://en.wikipedia.org/wiki/Mirai_(malware)"
+    },
+    {
+      "objection": "Firmware images are the maker's trade secrets, and they bundle chip-vendor SDKs and binary blobs licensed under NDA, often with clauses that forbid reverse engineering or passing them to third parties. Uploading them to a multi-tenant SaaS may breach those licences. It also makes the vendor a store of unpatched vulnerabilities across many makers. The product needs on-premises or customer-tenant analysis, strict retention and deletion terms, and contractual cover for third-party components.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[0]; concept:buyer.company_profile"
+    },
+    {
+      "objection": "Adding 'lightweight on-device protection' to devices already in the field changes device software after release. For the medical devices the concept targets, that can trigger FDA review of software changes, and on industrial or medical devices a bug that bricks or degrades the device carries product-liability and safety exposure. The product must either exclude regulated and safety-critical categories at launch or have the maker own the change control.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[4]; concept:buyer.company_profile"
+    },
+    {
+      "objection": "Unpacking encrypted or protected firmware, including third-party components, can raise DMCA section 1201 anti-circumvention questions. Security-research exemptions are narrow and must be renewed in periodic rulemakings. When the maker owns the firmware and gives consent this is mostly resolved, but third-party bootloaders and signed blobs stay grey.",
+      "severity": "minor",
+      "evidence": "https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act"
+    },
+    {
+      "objection": "Analysis will surface new vulnerabilities in open-source and chip-vendor components, and GPL compliance failures, that affect parties other than the paying customer. Without a disclosure policy and customer agreement covering upstream notification, the company either sits on known vulnerabilities or breaches confidentiality.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "A defensive tool sold to the owner of the firmware, aimed at a documented public harm (insecure IoT botnets), with no reliance on fragile platform terms or personal data.",
+  "what_would_change_my_mind": [
+    "Uploads are verified as coming from the maker (signed images or domain-verified accounts), and free reports go only to the verified owner.",
+    "Certification is tied to a published, externally reviewed standard, with accredited or insured assurance and terms that limit the certification to a point-in-time scope, reviewed by counsel.",
+    "An on-premises or isolated-tenant analysis option, plus chip-vendor licence review, accepted by 3 pilot makers' legal teams.",
+    "Medical and safety-critical devices excluded from the runtime-protection feature until a regulatory pathway memo exists."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mirai_(malware)",
+    "https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act",
+    "https://en.wikipedia.org/wiki/D-Link",
+    "https://en.wikipedia.org/wiki/Certification_mark"
+  ]
+}

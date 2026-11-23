@@ -1,0 +1,46 @@
+{
+ "concept_id": "cal-06",
+ "lens": "technical-feasibility",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "A 40-person team of experienced network-security engineers can build a segmentation-plus-inspection platform, but the MVP bundles four hard products (discovery, inline DPI, TLS decryption, malware integrations) across three hypervisor/cloud data planes in 20 months. Inline traffic steering per platform and software DPI throughput are unproven; scope must shrink.",
+ "objections": [
+  {
+   "objection": "Inline east-west inspection requires steering every flow through the security microservices on each platform. VMware, OpenStack/KVM and AWS each expose different (or no) insertion points: AWS security groups only allow/deny by address, port and protocol and offer no inline service-insertion hook, so the product needs host agents/overlays or routing tricks per cloud, contradicting 'no endpoint agents' and multiplying the integration surface.",
+   "severity": "major",
+   "evidence": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html; concept:mvp.out_of_scope; concept:mvp.features[0]"
+  },
+  {
+   "objection": "Software DPI with signatures, plus TLS decryption, on east-west traffic (often far higher volume than north-south) in horizontally scaled containers adds latency and compute cost per workload; the concept itself lists performance as the hardest part and has no benchmark target or fail-open design.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts; concept:mvp.features[1]; concept:mvp.features[2]"
+  },
+  {
+   "objection": "East-west TLS decryption needs private keys or a man-in-the-middle CA inside every application path; for internal service-to-service traffic (mutual TLS, pinned certs) this is often impossible or breaks apps. The concept leaves 'how much east-west traffic is encrypted' as an open question, yet inspection value depends on it.",
+   "severity": "major",
+   "evidence": "concept:open_questions; concept:mvp.features[2]"
+  },
+  {
+   "objection": "Keeping threat definitions current needs a dedicated research and signature team or a licensed feed; neither is in the team plan or pricing.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts"
+  },
+  {
+   "objection": "MVP scope is too broad for 20 months: automatic discovery, application-aware policy, DPI, TLS decryption, URL filtering, malware integrations and REST APIs across three platforms. Shipping one platform (e.g. VMware/KVM) with segmentation plus IPS first is realistic; the full list is not.",
+   "severity": "major",
+   "evidence": "concept:mvp.features; concept:build.months_to_mvp"
+  }
+ ],
+ "strongest_point": "Large, experienced team of distributed-systems and network-security engineers led by serial founders; containerised, scale-out inspection is a sound architecture for elastic capacity.",
+ "what_would_change_my_mind": [
+  "A prototype sustaining at least 10 Gbps of east-west IPS inspection per host with under 1 ms added latency on one platform.",
+  "A documented traffic-steering design for each of VMware, KVM and AWS that needs no in-guest agent.",
+  "A phased MVP that ships one platform within 12 months."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Deep_packet_inspection",
+  "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html"
+ ]
+}

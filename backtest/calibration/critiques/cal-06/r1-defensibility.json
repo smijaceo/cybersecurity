@@ -1,0 +1,47 @@
+{
+ "concept_id": "cal-06",
+ "lens": "defensibility",
+ "round": 1,
+ "score": 4,
+ "verdict": "no-go",
+ "summary": "The moat rests on an architecture choice (containerised inspection microservices) and multi-cloud breadth, both copyable. The scarce asset, current threat signatures, belongs to incumbent firewall vendors with installed base and distribution. VMware owns the hypervisor insertion point; cloud providers own the native control plane. Some switching cost once policy embeds, but not enough.",
+ "objections": [
+  {
+   "objection": "The most likely copier, Palo Alto Networks (or Check Point/Fortinet), already has the hard part: a mature threat-signature feed and research team, a virtualised firewall, and the enterprise firewall relationship. Re-packaging VM-Series as autoscaled containers with a segmentation policy UI is an engineering project, not a new capability; the concept itself names this as the riskiest assumption.",
+   "severity": "fatal",
+   "evidence": "concept:riskiest_assumption.assumption; concept:build.hardest_parts (\"Keeping threat definitions current\", \"Competing with incumbent network security vendors\"); concept:competitors (Palo Alto Networks VM-Series)"
+  },
+  {
+   "objection": "Threat definitions are a content moat that runs against the startup: incumbents amortise signature research across perimeter, cloud and endpoint customers. A new entrant must either build a research team (cost, lag) or license feeds, which leaves inspection quality as a commodity it does not control.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[1] (\"Deep packet inspection with threat definitions\"); concept:build.hardest_parts"
+  },
+  {
+   "objection": "Platform owners control the insertion points. VMware NSX owns east-west traffic in the hypervisor and can add or partner for L7 inspection; AWS/Azure security groups are free and improving. The startup depends on APIs of the very vendors who can bundle the feature, so its integration depth is borrowed, not owned.",
+   "severity": "major",
+   "evidence": "concept:competitors (VMware NSX, cloud-native security groups); concept:risks; https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html (\"There is no additional charge for using security groups\")"
+  },
+  {
+   "objection": "Differentiation is stated as architecture and breadth (containerised, elastic, cloud-agnostic). These are design choices incumbents can adopt within a product cycle and are close to 'better UX' rather than data or network effects; nothing compounds with more customers.",
+   "severity": "major",
+   "evidence": "concept:differentiation"
+  },
+  {
+   "objection": "Pure segmentation players (Illumio, Guardicore) could add inspection or partner with a firewall vendor, squeezing the startup from the other side; the combination itself is not protected.",
+   "severity": "minor",
+   "evidence": "concept:competitors"
+  }
+ ],
+ "strongest_point": "Once application-aware policy is discovered and embedded in DevOps pipelines across several clouds, ripping it out is painful; that policy graph is a real switching cost.",
+ "what_would_change_my_mind": [
+  "Benchmarks showing incumbent virtual firewalls cannot reach east-west throughput/cost parity even when re-packaged as containers.",
+  "Proof-of-concept customers who chose it over extending their incumbent firewall contract.",
+  "A proprietary east-west traffic dataset that measurably improves detection with each added customer.",
+  "An OEM or strategic partnership giving privileged insertion into a major private-cloud platform."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html",
+  "https://en.wikipedia.org/wiki/Microsegmentation_(network_security)"
+ ]
+}

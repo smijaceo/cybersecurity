@@ -1,0 +1,46 @@
+{
+ "concept_id": "cal-04",
+ "lens": "security-practitioner",
+ "round": 1,
+ "score": 7,
+ "verdict": "conditional",
+ "summary": "Strong workflow fit: enrichment, phishing triage and dedup are tedious, low-risk tasks SOCs would gladly automate, and a chat war room with automatic audit log matches how responders already work. Adoption hinges on custody of privileged credentials for firewalls/EDR, human approval gates on containment, explainable bot suggestions, and not forcing a second chat tool beside existing ones.",
+ "objections": [
+  {
+   "objection": "The platform stores admin-grade credentials for SIEM, EDR, firewalls and threat intel in one place, making it the highest-value target in the SOC. Security teams will not grant this without on-prem/vault-backed secret storage, least-privilege service accounts, per-action RBAC and tamper-evident logs; the concept does not describe credential custody at all.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[0] ('using their own credentials'); concept:build.hardest_parts (enterprise deployment on-prem and cloud)"
+  },
+  {
+   "objection": "Analysts and change-control owners will not let a bot auto-run containment (block IP, isolate host, disable account) on day one; a wrong block on a business-critical asset is an outage. Without approval gates, dry-run modes and per-playbook autonomy levels, the product will be confined to enrichment and the response value promise shrinks.",
+   "severity": "major",
+   "evidence": "concept:riskiest_assumption.assumption ('let a bot run response actions'); concept:risks ('Analysts may distrust automated actions')"
+  },
+  {
+   "objection": "A 'learning' bot that suggests next steps and merges duplicate incidents creates false-negative risk: a wrongly merged incident is an incident nobody investigates. Suggestions must be explainable and reversible, and with 5-30 analyst SOCs the per-customer training data is thin, so early suggestions may be noise that erodes trust.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[3]; concept:open_questions[1] ('How much of the bot's learning generalises across customers?')"
+  },
+  {
+   "objection": "A separate built-in chat competes with the chat, ticketing and email tools responders already live in; analysts resist yet another console. The war room should bridge to existing chat and ticketing rather than replace them, or the audit-trail benefit is lost to side channels.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[2]"
+  },
+  {
+   "objection": "Integration quality determines trust: a playbook step that silently fails because a vendor API changed leaves a false sense of containment. Practitioners need health checks and visible failure states per connector.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Automating phishing triage, enrichment and duplicate detection removes real, repetitive analyst toil with low blast radius, and chat-based collaboration yields an audit trail for free.",
+ "what_would_change_my_mind": [
+  "Beta SOCs grant production credentials for at least EDR and firewall integrations after a security review.",
+  "At least 3 of 5 beta SOCs enable one automated containment action (with approval gate) within 2 weeks.",
+  "Analysts accept over 60% of bot next-step suggestions and duplicate-merge errors stay under 2%.",
+  "Median phishing time-to-triage drops by half in beta SOCs."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Security_orchestration"
+ ]
+}

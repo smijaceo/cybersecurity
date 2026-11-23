@@ -1,0 +1,52 @@
+{
+  "concept_id": "cal-07",
+  "lens": "gtm-pricing",
+  "round": 1,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "A $30-50k first-year deal sold directly to price-pressured device makers with no security budget line, by a 25-person team, is a long, expensive enterprise sale with no forcing function. Certification only monetises if carriers or retailers require it, and none is committed. The free-report wedge is good; the pricing unit, the validation test and the channel are weak.",
+  "objections": [
+    {
+      "objection": "No budget owner before a mandate. The buyer is a VP R&D at a maker with no product-security team, in segments (cameras, routers, smart-home) with thin hardware margins. $25k/yr plus $5k per certification competes with BOM cost cuts and features; the concept itself names 'won't pay without regulation' as its riskiest assumption, so the core revenue line has no forcing function at launch.",
+      "severity": "fatal",
+      "evidence": "concept:riskiest_assumption.assumption; concept:risks; concept:buyer.company_profile"
+    },
+    {
+      "objection": "Certification revenue is a two-sided chicken-and-egg. A $5k certificate is worth paying for only if large distributors, carriers or retailers ask for it, yet the channel plan lists carrier and chip-vendor partnerships as intentions with no anchor partner, and the concept admits a certificate without a recognised standard has limited weight. Incumbent labs (UL) already hold that buyer trust.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.channel; concept:risks; concept:open_questions; https://www.ul.com/"
+    },
+    {
+      "objection": "Sales motion versus contract value. Direct enterprise sales to mid-size makers, many of whom outsource firmware to ODMs in Asia, implies multi-month cycles, technical pre-sales and security reviews of firmware upload. An ACV of roughly $30-50k barely covers a field rep plus sales engineer at a few deals each per year; with ~25 staff burning cash, the motion needs either much larger deals or a channel that sells for you.",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price; concept:go_to_market.channel; concept:build.team"
+    },
+    {
+      "objection": "The validation test measures the wrong thing. '4 of 20 makers buy within 2 weeks' of a free report is unrealistic for a $30k+ purchase that needs budget approval; a failure would be ambiguous and a pass is unlikely. A better test is signed paid pilots or letters of intent tied to a named carrier/retailer requirement over a quarter.",
+      "severity": "major",
+      "evidence": "concept:riskiest_assumption.test; concept:riskiest_assumption.success_signal"
+    },
+    {
+      "objection": "Pricing unit and model are muddled. 'Per product line' is ambiguous when makers ship many SKUs on shared firmware and rebuild often; the runtime on-device protection feature implies a per-unit royalty model that is not priced at all; and the comparables have no prices, so 'cheaper than labs and pentests' is unverified.",
+      "severity": "minor",
+      "evidence": "concept:pricing; concept:mvp.features"
+    },
+    {
+      "objection": "Renewal and churn risk: once a maker has fixed the top exposures and certified a model, the reason to keep paying an annual subscription is unclear unless re-certification per firmware release is required. The free report may itself deliver most of the perceived value.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "A free automated firmware report is a cheap, concrete, low-friction wedge that shows makers real exposures and creates a natural upsell into remediation and certification.",
+  "what_would_change_my_mind": [
+    "A named carrier, large retailer or chip vendor contractually requiring the certification from its suppliers.",
+    "3 or more makers signing paid pilots at or above $25k.",
+    "Evidence that makers in a high-margin segment (industrial, medical, automotive) already budget for firmware security, supporting ACVs above $100k."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mirai_(malware)",
+    "https://karambasecurity.com/",
+    "https://www.ul.com/"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "concept_id": "cal-07",
+  "lens": "market-skeptic",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "The problem is real and widely publicised, but the evidence is incident news and encyclopedia pages, not buyers. Mirai-type harm falls on third parties, not the maker, and the concept admits price-pressured makers won't pay without regulation. Budgeted demand likely exists only where customers, carriers or regulators demand proof; the chosen first segment is the weakest payer.",
+  "objections": [
+    {
+      "objection": "No evidence comes from the named buyer. All four problem sources are general Wikipedia articles describing IoT insecurity; none shows a VP R&D or product-security head saying they need device-specific requirements, lack budget for consultants, or would buy certification. Awareness of a problem is not purchase intent.",
+      "severity": "major",
+      "evidence": "concept:problem.evidence; https://en.wikipedia.org/wiki/Mirai_(malware)"
+    },
+    {
+      "objection": "Misaligned incentives: botnet damage (DDoS on Krebs, OVH, Dyn) is borne by third parties, while infected devices keep working normally. The maker suffers little direct cost, so insecure devices are a negative externality, and markets underpay for fixing externalities until regulation or liability arrives.",
+      "severity": "major",
+      "evidence": "https://en.wikipedia.org/wiki/Mirai_(malware); concept:riskiest_assumption.assumption"
+    },
+    {
+      "objection": "The first segment (mid-size makers of cameras, routers and smart-home devices) is the most price-pressured and least likely to budget $25k/year plus $5k per model. These low-margin, often white-label products are exactly the Mirai population; the concept itself lists 'won't pay without regulation' as its top risk. Medical, industrial and automotive makers have stronger, budgeted pull but slower cycles.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.first_customers; concept:risks[0]; concept:pricing.entry_price"
+    },
+    {
+      "objection": "Demand for certification depends on a recognised standard or a gatekeeper (carrier, retailer, large distributor) requiring it. At founding no such requirement is shown; the concept lists 'Will carriers and retailers require certification?' as open. A private certificate without buyer pull is a cost centre for the maker.",
+      "severity": "major",
+      "evidence": "concept:open_questions[0]; concept:risks[1]"
+    },
+    {
+      "objection": "Market size is unquantified. The concept never estimates how many device makers exist per segment, how many lack security teams but have budget, or what they spend today on pentests and lab certification, so the $25k ACV cannot be tied to a serviceable market.",
+      "severity": "minor",
+      "evidence": "concept:buyer.company_profile"
+    }
+  ],
+  "strongest_point": "IoT insecurity is visible, growing and drawing regulator and enterprise-buyer attention; makers who sell to carriers, enterprises or regulated sectors face real security questionnaires today.",
+  "what_would_change_my_mind": [
+    "At least 4 of 20 makers buy the paid remediation/certification package after a free report, as the concept's own test proposes.",
+    "Two carriers, retailers or large distributors put in writing that they will require or prefer a device security certification in procurement within 18 months.",
+    "Interviews with 15 VP R&D/product-security buyers showing at least a third have a line-item budget for device security testing today, with current spend figures.",
+    "A bottom-up count of target makers by segment (medical, industrial, consumer) showing a serviceable market above $300M at the stated price."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mirai_(malware)"
+  ]
+}

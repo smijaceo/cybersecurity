@@ -35,7 +35,10 @@ def demand_features(signals: list[dict], recent_years: int, now: datetime | None
     recent = 0
     for s in signals:
         try:
-            if datetime.fromisoformat(s["created_at"]) >= cutoff:
+            created = datetime.fromisoformat(s["created_at"])
+            if created.tzinfo is None:  # date-only sources (tenders, regulations, some job boards)
+                created = created.replace(tzinfo=timezone.utc)
+            if created >= cutoff:
                 recent += 1
         except ValueError:
             pass

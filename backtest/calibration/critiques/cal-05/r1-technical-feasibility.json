@@ -1,0 +1,48 @@
+{
+ "concept_id": "cal-05",
+ "lens": "technical-feasibility",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "Buildable in principle: VT-x/VT-d are standard and Xen/KVM (as used by Qubes) give a starting base, and a 20-person virtualisation team is credible. But a client hypervisor on corporate laptops must handle GPU, Wi-Fi, sleep, battery and Windows VBS. Doing that with a seamless single desktop across a fleet in 15 months is very tight.",
+ "objections": [
+  {
+   "objection": "Laptop hardware is the hard part of a bare-metal client hypervisor: graphics acceleration for two Windows guests, Wi-Fi/Bluetooth, docking, multi-monitor, suspend/resume and power management all need either device passthrough or paravirtual drivers per chipset. Qubes, built on Xen, still publishes a hardware compatibility list and has weak GPU support after years of work. Each OEM model and BIOS update widens the support matrix.",
+   "severity": "major",
+   "evidence": "https://www.qubes-os.org/"
+  },
+  {
+   "objection": "Fifteen months to an enterprise-grade MVP is optimistic given four hard features: hypervisor, seamless window integration across two Windows VMs, a central management plane for two images, and a sanitised transfer channel. Hypervisor alone plus hardware enablement typically consumes most of that budget; management and transfer will ship thin, which blocks fleet pilots.",
+   "severity": "major",
+   "evidence": "concept:build.months_to_mvp"
+  },
+  {
+   "objection": "Coexistence with Windows' own virtualisation (Hyper-V, Credential Guard/VBS, Device Guard) requires nested virtualisation or giving them up. Regulated buyers increasingly mandate these, so the locked side either runs nested with performance cost or loses features the buyer already expects on a privileged workstation.",
+   "severity": "major",
+   "evidence": "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices"
+  },
+  {
+   "objection": "Running two full Windows instances on one laptop doubles RAM, CPU and disk demand and cuts battery life; on typical 8 GB corporate laptops of the time UX will degrade, forcing hardware refreshes the buyer did not budget for.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts"
+  },
+  {
+   "objection": "Ongoing maintenance burden is high: every Windows feature update, driver release and new laptop generation must be re-validated, and endpoint agents (EDR, DLP, imaging/SCCM) must be tested on both sides. Support cost may scale with fleet diversity rather than seat count.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Hardware virtualisation and mature open-source hypervisors (Xen, KVM) exist, so a strong virtualisation team need not start from zero; the isolation primitive itself is proven.",
+ "what_would_change_my_mind": [
+  "A working prototype on the three most common corporate laptop models with sleep/resume, docking and multi-monitor working in both OSes",
+  "Benchmarks showing under 15% performance and battery loss versus native Windows on an 8-16 GB laptop",
+  "Demonstrated Credential Guard/VBS running on the locked side",
+  "A plan to narrow MVP to one OEM line and one management integration (e.g. SCCM) to fit 15 months"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://www.qubes-os.org/",
+  "https://en.wikipedia.org/wiki/Hypervisor",
+  "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices"
+ ]
+}

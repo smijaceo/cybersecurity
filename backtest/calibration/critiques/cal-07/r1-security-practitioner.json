@@ -1,0 +1,48 @@
+{
+  "concept_id": "cal-07",
+  "lens": "security-practitioner",
+  "round": 1,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "Binary firmware analysis fits how product-security work is actually done (no source needed, low access burden: makers already hold their images), and Mirai-class flaws are detectable statically. But risk reduction depends on engineers acting on findings, accuracy on stripped/RTOS images is unproven, the certification lacks a recognised standard, and the post-deployment agent is a hard sell into constrained, rarely-updated devices.",
+  "objections": [
+    {
+      "objection": "Static binary analysis is strongest on embedded Linux (filesystem extraction, known-vulnerable component versions, hardcoded credentials, open services) and weak on monolithic RTOS and bare-metal images, stripped binaries, encrypted or vendor-packed firmware and vendor-patched backports. Version-matching produces false positives on backported fixes and false negatives on custom code; engineers who get a noisy first report will dismiss it. The concept names accuracy as a risk but has no triage, confidence scoring or suppression workflow.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts (analysis across many architectures and firmware formats); concept:risks (analysis accuracy across exotic firmware)"
+    },
+    {
+      "objection": "The certificate claims more than the analysis can show. A firmware scan cannot see hardware debug ports (UART/JTAG), secure-boot and key provisioning on the production line, cloud backend and mobile-app APIs, or update-server security, where many real device compromises happen. Buyers' security teams (carriers, distributors) will ask what the mark covers; a self-defined requirement set certified by the same vendor that sells remediation is a conflict of interest and will not replace their own testing.",
+      "severity": "major",
+      "evidence": "concept:mvp.features (security certification for devices that meet the requirements); concept:risks (certification without a recognised standard has limited weight)"
+    },
+    {
+      "objection": "The lightweight on-device protection feature asks makers to ship a third-party agent into constrained firmware that, by the concept's own evidence, is rarely updated after shipping. Embedded teams fear bricking, performance regressions and support liability; field devices often have no reliable update channel to deliver the agent at all. This feature dilutes trust in the core analysis offering.",
+      "severity": "major",
+      "evidence": "concept:mvp.features (lightweight on-device protection added post-deployment); concept:problem.evidence (firmware rarely updated after shipping); https://en.wikipedia.org/wiki/Firmware"
+    },
+    {
+      "objection": "Workflow fit is thin: the target maker has no product security team, so findings land on firmware engineers with no owner to prioritise them. Without CI/build-pipeline integration, issue-tracker export and per-release regression comparison, the analysis becomes a one-off report before a customer audit rather than continuous risk reduction.",
+      "severity": "minor",
+      "evidence": "concept:buyer.company_profile; concept:user"
+    },
+    {
+      "objection": "Firmware images are sensitive IP (and may contain embedded keys and certificates); makers will ask about custody, retention and on-premise analysis before uploading to a cloud service.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "Firmware-image analysis needs no source code or network access, catches Mirai-class flaws (default credentials, exposed telnet, outdated components) and suits makers lacking security staff.",
+  "what_would_change_my_mind": [
+    "Benchmark on 50+ real firmware images across Linux and RTOS showing false-positive rates engineers accept (e.g. under 20% of findings disputed)",
+    "Three makers fixing the reported issues and re-scanning across consecutive releases (evidence of workflow adoption, not one-off reports)",
+    "A carrier, distributor or chip vendor stating it will accept the certification in procurement",
+    "Certification criteria mapped to a public baseline and scoped explicitly to what firmware analysis can verify",
+    "Dropping or deferring the on-device agent until the analysis product has traction"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mirai_(malware)",
+    "https://en.wikipedia.org/wiki/Firmware"
+  ]
+}

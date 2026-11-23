@@ -1,0 +1,153 @@
+{"id": "github:2053229592", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4799608294", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:5194641516", "on_segment": "n", "need": "n", "reason": "Not about AI/agent security"}
+{"id": "github:3706446930", "on_segment": "y", "need": "n", "reason": "Research paper summary on secure model distribution; no stated need"}
+{"id": "github:6544827639", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:3782172232", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4589580701", "on_segment": "n", "need": "n", "reason": "Regex timeout regression in chat app; not agent security"}
+{"id": "github:4954669974", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:1938325736", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:5573873347", "on_segment": "y", "need": "n", "reason": "List of LLM attack papers; research news"}
+{"id": "github:5558613850", "on_segment": "y", "need": "n", "reason": "List of LLM attack papers; research news"}
+{"id": "github:4662044731", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4999581316", "on_segment": "n", "need": "n", "reason": "Non-security job posting"}
+{"id": "github:4999524423", "on_segment": "n", "need": "n", "reason": "Non-security job posting"}
+{"id": "github:3552980360", "on_segment": "n", "need": "n", "reason": "Not about AI/agent security"}
+{"id": "github:4357937791", "on_segment": "y", "need": "n", "reason": "Scanner finding report; no capability gap"}
+{"id": "github:5233279197", "on_segment": "y", "need": "n", "reason": "Opinion post on LLM security"}
+{"id": "github:4857783734", "on_segment": "n", "need": "n", "reason": "Web vulnerability scanner contributor call, not AI security"}
+{"id": "github:6439831681", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4870137352", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:3771171720", "on_segment": "n", "need": "n", "reason": "Not about AI/agent security"}
+{"id": "github:2990975540", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:5787068418", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4756589483", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:5312173947", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:5823869216", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:2990974869", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4216587790", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:2097304376", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4251231625", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:6168034444", "on_segment": "n", "need": "n", "reason": "Stdout bug in MCP server, not a security gap"}
+{"id": "github:5735234537", "on_segment": "y", "need": "y", "reason": "Requests governance check before URL-bearing MCP tool calls"}
+{"id": "github:6540979790", "on_segment": "y", "need": "y", "reason": "Wants realistic indirect injection testing in agent red-team tool"}
+{"id": "github:4211473533", "on_segment": "y", "need": "y", "reason": "Needs validation against MCP tool poisoning"}
+{"id": "github:5165643650", "on_segment": "y", "need": "y", "reason": "MCP servers get blanket tool auto-approval; permission gap"}
+{"id": "github:3265411532", "on_segment": "y", "need": "y", "reason": "MCP server read-only mode bypass; access control gap"}
+{"id": "github:5846798432", "on_segment": "n", "need": "n", "reason": "Cost and provider-call issue, not security"}
+{"id": "github:4954566107", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4144855839", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4325982428", "on_segment": "y", "need": "y", "reason": "Needs per-tool disable in agent tool policy"}
+{"id": "github:6418706441", "on_segment": "y", "need": "n", "reason": "Design decisions on agent sandbox modes; no gap"}
+{"id": "github:5455626021", "on_segment": "n", "need": "n", "reason": "Not about AI/agent security"}
+{"id": "github:4168844451", "on_segment": "n", "need": "n", "reason": "Fraud MCP server submission announcement"}
+{"id": "github:3934493693", "on_segment": "y", "need": "n", "reason": "Evaluating micro-VM sandboxing; exploratory, no gap"}
+{"id": "github:6309091165", "on_segment": "n", "need": "n", "reason": "Not about AI/agent security"}
+{"id": "github:4217388120", "on_segment": "y", "need": "y", "reason": "MCP server API key exposed in process list; wants env var"}
+{"id": "github:6448834007", "on_segment": "n", "need": "n", "reason": "Not about AI/agent security"}
+{"id": "github:6016811293", "on_segment": "n", "need": "n", "reason": "Not about AI/agent security"}
+{"id": "github:4332468461", "on_segment": "n", "need": "n", "reason": "Not about AI/agent security"}
+{"id": "github:5198638877", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:5585255748", "on_segment": "n", "need": "n", "reason": "Database authority lookup tool for agent, not agent security"}
+{"id": "github:5187909246", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:3298629148", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4529390679", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4910825909", "on_segment": "y", "need": "n", "reason": "Vendor pitch for agent dependency risk API"}
+{"id": "github:5273838960", "on_segment": "y", "need": "y", "reason": "Requests fail-closed mode for security-sensitive MCP servers"}
+{"id": "github:4291504734", "on_segment": "n", "need": "n", "reason": "Not about AI/agent security"}
+{"id": "github:5208328120", "on_segment": "y", "need": "y", "reason": "MCP server DNS-rebinding protection gap in allowlist"}
+{"id": "github:6245445337", "on_segment": "n", "need": "n", "reason": "Not about AI/agent security"}
+{"id": "github:4872516601", "on_segment": "y", "need": "n", "reason": "Vendor pitch for agent dependency risk API"}
+{"id": "github:4323780837", "on_segment": "n", "need": "n", "reason": "AI incident response project pitch"}
+{"id": "github:4355929452", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4288839134", "on_segment": "n", "need": "n", "reason": "Not about AI/agent security"}
+{"id": "github:5624080145", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "github:4439676946", "on_segment": "n", "need": "n", "reason": "Indexing should honor gitignore; not security"}
+{"id": "github:6406256391", "on_segment": "n", "need": "n", "reason": "Not about AI/agent security"}
+{"id": "github:5176860403", "on_segment": "n", "need": "n", "reason": "Digest, news roundup or unrelated report"}
+{"id": "hn:41037136", "on_segment": "y", "need": "y", "reason": "Asks for audit2allow-like tool for systemd units"}
+{"id": "hn:37328571", "on_segment": "y", "need": "y", "reason": "Asks for audit2allow-like tool for systemd units"}
+{"id": "hn:29995566", "on_segment": "y", "need": "y", "reason": "Asks for audit2allow-like tool for systemd units"}
+{"id": "hn:5231284", "on_segment": "y", "need": "y", "reason": "Asks for tool to check kernel exposure to known exploits"}
+{"id": "hn:36560346", "on_segment": "y", "need": "y", "reason": "Seeks advice securing cloud-connected IP camera"}
+{"id": "hn:25848940", "on_segment": "y", "need": "y", "reason": "Asks for tool to reload extensions from disk for security"}
+{"id": "hn:20425754", "on_segment": "y", "need": "n", "reason": "Vendor explanation of 1Password secret key design"}
+{"id": "hn:6476619", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:6311169", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:6141605", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:4993476", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:47607180", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:45932388", "on_segment": "n", "need": "n", "reason": "Career or opinion comment"}
+{"id": "hn:42928549", "on_segment": "n", "need": "n", "reason": "Hiring thread post, not security-specific"}
+{"id": "hn:42409306", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:41132744", "on_segment": "n", "need": "n", "reason": "Hiring thread post, not security-specific"}
+{"id": "hn:39222220", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:38845537", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:32307014", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:31988131", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:31949067", "on_segment": "n", "need": "n", "reason": "Job seeker post"}
+{"id": "hn:31725363", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:29474302", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:26709356", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:2607627", "on_segment": "y", "need": "n", "reason": "Security job posting; generic role description"}
+{"id": "hn:9759573", "on_segment": "n", "need": "n", "reason": "Career or opinion comment"}
+{"id": "hn:50387713", "on_segment": "n", "need": "n", "reason": "Job seeker post"}
+{"id": "hn:49928134", "on_segment": "n", "need": "n", "reason": "Job seeker post"}
+{"id": "hn:49577195", "on_segment": "n", "need": "n", "reason": "Job seeker post"}
+{"id": "hn:39169437", "on_segment": "y", "need": "y", "reason": "Wants auth proxy with TLS passthrough; Cloudflare lacks it"}
+{"id": "hn:7600715", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:45452560", "on_segment": "n", "need": "n", "reason": "Account recovery anecdote, no tool need"}
+{"id": "hn:37422138", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:33881867", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:28204624", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:21101773", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:19589233", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:18178863", "on_segment": "y", "need": "n", "reason": "Opinion on security practice"}
+{"id": "hn:9921988", "on_segment": "n", "need": "n", "reason": "Opinion on incentives, no need"}
+{"id": "hn:8395437", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:6278612", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:47967271", "on_segment": "y", "need": "n", "reason": "Opinion on security practice"}
+{"id": "hn:45561808", "on_segment": "y", "need": "n", "reason": "Questions about Copilot prompt injection mechanics"}
+{"id": "hn:44709118", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:4175629", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:41247776", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:37976048", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:28138761", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:28085891", "on_segment": "y", "need": "n", "reason": "Security discussion or opinion, no unmet need"}
+{"id": "hn:27384939", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:25350821", "on_segment": "y", "need": "n", "reason": "Security discussion or opinion, no unmet need"}
+{"id": "hn:18385151", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:15971571", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:8029771", "on_segment": "y", "need": "n", "reason": "Security discussion or opinion, no unmet need"}
+{"id": "hn:50212461", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:47715138", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:47581553", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:48203373", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:5350235", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:31532487", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:8887556", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:43814236", "on_segment": "y", "need": "n", "reason": "Security discussion or opinion, no unmet need"}
+{"id": "hn:38809331", "on_segment": "y", "need": "n", "reason": "Security discussion or opinion, no unmet need"}
+{"id": "hn:25689046", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:25687702", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:21718437", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:17841741", "on_segment": "y", "need": "n", "reason": "Career advice reply on poor company security"}
+{"id": "hn:4767711", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:4766765", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:47504380", "on_segment": "y", "need": "y", "reason": "Real firewalls too expensive and complex for home users"}
+{"id": "hn:35536048", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:35529139", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:35527826", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:27903542", "on_segment": "y", "need": "n", "reason": "Opinion on security practice"}
+{"id": "hn:2693687", "on_segment": "y", "need": "y", "reason": "Needs affordable Tripwire replacement for config verification"}
+{"id": "hn:25814940", "on_segment": "y", "need": "n", "reason": "Security discussion or opinion, no unmet need"}
+{"id": "hn:22180382", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:18213111", "on_segment": "y", "need": "y", "reason": "Asks how to stop location data collection on phone"}
+{"id": "hn:17881903", "on_segment": "y", "need": "n", "reason": "Opinion on security practice"}
+{"id": "hn:46987737", "on_segment": "y", "need": "n", "reason": "Product launch of cheap security scan"}
+{"id": "hn:45661976", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:43745978", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:29896217", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:26828158", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "hn:26827513", "on_segment": "n", "need": "n", "reason": "Off-segment: not about a security need"}
+{"id": "stackexchange:security:121062", "on_segment": "y", "need": "n", "reason": "General best-practice question on small business security"}

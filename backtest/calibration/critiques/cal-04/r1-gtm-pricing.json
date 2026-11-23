@@ -1,0 +1,46 @@
+{
+ "concept_id": "cal-04",
+ "lens": "gtm-pricing",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "A buyer with a budget (CISO/SOC director facing an analyst shortage), an ROI story in analyst-hours and a fast phishing-triage wedge make this sellable. But $50k for five seats is thin for direct enterprise sales plus integration services, per-seat pricing caps MSSP expansion, and bundling by SIEM vendors plus free TheHive will pressure price.",
+ "objections": [
+  {
+   "objection": "Contract value versus channel cost: direct enterprise sales from a US office, with integration setup and playbook building per customer, cost tens of thousands per deal. A $50k/yr entry for up to 5 analysts gives a long CAC payback unless deals land well above entry or expand quickly. Most named targets (5-30 analyst SOCs) sit near the low end.",
+   "severity": "major",
+   "evidence": "concept:pricing.entry_price; concept:go_to_market.channel; concept:go_to_market.first_customers"
+  },
+  {
+   "objection": "Per-analyst seat pricing fights the value proposition: the pitch is that automation lets fewer analysts do more, so success shrinks or freezes seat count. MSSPs, a named buyer, price per client and want per-tenant or volume pricing; per-seat caps expansion where automation volume grows fastest.",
+   "severity": "major",
+   "evidence": "concept:pricing.model; concept:pricing.rationale; concept:buyer.company_profile"
+  },
+  {
+   "objection": "Price anchor is weak: the comparables are quote-based incumbents and a free open-source tool, and the concept's own open question is whether buyers expect orchestration inside their SIEM. If SIEM vendors bundle playbooks, standalone pricing must justify itself against 'included' and 'free'.",
+   "severity": "major",
+   "evidence": "concept:pricing.comparables; concept:open_questions; concept:risks"
+  },
+  {
+   "objection": "Offering both on-prem and cloud from day one doubles delivery and support cost for a small team and lengthens security reviews; on-prem enterprise deals also tend to demand professional services that the price does not include.",
+   "severity": "minor",
+   "evidence": "concept:pricing.model; concept:build.hardest_parts"
+  },
+  {
+   "objection": "Beta success signal of 3 paid conversions from 5 SOCs after a 2-week trial is optimistic for enterprise buying cycles; procurement and integration with production tools typically take months, so revenue timing in the plan is likely late.",
+   "severity": "minor",
+   "evidence": "concept:riskiest_assumption.success_signal"
+  }
+ ],
+ "strongest_point": "Phishing-triage automation is a concrete, fast wedge with savings easily expressed in analyst-hours, sold to a CISO who already feels the hiring shortage.",
+ "what_would_change_my_mind": [
+  "3 of 5 beta SOCs convert at $100k+ first-year ACV within 6 months.",
+  "A pricing model that scales with automated actions or protected assets/tenants, accepted by 2 MSSPs.",
+  "Technology alliance with at least one major SIEM or endpoint vendor that sources deals.",
+  "Modeled CAC payback under 24 months including integration and onboarding effort."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Security_orchestration"
+ ]
+}

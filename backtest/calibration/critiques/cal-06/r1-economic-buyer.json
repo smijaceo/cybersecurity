@@ -1,0 +1,46 @@
+{
+ "concept_id": "cal-06",
+ "lens": "economic-buyer",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "As a large-enterprise CISO I have a real reason to fund lateral-movement containment (worm outbreaks, PCI scope reduction, board pressure), and $150/workload is within virtual-firewall budgets. But inline east-west inspection from an unproven vendor competes with my incumbent firewall ELA and carries outage risk; I'd need hard proof before signing.",
+ "objections": [
+  {
+   "objection": "No clear budget line of its own: it straddles the network-firewall refresh budget (owned by the network director, usually locked into an incumbent NGFW enterprise agreement that already includes virtual firewall licences) and the cloud-migration project budget. To fund $150k+ I'd have to cut or defer incumbent cloud licences I've already paid for, which the concept doesn't help me argue.",
+   "severity": "major",
+   "evidence": "concept:buyer.role; concept:riskiest_assumption.assumption; concept:competitors (Palo Alto Networks VM-Series, VMware NSX)"
+  },
+  {
+   "objection": "Must-have case is not made explicit. The strongest CFO justifications are compliance scope reduction (segmenting cardholder-data environments) and quantified ransomware/worm containment, but the concept pitches technical elegance (elastic microservices, one policy) rather than an audit finding, regulation or insurance requirement. Without that, it is a nice-to-have upgrade over segmentation I may already be deploying.",
+   "severity": "major",
+   "evidence": "concept:problem.summary; concept:why_now.summary"
+  },
+  {
+   "objection": "Putting a startup's inline inspection in the path of production east-west traffic is an availability risk I personally own. Application owners and the CIO will veto it unless there is a fail-open design, performance benchmarks at our traffic volumes and reference customers of our size; the concept itself lists inspection performance as a hardest part and has no references yet.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts; concept:risks"
+  },
+  {
+   "objection": "The success signal (3 of 10 funded proofs of concept within 2 weeks) does not match how large enterprises buy network security: a funded POC needs architecture review, security review and procurement, typically a quarter or more. A miss here would mislead the founders rather than test willingness to pay.",
+   "severity": "minor",
+   "evidence": "concept:riskiest_assumption.success_signal"
+  },
+  {
+   "objection": "Per-workload pricing grows as containers and autoscaling multiply workloads, which makes the bill unpredictable; finance will want caps or capacity tiers.",
+   "severity": "minor",
+   "evidence": "concept:pricing.model"
+  }
+ ],
+ "strongest_point": "Lateral-movement containment after high-profile worm outbreaks is a board-level worry for large enterprises, and per-workload pricing near virtual-firewall budgets is defensible to a CFO.",
+ "what_would_change_my_mind": [
+  "Two or three enterprises of our size running it inline on production east-west traffic for 90 days without an outage.",
+  "A documented PCI or audit scope reduction at a reference customer.",
+  "A performance benchmark at our east-west traffic volume.",
+  "An ROI showing it replaces, not adds to, virtual firewall licences we would otherwise renew."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Microsegmentation_(network_security)"
+ ]
+}

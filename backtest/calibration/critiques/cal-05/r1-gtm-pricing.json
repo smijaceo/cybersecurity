@@ -1,0 +1,45 @@
+{
+  "concept_id": "cal-05",
+  "lens": "gtm-pricing",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Direct enterprise sales to bank CISOs through founder networks fits the buyer, and $200/seat undercuts a second laptop. But the wedge (privileged admins) is too small to clear the 500-seat minimum, the 50-user pilot conflicts with that minimum, and a hypervisor-level endpoint change means long cycles and heavy support that $200/seat may not fund until fleet-wide expansion is proven.",
+  "objections": [
+    {
+      "objection": "Wedge and pricing floor conflict: privileged admins are a few hundred seats even at large banks, so many first accounts cannot reach the 500-endpoint minimum ($100k ACV floor), and the planned 50-user paid pilot contradicts the minimum. Real early ACVs are likely $10-50k, too small for a long direct-sales cycle.",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price; concept:go_to_market.wedge; concept:riskiest_assumption.test"
+    },
+    {
+      "objection": "Expansion path is unproven. The business only works at fleet scale (developers, traders, general workforce), but the concept itself lists whole-workforce value as an open question; without it, revenue per account stays at admin-seat size.",
+      "severity": "major",
+      "evidence": "concept:open_questions; concept:riskiest_assumption.assumption"
+    },
+    {
+      "objection": "Sales cycle versus burn: replacing endpoint architecture at regulated banks requires security architecture review, compatibility testing with existing agents and desktop-team buy-in; 12-24 month cycles are plausible, on top of 15 months to MVP with ~20 staff. Time to meaningful revenue is roughly 3 years, demanding substantial venture funding.",
+      "severity": "major",
+      "evidence": "concept:build.months_to_mvp; concept:build.team; concept:risks"
+    },
+    {
+      "objection": "The PAW incumbent is 'free' to the buyer: Microsoft's recommended secure workstation is built from Windows, Intune, Defender and Entra the bank already licenses, so the price comparison is against tooling already paid for, not against a new laptop.",
+      "severity": "minor",
+      "evidence": "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices"
+    },
+    {
+      "objection": "$200/seat may underprice a product with a heavy support burden (hypervisor compatibility across hardware and Windows builds, battery and performance complaints); support cost per seat could eat margin, and UX complaints are a direct churn and rollout-stall risk.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts; concept:risks"
+    }
+  ],
+  "strongest_point": "Dual laptops and VDI seats are concrete, already-budgeted costs; a per-seat price below hardware refresh cost gives the CISO an easy hard-dollar ROI case.",
+  "what_would_change_my_mind": [
+    "At least 4 of 10 target banks commit to paid pilots whose conversion terms already meet a 500-seat or $100k annual floor.",
+    "At least 2 pilot accounts name a second population (developers or traders) and budget for rollout within 12 months.",
+    "Pilot data showing support tickets per 100 seats low enough to keep gross margin above 70% at $200/seat."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices"
+  ]
+}

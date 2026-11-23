@@ -1,0 +1,48 @@
+{
+  "concept_id": "cal-05",
+  "lens": "legal-ethics",
+  "round": 1,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "Defensive, low-abuse product with no customer-data custody, so legal exposure is modest. The real issues are the 'malware cannot reach the other side' warranty, employer privacy duties over an 'unrestricted' personal-use OS, broker-dealer recordkeeping for traders using an unmonitored side, and OS licensing for a second Windows instance. All are fixable with contracts, policy controls and careful claims.",
+  "objections": [
+    {
+      "objection": "The MVP promises 'malware in one OS cannot reach the other'. Hypervisor escapes and side-channel flaws exist; a bank breached through the product will point at that claim. Absolute isolation claims create warranty, misrepresentation and regulator-scrutiny exposure; contracts must cap liability and marketing must avoid guarantees.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[0].why; https://en.wikipedia.org/wiki/Hypervisor"
+    },
+    {
+      "objection": "Traders and finance staff get an unrestricted OS. Broker-dealers must retain all business communications; staff using personal messaging or webmail on the open side recreates the off-channel communications problem regulators fine banks for. The product must keep business communications on the captured side or it hands target customers a compliance gap.",
+      "severity": "major",
+      "evidence": "https://www.law.cornell.edu/cfr/text/17/240.17a-4; concept:user"
+    },
+    {
+      "objection": "Central management of both OS images means the employer controls and can inspect an environment marketed for personal freedom. In the EU, workplace monitoring falls under GDPR and national employee-data rules (works councils); the product needs clear separation of what is logged on the open side, transparency material and a DPIA template.",
+      "severity": "minor",
+      "evidence": "https://gdpr-info.eu/art-88-gdpr/; concept:mvp.features[2]"
+    },
+    {
+      "objection": "Running a second Windows instance in a VM needs appropriate virtualization licensing rights (e.g. Enterprise/VDA-style rights); customers may face extra OS licence cost, and OS-vendor terms limit what a third-party hypervisor can ship. Pricing that claims savings versus a second laptop must account for this.",
+      "severity": "minor",
+      "evidence": "concept:pricing.rationale"
+    },
+    {
+      "objection": "A thin hypervisor beneath Windows is architecturally what hyperjacking rootkits do; a compromised update channel would give an attacker total control of privileged endpoints. Needs signed updates, secure-boot integration and a disclosure/patch policy to meet customer vendor-risk and regulator outsourcing expectations.",
+      "severity": "minor",
+      "evidence": "https://en.wikipedia.org/wiki/Hypervisor"
+    }
+  ],
+  "strongest_point": "Purely defensive tool that holds no customer data, credentials or PII off-device, so dual-use and data-custody risk is low compared with most security products.",
+  "what_would_change_my_mind": [
+    "Customer contract template with capped liability and no absolute isolation guarantee, reviewed by counsel at two pilot banks.",
+    "Design where communications tools run only on the corporate side and the open side blocks business email/messaging domains, accepted by a broker-dealer compliance officer.",
+    "Written OS-licensing position (from the OS vendor or licensing counsel) showing the second instance is covered by licences customers already own."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices",
+    "https://en.wikipedia.org/wiki/Hypervisor",
+    "https://gdpr-info.eu/art-88-gdpr/",
+    "https://www.law.cornell.edu/cfr/text/17/240.17a-4"
+  ]
+}

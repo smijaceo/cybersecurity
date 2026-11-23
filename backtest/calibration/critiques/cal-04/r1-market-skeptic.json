@@ -1,0 +1,41 @@
+{
+  "concept_id": "cal-04",
+  "lens": "market-skeptic",
+  "round": 1,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "Underlying demand (too many tools, too few analysts, repetitive response work) is plausible and budgeted, as funded orchestration rivals show. But the concept's evidence is only encyclopedia definitions with no buyer voice, the reachable market of staffed multi-vendor SOCs is finite, and the chat war room and learning bot are solution bets, not demonstrated needs.",
+  "objections": [
+    {
+      "objection": "No demand evidence from the named buyer. All problem evidence is generic Wikipedia definitions of incident management and orchestration; there are no CISO/SOC-director interviews, survey data on analyst hours lost, or purchase signals. The input file has no need statements or themes, so the market size and urgency are asserted, not shown.",
+      "severity": "major",
+      "evidence": "concept:problem.evidence; input:themes (empty), input:thesis (empty)"
+    },
+    {
+      "objection": "The differentiating parts (chat-centred war room, bot learning from analysts) are not what buyers are shown asking for. The stated pain is cross-product automation and staffing; collaboration-in-chat could be a nice-to-have that buyers expect from their existing chat or ticketing tools. The concept itself names this as its riskiest assumption.",
+      "severity": "major",
+      "evidence": "concept:riskiest_assumption.assumption; concept:differentiation"
+    },
+    {
+      "objection": "The target segment is narrow: organisations with a staffed SOC, multiple vendors and budget for a ~$50k+ standalone tool are a few thousand enterprises plus MSSPs worldwide. That supports a business, but every rival in the table is chasing the same accounts, so share per vendor may be small.",
+      "severity": "minor",
+      "evidence": "concept:buyer.company_profile; concept:competitors"
+    },
+    {
+      "objection": "Budget may sit with the SIEM/platform line rather than a new standalone category; if buyers expect orchestration bundled in their SIEM, standalone demand shrinks. The concept lists this as an open question without evidence either way.",
+      "severity": "minor",
+      "evidence": "concept:open_questions; concept:risks"
+    }
+  ],
+  "strongest_point": "Several funded vendors already sell orchestration to SOCs, which indicates buyers budget for cross-tool response automation driven by the analyst shortage.",
+  "what_would_change_my_mind": [
+    "Interviews with 15+ SOC directors where most report a quantified hours-per-week cost of manual enrichment/containment and an allocated budget",
+    "3+ signed LOIs or paid pilots",
+    "Beta SOCs handle at least half their incidents in the war room rather than their existing ticketing tool"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Security_orchestration",
+    "https://en.wikipedia.org/wiki/Computer_security_incident_management"
+  ]
+}

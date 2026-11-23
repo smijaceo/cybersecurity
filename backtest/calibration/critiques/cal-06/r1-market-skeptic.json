@@ -1,0 +1,47 @@
+{
+  "concept_id": "cal-06",
+  "lens": "market-skeptic",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "East-west security in large virtualised data centres is a real, budgeted line (firewall and data-centre security spend), but this concept shows no buyer voice at all: the input is empty and evidence is generic encyclopedia text. The specific pain (segmentation plus payload inspection, one policy across VMware, OpenStack and AWS) is asserted, not demonstrated, and the addressable buyer pool is narrow.",
+  "objections": [
+    {
+      "objection": "Zero demand evidence from the named buyer. The input has no need statements, themes or fact-checked research, and every problem citation is a definitional Wikipedia page. Nothing shows CISOs or network directors complaining that segmentation without inspection is their problem, let alone budgeting to fix it.",
+      "severity": "major",
+      "evidence": "input:themes, input:flagged_claims (both empty; priority 0); concept:problem.evidence"
+    },
+    {
+      "objection": "The combined need may be a vendor-framed problem. Buyers who want microsegmentation buy allow/deny from their hypervisor or a segmentation vendor; buyers who want inspection extend their incumbent NGFW as virtual appliances. Demand for a third, new-vendor category that merges both is the concept's own riskiest assumption and is untested.",
+      "severity": "major",
+      "evidence": "concept:riskiest_assumption.assumption; concept:competitors"
+    },
+    {
+      "objection": "Narrow and early buyer pool. The wedge needs large enterprises simultaneously running a virtualised data centre, OpenStack/KVM and a meaningful public-cloud footprint. Heterogeneous multi-cloud with substantive workloads was a minority pattern at founding; at $150k per 1,000 workloads, perhaps 1,000-3,000 qualifying enterprises worldwide, many years from enough cloud workloads to justify it.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.first_customers; concept:pricing.entry_price"
+    },
+    {
+      "objection": "Lateral-movement urgency is episodic. The flagship worm example post-dates a typical founding window and the pain spikes after incidents; between them, east-west inspection competes with perimeter and endpoint priorities and is easily deferred.",
+      "severity": "minor",
+      "evidence": "https://en.wikipedia.org/wiki/WannaCry_ransomware_attack"
+    },
+    {
+      "objection": "Growing encryption of east-west traffic erodes the DPI value proposition unless TLS decryption is cheap and accepted; the concept lists this as an open question, not a validated fact.",
+      "severity": "minor",
+      "evidence": "concept:open_questions"
+    }
+  ],
+  "strongest_point": "Data-centre and virtual firewall budgets already exist at large enterprises, so a credible product need not create a new budget line, only redirect one.",
+  "what_would_change_my_mind": [
+    "Interviews with 15+ network security leaders where at least 5 report a lateral-movement incident or audit finding on allowed ports and confirm a funded east-west security budget.",
+    "Evidence that target enterprises run production workloads on two or more cloud platforms (not just pilots).",
+    "At least 3 of 10 funded proofs of concept, as the concept's own test proposes."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Microsegmentation_(network_security)",
+    "https://en.wikipedia.org/wiki/WannaCry_ransomware_attack",
+    "https://en.wikipedia.org/wiki/Cloud_computing_security"
+  ]
+}

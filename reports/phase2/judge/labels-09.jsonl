@@ -1,0 +1,180 @@
+{"id": "hn:43215762", "on_segment": "y", "need": "n", "reason": "asks general security practice advice for activists"}
+{"id": "hn:9279326", "on_segment": "y", "need": "n", "reason": "general best-practice guidance request for startup"}
+{"id": "stackexchange:security:64795", "on_segment": "y", "need": "y", "reason": "PCI scanner false positives on backported OpenSSH cause compliance pain"}
+{"id": "hn:31554240", "on_segment": "y", "need": "n", "reason": "philosophical question about whether security is possible"}
+{"id": "stackexchange:security:86241", "on_segment": "y", "need": "n", "reason": "how-it-works question on RNG compliance"}
+{"id": "stackexchange:security:38863", "on_segment": "y", "need": "y", "reason": "needs secure automated unlock of passphrase-protected keys"}
+{"id": "stackexchange:security:49561", "on_segment": "y", "need": "y", "reason": "hacked IMAP account, brute-force attempts, seeks tooling"}
+{"id": "stackexchange:security:172020", "on_segment": "y", "need": "n", "reason": "offensive tooling how-to question"}
+{"id": "serverfault:serverfault:103058", "on_segment": "y", "need": "n", "reason": "how-to disable weak ciphers for PCI scan"}
+{"id": "github:3887098561", "on_segment": "n", "need": "n", "reason": "LLM context management feature, not security"}
+{"id": "hn:28111995", "on_segment": "y", "need": "y", "reason": "seeks privacy-respecting phone alternative"}
+{"id": "hn:17840003", "on_segment": "y", "need": "y", "reason": "poor company security, asks what to do"}
+{"id": "hn:41447458", "on_segment": "y", "need": "n", "reason": "general hardware supply-chain risk question"}
+{"id": "serverfault:serverfault:846042", "on_segment": "n", "need": "n", "reason": "generic log forwarding comparison, not small-team pain"}
+{"id": "serverfault:serverfault:544448", "on_segment": "n", "need": "n", "reason": "print auditing script, not security"}
+{"id": "github:3279227050", "on_segment": "n", "need": "n", "reason": "agent hook feature unrelated to security"}
+{"id": "hn:25520219", "on_segment": "y", "need": "y", "reason": "wants affordable non-enterprise code security audit services"}
+{"id": "hn:24354448", "on_segment": "n", "need": "n", "reason": "consumer home camera shopping"}
+{"id": "stackexchange:security:17357", "on_segment": "y", "need": "n", "reason": "PCI scope clarification question"}
+{"id": "serverfault:serverfault:846125", "on_segment": "n", "need": "n", "reason": "console login bug, not IAM security"}
+{"id": "serverfault:serverfault:502466", "on_segment": "y", "need": "n", "reason": "how-it-works question on integrity checking"}
+{"id": "github:4643885520", "on_segment": "n", "need": "n", "reason": "macOS app bug"}
+{"id": "serverfault:serverfault:564259", "on_segment": "y", "need": "y", "reason": "PCI scanner flags backported CVE, vendor won't fix"}
+{"id": "github:5515759900", "on_segment": "y", "need": "y", "reason": "untrusted-provenance memory silently excluded, no visibility or recovery"}
+{"id": "hn:19494700", "on_segment": "y", "need": "y", "reason": "growing startup needs unified endpoint security platform"}
+{"id": "hn:12387694", "on_segment": "y", "need": "y", "reason": "needs comprehensive vulnerability feed monitoring"}
+{"id": "serverfault:serverfault:1077973", "on_segment": "n", "need": "n", "reason": "certificate upload how-to, not cloud security"}
+{"id": "serverfault:serverfault:1003106", "on_segment": "n", "need": "n", "reason": "enterprise SIEM syslog forwarding question"}
+{"id": "serverfault:serverfault:232937", "on_segment": "y", "need": "n", "reason": "PCI steps guidance question"}
+{"id": "serverfault:serverfault:901694", "on_segment": "y", "need": "y", "reason": "struggling to interpret DMARC compliance reports"}
+{"id": "github:4139233611", "on_segment": "y", "need": "y", "reason": "background tasks bypass permissions autonomously"}
+{"id": "github:3946668404", "on_segment": "n", "need": "n", "reason": "runtime choice discussion, security incidental"}
+{"id": "hn:26428033", "on_segment": "n", "need": "n", "reason": "consumer self-hosted camera shopping"}
+{"id": "serverfault:serverfault:331015", "on_segment": "n", "need": "n", "reason": "software license audit, not security"}
+{"id": "github:690415628", "on_segment": "n", "need": "n", "reason": "token standard discussion"}
+{"id": "hn:5444402", "on_segment": "y", "need": "n", "reason": "disclosure anecdote, no tool gap"}
+{"id": "hn:5053590", "on_segment": "y", "need": "n", "reason": "opinion question about language exploits"}
+{"id": "hn:23918219", "on_segment": "y", "need": "y", "reason": "seeks affordable security audit providers"}
+{"id": "stackexchange:security:179263", "on_segment": "y", "need": "n", "reason": "PCI ISP requirement question"}
+{"id": "stackexchange:security:104352", "on_segment": "y", "need": "y", "reason": "seeks automated certificate signing solution"}
+{"id": "github:1563372546", "on_segment": "n", "need": "n", "reason": "dependency resolver bug"}
+{"id": "stackexchange:security:143347", "on_segment": "y", "need": "n", "reason": "attacker fingerprinting curiosity"}
+{"id": "stackexchange:security:33763", "on_segment": "y", "need": "y", "reason": "needs file change content tracking for audit compliance"}
+{"id": "stackexchange:security:216211", "on_segment": "n", "need": "n", "reason": "data entry automation"}
+{"id": "serverfault:serverfault:558994", "on_segment": "y", "need": "y", "reason": "PCI scanner flags distro PHP version"}
+{"id": "serverfault:serverfault:184230", "on_segment": "y", "need": "n", "reason": "SSL cipher configuration how-to"}
+{"id": "serverfault:serverfault:422529", "on_segment": "y", "need": "n", "reason": "mod_security logging config question"}
+{"id": "serverfault:serverfault:541054", "on_segment": "n", "need": "n", "reason": "IIS logging performance"}
+{"id": "github:4255179405", "on_segment": "n", "need": "n", "reason": "CLI policy error bug"}
+{"id": "github:4085847039", "on_segment": "n", "need": "n", "reason": "context management feature"}
+{"id": "github:3848169126", "on_segment": "y", "need": "n", "reason": "bug: injected message trips prompt-injection guard"}
+{"id": "github:3361399780", "on_segment": "y", "need": "y", "reason": "deny permissions not enforced in agent"}
+{"id": "hn:14666584", "on_segment": "y", "need": "y", "reason": "seeks AWS security testing tools"}
+{"id": "hn:30288999", "on_segment": "y", "need": "y", "reason": "needs decent security awareness training for compliance"}
+{"id": "stackexchange:security:44863", "on_segment": "y", "need": "y", "reason": "small business lacks private secure phones"}
+{"id": "stackexchange:security:140088", "on_segment": "y", "need": "y", "reason": "scanners fail to detect stored XSS"}
+{"id": "serverfault:serverfault:328968", "on_segment": "y", "need": "y", "reason": "needs audit logging for AD operations"}
+{"id": "serverfault:serverfault:731657", "on_segment": "y", "need": "y", "reason": "PCI scanner flags distro Apache version"}
+{"id": "github:1452481785", "on_segment": "y", "need": "y", "reason": "feature request for security tool payload generator"}
+{"id": "github:3560339150", "on_segment": "n", "need": "n", "reason": "inference engine bug"}
+{"id": "github:4293967554", "on_segment": "n", "need": "n", "reason": "API prompt modification, not security"}
+{"id": "github:4058475188", "on_segment": "y", "need": "y", "reason": "proposes untrusted annotations against tool-response prompt injection"}
+{"id": "github:3329003295", "on_segment": "y", "need": "y", "reason": "MCP tool permissions don't scale"}
+{"id": "stackexchange:security:25550", "on_segment": "y", "need": "n", "reason": "PCI liability question"}
+{"id": "serverfault:serverfault:348110", "on_segment": "y", "need": "n", "reason": "PCI architecture question"}
+{"id": "serverfault:serverfault:993803", "on_segment": "y", "need": "n", "reason": "how-it-works question on SSL and phishing"}
+{"id": "serverfault:serverfault:874140", "on_segment": "y", "need": "y", "reason": "ransomware deleted shadow copies, needs recovery"}
+{"id": "serverfault:serverfault:25244", "on_segment": "n", "need": "n", "reason": "IIS logging troubleshooting"}
+{"id": "github:2636257999", "on_segment": "n", "need": "n", "reason": "extension stability tracking"}
+{"id": "github:629483147", "on_segment": "n", "need": "n", "reason": "crypto performance issue"}
+{"id": "github:5567708614", "on_segment": "y", "need": "n", "reason": "research use-case submission, no concrete gap"}
+{"id": "serverfault:serverfault:171918", "on_segment": "y", "need": "y", "reason": "insecure deploy setup needs fix"}
+{"id": "serverfault:serverfault:385401", "on_segment": "y", "need": "y", "reason": "wants self-run PCI pre-scan software"}
+{"id": "serverfault:serverfault:64280", "on_segment": "y", "need": "y", "reason": "site compromised for phishing, needs help"}
+{"id": "github:3817016196", "on_segment": "n", "need": "n", "reason": "API error bug"}
+{"id": "github:3862799917", "on_segment": "n", "need": "n", "reason": "dependency incompatibility"}
+{"id": "github:4214874784", "on_segment": "y", "need": "y", "reason": "requests NeMo guardrails support in LLM gateway"}
+{"id": "github:5683357131", "on_segment": "y", "need": "y", "reason": "requests deterministic pre-execution gating for agent tools"}
+{"id": "github:4484384126", "on_segment": "y", "need": "y", "reason": "non-interactive mode auto-approves writes, unsafe"}
+{"id": "github:3546493996", "on_segment": "y", "need": "y", "reason": "proposes safer brokered MCP filesystem access"}
+{"id": "hn:25654632", "on_segment": "y", "need": "n", "reason": "consumer card design question"}
+{"id": "stackexchange:security:194368", "on_segment": "y", "need": "y", "reason": "tiny business burdened by SOC 2 demand"}
+{"id": "stackexchange:security:24849", "on_segment": "y", "need": "n", "reason": "research question on router defaults"}
+{"id": "serverfault:serverfault:539342", "on_segment": "y", "need": "y", "reason": "seeks affordable correlation on log aggregation"}
+{"id": "serverfault:serverfault:113129", "on_segment": "n", "need": "n", "reason": "OS imaging question"}
+{"id": "serverfault:serverfault:62878", "on_segment": "n", "need": "n", "reason": "generic hosted logging request"}
+{"id": "github:975971007", "on_segment": "n", "need": "n", "reason": "search cluster node roles"}
+{"id": "github:4549647906", "on_segment": "n", "need": "n", "reason": "tool-call error bug"}
+{"id": "github:3898127247", "on_segment": "y", "need": "y", "reason": "proposes system-level safety check for agents"}
+{"id": "github:3719925213", "on_segment": "y", "need": "y", "reason": "requests audit logging for MCP actions"}
+{"id": "hn:16255598", "on_segment": "y", "need": "y", "reason": "small nonprofit needs security assessment"}
+{"id": "stackexchange:security:38754", "on_segment": "y", "need": "n", "reason": "PCI requirements question"}
+{"id": "stackexchange:security:71570", "on_segment": "y", "need": "n", "reason": "PCI scope question"}
+{"id": "serverfault:serverfault:379285", "on_segment": "y", "need": "n", "reason": "logrotate security question"}
+{"id": "serverfault:serverfault:620032", "on_segment": "y", "need": "y", "reason": "no solution found for session recording audit"}
+{"id": "serverfault:serverfault:765368", "on_segment": "n", "need": "n", "reason": "log level config"}
+{"id": "github:4496498460", "on_segment": "y", "need": "n", "reason": "bug report on unexpected filesystem access prompts"}
+{"id": "github:1085792029", "on_segment": "y", "need": "y", "reason": "wants to block extension network requests"}
+{"id": "github:2923180946", "on_segment": "n", "need": "n", "reason": "app profiles feature"}
+{"id": "github:5477110217", "on_segment": "n", "need": "n", "reason": "usage consumption bug"}
+{"id": "github:5452658928", "on_segment": "n", "need": "n", "reason": "project contribution proposal"}
+{"id": "github:3022297259", "on_segment": "n", "need": "n", "reason": "new MCP server for message broker"}
+{"id": "stackexchange:security:36413", "on_segment": "y", "need": "n", "reason": "research tool choice question"}
+{"id": "stackexchange:security:86298", "on_segment": "y", "need": "n", "reason": "how-it-works of attack tool"}
+{"id": "stackexchange:security:93217", "on_segment": "y", "need": "n", "reason": "PCI liability question"}
+{"id": "stackexchange:security:279331", "on_segment": "y", "need": "n", "reason": "how-it-works of prompt injection technique"}
+{"id": "serverfault:serverfault:1043732", "on_segment": "y", "need": "n", "reason": "how-it-works of EKS authentication"}
+{"id": "serverfault:serverfault:145626", "on_segment": "y", "need": "y", "reason": "seeking SIEM product recommendation"}
+{"id": "serverfault:serverfault:684960", "on_segment": "y", "need": "n", "reason": "log shipping design question"}
+{"id": "serverfault:serverfault:70282", "on_segment": "y", "need": "n", "reason": "opinion comparison question"}
+{"id": "serverfault:serverfault:195570", "on_segment": "y", "need": "n", "reason": "configuration opinion question"}
+{"id": "serverfault:serverfault:807154", "on_segment": "y", "need": "n", "reason": "tool error during log translation"}
+{"id": "serverfault:serverfault:704781", "on_segment": "y", "need": "y", "reason": "PCI isolation burden for call-centre payments"}
+{"id": "serverfault:serverfault:920349", "on_segment": "y", "need": "y", "reason": "asks for central phishing reporting place"}
+{"id": "serverfault:serverfault:545832", "on_segment": "y", "need": "n", "reason": "how-it-works question on SPF"}
+{"id": "serverfault:serverfault:102449", "on_segment": "n", "need": "n", "reason": "log parsing question"}
+{"id": "github:1772562649", "on_segment": "n", "need": "n", "reason": "type bug"}
+{"id": "github:4034742123", "on_segment": "n", "need": "n", "reason": "app idea, not security need"}
+{"id": "github:3275306247", "on_segment": "n", "need": "n", "reason": "autoscaling proposal"}
+{"id": "github:5439111446", "on_segment": "n", "need": "n", "reason": "update failure bug"}
+{"id": "github:4121524140", "on_segment": "n", "need": "n", "reason": "auto-generated agent task"}
+{"id": "hn:10657097", "on_segment": "n", "need": "n", "reason": "career question"}
+{"id": "stackexchange:security:25059", "on_segment": "y", "need": "y", "reason": "lacks compliant temporary card storage"}
+{"id": "stackexchange:security:46142", "on_segment": "y", "need": "y", "reason": "PCI scan flags distro package versions"}
+{"id": "stackexchange:security:69033", "on_segment": "y", "need": "n", "reason": "PCI checklist confirmation"}
+{"id": "serverfault:serverfault:1122345", "on_segment": "y", "need": "y", "reason": "hard to restrict IAM admins from specific resources"}
+{"id": "serverfault:serverfault:75502", "on_segment": "y", "need": "n", "reason": "proxy config security question"}
+{"id": "serverfault:serverfault:1078821", "on_segment": "y", "need": "y", "reason": "audit logs flooded by AV noise"}
+{"id": "serverfault:serverfault:851890", "on_segment": "y", "need": "y", "reason": "DMARC failures from marketing platform"}
+{"id": "serverfault:serverfault:203434", "on_segment": "n", "need": "n", "reason": "software license tool request"}
+{"id": "serverfault:serverfault:1041277", "on_segment": "y", "need": "y", "reason": "phishing simulation blocked by mail filter"}
+{"id": "github:3865649434", "on_segment": "n", "need": "n", "reason": "YAML library feature"}
+{"id": "github:2281335337", "on_segment": "y", "need": "y", "reason": "needs standardized LLM security telemetry fields"}
+{"id": "github:4754257275", "on_segment": "y", "need": "y", "reason": "secrets passed as raw MCP tool input"}
+{"id": "github:4349734924", "on_segment": "n", "need": "n", "reason": "trace context propagation, not security"}
+{"id": "github:4047173335", "on_segment": "n", "need": "n", "reason": "auto-generated agent task"}
+{"id": "stackexchange:security:211247", "on_segment": "y", "need": "n", "reason": "PCI payment approach question"}
+{"id": "stackexchange:security:16690", "on_segment": "y", "need": "n", "reason": "market drivers question"}
+{"id": "stackexchange:security:249541", "on_segment": "y", "need": "n", "reason": "how-it-works of signature verification"}
+{"id": "serverfault:serverfault:1002822", "on_segment": "y", "need": "y", "reason": "no automatic Chromebook log forwarding to SIEM"}
+{"id": "serverfault:serverfault:1012365", "on_segment": "y", "need": "n", "reason": "audit policy configuration problem"}
+{"id": "serverfault:serverfault:300759", "on_segment": "y", "need": "y", "reason": "PCI scan dispute declined, stuck"}
+{"id": "serverfault:serverfault:609240", "on_segment": "y", "need": "n", "reason": "confusion over scan result"}
+{"id": "serverfault:serverfault:547708", "on_segment": "y", "need": "y", "reason": "server compromised hosting phishing"}
+{"id": "serverfault:serverfault:507309", "on_segment": "y", "need": "y", "reason": "spoofed spam bypassing filters"}
+{"id": "serverfault:serverfault:516962", "on_segment": "n", "need": "n", "reason": "email deliverability"}
+{"id": "github:2659693345", "on_segment": "y", "need": "y", "reason": "can't verify immutable actions as consumer"}
+{"id": "github:4085224086", "on_segment": "n", "need": "n", "reason": "scripting proposal"}
+{"id": "github:4237428075", "on_segment": "n", "need": "n", "reason": "telemetry export feature"}
+{"id": "github:3182436684", "on_segment": "n", "need": "n", "reason": "proxy function-call issue"}
+{"id": "github:4058901851", "on_segment": "n", "need": "n", "reason": "auto-generated agent task"}
+{"id": "github:4006116191", "on_segment": "n", "need": "n", "reason": "API key config bug"}
+{"id": "hn:34464803", "on_segment": "y", "need": "n", "reason": "learning resource request"}
+{"id": "hn:45321165", "on_segment": "y", "need": "n", "reason": "article overview"}
+{"id": "stackexchange:security:165003", "on_segment": "y", "need": "y", "reason": "suspects RAT, needs detection"}
+{"id": "stackexchange:security:108293", "on_segment": "y", "need": "n", "reason": "how-it-works of signing"}
+{"id": "stackexchange:security:277455", "on_segment": "y", "need": "n", "reason": "credential design question"}
+{"id": "stackexchange:security:10967", "on_segment": "y", "need": "n", "reason": "PCI level question"}
+{"id": "stackexchange:security:51535", "on_segment": "y", "need": "n", "reason": "PCI scope question"}
+{"id": "stackexchange:security:244857", "on_segment": "y", "need": "n", "reason": "PCI multi-tenancy question"}
+{"id": "stackexchange:security:9169", "on_segment": "y", "need": "n", "reason": "tool suitability question"}
+{"id": "stackexchange:security:202680", "on_segment": "y", "need": "y", "reason": "incident response automation missing"}
+{"id": "stackexchange:security:121197", "on_segment": "y", "need": "y", "reason": "wants automated abuse reporting"}
+{"id": "serverfault:serverfault:698176", "on_segment": "y", "need": "n", "reason": "IAM practice question"}
+{"id": "serverfault:serverfault:971442", "on_segment": "y", "need": "n", "reason": "IAM policy syntax question"}
+{"id": "serverfault:serverfault:608230", "on_segment": "y", "need": "y", "reason": "struggling to express deny-RunInstances IAM policy"}
+{"id": "serverfault:serverfault:105778", "on_segment": "y", "need": "n", "reason": "SSH basics question"}
+{"id": "serverfault:serverfault:63132", "on_segment": "y", "need": "n", "reason": "handling leftover traffic question"}
+{"id": "serverfault:serverfault:1156141", "on_segment": "y", "need": "y", "reason": "phishing passes SPF/DKIM/DMARC"}
+{"id": "serverfault:serverfault:1084543", "on_segment": "y", "need": "y", "reason": "false positive phishing blocks"}
+{"id": "serverfault:serverfault:1110610", "on_segment": "y", "need": "n", "reason": "configuration performance question"}
+{"id": "github:3863831389", "on_segment": "n", "need": "n", "reason": "infrastructure essay"}
+{"id": "github:859157157", "on_segment": "y", "need": "y", "reason": "locked-out users lack TOTP reset"}
+{"id": "github:4153374653", "on_segment": "y", "need": "y", "reason": "needs hooks preventing secret exfiltration"}
+{"id": "github:6399271149", "on_segment": "n", "need": "n", "reason": "orchestration lease bug"}
+{"id": "github:4814442897", "on_segment": "n", "need": "n", "reason": "prompt override feature"}
+{"id": "github:3933101633", "on_segment": "n", "need": "n", "reason": "working directory feature"}
+{"id": "github:3958498234", "on_segment": "y", "need": "y", "reason": "sandbox doesn't isolate all tools"}
+{"id": "github:3789883695", "on_segment": "n", "need": "n", "reason": "context clear hook"}
+{"id": "github:4244846832", "on_segment": "y", "need": "y", "reason": "needs per-call risk gating for agent tools"}

@@ -1,0 +1,43 @@
+{
+  "concept_id": "cal-07",
+  "lens": "economic-buyer",
+  "round": 1,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "As a VP R&D at a camera or router maker with no product-security team, I have no budget line for this. It competes with feature work and BOM cuts, and nothing obliges me to buy. I would pay only when a named carrier, distributor or regulator asks for proof, and the concept has no such requirement in hand. Medical and industrial makers are the exception the concept doesn't prioritise.",
+  "objections": [
+    {
+      "objection": "No budget line and no forcing function. Without a dedicated security team, $25k/yr plus $5k per model has to come out of the R&D tooling or QA budget, where it competes directly with headcount, features and cost-down work. The concept itself names 'won't pay before regulation forces them' as its riskiest assumption, so as the buyer I would defer it every quarter until something forces me.",
+      "severity": "fatal",
+      "evidence": "concept:riskiest_assumption.assumption; concept:risks; concept:buyer.company_profile"
+    },
+    {
+      "objection": "The certificate has no proven value to my customers. I would pay $5k per model only if a large distributor, carrier or retailer accepts it in place of its own questionnaire or a UL-style lab test. The concept admits that a certificate without a recognised standard carries little weight, and lists carrier requirements as an open question. That leaves me nothing to put in front of my CFO.",
+      "severity": "major",
+      "evidence": "concept:risks; concept:open_questions; concept:mvp.features"
+    },
+    {
+      "objection": "The ROI story is soft. 'Cheaper than repeated manual pentests and lab certifications' only works for makers who already pay for those, yet the target buyer is defined as one who doesn't. My CFO would ask what spend this replaces, and for most of the target segment the answer is none. The cost of a breach (a Mirai-style recall or brand damage) is real but improbable for any single maker, so it doesn't justify a line item.",
+      "severity": "major",
+      "evidence": "concept:pricing.rationale; concept:buyer.company_profile; concept:problem.evidence"
+    },
+    {
+      "objection": "The concept sells to the wrong segment first. Medical-device makers face premarket cybersecurity expectations from regulators, and industrial suppliers face customer security specifications, so their budgets already exist. The first-customer plan targets cameras, routers and smart-home devices instead: the most price-sensitive segment with the least mandated spend.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.first_customers; concept:buyer.company_profile"
+    },
+    {
+      "objection": "The validation test is too fast for a buyer cycle. A firmware-analysis contract plus certification at a hardware maker goes through engineering, procurement and legal review; 4 out of 20 buying within 2 weeks would not happen even if they wanted it, so the test produces a false negative.",
+      "severity": "minor",
+      "evidence": "concept:riskiest_assumption.success_signal"
+    }
+  ],
+  "strongest_point": "A free firmware report showing my device's real exposures is an incident-shaped artefact I can take to leadership, and it costs me nothing to try.",
+  "what_would_change_my_mind": [
+    "Written confirmation from two or more large carriers, retailers or distributors that they will accept or require the certificate from suppliers.",
+    "3 of 10 interviewed makers show a customer security questionnaire or contract clause that blocked or delayed a sale in the last year.",
+    "A pivot to medical or industrial makers, where 3 of 10 already have a budgeted line for firmware security testing."
+  ],
+  "resolved_prior": [],
+  "sources": []
+}

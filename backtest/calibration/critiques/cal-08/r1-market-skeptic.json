@@ -1,0 +1,46 @@
+{
+ "concept_id": "cal-08",
+ "lens": "market-skeptic",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "Patch latency is a real, board-visible pain after Equifax, and enterprises already budget for scanners and risk-based prioritisation. But the evidence is generic background, not buyer voice; the 'remediation is slowest' claim isn't in the cited source; and the buyer is split between security and IT, so a separate orchestration budget line is unproven.",
+ "objections": [
+  {
+   "objection": "No buyer-side demand evidence. All sources are Wikipedia background (Equifax, CVE counts, patching). None shows a CISO or CIO saying they would fund a separate remediation-orchestration tool; input themes and flagged claims are empty. The cited vulnerability-management page lists remediation as a stage but does not say it is the slowest one.",
+   "severity": "major",
+   "evidence": "concept:problem.evidence; https://en.wikipedia.org/wiki/Vulnerability_management; cal-08.input.json themes=[]"
+  },
+  {
+   "objection": "Split budget owner. Security owns scanners and finds the flaws, while IT and DevOps own patching. The concept itself asks who owns the remediation budget. An orchestration layer that serves both risks having no single sponsor, and IT usually already pays for ITSM and patch tools that cover routing.",
+   "severity": "major",
+   "evidence": "concept:open_questions[0]; concept:riskiest_assumption.assumption; concept:buyer.role"
+  },
+  {
+   "objection": "Budget displacement, not new money. Targets already pay for scanners, often a risk-based prioritisation tool, and ITSM. The concept is a fourth layer next to these, competing for spend with features the scanner and ITSM vendors can bundle.",
+   "severity": "major",
+   "evidence": "concept:competitors; concept:risks[0]; concept:risks[1]"
+  },
+  {
+   "objection": "Equifax-type root causes go beyond tooling. The breach followed an audit that found no asset inventory, no criticality-based prioritisation and an honour-system patch process. That is a process and accountability failure, which an orchestration tool helps but does not by itself fix; buyers may spend on people and process first.",
+   "severity": "minor",
+   "evidence": "https://en.wikipedia.org/wiki/2017_Equifax_data_breach"
+  },
+  {
+   "objection": "Market is real but unsized. 1,000+ staff enterprises running several scanners number in the thousands in the US and Israel, which is enough at $30k/year, but the concept gives no count and no data on how many have a dedicated VM lead or an audit finding on patch latency.",
+   "severity": "minor",
+   "evidence": "concept:go_to_market.first_customers; concept:pricing.entry_price"
+  }
+ ],
+ "strongest_point": "Unpatched known vulnerabilities are a proven breach cause with board and audit attention, and buyers already spend on scanners and prioritisation, so the adjacent pain is funded.",
+ "what_would_change_my_mind": [
+  "15+ interviews with VM program owners where at least a third name remediation coordination, not detection or prioritisation, as their top funded priority next budget cycle",
+  "Evidence that at least half of target enterprises have an audit or regulator finding on patch latency with a remediation deadline",
+  "2 of 5 beta customers signing paid contracts from a named budget line (security or IT) after the time-to-fix trial"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/2017_Equifax_data_breach",
+  "https://en.wikipedia.org/wiki/Vulnerability_management"
+ ]
+}

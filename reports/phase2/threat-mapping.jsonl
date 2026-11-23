@@ -1,8 +1,24 @@
-{"theme_id": 0, "techniques": ["T1195.001", "T1195.002"], "threat_relevance": 2, "reason": "Component inventory speeds response to compromised dependencies, but SBOM generation itself prevents nothing."}
-{"theme_id": 2, "techniques": ["T1068", "T1499.004"], "threat_relevance": 3, "reason": "Exploiting known-vulnerable third-party libraries is a common, actively exploited path; faster patching closes it directly."}
-{"theme_id": 3, "techniques": [], "threat_relevance": 2, "reason": "Prompt deprovisioning removes orphaned accounts attackers reuse; no candidate covers valid-account abuse."}
-{"theme_id": 7, "techniques": ["T1550.001"], "threat_relevance": 2, "reason": "Short-lived IAM tokens replace static database and service passwords, shrinking the window for stolen-credential reuse."}
-{"theme_id": 8, "techniques": ["T1685.002", "T1685.001"], "threat_relevance": 2, "reason": "Feed monitoring can catch disabled logging; noise reduction aids detection broadly but indirectly."}
-{"theme_id": 10, "techniques": [], "threat_relevance": 3, "reason": "Leaked static AWS keys are a top cloud breach path; role-based short-lived credentials remove them. No candidate fits."}
-{"theme_id": 11, "techniques": [], "threat_relevance": 1, "reason": "SBOM format support and attestations are mostly compliance and interoperability; candidates are unrelated."}
-{"theme_id": 14, "techniques": ["T1195.001"], "threat_relevance": 2, "reason": "Dependency context speeds triage of vulnerable or compromised components, an indirect exposure reduction."}
+{"theme_id": 0, "techniques": ["T1528", "T1550.001", "T1078"], "threat_relevance": 2, "reason": "Scoped agent credentials and tool-call audit limit token theft and misuse; MCP abuse still emerging, not yet common."}
+{"theme_id": 4, "techniques": ["T1078.002", "T1021", "T1136.002"], "threat_relevance": 2, "reason": "Login and activity auditing helps detect valid-account misuse and lateral movement, mainly after the fact."}
+{"theme_id": 8, "techniques": ["T1190", "T1505", "T1554"], "threat_relevance": 1, "reason": "Compliance-driven scanning and file integrity checks; modest, indirect protection for public web servers."}
+{"theme_id": 9, "techniques": ["T1195.001", "T1553.002"], "threat_relevance": 2, "reason": "SBOMs and signing improve supply-chain visibility and provenance but do not block compromised dependencies directly."}
+{"theme_id": 10, "techniques": ["T1698", "T1699", "T1700"], "threat_relevance": 3, "reason": "Directly blocks prompt-injection-driven unsafe tool calls and exfiltration, an actively exploited agent attack path."}
+{"theme_id": 12, "techniques": [], "threat_relevance": 1, "reason": "Broad small-business audits and training; general hygiene with no specific technique link among candidates."}
+{"theme_id": 14, "techniques": ["T1190", "T1133"], "threat_relevance": 2, "reason": "24x7 monitoring speeds detection of common intrusions, but is a procurement-level, indirect need."}
+{"theme_id": 15, "techniques": ["T1136.003", "T1098.003"], "threat_relevance": 1, "reason": "Automated provisioning and deprovisioning reduces orphaned accounts; mostly operational identity lifecycle benefit."}
+{"theme_id": 16, "techniques": ["T1685.001", "T1685.002", "T1685.005"], "threat_relevance": 2, "reason": "Centralised log collection preserves evidence against log tampering and enables detection, indirectly."}
+{"theme_id": 19, "techniques": ["T1078", "T1078.003", "T1098"], "threat_relevance": 2, "reason": "PAM controls privileged credentials and session monitoring, reducing valid-account abuse; procurement-oriented need."}
+{"theme_id": 22, "techniques": ["T1195.001", "T1588.006", "T1588.005"], "threat_relevance": 3, "reason": "Tracking and patching vulnerable dependencies directly addresses compromised and exploited third-party components."}
+{"theme_id": 27, "techniques": [], "threat_relevance": 1, "reason": "Governance documentation and disclosure compliance; little direct effect on attacker techniques."}
+{"theme_id": 30, "techniques": ["T1133", "T1686.002"], "threat_relevance": 1, "reason": "Firewall refresh and licence renewal is maintenance; supported perimeter limits exposure only marginally."}
+{"theme_id": 33, "techniques": ["T1486", "T1490", "T1485"], "threat_relevance": 3, "reason": "Ransomware detection and file restoration directly counters common, actively exploited encryption-for-impact attacks."}
+{"theme_id": 35, "techniques": ["T1552.001"], "threat_relevance": 3, "reason": "Finding secrets leaked in repositories and CI directly prevents widely exploited credential theft from files."}
+{"theme_id": 40, "techniques": ["T1530", "T1078.004", "T1686.001"], "threat_relevance": 2, "reason": "Posture management closes cloud misconfigurations like exposed storage and open firewalls; preventive hygiene, indirect."}
+{"theme_id": 44, "techniques": [], "threat_relevance": 1, "reason": "SBOM format and VEX support is tooling compatibility; no relevant candidate techniques."}
+{"theme_id": 45, "techniques": ["T1609", "T1098.006", "T1613"], "threat_relevance": 2, "reason": "Pod security standards and RBAC limit container escape and cluster privilege abuse; configuration hygiene."}
+{"theme_id": 46, "techniques": ["T1588.006"], "threat_relevance": 1, "reason": "Regulatory duties for manufacturers; vulnerability handling helps somewhat, but mostly compliance work."}
+{"theme_id": 48, "techniques": [], "threat_relevance": 1, "reason": "Certified secure workstations for classified data; procurement need with no clear candidate technique link."}
+{"theme_id": 50, "techniques": [], "threat_relevance": 0, "reason": "Post-incident regulatory reporting and notification; no effect on attacker behaviour."}
+{"theme_id": 51, "techniques": ["T1078", "T1078.003", "T1548.005"], "threat_relevance": 2, "reason": "PAM limits privileged account abuse and enforces temporary elevation; procurement-oriented need."}
+{"theme_id": 55, "techniques": ["T1195.001", "T1195"], "threat_relevance": 2, "reason": "Impact analysis speeds response to vulnerable or compromised components, but is visibility not prevention."}
+{"theme_id": 59, "techniques": ["T1486", "T1685"], "threat_relevance": 2, "reason": "Integrated EDR/SIEM materially improves detection and response; broad procurement need, candidates mostly weak."}

@@ -1,0 +1,180 @@
+{"id": "ted:348195-2025", "on_segment": "n", "need": "n", "reason": "Tender visibly about container vulnerability management, not identity/access"}
+{"id": "ted:326650-2025", "on_segment": "n", "need": "n", "reason": "Tender visibly about container vulnerability management, not identity/access"}
+{"id": "ted:273573-2025", "on_segment": "y", "need": "y", "reason": "Tender procures a privileged access management system"}
+{"id": "ted:260265-2025", "on_segment": "n", "need": "n", "reason": "Tender visibly about container vulnerability management, not identity/access"}
+{"id": "ted:230142-2025", "on_segment": "n", "need": "n", "reason": "Generic municipal cybersecurity infrastructure upgrade, not identity-specific"}
+{"id": "ted:159687-2025", "on_segment": "n", "need": "n", "reason": "Generic municipal cybersecurity infrastructure upgrade, not identity-specific"}
+{"id": "ted:122215-2025", "on_segment": "n", "need": "n", "reason": "Firewall procurement, not identity or access management"}
+{"id": "ted:18994-2025", "on_segment": "y", "need": "y", "reason": "Tender procures a privileged access management system"}
+{"id": "ted:707070-2024", "on_segment": "y", "need": "y", "reason": "Tender procures a privileged access management system"}
+{"id": "ted:655497-2024", "on_segment": "y", "need": "y", "reason": "Tender procures PAM licences"}
+{"id": "ted:439558-2024", "on_segment": "y", "need": "y", "reason": "Tender procures a privileged access management system"}
+{"id": "ted:433606-2024", "on_segment": "n", "need": "n", "reason": "Generic security hardware/software bundle, no identity focus stated"}
+{"id": "ted:419780-2024", "on_segment": "y", "need": "y", "reason": "Tender procures a privileged access management system"}
+{"id": "ted:385250-2024", "on_segment": "y", "need": "y", "reason": "Tender procures a privileged access management system"}
+{"id": "ted:363889-2024", "on_segment": "n", "need": "n", "reason": "Generic security hardware/software bundle, no identity focus stated"}
+{"id": "ted:363169-2024", "on_segment": "y", "need": "y", "reason": "Tender procures a privileged access management system"}
+{"id": "ted:185330-2024", "on_segment": "y", "need": "y", "reason": "Tender procures a privileged access management system"}
+{"id": "ted:672943-2023", "on_segment": "y", "need": "y", "reason": "Tender procures password manager with PAM functionality"}
+{"id": "ted:502346-2023", "on_segment": "n", "need": "n", "reason": "No body text; title gives no identity-access content"}
+{"id": "ted:151421-2023", "on_segment": "n", "need": "n", "reason": "No body text; title gives no identity-access content"}
+{"id": "ted:662522-2022", "on_segment": "n", "need": "n", "reason": "No body text; title gives no identity-access content"}
+{"id": "regulation:559f8ec7744584b7", "on_segment": "n", "need": "n", "reason": "Incident/exploited-vuln reporting, not supply chain or pipeline security"}
+{"id": "regulation:6a8b7f219c4e0058", "on_segment": "n", "need": "n", "reason": "Product incident reporting, not supply chain or pipeline security"}
+{"id": "regulation:bf2706c32997ceba", "on_segment": "y", "need": "y", "reason": "Obligation to produce SBOM and document component vulnerabilities"}
+{"id": "regulation:cb396aeb2649a192", "on_segment": "y", "need": "y", "reason": "Obligation to remediate product vulnerabilities via security updates"}
+{"id": "regulation:8fb4758f079b4501", "on_segment": "y", "need": "y", "reason": "Obligation for vulnerability disclosure covering third-party components"}
+{"id": "regulation:73e3b62e4fc09a5d", "on_segment": "y", "need": "y", "reason": "Due diligence on third-party and open-source components required"}
+{"id": "regulation:1abd18bdad00a424", "on_segment": "y", "need": "y", "reason": "Documented product security risk assessment across development lifecycle"}
+{"id": "regulation:02817c5ecab5ee6f", "on_segment": "y", "need": "y", "reason": "DORA major ICT incident classification and reporting obligation"}
+{"id": "regulation:e5f9943b0d67c615", "on_segment": "y", "need": "y", "reason": "DORA register of ICT third-party arrangements obligation"}
+{"id": "regulation:e512a5e1532ea409", "on_segment": "y", "need": "y", "reason": "DORA yearly testing of critical ICT systems obligation"}
+{"id": "regulation:d110f02589fa1311", "on_segment": "y", "need": "y", "reason": "DORA threat-led penetration testing obligation"}
+{"id": "regulation:4b9dd5881466cf0b", "on_segment": "y", "need": "y", "reason": "NIS2 incident reporting deadlines burden compliance-constrained teams"}
+{"id": "regulation:f24e7e0b5686aa4c", "on_segment": "y", "need": "y", "reason": "NIS2 supplier security assessment obligation"}
+{"id": "regulation:525c28df88b8d2e9", "on_segment": "y", "need": "y", "reason": "Regulation requires multi-factor authentication rollout"}
+{"id": "regulation:a083b53e2b1caea2", "on_segment": "y", "need": "y", "reason": "NIS2 management oversight and cybersecurity training obligation"}
+{"id": "regulation:6984f2a7e8775a51", "on_segment": "y", "need": "y", "reason": "Regulation requires multi-factor authentication rollout"}
+{"id": "regulation:888db0373ed91cb2", "on_segment": "y", "need": "y", "reason": "NIS2 incident reporting deadlines burden compliance-constrained teams"}
+{"id": "regulation:dfae6e852463ee1a", "on_segment": "y", "need": "n", "reason": "Administrative registration with BSI; little a security product supports"}
+{"id": "regulation:00cbe3ba9672559a", "on_segment": "y", "need": "y", "reason": "AI Act cybersecurity protection obligation for systemic-risk models"}
+{"id": "regulation:4057391969c10f0e", "on_segment": "y", "need": "y", "reason": "AI Act adversarial testing and incident reporting obligation"}
+{"id": "regulation:dd3e5274d40b5f04", "on_segment": "y", "need": "y", "reason": "AI Act resilience against poisoning and adversarial attacks"}
+{"id": "regulation:5adfe9c9308e9aa8", "on_segment": "y", "need": "y", "reason": "AI Act resilience against poisoning and adversarial attacks"}
+{"id": "regulation:a638dec70b7faba1", "on_segment": "y", "need": "y", "reason": "Radio equipment cybersecurity and data protection obligation"}
+{"id": "regulation:2cbc15b9e82e1ff2", "on_segment": "n", "need": "n", "reason": "Consumer device default passwords, not workforce identity/access"}
+{"id": "regulation:1e732a7d7cb0bb8d", "on_segment": "y", "need": "y", "reason": "Obligation for vulnerability reporting contact and update support period"}
+{"id": "regulation:84a7f1deb3e104f4", "on_segment": "y", "need": "y", "reason": "SEC/S-P cyber disclosure or incident response obligation"}
+{"id": "regulation:4d9d73348189d396", "on_segment": "y", "need": "y", "reason": "Incident disclosure obligation applies to smaller firms"}
+{"id": "regulation:26c55bcc346779cd", "on_segment": "y", "need": "y", "reason": "SEC/S-P cyber disclosure or incident response obligation"}
+{"id": "regulation:4aeb4630f75ea2cc", "on_segment": "y", "need": "y", "reason": "SEC/S-P cyber disclosure or incident response obligation"}
+{"id": "regulation:0daba2006257369e", "on_segment": "y", "need": "y", "reason": "Incident disclosure obligation applies to smaller firms"}
+{"id": "regulation:1446f63626b3c214", "on_segment": "y", "need": "y", "reason": "Incident disclosure obligation applies to smaller firms"}
+{"id": "regulation:ebb9d8a43f29731a", "on_segment": "y", "need": "y", "reason": "SBOM required in medical device submissions"}
+{"id": "regulation:5430fe28a5c34b9d", "on_segment": "y", "need": "y", "reason": "Postmarket component vulnerability monitoring and patching plan required"}
+{"id": "regulation:6d4a37fc37387e83", "on_segment": "y", "need": "y", "reason": "CMMC self-assessment and continuous compliance for small contractors"}
+{"id": "regulation:4a0e388de08413f4", "on_segment": "y", "need": "y", "reason": "Regulation requires cybersecurity plan or independent audit"}
+{"id": "regulation:6d16804f656f6e45", "on_segment": "y", "need": "y", "reason": "Regulation requires cybersecurity plan or independent audit"}
+{"id": "regulation:6d319e3af87efffa", "on_segment": "y", "need": "y", "reason": "Cybersecurity audit obligation for mid-size businesses"}
+{"id": "serverfault:serverfault:1089483", "on_segment": "y", "need": "n", "reason": "How-to question on AWS IAM per-user isolation, no gap"}
+{"id": "serverfault:serverfault:721597", "on_segment": "y", "need": "y", "reason": "No way to see where an AD security group is used"}
+{"id": "serverfault:serverfault:1084571", "on_segment": "y", "need": "y", "reason": "Repeated compromise/abuse alerts on GCP instance, cannot resolve"}
+{"id": "serverfault:serverfault:894690", "on_segment": "y", "need": "y", "reason": "Legitimate email repeatedly misflagged as phishing, cannot fix"}
+{"id": "serverfault:serverfault:730362", "on_segment": "y", "need": "y", "reason": "Server repeatedly reinfected with phishing files despite credential changes"}
+{"id": "github:382393736", "on_segment": "n", "need": "n", "reason": "Remote shell streaming API request, not security"}
+{"id": "github:5463538551", "on_segment": "y", "need": "n", "reason": "Vendor outreach promoting agent security tool, no stated need"}
+{"id": "github:5463672550", "on_segment": "y", "need": "n", "reason": "Vendor outreach promoting agent security tool, no stated need"}
+{"id": "github:4441567544", "on_segment": "n", "need": "n", "reason": "Robot simulator request, unrelated to security"}
+{"id": "github:928557509", "on_segment": "y", "need": "n", "reason": "Documentation request about tool security, no capability gap"}
+{"id": "github:5000709332", "on_segment": "y", "need": "y", "reason": "Feature request: API for security compliance requirements tool"}
+{"id": "github:3147046684", "on_segment": "n", "need": "n", "reason": "Spam or advertising, not security"}
+{"id": "github:3147043492", "on_segment": "n", "need": "n", "reason": "Spam or advertising, not security"}
+{"id": "github:3147041962", "on_segment": "n", "need": "n", "reason": "Spam or advertising, not security"}
+{"id": "github:3460217011", "on_segment": "n", "need": "n", "reason": "Generic app login feature, not a security tool need"}
+{"id": "github:5941963519", "on_segment": "y", "need": "n", "reason": "Benchmark contribution proposal, no stated unmet need"}
+{"id": "github:4064434429", "on_segment": "n", "need": "n", "reason": "Spam or advertising, not security"}
+{"id": "github:6283068581", "on_segment": "y", "need": "n", "reason": "Exploit news feed, no need expressed"}
+{"id": "github:459107644", "on_segment": "n", "need": "n", "reason": "Essay archive, unrelated to security"}
+{"id": "github:4251327896", "on_segment": "y", "need": "y", "reason": "Feature request: full file integrity monitoring for compliance"}
+{"id": "github:6298308871", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:6257587460", "on_segment": "y", "need": "y", "reason": "MCP tools lack per-user scoping and authorization checks"}
+{"id": "github:5178564482", "on_segment": "y", "need": "y", "reason": "Agent guard hook lacks boundary for untrusted tool output"}
+{"id": "github:6534183576", "on_segment": "y", "need": "y", "reason": "Feature request: probe for injection-driven IMDS access"}
+{"id": "github:4363954074", "on_segment": "y", "need": "n", "reason": "Reading notes on prompt injection paper"}
+{"id": "github:5891928158", "on_segment": "y", "need": "n", "reason": "Specific XSS bug report in MCP server, not capability gap"}
+{"id": "github:5410337509", "on_segment": "n", "need": "n", "reason": "MCP integration feature, not security"}
+{"id": "github:5691132417", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:6381941075", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:5425114867", "on_segment": "n", "need": "n", "reason": "MCP integration feature, not security"}
+{"id": "github:5660772938", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:6537584296", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:4379907990", "on_segment": "y", "need": "y", "reason": "No input-side prompt-injection detection; feature requested"}
+{"id": "github:4412929236", "on_segment": "n", "need": "n", "reason": "Prompt steering for stuck agents, not security"}
+{"id": "github:4581215699", "on_segment": "y", "need": "y", "reason": "Feature request: Dual LLM quarantine against prompt injection"}
+{"id": "github:5114842655", "on_segment": "n", "need": "n", "reason": "RAG index refresh, not security"}
+{"id": "github:4839052230", "on_segment": "n", "need": "n", "reason": "Brand monitoring or chat feature proposal, not security"}
+{"id": "github:5369923002", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:5116550049", "on_segment": "n", "need": "n", "reason": "Brand monitoring or chat feature proposal, not security"}
+{"id": "github:6215230381", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:5524908376", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:4413323603", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:5535370731", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:4518377619", "on_segment": "y", "need": "y", "reason": "Unsanitized external content injected into prompt; hardening needed"}
+{"id": "github:5967273030", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:5107135650", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:4701397168", "on_segment": "y", "need": "y", "reason": "Need egress filter for LLM output posted externally"}
+{"id": "github:2785770495", "on_segment": "n", "need": "n", "reason": "arXiv listing, not about agent security needs"}
+{"id": "github:2049650435", "on_segment": "n", "need": "n", "reason": "arXiv listing, not about agent security needs"}
+{"id": "github:5400002253", "on_segment": "y", "need": "y", "reason": "Need prompt-injection screening and secrets canary for agent pipeline"}
+{"id": "github:5463659406", "on_segment": "y", "need": "n", "reason": "Vendor outreach promoting agent security tool, no stated need"}
+{"id": "github:5463630006", "on_segment": "y", "need": "n", "reason": "Vendor outreach promoting agent security tool, no stated need"}
+{"id": "github:5463664205", "on_segment": "y", "need": "n", "reason": "Vendor outreach promoting agent security tool, no stated need"}
+{"id": "github:6193432384", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:3894032497", "on_segment": "y", "need": "n", "reason": "Vendor design-partner pitch for prompt injection scanner"}
+{"id": "github:3918890449", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:6122655089", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:5206082481", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:6446166515", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:6506507412", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:6051344177", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:5840450247", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:5065746416", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:4221304964", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:6536161019", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:3866296004", "on_segment": "y", "need": "n", "reason": "Generated product idea, no concrete stated pain"}
+{"id": "github:5136939358", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:5251988250", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:5493431867", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:5560292519", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:4666049870", "on_segment": "n", "need": "n", "reason": "General news digest, not agent security"}
+{"id": "github:5639504086", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:4739535132", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:5146536364", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:4313155285", "on_segment": "n", "need": "n", "reason": "Automated PR security review output, not an agent security need"}
+{"id": "github:6528298551", "on_segment": "n", "need": "n", "reason": "Job match report, unrelated"}
+{"id": "github:6494362586", "on_segment": "n", "need": "n", "reason": "Job match report, unrelated"}
+{"id": "github:6501460403", "on_segment": "n", "need": "n", "reason": "Job match report, unrelated"}
+{"id": "github:3478914113", "on_segment": "y", "need": "n", "reason": "Research report on AI agent security landscape"}
+{"id": "github:5494467609", "on_segment": "n", "need": "n", "reason": "TLS key logging feature, not AI agent security"}
+{"id": "github:4116484139", "on_segment": "y", "need": "y", "reason": "Feature request: sandboxed policy-controlled agent execution backend"}
+{"id": "github:4683099117", "on_segment": "n", "need": "n", "reason": "Project trending radar, news only"}
+{"id": "github:4211898332", "on_segment": "n", "need": "n", "reason": "Using AI agents for security, not securing AI"}
+{"id": "github:4836466745", "on_segment": "n", "need": "n", "reason": "Project trending radar, news only"}
+{"id": "github:6193301028", "on_segment": "y", "need": "n", "reason": "Paper summary on LLM agent safety"}
+{"id": "github:4845586286", "on_segment": "n", "need": "n", "reason": "Project trending radar, news only"}
+{"id": "github:5045466125", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:5075870630", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:3660871309", "on_segment": "n", "need": "n", "reason": "Using AI agents for security, not securing AI"}
+{"id": "github:6472640572", "on_segment": "y", "need": "n", "reason": "Documentation errors in agent SDK security guide"}
+{"id": "github:5859423907", "on_segment": "y", "need": "n", "reason": "Volunteer reviewer request, no tool gap stated"}
+{"id": "github:6482518046", "on_segment": "n", "need": "n", "reason": "Training institute advertisement"}
+{"id": "github:3490619614", "on_segment": "n", "need": "n", "reason": "General news digest, not agent security"}
+{"id": "github:4264776026", "on_segment": "y", "need": "y", "reason": "No cryptographic integrity between client and model provider"}
+{"id": "github:3919123985", "on_segment": "n", "need": "n", "reason": "General news digest, not agent security"}
+{"id": "github:6504410768", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:3490244516", "on_segment": "n", "need": "n", "reason": "General news digest, not agent security"}
+{"id": "github:6504554064", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:4671041775", "on_segment": "n", "need": "n", "reason": "General news digest, not agent security"}
+{"id": "github:5148180104", "on_segment": "n", "need": "n", "reason": "Job match report, unrelated"}
+{"id": "github:5452422989", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:4609950159", "on_segment": "n", "need": "n", "reason": "General news digest, not agent security"}
+{"id": "github:6003524607", "on_segment": "n", "need": "n", "reason": "IAM service review request, not AI agent security"}
+{"id": "github:4689068912", "on_segment": "n", "need": "n", "reason": "Security news digest, no need expressed"}
+{"id": "github:4061679235", "on_segment": "n", "need": "n", "reason": "General news digest, not agent security"}
+{"id": "github:4637130881", "on_segment": "n", "need": "n", "reason": "Security news digest, no need expressed"}
+{"id": "github:6459689713", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:5787158236", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:3490111593", "on_segment": "n", "need": "n", "reason": "General news digest, not agent security"}
+{"id": "github:5273235443", "on_segment": "y", "need": "n", "reason": "Paper summary on LLM agent safety"}
+{"id": "github:4919301664", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:6073097253", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:5029383023", "on_segment": "y", "need": "y", "reason": "No provenance marker for adversary-influenceable GenAI content"}
+{"id": "github:6344706455", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:6201267690", "on_segment": "y", "need": "y", "reason": "No safe model-isolated way for agents to request credentials"}
+{"id": "github:2527032454", "on_segment": "n", "need": "n", "reason": "arXiv listing, not about agent security needs"}
+{"id": "github:5343562054", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:5644241333", "on_segment": "n", "need": "n", "reason": "Agent/app feature or bug work, not security"}
+{"id": "github:6090722950", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:1903917061", "on_segment": "n", "need": "n", "reason": "arXiv listing, not about agent security needs"}
+{"id": "github:5771944574", "on_segment": "n", "need": "n", "reason": "AI news digest, not about agent security needs"}
+{"id": "github:2222351626", "on_segment": "n", "need": "n", "reason": "arXiv listing, not about agent security needs"}

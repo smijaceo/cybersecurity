@@ -1,0 +1,48 @@
+{
+ "concept_id": "cal-06",
+ "lens": "competitor-analyst",
+ "round": 1,
+ "score": 4,
+ "verdict": "no-go",
+ "summary": "The space is crowded from both sides. Incumbent NGFW vendors already offer virtual firewalls that do east-west inspection with threat signatures, and they sell to the same buyer on existing contracts. Hypervisor and SDN platforms bundle distributed segmentation and slot partner firewalls into service chains. Pure segmentation startups are adding enforcement. 'Segmentation plus inspection, containerised' is an architecture difference, not a category buyers would budget for.",
+ "objections": [
+  {
+   "objection": "Most dangerous competitor: the incumbent NGFW vendor (Palo Alto VM-Series, with Check Point, Fortinet and Juniper virtual firewalls close behind). These already do App-ID/IPS inspection on east-west traffic in VMware and AWS, plug into the hypervisor's traffic steering, and come with the buyer's existing threat feeds, policy console, ELA discounts and SOC workflows. The concept's own riskiest assumption admits buyers may simply extend this vendor into the cloud.",
+   "severity": "fatal",
+   "evidence": "https://www.paloaltonetworks.com/network-security/vm-series-virtual-next-generation-firewall ; concept:riskiest_assumption.assumption"
+  },
+  {
+   "objection": "Platform bundling: VMware NSX ships distributed segmentation in the hypervisor and lets partner NGFWs do the payload inspection through service insertion. In the VMware estates that make up the wedge, the buyer already gets segmentation plus inspection without adding a vendor. Cloud providers' security groups and network ACLs are free and get better every year, and AWS, Azure or Google could add managed IDS/firewall services next.",
+   "severity": "major",
+   "evidence": "https://www.vmware.com/products/nsx.html ; https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html ; concept:go_to_market.wedge"
+  },
+  {
+   "objection": "The differentiation against the segmentation pure-plays is thin and will close fast. Illumio and Guardicore already discover, map and segment across hybrid and multi-cloud estates. Adding signature-based detection, or a chain to a partner IPS, is a roadmap item for them, not a new company. Meanwhile 'cloud-agnostic' is weakened by NGFW vendors shipping virtual images for every hypervisor and cloud marketplace.",
+   "severity": "major",
+   "evidence": "https://www.illumio.com/ ; concept:competitors"
+  },
+  {
+   "objection": "Open-source and DIY options cap what buyers will pay for the inspection layer: Snort/Suricata IDS on mirrored east-west traffic, host firewalls (iptables, Windows Firewall) driven by config management, and OpenStack Neutron security groups. Engineering-heavy enterprises can build 'good enough' coverage at no licence cost.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features"
+  },
+  {
+   "objection": "The competitor table leaves out several adjacent players fighting for the same budget: Cisco ACI/Tetration-style data-centre fabrics, Juniper vSRX, Fortinet FortiGate-VM, Check Point vSEC, CloudPassage/host-based workload security and other microsegmentation startups. The field is more crowded than the concept admits.",
+   "severity": "minor",
+   "evidence": "concept:competitors"
+  }
+ ],
+ "strongest_point": "Separate allow/deny segmentation and appliance-style virtual firewalls really do leave a gap: allowed-port lateral movement inside clouds, with inspection that scales elastically across environments.",
+ "what_would_change_my_mind": [
+  "3+ of 10 target enterprises tried inspecting east-west traffic with their incumbent's virtual firewalls, dropped them for cost, throughput or multi-cloud reasons, and will fund a proof of concept.",
+  "Benchmarks showing inspection throughput per dollar several times better than VM-Series or NSX service insertion.",
+  "An exclusive channel with a large SI or private-cloud platform that incumbents cannot match."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://www.illumio.com/",
+  "https://www.paloaltonetworks.com/network-security/vm-series-virtual-next-generation-firewall",
+  "https://www.vmware.com/products/nsx.html",
+  "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html"
+ ]
+}

@@ -1,0 +1,46 @@
+{
+  "concept_id": "cal-02",
+  "lens": "technical-feasibility",
+  "round": 1,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "A 15-person team with cloud-security and startup experience can ship an open-source Terraform/CloudFormation scanner plus multi-cloud runtime checks in 9 months; static policy checks over parsed IaC are well-trodden. The risk is the scope tail: drift mapping runtime resources back to code and auto-fix PRs that don't break infrastructure. Stage these behind the scanner.",
+  "objections": [
+    {
+      "objection": "Mapping runtime resources back to the IaC that created them (drift detection) is hard: resources created by modules, variables, count/for_each, or out-of-band changes rarely map one-to-one to source lines, and Terraform state files live in many backends. Doing this for three clouds in 9 months alongside everything else is optimistic.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts; concept:mvp.features[1]"
+    },
+    {
+      "objection": "Automated remediation as code is risky to get right: a fix to HCL must respect module boundaries, variable indirection and provider versions, and a 'secure' change (blocking public access, enforcing encryption, closing ports) can break running workloads. Unreliable fixes destroy the developer trust the whole wedge relies on.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[2]; concept:open_questions[1]"
+    },
+    {
+      "objection": "Policy coverage is a permanent maintenance treadmill: 'hundreds of built-in policies' across AWS/Azure/GCP resource types, two IaC formats, and fast-moving provider schemas and benchmark versions (CIS, PCI) need dedicated staff indefinitely, and must be kept in sync between the static and runtime engines to honour the 'one policy set' promise.",
+      "severity": "minor",
+      "evidence": "concept:differentiation; concept:build.hardest_parts[0]"
+    },
+    {
+      "objection": "Static analysis of Terraform requires resolving variables, modules and dynamic blocks; a naive HCL parser yields false negatives/positives. Evaluating plan output instead fixes this but needs credentials and a plan step in CI, which conflicts with the frictionless free-scanner wedge.",
+      "severity": "minor",
+      "evidence": "https://en.wikipedia.org/wiki/Terraform_(software)"
+    },
+    {
+      "objection": "Runtime scanning requires read-only cross-account roles in customer clouds and handling API rate limits and pagination at scale; per-resource billing also needs an accurate, deduplicated resource inventory. Doable, but more integration surface than the 9-month plan acknowledges.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price; concept:mvp.features[1]"
+    }
+  ],
+  "strongest_point": "The wedge (an open-source static IaC scanner in CI) is technically simple, ships in weeks, needs no customer credentials, and proven policy-as-code building blocks already exist.",
+  "what_would_change_my_mind": [
+    "A staged plan: the OSS Terraform/CloudFormation scanner ships within ~3 months and runtime scanning covers AWS first.",
+    "Auto-fix starts as suggested snippets for a few dozen high-confidence policies, with a measured low breakage rate in design-partner repos.",
+    "A prototype showing runtime-to-code mapping on real multi-module Terraform repos with >90% correct attribution."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://cloudcustodian.io/",
+    "https://en.wikipedia.org/wiki/Terraform_(software)"
+  ]
+}

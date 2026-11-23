@@ -1,0 +1,46 @@
+{
+  "concept_id": "cal-02",
+  "lens": "economic-buyer",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "As the VP Engineering or cloud CISO, I'd fund this from a SOC 2 or post-incident cloud security line, and fixes-as-code cut engineering toil, which I can defend to a CFO. But $10 per resource per month prices a mid-size estate at six figures a month, budget ownership is unresolved, and the free tiers cover much of the value.",
+  "objections": [
+    {
+      "objection": "The per-resource price cannot survive a CFO review. A 500-person cloud-native company easily runs 5,000-20,000 resources, so the bill is $50k-$200k per month. AWS Config charges $0.003 per configuration item recorded and $0.001 per rule evaluation, so the native baseline costs pennies per resource. I'd only pay something like $10 per workload or per account, or a flat platform fee in the low five figures a year.",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price; https://aws.amazon.com/config/pricing/"
+    },
+    {
+      "objection": "No clear budget owner. The user and champion is in engineering, but the 'reason to pay' (compliance mapping) is a security or compliance line. At a 100-5,000 person company with little security staff, engineering will not move headcount money to a security tool, and the CISO may not exist. The concept lists this as an open question rather than an answer. Deals will stall between the two buyers.",
+      "severity": "major",
+      "evidence": "concept:open_questions; concept:buyer.role"
+    },
+    {
+      "objection": "The must-have trigger is weak. SOC 2 and PCI auditors ask for evidence of configuration monitoring, but free AWS Config conformance packs, Security Hub CIS checks, Prowler and Cloud Custodian already produce that evidence. The paid platform has to beat 'free and good enough for the auditor', and the compliance mapping alone won't do that.",
+      "severity": "major",
+      "evidence": "concept:mvp.features; concept:competitors; https://cloudcustodian.io/"
+    },
+    {
+      "objection": "ROI depends on trusting automated remediation PRs in production, which the concept itself lists as unproven. Without that, the product is another alert feed, and I can't show the CFO saved engineering hours.",
+      "severity": "minor",
+      "evidence": "concept:open_questions"
+    },
+    {
+      "objection": "The riskiest-assumption test measures developer adoption (500 repos, 10 inbound requests) in two weeks. That is not proof that a buyer will sign: inbound requests aren't purchase orders, and two weeks is too short to see a procurement decision.",
+      "severity": "minor",
+      "evidence": "concept:riskiest_assumption"
+    }
+  ],
+  "strongest_point": "Fixes delivered as pull requests turn a security cost into saved engineering time and clean audit evidence, a pitch that engineering and security leaders can both sign.",
+  "what_would_change_my_mind": [
+    "Pricing reset to per-account or tiered platform fees with an annual contract value of $20k-$100k.",
+    "5 of 10 design partners pay after a pilot, and each names the budget line (engineering or security).",
+    "At least 50% of remediation PRs are merged without edits, which gives the CFO an hours-saved case."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://aws.amazon.com/config/pricing/",
+    "https://cloudcustodian.io/"
+  ]
+}

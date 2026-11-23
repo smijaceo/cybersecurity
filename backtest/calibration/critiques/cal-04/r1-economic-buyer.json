@@ -1,0 +1,46 @@
+{
+ "concept_id": "cal-04",
+ "lens": "economic-buyer",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "As a CISO with an unfilled analyst req, I can fund this from headcount: $50k is well under one loaded analyst, and phishing-triage hours saved is a CFO-ready ROI. But it is not mandated by regulation or audit, the chat/learning-bot differentiators are hard to price, and I'd wait to see whether my SIEM vendor bundles orchestration before committing.",
+ "objections": [
+  {
+   "objection": "No compelling event forces the purchase: no regulation, audit finding or insurance requirement names SOAR. It competes for discretionary tool budget against SIEM, EDR and staff, and is easy to defer a year, especially since the concept itself asks whether buyers will expect orchestration inside their SIEM.",
+   "severity": "major",
+   "evidence": "concept:open_questions; concept:risks; concept:problem.evidence"
+  },
+  {
+   "objection": "The budget line that actually pays is analyst headcount (an open or cut req), so the ROI must be proven in hours saved per incident on my own tools. The concept offers no baseline measurement method; the beta success signal (share of incidents handled in the platform) measures usage, not savings I can show my CFO.",
+   "severity": "major",
+   "evidence": "concept:riskiest_assumption.success_signal; concept:pricing.rationale"
+  },
+  {
+   "objection": "Value hinges on integrations with my specific SIEM, EDR, firewall and ticketing stack. Before signing I'd require working connectors for my exact products and versions; a startup promising 'hundreds of integrations' as its hardest part is a delivery risk I'd price in or pilot for months.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts; concept:mvp.features"
+  },
+  {
+   "objection": "The headline differentiators (chat war room, ML-learned suggestions) are nice-to-haves to a cheque-signer; my team already has chat and tickets. I pay for automated containment and fewer escalations, so those features add little to willingness to pay and raise trust questions about a bot acting on production.",
+   "severity": "minor",
+   "evidence": "concept:differentiation"
+  },
+  {
+   "objection": "Entry price of $50k for 5 analysts looks cheap to me but implies a lot of services I would expect included (playbook build-out, on-prem install); if those become paid add-ons, the total cost grows and procurement slows.",
+   "severity": "minor",
+   "evidence": "concept:pricing.entry_price"
+  }
+ ],
+ "strongest_point": "Funded from the analyst-shortage line: $50k/year is below one loaded analyst salary, so automating phishing triage pays back quickly and is easy to justify.",
+ "what_would_change_my_mind": [
+  "Beta SOCs show measured reduction of at least 30% in analyst minutes per phishing incident against a pre-pilot baseline.",
+  "3 of 5 beta customers fund the purchase from an approved headcount or tool line, not from innovation budget.",
+  "Connectors working out of the box for the top 3 SIEMs and EDRs used by prospects, demonstrated in a 30-day pilot.",
+  "Evidence that two SIEM vendors' bundled playbooks are weak enough that buyers still pay for standalone orchestration."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Computer_security_incident_management"
+ ]
+}

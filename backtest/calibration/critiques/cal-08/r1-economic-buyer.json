@@ -1,0 +1,47 @@
+{
+ "concept_id": "cal-08",
+ "lens": "economic-buyer",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "As a CISO post-Equifax, patch latency is a board-level and audit-level pain I can fund from the vulnerability management line. But this overlaps the risk-based prioritisation tool and ServiceNow module I'm already buying or evaluating, remediation is executed by IT whose budget I don't control, and the proof plan is too short to justify a CFO business case.",
+ "objections": [
+  {
+   "objection": "Budget overlap: the prioritisation half of the product competes for the same line as risk-based VM tools (Kenna, RiskSense) and ServiceNow Vulnerability Response. To fund this I'd have to cut or not renew one of those; the concept only sells 'orchestration on top', which reads as a third layer on a stack I already pay for twice (scanner + RBVM/ITSM).",
+   "severity": "major",
+   "evidence": "concept:competitors; concept:riskiest_assumption.assumption"
+  },
+  {
+   "objection": "Payer and user are split. Security signs, but IT ops and DevOps do the fixing and own Puppet/Chef/Ansible and change management. The concept itself does not know who owns remediation budget; without IT co-sponsorship a CISO purchase becomes shelfware that IT routes around.",
+   "severity": "major",
+   "evidence": "concept:open_questions; concept:buyer.role; concept:user"
+  },
+  {
+   "objection": "Proof is insufficient for a CFO: a 2-week beta cannot measure a meaningful change in median time-to-remediate when enterprise patch cycles are monthly or longer. I'd need at least one full patch cycle (60-90 days) with before/after MTTR and SLA-compliance figures on my own estate.",
+   "severity": "major",
+   "evidence": "concept:riskiest_assumption.test; https://en.wikipedia.org/wiki/Vulnerability_management"
+  },
+  {
+   "objection": "Pricing does not match the named buyer: a 1,000+ staff enterprise typically has well over 2,500 assets, so the $30k entry tier is either a pilot price that will jump several-fold at renewal (sticker shock) or under-prices the deal relative to enterprise sales cost.",
+   "severity": "minor",
+   "evidence": "concept:pricing.entry_price; concept:buyer.company_profile"
+  },
+  {
+   "objection": "Automated fix pushing is a liability I would not approve on day one; the value I'd pay for is routing, deduplication and closure tracking, so the ROI case must stand on analyst time and SLA reporting alone.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Patch latency after Equifax is a board, regulator and audit issue; targeting enterprises with an open audit finding on patching makes this a must-fix rather than nice-to-have.",
+ "what_would_change_my_mind": [
+  "Beta data over a full patch cycle at 3+ enterprises showing 30%+ MTTR reduction and SLA compliance gains",
+  "A referenceable customer where IT ops co-funded the purchase",
+  "Evidence that buyers replaced (not added to) an RBVM or ServiceNow VR line item",
+  "A clear expansion price for 10k-50k assets"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/2017_Equifax_data_breach",
+  "https://en.wikipedia.org/wiki/Vulnerability_management"
+ ]
+}

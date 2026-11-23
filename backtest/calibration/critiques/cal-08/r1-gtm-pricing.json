@@ -1,0 +1,49 @@
+{
+ "concept_id": "cal-08",
+ "lens": "gtm-pricing",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "Clear buyer (VM program owner with an audit finding), credible founder network for first logos, and per-asset pricing that scales with enterprise estates. But a $30k entry ACV cannot carry a US field-sales motion to CISOs, budget ownership is split between security and IT, ServiceNow bundles the workflow, and scanner partners are also competitors.",
+ "objections": [
+  {
+   "objection": "Entry price of $30k/year for 2,500 assets is too small for the chosen channel: direct enterprise sales to CISOs/CIOs with 6-9 month cycles, security reviews and integration-heavy pilots typically cost more than one year of that contract to win. Unit economics only work if typical deals land at 10k+ assets ($100k+ ACV), which the concept does not plan for.",
+   "severity": "major",
+   "evidence": "concept:pricing.entry_price; concept:go_to_market.channel; concept:buyer.company_profile"
+  },
+  {
+   "objection": "Budget owner is unresolved: the buyer is 'CISO or CIO' and the open question asks who owns remediation budget. Remediation work sits in IT operations, prioritisation in security; a product straddling both risks long multi-stakeholder cycles and 'nice-to-have' status on both budgets.",
+   "severity": "major",
+   "evidence": "concept:buyer.role; concept:open_questions"
+  },
+  {
+   "objection": "ServiceNow Vulnerability Response is already licensed or easily added in many target enterprises, sits on the CMDB and ITSM where remediation tasks live, and is sold by an account team the CIO already trusts; a separate vendor must justify a second line item on top of scanners and ITSM.",
+   "severity": "major",
+   "evidence": "concept:competitors[ServiceNow Vulnerability Response]; concept:riskiest_assumption.assumption"
+  },
+  {
+   "objection": "Scanner-vendor partnerships as a channel are conflicted: Qualys and others are listed as competitors and each wants to own prioritisation and remediation workflow, so they are unlikely to refer deals.",
+   "severity": "minor",
+   "evidence": "concept:go_to_market.channel; concept:risks"
+  },
+  {
+   "objection": "The 2-week beta is too short to measure a 30% drop in median time-to-remediate when patch cycles run weeks to months; it will produce noise rather than a buying signal. Asking for 2 paid conversions from 5 enterprises in that window is also optimistic.",
+   "severity": "minor",
+   "evidence": "concept:riskiest_assumption.test"
+  },
+  {
+   "objection": "Churn and expansion risk: value depends on fixes actually being pushed via Puppet/Chef/Ansible; if IT refuses automated changes the product degrades to a deduplicated ticket router, which is easier to replace at renewal.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts"
+  }
+ ],
+ "strongest_point": "Sharp wedge (deduplicated remediation plan from existing scanners within a day) aimed at enterprises with an audit finding on patch latency gives a fast, budget-triggered proof of value.",
+ "what_would_change_my_mind": [
+  "Pipeline data showing average initial deals at 10k+ assets ($100k+ ACV) with sub-6-month sales cycles.",
+  "3 of 5 beta customers name a single budget owner and sign paid contracts.",
+  "Evidence that ServiceNow Vulnerability Response customers still buy a separate orchestration layer.",
+  "One scanner vendor actively co-selling."
+ ],
+ "resolved_prior": [],
+ "sources": []
+}

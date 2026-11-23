@@ -1,0 +1,45 @@
+{
+ "concept_id": "cal-08",
+ "lens": "security-practitioner",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "Fits how VM teams actually work: agentless, reads existing scanner output, dedups and routes into the ticketing IT already uses. Practitioners would adopt the read-and-prioritise half fast. The push-fixes-via-Ansible half needs write credentials to production config management and change-control sign-off, which IT will refuse early; the remediation database's accuracy is unproven and wrong fixes break systems.",
+ "objections": [
+  {
+   "objection": "Automated fix push needs privileged write access into Puppet/Chef/Ansible and production estates. Ops teams gate this behind change advisory boards and maintenance windows; a third-party SaaS holding those credentials is a high-value target and will be refused by most first customers. Closed-loop remediation, the core differentiator, will in practice shrink to ticket creation.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[3]; concept:build.hardest_parts[2]; concept:open_questions[1]"
+  },
+  {
+   "objection": "A curated remediation database of patches, scripts and workarounds is only trusted if it is right for the exact OS/app version and environment. Patches cause regressions; a wrong or untested workaround that breaks a production system will end adoption. The concept gives no QA, testing or rollback process for database entries.",
+   "severity": "major",
+   "evidence": "https://en.wikipedia.org/wiki/Patch_(computing); concept:mvp.features[2]"
+  },
+  {
+   "objection": "Prioritisation depends on asset context (owner, business criticality, exposure) from CMDBs that are notoriously incomplete. With poor asset data, deduplication and routing misassign findings to the wrong team and scores mislead, recreating the triage work the tool claims to remove.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[0]; concept:mvp.features[1]"
+  },
+  {
+   "objection": "Validation that a fix worked relies on the next scanner run, which is weekly or monthly for many estates and authenticated-scan gaps produce false 'fixed' or 'still open' states. Risk-reduction reporting will be noisy unless validation can trigger targeted rescans.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[4]"
+  },
+  {
+   "objection": "Read-only API keys to every scanner, SAST tool, cloud account and ticketing system concentrate a full map of the customer's unpatched weaknesses in one SaaS. Security teams will demand strong tenant isolation, SOC 2 and possibly on-prem deployment before connecting.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[0]; concept:buyer.company_profile"
+  }
+ ],
+ "strongest_point": "Agentless aggregation and deduplication across multiple scanners into existing ticketing fixes a real daily pain without new agents or network taps; low-friction to trial.",
+ "what_would_change_my_mind": [
+  "In the beta, at least 3 of 5 enterprises grant write access to config management for a scoped asset group.",
+  "The remediation database's fixes apply without rollback on 95%+ of a 200-finding sample.",
+  "A SOC 2 report or on-prem deployment option is available at launch."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Patch_(computing)"
+ ]
+}

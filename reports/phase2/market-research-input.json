@@ -1,8 +1,255 @@
 [
  {
   "theme_id": 0,
-  "name": "SBOM generation across build ecosystems",
-  "need": "Maintainers and compliance-driven teams struggle to generate, sign, assemble and publish accurate SBOMs from their package managers and container builds to meet regulatory guidance.",
+  "name": "Authorization and auditing for MCP tool access",
+  "need": "Teams adopting MCP servers struggle to scope tool permissions, give agents their own credentials, keep secrets out of tool inputs and audit tool calls.",
+  "open_source_leaders": [
+   "ory/hydra (17675 stars)",
+   "golf-mcp/golf (842 stars)",
+   "NapthaAI/http-oauth-mcp-server (110 stars)",
+   "26zl/cybersec-toolkit (102 stars)",
+   "AuthPlane/authserver (82 stars)"
+  ],
+  "statements": [
+   {
+    "title": "SEP-1299: Server-Side Authorization Management with Client Session Binding",
+    "body": "## Preamble **Title**: Server-Side Authorization Management with Client Session Binding **Author**: @DickHardt **Status**: Draft **Type**: Feature **Created**: 2025-08-04 *Holding on creating a PR unt",
+    "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1299"
+   },
+   {
+    "title": "Feature Request: Add wildcard support for MCP tool permissions",
+    "body": "### **Title: Feature Request: Add wildcard support for MCP tool permissions** **Labels:** `enhancement`, `feature-request`, `mcp`, `permissions` ### Is your feature request related to a problem? Pleas",
+    "url": "https://github.com/anthropics/claude-code/issues/6010"
+   },
+   {
+    "title": "SEP-1708: MCP Client-Brokered Filesystem Access",
+    "body": "# SEP-1708: MCP Client-Brokered Filesystem Access ## Preamble * title: SEP-1708: MCP Client-Brokered Filesystem Access * author: Casey Boyle (GitHub: boylec) * status: Draft * type: Standards Track (P",
+    "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1708"
+   },
+   {
+    "title": "MCP Actions Backend Audit Logging",
+    "body": "### \ud83d\udcdc Issue Labels - [x] Please familiarize yourself with the issue labels used in this project: [LABELS.md](https://github.com/backstage/backstage/blob/master/LABELS.md) ### \ud83d\udd0e Search Terms ```plain -",
+    "url": "https://github.com/backstage/backstage/issues/32104"
+   },
+   {
+    "title": "feat(scaffolder): passing secrets as raw input to the execute-template MCP tool is a security anti-pattern",
+    "body": "### \ud83d\udcdc Issue Labels - [x] Please familiarize yourself with the issue labels used in this project: [LABELS.md](https://github.com/backstage/backstage/blob/master/LABELS.md) ### \ud83d\udd0e Search Terms ```plain s",
+    "url": "https://github.com/backstage/backstage/issues/34728"
+   },
+   {
+    "title": "[FEATURE] PreApiCall / PostApiCall hooks to prevent secret exfiltration to API providers and attackers",
+    "body": "## Problem When using Claude Code, sensitive data can leave the user's machine through **two channels**: ### 1. Data sent to the LLM provider (Anthropic API) All code, file contents, command outputs, ",
+    "url": "https://github.com/anthropics/claude-code/issues/39882"
+   },
+   {
+    "title": "[Feature]: propagate per-run metadata from POST /v1/runs to MCP tools/call requests",
+    "body": "## Problem When Hermes executes a run and calls tools on a remote MCP server, the MCP requests carry only the static credentials configured in `config.yaml` (`headers: {Authorization: Bearer \u2026}`). The",
+    "url": "https://github.com/NousResearch/hermes-agent/issues/64890"
+   },
+   {
+    "title": "[feat] Per-agent MCP credentials: let each custom agent call an MCP server under its own identity",
+    "body": "### Before you start - [x] I searched [existing issues](https://github.com/bytedance/deer-flow/issues?q=is%3Aissue) and this is not a duplicate. ### Problem / motivation An MCP server configured in `e",
+    "url": "https://github.com/bytedance/deer-flow/issues/8125"
+   },
+   {
+    "title": "[DOCS] governance and security guidance for MCP server adoption in teams",
+    "body": "### Documentation Type Other ### Documentation Location _No response_ ### Section/Topic MCP servers ### Current Documentation ## Summary The MCP documentation in Claude Code covers single-developer se",
+    "url": "https://github.com/anthropics/claude-code/issues/60246"
+   },
+   {
+    "title": "MCP Conformance Testing + Auth \u2014 Feedback from 12 Production Servers",
+    "body": "## MCP Conformance Testing + Auth \u2014 Feedback from Running 12 MCP Servers in Production **Feedback from**: A multi-agent AI system running 12 MCP servers in production (TypeScript + Python fastmcp). Al",
+    "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2903"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "Feature Request: Add wildcard support for MCP tool permissions",
+    "body": "### **Title: Feature Request: Add wildcard support for MCP tool permissions** **Labels:** `enhancement`, `feature-request`, `mcp`, `permissions` ### Is your feature request related to a problem? Please describe. Configuring permissions for Model Context Protocol (MCP) tools is currently inflexible a",
+    "url": "https://github.com/anthropics/claude-code/issues/6010"
+   },
+   {
+    "title": "[DOCS] governance and security guidance for MCP server adoption in teams",
+    "body": "### Documentation Type Other ### Documentation Location _No response_ ### Section/Topic MCP servers ### Current Documentation ## Summary The MCP documentation in Claude Code covers single-developer setup well, but there is no guidance for teams adopting MCP at scale. As Claude Code moves from indivi",
+    "url": "https://github.com/anthropics/claude-code/issues/60246"
+   },
+   {
+    "title": "[RFC] Hardening MCP Tool Trust Boundaries (Sanitization, Output Caps & Dynamic Schema Drift)",
+    "body": "# [RFC] Hardening MCP Tool Trust Boundaries (Sanitization, Output Caps, Timeouts & Dynamic Schema Drift) **Applies to:** `langchain-ai/langchain-mcp-adapters` **Author disclosure:** This RFC and the accompanying implementation were prepared with AI assistance (Claude Code). The investigation, code, ",
+    "url": "https://github.com/langchain-ai/langchain/issues/40473"
+   },
+   {
+    "title": "MCP server: scoping, security, tool gaps, resource inventory, scanner rationalization, latest-protocol conformance, sync/async parity",
+    "body": "# MCP server: scoping, security, tool gaps, resource inventory, scanner rationalization, latest-protocol conformance, sync/async parity ## Agent #clo-arsi ## Problem The platform's MCP server (`openaimp`, `https://agent.openaimp.com/mcp`) is the single surface through which chat, Copilot, and extern",
+    "url": "https://github.com/Qunsultant/cfagent/issues/3748"
+   },
+   {
+    "title": "JWT token verifier as an alternative to the shared token",
+    "body": "The shared bearer token is right for one operator and one client. Multi-tenant deployments issue JWTs. Where to look: typescript/src/http.ts, typescript/src/config.ts, typescript/test/http.test.ts, python/src/secure_mcp_server/auth.py, python/src/secure_mcp_server/config.py, python/src/secure_mcp_se",
+    "url": "https://github.com/basitalisandhu/mcp-server-template/issues/12"
+   },
+   {
+    "title": "feat: eBPF file integrity monitoring \u2014 write, chmod, chown, mount hooks",
+    "body": "## Summary Expand eBPF file system hooks beyond the current open/delete/rename to provide full file integrity monitoring (FIM). Critical for security compliance frameworks (PCI-DSS, HIPAA, SOC 2) that require tracking all modifications to sensitive files. ## New hooks needed | Hook | Tracepoint/Kpro",
+    "url": "https://github.com/strawgate/fastforward/issues/1939"
+   },
+   {
+    "title": "Gateway extension idea: source-rights evidence before URL-bearing MCP calls",
+    "body": "MintMCP\u2019s gateway positioning is directly about centralizing authentication, monitoring, security, telemetry and governance across MCP servers. For teams that expose public-web retrieval/search/ingestion tools through that gateway, there is a narrow additional context signal that could be useful bef",
+    "url": "https://github.com/mintmcp/servers/issues/3"
+   },
+   {
+    "title": "Support environment variable for API key (-k / --twelve-data-apikey)",
+    "body": "## Problem The `-k` / `--twelve-data-apikey` CLI option is currently the only way to pass the API key when using `stdio` transport. This exposes the key in the process list (`ps aux` / `/proc/*/cmdline`), which is a security concern on shared machines. Other MCP servers (e.g. `mcp-grafana`) accept c",
+    "url": "https://github.com/twelvedata/mcp/issues/8"
+   }
+  ]
+ },
+ {
+  "theme_id": 4,
+  "name": "User activity audit logging on servers",
+  "need": "Admins struggle to capture and review who logged in and what they did on servers, databases, domain controllers and SaaS like Office 365.",
+  "open_source_leaders": [
+   "spatie/laravel-activitylog (5918 stars)",
+   "brexhq/substation (410 stars)",
+   "CodesWhat/drydock (280 stars)",
+   "Sfedfcv/redesigned-pancake (280 stars)",
+   "el1ght/aulite (195 stars)"
+  ],
+  "statements": [
+   {
+    "title": "Terminal Server Logging",
+    "body": "Is there a simple utility to log terminal server use? I'd like to be able to do some simple monitoring of our terminal server and don't seem to be able to find any good way to do it. I'd want to track",
+    "url": "https://serverfault.com/questions/13451/terminal-server-logging"
+   },
+   {
+    "title": "SIEM system, what are the benefits?",
+    "body": "Each person in the company has a unique username/password, and nobody should log in with his username/password but him. I want a program that would inspect the logs that includes a list of all the peo",
+    "url": "https://security.stackexchange.com/questions/9684/siem-system-what-are-the-benefits"
+   },
+   {
+    "title": "SSH session logging",
+    "body": "We have a policy of logging all SSH session activity for CYA purposes with our clients. With PuTTY under windows this is trivial, as we can log each session to a file using PuTTY's built-in logging fa",
+    "url": "https://serverfault.com/questions/313234/ssh-session-logging"
+   },
+   {
+    "title": "local mysql was hacked with ransomware hack. How to check if database data was downloaded?",
+    "body": "I had a test mysql database running on Vagrant dev box. Turns out the network wasn't that secure. All of the databases were deleted (and replaced with a DB ransomware note) and in the logs I can see a",
+    "url": "https://serverfault.com/questions/946620/local-mysql-was-hacked-with-ransomware-hack-how-to-check-if-database-data-was-d"
+   },
+   {
+    "title": "Ask HN: Running legacy IE/ActiveX clients without local admin rights?",
+    "body": "We are currently maintaining a very old client-server architecture. The server collects real-time data from a large number of sensors and controllers, transmitting it to a legacy database under contin",
+    "url": "https://news.ycombinator.com/item?id=47486365"
+   },
+   {
+    "title": "Ansible enable audit logging",
+    "body": "I am looking for audit logging in Ansible. I am running my playbook as root, but i want to write in log who the local user is executing the playbook. Please help in enabling logs to show user.",
+    "url": "https://serverfault.com/questions/887548/ansible-enable-audit-logging"
+   },
+   {
+    "title": "rancid like tool for config files",
+    "body": "I need to be able to watch directories on our servers, and track changes to files as part of our audit compliance. I have adjusted auditd to watch the directories, and send all writes and attribute ch",
+    "url": "https://security.stackexchange.com/questions/33763/rancid-like-tool-for-config-files"
+   },
+   {
+    "title": "Domain controller audit log",
+    "body": "I am part of an internal software development group for an enterprise. We are being asked to build an Active Directory management web application. 1 of the primary reasons is the need to generate audi",
+    "url": "https://serverfault.com/questions/328968/domain-controller-audit-log"
+   },
+   {
+    "title": "Amazon Workspaces - Audit",
+    "body": "Is it possible to record Amazon Workspaces for audit purpose? I think that it's a common uses case but I couldn't find any documentation nor other solutions. Basically I would like to review the clien",
+    "url": "https://serverfault.com/questions/620032/amazon-workspaces-audit"
+   },
+   {
+    "title": "Windows Server Audit Logs",
+    "body": "I have a windows server 2012r2 domain controller and file server. I enabled auditing for a specific folder i want to monitor. I am collecting logs on a centralized graylog server. I am getting the aud",
+    "url": "https://serverfault.com/questions/1078821/windows-server-audit-logs"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "Ask HN: Running legacy IE/ActiveX clients without local admin rights?",
+    "body": "We are currently maintaining a very old client-server architecture. The server collects real-time data from a large number of sensors and controllers, transmitting it to a legacy database under continuous, massive load (writes every few seconds). The problem is the client side. It\u2019s ancient, strictl",
+    "url": "https://news.ycombinator.com/item?id=47486365"
+   },
+   {
+    "title": "Office365 Audit Log",
+    "body": "We have Office365 E3 and know the 90 day history restriction. Go forward we may use AdminTool or a script to log and build our own database. However is there a way to access a longer history because we wish to inspect the log for previous months (say 2 years ago) and my question is broken into three",
+    "url": "https://serverfault.com/questions/966752/office365-audit-log"
+   }
+  ]
+ },
+ {
+  "theme_id": 8,
+  "name": "PCI DSS compliance for web servers",
+  "need": "Merchants running Linux/Apache/PHP servers struggle to pass PCI compliance scans and meet requirements like file integrity checking.",
+  "open_source_leaders": [
+   "exiv703/ShieldEye_ComplianceScan (33 stars)",
+   "Gondrong/VulnScan-Platform (20 stars)",
+   "kabiri-labs/HeaderHawk (7 stars)",
+   "shyshlakov/pci-dss-mcp (5 stars)",
+   "Valentis-AI-Labs-Ltd/compliance-scanners (4 stars)"
+  ],
+  "statements": [
+   {
+    "title": "CentOS PCI Compliance assessment",
+    "body": "We are currently working our way through a PCI compliance assessment on our server running CentOS. We are getting a lot of 'severe' issues with suggested fixes. The suggestions to rectify the issues a",
+    "url": "https://serverfault.com/questions/296421/centos-pci-compliance-assessment"
+   },
+   {
+    "title": "PCI Compliance: File Integrity Checkers",
+    "body": "We're looking for a file integrity checker for our windows server environment. Anyone have any good suggestions?",
+    "url": "https://serverfault.com/questions/261816/pci-compliance-file-integrity-checkers"
+   },
+   {
+    "title": "How to Isolate PCI Compliance",
+    "body": "We currently process, but do not store, credit card data. We authorize the cards via a self developed application using the authorize.net API. If possible, we would like to limit all requirements of P",
+    "url": "https://serverfault.com/questions/303926/how-to-isolate-pci-compliance"
+   },
+   {
+    "title": "TrustWave PCI Compliance - OpenSSH",
+    "body": "First time 'asker' on here, but wanted to say thanks to how much I've used this site and reading answers to questions I've had! Anyway, lately I've been having issues with a customer of ours who's ser",
+    "url": "https://security.stackexchange.com/questions/64795/trustwave-pci-compliance-openssh"
+   },
+   {
+    "title": "Ubuntu PCI-DSS Compliance Issue",
+    "body": "I'm trying to get PCI compliant and the PCI scanning company is flagging our Ubuntu 12.04 PHP 5.3.10-1ubuntu3.9 for CVE-2013-1635. According to http://people.canonical.com/~ubuntu-security/cve/2013/CV",
+    "url": "https://serverfault.com/questions/564259/ubuntu-pci-dss-compliance-issue"
+   },
+   {
+    "title": "PHP and PCI Compliance",
+    "body": "I have a web server that needs to pass a PCI compiance scan by ControlScan. Everything is good except for a scan they did of the PHP version. I believe I have the latest version that CentOS provides. ",
+    "url": "https://serverfault.com/questions/558994/php-and-pci-compliance"
+   },
+   {
+    "title": "vm2 Sandbox Escape vulnerability",
+    "body": "Npm is reporting vm2 vulnerability again. I have noticed the packages were updated recently but it seems the issue wasn't resolved. I looked at the vm2 package, the author suggests to use an alternati",
+    "url": "https://github.com/release-it/release-it/issues/1024"
+   },
+   {
+    "title": "PCI compliance Apache versions",
+    "body": "We are working with current version of Apache 2.4. 6 available in a Centos 7 repos. Installed with yum. and we are dealing with the PCI compliance and the report says: IP Address: x Host: x Path: THRE",
+    "url": "https://serverfault.com/questions/731657/pci-compliance-apache-versions"
+   },
+   {
+    "title": "PCI Compliance Scans",
+    "body": "I'm hoping to find a piece of software to assist me in catching PCI compliance failures in advance of the actual ASV scans. I would much prefer to run the scans against myself before I request another",
+    "url": "https://serverfault.com/questions/385401/pci-compliance-scans"
+   },
+   {
+    "title": "Virtual terminal PCI compliance",
+    "body": "The PCI DSS compliance rules say that if we use any computers to take card payments via a web based virtual terminal, then those PCs must be isolated from the rest of the IT network (otherwise the ent",
+    "url": "https://serverfault.com/questions/704781/virtual-terminal-pci-compliance"
+   }
+  ],
+  "price_or_vendor_statements": []
+ },
+ {
+  "theme_id": 9,
+  "name": "SBOM generation and publishing in builds",
+  "need": "Maintainers want to generate, sign, assemble and publish SBOMs for packages and container images during builds, meeting guidelines like BSI TR-03183.",
   "open_source_leaders": [
    "owasp-dep-scan/dep-scan (1464 stars)",
    "NuGuardAI/nuguard (72 stars)",
@@ -20,11 +267,6 @@
     "title": "[Feature Request]: generating SBOMs for container images while building them",
     "body": "I'm a huge fan of the `bake` command, recently I opened a similar issue to the builds which you can see from [here](https://github.com/docker/buildx/issues/778). Nowadays, SBOM (Software Bill Of Mater",
     "url": "https://github.com/docker/roadmap/issues/274"
-   },
-   {
-    "title": "pip should record the original index url or find links url of the package",
-    "body": "### What's the problem this feature will solve? Currently users may download packages from various pip repositories (apart from pypi). These packages may contain alternative versions of packages from ",
-    "url": "https://github.com/pypa/pip/issues/10736"
    },
    {
     "title": "[IDEA] Publish Software Bill of Materials (SBOM)",
@@ -60,6 +302,11 @@
     "title": "Add ability to customize 3rd party licences output",
     "body": "### Command build ### Description Currently you only get a plaintext output. This is probably enough to include in the build applications but makes further processing unnecessarily hard. I need to pro",
     "url": "https://github.com/angular/angular-cli/issues/26272"
+   },
+   {
+    "title": "[question] How to use google osv-scanner with conan package?",
+    "body": "### What is your question? At first, I would like to thank you guys for providing a C/C++ package manager solution. I am looking for a soultion for creating SBOM and CVE scan report of C/C++. For the ",
+    "url": "https://github.com/conan-io/conan/issues/15918"
    }
   ],
   "price_or_vendor_statements": [
@@ -77,109 +324,285 @@
     "title": "Adding purl to generated SBOM",
     "body": "### Is your feature request related to a problem? Please describe. We use [Black Duck](https://www.synopsys.com/software-integrity/software-composition-analysis-tools/black-duck-sca.html) for license and vulnerability scanning. I can upload a vcpkg-generated SBOM there, but it does not find any matc",
     "url": "https://github.com/microsoft/vcpkg/issues/39254"
-   },
-   {
-    "title": "Provide better documentation around usage/integration into various pipelines",
-    "body": "We have a GitHub actions pipeline, but the documentation provided here is hard to follow: https://github.com/microsoft/sbom-tool/blob/main/docs/setting-up-github-actions.md 1. There are images after the intro section which don't seem to make sense as the first thing was just showing an example witho",
-    "url": "https://github.com/microsoft/sbom-tool/issues/909"
    }
   ]
  },
  {
-  "theme_id": 2,
-  "name": "Remediating vulnerable third-party dependencies",
-  "need": "Developers and security engineers struggle to detect, prioritize and quickly update vulnerable direct and transitive dependencies, including faster patching despite release-age delays.",
+  "theme_id": 10,
+  "name": "Permission gating for AI agent tool calls",
+  "need": "Users of AI coding agents need per-tool permission rules, read-only modes and defences so prompt-injected content cannot trigger unsafe tool calls.",
   "open_source_leaders": [
-   "pyupio/safety (1999 stars)",
-   "OWASP/cve-lite-cli (801 stars)",
-   "Hamdy910/sentinel-diff-guard (68 stars)",
-   "fortify/skills (25 stars)",
-   "andrasfe/vulnicheck (11 stars)"
+   "ai-boost/awesome-harness-engineering (5224 stars)",
+   "withcoral/coral (5027 stars)",
+   "aipotheosis-labs/aci (4940 stars)",
+   "cosmicstack-labs/mercury-agent (4060 stars)",
+   "golemcloud/golem (1507 stars)"
   ],
   "statements": [
    {
-    "title": "Add support for European Union Vulnerability Database (EUVD)",
-    "body": "### Current Behavior Currently Dependency Track uses the National Vulnerability Database to download vulnerabilty information. ### Proposed Behavior Having in mind the recent \"almost-shutdown\" of the ",
-    "url": "https://github.com/DependencyTrack/dependency-track/issues/4863"
+    "title": "Curated memory roots (`MEMORY.md` / `USER.md`) are silently and permanently excluded from bootstrap injection by the provenance ratchet \u2014 including after ordinary agent behavior (a web-search turn), with no diagnostics, no CLI, and no recovery",
+    "body": "### Summary `MEMORY.md` / `USER.md` are the curated roots that get injected into every new session's bootstrap prompt. Their injection is gated by a per-file provenance record (`originClass`). Once th",
+    "url": "https://github.com/openclaw/openclaw/issues/153426"
    },
    {
-    "title": "Provide good container securityContext by default for each chart",
-    "body": "**Motivation** This would improve the default security out of the box for helm chart users. If the containers currently support it, there isn't much downside to improving the default security. It also",
-    "url": "https://github.com/falcosecurity/charts/issues/481"
+    "title": "Background task notifications trigger autonomous API calls \u2014 model responds as if it were the user",
+    "body": "## Bug: Background task notifications trigger autonomous API calls with `bypassPermissions` \u2014 model responds as if it were the user ### Summary When a background task (launched via `run_in_background`",
+    "url": "https://github.com/anthropics/claude-code/issues/39027"
    },
    {
-    "title": "Update dependencies to resolve security vulnerabilities in sub-dependencies",
-    "body": "**What would you like Renovate to be able to do?** GitHub informs of vulnerabilities for sub-dependencies present in package-lock.json, but Renovate doesn't cut PRs for updating the top-level dependen",
-    "url": "https://github.com/renovatebot/renovate/issues/3080"
+    "title": "Proposal: Untrusted Annotation for Tool Responses",
+    "body": "**Background** Attackers can reliably manipulate agent behavior by planting malicious instructions inside User Generated Content (UGC) and server responses, which the agent blindly ingests when execut",
+    "url": "https://github.com/webmachinelearning/webmcp/issues/136"
    },
    {
-    "title": "Add a config option to disable proxying for all private packages (to shield against dependency confusion attacks)",
-    "body": "**Is your feature request related to a problem?** - [Dependency confusion](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610) attacks exploit a vulnerability in private package registr",
-    "url": "https://github.com/verdaccio/verdaccio/issues/2103"
+    "title": "Feature request: read-only / plan-mode equivalent for non-interactive `-p` runs",
+    "body": "## Summary Antigravity CLI 1.0.0 has no equivalent to Gemini CLI's `--approval-mode plan` for non-interactive (`-p` / `--print`) runs. In `-p` mode, `agy` auto-approves all tool calls \u2014 including `wri",
+    "url": "https://github.com/google-antigravity/antigravity-cli/issues/45"
    },
    {
-    "title": "vm2 Sandbox Escape vulnerability",
-    "body": "Npm is reporting vm2 vulnerability again. I have noticed the packages were updated recently but it seems the issue wasn't resolved. I looked at the vm2 package, the author suggests to use an alternati",
-    "url": "https://github.com/release-it/release-it/issues/1024"
+    "title": "[RFC] Architecture for Robust Agents: Implementing a \"Discriminator Layer\" Middleware",
+    "body": "**The Scalability Bottleneck** Currently, OpenClaw operates as a pure Generator. It relies on the Planner to be both creative *and* safe. This creates a fragility loop: if the Planner is jailbroken or",
+    "url": "https://github.com/openclaw/openclaw/issues/9030"
    },
    {
-    "title": "[FEATURE] Include a NetworkPolicy to secure communication inside of Longhorn",
-    "body": "**Is your feature request related to a problem? Please describe.** When longhorn-UI is deployed, it is easily accessible from inside the cluster without authentication. This poses a security risk if 1",
-    "url": "https://github.com/longhorn/longhorn/issues/1805"
+    "title": "Detect remote administration tool (rat)",
+    "body": "I suspect being the victim of a hacking attack. What steps should I take to ensure that no rat software is running on my computer? I checked the autostart by executing initctl list but im not sure if ",
+    "url": "https://security.stackexchange.com/questions/165003/detect-remote-administration-tool-rat"
    },
    {
-    "title": "\ud83d\udcac RFC: Proposal to Remove `node-libs-browser` Dependency",
-    "body": "### \ud83d\udd16 Need The primary motivation for removing `node-libs-browser` is due to a security vulnerability that has been detected. The vulnerability originates from a dependency chain that includes `node-l",
-    "url": "https://github.com/backstage/backstage/issues/28740"
+    "title": "Which tool to use to automate REST API pentest",
+    "body": "I want to run an automated REST API pentest, and I want to integrate my test into CI/CD pipeline. Note: I have the openapi specification of the APIs that I want to test. My automated test will be divi",
+    "url": "https://security.stackexchange.com/questions/277069/which-tool-to-use-to-automate-rest-api-pentest"
    },
    {
-    "title": "Option to bypass minimumReleaseAge when the update fixes a vulnerability",
-    "body": "### What is the problem this feature would solve? As a security conscious company, we use a minimal release age to protect ourselves against supply chain attacks. However, some updates need to be hast",
-    "url": "https://github.com/oven-sh/bun/issues/26065"
+    "title": "feat: Tool Permission Gating System (per-tool rules + mode-based fallback)",
+    "body": "## Problem Hermes currently has a narrow approval system that only gates **dangerous shell commands** via pattern matching inside `terminal_tool`. All other tools \u2014 file writes, code execution, browse",
+    "url": "https://github.com/NousResearch/hermes-agent/issues/21849"
    },
    {
-    "title": "web app 3rd party JS dependency vulnerability management",
-    "body": "As a security engineer, I wonder about the common approach for web app 3rd party JS dependency vulnerability management. We have a lot of apps depend on Jquery etc. In a regular vulnerability scan, ol",
-    "url": "https://security.stackexchange.com/questions/245529/web-app-3rd-party-js-dependency-vulnerability-management"
+    "title": "CLI Schema - enforcing a security policy for AI agents",
+    "body": "### Describe the feature or problem you\u2019d like to solve I'd like to provide my sandboxed AI agent access to `gh`, but be able to enforce a security policy on which subcommands I allow, and which I dis",
+    "url": "https://github.com/cli/cli/issues/12912"
    },
    {
-    "title": "Can you please strip `devDependencies` from npm publish",
-    "body": "### Clear and concise description of the problem Stripping `devDependencies` and even `scripts` is something that I've been doing for a few years already. Why is it bad to keep dev dependencies? The m",
-    "url": "https://github.com/sxzz/verkit/issues/11"
+    "title": "[REVIEW] agent-security: bind approvals to exact tool artifacts and MCP provenance",
+    "body": "## Skill Being Reviewed **Skill name:** agent-security **Skill path:** `skills/ai-security/agent-security/` ## False Positive Analysis **Benign code that triggers a false positive:** ```yaml agent_aud",
+    "url": "https://github.com/UnitOneAI/SecuritySkills/issues/1595"
    }
   ],
   "price_or_vendor_statements": [
    {
-    "title": "Add support for European Union Vulnerability Database (EUVD)",
-    "body": "### Current Behavior Currently Dependency Track uses the National Vulnerability Database to download vulnerabilty information. ### Proposed Behavior Having in mind the recent \"almost-shutdown\" of the MITRE CVE Database (https://cve.mitre.org/), due to unclear financing, this could IMHO also happen t",
-    "url": "https://github.com/DependencyTrack/dependency-track/issues/4863"
+    "title": "feat: Tool Permission Gating System (per-tool rules + mode-based fallback)",
+    "body": "## Problem Hermes currently has a narrow approval system that only gates **dangerous shell commands** via pattern matching inside `terminal_tool`. All other tools \u2014 file writes, code execution, browser automation, delegation, memory writes \u2014 execute without any user confirmation. The only modes avai",
+    "url": "https://github.com/NousResearch/hermes-agent/issues/21849"
    },
    {
-    "title": "Explore container security scanning signals for update candidates",
-    "body": "## Problem WUDup can plan container image updates, but it does not currently tell users whether an update candidate has reported security issues. Before adding security-oriented update delay behavior, we should decide whether this repository can reliably flag containers with relevant vulnerability o",
-    "url": "https://github.com/magrhino/wudup/issues/410"
+    "title": "CLI Schema - enforcing a security policy for AI agents",
+    "body": "### Describe the feature or problem you\u2019d like to solve I'd like to provide my sandboxed AI agent access to `gh`, but be able to enforce a security policy on which subcommands I allow, and which I disallow. ### Proposed solution I'd like the `gh` CLI schema to be easily machine-readable or CLI comma",
+    "url": "https://github.com/cli/cli/issues/12912"
    },
    {
-    "title": "Self-hosted Kali and BlackArch apt mirrors for supply chain resilience",
-    "body": "## Context PR #133 fixed immediate Kali mirror rotation issues by pinning to `kali.download` CDN, but this creates a single point of failure. Recent Ubuntu mirror DDoS demonstrated that third-party CDN availability is a systemic risk for production CI/builds. ## Strategic Value Self-hosted mirrors p",
-    "url": "https://github.com/Strike48-public/pick/issues/135"
+    "title": "[Bug]: Provider content-blocks (prompt injection / secret detection) leave sessions unrecoverable \u2014 harness should rewrite around the block instead of replaying the identical request",
+    "body": "### Operating System Linux (reproduced on GitHub-hosted runners and containerized agent runtimes; the behavior is platform-independent) ### Installation Method Other \u2014 observed in an agent session driven through an engine-driver harness (GitHub Agentic Workflows v0.93.5, codex engine `@openai/codex`",
+    "url": "https://github.com/OpenHands/OpenHands/issues/19018"
    },
    {
-    "title": "User Needs Analysis",
-    "body": "### **1.1 Context and Project Presentation** Cybersecurity has become a matter of prevention, as attacks are becoming increasingly advanced and reactive measures have given way to prevention. Regular vulnerability analysis is essential for companies to detect and fix weaknesses before they are explo",
-    "url": "https://github.com/XxAbde/Scanner-Vulner-Web/issues/1"
+    "title": "feat: governance guard for tool calls \u2014 deterministic policy evaluation, cost tracking, and audit",
+    "body": "### Description ## Feature request I'd like to propose/contribute a governance integration for Pydantic AI that evaluates deterministic security policies before tool execution, tracks cost, and produces structured audit records. ### Proposed API Pydantic AI's dependency injection system is a natural",
+    "url": "https://github.com/pydantic/pydantic-ai/issues/5789"
    },
    {
-    "title": "User Needs Analysis",
-    "body": "1.1 Context and Project Presentation Cybersecurity has become a matter of prevention, as attacks are becoming increasingly advanced and reactive measures have given way to prevention. Regular vulnerability analysis is essential for companies to detect and fix weaknesses before they are exploited. It",
-    "url": "https://github.com/XxAbde/gestion-store/issues/1"
+    "title": "[Idea] MCP Transcript Commitment Ledger for Tamper-Evident AI Agent Actions in DAO Treasury Ops",
+    "body": "## Idea Summary - **Idea Title**: MCP Transcript Commitment Ledger for Tamper-Evident AI Agent Actions in DAO Treasury Ops - **Core Analysis**: The real problem is not just sandbox escape; it is that agent actions are too easy to dispute after the fact. DeepSeek Harness-style failures prove that exe",
+    "url": "https://github.com/MosslandOpenDevs/agentic-orchestrator/issues/5005"
+   },
+   {
+    "title": "[Idea] Cloudflare Zero Trust Ephemeral Agent Relay for Mossland Web3 Signoffs",
+    "body": "## Idea Summary - **Idea Title**: Cloudflare Zero Trust Ephemeral Agent Relay for Mossland Web3 Signoffs - **Core Analysis**: The real problem is not just a DeepSeek Harness patch gap; it is that LLM agents are being treated like trusted backend workers while they remain externally steerable. Once p",
+    "url": "https://github.com/MosslandOpenDevs/agentic-orchestrator/issues/5008"
+   },
+   {
+    "title": "feat(security): prompt-injection detector (input + ingestion-time) (placeholder)",
+    "body": "## Placeholder \u2014 second-wave B2B / AI safety feature ## Idea Output-side guardrails (hallucination block, judge, citation validator) already exist in `services/rag/`. The **input** side has nothing dedicated to prompt-injection \u2014 only generic NoSQL/XSS sanitization in `securitySanitizer`. A vendor u",
+    "url": "https://github.com/andrelair-platform/retrieva/issues/220"
+   },
+   {
+    "title": "feat(runner): add OpenShell sandbox backend as alternative to Docker",
+    "body": "## Summary Add [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) as an alternative execution backend for Rascal runs. OpenShell provides sandboxed, policy-controlled execution environments for AI agents with defense-in-depth security (Landlock filesystem isolation, seccomp syscall filtering, O",
+    "url": "https://github.com/rtzll/rascal/issues/195"
    }
   ]
  },
  {
-  "theme_id": 3,
-  "name": "SCIM user provisioning for applications",
-  "need": "Admins of SaaS and self-hosted apps struggle with manual user provisioning and deprovisioning because products lack SCIM support for IdPs like Okta and Azure AD.",
+  "theme_id": 12,
+  "name": "Affordable security programs for small businesses",
+  "need": "Small businesses and nonprofits without IT staff struggle to run security audits, assessments, awareness training and SOC 2 or Cyber Essentials.",
+  "open_source_leaders": [
+   "Rastaman4e/-1 (83 stars)",
+   "NestieGuilas/Marketing-Platform- (26 stars)",
+   "Tradewindfinance2/What-Lessons-has-COVID-19-Taught-Buyers-and-Suppliers (5 stars)",
+   "Tradewindfinance2/Why-is-International-Trade-Finance-Important-to-SMEs---Tradewindfinance (3 stars)",
+   "FlyFireFight/PrivacyPolicy (3 stars)"
+  ],
+  "statements": [
+   {
+    "title": "IT Audit checklist",
+    "body": "I recently have taken on the position of a one man show for a company that is going to have an audit. The network isn't anywhere close to prepared and I have been looking for a general audit checklist",
+    "url": "https://serverfault.com/questions/142737/it-audit-checklist"
+   },
+   {
+    "title": "Ask HN: Security at my company is horrible, what can I do?",
+    "body": "I have joined a team working on maintaining and improving an old project around 4 months ago. The code is old and with horrible practices and no regard for security. I was OK-ish with it tho, since th",
+    "url": "https://news.ycombinator.com/item?id=17840003"
+   },
+   {
+    "title": "Ask HN: Security audit for startup / OSS projects",
+    "body": "I run a startup whose code is public and I'd like to have the code audited for vulnerabilities, does anyone know of services that exist to do this that aren't enterprise focused? Even HackerOne has go",
+    "url": "https://news.ycombinator.com/item?id=25520219"
+   },
+   {
+    "title": "Ask HN: Security audits. Worth it? Who's good?",
+    "body": "Hi all, I'm beginning a project which will create a web based software as a service. I've little experience in web security and I'm considering budgeting for a web security audit to find security issu",
+    "url": "https://news.ycombinator.com/item?id=23918219"
+   },
+   {
+    "title": "Ask HN: Security Awareness Training",
+    "body": "I'm at a bit of a loss. Just wanted to ask the community if there were any recommendations for decent security awareness training. This requirement is coming up more and more with regulators and under",
+    "url": "https://news.ycombinator.com/item?id=30288999"
+   },
+   {
+    "title": "Phone Privacy for Small Business",
+    "body": "I'm a small business operator and I'm looking for ways to provide security and reasonable privacy for my own business communications and communications of customers. All these businesses operate outsi",
+    "url": "https://security.stackexchange.com/questions/44863/phone-privacy-for-small-business"
+   },
+   {
+    "title": "SOC 2 audit for small business (6 employees) with no IT department",
+    "body": "One of our clients is demanding that we complete a SOC 2 Type II audit. There is no way we will meet the standard, and, considering we only handle publicly available data, it is ridiculous that they a",
+    "url": "https://security.stackexchange.com/questions/194368/soc-2-audit-for-small-business-6-employees-with-no-it-department"
+   },
+   {
+    "title": "Ask HN: Security assessment for small non-profit",
+    "body": "Hey all, I work with a small non-profit (~10 people) and we'd like an assessment done on our online presence (Wordpress, Roundcube email, Google Docs, Mailchimp, Twitter, Facebook) to ensure that it c",
+    "url": "https://news.ycombinator.com/item?id=16255598"
+   },
+   {
+    "title": "Cyber Essentials at a small business (20 employees) that keeps all business data within SaaS",
+    "body": "Background I've recently joined a rapidly growing small business (from 4 to 20 people in last 12 months) with a very DIY IT setup. It's fallen to me (I'm a developer so I just happen to be sitting nea",
+    "url": "https://security.stackexchange.com/questions/252530/cyber-essentials-at-a-small-business-20-employees-that-keeps-all-business-data"
+   },
+   {
+    "title": "SSO Tax- SaaS companies basis of upgrading from standard to enterprise",
+    "body": "",
+    "url": "https://news.ycombinator.com/item?id=38688926"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "Ask HN: Security at my company is horrible, what can I do?",
+    "body": "I have joined a team working on maintaining and improving an old project around 4 months ago. The code is old and with horrible practices and no regard for security. I was OK-ish with it tho, since the app is B2B and can only be accessed via a whitelisted IP. Now we have been told that on our produc",
+    "url": "https://news.ycombinator.com/item?id=17840003"
+   },
+   {
+    "title": "Ask HN: Security audits. Worth it? Who's good?",
+    "body": "Hi all, I'm beginning a project which will create a web based software as a service. I've little experience in web security and I'm considering budgeting for a web security audit to find security issues in the finished product. The product itself doesn't need to handle payments or store personal inf",
+    "url": "https://news.ycombinator.com/item?id=23918219"
+   },
+   {
+    "title": "Phone Privacy for Small Business",
+    "body": "I'm a small business operator and I'm looking for ways to provide security and reasonable privacy for my own business communications and communications of customers. All these businesses operate outside the U.S. and have no need to export their data to U.S. servers. All the smartphones I've seen see",
+    "url": "https://security.stackexchange.com/questions/44863/phone-privacy-for-small-business"
+   },
+   {
+    "title": "SSO Tax- SaaS companies basis of upgrading from standard to enterprise",
+    "body": "",
+    "url": "https://news.ycombinator.com/item?id=38688926"
+   },
+   {
+    "title": "Cybersecurity training programs don't prevent phishing scams",
+    "body": "Re: the receive email -> click URL -> enter credentials. We need SSO to stop being gated behind enterprise tiers. SSO tax is real, and can help solve this problem. I've moaned about this before as the leader of an IT team for a medium-sized company reliant on a lot of SaaS. Enterprise plans are too ",
+    "url": "https://news.ycombinator.com/item?id=45531438"
+   },
+   {
+    "title": "How I changed my D-Link camera to a locally managed IP camera",
+    "body": "Could I ask for some advice? I was gifted a new rando chinese IP cam that uses the mobile app. It's not googlable. I've been using as a outside security camera. The camera saves to an SD card continuously, and has a paid option to use the cloud which I did not take. It has a mobile app, KP WIFICAM, ",
+    "url": "https://news.ycombinator.com/item?id=36560346"
+   },
+   {
+    "title": "Disguised user location data collection on Huawei phone?",
+    "body": "I have a family friend that is 70+ yr olds. Unfortunately, the best deal I could find for him via his AT&T prepaid plan was a $70 Huawei Ascend XT2 @ Walmart (locked to AT&T). It's performance is great: fast charging, long-lasting battery, 2G of RAM, and intuitive UI (despite being Huawei's custom m",
+    "url": "https://news.ycombinator.com/item?id=18213111"
+   }
+  ]
+ },
+ {
+  "theme_id": 14,
+  "name": "Managed SOC and MDR services procurement",
+  "need": "Spanish and Portuguese public bodies seek 24x7 managed SOC, MDR and SIEM/SOAR services with supporting cybersecurity platforms.",
+  "open_source_leaders": [
+   "ammartiger/cavementech-services (0 stars)",
+   "ishandutta2007/Awesome-Managed-Threat-Hunting (0 stars)",
+   "ishandutta2007/Awesome-Managed-Cloud-Consulting-Services (0 stars)",
+   "api-evangelist/expel (0 stars)",
+   "api-evangelist/daylight (0 stars)"
+  ],
+  "statements": [
+   {
+    "title": "CP n\u00ba18/2026 - Aquisi\u00e7\u00e3o de servi\u00e7o de prote\u00e7\u00e3o Anti-DDoS",
+    "body": "CP n\u00ba 18/2026 - Aquisi\u00e7\u00e3o de servi\u00e7o de prote\u00e7\u00e3o Anti-DDoS CP n\u00ba 18/2026 - Aquisi\u00e7\u00e3o de servi\u00e7o de prote\u00e7\u00e3o Anti-DDoS",
+    "url": "https://ted.europa.eu/en/notice/-/detail/814236-2026"
+   },
+   {
+    "title": "Servicio gestionado de ciberseguridad y CISOaaS y SOC 24x7 para Radiotelevisi\u00f3n del Principado de Asturias",
+    "body": "Seg\u00fan pliego de prescripciones t\u00e9cnicas Seg\u00fan pliego de prescripciones t\u00e9cnicas",
+    "url": "https://ted.europa.eu/en/notice/-/detail/803347-2026"
+   },
+   {
+    "title": "Acuerdo marco para la prestacion del servicio de oficina de seguridad para el Servicio Cantabro de Salud y resto de entidades sanitarias del sistema sanitario publico de Cantabria mediante Procedimiento Abierto",
+    "body": "El objeto de la presente licitaci\u00f3n es la celebraci\u00f3n de un Acuerdo Marco por procedimiento abierto para la ejecuci\u00f3n del servicio integral de Oficina de Seguridad de la Informaci\u00f3n del Servicio C\u00e1nta",
+    "url": "https://ted.europa.eu/en/notice/-/detail/793260-2026"
+   },
+   {
+    "title": "Servicio de Fecha Secure Posture Management (DSPM) para Ferrocarriles de la Generalitat de Catalu\u00f1a (Ref: PO134/26)",
+    "body": "Servicio de Fecha Secure Posture Management (DSPM) para Ferrocarriles de la Generalitat de Catalu\u00f1a (Ref: PO134/26) Servicio de Fecha Secure Posture Management (DSPM) para Ferrocarriles de la Generali",
+    "url": "https://ted.europa.eu/en/notice/-/detail/786942-2026"
+   },
+   {
+    "title": "Contrato de servicio de Ciberseguridad Gestionada - OTC (SARA). Expte. 51/26-C.",
+    "body": "Constituye el objeto del presente contrato de servicios la prestaci\u00f3n de un Servicio de Ciberseguridad Gestionada a incorporar e implantar en el Ayuntamiento de Sagunto, con el fin de conseguir su pro",
+    "url": "https://ted.europa.eu/en/notice/-/detail/763467-2026"
+   },
+   {
+    "title": "Servicio de Plataforma de Ciberseguridad y Centro de Operaciones de Ciberseguridad (Hardware/Software) para el Ayuntamiento de Boadilla del Monte",
+    "body": "Servicio de Plataforma de Ciberseguridad y Centro de Operaciones de Ciberseguridad (Hardware/Software) para el Ayuntamiento de Boadilla del Monte Servicio de Plataforma de Ciberseguridad y Centro de O",
+    "url": "https://ted.europa.eu/en/notice/-/detail/744958-2026"
+   },
+   {
+    "title": "Contrataci\u00f3n del suministro de licencias para la plataforma de detecci\u00f3n y respuesta ante amenazas de EMT Madrid.",
+    "body": "Contrataci\u00f3n del suministro, mantenimiento y soporte de licencias de la plataforma CrowdStrike Falcon implantada en EMT Madrid, incluyendo funcionalidades de protecci\u00f3n de puestos, servidores, contene",
+    "url": "https://ted.europa.eu/en/notice/-/detail/695519-2026"
+   },
+   {
+    "title": "3026008621 / Aquisi\u00e7\u00e3o de Firewall de Per\u00edmetro Externo MN e Renova\u00e7\u00e3o Subscri\u00e7\u00e3o Licenciamento Checkpoint 2026",
+    "body": "3026008621 / Aquisi\u00e7\u00e3o de Firewall de Per\u00edmetro Externo MN e Renova\u00e7\u00e3o Subscri\u00e7\u00e3o Licenciamento Checkpoint 2026 3026008621 / Aquisi\u00e7\u00e3o de Firewall de Per\u00edmetro Externo MN e Renova\u00e7\u00e3o Subscri\u00e7\u00e3o Licenc",
+    "url": "https://ted.europa.eu/en/notice/-/detail/684427-2026"
+   },
+   {
+    "title": "Suministro de varios sistemas de ciberseguridad con servicios de instalaci\u00f3n y soporte 2026-2029",
+    "body": "Procedimiento abierto sujeto a regulaci\u00f3n armonizada (SARA) y a recurso especial - URGENTE Procedimiento abierto sujeto a regulaci\u00f3n armonizada (SARA) y a recurso especial - URGENTE",
+    "url": "https://ted.europa.eu/en/notice/-/detail/663752-2026"
+   },
+   {
+    "title": "Acuerdo Marco de homologaci\u00f3n de proveedores para el servicio de asistencia t\u00e9cnica en el \u00e1mbito de la ciberseguridad mediante un acuerdo marco para la Autoridad Portuaria de Tarragona.",
+    "body": "Establecimiento del Acuerdo Marco para la homologaci\u00f3n de proveedores del servicio de asistencia t\u00e9cnica y consultor\u00eda de apoyo al Departamento de Sistemas de Informaci\u00f3n de la APT en la definici\u00f3n, d",
+    "url": "https://ted.europa.eu/en/notice/-/detail/653554-2026"
+   }
+  ],
+  "price_or_vendor_statements": []
+ },
+ {
+  "theme_id": 15,
+  "name": "SCIM user provisioning support for apps",
+  "need": "Admins need applications to support SCIM so users and groups can be provisioned from identity providers like Azure AD.",
   "open_source_leaders": [
    "ory/polis (2269 stars)",
    "jelhub/scimgateway (232 stars)",
@@ -188,6 +611,11 @@
    "mlflow-oidc/mlflow-oidc-auth (136 stars)"
   ],
   "statements": [
+   {
+    "title": "Simplify HTTP transport with Websockets and stateless request/response options",
+    "body": "## Is your feature request related to a problem? Please describe. The current HTTP transport mechanisms for MCP (both HTTP+SSE and Streamable HTTP) introduce unnecessary complexity, state management c",
+    "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/493"
+   },
    {
     "title": "[Feature] SCIM support",
     "body": "## Add support for the SCIM protocol for user provisioning ### Problem FusionAuth currently supports user provisioning via its own APIs. This works for integrating with other backends when those backe",
@@ -209,24 +637,9 @@
     "url": "https://github.com/postmanlabs/postman-app-support/issues/6235"
    },
    {
-    "title": "feat: Data Access Workflow",
-    "body": "**Is your feature request related to a problem? Please describe.** With the concept of tasks already introduced (request tags/description) I would like to propose a feature where users can request and",
-    "url": "https://github.com/open-metadata/OpenMetadata/issues/12713"
-   },
-   {
-    "title": "Unable to turn on SCIM via the okta API from reading the docs",
-    "body": "Hello everyone! \ud83d\ude03 I have been reading through the okta documentation looking for a way to enable SCIM provisioning for SAML SSO apps via your API, and I am having trouble enabling SCIM via the API usi",
-    "url": "https://github.com/okta/okta-developer-docs/issues/5130"
-   },
-   {
     "title": "Implement Additional Validation for SCIM Server",
     "body": "### Problem The FusionAuth SCIM Server currently advertises and allows integrators to create a schema. This schema might suggest to the SCIM client what attributes are required, etc. However, the curr",
     "url": "https://github.com/FusionAuth/fusionauth-issues/issues/2695"
-   },
-   {
-    "title": "[feature]: Add workspaces to group projects and share members across them",
-    "body": "### Problem Every project manages its own members independently. Adding someone to multiple projects means creating a separate invite for each one. For instances with several projects and overlapping ",
-    "url": "https://github.com/croffasia/itsaplan/issues/258"
    },
    {
     "title": "[Feat]: SCIM Client support (Outbound provisioning)",
@@ -234,17 +647,22 @@
     "url": "https://github.com/supertokens/supertokens-core/issues/1009"
    },
    {
-    "title": "Automatically add users to workspace based on email address",
-    "body": "**Is your feature request related to a problem? Please describe.** I'm always frustrated when I invite a new user to Tracecat, as I have to ask them to sign up/sign in the first time, wait, and then m",
-    "url": "https://github.com/TracecatHQ/tracecat/issues/1031"
+    "title": "Support AzureAD minimum SCIM requirements",
+    "body": "## Support AzureAD minimum SCIM requirements ### Problem I want to provision my users from Azure AD into FusionAuth. ### Solution Support the required features for Azure AD to be able to provision use",
+    "url": "https://github.com/FusionAuth/fusionauth-issues/issues/1761"
+   },
+   {
+    "title": "SCIM - Will not provision groups with special chars other than - and _",
+    "body": "### Is there an existing request for this feature? - [X] I have searched the existing issues for this feature request and I know that duplicates will be closed ### Is your feature request related to a",
+    "url": "https://github.com/postmanlabs/postman-app-support/issues/12551"
+   },
+   {
+    "title": "Support Microsoft SharePoint Integration for Claims Provider",
+    "body": "## Support Microsoft SharePoint Integration for Claims Provider ### Problem Today developers are unable to map group memberships from FusionAuth to a SharePoint Server despite successfully authenticat",
+    "url": "https://github.com/FusionAuth/fusionauth-issues/issues/3256"
    }
   ],
   "price_or_vendor_statements": [
-   {
-    "title": "E88 Additional authentication options",
-    "body": "As an administrator, I want more sign-on and provisioning options so I can fit the WMS into whatever identity setup my company already has. - Stories to define: SAML 2.0 (document Keycloak-as-bridge first, native only on demand); Windows Integrated Authentication (Kerberos/Negotiate) for the console",
-    "url": "https://github.com/Chris-Wolfgang/wms/issues/735"
-   },
    {
     "title": "SCIM - Will not provision groups with special chars other than - and _",
     "body": "### Is there an existing request for this feature? - [X] I have searched the existing issues for this feature request and I know that duplicates will be closed ### Is your feature request related to a problem? Yes, we tend use periods (.) in our group naming standards... Azure Groups allow ' . - _ !",
@@ -258,91 +676,15 @@
   ]
  },
  {
-  "theme_id": 7,
-  "name": "IAM-based authentication in AWS service clients",
-  "need": "Cloud teams moving off static passwords and keys find their clients and tools can't authenticate to RDS, MSK, Redshift, API Gateway or ArgoCD with short-lived AWS IAM credentials.",
+  "theme_id": 16,
+  "name": "SIEM log collection and noise filtering",
+  "need": "Small security teams struggle to choose a SIEM, ingest logs from varied sources and filter noise so alerts are useful.",
   "open_source_leaders": [
-   "kubernetes-sigs/aws-iam-authenticator (2338 stars)",
-   "otterize/intents-operator (313 stars)",
-   "joshuamkite/terraform-aws-ssh-bastion-service (212 stars)",
-   "cloudposse/terraform-aws-ec2-bastion-server (172 stars)",
-   "aripalo/aws-cdk-github-oidc (128 stars)"
-  ],
-  "statements": [
-   {
-    "title": "Support for IAM Roles (Instance Profile/IRSA) for Authentication",
-    "body": "**Is your feature request related to a problem? Please describe.** The current best practices for security in AWS recommends using short-lived credentials through IAM Role (STS) instead of static IAM ",
-    "url": "https://github.com/opensearch-project/logstash-output-opensearch/issues/96"
-   },
-   {
-    "title": "Support IAM Authentication to AWS RDS",
-    "body": "## Problem My organization is moving away from standard db user/password to AWS IAM authentication. Essentially, IAM authentication adds an additional step to generate the session token which will exp",
-    "url": "https://github.com/prisma/orm/issues/6587"
-   },
-   {
-    "title": "SASL: Support AWS_MSK_IAM mechanism",
-    "body": "**Describe the solution you'd like** * Add a package with a [sasl.Mechanism](https://github.com/segmentio/kafka-go/blob/84623745d7b8ae64830d78bac17afc0b839def5a/sasl/sasl.go#L11) implementation suppor",
-    "url": "https://github.com/segmentio/kafka-go/issues/661"
-   },
-   {
-    "title": "Support scoped-API token based authentication with Cloudflare",
-    "body": "**Is your feature request related to a problem? Please describe.** Cloudflare recently released scoped api tokens [here](https://blog.cloudflare.com/api-tokens-general-availability/). And I would like",
-    "url": "https://github.com/cert-manager/cert-manager/issues/2036"
-   },
-   {
-    "title": "Support use of cleartext auth plugin",
-    "body": "## Steps to reproduce this issue I don't expect anybody to try to reproduce this obscure issue -- I'm just looking for some general guidance. I am attempting to connect to a database using the [cleart",
-    "url": "https://github.com/HeidiSQL/HeidiSQL/issues/296"
-   },
-   {
-    "title": "Redshift Serverless IAM Auth Support",
-    "body": "**Problem** I'm trying to connect to my Redshift Serverless workgroup using IAM auth provided by the AWS Toolkit for JetBrains, but I get the error: `Cluster my-cluster-name not found. (Service: Redsh",
-    "url": "https://github.com/aws/aws-toolkit-jetbrains/issues/3498"
-   },
-   {
-    "title": "Support IAM Authentication from ArgoCD clients",
-    "body": "As an alternative to JWT tokens, there is an upcoming need to authenticate to ArgoCD at an AWS account level, using IAM roles. After discussion with @wanghong230, @edlee2121, and @gaganapplatix we cou",
-    "url": "https://github.com/argoproj/argo-cd/issues/481"
-   },
-   {
-    "title": "Invoke API Gateway with IAM Auth request signing",
-    "body": "I'd like a way to call a API Gateway method/resource that has IAM Auth enabled. This requires signing the request in the [AWS Signature V4](https://docs.aws.amazon.com/general/latest/gr/signature-vers",
-    "url": "https://github.com/aws/aws-tools-for-powershell/issues/180"
-   },
-   {
-    "title": "RFC: API Gateway IAM (AWS_IAM) Authorizers",
-    "body": "This is an RFC for enabling IAM (AWS_IAM) auth type on APIs. SAM Template: ```yaml Resources: MyApi: ... Properties: Auth: # Sets auth type for all resources+methods of this API # Can be overridden at",
-    "url": "https://github.com/aws/serverless-application-model/issues/781"
-   },
-   {
-    "title": "Unable to generate API key when using External IdP (Azure AD)",
-    "body": "### Kiro Product IDE ### Feature Description Description: ## Problem I cannot generate a Kiro API key because the Kiro web portal (app.kiro.dev) does not support my authentication setup. ## My Configu",
-    "url": "https://github.com/kirodotdev/Kiro/issues/8414"
-   }
-  ],
-  "price_or_vendor_statements": [
-   {
-    "title": "Support IAM Authentication from ArgoCD clients",
-    "body": "As an alternative to JWT tokens, there is an upcoming need to authenticate to ArgoCD at an AWS account level, using IAM roles. After discussion with @wanghong230, @edlee2121, and @gaganapplatix we could use the techniques employed by [AWS IAM Authenticator](https://github.com/kubernetes-sigs/aws-iam",
-    "url": "https://github.com/argoproj/argo-cd/issues/481"
-   },
-   {
-    "title": "Azure : add support for Bleu Sovereign Cloud",
-    "body": "### Feature search - [x] I have searched the existing issues and this feature has not been requested yet or is already in our [Public Roadmap](https://roadmap.prowler.com/roadmap) ### Which component would this feature affect? Prowler CLI/SDK ### Related to specific cloud provider? Azure ### New fea",
-    "url": "https://github.com/prowler-cloud/prowler/issues/13248"
-   }
-  ]
- },
- {
-  "theme_id": 8,
-  "name": "Managing SIEM log noise and ingestion",
-  "need": "Small security teams struggle to filter noisy logs, enrich and monitor log feeds, and turn SIEM alerts into processed actions without high cost.",
-  "open_source_leaders": [
-   "jmasarweh/UniFi-Insights-Plus (328 stars)",
-   "lprat/logstash-plugins (10 stars)",
-   "sanesecurityguy/opnsense-ruleset-for-wazuh (9 stars)",
-   "TomWartenberg-IRN/Shield-Enterprise (3 stars)",
-   "PhilipLykov/LogPulseAI (2 stars)"
+   "Graylog2/graylog2-server (8182 stars)",
+   "dogoncouch/LogESP (229 stars)",
+   "gebruder/wirken (220 stars)",
+   "azure-ad-b2c/siem (68 stars)",
+   "dogoncouch/siemstress (41 stars)"
   ],
   "statements": [
    {
@@ -371,14 +713,29 @@
     "url": "https://github.com/falcosecurity/falcosidekick/issues/278"
    },
    {
+    "title": "OSSEC as a SIEM",
+    "body": "I am working on a log aggregation project and wanted to add some minor correlations/security intelligence to the mix. Currently I have logs from ~400 servers coming into a syslog-ng box. I was looking",
+    "url": "https://serverfault.com/questions/539342/ossec-as-a-siem"
+   },
+   {
+    "title": "Product recommendation for SIEM/log management",
+    "body": "I am looking at purchasing a SIEM/log management solution. I've read quite a few reviews but was wondering if you all had any personal preference. 2 products that I am especially interested in is Splu",
+    "url": "https://serverfault.com/questions/145626/product-recommendation-for-siem-log-management"
+   },
+   {
+    "title": "Is it possible to automatically collect chromebook system logs for SIEM ingestion?",
+    "body": "I'm planning to have a subset of end users running Chromebooks and would like to ingest system logs for those devices into a SIEM solution. Is there a way to do this? I see from Google documentation t",
+    "url": "https://serverfault.com/questions/1002822/is-it-possible-to-automatically-collect-chromebook-system-logs-for-siem-ingestio"
+   },
+   {
+    "title": "Tender No 20 SIEM-SOC Solution 2026",
+    "body": "The Irish Air Navigation Service (AirNav) wish to tender for a SIEM/SOC Solution for a period of three (3) years The Irish Air Navigation Service (AirNav) wish to tender for a SIEM/SOC Solution for a ",
+    "url": "https://ted.europa.eu/en/notice/-/detail/766413-2026"
+   },
+   {
     "title": "Collecting Attacker Feeds",
     "body": "Hi, I'd like to collect all the feeds that's been detected by tpotce in 24 hours and block them in SIEM. I want to do this automatically for every 24 hours. Is there a way in this tool to do this? or ",
     "url": "https://github.com/telekom-security/tpotce/issues/1545"
-   },
-   {
-    "title": "[FEATURE] Real-time SIEM integration with automatic alert processing",
-    "body": "**Is your feature request related to a problem? Please describe.** The platform currently has SIEM connector stub code but no actual real-time integration. Security teams receive hundreds of alerts da",
-    "url": "https://github.com/ZainGuard/InvestigAI/issues/4"
    }
   ],
   "price_or_vendor_statements": [
@@ -400,85 +757,468 @@
   ]
  },
  {
-  "theme_id": 10,
-  "name": "AWS role credentials for workloads",
-  "need": "Engineers running workloads in EKS, Lambda or outside AWS struggle to get tools to use role-based, short-lived credentials via the default chain instead of static or expiring keys.",
+  "theme_id": 19,
+  "name": "Privileged access management procurement",
+  "need": "Organisations tender PAM systems to control and monitor privileged accounts and passwords, including licence renewals and support.",
   "open_source_leaders": [
-   "aws/aws-workload-credentials-provider (709 stars)",
-   "jenkinsci/aws-secrets-manager-credentials-provider-plugin (65 stars)",
-   "61418/boto3-refresh-session (53 stars)",
-   "jfrog/jfrog-credentials-provider (28 stars)",
-   "geordielad/tableau-athena-credential-provider-examples (14 stars)"
+   "hashicorp/vault (36556 stars)",
+   "jumpserver/jumpserver (32010 stars)",
+   "Cloud-Architekt/AzurePrivilegedIAM (222 stars)",
+   "dakhama-mehdi/AD-Just-in-Time-Management (29 stars)",
+   "paulveillard/cybersecurity-pam (29 stars)"
   ],
   "statements": [
    {
-    "title": "Obtain credentials from `cli/cache` json file",
-    "body": "### Is this related to a problem? Going upstream after creating this: https://github.com/kubernetes-sigs/aws-iam-authenticator/issues/296 ### Feature description Describe what you want to happen. If y",
-    "url": "https://github.com/aws/aws-sdk-go/issues/3186"
+    "title": "Best Open-Source SIEM for Monitoring 100-150 Assets?",
+    "body": "I'm working on a small IT architecture with around 100-150 assets, including firewalls and servers. I want to monitor all of this effectively using a good open-source SIEM solution. Could you please h",
+    "url": "https://serverfault.com/questions/1171594/best-open-source-siem-for-monitoring-100-150-assets"
    },
    {
-    "title": "[AWS] Support the new EKS Pod Identity Agent",
-    "body": "## Description of the bug External Secrets v0.9.9 installed in EKS does not work with the new [EKS Pod Identity Agent](https://docs.aws.amazon.com/eks/latest/userguide/pod-identities.html) feature (al",
-    "url": "https://github.com/external-secrets/external-secrets/issues/2951"
+    "title": "RFT for Renewal of Secure Email Gateway Environment",
+    "body": "Renewal of Secure Email Gateway Environment Renewal of Secure Email Gateway Environment",
+    "url": "https://ted.europa.eu/en/notice/-/detail/735396-2026"
    },
    {
-    "title": "Support AWS_ROLE_ARN Environment Variable with Environment Credential Provider",
-    "body": "### Feature description The `AWS_ROLE_ARN` environment variable was recently added with the introduction of the web identity credential provider. It would be great if the `AWS_ROLE_ARN` environment va",
-    "url": "https://github.com/aws/aws-sdk-go-v2/issues/2867"
+    "title": "Multi-Component Security Monitoring System",
+    "body": "The objective of this procurement procedure is to conclude a Direct Contract for the design, development, deployment, verification, validation and support to accreditation of the Multi-Component Secur",
+    "url": "https://ted.europa.eu/en/notice/-/detail/713005-2026"
    },
    {
-    "title": "Would you mind clarifying how to add additional Roles/Users to the AWS AUTH during EKS provisioning",
-    "body": "## Is your request related to a problem? Please describe. Could not add Roles arn:: to the aws_auth configmap during installation process hence there are no any ability to manage EKS cluster after pro",
-    "url": "https://github.com/terraform-aws-modules/terraform-aws-eks/issues/1901"
+    "title": "TR2694 - Service Provider to provide CyberArk Privileged Access Management (PAM) licence re-seller Licencing and support for the Cyberark Privileged Access management tool",
+    "body": "The Contracting Entity intends to procure a contract for CyberArk Privileged Access Management Software. It is proposed that the Contract will include (non-exhaustive list \u2013 high level scope): Support",
+    "url": "https://ted.europa.eu/en/notice/-/detail/515870-2025"
    },
    {
-    "title": "Support AWS IAM Roles Anywhere for AWS Secrets Engine",
-    "body": "**Is your feature request related to a problem? Please describe.** Recently Amazon introduces [IAM Roles Anywhere for workloads outside of AWS](https://aws.amazon.com/blogs/security/extend-aws-iam-rol",
-    "url": "https://github.com/hashicorp/vault/issues/16268"
+    "title": "Administration of Privileged Accesses (PAM)",
+    "body": "ANSKA KO hereby invites tenderers to a competition for the provision of a system for administration of privileged accesses (Privileged Access Management, PAM). We currently have approx. 100 users in t",
+    "url": "https://ted.europa.eu/en/notice/-/detail/707070-2024"
    },
    {
-    "title": "S3 Client to be able to inherit IAM permissions from runtime / environment",
-    "body": "### What is the problem this feature would solve? Currently if you use the bun S3 client in say a lambda or fargate container, the only way to authorize the client is by explicilty passing in a access",
-    "url": "https://github.com/oven-sh/bun/issues/22711"
+    "title": "Qualification phase: Privileged Access Management (PAM) Hemit HF",
+    "body": "We are interested in a PAM system that provides us with optimum security, which protects the network and infrastructure and proactively identify potential security breaches. A system with high access ",
+    "url": "https://ted.europa.eu/en/notice/-/detail/419780-2024"
    },
    {
-    "title": "AWS ECR Permanent Credentials Feature Request",
-    "body": "**Is your feature request related to a problem? Please describe.** I'm running into a frustrating issue with ECR's 12-hour credential expiration. We're still setting up our initial workflow, having to",
-    "url": "https://github.com/runpod/runpod-python/issues/415"
+    "title": "Privilege Access Management Software Solution",
+    "body": "Privilege Access Management solution Privilege Access Management solution",
+    "url": "https://ted.europa.eu/en/notice/-/detail/385250-2024"
    },
    {
-    "title": "Using env var in vault agent conf",
-    "body": "**Is your feature request related to a problem? Please describe.** I'd like to use an environment variable for my vault agent configuration. This var is the AWS role and vary on my deploy stage. **Des",
-    "url": "https://github.com/hashicorp/vault/issues/11571"
+    "title": "Prequalification - Privileged Access Management System (PAM)",
+    "body": "As part of the ongoing initiative for security improvements and increasing the maturity of our security operations, the Br\u00f8nn\u00f8ysund Register Centre (hereafter called the Customer) has decided to procu",
+    "url": "https://ted.europa.eu/en/notice/-/detail/363169-2024"
    },
    {
-    "title": "Enable specific role assumption in ProviderConfig",
-    "body": "### What problem are you facing? I would like to use specific and least privileged access roles for provisioning AWS resources without creating additional credentials wherever possible. ### How could ",
-    "url": "https://github.com/crossplane-contrib/provider-aws/issues/606"
+    "title": "Provision of a Corporate Password Manager (PM) Solution including Privileged Access Management (PAM) for Teagasc",
+    "body": "Teagasc requires a comprehensive corporate password manager solution, with included Privileged Access Management (PAM) functionality. While the password manager solution is the first and foremost requ",
+    "url": "https://ted.europa.eu/en/notice/-/detail/672943-2023"
    },
    {
-    "title": "Vault client should use AWS-SDK default credential chain when using AWS auth method in iam mode",
-    "body": "**Is your feature request related to a problem? Please describe.** I have tried vault with multiple credential retrieval methods that the AWS SDK natively supports, namely: 1. ~/.aws/config with sourc",
-    "url": "https://github.com/hashicorp/vault/issues/12568"
+    "title": "Non-interactive SSH password authentication",
+    "body": "> privileged access management is the proper way to manage access to a password protected systems Managing access to privileged systems at scale is hard despite these tools. This isn\u2019t a knock on the ",
+    "url": "https://news.ycombinator.com/item?id=38771075"
    }
   ],
   "price_or_vendor_statements": [
    {
-    "title": "[AWS] Support the new EKS Pod Identity Agent",
-    "body": "## Description of the bug External Secrets v0.9.9 installed in EKS does not work with the new [EKS Pod Identity Agent](https://docs.aws.amazon.com/eks/latest/userguide/pod-identities.html) feature (alternative to IRSA). EKS Pod Identity Agent injects the `AWS_CONTAINER_CREDENTIALS_FULL_URI: http://1",
-    "url": "https://github.com/external-secrets/external-secrets/issues/2951"
-   },
-   {
-    "title": "Enable specific role assumption in ProviderConfig",
-    "body": "### What problem are you facing? I would like to use specific and least privileged access roles for provisioning AWS resources without creating additional credentials wherever possible. ### How could Crossplane help solve your problem? Adding a field e.g. `assumeRoleARN` to the `ProviderConfig` woul",
-    "url": "https://github.com/crossplane-contrib/provider-aws/issues/606"
+    "title": "TR2694 - Service Provider to provide CyberArk Privileged Access Management (PAM) licence re-seller Licencing and support for the Cyberark Privileged Access management tool",
+    "body": "The Contracting Entity intends to procure a contract for CyberArk Privileged Access Management Software. It is proposed that the Contract will include (non-exhaustive list \u2013 high level scope): Support for ESB teams while rolling out the implementation of a scalable a business critical CyberArk Privi",
+    "url": "https://ted.europa.eu/en/notice/-/detail/515870-2025"
    }
   ]
  },
  {
-  "theme_id": 11,
-  "name": "CycloneDX SBOM output and attestation",
-  "need": "Supply-chain teams want tools to emit and accept CycloneDX SBOMs (and VEX) and tie them to releases through attestations.",
+  "theme_id": 22,
+  "name": "Third-party dependency vulnerability management",
+  "need": "Developers struggle to track, scan and update vulnerable third-party dependencies in apps, containers and CI pipelines.",
+  "open_source_leaders": [
+   "fossas/fossa-cli (1532 stars)",
+   "lunasec-io/lunasec (1472 stars)",
+   "owasp-dep-scan/dep-scan (1464 stars)",
+   "OWASP/cve-lite-cli (801 stars)",
+   "miracodeai/mira (419 stars)"
+  ],
+  "statements": [
+   {
+    "title": "How to handle security updates within Docker containers?",
+    "body": "When deploying applications onto servers, there is typically a separation between what the application bundles with itself and what it expects from the platform (operating system and installed package",
+    "url": "https://serverfault.com/questions/611082/how-to-handle-security-updates-within-docker-containers"
+   },
+   {
+    "title": "Update dependencies to resolve security vulnerabilities in sub-dependencies",
+    "body": "**What would you like Renovate to be able to do?** GitHub informs of vulnerabilities for sub-dependencies present in package-lock.json, but Renovate doesn't cut PRs for updating the top-level dependen",
+    "url": "https://github.com/renovatebot/renovate/issues/3080"
+   },
+   {
+    "title": "Ask HN: Which security vulnerability feeds should I Monitor?",
+    "body": "Hi, I'm building a security vulnerability alerts service (details below), to use myself, and I'll make it available to others too. For server and client side (incl. Javascript) vulnerabilities, and de",
+    "url": "https://news.ycombinator.com/item?id=12387694"
+   },
+   {
+    "title": "Add a config option to disable proxying for all private packages (to shield against dependency confusion attacks)",
+    "body": "**Is your feature request related to a problem?** - [Dependency confusion](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610) attacks exploit a vulnerability in private package registr",
+    "url": "https://github.com/verdaccio/verdaccio/issues/2103"
+   },
+   {
+    "title": "\ud83d\udcac RFC: Proposal to Remove `node-libs-browser` Dependency",
+    "body": "### \ud83d\udd16 Need The primary motivation for removing `node-libs-browser` is due to a security vulnerability that has been detected. The vulnerability originates from a dependency chain that includes `node-l",
+    "url": "https://github.com/backstage/backstage/issues/28740"
+   },
+   {
+    "title": "web app 3rd party JS dependency vulnerability management",
+    "body": "As a security engineer, I wonder about the common approach for web app 3rd party JS dependency vulnerability management. We have a lot of apps depend on Jquery etc. In a regular vulnerability scan, ol",
+    "url": "https://security.stackexchange.com/questions/245529/web-app-3rd-party-js-dependency-vulnerability-management"
+   },
+   {
+    "title": "Ask HN: Best approach to dependency vulnerability scanning in CI?",
+    "body": "We're struggling with software supply chain security. Looking for automated vulnerability detection tools and sbom generation that don't need source code access. How are you securing software dependen",
+    "url": "https://news.ycombinator.com/item?id=48944189"
+   },
+   {
+    "title": "Support for Rust",
+    "body": "Rust usage in embedded systems is growing specifically for safety and security critical applications. A tool to support code review looking for possible vulnerabilities is very much welcome despide th",
+    "url": "https://github.com/arm/metis/issues/21"
+   },
+   {
+    "title": "Vulnerability in http-cache-semantics dependency",
+    "body": "Hello, Thank you for this tool. There is a high security vulnerability in http-cache-semantics <4.1.1 and for an unknown reason using an \"overrides\" in the root package.json file of the CDK project do",
+    "url": "https://github.com/cdklabs/cdk-ecr-deployment/issues/233"
+   },
+   {
+    "title": "RFT for Sonatype Nexus Repository Manager, Lifecycle and Firewall for Security Vulnerability Checking, License Compliance and Architectural Governance",
+    "body": "In summary, the Services comprise: (1) supply of a three Sonatype tools: Nexus Repository, Lifecycle and Firewall, for the purpose of (a) binary repository management, (b) security vulnerability check",
+    "url": "https://ted.europa.eu/en/notice/-/detail/411742-2026"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "Ask HN: Which security vulnerability feeds should I Monitor?",
+    "body": "Hi, I'm building a security vulnerability alerts service (details below), to use myself, and I'll make it available to others too. For server and client side (incl. Javascript) vulnerabilities, and dev/ops' operating systems and tools (e.g. IntelliJ, Chrome) vulnerabilities. Which vulnerability feed",
+    "url": "https://news.ycombinator.com/item?id=12387694"
+   },
+   {
+    "title": "RFT for Sonatype Nexus Repository Manager, Lifecycle and Firewall for Security Vulnerability Checking, License Compliance and Architectural Governance",
+    "body": "In summary, the Services comprise: (1) supply of a three Sonatype tools: Nexus Repository, Lifecycle and Firewall, for the purpose of (a) binary repository management, (b) security vulnerability checking of 3rd party open source libraries, (c) license compliance checking of those libraries, and (d) ",
+    "url": "https://ted.europa.eu/en/notice/-/detail/411742-2026"
+   },
+   {
+    "title": "Self-hosted Kali and BlackArch apt mirrors for supply chain resilience",
+    "body": "## Context PR #133 fixed immediate Kali mirror rotation issues by pinning to `kali.download` CDN, but this creates a single point of failure. Recent Ubuntu mirror DDoS demonstrated that third-party CDN availability is a systemic risk for production CI/builds. ## Strategic Value Self-hosted mirrors p",
+    "url": "https://github.com/Strike48-public/pick/issues/135"
+   }
+  ]
+ },
+ {
+  "theme_id": 27,
+  "name": "Cyber risk governance and disclosure compliance",
+  "need": "Companies under NIS2, SEC, CMMC, Coast Guard and CCPA rules must assess, document, approve and disclose cybersecurity risk management.",
+  "open_source_leaders": [
+   "intuitem/ciso-assistant-community (4659 stars)",
+   "gensecaihq/Wazuh-MCP-Server (280 stars)",
+   "LeeMangold/OpenGRC (164 stars)",
+   "UnicisTech/unicis-platform-ce (111 stars)",
+   "Hack23/ISMS-PUBLIC (68 stars)"
+  ],
+  "statements": [
+   {
+    "title": "EU NIS2 Directive (Directive (EU) 2022/2555): Management bodies must approve and oversee cybersecurity risk-management measures and members must follow cybersecurity training.",
+    "body": "Management bodies must approve and oversee cybersecurity risk-management measures and members must follow cybersecurity training. Applies to: Essential and important entities in NIS2 sectors (generall",
+    "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+   },
+   {
+    "title": "SEC Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure rule: Disclose material cybersecurity incidents on Form 8-K Item 1.05 within four business days of determining materiality.",
+    "body": "Disclose material cybersecurity incidents on Form 8-K Item 1.05 within four business days of determining materiality. Applies to: SEC registrants other than smaller reporting companies. Jurisdiction: ",
+    "url": "https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure"
+   },
+   {
+    "title": "SEC Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure rule: Disclose material cybersecurity incidents on Form 8-K Item 1.05 within four business days of determining materiality.",
+    "body": "Disclose material cybersecurity incidents on Form 8-K Item 1.05 within four business days of determining materiality. Applies to: Smaller reporting companies registered with the SEC. Jurisdiction: US ",
+    "url": "https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure"
+   },
+   {
+    "title": "SEC Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure rule: Describe in the annual report the processes for assessing and managing cyber risk, third-party risk oversight, and board and management governance of cybersecurity.",
+    "body": "Describe in the annual report the processes for assessing and managing cyber risk, third-party risk oversight, and board and management governance of cybersecurity. Applies to: SEC registrants, for fi",
+    "url": "https://www.federalregister.gov/documents/2023/08/04/2023-16194/cybersecurity-risk-management-strategy-governance-and-incident-disclosure"
+   },
+   {
+    "title": "CMMC 2.0 (32 CFR part 170; DFARS Case 2019-D041, 48 CFR part 204): Hold a current CMMC Level 1 or Level 2 self-assessment and an affirmation of continuous compliance in SPRS for each system handling FCI/CUI as a condition of contract award.",
+    "body": "Hold a current CMMC Level 1 or Level 2 self-assessment and an affirmation of continuous compliance in SPRS for each system handling FCI/CUI as a condition of contract award. Applies to: DoD contractor",
+    "url": "https://www.federalregister.gov/documents/2025/09/10/2025-17359/defense-federal-acquisition-regulation-supplement-assessing-contractor-implementation-of"
+   },
+   {
+    "title": "US Coast Guard Cybersecurity in the Marine Transportation System (33 CFR part 101 subpart F): Submit a Cybersecurity Plan covering MFA, least privilege, asset inventory, network maps, protected logging and encryption to the Coast Guard for approval.",
+    "body": "Submit a Cybersecurity Plan covering MFA, least privilege, asset inventory, network maps, protected logging and encryption to the Coast Guard for approval. Applies to: Owners/operators of U.S.-flagged",
+    "url": "https://www.ecfr.gov/current/title-33/chapter-I/subchapter-H/part-101/subpart-F/section-101.655"
+   },
+   {
+    "title": "California CCPA regulations \u2014 Cybersecurity Audits (Cal. Code Regs. tit. 11, \u00a7\u00a7 7120-7124): Complete the first independent cybersecurity audit report on the business's cybersecurity program (audit period 2027) and certify completion.",
+    "body": "Complete the first independent cybersecurity audit report on the business's cybersecurity program (audit period 2027) and certify completion. Applies to: CCPA businesses with significant-risk processi",
+    "url": "https://cppa.ca.gov/regulations/pdf/ccpa_updates_cyber_risk_admt_appr_text.pdf"
+   },
+   {
+    "title": "California CCPA regulations \u2014 Cybersecurity Audits (Cal. Code Regs. tit. 11, \u00a7\u00a7 7120-7124): Complete the first independent cybersecurity audit report on the business's cybersecurity program (audit period 2028) and certify completion.",
+    "body": "Complete the first independent cybersecurity audit report on the business's cybersecurity program (audit period 2028) and certify completion. Applies to: CCPA businesses with significant-risk processi",
+    "url": "https://cppa.ca.gov/regulations/pdf/ccpa_updates_cyber_risk_admt_appr_text.pdf"
+   }
+  ],
+  "price_or_vendor_statements": []
+ },
+ {
+  "theme_id": 30,
+  "name": "Perimeter firewall refresh and licensing",
+  "need": "Italian public bodies need to refresh firewalls and renew firewall licences, subscriptions and maintenance.",
+  "open_source_leaders": [
+   "ehang-io/nps (34257 stars)",
+   "C0nw0nk/Nginx-Lua-Anti-DDoS (1673 stars)",
+   "SecOps-7/MikroDash (659 stars)",
+   "corrad1nho/qomui (558 stars)",
+   "Community-VyProjects/VyManager (504 stars)"
+  ],
+  "statements": [
+   {
+    "title": "45/2026 - Progetto SMARTWING - Fornitura hardware, servizi di assistenza e formazione per una capacit\u00e0 di CROSS DOMAIN SOLUTION (CDS)",
+    "body": "45/2026 - Progetto SMARTWING - Fornitura hardware, servizi di assistenza e formazione per una capacit\u00e0 di CROSS DOMAIN SOLUTION (CDS) 6753146 - lotto 1",
+    "url": "https://ted.europa.eu/en/notice/-/detail/796135-2026"
+   },
+   {
+    "title": "GARA EUROPEA A PROCEDURA APERTA, PER L\u2019AFFIDAMENTO DI FORNITURE PER IL REFRESH FIREWALL CHECK POINT, DELLA MANUTENZIONE DI LICENZE WORKSPACE SECURITY E DEI RELATIVI SERVIZI DI SUPPORTO",
+    "body": "lL'oggetto del presente affidamento si sostanzia nelle forniture per il refresh firewall Check Point, nella manutenzione delle licenze Workspace Security e nei relativi servizi di supporto e comprende",
+    "url": "https://ted.europa.eu/en/notice/-/detail/791424-2026"
+   },
+   {
+    "title": "PR26INF073 | Lotto 1 Procedura aperta sopra soglia comunitaria indetta su piattaforma telematica eAppalti SAT FVG, ai sensi dell\u2019art. 71 D.lgs. n. 36/2023, per l\u2019affidamento della fornitura di Licenze Firewall, sottoscrizioni e servizi di supporto FORTINET destinati all\u2019infrastruttura di sicurezza i",
+    "body": "PR26INF073 | Lotto 1 Procedura aperta per l\u2019affidamento della fornitura di Licenze Firewall, sottoscrizioni e servizi di supporto FORTINET destinati all\u2019infrastruttura di sicurezza informatica install",
+    "url": "https://ted.europa.eu/en/notice/-/detail/783479-2026"
+   },
+   {
+    "title": "PR26INF073 | Procedura aperta sopra soglia comunitaria per l\u2019affidamento della fornitura di Licenze Firewall, sottoscrizioni e servizi di supporto FORTINET destinati all\u2019infrastruttura di sicurezza in",
+    "body": "PR26INF073 | Lotto 1 - Procedura aperta sopra soglia comunitaria indetta su piattaforma telematica eAppalti SAT - FVG, ai sensi dell\u2019art. 71 D.lgs. n. 36/2023, per l\u2019affidamento della fornitura di Lic",
+    "url": "https://ted.europa.eu/en/notice/-/detail/768150-2026"
+   },
+   {
+    "title": "Cybersecurity - soluzioni e servizi per la protezione e resilienza di reti e sistemi informativi (ID 2733)",
+    "body": "Gara a procedura aperta per l\u2019affidamento di un Accordo Quadro avente ad oggetto la fornitura di soluzioni per protezione e resilienza delle reti e dei sistemi informativi ed erogazione di servizi con",
+    "url": "https://ted.europa.eu/en/notice/-/detail/755747-2026"
+   },
+   {
+    "title": "GARA EUROPEA A PROCEDURA APERTA, PER L\u2019AFFIDAMENTO DI FORNITURE PER IL REFRESH FIREWALL CHECK POINT, DELLA MANUTENZIONE DI LICENZE WORKSPACE SECURITY E DEI RELATIVI SERVIZI DI SUPPORTO",
+    "body": "lL'oggetto del presente affidamento si sostanzia nelle forniture per il refresh firewall Check Point, nella manutenzione delle licenze Workspace Security e nei relativi servizi di supporto e comprende",
+    "url": "https://ted.europa.eu/en/notice/-/detail/717892-2026"
+   },
+   {
+    "title": "Procedura aperta per l\u2019affidamento della fornitura di licenze software del sistema di gestione degli apparati di sicurezza perimetrale",
+    "body": "Il Segretariato Generale della Presidenza della Repubblica ha indetto, ai sensi dell\u2019art. 55 del regolamento di amministrazione e contabilit\u00e0 e dell\u2019art. 71 del d.lgs. n. 36/2023, una procedura aperta",
+    "url": "https://ted.europa.eu/en/notice/-/detail/685268-2026"
+   },
+   {
+    "title": "Cybersecurity - soluzioni e servizi per la protezione e resilienza di reti e sistemi informativi (ID 2733)",
+    "body": "Gara a procedura aperta per l\u2019affidamento di un Accordo Quadro avente ad oggetto la fornitura di soluzioni per protezione e resilienza delle reti e dei sistemi informativi ed erogazione di servizi con",
+    "url": "https://ted.europa.eu/en/notice/-/detail/674254-2026"
+   }
+  ],
+  "price_or_vendor_statements": []
+ },
+ {
+  "theme_id": 33,
+  "name": "Ransomware detection and recovery for file servers",
+  "need": "Small IT teams whose file servers or networks are hit by ransomware need to detect, remove, prevent it and restore files.",
+  "open_source_leaders": [
+   "fcorbelli/zpaqfranz (513 stars)",
+   "Nilespand/acronis-true-image-win (365 stars)",
+   "soimy/c3rb3r-rescue (362 stars)",
+   "pricejing1995/acronis-true-image-win (353 stars)",
+   "lithnet/access-manager (266 stars)"
+  ],
+  "statements": [
+   {
+    "title": "Restore Shadow Copy Deleted by Ransomware",
+    "body": "I got hit by the latest version of Crysis ransom ware on 14/09. I was lucky enough to pull the cable on the infected PC before it could spread to all servers on my network. However, it did spread to a",
+    "url": "https://serverfault.com/questions/874140/restore-shadow-copy-deleted-by-ransomware"
+   },
+   {
+    "title": "How to remove crypto-ransomware on my network domain",
+    "body": "Today some computer on my domain got infected with crypto-ransomware and have infected some folders on file server that only some computers on network have access to. So I presume one or more of five ",
+    "url": "https://serverfault.com/questions/671954/how-to-remove-crypto-ransomware-on-my-network-domain"
+   },
+   {
+    "title": "AWS Glacier and Ransomware",
+    "body": "I'm trying to understand the structure of how AWS Glacier works because I have a problem. Problem : I have a NAS that backs up to Glacier about once a week. About two weeks ago the NAS got infected wi",
+    "url": "https://serverfault.com/questions/1062989/aws-glacier-and-ransomware"
+   },
+   {
+    "title": "Prevent Network Ransomware Malware Attack?",
+    "body": "I have a small network of Windows 7 PCs. I want to use a Windows NAS file server as a repository to safeguard the backup files from each Windows PC against a ransomware attack. In order for this strat",
+    "url": "https://serverfault.com/questions/849984/prevent-network-ransomware-malware-attack"
+   },
+   {
+    "title": "Ransomware infection: What to do",
+    "body": "t seems that somehow our domain computers have been infected by rasomware, turning files into encrypted files ending with .crypted. Lots of file have been changed and we do have back up. At the same t",
+    "url": "https://serverfault.com/questions/790394/ransomware-infection-what-to-do"
+   },
+   {
+    "title": "Detecting .Money Ransomware on Windows Server 2019",
+    "body": "Problem A few weeks back we got hit with a Dharma Ransomware variant called \"Money\". We made the incorrect assumption that this variant began right at the time the user opened the malicious attachment",
+    "url": "https://serverfault.com/questions/995772/detecting-money-ransomware-on-windows-server-2019"
+   },
+   {
+    "title": "Sage2.0 Ransomware and Tomcat 7",
+    "body": "We have a tomcat server running on window 2012 server which seems to be constantly being attached by Sage 2.0 ransomeware. Some details of the sever, 1) Tomcat is running on port 80 and 8080. 2) Cygwi",
+    "url": "https://serverfault.com/questions/840511/sage2-0-ransomware-and-tomcat-7"
+   }
+  ],
+  "price_or_vendor_statements": []
+ },
+ {
+  "theme_id": 35,
+  "name": "Secret detection in code and CI",
+  "need": "Developers need to detect credentials pushed to repositories and CI, including history scans, custom patterns and secret manager connectors.",
+  "open_source_leaders": [
+   "trufflesecurity/trufflehog (29582 stars)",
+   "dwisiswant0/apkleaks (6399 stars)",
+   "edoardottt/cariddi (3833 stars)",
+   "hannob/snallygaster (2113 stars)",
+   "GitGuardian/ggshield (2022 stars)"
+  ],
+  "statements": [
+   {
+    "title": "Using regex to scan for specific credentials",
+    "body": "**Is your feature request related to a problem? Please describe.** See https://github.com/Yelp/detect-secrets for reference, but it would be useful for Precaution to also warn on secrets, Confidential",
+    "url": "https://github.com/securesauce/precaution-beta/issues/209"
+   },
+   {
+    "title": "Rethink security scanning CI approach",
+    "body": "Most of our javascript repositories are using the snyk security auditing tool in some fashion. This is often a CI check linked to github pull requests. I'm not sure this approach is the best. ## Probl",
+    "url": "https://github.com/reactioncommerce/reaction-feature-requests/issues/66"
+   },
+   {
+    "title": "Feature request: findings deduplication",
+    "body": "**Is your feature request related to a problem? Please describe.** We have recently introduced automatic secrets scanning with Gitleaks as part of our CI pipelines. Our developers are instructed to re",
+    "url": "https://github.com/gitleaks/gitleaks/issues/1054"
+   },
+   {
+    "title": "Detect Pushing of Secrets",
+    "body": "# CONTEXT We want to avoid committing secrets related to either the EE-IoT wifi and so forth. Integrations such as GitLeaks are available to do this and regex each PR for a specific key you may be loo",
+    "url": "https://github.com/smesh-stanford/smesh/issues/24"
+   },
+   {
+    "title": "Investigate Secret Scanning for Public Repos",
+    "body": "UC3 recently had an incident where a secret (certificate key/pair) was not identified when being pushed to a public repo. Would like to understand why this was and understand secret scanning tools ava",
+    "url": "https://github.com/cdlib/cdl-github-mgmt/issues/16"
+   },
+   {
+    "title": "Add GCP Secret Manager connector plugin",
+    "body": "## Feature Description Add a connector plugin for GCP Secret Manager so users can securely retrieve secrets and credentials during GCP-centric GRC evidence collection, IaC scanning, and continuous mon",
+    "url": "https://github.com/GRCEngClub/claude-grc-engineering/issues/185"
+   },
+   {
+    "title": "feat: TruffleHog action for historical secret scanning",
+    "body": "## Summary Add a reusable action wrapping [TruffleHog](https://github.com/trufflesecurity/trufflehog) as an alternative (or complement) to the existing gitleaks action. TruffleHog's main differentiato",
+    "url": "https://github.com/cschooley/sec-actions/issues/2"
+   },
+   {
+    "title": "Add HashiCorp Vault CLI connector plugin",
+    "body": "## Feature Description Add a connector plugin for the HashiCorp Vault CLI (`vault`) so users can securely retrieve secrets, credentials, and API tokens during GRC evidence collection and IaC scanning ",
+    "url": "https://github.com/GRCEngClub/claude-grc-engineering/issues/182"
+   },
+   {
+    "title": "add compatibility with GitHub Secret Scanning?",
+    "body": "## Summary API keys currently have a generic alphanumeric format that is not specific to CVE Services applications. This makes it difficult to automatically detect accidental key exposure, such as a p",
+    "url": "https://github.com/CVEProject/cve-services/issues/513"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "Rethink security scanning CI approach",
+    "body": "Most of our javascript repositories are using the snyk security auditing tool in some fashion. This is often a CI check linked to github pull requests. I'm not sure this approach is the best. ## Problems with snyk as a pull request CI check - Running `snyk test` requires a snyk token which is a reac",
+    "url": "https://github.com/reactioncommerce/reaction-feature-requests/issues/66"
+   },
+   {
+    "title": "Detect Pushing of Secrets",
+    "body": "# CONTEXT We want to avoid committing secrets related to either the EE-IoT wifi and so forth. Integrations such as GitLeaks are available to do this and regex each PR for a specific key you may be looking for. This is a good safety net to ensure we do not accidentally commit this information to a pu",
+    "url": "https://github.com/smesh-stanford/smesh/issues/24"
+   },
+   {
+    "title": "Add HashiCorp Vault CLI connector plugin",
+    "body": "## Feature Description Add a connector plugin for the HashiCorp Vault CLI (`vault`) so users can securely retrieve secrets, credentials, and API tokens during GRC evidence collection and IaC scanning workflows. ## Motivation Today, connectors and workflow runbooks often expect secrets as environment",
+    "url": "https://github.com/GRCEngClub/claude-grc-engineering/issues/182"
+   }
+  ]
+ },
+ {
+  "theme_id": 40,
+  "name": "Cloud security posture management configuration",
+  "need": "Cloud teams need multi-cloud CSPM, asset inventory and policy-as-code control over Defender plans, with fewer false positives.",
+  "open_source_leaders": [
+   "aquasecurity/cloudsploit (3788 stars)",
+   "turbot/powerpipe (527 stars)",
+   "openraven/magpie (206 stars)",
+   "antgroup/CloudRec (195 stars)",
+   "elastic/cloudbeat (59 stars)"
+  ],
+  "statements": [
+   {
+    "title": "Configuration to exclude packages being sent to OSS Index",
+    "body": "**What is the Feature? Please describe.** I would like a configuration option (maybe scoped to OssIndex would make sense) that allows me to list names of packages that should not be transmitted to a t",
+    "url": "https://github.com/digitalcoyote/NuGetDefense/issues/35"
+   },
+   {
+    "title": "SPIKE Looking for a multi-cloud CSPM",
+    "body": "**Describe the issue** The multi-cloud configuration force us to use a decentralized CSPM. Indeed because of this nature if we want to centralize all the security info we will have to chose one Cloud ",
+    "url": "https://github.com/bcgov/cloud-pathfinder/issues/2008"
+   },
+   {
+    "title": "Managing MSP Tenants for Anti-Phishing Controls",
+    "body": "I'm trying to find a simple way to report on our tenants' settings regarding Microsoft's recently introduced Anti-Phishing controls. If possible, I'm looking to find an easy GUI method to report on th",
+    "url": "https://serverfault.com/questions/988839/managing-msp-tenants-for-anti-phishing-controls"
+   },
+   {
+    "title": "HIPAA compliant BI reporting tool?",
+    "body": "We are building an application for healthcare industry and we are planning to use a 3rd party BI tool for reporting which will directly connect to our postgres DB and generate the desired reports whic",
+    "url": "https://security.stackexchange.com/questions/192173/hipaa-compliant-bi-reporting-tool"
+   },
+   {
+    "title": "CSPM False Positives",
+    "body": "",
+    "url": "https://news.ycombinator.com/item?id=35776975"
+   },
+   {
+    "title": "[Policy] Add custom policy for Microsoft Defender CSPM plan with full extension configurability",
+    "body": "**Is your feature request related to a problem? Please describe.** The existing built-in policy **\"Configure Microsoft Defender CSPM plan\"** (`72f8cee7-2937-403d-84a1-a4e3e57f3c21`) only exposes a sub",
+    "url": "https://github.com/Azure/Microsoft-Defender-for-Cloud/issues/1039"
+   },
+   {
+    "title": "Setting MS Defender for Cloud plans by code (policy or bicep template) - only pricingTier available?",
+    "body": "**Is your feature request related to a problem? Please describe.** It seems that the MS Defender for Cloud pricing plans can be set to standard or free by either using a policy or just using a bicep t",
+    "url": "https://github.com/Azure/Microsoft-Defender-for-Cloud/issues/735"
+   },
+   {
+    "title": "SPIKE: Asset inventory solution in AWS",
+    "body": "**Describe the issue** We were wanting to use TFC at one point to get a reporting governance view over everything deployed to cloud. We know this is possible via direct queries to each CSP using their",
+    "url": "https://github.com/bcgov/cloud-pathfinder/issues/1837"
+   }
+  ],
+  "price_or_vendor_statements": [
+   {
+    "title": "SPIKE Looking for a multi-cloud CSPM",
+    "body": "**Describe the issue** The multi-cloud configuration force us to use a decentralized CSPM. Indeed because of this nature if we want to centralize all the security info we will have to chose one Cloud provided CSPM and send the data to it from the 2 other clouds. In this regards we prefer to use a ex",
+    "url": "https://github.com/bcgov/cloud-pathfinder/issues/2008"
+   },
+   {
+    "title": "[Policy] Add custom policy for Microsoft Defender CSPM plan with full extension configurability",
+    "body": "**Is your feature request related to a problem? Please describe.** The existing built-in policy **\"Configure Microsoft Defender CSPM plan\"** (`72f8cee7-2937-403d-84a1-a4e3e57f3c21`) only exposes a subset of the configurable extensions available on the `Microsoft.Security/pricings/CloudPosture` resou",
+    "url": "https://github.com/Azure/Microsoft-Defender-for-Cloud/issues/1039"
+   },
+   {
+    "title": "Setting MS Defender for Cloud plans by code (policy or bicep template) - only pricingTier available?",
+    "body": "**Is your feature request related to a problem? Please describe.** It seems that the MS Defender for Cloud pricing plans can be set to standard or free by either using a policy or just using a bicep template (Microsoft.Security/pricings@2022-03-01) However the extensions for each plan cannot be prog",
+    "url": "https://github.com/Azure/Microsoft-Defender-for-Cloud/issues/735"
+   }
+  ]
+ },
+ {
+  "theme_id": 44,
+  "name": "CycloneDX SBOM and VEX support",
+  "need": "Tool users want CycloneDX SBOM output, newer schema versions, attestations and uploading SBOMs together with VEX.",
   "open_source_leaders": [
    "anchore/syft (9950 stars)",
    "DependencyTrack/dependency-track (4499 stars)",
@@ -516,6 +1256,11 @@
     "title": "feat(loxel): attest release DMGs, update zips and the SBOM with GitHub artifact attestations",
     "body": "## Problem Each Loxel release now publishes a CycloneDX SBOM (`loxel- .cdx.json`) next to the DMGs and update zips, but nothing ties the two together. A downloaded DMG, update zip or SBOM can only be ",
     "url": "https://github.com/bizimind/loxel/issues/1360"
+   },
+   {
+    "title": "SBOM mode: pick trivy or grype from the SBOM's generator",
+    "body": "## Problem `argus scan --sbom` runs every SBOM-capable scanner (osv, grype, trivy) on every SBOM. trivy and grype each read only some generators' SBOMs reliably (see the parent issue's table): trivy m",
+    "url": "https://github.com/huntridge-labs/argus/issues/493"
    }
   ],
   "price_or_vendor_statements": [
@@ -532,22 +1277,267 @@
   ]
  },
  {
-  "theme_id": 14,
-  "name": "Dependency context for vulnerability impact",
-  "need": "Teams analyzing SBOMs and advisories struggle to tell how a vulnerability affects their product because reports lack dependency hierarchy, parent component, container and vendor advisory context.",
+  "theme_id": 45,
+  "name": "Kubernetes pod security policy enforcement",
+  "need": "Kubernetes operators need to migrate from PodSecurityPolicy to Pod Security Standards and set secure security contexts and RBAC.",
   "open_source_leaders": [
-   "alexdevassy/AI-Powered-Vulnerability-Impact-Analyzer (65 stars)",
-   "pchukwuemeka424/Machine-Learning-and-Morphometric-Analysis-for-Runoff-Dynamics-Enhancing-Flood (54 stars)",
-   "Mario-Kart-Felix/solar-wind-hacker-book (24 stars)",
-   "vulnlog/vulnlog (22 stars)",
-   "Nate0634034090/nate158g-m-w-n-l-p-d-a-o-e (17 stars)"
+   "walidshaari/Certified-Kubernetes-Security-Specialist (2135 stars)",
+   "BishopFox/badPods (717 stars)",
+   "cloudogu/k8s-diagrams (339 stars)",
+   "monzo/egress-operator (260 stars)",
+   "quay/container-security-operator (106 stars)"
   ],
   "statements": [
    {
-    "title": "Add support for advisories defined in CSAF",
-    "body": "### Current Behavior Some commercial software vendors provide advisory information in CSAF 2.0 format. These include RedHat and Oracle, among others. There isn't currently a good way to identify vulne",
-    "url": "https://github.com/DependencyTrack/dependency-track/issues/2353"
+    "title": "Migrate from Pod Security Policy to SecurityContext",
+    "body": "**What would you like to be added**: [Pod Security Policies](https://kubernetes.io/docs/concepts/security/pod-security-policy/) are deprecated and will be removed in Kubernetes v1.25. Migration to ano",
+    "url": "https://github.com/kubernetes-sigs/metrics-server/issues/1063"
    },
+   {
+    "title": "Traditional SIEM in Kubernetes environments",
+    "body": "How do companies manage SIEM for Kubernetes environments? I am specifically interested in running CIS benchmarks and auditing OS events on the nodes. I already have a Wazuh cluster and agents rolled o",
+    "url": "https://security.stackexchange.com/questions/268250/traditional-siem-in-kubernetes-environments"
+   },
+   {
+    "title": "kubernetes: Feature Request: Step Pod Annotations",
+    "body": "## Use Case Specific use case: Enabling AWS IAM roles for each pod step. Kube2IAM works by looking at annotations on a given pod to figure out which role to provide info for. Before, we could just ann",
+    "url": "https://github.com/drone/drone-runtime/issues/38"
+   },
+   {
+    "title": "[Feature] User Namespaces and \"require-run-as-nonroot\" policy",
+    "body": "### Prepare support of User Namespaces. [User Namespaces](https://kubernetes.io/blog/2025/04/25/userns-enabled-by-default/) enabled by default in Kubernetes v1.33. > **Important Note**: Not all Kubern",
+    "url": "https://github.com/kyverno/kyverno/issues/13692"
+   },
+   {
+    "title": "Support new Kubernetes PodSecurityStandards",
+    "body": "Hi kpack, [Korifi](https://github.com/cloudfoundry/korifi) here. As of Kubernetes 1.21 pod security policies are deprecated and are going to be removed in 1.25. They are going to be replaced by the [P",
+    "url": "https://github.com/buildpacks-community/kpack/issues/972"
+   },
+   {
+    "title": "[IMPROVEMENT] RBAC : Longhorn requires to be able to list all secrets in all namespaces",
+    "body": "### Is your improvement request related to a feature? Please describe (\ud83d\udc4d if you like this request) Even though Longhorn already has a wildcard privileges for all resources of type secret within its na",
+    "url": "https://github.com/longhorn/longhorn/issues/12680"
+   },
+   {
+    "title": "[Feature]: Kubernetes session-pod terminal backend",
+    "body": "### Problem or Use Case When Hermes runs inside Kubernetes, it has no isolated execution option: - `local` runs model-generated commands in the agent's own container, sharing its filesystem, its `~/.h",
+    "url": "https://github.com/NousResearch/hermes-agent/issues/79869"
+   }
+  ],
+  "price_or_vendor_statements": []
+ },
+ {
+  "theme_id": 46,
+  "name": "Product cybersecurity regulation compliance for manufacturers",
+  "need": "Makers of software and connected or medical devices must meet CRA, RED, PSTI and FDA duties: SBOMs, vulnerability handling, disclosure, risk assessment.",
+  "open_source_leaders": [
+   "kulkarnirohit123/cra-agent (394 stars)",
+   "omonien/DX.Comply (60 stars)",
+   "cra-compliance-lab/awesome-cra-compliance (58 stars)",
+   "zealience/Cyber-Resilience-Act (39 stars)",
+   "OpenChain-Project/CRA-Compliance (28 stars)"
+  ],
+  "statements": [
+   {
+    "title": "EU Cyber Resilience Act (Regulation (EU) 2024/2847): Draw up a software bill of materials in a commonly used machine-readable format covering at least top-level dependencies, and identify and document product vulnerabilities and components.",
+    "body": "Draw up a software bill of materials in a commonly used machine-readable format covering at least top-level dependencies, and identify and document product vulnerabilities and components. Applies to: ",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj"
+   },
+   {
+    "title": "EU Cyber Resilience Act (Regulation (EU) 2024/2847): Remediate vulnerabilities without delay through security updates (separate from feature updates where feasible), distributed securely and free of charge throughout the declared support period.",
+    "body": "Remediate vulnerabilities without delay through security updates (separate from feature updates where feasible), distributed securely and free of charge throughout the declared support period. Applies",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj"
+   },
+   {
+    "title": "EU Cyber Resilience Act (Regulation (EU) 2024/2847): Put in place and enforce a coordinated vulnerability disclosure policy and a public contact address for reporting vulnerabilities in the product and its third-party components.",
+    "body": "Put in place and enforce a coordinated vulnerability disclosure policy and a public contact address for reporting vulnerabilities in the product and its third-party components. Applies to: Manufacture",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj"
+   },
+   {
+    "title": "EU Cyber Resilience Act (Regulation (EU) 2024/2847): Exercise due diligence on third-party and open-source components and report vulnerabilities found in an integrated component to whoever maintains it, then remediate.",
+    "body": "Exercise due diligence on third-party and open-source components and report vulnerabilities found in an integrated component to whoever maintains it, then remediate. Applies to: Manufacturers of hardw",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj"
+   },
+   {
+    "title": "EU Cyber Resilience Act (Regulation (EU) 2024/2847): Perform and document a cybersecurity risk assessment of the product and apply it across planning, design, development, production, delivery and maintenance.",
+    "body": "Perform and document a cybersecurity risk assessment of the product and apply it across planning, design, development, production, delivery and maintenance. Applies to: Manufacturers of hardware/softw",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj"
+   },
+   {
+    "title": "EU Radio Equipment Directive cybersecurity delegated act (Delegated Regulation (EU) 2022/30, amended by 2023/2444): Internet-connected radio equipment must not harm networks or misuse network resources, and must protect personal data, to be placed on the EU market.",
+    "body": "Internet-connected radio equipment must not harm networks or misuse network resources, and must protect personal data, to be placed on the EU market. Applies to: Manufacturers and importers of interne",
+    "url": "https://eur-lex.europa.eu/eli/reg_del/2022/30/oj"
+   },
+   {
+    "title": "UK Product Security and Telecommunications Infrastructure (Security Requirements for Relevant Connectable Products) Regulations 2023 (SI 2023/1007): Publish a point of contact for security-issue reports with acknowledgement and status-update timelines, and publish the product's defined security-upda",
+    "body": "Publish a point of contact for security-issue reports with acknowledgement and status-update timelines, and publish the product's defined security-update support period. Applies to: Manufacturers of c",
+    "url": "https://www.legislation.gov.uk/uksi/2023/1007/made"
+   },
+   {
+    "title": "US FD&C Act section 524B \u2014 Ensuring cybersecurity of devices (21 U.S.C. 360n-2): Include a software bill of materials covering commercial, open-source and off-the-shelf components in premarket submissions for cyber devices.",
+    "body": "Include a software bill of materials covering commercial, open-source and off-the-shelf components in premarket submissions for cyber devices. Applies to: Sponsors of 510(k), PMA, De Novo and related ",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title21/html/USCODE-2023-title21-chap9-subchapV-partA-sec360n-2.htm"
+   },
+   {
+    "title": "US FD&C Act section 524B \u2014 Ensuring cybersecurity of devices (21 U.S.C. 360n-2): Submit a plan to monitor and address postmarket vulnerabilities including coordinated disclosure, and provide patches on a regular cycle and out-of-cycle for critical vulnerabilities.",
+    "body": "Submit a plan to monitor and address postmarket vulnerabilities including coordinated disclosure, and provide patches on a regular cycle and out-of-cycle for critical vulnerabilities. Applies to: Spon",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title21/html/USCODE-2023-title21-chap9-subchapV-partA-sec360n-2.htm"
+   }
+  ],
+  "price_or_vendor_statements": []
+ },
+ {
+  "theme_id": 48,
+  "name": "Classified-approved mobile workstations for government",
+  "need": "German agencies need VS-NfD-approved fully integrated mobile workstations and related cryptography-based services.",
+  "open_source_leaders": [
+   "swati1024/torrents (109 stars)",
+   "mdxedia/Awsome-Cash (37 stars)",
+   "MuhammadLutfiMuzakiiVY/flux-ai-terminal (16 stars)",
+   "constantine2003/ArchiveStream (6 stars)",
+   "Gopiiii/MobileTrace-AI (0 stars)"
+  ],
+  "statements": [
+   {
+    "title": "Kryptographiebasierte Services",
+    "body": "Ziel dieses Vergabeverfahrens ist der Abschluss eines Rahmenvertrags mit einem Unternehmen, f\u00fcr die Erbringung von Dienst \u2013 sowie (untergeordnet) Lieferleistungen im Bereich der Kryptographie basierte",
+    "url": "https://ted.europa.eu/en/notice/-/detail/789715-2026"
+   },
+   {
+    "title": "Bereitstellung VS-nfD (= Verschlusssache -nur f\u00fcr den Dienstebrauch) zugelassener mobiler Arbeitspl\u00e4tze (vollintegrierter Client)",
+    "body": "Bereitstellung VS-nfD (=Verschlusssache - nur f\u00fcr den Dienstgebrauch) zugelassener mobiler Arbeitspl\u00e4tze (vollintegrierter Client) Bereitstellung VS-nfD (=Verschlusssache - nur f\u00fcr den Dienstgebrauch)",
+    "url": "https://ted.europa.eu/en/notice/-/detail/735701-2026"
+   },
+   {
+    "title": "Bereitstellung VS-nfD (= Verschlusssache -nur f\u00fcr den Dienstebrauch) zugelassener mobiler Arbeitspl\u00e4tze (vollintegrierter Client)",
+    "body": "Bereitstellung VS-nfD (=Verschlusssache - nur f\u00fcr den Dienstgebrauch) zugelassener mobiler Arbeitspl\u00e4tze (vollintegrierter Client) Bereitstellung VS-nfD (=Verschlusssache - nur f\u00fcr den Dienstgebrauch)",
+    "url": "https://ted.europa.eu/en/notice/-/detail/711447-2026"
+   },
+   {
+    "title": "Kryptographiebasierte Services",
+    "body": "Ziel dieses Vergabeverfahrens ist der Abschluss eines Rahmenvertrags mit einem Unternehmen, f\u00fcr die Erbringung von Dienst \u2013 sowie (untergeordnet) Lieferleistungen im Bereich der Kryptographie basierte",
+    "url": "https://ted.europa.eu/en/notice/-/detail/712641-2026"
+   },
+   {
+    "title": "Bereitstellung VS-nfD (= Verschlusssache -nur f\u00fcr den Dienstebrauch) zugelassener mobiler Arbeitspl\u00e4tze (vollintegrierter Client)",
+    "body": "Bereitstellung VS-nfD (=Verschlusssache - nur f\u00fcr den Dienstgebrauch) zugelassener mobiler Arbeitspl\u00e4tze (vollintegrierter Client) Bereitstellung VS-nfD (=Verschlusssache - nur f\u00fcr den Dienstgebrauch)",
+    "url": "https://ted.europa.eu/en/notice/-/detail/701345-2026"
+   },
+   {
+    "title": "Bereitstellung VS-nfD (= Verschlusssache -nur f\u00fcr den Dienstebrauch) zugelassener mobiler Arbeitspl\u00e4tze (vollintegrierter Client)",
+    "body": "Bereitstellung VS-nfD (=Verschlusssache - nur f\u00fcr den Dienstgebrauch) zugelassener mobiler Arbeitspl\u00e4tze (vollintegrierter Client) Bereitstellung VS-nfD (=Verschlusssache - nur f\u00fcr den Dienstgebrauch)",
+    "url": "https://ted.europa.eu/en/notice/-/detail/656196-2026"
+   }
+  ],
+  "price_or_vendor_statements": []
+ },
+ {
+  "theme_id": 50,
+  "name": "Regulatory incident reporting and breach notification",
+  "need": "Firms under NIS2, BSIG, SEC Reg S-P and the FTC Safeguards Rule must report incidents to authorities and notify affected people on deadlines.",
+  "open_source_leaders": [
+   "VAIXLNS/VAIXLNS (8 stars)",
+   "VarrunVashisht/Enterprise-Cyber-GRC-ISO-27001-ISMS-NovaTrust-Bank (6 stars)",
+   "atanu1982/Critical-HIPAA-Compliance-Updated-Checklist-under-Trump-Administration-for-2018 (5 stars)",
+   "nusRying/ai-safety-monitoring (4 stars)",
+   "FreeDurok/ICE-Incident-Compliance-Engine (3 stars)"
+  ],
+  "statements": [
+   {
+    "title": "2026 - EEA System for monitoring and event management (MDR) - Qualification part",
+    "body": "Ask\u00f8y and \u00d8ygarden municipalities shall procure a general, 24 hour (24/7/365) MDR service for proactive security monitoring and support for handling IT security incidents. The service shall reduce the",
+    "url": "https://ted.europa.eu/en/notice/-/detail/792782-2026"
+   },
+   {
+    "title": "EU NIS2 Directive (Directive (EU) 2022/2555): Report significant incidents to the CSIRT or authority: early warning within 24 hours, incident notification with initial assessment and IoCs within 72 hours, final report within one month.",
+    "body": "Report significant incidents to the CSIRT or authority: early warning within 24 hours, incident notification with initial assessment and IoCs within 72 hours, final report within one month. Applies to",
+    "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+   },
+   {
+    "title": "German NIS2 Implementation Act \u2014 BSI-Gesetz (BSIG) 2025: Report significant security incidents to the joint BSI/BBK reporting office: early report within 24 hours, notification within 72 hours, final report within one month.",
+    "body": "Report significant security incidents to the joint BSI/BBK reporting office: early report within 24 hours, notification within 72 hours, final report within one month. Applies to: Particularly importa",
+    "url": "https://www.gesetze-im-internet.de/bsig_2025/__32.html"
+   },
+   {
+    "title": "SEC Regulation S-P amendments (17 CFR 248.30): Adopt an incident response program and notify affected individuals within 30 days of unauthorized access to sensitive customer information; oversee service providers, who must notify within 72 hours.",
+    "body": "Adopt an incident response program and notify affected individuals within 30 days of unauthorized access to sensitive customer information; oversee service providers, who must notify within 72 hours. ",
+    "url": "https://www.federalregister.gov/documents/2024/06/03/2024-11116/regulation-s-p-privacy-of-consumer-financial-information-and-safeguarding-customer-information"
+   },
+   {
+    "title": "SEC Regulation S-P amendments (17 CFR 248.30): Adopt an incident response program and notify affected individuals within 30 days of unauthorized access to sensitive customer information; oversee service providers, who must notify within 72 hours.",
+    "body": "Adopt an incident response program and notify affected individuals within 30 days of unauthorized access to sensitive customer information; oversee service providers, who must notify within 72 hours. ",
+    "url": "https://www.federalregister.gov/documents/2024/06/03/2024-11116/regulation-s-p-privacy-of-consumer-financial-information-and-safeguarding-customer-information"
+   },
+   {
+    "title": "FTC Standards for Safeguarding Customer Information (Safeguards Rule, 16 CFR 314) amendment: Notify the FTC electronically within 30 days of discovering a security event involving the customer information of at least 500 consumers.",
+    "body": "Notify the FTC electronically within 30 days of discovering a security event involving the customer information of at least 500 consumers. Applies to: Non-bank financial institutions under FTC jurisdi",
+    "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314/section-314.4"
+   },
+   {
+    "title": "Repeated GCP Compliance Notifications",
+    "body": "I have been on GCP for roughly 3 months now. In that 3 months I have received 6 notices from GCP saying that one of my compute engines is creating a denial of service attack. They provide the IP addre",
+    "url": "https://serverfault.com/questions/1084571/repeated-gcp-compliance-notifications"
+   }
+  ],
+  "price_or_vendor_statements": []
+ },
+ {
+  "theme_id": 51,
+  "name": "Privileged access management procurement",
+  "need": "Czech and Lithuanian public bodies tender PAM systems to control privileged users' access to technical assets.",
+  "open_source_leaders": [
+   "hashicorp/vault (36556 stars)",
+   "jumpserver/jumpserver (32010 stars)",
+   "Cloud-Architekt/AzurePrivilegedIAM (222 stars)",
+   "dakhama-mehdi/AD-Just-in-Time-Management (29 stars)",
+   "paulveillard/cybersecurity-pam (29 stars)"
+  ],
+  "statements": [
+   {
+    "title": "(VPP-268) Privilegijuotos prieigos valdymo programin\u0117s \u012frangos (angl. Privileged Access Management, toliau \u2013 PAM) licencij\u0173 \u012fsigijimas, PAM sprendimo diegimo, prie\u017ei\u016bros ir vystymo paslaugos",
+    "body": "Perkamos privilegijuotos prieigos valdymo programin\u0117s \u012frangos (angl. Privileged Access Management, toliau \u2013 PAM) licencij\u0173 \u012fsigijimas, PAM sprendimo diegimo, prie\u017ei\u016bros ir vystymo paslaugos. Perkamos ",
+    "url": "https://ted.europa.eu/en/notice/-/detail/655038-2026"
+   },
+   {
+    "title": "Dod\u00e1vka a implementace syst\u00e9mu \u0159\u00edzen\u00ed privilegovan\u00e9ho p\u0159\u00edstupu",
+    "body": "P\u0159edm\u011btem po\u017eadovan\u00e9ho pln\u011bn\u00ed je dod\u00e1vka, implementace, konfigurace a zaji\u0161t\u011bn\u00ed n\u00e1sledn\u00e9 technick\u00e9 podpory syst\u00e9mu pro \u0159\u00edzen\u00ed privilegovan\u00fdch p\u0159\u00edstup\u016f (Privileged Access Management) P\u0159edm\u011btem po\u017eadova",
+    "url": "https://ted.europa.eu/en/notice/-/detail/866867-2025"
+   },
+   {
+    "title": "Dod\u00e1vka a implementace syst\u00e9mu \u0159\u00edzen\u00ed privilegovan\u00e9ho p\u0159\u00edstupu",
+    "body": "P\u0159edm\u011btem po\u017eadovan\u00e9ho pln\u011bn\u00ed je dod\u00e1vka, implementace, konfigurace a zaji\u0161t\u011bn\u00ed n\u00e1sledn\u00e9 technick\u00e9 podpory syst\u00e9mu pro \u0159\u00edzen\u00ed privilegovan\u00fdch p\u0159\u00edstup\u016f (Privileged Access Management) P\u0159edm\u011btem po\u017eadova",
+    "url": "https://ted.europa.eu/en/notice/-/detail/828281-2025"
+   },
+   {
+    "title": "Dod\u00e1vka a implementace syst\u00e9mu \u0159\u00edzen\u00ed privilegovan\u00e9ho p\u0159\u00edstupu",
+    "body": "P\u0159edm\u011btem po\u017eadovan\u00e9ho pln\u011bn\u00ed je dod\u00e1vka, implementace, konfigurace a zaji\u0161t\u011bn\u00ed n\u00e1sledn\u00e9 technick\u00e9 podpory syst\u00e9mu pro \u0159\u00edzen\u00ed privilegovan\u00fdch p\u0159\u00edstup\u016f (Privileged Access Management) P\u0159edm\u011btem po\u017eadova",
+    "url": "https://ted.europa.eu/en/notice/-/detail/785318-2025"
+   },
+   {
+    "title": "SYST\u00c9M PRO \u0158\u00cdZEN\u00cd P\u0158\u00cdSTUPU PRIVILEGOVAN\u00ddCH U\u017dIVATEL\u016e K TECHNICK\u00ddM AKTIV\u016eM M\u011a\u00da HODON\u00cdN",
+    "body": "P\u0159edm\u011btem ve\u0159ejn\u00e9 zak\u00e1zky je dod\u00e1vka a zprovozn\u011bn\u00ed syst\u00e9mu PAM (Privileged Access Management) pro \u0159\u00edzen\u00ed p\u0159\u00edstupu u\u017eivatel\u016f s roz\u0161\u00ed\u0159en\u00fdmi nebo administr\u00e1torsk\u00fdmi pr\u00e1vy z \u0159ad zam\u011bstnanc\u016f m\u011bsta a dodava",
+    "url": "https://ted.europa.eu/en/notice/-/detail/556562-2025"
+   },
+   {
+    "title": "SYST\u00c9M PRO \u0158\u00cdZEN\u00cd P\u0158\u00cdSTUPU PRIVILEGOVAN\u00ddCH U\u017dIVATEL\u016e K TECHNICK\u00ddM AKTIV\u016eM M\u011a\u00da HODON\u00cdN",
+    "body": "P\u0159edm\u011btem ve\u0159ejn\u00e9 zak\u00e1zky je dod\u00e1vka a zprovozn\u011bn\u00ed syst\u00e9mu PAM (Privileged Access Management) pro \u0159\u00edzen\u00ed p\u0159\u00edstupu u\u017eivatel\u016f s roz\u0161\u00ed\u0159en\u00fdmi nebo administr\u00e1torsk\u00fdmi pr\u00e1vy z \u0159ad zam\u011bstnanc\u016f m\u011bsta a dodava",
+    "url": "https://ted.europa.eu/en/notice/-/detail/273573-2025"
+   }
+  ],
+  "price_or_vendor_statements": []
+ },
+ {
+  "theme_id": 55,
+  "name": "SBOM dependency hierarchy and impact analysis",
+  "need": "Teams using Dependency-Track and SBOMs need dependency references, parent hierarchy and advisory impact to see what a vulnerable component affects.",
+  "open_source_leaders": [
+   "trailofbits/it-depends (426 stars)",
+   "tiiuae/sbomnix (357 stars)",
+   "kxxt/cargo-visualize (43 stars)",
+   "advanced-security/github-sbom-toolkit (26 stars)",
+   "octodemo/sbom-dependency-submission (23 stars)"
+  ],
+  "statements": [
    {
     "title": "Feature: documenting external/extraneous dependencies",
     "body": "## current state CycloneDX allows describing components, and the dependency graph. Each component can have exactly one version, no version range. Components can be connected in a dependency graph. ## ",
@@ -581,5 +1571,45 @@
     "url": "https://github.com/CycloneDX/specification/issues/321"
    }
   ]
+ },
+ {
+  "theme_id": 59,
+  "name": "Integrated EDR/XDR and SIEM deployment",
+  "need": "Czech public bodies need to acquire and implement integrated EDR/XDR with SIEM for central detection, response and data protection.",
+  "open_source_leaders": [
+   "socprime/Uncoder_IO (206 stars)",
+   "socprime/Roota (140 stars)",
+   "tarsal-oss/kflowd (75 stars)",
+   "Adversarial-Detection-Engineering/Adversarial-Detection-Engineering-Framework (71 stars)",
+   "mockdr/mockdr (55 stars)"
+  ],
+  "statements": [
+   {
+    "title": "Po\u0159\u00edzen\u00ed a implementace integrovan\u00e9ho \u0159e\u0161en\u00ed EDR/XDR a SIEM",
+    "body": "P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky (VZ) je dod\u00e1vka, implementace a podpora n\u00e1stroje pro ochranu koncov\u00fdch stanic a server\u016f p\u0159ed \u0161kodliv\u00fdm k\u00f3dem a dal\u0161\u00edmi kybernetick\u00fdmi \u00fatoky s mo\u017enost\u00ed reakce na bezpe\u010d",
+    "url": "https://ted.europa.eu/en/notice/-/detail/813679-2026"
+   },
+   {
+    "title": "Zv\u00fd\u0161en\u00ed kybernetick\u00e9 bezpe\u010dnosti SSHMP \u2013 Centr\u00e1ln\u00ed detekce, reakce a ochrana dat",
+    "body": "P\u0159edm\u011btem ve\u0159ejn\u00e9 zak\u00e1zky je dod\u00e1vka, poskytnut\u00ed licenc\u00ed, implementace, konfigurace, integrace, ov\u011b\u0159en\u00ed funk\u010dnosti a n\u00e1sledn\u00e9 poskytov\u00e1n\u00ed podpory v\u00fdrobc\u016f, provozn\u00ed podpory dodavatele a roz\u0161\u00ed\u0159en\u00e9 podpo",
+    "url": "https://ted.europa.eu/en/notice/-/detail/764285-2026"
+   },
+   {
+    "title": "Po\u0159\u00edzen\u00ed a implementace integrovan\u00e9ho \u0159e\u0161en\u00ed EDR/XDR a SIEM",
+    "body": "P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky (VZ) je dod\u00e1vka, implementace a podpora n\u00e1stroje pro ochranu koncov\u00fdch stanic a server\u016f p\u0159ed \u0161kodliv\u00fdm k\u00f3dem a dal\u0161\u00edmi kybernetick\u00fdmi \u00fatoky s mo\u017enost\u00ed reakce na bezpe\u010d",
+    "url": "https://ted.europa.eu/en/notice/-/detail/739583-2026"
+   },
+   {
+    "title": "Po\u0159\u00edzen\u00ed a implementace integrovan\u00e9ho \u0159e\u0161en\u00ed EDR/XDR a SIEM",
+    "body": "P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky (VZ) je dod\u00e1vka, implementace a podpora n\u00e1stroje pro ochranu koncov\u00fdch stanic a server\u016f p\u0159ed \u0161kodliv\u00fdm k\u00f3dem a dal\u0161\u00edmi kybernetick\u00fdmi \u00fatoky s mo\u017enost\u00ed reakce na bezpe\u010d",
+    "url": "https://ted.europa.eu/en/notice/-/detail/719274-2026"
+   },
+   {
+    "title": "Po\u0159\u00edzen\u00ed a implementace integrovan\u00e9ho \u0159e\u0161en\u00ed EDR/XDR a SIEM",
+    "body": "P\u0159edm\u011btem pln\u011bn\u00ed ve\u0159ejn\u00e9 zak\u00e1zky (VZ) je dod\u00e1vka, implementace a podpora n\u00e1stroje pro ochranu koncov\u00fdch stanic a server\u016f p\u0159ed \u0161kodliv\u00fdm k\u00f3dem a dal\u0161\u00edmi kybernetick\u00fdmi \u00fatoky s mo\u017enost\u00ed reakce na bezpe\u010d",
+    "url": "https://ted.europa.eu/en/notice/-/detail/645221-2026"
+   }
+  ],
+  "price_or_vendor_statements": []
  }
 ]

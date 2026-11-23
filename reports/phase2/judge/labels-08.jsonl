@@ -1,0 +1,180 @@
+{"id": "serverfault:serverfault:293217", "on_segment": "y", "need": "y", "reason": "Unreasonable audit demands; struggles to satisfy auditor"}
+{"id": "serverfault:serverfault:451387", "on_segment": "n", "need": "n", "reason": "Credential cache curiosity, not a security need"}
+{"id": "serverfault:serverfault:73319", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "serverfault:serverfault:71071", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "github:735408387", "on_segment": "y", "need": "n", "reason": "Security incident report/announcement"}
+{"id": "serverfault:serverfault:318574", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "serverfault:serverfault:574880", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "serverfault:serverfault:645924", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "serverfault:serverfault:647395", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "serverfault:serverfault:37088", "on_segment": "y", "need": "n", "reason": "How-to question about security group behaviour"}
+{"id": "serverfault:serverfault:237557", "on_segment": "y", "need": "n", "reason": "How-to question about security group behaviour"}
+{"id": "serverfault:serverfault:202044", "on_segment": "y", "need": "n", "reason": "Security configuration how-to"}
+{"id": "serverfault:serverfault:417173", "on_segment": "y", "need": "n", "reason": "Security configuration how-to"}
+{"id": "github:413722441", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "hn:46048996", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "serverfault:serverfault:310640", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "serverfault:serverfault:463550", "on_segment": "y", "need": "n", "reason": "How-to question about security group behaviour"}
+{"id": "hn:41302597", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "serverfault:serverfault:137468", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "hn:35929122", "on_segment": "y", "need": "n", "reason": "Prompt injection explainer, essay or research"}
+{"id": "serverfault:serverfault:205094", "on_segment": "y", "need": "n", "reason": "How-to question about security group behaviour"}
+{"id": "hn:35572290", "on_segment": "y", "need": "n", "reason": "Prompt injection explainer, essay or research"}
+{"id": "serverfault:serverfault:183589", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "serverfault:serverfault:546012", "on_segment": "y", "need": "y", "reason": "Cannot find security group dependencies; tool lacks visibility"}
+{"id": "serverfault:serverfault:611082", "on_segment": "y", "need": "y", "reason": "Patching security updates inside containers is poorly solved"}
+{"id": "github:3360932443", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "hn:34777646", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "serverfault:serverfault:483938", "on_segment": "y", "need": "n", "reason": "How-to question about security group behaviour"}
+{"id": "hn:38251957", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "hn:35224666", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "hn:50322173", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "serverfault:serverfault:316516", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "serverfault:serverfault:334448", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "hn:34976886", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "serverfault:serverfault:483183", "on_segment": "y", "need": "y", "reason": "Wants to enforce MFA for all IAM users"}
+{"id": "hn:46840676", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "serverfault:serverfault:823956", "on_segment": "y", "need": "n", "reason": "Asks for best-practice guidance, no tool gap"}
+{"id": "serverfault:serverfault:114052", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "hn:37927357", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "hn:48631888", "on_segment": "y", "need": "n", "reason": "Prompt injection explainer, essay or research"}
+{"id": "github:3334629769", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "hn:38654533", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "serverfault:serverfault:115624", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "github:4770593507", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "hn:13516116", "on_segment": "y", "need": "n", "reason": "Asks for best-practice guidance, no tool gap"}
+{"id": "serverfault:serverfault:992027", "on_segment": "y", "need": "n", "reason": "IAM configuration how-to or troubleshooting question"}
+{"id": "hn:35911595", "on_segment": "y", "need": "n", "reason": "Prompt injection explainer, essay or research"}
+{"id": "hn:32817941", "on_segment": "y", "need": "n", "reason": "Prompt injection explainer, essay or research"}
+{"id": "hn:35925758", "on_segment": "y", "need": "n", "reason": "Prompt injection explainer, essay or research"}
+{"id": "github:850651551", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "hn:37877605", "on_segment": "y", "need": "n", "reason": "Prompt injection explainer, essay or research"}
+{"id": "github:573452170", "on_segment": "y", "need": "n", "reason": "Security project announcement or launch"}
+{"id": "github:298392777", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "hn:44070626", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "serverfault:serverfault:804043", "on_segment": "y", "need": "y", "reason": "Unused IAM roles; manual check impractical"}
+{"id": "github:2729859922", "on_segment": "y", "need": "n", "reason": "Security project announcement or launch"}
+{"id": "hn:41958550", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "serverfault:serverfault:842749", "on_segment": "y", "need": "n", "reason": "Firewall logging bug report"}
+{"id": "github:1322309567", "on_segment": "y", "need": "y", "reason": "Requests sandbox for untrusted content"}
+{"id": "github:396983442", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "github:480089774", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "github:2089998419", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "github:432659624", "on_segment": "y", "need": "n", "reason": "Security incident report/announcement"}
+{"id": "serverfault:serverfault:944254", "on_segment": "y", "need": "n", "reason": "IAM configuration how-to or troubleshooting question"}
+{"id": "hn:32662385", "on_segment": "y", "need": "n", "reason": "Asks for best-practice guidance, no tool gap"}
+{"id": "github:1589451455", "on_segment": "y", "need": "n", "reason": "Security project announcement or launch"}
+{"id": "github:3991625570", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "hn:34719586", "on_segment": "y", "need": "n", "reason": "Discussion of prompt injection as vulnerability class"}
+{"id": "serverfault:serverfault:602402", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "github:1446654153", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "github:2013286273", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "hn:47654317", "on_segment": "y", "need": "n", "reason": "Prompt injection explainer, essay or research"}
+{"id": "github:3290336832", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "github:3191978385", "on_segment": "y", "need": "y", "reason": "Feature request: certificate rotation on EKS"}
+{"id": "github:530446705", "on_segment": "y", "need": "y", "reason": "Feature request: secure server-side session support"}
+{"id": "github:2152478814", "on_segment": "y", "need": "n", "reason": "Vulnerability bug report"}
+{"id": "hn:45794245", "on_segment": "y", "need": "n", "reason": "Prompt injection explainer, essay or research"}
+{"id": "github:688132079", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "github:4564421937", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "hn:45559603", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "github:581226963", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "serverfault:serverfault:849997", "on_segment": "y", "need": "n", "reason": "Patch deployment configuration issue"}
+{"id": "serverfault:serverfault:488967", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "github:2250852394", "on_segment": "y", "need": "y", "reason": "Feature request: SAML/SSO for Atlantis"}
+{"id": "github:3941978096", "on_segment": "y", "need": "y", "reason": "Censorship and phone auth block secure messaging use"}
+{"id": "github:1728051617", "on_segment": "y", "need": "y", "reason": "Feature request: private OIDC endpoint for EKS"}
+{"id": "hn:45000894", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "serverfault:serverfault:1066180", "on_segment": "y", "need": "n", "reason": "IAM configuration how-to or troubleshooting question"}
+{"id": "hn:43158562", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "serverfault:serverfault:842082", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "hn:46137746", "on_segment": "y", "need": "n", "reason": "Prompt injection explainer, essay or research"}
+{"id": "serverfault:serverfault:962397", "on_segment": "y", "need": "n", "reason": "IAM configuration how-to or troubleshooting question"}
+{"id": "github:2862112205", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "github:5511377880", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "github:3190325216", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "serverfault:serverfault:134945", "on_segment": "y", "need": "y", "reason": "Compromised host sending phishing; needs to find it"}
+{"id": "serverfault:serverfault:427262", "on_segment": "y", "need": "y", "reason": "Phishing site on unregistered subdomain; needs remediation"}
+{"id": "serverfault:serverfault:13451", "on_segment": "y", "need": "y", "reason": "Seeks simple tool to monitor terminal server logins"}
+{"id": "hn:50104310", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "github:4121523307", "on_segment": "y", "need": "n", "reason": "Agent security planning/scope discussion, no concrete gap"}
+{"id": "github:856053899", "on_segment": "y", "need": "y", "reason": "Feature request: secure headers by default"}
+{"id": "hn:49758689", "on_segment": "y", "need": "n", "reason": "Prompt injection explainer, essay or research"}
+{"id": "serverfault:serverfault:93926", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "github:4046371249", "on_segment": "y", "need": "y", "reason": "Feature request: tamper-evident AI audit trails for compliance"}
+{"id": "github:3924835803", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "serverfault:serverfault:637750", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "github:3534002430", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "hn:36149904", "on_segment": "y", "need": "n", "reason": "Founder surveying pain points, no need stated"}
+{"id": "serverfault:serverfault:647894", "on_segment": "y", "need": "n", "reason": "IAM configuration how-to or troubleshooting question"}
+{"id": "serverfault:serverfault:39916", "on_segment": "n", "need": "n", "reason": "DNS health checking, not security"}
+{"id": "hn:16151153", "on_segment": "y", "need": "n", "reason": "Disclosure ethics question"}
+{"id": "stackexchange:security:26537", "on_segment": "y", "need": "y", "reason": "Cannot find implementation of MD4 collision tool"}
+{"id": "github:3048647526", "on_segment": "y", "need": "y", "reason": "MCP transport complexity causes security challenges"}
+{"id": "serverfault:serverfault:963055", "on_segment": "y", "need": "n", "reason": "IAM configuration how-to or troubleshooting question"}
+{"id": "hn:49290521", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "stackexchange:security:151902", "on_segment": "y", "need": "y", "reason": "Seeks lighter alternative to ISO 27001 for small business"}
+{"id": "serverfault:serverfault:626541", "on_segment": "y", "need": "n", "reason": "IAM configuration how-to or troubleshooting question"}
+{"id": "hn:35993498", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "hn:47131689", "on_segment": "y", "need": "n", "reason": "News about NIST comment request"}
+{"id": "serverfault:serverfault:4788", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "serverfault:serverfault:142737", "on_segment": "y", "need": "y", "reason": "One-person IT unprepared for audit, needs checklist"}
+{"id": "stackexchange:security:191966", "on_segment": "y", "need": "y", "reason": "Existing RDP brute-force testing tools not working"}
+{"id": "serverfault:serverfault:47079", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "hn:17024036", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "hn:46925406", "on_segment": "y", "need": "n", "reason": "Prompt injection incident/news report, no stated gap"}
+{"id": "github:3290141045", "on_segment": "y", "need": "y", "reason": "Proposes MCP server-side authorization management"}
+{"id": "serverfault:serverfault:997706", "on_segment": "y", "need": "n", "reason": "How-to question about security group behaviour"}
+{"id": "serverfault:serverfault:313234", "on_segment": "y", "need": "y", "reason": "Lacks SSH session logging on non-PuTTY clients"}
+{"id": "github:4473295777", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "stackexchange:security:206243", "on_segment": "y", "need": "y", "reason": "Wants automation for CRL/CRT publication"}
+{"id": "github:3990301210", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "serverfault:serverfault:42565", "on_segment": "y", "need": "y", "reason": "Commercial audit tools too expensive for small business"}
+{"id": "github:5236793873", "on_segment": "y", "need": "n", "reason": "Agent security planning/scope discussion, no concrete gap"}
+{"id": "serverfault:serverfault:1106683", "on_segment": "y", "need": "n", "reason": "DMARC policy explanation question"}
+{"id": "serverfault:serverfault:696193", "on_segment": "y", "need": "n", "reason": "IAM configuration how-to or troubleshooting question"}
+{"id": "stackexchange:security:18819", "on_segment": "y", "need": "y", "reason": "Seeks SQL injection scanner for macOS"}
+{"id": "serverfault:serverfault:856737", "on_segment": "y", "need": "n", "reason": "IAM configuration how-to or troubleshooting question"}
+{"id": "serverfault:serverfault:340083", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "github:2834998115", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "github:3686259798", "on_segment": "y", "need": "n", "reason": "Standards proposal for privacy tokens"}
+{"id": "serverfault:serverfault:832435", "on_segment": "y", "need": "n", "reason": "IAM configuration how-to or troubleshooting question"}
+{"id": "serverfault:serverfault:11521", "on_segment": "y", "need": "y", "reason": "SVN+SSH forces overly broad file permissions"}
+{"id": "github:3823256832", "on_segment": "y", "need": "y", "reason": "Feature request: hook to sanitize tool results"}
+{"id": "stackexchange:security:55005", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "github:4058365632", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "github:192655104", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "serverfault:serverfault:850391", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "serverfault:serverfault:528337", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "serverfault:serverfault:946620", "on_segment": "y", "need": "y", "reason": "Needs to determine if ransomware exfiltrated data"}
+{"id": "github:4396046054", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "hn:2670078", "on_segment": "y", "need": "n", "reason": "Disclosure ethics question"}
+{"id": "hn:945034", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "serverfault:serverfault:760855", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "hn:29627171", "on_segment": "n", "need": "n", "reason": "Home physical cameras, not cybersecurity"}
+{"id": "github:376156151", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "github:1425934394", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "serverfault:serverfault:871410", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}
+{"id": "github:2150821422", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "github:2700427527", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "serverfault:serverfault:899432", "on_segment": "y", "need": "y", "reason": "Wants IAM-style credentials for non-EC2 hosts"}
+{"id": "hn:17387079", "on_segment": "y", "need": "y", "reason": "Needs secure way to expose private host to webhooks"}
+{"id": "serverfault:serverfault:565271", "on_segment": "y", "need": "n", "reason": "SIEM installation how-to"}
+{"id": "serverfault:serverfault:296421", "on_segment": "y", "need": "y", "reason": "PCI scan flags backported packages; hard to resolve"}
+{"id": "serverfault:serverfault:261816", "on_segment": "y", "need": "y", "reason": "Seeks file integrity checker for PCI"}
+{"id": "serverfault:serverfault:887548", "on_segment": "y", "need": "y", "reason": "Ansible lacks audit log of executing user"}
+{"id": "hn:44238404", "on_segment": "y", "need": "n", "reason": "Prompt injection explainer, essay or research"}
+{"id": "stackexchange:security:9761", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "stackexchange:security:43009", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "github:4786173445", "on_segment": "n", "need": "n", "reason": "Not about a cybersecurity problem"}
+{"id": "serverfault:serverfault:913838", "on_segment": "y", "need": "n", "reason": "IAM configuration how-to or troubleshooting question"}
+{"id": "github:1071570667", "on_segment": "y", "need": "y", "reason": "Feature request: vulnerability scanning of installed packages"}
+{"id": "github:1251273813", "on_segment": "y", "need": "y", "reason": "Feature request: per-index encryption keys"}
+{"id": "stackexchange:security:72764", "on_segment": "y", "need": "n", "reason": "General security how-it-works or design question"}
+{"id": "serverfault:serverfault:303926", "on_segment": "y", "need": "y", "reason": "Wants to reduce PCI compliance scope burden"}
+{"id": "hn:12801974", "on_segment": "y", "need": "n", "reason": "Asks for best-practice guidance, no tool gap"}
+{"id": "hn:1812632", "on_segment": "y", "need": "n", "reason": "Disclosure ethics question"}
+{"id": "stackexchange:security:171131", "on_segment": "y", "need": "n", "reason": "General security tooling question without gap"}
+{"id": "stackexchange:security:45695", "on_segment": "y", "need": "n", "reason": "General security tooling question without gap"}
+{"id": "stackexchange:security:22564", "on_segment": "y", "need": "n", "reason": "General security tooling question without gap"}
+{"id": "serverfault:serverfault:862261", "on_segment": "n", "need": "n", "reason": "Non-security logging/configuration troubleshooting"}

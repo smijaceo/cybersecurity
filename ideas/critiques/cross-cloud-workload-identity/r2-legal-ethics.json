@@ -1,0 +1,75 @@
+{
+ "concept_id": "cross-cloud-workload-identity",
+ "lens": "legal-ethics",
+ "round": 2,
+ "score": 7,
+ "verdict": "conditional",
+ "summary": "The revision moves scanning and log analysis into the customer's account, takes us out of the GDPR processor role and adds a lint gate, no auto-merge and a liability cap. One gap remains. Opening workflow PRs needs Contents write and Workflows write, not the 'Contents read' the concept states. If the vendor runs the GitHub App, its key reintroduces cross-customer custody.",
+ "objections": [
+  {
+   "objection": "The GitHub permission model is understated and possibly vendor-custodied. The MVP opens PRs that edit .github/workflows files, but it describes the GitHub App as 'org Secrets read and Contents read'. GitHub requires Contents (write) and Workflows (write) to change workflow files, and Pull requests (write) to open PRs. Write access to every repo's CI definitions is a top-tier supply-chain grant. If Keybridge operates one multi-tenant App and holds its private key and webhook endpoint, a vendor breach gives an attacker workflow-write across all customers. That is the round-1 concentration risk in a new form, and it contradicts 'nothing leaves the customer's environment'. Fix: each customer registers its own App (manifest flow) or uses a self-hosted PAT/App, the key stays in the customer's account, and the permissions are stated accurately.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[1]; concept:mvp.features[2]; https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/choosing-permissions-for-a-github-app; https://docs.github.com/en/rest/repos/contents"
+  },
+  {
+   "objection": "Liability terms are promised but not yet written. The concept relies on a liability cap and no warranty of policy correctness. The consultancy-resale channel then puts a third party between us and the customer, and it is unclear whose terms govern a migration that breaks production or over-grants access. Back-to-back reseller terms are needed, and so is a customer acknowledgement that the customer reviewed and merged each PR.",
+   "severity": "minor",
+   "evidence": "concept:risks[3]; concept:go_to_market.channel"
+  },
+  {
+   "objection": "The lint gate is narrower than its framing. IAM Access Analyzer ValidatePolicy does check role trust policies (AWS::IAM::AssumeRolePolicyDocument). The GCP and GitHub-side rules, however, are our own tests, and passing them is not a security guarantee. Marketing must not present 'lint passed' as 'safe', or it becomes the same misrepresentation risk as the audit-evidence wording.",
+   "severity": "minor",
+   "evidence": "https://docs.aws.amazon.com/access-analyzer/latest/APIReference/API_ValidatePolicy.html"
+  },
+  {
+   "objection": "When a consultancy runs the self-hosted scanner for a client, the consultancy handles CloudTrail personal data, such as IAM user names and source IPs, under its own contract with the client. Keybridge should keep the telemetry counts-only and stay out of that processing, and it should say so in its reseller terms.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Self-hosted by default, no broker in the request path, key values never read, no log ingestion on our side, and every change delivered as a linted, human-merged pull request.",
+ "what_would_change_my_mind": [
+  "The GitHub integration is documented as a customer-registered App (or customer-held token) whose private key never leaves the customer, with the exact permission list: Secrets read, Contents write, Workflows write and Pull requests write, scoped to selected repos.",
+  "A published ToS/MSA with a liability cap, no correctness warranty, and a customer acknowledgement of PR review, plus back-to-back reseller terms.",
+  "Signed, reproducible scanner releases with SBOM and a SOC 2 Type I scoped to the build and release pipeline before paid launch.",
+  "At least 2 of 5 pilot security reviewers approve the GitHub write grant without escalation."
+ ],
+ "resolved_prior": [
+  {
+   "objection": "Custody and concentration risk of a hosted service holding cross-account roles and a per-key target map",
+   "resolved": true,
+   "note": "Scanner runs in the customer's account, hosted multi-tenant scanning is out of scope, and SOC 2 Type I is planned before paid launch. The residual risk is in the GitHub App, now raised as a new major objection."
+  },
+  {
+   "objection": "'Read-only' understates access (admin:org, CloudTrail/log access)",
+   "resolved": false,
+   "note": "admin:org has been replaced and log access stays local. But the stated 'Contents read' cannot open workflow PRs: Contents write and Workflows write are required. The access is still understated."
+  },
+  {
+   "objection": "Personal data in audit logs makes the vendor a GDPR processor",
+   "resolved": true,
+   "note": "There is no log ingestion on our side and the optional telemetry is counts only. A consultancy running the scanner becomes the processor instead, which is a minor point."
+  },
+  {
+   "objection": "Product liability for generated IAM with no cap, review or lint",
+   "resolved": true,
+   "note": "There is a mandatory lint gate with Access Analyzer validation, no auto-merge, a shadow-mode cutover, and a liability cap with no correctness warranty. The terms still have to be written."
+  },
+  {
+   "objection": "Audit-evidence framing could imply compliance certification",
+   "resolved": true,
+   "note": "The export is described as a dated record that certifies no control."
+  },
+  {
+   "objection": "Dual-use of the open-source scanner",
+   "resolved": true,
+   "note": "It runs with the owner's own permissions and sends nothing out by default. This is acceptable for security tooling."
+  }
+ ],
+ "sources": [
+  "https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/choosing-permissions-for-a-github-app",
+  "https://docs.github.com/en/rest/repos/contents",
+  "https://docs.aws.amazon.com/access-analyzer/latest/APIReference/API_ValidatePolicy.html",
+  "https://cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds"
+ ]
+}

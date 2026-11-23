@@ -237,6 +237,35 @@ class VariantJudgment(Strict):
         return self
 
 
+# ---------------------------------------------------------------- backtest (D18)
+
+class CategoryCheck(Strict):
+    id: str
+    keep: bool                       # False if the category was already funded before the cutoff
+    evidence: list[str] = Field(min_length=1)   # URLs with founding / funding dates
+    note: str
+
+    @model_validator(mode="after")
+    def urls(self):
+        if not all(u.startswith(("http://", "https://")) for u in self.evidence):
+            raise ValueError("evidence must be URLs")
+        return self
+
+
+class ThemeMatch(Strict):
+    theme_id: int
+    category: str | None             # pre-registered category id, or None
+    confidence: Literal["high", "medium", "low"]
+    note: str = ""
+
+
+class CalibrationLabel(Strict):
+    id: str                          # anonymised concept id, e.g. cal-01
+    outcome: Literal["success", "failure"]
+    company: str
+    evidence: list[str] = Field(min_length=1)
+
+
 # ---------------------------------------------------------------- Phase 4 critics
 
 LENSES = ("market-skeptic", "competitor-analyst", "security-practitioner",

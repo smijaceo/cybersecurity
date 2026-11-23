@@ -225,7 +225,7 @@ grounding). ✅
 - One unsourced claim in Keybridge's `risks` (Access Analyzer / Wiz flag old keys); the rubric
   only requires sources in `why_now` and `competitors`.
 
-## Phase 4 — Critic panel · `in progress`
+## Phase 4 — Critic panel · `baseline done (six lenses); nine-lens re-run in iteration 2`
 
 Six independent critics per concept, each one lens of [docs/rubrics/critics.md](rubrics/critics.md),
 scoring 1–10 with a verdict, objections (fatal / major / minor, with evidence) and what would
@@ -252,7 +252,18 @@ lens ≥ 5, no fatal objection; CONDITIONAL = mean ≥ 5.5, every lens ≥ 3; el
 | Critic rubric, `Critique` schema, `critic` agent, writer revision mode | done |
 | `gapfinder panel` (go/no-go by code), `critique-check` | done |
 | `critic-panel` workflow | done |
-| Panel run: `ideas/<slug>.critique.md`, [reports/phase4/panel.md](../reports/phase4/panel.md) | in progress |
+| Panel run (six-lens baseline): `ideas/<slug>.critique.md`, [reports/phase4/panel.md](../reports/phase4/panel.md), copy in `reports/phase4/baseline-6-lenses/` | done |
+
+**Baseline result (2026-11-23, six lenses, 47 agents):** no concept reached GO.
+
+| Concept | Decision | Mean r1 → r2 | Lowest lens | Most serious objection |
+|---|---|---|---|---|
+| VEXpath | CONDITIONAL | 5.17 → 5.83 | competitor-analyst 4 | Fatal: free `sbom-cve-check` is now the Yocto Project's official CVE tool; low-cost EU CRA portals (CVD Portal €1.2–3.6k/yr) |
+| LeaverCheck (SCIMbridge revised) | CONDITIONAL | 4.5 → 5.5 | 4 (three lenses) | Fatal: Vanta/Drata already sold to the same SOC 2 buyers; verification-only is a "vitamin" |
+| Keybridge | NO-GO | 4.67 → 5.33 | 4 (two lenses) | Demand inferred from AWS-only developer issues; native federation guides cover the easy cases |
+
+The market skeptic's repeated major objection on all three — no evidence from the named buyer,
+only developer GitHub issues — independently confirms the iteration-2 diagnosis (D16).
 
 **Exit criteria:** every concept has a scored critique from all six lenses in the final round;
 a ranked shortlist with a go/no-go recommendation for the PM.
@@ -271,11 +282,11 @@ and is kept as the baseline.
 
 | Workstream | Deliverables | Exit criteria | Status |
 |---|---|---|---|
-| A. Founder fit (D15) | `config/founder.yaml`; `founder-fit` critic lens; ranking shows fit | Every concept scored on founder fit | not started |
+| A. Founder fit (D15) | `config/founder.yaml`; `founder-fit` critic lens; variant judge scores founder fit | Every concept scored on founder fit | code done |
 | B. Buyer-side demand (D16) | Collectors: Server Fault, TED tenders (security CPV codes, open contract notices), job postings (Remotive, HN Who is hiring); regulation-scout agent; `audience` per source; demand weights buyer evidence (buyer 2.5, practitioner 1.5, developer 1.0) | ≥ 30% of need statements from buyer/practitioner sources; each source tested with canned responses | code done, collection run next |
 | C. Open discovery (D17) | `open-discovery` (pain phrases, per-source queries) and `ai-agent-security` segments | Discovery run completed; new themes reviewed in the gap report | code done, collection run next |
-| D. Backtest (D18) | `config/backtest.yaml` (pre-registered); time-cutoff gap-finder backtest; panel calibration on anonymised historical pitches; `reports/backtest.md` | Results reported with limitations, before the iteration-2 shortlist | not started |
-| E. Stronger panel (D19) | `economic-buyer`, `defensibility`, `founder-fit` lenses; 3 concept variants per opening + variant judge | Phase 3/4 re-run with variants and nine lenses | not started |
+| D. Backtest (D18) | `config/backtest.yaml` (pre-registered); time-cutoff gap-finder backtest; panel calibration on anonymised historical pitches; `reports/backtest.md` | Results reported with limitations, before the iteration-2 shortlist | pre-registered; code done; agents + workflow next |
+| E. Stronger panel (D19) | `economic-buyer`, `defensibility`, `founder-fit` lenses; 3 concept variants per opening + variant judge | Phase 3/4 re-run with variants and nine lenses | code done; go/no-go now requires all nine lenses |
 
 Then: re-run Phase 1 → 2 → PM shortlist → 3 → 4 with the saved workflows.
 

@@ -41,6 +41,9 @@ panel:                # Phase 4 go/no-go, applied by code to the final round (ga
     - technical-feasibility
     - gtm-pricing
     - legal-ethics
+    - economic-buyer     # D19 lenses: required from iteration 2 on; the six-lens baseline run
+    - defensibility      # is kept in reports/phase4/panel.md as it was decided
+    - founder-fit
   go:                 # GO: strong across the board
     min_mean: 7.0
     min_lens: 5

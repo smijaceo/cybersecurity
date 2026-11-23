@@ -376,6 +376,54 @@ def cmd_import_regulations(args) -> int:
     return 0
 
 
+def cmd_names_check(args) -> int:
+    from . import analysis
+
+    try:
+        theme_data, names = _load_theme_names(args)
+    except (ValueError, FileNotFoundError) as exc:
+        log.error("theme names: %s", exc)
+        return 2
+    print(f"ok: {len(names)} theme names")
+    return 0
+
+
+def cmd_backtest(args) -> int:
+    from . import backtest, schemas
+
+    cfg = load_config(args.backtest_config)
+    scoring = load_config(args.scoring)
+    out = args.out_dir
+    try:
+        if args.step == "rank":
+            rows = backtest.rank(Store(args.db), out, scoring["demand"]["recent_years"],
+                                 scoring["demand"]["audience_weights"])
+            for i, r in enumerate(rows[:cfg["gap_finder"]["top_k"]], 1):
+                print(f"{i:>2}. {r['demand_score']:.3f}  {r['name']}")
+            return 0
+        gap = cal = None
+        if (out / "matches.jsonl").exists():
+            gap = backtest.score(json.loads((out / "ranked.json").read_text()),
+                                 schemas.load_jsonl(out / "matches.jsonl", schemas.ThemeMatch),
+                                 schemas.load_jsonl(out / "category-checks.jsonl", schemas.CategoryCheck),
+                                 cfg["gap_finder"]["top_k"])
+        cal_dir = ROOT / "backtest" / "calibration"
+        labels_path = ROOT / "backtest" / "calibration-labels.jsonl"
+        if labels_path.exists():
+            cal = backtest.calibration(cal_dir, schemas.load_jsonl(labels_path, schemas.CalibrationLabel),
+                                       cfg["panel_calibration"]["lenses"])
+    except (ValueError, FileNotFoundError, schemas.SchemaError) as exc:
+        log.error("backtest: %s", exc)
+        return 2
+    report = ROOT / "reports" / "backtest.md"
+    report.write_text(backtest.render(gap, cal, cfg))
+    (out / "results.json").write_text(json.dumps({"gap_finder": gap, "calibration": cal}, indent=1))
+    print(json.dumps({"gap_finder": gap and {k: gap[k] for k in ("recall_at_k", "precision_at_k")},
+                      "calibration_auc": cal and cal["auc"]}))
+    print(f"report: {report}")
+    return 0
+
+
 def cmd_fetch(args) -> int:
     from .fetch import fetch_text
 
@@ -496,6 +544,17 @@ def main(argv: list[str] | None = None) -> int:
                         help="validate and import the regulation scout's obligations as signals")
     ir.add_argument("path", type=Path)
     ir.set_defaults(func=cmd_import_regulations)
+
+    nc = sub.add_parser("names-check", help="validate theme-names.jsonl against themes.json")
+    nc.add_argument("--out-dir", type=Path, default=DEFAULT_PHASE2)
+    nc.set_defaults(func=cmd_names_check)
+
+    bt = sub.add_parser("backtest", help="D18: rank backtest themes, or score/report the backtest")
+    bt.add_argument("step", choices=["rank", "report"])
+    bt.add_argument("--out-dir", type=Path, default=ROOT / "reports" / "backtest")
+    bt.add_argument("--scoring", type=Path, default=DEFAULT_SCORING)
+    bt.add_argument("--backtest-config", type=Path, default=ROOT / "config" / "backtest.yaml")
+    bt.set_defaults(func=cmd_backtest)
 
     fp = sub.add_parser("fetch", help="print a web page's main text (for agents)")
     fp.add_argument("url")

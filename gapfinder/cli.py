@@ -253,7 +253,8 @@ def cmd_gaps(args) -> int:
                 for t in theme_data["themes"] if names[t["theme_id"]]["coherent"] != "y"]
     meta = {**theme_data, "generated": date.today().isoformat(),
             "signals_total": sum(r["n"] for r in store.stats()),
-            "themes_total": len(theme_data["themes"])}
+            "themes_total": len(theme_data["themes"]),
+            "fact_check_path": str(args.out_dir / "fact-check.json")}
     (args.out_dir / "gaps.json").write_text(json.dumps(ranked, indent=1))
     report = args.out_dir.parent / f"gaps-{meta['generated']}.md"
     report.write_text(analysis.render_report(ranked, excluded, meta, scoring))

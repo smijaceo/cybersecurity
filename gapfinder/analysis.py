@@ -257,6 +257,21 @@ def render_report(ranked: list[dict], excluded: list[dict], meta: dict, scoring:
         "researcher agent using web search, with a source link for every claim "
         "([rubric](../docs/rubrics/market-research.md)). Prices change; check sources before "
         "relying on them.", "",
+    ]
+    fc_path = Path(meta.get("fact_check_path", ""))
+    if fc_path.is_file():
+        fc = schemas.FactCheck.model_validate_json(fc_path.read_text())
+        by_theme: dict[int, int] = {}
+        for p in fc.problems:
+            by_theme[p.theme_id] = by_theme.get(p.theme_id, 0) + 1
+        lines += [
+            f"**Fact-check** (round {fc.round}): an adversarial checker re-opened the sources for "
+            f"{fc.checked} vendor and willingness-to-pay claims; {len(fc.problems)} are not fully "
+            "supported by their cited source. Per-gap counts are shown below; details in "
+            "[phase2/fact-check.json](phase2/fact-check.json).", "",
+        ]
+        meta["_fact_check_by_theme"] = by_theme
+    lines += [
         "## Ranking", "",
         "| # | Gap | Score | Demand | Supply gap | Monetization | Threat | Crowdedness | "
         "Willingness to pay | Statements | Stability |",
@@ -295,7 +310,10 @@ def render_report(ranked: list[dict], excluded: list[dict], meta: dict, scoring:
                else ""),
             "",
             f"**Paid market** — crowdedness {s['crowdedness']}/3, willingness to pay "
-            f"{m['willingness_to_pay']}/3, bundling risk {m['bundling_risk']}.", "",
+            f"{m['willingness_to_pay']}/3, bundling risk {m['bundling_risk']}."
+            + (f" ⚠ {meta['_fact_check_by_theme'][t['theme_id']]} claim(s) here not fully "
+               "supported by their source (see fact-check)."
+               if meta.get("_fact_check_by_theme", {}).get(t["theme_id"]) else ""), "",
         ]
         if s["vendors"]:
             lines += ["| Vendor | Offering | Pricing | Sells to |", "|---|---|---|---|"]

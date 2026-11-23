@@ -1,76 +1,66 @@
 {
- "round": 2,
- "checked": 24,
- "problems": [
-  {
-   "theme_id": 0,
-   "claim": "Anchore Enterprise pricing: 'not public; quote via sales (AWS Marketplace listing is contract-based, no single list price)' (source: get.anchore.com/request-pricing)",
-   "issue": "The cited page could not be opened: get.anchore.com does not resolve from this session. Search results for Anchore's AWS Marketplace listing (prodview-ilkug4gdyavdq) show published dollar figures: a $34,500 line for Anchore Enterprise hosts and a $15,000 Essential Customer Success Plan. Round 1 read those lines as $19,500 and $15,000. Either way, prices are publicly listed on the Marketplace, so 'not public' is contradicted. Only the 'no single list price' part holds."
-  },
-  {
-   "theme_id": 0,
-   "claim": "WTP: 'Generation itself is free (Syft, GitHub, Docker, Inspector); buyers pay only inside SCA/management bundles such as Snyk Enterprise or Anchore'",
-   "issue": "None of the three cited sources shows how buyers spend money, so 'buyers pay only inside bundles' is an inference, not something the sources support. AWS Inspector SBOM export requires Inspector, which is a paid scanning service; search found no AWS statement that export comes at no extra cost. Docker is free for only 1 Scout repo, and Pro, Team and Business are paid ($9-24/user/mo per docker.com/pricing). So generation is not free across the board. The GitHub, AWS docs and Snyk docs hosts did not resolve, so the cited pages were checked only through search snippets."
-  },
-  {
-   "theme_id": 2,
-   "claim": "WTP: 'Mend Renovate Enterprise $25,000/yr for 100 devs (about $21/dev/month)' (source: AWS Marketplace prodview-yinerd2u4nhw4)",
-   "issue": "Search snippets of the listing show 'Mend Renovate Enterprise 100 CDs, $25,000.00'. The listing does not define the unit 'CDs', and no snippet confirms a 12-month term. Both '/yr' and 'per developer' are therefore unverified, and so is the derived ~$21/dev/month. The listing page itself (aws.amazon.com) did not resolve from this session."
-  },
-  {
-   "theme_id": 3,
-   "claim": "WTP: 'IT buyers pay ... Okta suites that include Lifecycle Management (Essentials from $17/user/month)' (source: okta.com/pricing)",
-   "issue": "The $17/user/month Essentials price is confirmed. Whether Lifecycle Management is included is contested: Okta's editions and regional pricing pages list Lifecycle Management as an add-on or under the Identity Governance add-on, while Capterra and Orb say Essentials includes it. The same theme's paid_market_gaps also claims Okta customers must buy a $4/user/month Lifecycle Management add-on, which contradicts this WTP sentence. okta.com did not resolve from this session."
-  },
-  {
-   "theme_id": 7,
-   "claim": "Amazon RDS Proxy pricing: 'usage-based, per vCPU-hour (or per ACU-hour for Aurora Serverless), region-dependent' (source: aws.amazon.com/about-aws/whats-new/2025/09/amazon-rds-proxy-end-to-end-iam-authentication)",
-   "issue": "The cited source is the What's New announcement for end-to-end IAM authentication. It covers the feature and its availability for MySQL/PostgreSQL in all RDS Proxy Regions and says nothing about pricing. The per-vCPU-hour/ACU-hour pricing comes from the RDS Proxy pricing page, which this row lists as the vendor url but does not cite as its source."
-  },
-  {
-   "theme_id": 7,
-   "claim": "WTP: 'Vendr reports a StrongDM median of ~$33k/yr across 58 purchases'",
-   "issue": "Vendr's StrongDM marketplace page, as returned by search, gives a median of $33,346/yr based on 66 purchases, not 58. The ~$71k average matches the buyer guide, which bases it on 45 deals. vendr.com could not be fetched directly to confirm which count is current."
-  },
-  {
-   "theme_id": 8,
-   "claim": "WTP: 'Cribl's pricing and minimums are reviewed as unsuitable for small and medium companies' (source: peerspot.com cribl_vs_stellar-cyber-open-xdr)",
-   "issue": "The PeerSpot comparison, as surfaced by search, does not say this. Its Cribl reviewers call it cost-effective at enterprise scale (around 30 cents/GB, cost savings appealing to mid-level and large enterprises). One reviewer asks for more features for smaller firms. No reviewer text about minimums, or about pricing being unsuitable for SMBs, was found. The same sentence is also used as a paid_market_gap with the same citation."
-  },
-  {
-   "theme_id": 10,
-   "claim": "Aembit pricing: 'free Starter tier; Teams from $20/workload/month and $20/agent/month; Enterprise custom quote' (source: aembit.io/faq)",
-   "issue": "The cited FAQ page could not be confirmed to carry these prices. A search for Aembit's official pages found tier limits but no dollar figures, and G2 says Aembit has not published pricing. The $20/workload and $20/agent figures appear only on third-party sites (rfp.wiki, SpotSaaS). Aembit's AWS Marketplace listing shows a 'Workloads' dimension at $200 on a 36-month contract, which does not match. The WTP evidence repeats the $20 figure with the same unverified citation."
-  },
-  {
-   "theme_id": 10,
-   "claim": "Teleport Machine & Workload Identity pricing: 'not public (bundled in Enterprise Standard; extra MWIs priced per unit)' (source: goteleport.com/pricing/guide/)",
-   "issue": "Teleport's June 16, 2026 pricing guide counts 'each unique instance of tbot as a TPR as determined by hourly average'. It shows no separate per-unit MWI price. Theme 7's Teleport row, citing that same guide, says 'no separate per-MWI price', which contradicts this row. 'Bundled in Enterprise Standard' is supported: the guide lists MWI in the Standard bundle. The 'extra MWIs priced per unit' part is not."
-  },
-  {
-   "theme_id": 10,
-   "claim": "WTP: 'Oasis (now Cyera Identity) $50k/12-month starter on AWS Marketplace' (source: prodview-blsgeikmunnxc)",
-   "issue": "Not supported. A search of the cited listing found pricing text describing recurring monthly usage fees billed through AWS, not a $50k 12-month contract. A different listing (prodview-wl52yxutluvma, 'Cyera Identity (Oasis) Starter Pack') shows a 12-month contract at $100,000. The same unsupported $50k figure appears in the paid_market_gaps text. aws.amazon.com did not resolve from this session for a direct check."
-  },
-  {
-   "theme_id": 11,
-   "claim": "Anchore Enterprise pricing: 'not public; quote via sales' (source: AWS Marketplace prodview-ilkug4gdyavdq)",
-   "issue": "The cited listing itself publishes dollar amounts: search snippets show $34,500 for Anchore Enterprise hosts and a $15,000 Essential Customer Success Plan, with round 1 reading $19,500 and $15,000. Calling the pricing 'not public' while citing a public price list is contradictory. What the listing supports is 'separate dimensions, no single list price'."
-  },
-  {
-   "theme_id": 11,
-   "claim": "Interlynk pricing: 'AWS Marketplace contracts by active developers: $18,000 (10), $36,000 (25), $60,000 (50), $100,000 (100)' (source: prodview-n6mc7symiq2rm)",
-   "issue": "Could not be verified. The listing page (aws.amazon.com) does not resolve from this session. Search snippets of the listing mention four developer tiers and contract-based pricing but show none of the dollar amounts. Treat the figures as unconfirmed until the live pricing tab is checked."
-  },
-  {
-   "theme_id": 11,
-   "claim": "WTP: 'sbomify Business from $159/month' (source: itechguides.com/products/sbomify)",
-   "issue": "iTechGuides does list $159/month billed annually, and it discloses that vendors can pay for ranking positions. SourceForge and Slashdot list sbomify at £49/month, and G2 says no pricing has been provided. The figure rests on a single paid-placement aggregator, not the vendor's own pricing page, and other aggregators contradict it."
-  },
-  {
-   "theme_id": 14,
-   "claim": "WTP: 'Funded SBOM/VEX vendors sell quote-based subscriptions ... Prices not public.'",
-   "issue": "The cited Manifest release supports only one three-year device-maker deal of undisclosed value, which is a single data point and not evidence of a quote-based market. 'Prices not public' conflicts with theme 11's own evidence for the same vendor set: Interlynk AWS Marketplace contract tiers, sbomify from $159/mo, and Anchore's Marketplace line items. The CRA dates (reporting from 11 Sept 2026, main obligations from 11 Dec 2027) are supported by the Commission news item and SonarSource."
-  }
- ]
+  "round": 3,
+  "checked": 24,
+  "problems": [
+    {
+      "theme_id": 0,
+      "claim": "WTP: 'Anchore $34,500/yr per host on AWS Marketplace ... GitHub exports SBOMs on its free dependency graph'",
+      "issue": "The AWS Marketplace listing prices 'Anchore Enterprise Cloud Image' at $34,500 per 12 months as one flat dimension: 'a single host Anchore Enterprise deployment'. That is a flat price for a single-host deployment, not a per-host rate. The cited GitHub docs page explains how to export an SBOM from the dependency graph but never says the feature is free or which plans include it, so 'free dependency graph' is not supported by the cited source."
+    },
+    {
+      "theme_id": 2,
+      "claim": "Snyk Open Source pricing: 'Free tier; Team $25/contributing dev/month, 5-dev minimum, up to 10 contributing devs; Enterprise custom' (source: snyk.io/start/team)",
+      "issue": "The page supports the Free plan, $25 per contributing developer/month, the 5-developer minimum and the 10-developer cap ($1,375 annually). It says nothing about an Enterprise plan or custom pricing, so 'Enterprise custom' is not supported by this source."
+    },
+    {
+      "theme_id": 2,
+      "claim": "GitHub Code Security (Dependabot): 'Dependabot alerts/updates plus premium dependency review bundled into GitHub'; pricing 'Code Security $30/active committer/month; basic Dependabot included with GitHub'",
+      "issue": "The changelog confirms $30 per month per active committer and says GitHub Team organizations can now buy Code Security, which includes 'Dependabot features'. It never says basic Dependabot is included free with GitHub, and it does not mention 'premium dependency review'. Both statements are unsupported by the cited source. The post is also specifically about GitHub Team plan customers, not SMB to enterprise generally."
+    },
+    {
+      "theme_id": 2,
+      "claim": "WTP: 'Buyers pay, but switch on price, and free Dependabot sets a low baseline.'",
+      "issue": "None of the three wtp_sources (snyk.io/start/team, the GitHub changelog, mend.io/pricing) shows buyers switching on price, and none says Dependabot is free. The Snyk $25 and GitHub $30 prices and Mend's per-contributing-developer pricing with no list price are supported. The switching and free-Dependabot conclusions are not."
+    },
+    {
+      "theme_id": 3,
+      "claim": "WorkOS pricing: 'Per connection: $125/mo for connections 1-15, falling to $65 at 51-100; SSO and SCIM billed as separate connections' (source: workos.com/pricing)",
+      "issue": "The page lists '$125 / ea' (1-15) down to '$65 / ea' (51-100) under both Single Sign-On and Directory Sync. It never states a monthly billing period for connections; '/mo' appears only for other items such as Audit Logs and Radar. The FAQ says 'Each enterprise customer you support with SSO or Directory Sync is counted as one connection', which does not clearly say SSO and SCIM are billed as separate connections and can be read as the opposite. Separate price tables imply separate billing, but the page never states it."
+    },
+    {
+      "theme_id": 3,
+      "claim": "WTP: IT buyers '... resent the SSO/SCIM tax.'",
+      "issue": "The cited wtp_sources (Stytch pricing, Stytch AWS Marketplace listing, Okta pricing) support the prices: Stytch 5 free connections then $125 per connection; a $25,000/12-month Stytch Platform contract; Okta Core Essentials $14 and Essentials $17, billed annually with a $1,500 minimum; Lifecycle Management an add-on on Starter. None of them shows buyer resentment of an 'SSO/SCIM tax'. That part is unsupported by the WTP sources."
+    },
+    {
+      "theme_id": 7,
+      "claim": "Teleport pricing: 'not public (quote-based; usage-based on monthly active users and Teleport Protected Resources, with each tbot machine-identity instance counted as a TPR ...)'; segment 'mid-market / enterprise' (source: Teleport_Pricing_Guide_Rev_June_16_2026 PDF)",
+      "issue": "The PDF supports MAU and TPR usage-based metrics and 'We count each unique instance of tbot as a TPR'. It publishes no prices but never says pricing is quote-based or names a sales contact, and it says nothing about mid-market buyers; it covers only the 'Enterprise Edition'. 'Quote-based' and 'mid-market' are inferences, not statements from the source. The gapfinder fetch of the PDF failed; it was read after downloading it with curl."
+    },
+    {
+      "theme_id": 8,
+      "claim": "Cribl Stream pricing: 'Cribl.Cloud free up to 1 TB/day; paid Stream ingest credits ~$0.27/GB (Standard, up to 5 TB/day) to $0.32/GB (Enterprise), $1 per credit, plus worker infrastructure' (source: cribl.io/pricing)",
+      "issue": "Neither the fetched page text nor the raw HTML of cribl.io/pricing contains a $0.27/GB or $0.32/GB rate. The only per-GB figures are static-egress charges of 0.06-0.12 credits/GB. The rendered fetch timed out, and WebFetch cannot resolve cribl.io in this session. The page does support $1 = 1 credit, Standard up to 5TB/day, a Free plan up to 1TB/day, Stream priced 'based on GBs of data ingested' and an extra managed-infrastructure fee. However, it qualifies the 1TB/day free figure with '* See Cribl.Cloud section for data limits and availability in cloud', so 'Cribl.Cloud free up to 1 TB/day' is not shown. The segment 'enterprise / large SOC' is also not stated."
+    },
+    {
+      "theme_id": 8,
+      "claim": "WTP: 'Enterprises pay per-GB pipeline fees (Cribl.Cloud ~$0.27-0.32/GB in credits above a free tier of up to 1 TB/day)'",
+      "issue": "The only support for a per-GB price is one PeerSpot reviewer's estimate ('approximately $0.32 per GB for ST enterprise estimate'). No cited source shows $0.27/GB, and cribl.io/pricing shows no per-GB ingest rate (see the Cribl vendor row). The rest checks out: the CrowdStrike release confirms it agreed to acquire Onum; PeerSpot reviewers call Cribl 'costly as it scales with data volumes', ask for 'Better options based on user base, enterprise size, or data volume', and one says 'at a small level, the pricing is good'."
+    },
+    {
+      "theme_id": 10,
+      "claim": "WTP: 'HCP Vault Dedicated ~$112.17/client/month (Standard, official price list)' (source: hashicorp.com/pricing/all)",
+      "issue": "Unverified: the source could not be read. gapfinder fetch returned HTTP 429. fetch --render returned a bot challenge page ('Failed to verify your browser, Code 21'). WebFetch returned HTTP 404 for both hashicorp.com/pricing/all and www.hashicorp.com/en/pricing/all. No figure, tier or unit could be checked. The other WTP figures are confirmed: Aembit Teams from $20/workload/month and Cyera Identity (Oasis) Starter Pack $100,000 per 12 months."
+    },
+    {
+      "theme_id": 11,
+      "claim": "Interlynk pricing: 'free Community tier; AWS Marketplace 12-month SaaS contracts by active developers: $18,000 (10), $36,000 (25), $60,000 (50), $100,000 (100)'; segment 'SMB to enterprise, device makers'",
+      "issue": "The listing confirms the four 12-month prices, which are for a product named 'AWS SBOM Manager (SaaS)'. It mentions only a 'free trial', not a free Community tier, so the free tier is unsupported. On buyers, the listing names medical device manufacturers, connected-device and firmware teams, AI providers and '100+ regulated companies'. It says nothing about SMBs."
+    },
+    {
+      "theme_id": 14,
+      "claim": "WTP: 'Manifest signed a three-year device-maker deal (value undisclosed)' (wtp_source: commission.europa.eu Cyber Resilience Act news, 2026-09-11)",
+      "issue": "The cited European Commission page covers only CRA reporting obligations, which start 11 Sep 2026, with main obligations from 11 Dec 2027. It never mentions Manifest or any deal. The Manifest deal is supported only by the PR Newswire release in the vendor row (a three-year SaaS agreement with a publicly traded medical device maker, May 2024, value not disclosed), which is not among the wtp_sources. The cited WTP source does not support this claim."
+    }
+  ]
 }

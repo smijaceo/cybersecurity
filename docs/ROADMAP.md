@@ -94,10 +94,10 @@ Collect posts, questions and issues where people express a need, for the four se
   ("Show HN", "Launch HN"), essays and news. Phase 2's relevance filter must drop these before
   clustering, and should look past the top-engagement items.
 
-## Phase 2 — Gap analysis · `in progress — paid-market analysis added (D11)`
+## Phase 2 — Gap analysis · `done — awaiting PM sign-off and Phase 3 shortlist`
 
 Turn raw signals into a ranked list of unmet needs, each with evidence.
-Output: **[reports/gaps-2026-11-22.md](../reports/gaps-2026-11-22.md)**.
+Output: **[reports/gaps-2026-11-23.md](../reports/gaps-2026-11-23.md)** (with paid market, D11). The first, open-source-only run is kept as [reports/gaps-2026-11-22.md](../reports/gaps-2026-11-22.md).
 
 | Deliverable | Status | How (reused projects per D7) |
 |---|---|---|
@@ -106,7 +106,7 @@ Output: **[reports/gaps-2026-11-22.md](../reports/gaps-2026-11-22.md)**.
 | Supply map | done — changed by D10 | GitHub repository search per theme (repo count, leader's stars, active top repos). Awesome-lists dropped from scoring. |
 | Threat relevance | done — changed by D10 | ATT&CK candidates shortlisted with `potion-retrieval-32M`; threat mapper rates 0–3 and picks techniques. NVD keyword count shown, not scored. |
 | Repeatable workflow (D12) | done | `.claude/workflows/gap-analysis.js`, agent definitions, pydantic schemas, scipy ranks. |
-| Paid-market map (D11) | in progress | Market researcher agents with web search: commercial vendors, pricing, paid-market gaps, willingness to pay, bundling risk, all with source links (`market-prepare` → researcher → `gaps` validates). Statements complaining about price or vendors counted per theme. |
+| Paid-market map (D11) | done — 3 fact-check rounds | Market researcher agents with web search: commercial vendors, pricing, paid-market gaps, willingness to pay, bundling risk, all with source links (`market-prepare` → researcher → `gaps` validates). Statements complaining about price or vendors counted per theme. |
 | Gap score | done — reweighted by D11 | [config/scoring.yaml](../config/scoring.yaml): 0.30 demand + 0.30 supply gap (60% commercial, 40% open source) + 0.25 monetization + 0.15 threat, percentile ranks. |
 | Gap report | done | `gapfinder gaps` → `reports/gaps-<date>.md` + `reports/phase2/gaps.json`. |
 
@@ -123,6 +123,31 @@ per theme → `market-merge` → `gaps` → adversarial fact-check of market cla
 
 Agents are defined in `.claude/agents/` and follow rubrics in `docs/rubrics/`; every output is
 validated against `gapfinder/schemas.py` and committed under `reports/phase2/`.
+
+**Results with the paid market (2026-11-23)**
+
+| # | Gap | Score | Crowded | WTP | Bundling | Researcher's verdict |
+|---|---|---|---|---|---|---|
+| 1 | Remediating vulnerable third-party dependencies | 0.630 | 3/3 | 2/3 | high | No room for another scanner; narrow wedge in "stuck" fixes, already targeted by Seal, Endor |
+| 2 | AWS role credentials for workloads ⚠ unstable | 0.606 | 3/3 | 2/3 | high | Free on AWS; opening only in cheap cross-cloud workload identity for mid-market |
+| 3 | SCIM user provisioning for applications | 0.501 | 3/3 | 2/3 | high | Developer-side bundled free; opening in buyer-side provisioning for apps without (or with enterprise-locked) SCIM |
+| 4 | Dependency context for vulnerability impact | 0.490 | 2/3 | 2/3 | medium | Real opening: affordable SBOM impact/VEX layer for mid-size vendors facing the EU CRA |
+| 5 | Managing SIEM log noise and ingestion ⚠ | 0.473 | 3/3 | 2/3 | high | Thin: self-serve log reduction for small teams/MSSPs, low contract value |
+| 6 | CycloneDX SBOM output and attestation | 0.454 | 2/3 | 2/3 | medium | Modest opening: SBOM+VEX lifecycle for SMB manufacturers (CRA, FDA 524B) |
+| 7 | SBOM generation across build ecosystems | 0.443 | 3/3 | 1/3 | high | Commoditized; only an accuracy layer for hard ecosystems |
+| 8 | IAM-based authentication in AWS service clients ⚠ | 0.404 | 3/3 | 1/3 | high | Not a startup; free AWS/open-source plumbing |
+
+**Reading the ranking (for the PM):** every theme is commercially crowded (2–3/3), so the score
+mostly separates themes by demand and threat. The researchers' verdicts point elsewhere: gaps
+4 and 6 converge on one opening (SBOM/VEX compliance for mid-size software and device makers
+before the EU Cyber Resilience Act's Dec 2027 obligations), and gaps 2 and 3 have narrower
+wedges. Choosing which gaps go to Phase 3 is a PM decision.
+
+**Fact-check rounds:** 17 → 14 → 12 unsupported claims out of 24 checked. Core prices are now
+confirmed against primary sources (vendor pricing pages, AWS Marketplace listings). Remaining
+issues are mostly qualitative phrases not stated by the cited page, plus one page that blocks
+automated readers (HashiCorp). The ranking was identical in all three rounds. Details:
+`reports/phase2/fact-check.json`.
 
 **Results, first run (2026-11-22, open-source supply only — superseded by the D11 run)**
 
@@ -155,11 +180,14 @@ validated against `gapfinder/schemas.py` and committed under `reports/phase2/`.
   `sbom`. GitHub search also returns some off-topic repos (e.g. for "vulnerability impact").
 - The ATT&CK shortlist sometimes misses the obvious technique (T1078 Valid Accounts for SCIM,
   T1552.001 Credentials In Files for AWS keys). The mapper's 0–3 rating doesn't depend on it.
+- Agents' built-in web fetcher reported reachable sites as unresolvable; `gapfinder fetch`
+  (trafilatura, Playwright with the environment's Chromium) is their fallback. It confirmed,
+  for example, Anchore's AWS Marketplace prices that search snippets had garbled.
 - Most evidence comes from GitHub feature requests on specific projects, so several gaps are
   "projects keep being asked for X" rather than "no product does X". The Phase 4 competitor
   critic must test that.
 
-## Phase 3 — Idea generation · `not started` (next, after PM sign-off)
+## Phase 3 — Idea generation · `not started` (next, after PM picks the shortlist)
 
 For each top gap, a structured startup concept (decision D4: commercial product) saved to
 `ideas/<slug>.md`: target buyer and user, problem with evidence, MVP scope, differentiation vs the

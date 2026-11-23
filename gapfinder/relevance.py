@@ -68,9 +68,14 @@ def export_batches(store: Store, config: dict, out_dir: str | Path, batch_size: 
         for s in store.iter_signals()
         if s["segment"] in config["segments"] and store.get_judgment(s["id"]) is None
     ]
+    # Continue numbering after existing batches so a re-run never overwrites earlier batches
+    # (and their committed labels).
+    existing = [int(p.stem.split("-")[1]) for p in out_dir.glob("batch-*.json")
+                if p.stem.split("-")[1].isdigit()]
+    start = max(existing, default=-1) + 1
     paths = []
     for i in range(0, len(pending), batch_size):
-        p = out_dir / f"batch-{i // batch_size:02d}.json"
+        p = out_dir / f"batch-{start + i // batch_size:02d}.json"
         p.write_text(json.dumps(pending[i:i + batch_size], indent=1))
         paths.append(p)
     return paths

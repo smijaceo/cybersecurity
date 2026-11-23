@@ -67,3 +67,14 @@ def test_delete_segment_removes_judgments(store):
     relevance.apply_rules(store)
     store.delete_segment("a")
     assert store.get_judgment("hn:1") is None
+
+
+def test_export_batches_never_overwrites(store, tmp_path):
+    relevance.apply_rules(store)
+    out = tmp_path / "b"
+    out.mkdir()
+    (out / "batch-00.json").write_text("[]")
+    (out / "batch-03.json").write_text("[]")
+    (p,) = relevance.export_batches(store, CONFIG, out, batch_size=10)
+    assert p.name == "batch-04.json"
+    assert (out / "batch-00.json").read_text() == "[]"

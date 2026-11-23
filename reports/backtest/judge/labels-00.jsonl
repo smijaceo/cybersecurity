@@ -1,0 +1,150 @@
+{"id": "serverfault:serverfault:293217", "on_segment": "y", "need": "y", "reason": "auditor demands plaintext secrets; audit-compliance pain"}
+{"id": "serverfault:serverfault:451387", "on_segment": "n", "need": "n", "reason": "Windows credential cache curiosity, not security need"}
+{"id": "serverfault:serverfault:73319", "on_segment": "n", "need": "n", "reason": "SFTP logging for client debugging"}
+{"id": "serverfault:serverfault:71071", "on_segment": "n", "need": "n", "reason": "MySQL query logging for debugging"}
+{"id": "serverfault:serverfault:318574", "on_segment": "n", "need": "n", "reason": "nginx logging config"}
+{"id": "serverfault:serverfault:574880", "on_segment": "n", "need": "n", "reason": "PHP-FPM error logging config"}
+{"id": "serverfault:serverfault:645924", "on_segment": "n", "need": "n", "reason": "HAProxy syslog config"}
+{"id": "serverfault:serverfault:647395", "on_segment": "n", "need": "n", "reason": "HAProxy request logging config"}
+{"id": "serverfault:serverfault:37088", "on_segment": "y", "need": "n", "reason": "how-to: attach EC2 security group"}
+{"id": "serverfault:serverfault:237557", "on_segment": "y", "need": "n", "reason": "how-to: change EC2 security group"}
+{"id": "serverfault:serverfault:52199", "on_segment": "y", "need": "n", "reason": "asks whether exposed service is a risk"}
+{"id": "serverfault:serverfault:202044", "on_segment": "y", "need": "n", "reason": "how-to forward audit logs to syslog"}
+{"id": "serverfault:serverfault:417173", "on_segment": "y", "need": "n", "reason": "how-to enable HSTS in IIS"}
+{"id": "github:413722441", "on_segment": "n", "need": "n", "reason": "linter roadmap, not security"}
+{"id": "serverfault:serverfault:414578", "on_segment": "n", "need": "n", "reason": "certutil database error bug"}
+{"id": "serverfault:serverfault:310640", "on_segment": "n", "need": "n", "reason": "SNMPd log verbosity"}
+{"id": "serverfault:serverfault:463550", "on_segment": "y", "need": "n", "reason": "how-to rename EC2 security group"}
+{"id": "serverfault:serverfault:137468", "on_segment": "n", "need": "n", "reason": "cron output logging"}
+{"id": "serverfault:serverfault:205094", "on_segment": "y", "need": "n", "reason": "how security group changes apply"}
+{"id": "serverfault:serverfault:183589", "on_segment": "n", "need": "n", "reason": "launchd logging"}
+{"id": "serverfault:serverfault:546012", "on_segment": "y", "need": "y", "reason": "AWS gives no visibility into security group dependencies"}
+{"id": "serverfault:serverfault:611082", "on_segment": "y", "need": "y", "reason": "no clean way to patch security updates in containers"}
+{"id": "stackexchange:security:7030", "on_segment": "y", "need": "y", "reason": "asks for tool to manage hundreds of certificates"}
+{"id": "serverfault:serverfault:483938", "on_segment": "y", "need": "n", "reason": "how multiple security groups combine"}
+{"id": "serverfault:serverfault:316516", "on_segment": "y", "need": "n", "reason": "opinion question on port obscurity"}
+{"id": "serverfault:serverfault:334448", "on_segment": "y", "need": "n", "reason": "how-it-works: SSH password risk"}
+{"id": "serverfault:serverfault:823956", "on_segment": "y", "need": "n", "reason": "best-practice question for Ansible security"}
+{"id": "serverfault:serverfault:596558", "on_segment": "n", "need": "n", "reason": "Ubuntu auth.log location"}
+{"id": "serverfault:serverfault:114052", "on_segment": "n", "need": "n", "reason": "upstart daemon logging"}
+{"id": "stackexchange:security:190532", "on_segment": "y", "need": "y", "reason": "needs tool to quantify TLS 1.0 clients before deprecation"}
+{"id": "serverfault:serverfault:115624", "on_segment": "n", "need": "n", "reason": "iptables NAT logging networking issue"}
+{"id": "hn:13516116", "on_segment": "y", "need": "n", "reason": "asks for beginner security advice sources"}
+{"id": "serverfault:serverfault:544439", "on_segment": "y", "need": "n", "reason": "how-to manage default VPC security group"}
+{"id": "serverfault:serverfault:414637", "on_segment": "n", "need": "n", "reason": "limits.conf reload"}
+{"id": "github:298392777", "on_segment": "n", "need": "n", "reason": "webpack cache spec"}
+{"id": "serverfault:serverfault:304324", "on_segment": "n", "need": "n", "reason": "keepalived log verbosity"}
+{"id": "serverfault:serverfault:676752", "on_segment": "y", "need": "n", "reason": "audit policy GPO troubleshooting"}
+{"id": "serverfault:serverfault:842749", "on_segment": "y", "need": "n", "reason": "firewalld logging config issue"}
+{"id": "github:396983442", "on_segment": "n", "need": "n", "reason": "Fargate docker build request"}
+{"id": "github:480089774", "on_segment": "n", "need": "n", "reason": "addon delisting dispute"}
+{"id": "github:432659624", "on_segment": "y", "need": "n", "reason": "breach postmortem repost, news"}
+{"id": "github:419189899", "on_segment": "y", "need": "n", "reason": "opinion on Signal privacy"}
+{"id": "stackexchange:security:202022", "on_segment": "y", "need": "n", "reason": "how-to hash emails for GDPR"}
+{"id": "github:212094213", "on_segment": "n", "need": "n", "reason": "blockchain consensus spec"}
+{"id": "github:371114493", "on_segment": "n", "need": "n", "reason": "language syntax debate"}
+{"id": "serverfault:serverfault:602402", "on_segment": "n", "need": "n", "reason": "IIS logging stopped"}
+{"id": "github:360071634", "on_segment": "n", "need": "n", "reason": "financial security token standard"}
+{"id": "github:108347070", "on_segment": "n", "need": "n", "reason": "language operator proposal"}
+{"id": "github:530446705", "on_segment": "n", "need": "n", "reason": "web framework session feature, not security tool"}
+{"id": "github:301576285", "on_segment": "y", "need": "y", "reason": "proposal fixing password generator rule incompatibility"}
+{"id": "serverfault:serverfault:849997", "on_segment": "y", "need": "n", "reason": "WSUS patch visibility support question"}
+{"id": "serverfault:serverfault:488967", "on_segment": "n", "need": "n", "reason": "HAProxy logging config"}
+{"id": "serverfault:serverfault:842082", "on_segment": "n", "need": "n", "reason": "SpamAssassin log confusion"}
+{"id": "serverfault:serverfault:134945", "on_segment": "y", "need": "y", "reason": "cannot trace infected host sending phishing"}
+{"id": "serverfault:serverfault:427262", "on_segment": "y", "need": "n", "reason": "asks explanation of phishing subdomain"}
+{"id": "serverfault:serverfault:13451", "on_segment": "y", "need": "y", "reason": "wants simple tool to monitor logins and failures"}
+{"id": "serverfault:serverfault:659677", "on_segment": "y", "need": "n", "reason": "how gluster peer trust works"}
+{"id": "serverfault:serverfault:165627", "on_segment": "y", "need": "n", "reason": "tool comparison for PCI, no gap stated"}
+{"id": "github:197038167", "on_segment": "n", "need": "n", "reason": "cryptocurrency issuance vote"}
+{"id": "serverfault:serverfault:197837", "on_segment": "y", "need": "y", "reason": "security log flooded with logon events, cannot reduce"}
+{"id": "serverfault:serverfault:61257", "on_segment": "y", "need": "y", "reason": "wants badge access logging for server room"}
+{"id": "serverfault:serverfault:93926", "on_segment": "n", "need": "n", "reason": "bandwidth logging"}
+{"id": "github:216605371", "on_segment": "n", "need": "n", "reason": "crypto library packaging obsolescence"}
+{"id": "github:235512723", "on_segment": "y", "need": "y", "reason": "timing side-channel risk, requests constant-time arithmetic"}
+{"id": "github:478435034", "on_segment": "n", "need": "n", "reason": "CloudFormation property support, no security framing"}
+{"id": "github:327486888", "on_segment": "n", "need": "n", "reason": "pip platform flag"}
+{"id": "github:491028854", "on_segment": "n", "need": "n", "reason": "lambda env var feature"}
+{"id": "serverfault:serverfault:637750", "on_segment": "n", "need": "n", "reason": "OpenVPN log format question"}
+{"id": "github:391500446", "on_segment": "y", "need": "y", "reason": "requests replacing insecure image library"}
+{"id": "github:326201648", "on_segment": "n", "need": "n", "reason": "GitHub app integration"}
+{"id": "serverfault:serverfault:387111", "on_segment": "n", "need": "n", "reason": "software inventory, not framed as security"}
+{"id": "serverfault:serverfault:341614", "on_segment": "y", "need": "n", "reason": "how-to filter UDP port for PCI"}
+{"id": "serverfault:serverfault:532848", "on_segment": "y", "need": "n", "reason": "how-to log SSH connections in iptables"}
+{"id": "github:521692173", "on_segment": "n", "need": "n", "reason": "docs static export"}
+{"id": "serverfault:serverfault:655781", "on_segment": "y", "need": "n", "reason": "compliance question on disk encryption"}
+{"id": "github:149185160", "on_segment": "n", "need": "n", "reason": "government source code policy comments"}
+{"id": "hn:16151153", "on_segment": "y", "need": "y", "reason": "vendor ignores reported vulnerabilities exposing PII"}
+{"id": "serverfault:serverfault:39916", "on_segment": "n", "need": "n", "reason": "DNS health check tool, not security"}
+{"id": "stackexchange:security:26537", "on_segment": "y", "need": "y", "reason": "asks whether MD4 collision tool exists"}
+{"id": "github:57070526", "on_segment": "n", "need": "n", "reason": "Angular injector proposal"}
+{"id": "github:317068496", "on_segment": "n", "need": "n", "reason": "JWT backend support in framework"}
+{"id": "github:507839581", "on_segment": "n", "need": "n", "reason": "file versioning storage"}
+{"id": "stackexchange:security:139695", "on_segment": "y", "need": "n", "reason": "where nikto stores reports"}
+{"id": "serverfault:serverfault:688814", "on_segment": "y", "need": "n", "reason": "how-to build SCCM patch report"}
+{"id": "stackexchange:security:151902", "on_segment": "y", "need": "y", "reason": "asks alternative to ISO 27001 for small business"}
+{"id": "github:443706697", "on_segment": "n", "need": "n", "reason": "CI dependency cache"}
+{"id": "github:414181860", "on_segment": "n", "need": "n", "reason": "blockchain meta transactions"}
+{"id": "github:440424249", "on_segment": "y", "need": "y", "reason": "wants httpOnly cookie storage to prevent XSS"}
+{"id": "github:155442569", "on_segment": "y", "need": "y", "reason": "reCAPTCHA forces weakening CSP"}
+{"id": "stackexchange:security:191966", "on_segment": "y", "need": "y", "reason": "RDP brute-force tools fail to work"}
+{"id": "serverfault:serverfault:4788", "on_segment": "y", "need": "n", "reason": "discussion of physical server security"}
+{"id": "serverfault:serverfault:142737", "on_segment": "y", "need": "y", "reason": "no audit checklist available, one-man IT"}
+{"id": "serverfault:serverfault:47079", "on_segment": "y", "need": "n", "reason": "Puppet security topology question"}
+{"id": "github:502981828", "on_segment": "y", "need": "y", "reason": "mesh exposes internal headers, requests stripping"}
+{"id": "hn:17024036", "on_segment": "y", "need": "n", "reason": "how secure is passwordless login"}
+{"id": "github:240191031", "on_segment": "y", "need": "y", "reason": "requests removing eval for strict CSP"}
+{"id": "github:167941991", "on_segment": "y", "need": "y", "reason": "wants safer alternative to exposed client key"}
+{"id": "stackexchange:security:37488", "on_segment": "y", "need": "n", "reason": "FIPS compliance question"}
+{"id": "github:166457191", "on_segment": "n", "need": "n", "reason": "PDB source embedding"}
+{"id": "serverfault:serverfault:960287", "on_segment": "n", "need": "n", "reason": "syslog stopped"}
+{"id": "github:420770689", "on_segment": "n", "need": "n", "reason": "S3 download proxy cost"}
+{"id": "stackexchange:security:206243", "on_segment": "y", "need": "y", "reason": "wants to automate CRL publication in PKI"}
+{"id": "serverfault:serverfault:412682", "on_segment": "y", "need": "n", "reason": "how-to fix weak IPsec settings"}
+{"id": "serverfault:serverfault:313234", "on_segment": "y", "need": "y", "reason": "no easy SSH session logging on Linux workstations"}
+{"id": "serverfault:serverfault:707929", "on_segment": "y", "need": "n", "reason": "where to find audit log entry"}
+{"id": "serverfault:serverfault:42565", "on_segment": "y", "need": "y", "reason": "server audit tools too expensive, seeks FLOSS alternative"}
+{"id": "github:55243860", "on_segment": "n", "need": "n", "reason": "Windows manifest support"}
+{"id": "github:399937422", "on_segment": "y", "need": "y", "reason": "requests auto PRs for vulnerable sub-dependencies"}
+{"id": "stackexchange:security:18819", "on_segment": "y", "need": "y", "reason": "seeks GUI SQL injection tool for Mac"}
+{"id": "hn:145697", "on_segment": "n", "need": "n", "reason": "co-founder search"}
+{"id": "serverfault:serverfault:2673", "on_segment": "y", "need": "y", "reason": "yum-security broken on CentOS, seeks alternative"}
+{"id": "github:134715014", "on_segment": "y", "need": "y", "reason": "wants configurable credential cache location for security"}
+{"id": "serverfault:serverfault:500534", "on_segment": "y", "need": "n", "reason": "advice on admin account separation"}
+{"id": "serverfault:serverfault:340083", "on_segment": "n", "need": "n", "reason": "IIS logging stopped"}
+{"id": "github:185941115", "on_segment": "n", "need": "n", "reason": "chat reactions spec"}
+{"id": "serverfault:serverfault:955646", "on_segment": "n", "need": "n", "reason": "audit backlog ops issue"}
+{"id": "serverfault:serverfault:405400", "on_segment": "y", "need": "n", "reason": "Snort Barnyard2 setup help"}
+{"id": "github:498034006", "on_segment": "n", "need": "n", "reason": "Terraform dependency handling"}
+{"id": "stackexchange:security:55005", "on_segment": "y", "need": "n", "reason": "asks whether PCI is mandatory"}
+{"id": "serverfault:serverfault:11521", "on_segment": "y", "need": "n", "reason": "how-to restrict repo access"}
+{"id": "github:197279166", "on_segment": "n", "need": "n", "reason": "Kubernetes hook warning"}
+{"id": "github:192655104", "on_segment": "n", "need": "n", "reason": "bundler proposal"}
+{"id": "github:405015822", "on_segment": "n", "need": "n", "reason": "search fuzzy query"}
+{"id": "serverfault:serverfault:569048", "on_segment": "y", "need": "n", "reason": "how-to upgrade OpenSSH for PCI"}
+{"id": "github:486848456", "on_segment": "y", "need": "y", "reason": "requests captcha against login brute force"}
+{"id": "github:139457574", "on_segment": "n", "need": "n", "reason": "blockchain RSA precompile"}
+{"id": "serverfault:serverfault:850391", "on_segment": "y", "need": "n", "reason": "asks if Linux affected by WannaCry"}
+{"id": "github:284573695", "on_segment": "n", "need": "n", "reason": "database auth passthrough"}
+{"id": "hn:2670078", "on_segment": "y", "need": "n", "reason": "asks how to disclose flaw"}
+{"id": "hn:945034", "on_segment": "y", "need": "n", "reason": "question on obscurity security"}
+{"id": "serverfault:serverfault:528337", "on_segment": "y", "need": "n", "reason": "PCI bastion design question"}
+{"id": "serverfault:serverfault:946620", "on_segment": "y", "need": "y", "reason": "cannot determine whether ransomware exfiltrated data"}
+{"id": "github:230095403", "on_segment": "y", "need": "y", "reason": "BI tool lacks hooks for row-level security"}
+{"id": "github:168476732", "on_segment": "n", "need": "n", "reason": "test slice configuration"}
+{"id": "hn:9538418", "on_segment": "n", "need": "n", "reason": "consulting pricing"}
+{"id": "serverfault:serverfault:261755", "on_segment": "y", "need": "y", "reason": "PCI key rotation is costly and unscalable"}
+{"id": "serverfault:serverfault:760855", "on_segment": "y", "need": "n", "reason": "asks how ransomware deleted shadow copies"}
+{"id": "github:376156151", "on_segment": "n", "need": "n", "reason": "chat platform migration"}
+{"id": "stackexchange:security:120136", "on_segment": "y", "need": "y", "reason": "asks whether attack-finder exists in CLI"}
+{"id": "serverfault:serverfault:857379", "on_segment": "y", "need": "n", "reason": "how-to disable TLS 1.0 in Apache"}
+{"id": "serverfault:serverfault:871410", "on_segment": "n", "need": "n", "reason": "log file clutter"}
+{"id": "github:527178311", "on_segment": "y", "need": "y", "reason": "activists need group member removal for safety"}
+{"id": "hn:17387079", "on_segment": "y", "need": "y", "reason": "fears securely exposing internal host to webhooks"}
+{"id": "stackexchange:security:18982", "on_segment": "y", "need": "y", "reason": "cannot find secure code review tool for jQuery"}
+{"id": "serverfault:serverfault:384610", "on_segment": "y", "need": "y", "reason": "wants automated export of email security audit logs"}
+{"id": "serverfault:serverfault:276925", "on_segment": "y", "need": "n", "reason": "asks if tcpdump suits VPN abuse logging"}
+{"id": "serverfault:serverfault:296421", "on_segment": "y", "need": "y", "reason": "PCI scans keep flagging despite updates"}
+{"id": "serverfault:serverfault:261816", "on_segment": "y", "need": "y", "reason": "seeks file integrity checker for PCI"}
+{"id": "serverfault:serverfault:14012", "on_segment": "y", "need": "n", "reason": "SSH vs su logging question"}
+{"id": "github:533039279", "on_segment": "n", "need": "n", "reason": "Terraform docs examples"}

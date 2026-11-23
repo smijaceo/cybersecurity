@@ -1,0 +1,138 @@
+{
+ "opening_id": "cal-04",
+ "slug": "chat-driven-incident-response-automation",
+ "name": "Project Osprey",
+ "one_liner": "A security operations platform where a learning bot runs response playbooks across existing tools and analysts collaborate in a built-in chat war room.",
+ "buyer": {
+  "role": "CISO or SOC director",
+  "company_profile": "Enterprises and MSSPs with a staffed SOC running a SIEM, endpoint tools and firewalls from several vendors, struggling to hire analysts."
+ },
+ "user": "SOC analysts (tier 1-3) and incident responders.",
+ "problem": {
+  "summary": "Every security product has its own API and console; customers lack a cross-product workflow. Analysts repeat the same enrichment and containment steps by hand, duplicate incidents pile up, and investigations are scattered over email and tickets with no audit trail. Qualified analysts are scarce, so response times grow.",
+  "evidence": [
+   {
+    "claim": "Incident management involves repeatable detection, analysis, containment and recovery steps that can be codified.",
+    "url": "https://en.wikipedia.org/wiki/Computer_security_incident_management"
+   },
+   {
+    "claim": "Security orchestration connects disparate security tools and automates workflows across them.",
+    "url": "https://en.wikipedia.org/wiki/Security_orchestration"
+   },
+   {
+    "claim": "Security teams run many separate tools, each with its own interface.",
+    "url": "https://en.wikipedia.org/wiki/Security_orchestration"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "Most security products now expose APIs, chat-based collaboration (ChatOps) is mainstream in engineering, and the analyst shortage makes automation of routine response tasks a board-level concern.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Security_orchestration",
+   "https://en.wikipedia.org/wiki/Computer_security_incident_management"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Integrations with SIEM, endpoint, firewall and threat-intel products using their own credentials",
+    "why": "Cross-product workflow."
+   },
+   {
+    "feature": "Playbook engine that runs enrichment and response tasks automatically on new incidents",
+    "why": "Removes repetitive analyst work."
+   },
+   {
+    "feature": "Built-in chat war room where analysts and the bot run commands together",
+    "why": "Collaboration plus a natural audit trail."
+   },
+   {
+    "feature": "Bot learns from analyst actions to suggest next steps and detect duplicate incidents",
+    "why": "Spreads expertise to junior analysts."
+   },
+   {
+    "feature": "Ticketing, reporting and full audit log",
+    "why": "Compliance and management reporting."
+   }
+  ],
+  "out_of_scope": [
+   "Detection/SIEM",
+   "Endpoint agent",
+   "Managed service"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "Phantom",
+   "url": "https://www.splunk.com/en_us/products/splunk-security-orchestration-and-automation.html",
+   "how_we_differ": "Collaboration and learning built in, not only playbook automation."
+  },
+  {
+   "name": "IBM Resilient",
+   "url": "https://www.ibm.com/qradar/security-qradar-soar",
+   "how_we_differ": "Automation-first with chat collaboration rather than a case-management workflow."
+  },
+  {
+   "name": "ServiceNow Security Operations",
+   "url": "https://www.servicenow.com/products/security-operations.html",
+   "how_we_differ": "Purpose-built for analysts with deep security integrations."
+  },
+  {
+   "name": "Swimlane",
+   "url": "https://swimlane.com/",
+   "how_we_differ": "Chat war room and bot that learns from analysts."
+  },
+  {
+   "name": "TheHive (free, open source)",
+   "url": "https://thehive-project.org/",
+   "how_we_differ": "Automated response, not only case tracking."
+  }
+ ],
+ "differentiation": "Combines orchestration, case management and real-time chat collaboration in one product, with a bot that both executes playbooks and learns from analysts, so it helps understaffed SOCs immediately and captures an audit trail automatically.",
+ "build": {
+  "team": "About 18 people: 4 security-industry founders, engineering in Israel, sales in the US",
+  "months_to_mvp": 10,
+  "hardest_parts": [
+   "Building and maintaining hundreds of integrations",
+   "Making machine learning suggestions accurate enough to be trusted",
+   "Enterprise deployment (on-prem and cloud)"
+  ]
+ },
+ "pricing": {
+  "model": "Annual subscription per analyst seat with integrations included; on-prem or cloud",
+  "entry_price": "Working assumption: $50,000/year for up to 5 analysts",
+  "rationale": "SOC tooling budgets are per-analyst and automation savings are easy to express in analyst-hours.",
+  "comparables": [
+   {
+    "vendor": "Security orchestration platforms",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://www.splunk.com/en_us/products/splunk-security-orchestration-and-automation.html"
+   },
+   {
+    "vendor": "TheHive",
+    "price": "Free (open source)",
+    "source": "https://thehive-project.org/"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten enterprises and MSSPs with 5-30 analyst SOCs using several major security vendors, recruited through beta users and founders' industry networks.",
+  "channel": "Direct enterprise sales from a US office, technology alliances with security vendors whose products it integrates.",
+  "wedge": "Automate phishing triage and duplicate-incident detection in the first weeks."
+ },
+ "risks": [
+  "SIEM and security platform vendors bundle orchestration",
+  "Integration maintenance burden",
+  "Analysts may distrust automated actions",
+  "Crowded emerging category with well-funded rivals"
+ ],
+ "riskiest_assumption": {
+  "assumption": "SOCs will adopt a chat-centred workflow and let a bot run response actions.",
+  "test": "Run the beta with 5 SOCs for 2 weeks and track how many incidents are handled through the war room and automated playbooks.",
+  "success_signal": "At least 50% of incidents in beta SOCs are handled in the platform and 3 beta users convert to paid."
+ },
+ "open_questions": [
+  "Will customers buy orchestration standalone or expect it in their SIEM?",
+  "How much of the bot's learning generalises across customers?"
+ ]
+}

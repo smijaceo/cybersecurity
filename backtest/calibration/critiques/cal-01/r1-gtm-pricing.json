@@ -1,0 +1,51 @@
+{
+ "concept_id": "cal-01",
+ "lens": "gtm-pricing",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "The proof-of-value wedge (passive SPAN beside the sandbox, show its misses) is a credible enterprise motion, but $50k/yr entry with bundled hardware cannot carry SE-heavy direct sales for a 30-person, 18-month burn. Mid-market first customers clash with the 1,000+ enterprise buyer. It also needs a new budget line, which the concept admits is unproven.",
+ "objections": [
+  {
+   "objection": "Unit economics of the channel: direct enterprise sales with hands-on proof-of-value deployments (sensor shipping, SPAN setup, two weeks of SE time, triage of findings) cost tens of thousands of dollars per deal. A $50k/yr entry contract that also bundles sensor hardware leaves thin gross margin and a long CAC payback unless deals expand fast.",
+   "severity": "major",
+   "evidence": "concept:pricing.entry_price; concept:go_to_market.channel; concept:pricing.model"
+  },
+  {
+   "objection": "Budget line is not established: the buyer already pays for firewall, sandbox and endpoint. The concept asks for a separate, additive line for a fourth control, and its own riskiest assumption concedes this. Without a displacement story (replace the sandbox renewal), the deal competes with 'ask the incumbent to add ML'.",
+   "severity": "major",
+   "evidence": "concept:riskiest_assumption.assumption; concept:buyer.company_profile; concept:risks"
+  },
+  {
+   "objection": "Segment mismatch: the named buyer is a 1,000+ staff enterprise, yet the first ten customers are mid-market firms with a small SOC. Small SOCs lack the staff to run proofs of value, tune automated blocking across firewall, proxy and EDR, or the budget for a $50k add-on. Their references also carry little weight with large banks.",
+   "severity": "major",
+   "evidence": "concept:go_to_market.first_customers; concept:buyer.company_profile"
+  },
+  {
+   "objection": "Usage pricing on inspected traffic is unpredictable for enterprise buyers, who budget annually. Large enterprises run many Gbps across segments, so either the price scales into sticker shock or discounts erode it. Bundling hardware into a SaaS fee also shifts capex risk onto a cash-burning startup.",
+   "severity": "minor",
+   "evidence": "concept:pricing.model"
+  },
+  {
+   "objection": "Proof of value depends on buyers believing the detections. Without independent test results, 'misses' found by a new ML model look like false positives or unconfirmed claims, which slows the move from POV to purchase. Regulated banks and agencies add procurement and security-review time, so 9-18 month cycles are likely.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts; concept:risks; concept:riskiest_assumption.success_signal"
+  },
+  {
+   "objection": "Value-added resellers are named as phase two, but VARs need margin and attach to existing line cards. A usage-priced SaaS with bundled hardware and no partner program gives them little reason to push it over incumbent firewall and sandbox renewals.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "A passive, no-risk SPAN-port proof of value that shows what the existing sandbox missed is a concrete, demonstrable wedge that creates urgency and a quantified business case.",
+ "what_would_change_my_mind": [
+  "3 of 5 POV prospects convert to paid at $100k+ first-year ACV, closing within 6 months.",
+  "An independent third-party efficacy test published before broad sales.",
+  "Evidence that buyers would fund it by cutting or shrinking a sandbox renewal.",
+  "A modeled CAC payback under 24 months that includes POV costs and hardware."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://www.av-test.org/en/statistics/malware/"
+ ]
+}

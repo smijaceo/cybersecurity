@@ -1,0 +1,548 @@
+{
+ "generated": "2026-11-23",
+ "need_signals": 208,
+ "seeds": {
+  "main": 42,
+  "stability": [
+   7,
+   123,
+   2024
+  ]
+ },
+ "outliers": [
+  "stackexchange:security:18982",
+  "stackexchange:security:108469",
+  "github:381362725",
+  "stackexchange:security:31246",
+  "github:432677302",
+  "stackexchange:security:121197",
+  "serverfault:serverfault:320563",
+  "serverfault:serverfault:329692",
+  "serverfault:serverfault:192041",
+  "serverfault:serverfault:314713",
+  "hn:5953139",
+  "ted:611281-2019",
+  "github:305870472"
+ ],
+ "themes": [
+  {
+   "theme_id": 0,
+   "keywords": [
+    "tool",
+    "tools",
+    "like",
+    "linux",
+    "sql",
+    "testing",
+    "anti",
+    "injection",
+    "xss",
+    "scanner"
+   ],
+   "signal_ids": [
+    "serverfault:serverfault:611082",
+    "stackexchange:security:26537",
+    "stackexchange:security:191966",
+    "github:167941991",
+    "serverfault:serverfault:42565",
+    "stackexchange:security:18819",
+    "stackexchange:security:22564",
+    "stackexchange:security:14613",
+    "stackexchange:security:18338",
+    "hn:19494700",
+    "stackexchange:security:86271",
+    "stackexchange:security:33763",
+    "hn:14666584",
+    "stackexchange:security:140088",
+    "stackexchange:security:51062",
+    "stackexchange:security:197022",
+    "stackexchange:security:94771",
+    "stackexchange:security:128275",
+    "stackexchange:security:194705",
+    "stackexchange:security:17796",
+    "stackexchange:security:213464",
+    "stackexchange:security:220536",
+    "github:242153275",
+    "github:462306332",
+    "stackexchange:security:120402",
+    "stackexchange:security:192173",
+    "serverfault:serverfault:207938",
+    "serverfault:serverfault:988839",
+    "stackexchange:security:159218",
+    "stackexchange:security:199238",
+    "hn:5231284",
+    "hn:2693687"
+   ],
+   "stability": 0.44
+  },
+  {
+   "theme_id": 1,
+   "keywords": [
+    "security software",
+    "package",
+    "software",
+    "security",
+    "spain",
+    "data",
+    "software development",
+    "development",
+    "services",
+    "virus protection"
+   ],
+   "signal_ids": [
+    "ted:617653-2019",
+    "ted:617759-2019",
+    "ted:612838-2019",
+    "ted:612566-2019",
+    "ted:594084-2019",
+    "ted:591179-2019",
+    "ted:581475-2019",
+    "ted:578046-2019",
+    "ted:565792-2019",
+    "ted:563670-2019",
+    "ted:558958-2019",
+    "ted:551207-2019",
+    "ted:543956-2019",
+    "ted:541505-2019",
+    "ted:541574-2019",
+    "ted:540807-2019",
+    "ted:540158-2019",
+    "ted:529511-2019"
+   ],
+   "stability": 0.67
+  },
+  {
+   "theme_id": 2,
+   "keywords": [
+    "phishing",
+    "web",
+    "sites",
+    "website",
+    "hn",
+    "ask",
+    "files",
+    "new",
+    "domain",
+    "ask hn"
+   ],
+   "signal_ids": [
+    "stackexchange:security:7030",
+    "github:301576285",
+    "stackexchange:security:206243",
+    "github:134715014",
+    "hn:17387079",
+    "stackexchange:security:104352",
+    "serverfault:serverfault:64280",
+    "hn:16255598",
+    "serverfault:serverfault:457573",
+    "serverfault:serverfault:920349",
+    "hn:1247547",
+    "hn:3700453",
+    "hn:2786997",
+    "serverfault:serverfault:592872",
+    "serverfault:serverfault:587931",
+    "hn:9419451",
+    "serverfault:serverfault:730362"
+   ],
+   "stability": 0.42
+  },
+  {
+   "theme_id": 3,
+   "keywords": [
+    "add",
+    "developers",
+    "https",
+    "google",
+    "com",
+    "feature",
+    "page",
+    "security",
+    "link",
+    "google com"
+   ],
+   "signal_ids": [
+    "github:391500446",
+    "github:155442569",
+    "github:486848456",
+    "github:527178311",
+    "hn:4687889",
+    "stackexchange:security:202680",
+    "github:480366116",
+    "github:279128898",
+    "github:294166894",
+    "github:269798467",
+    "github:452759443"
+   ],
+   "stability": 0.7
+  },
+  {
+   "theme_id": 4,
+   "keywords": [
+    "dependencies",
+    "vulnerabilities",
+    "tools",
+    "projects",
+    "security",
+    "vulnerability",
+    "images",
+    "sub",
+    "security vulnerabilities",
+    "analysis"
+   ],
+   "signal_ids": [
+    "serverfault:serverfault:546012",
+    "hn:16151153",
+    "github:399937422",
+    "hn:12387694",
+    "github:427803769",
+    "github:365073731",
+    "github:456730645",
+    "github:255900642",
+    "github:285023183",
+    "github:496421519"
+   ],
+   "stability": 0.8
+  },
+  {
+   "theme_id": 5,
+   "keywords": [
+    "email",
+    "emails",
+    "phishing",
+    "address",
+    "exchange",
+    "im",
+    "spam",
+    "using",
+    "sending",
+    "send"
+   ],
+   "signal_ids": [
+    "serverfault:serverfault:134945",
+    "stackexchange:security:49561",
+    "stackexchange:security:14120",
+    "serverfault:serverfault:276039",
+    "hn:15112084",
+    "serverfault:serverfault:851890",
+    "serverfault:serverfault:507309",
+    "serverfault:serverfault:965981",
+    "serverfault:serverfault:882025",
+    "serverfault:serverfault:766906",
+    "serverfault:serverfault:894690"
+   ],
+   "stability": 0.81
+  },
+  {
+   "theme_id": 6,
+   "keywords": [
+    "business",
+    "small",
+    "small business",
+    "security",
+    "enterprise",
+    "audit",
+    "phone",
+    "startup",
+    "data",
+    "standard"
+   ],
+   "signal_ids": [
+    "stackexchange:security:151902",
+    "serverfault:serverfault:142737",
+    "hn:17840003",
+    "stackexchange:security:44863",
+    "stackexchange:security:194368",
+    "stackexchange:security:185852",
+    "stackexchange:security:99937",
+    "hn:12009959",
+    "hn:18213111",
+    "hn:16988279"
+   ],
+   "stability": 0.75
+  },
+  {
+   "theme_id": 7,
+   "keywords": [
+    "command",
+    "https",
+    "cli",
+    "headers",
+    "default",
+    "com",
+    "configuration",
+    "automate",
+    "run",
+    "github com"
+   ],
+   "signal_ids": [
+    "github:440424249",
+    "github:502981828",
+    "github:240191031",
+    "stackexchange:security:120136",
+    "stackexchange:security:172020",
+    "stackexchange:security:16072",
+    "github:445416100",
+    "github:398725450",
+    "stackexchange:security:201521",
+    "stackexchange:security:170341",
+    "github:424638831"
+   ],
+   "stability": 0.77
+  },
+  {
+   "theme_id": 8,
+   "keywords": [
+    "pci",
+    "pci compliance",
+    "compliance",
+    "issues",
+    "aws",
+    "software",
+    "achieve",
+    "ran",
+    "trustwave",
+    "pro"
+   ],
+   "signal_ids": [
+    "serverfault:serverfault:296421",
+    "serverfault:serverfault:261816",
+    "stackexchange:security:64795",
+    "serverfault:serverfault:294909",
+    "serverfault:serverfault:385401",
+    "stackexchange:security:175815",
+    "stackexchange:security:9169",
+    "serverfault:serverfault:300759",
+    "stackexchange:security:161359",
+    "serverfault:serverfault:324981",
+    "serverfault:serverfault:274175"
+   ],
+   "stability": 0.72
+  },
+  {
+   "theme_id": 9,
+   "keywords": [
+    "pci",
+    "version",
+    "scan",
+    "compliance",
+    "pci compliance",
+    "php",
+    "14",
+    "amazon",
+    "pci dss",
+    "dss"
+   ],
+   "signal_ids": [
+    "serverfault:serverfault:737860",
+    "serverfault:serverfault:564259",
+    "stackexchange:security:35578",
+    "serverfault:serverfault:558994",
+    "serverfault:serverfault:731657",
+    "stackexchange:security:153346",
+    "stackexchange:security:46142",
+    "serverfault:serverfault:875033",
+    "serverfault:serverfault:375291",
+    "stackexchange:security:151565",
+    "serverfault:serverfault:415027"
+   ],
+   "stability": 0.86
+  },
+  {
+   "theme_id": 10,
+   "keywords": [
+    "key",
+    "encrypted",
+    "keys",
+    "encryption",
+    "private",
+    "private key",
+    "tls",
+    "text",
+    "time",
+    "edit"
+   ],
+   "signal_ids": [
+    "stackexchange:security:190532",
+    "github:235512723",
+    "serverfault:serverfault:261755",
+    "stackexchange:security:38863",
+    "hn:5397744",
+    "stackexchange:security:32489",
+    "stackexchange:security:110651"
+   ],
+   "stability": 0.88
+  },
+  {
+   "theme_id": 11,
+   "keywords": [
+    "computer",
+    "services",
+    "audit",
+    "netherlands",
+    "testing",
+    "spain",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "signal_ids": [
+    "ted:614141-2019",
+    "ted:609820-2019",
+    "ted:592199-2019",
+    "ted:586754-2019",
+    "ted:547156-2019",
+    "ted:540869-2019"
+   ],
+   "stability": 0.95
+  },
+  {
+   "theme_id": 12,
+   "keywords": [
+    "yum",
+    "security",
+    "hard",
+    "make",
+    "expensive",
+    "centos",
+    "like",
+    "lock",
+    "important",
+    "hasn"
+   ],
+   "signal_ids": [
+    "serverfault:serverfault:61257",
+    "serverfault:serverfault:2673",
+    "hn:14009655",
+    "hn:17841741",
+    "hn:13038934",
+    "hn:8789683"
+   ],
+   "stability": 0.87
+  },
+  {
+   "theme_id": 13,
+   "keywords": [
+    "audit",
+    "user",
+    "log",
+    "local",
+    "root",
+    "months",
+    "possible",
+    "password",
+    "policy",
+    "domain"
+   ],
+   "signal_ids": [
+    "serverfault:serverfault:293217",
+    "serverfault:serverfault:197837",
+    "serverfault:serverfault:929938",
+    "serverfault:serverfault:724389",
+    "serverfault:serverfault:966752",
+    "serverfault:serverfault:594311",
+    "serverfault:serverfault:831587",
+    "serverfault:serverfault:981094"
+   ],
+   "stability": 0.56
+  },
+  {
+   "theme_id": 14,
+   "keywords": [
+    "session",
+    "logs",
+    "database",
+    "logging",
+    "query",
+    "server",
+    "log",
+    "commands",
+    "simple",
+    "login"
+   ],
+   "signal_ids": [
+    "serverfault:serverfault:13451",
+    "serverfault:serverfault:313234",
+    "serverfault:serverfault:946620",
+    "github:230095403",
+    "serverfault:serverfault:941005",
+    "stackexchange:security:36971",
+    "serverfault:serverfault:426517",
+    "github:330808972"
+   ],
+   "stability": 0.57
+  },
+  {
+   "theme_id": 15,
+   "keywords": [
+    "pci",
+    "compliance",
+    "docker",
+    "environment",
+    "pci compliance",
+    "card",
+    "terminal",
+    "pdf",
+    "currently",
+    "customer"
+   ],
+   "signal_ids": [
+    "serverfault:serverfault:303926",
+    "stackexchange:security:25059",
+    "serverfault:serverfault:704781",
+    "stackexchange:security:69159",
+    "serverfault:serverfault:765496"
+   ],
+   "stability": 0.76
+  },
+  {
+   "theme_id": 16,
+   "keywords": [
+    "ransomware",
+    "server",
+    "file server",
+    "file",
+    "network",
+    "deleted",
+    "windows",
+    "files",
+    "malware",
+    "running"
+   ],
+   "signal_ids": [
+    "serverfault:serverfault:874140",
+    "serverfault:serverfault:849984",
+    "serverfault:serverfault:790394",
+    "serverfault:serverfault:995772",
+    "serverfault:serverfault:840511"
+   ],
+   "stability": 1.0
+  },
+  {
+   "theme_id": 17,
+   "keywords": [
+    "audit",
+    "sql server",
+    "group",
+    "audit logs",
+    "2008",
+    "server 2008",
+    "application",
+    "does",
+    "logs",
+    "sql"
+   ],
+   "signal_ids": [
+    "serverfault:serverfault:384610",
+    "serverfault:serverfault:579102",
+    "serverfault:serverfault:328968",
+    "serverfault:serverfault:620032",
+    "serverfault:serverfault:684608",
+    "serverfault:serverfault:117218",
+    "serverfault:serverfault:232297",
+    "serverfault:serverfault:721597"
+   ],
+   "stability": 0.36
+  }
+ ]
+}

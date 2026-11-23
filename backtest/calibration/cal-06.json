@@ -1,0 +1,139 @@
+{
+ "opening_id": "cal-06",
+ "slug": "multicloud-microsegmentation-with-inspection",
+ "name": "Project Halyard",
+ "one_liner": "Software-defined microservices security that segments multi-cloud workloads and inspects east-west traffic to stop lateral movement.",
+ "buyer": {
+  "role": "CISO or director of network and connectivity",
+  "company_profile": "Large enterprises moving applications to private and public clouds (VMware, OpenStack, AWS, Azure) that need consistent security policy across environments."
+ },
+ "user": "Network security and cloud infrastructure engineers.",
+ "problem": {
+  "summary": "Traditional perimeter appliances don't see east-west traffic inside data centres and clouds. Microsegmentation restricts who can talk to whom but not what they say, so worms that use legitimate ports (SMB, SQL) still spread laterally. Enterprises with heterogeneous clouds struggle to apply one consistent policy and to scale inspection elastically.",
+  "evidence": [
+   {
+    "claim": "Microsegmentation divides networks into fine-grained zones to limit lateral movement.",
+    "url": "https://en.wikipedia.org/wiki/Microsegmentation_(network_security)"
+   },
+   {
+    "claim": "Attackers move laterally after initial compromise to reach valuable systems.",
+    "url": "https://en.wikipedia.org/wiki/Lateral_movement_(cybersecurity)"
+   },
+   {
+    "claim": "Worms have spread inside enterprises over the SMB protocol, which segmentation policies typically allow.",
+    "url": "https://en.wikipedia.org/wiki/WannaCry_ransomware_attack"
+   },
+   {
+    "claim": "Deep packet inspection examines payloads rather than only addresses and ports.",
+    "url": "https://en.wikipedia.org/wiki/Deep_packet_inspection"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "Enterprises are adopting multiple private and public clouds at once; containerised microservices make it possible to deliver security functions that scale elastically and deploy in minutes across those environments.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Microservices",
+   "https://en.wikipedia.org/wiki/Cloud_computing_security"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Automatic discovery and application-aware microsegmentation across VMware, OpenStack/KVM and AWS",
+    "why": "One policy across heterogeneous clouds."
+   },
+   {
+    "feature": "Deep packet inspection with threat definitions on east-west traffic",
+    "why": "Stop attacks on allowed ports."
+   },
+   {
+    "feature": "Containerised, horizontally scaling security microservices (TLS decryption, URL filtering, malware detection integrations)",
+    "why": "Elastic capacity without appliances."
+   },
+   {
+    "feature": "REST APIs for DevOps integration",
+    "why": "Policy as part of deployment pipelines."
+   }
+  ],
+  "out_of_scope": [
+   "Endpoint agents",
+   "Perimeter firewall replacement",
+   "Data loss prevention in v1"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "Illumio",
+   "url": "https://www.illumio.com/",
+   "how_we_differ": "Inspects content, not only allow/deny segmentation."
+  },
+  {
+   "name": "VMware NSX",
+   "url": "https://www.vmware.com/products/nsx.html",
+   "how_we_differ": "Cloud-agnostic across VMware, OpenStack and public cloud."
+  },
+  {
+   "name": "Guardicore",
+   "url": "https://www.guardicore.com/",
+   "how_we_differ": "Inline threat prevention rather than visibility and deception."
+  },
+  {
+   "name": "Palo Alto Networks VM-Series",
+   "url": "https://www.paloaltonetworks.com/network-security/vm-series-virtual-next-generation-firewall",
+   "how_we_differ": "Microservices that scale elastically instead of virtual appliances."
+  },
+  {
+   "name": "Cloud-native security groups (bundled)",
+   "url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html",
+   "how_we_differ": "Consistent multi-cloud policy and payload inspection."
+  }
+ ],
+ "differentiation": "Combines segmentation with full inspection in one cloud-native platform built as containerised microservices, so it scales and deploys like the workloads it protects and applies one policy across every cloud.",
+ "build": {
+  "team": "About 40 people: network security and distributed-systems engineers led by serial security founders",
+  "months_to_mvp": 20,
+  "hardest_parts": [
+   "Performance of deep inspection on east-west traffic",
+   "Supporting many cloud platforms",
+   "Keeping threat definitions current",
+   "Competing with incumbent network security vendors"
+  ]
+ },
+ "pricing": {
+  "model": "Annual subscription per protected workload, with inspection capacity included",
+  "entry_price": "Working assumption: $150,000/year for up to 1,000 workloads",
+  "rationale": "Comparable to virtual firewall budgets but sized per workload as clouds grow.",
+  "comparables": [
+   {
+    "vendor": "Microsegmentation platforms",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://www.illumio.com/"
+   },
+   {
+    "vendor": "Virtual next-generation firewalls",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://www.paloaltonetworks.com/network-security/vm-series-virtual-next-generation-firewall"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten large enterprises mid-way through a multi-cloud migration with a virtualised data centre and a first public-cloud footprint.",
+  "channel": "Direct enterprise sales plus system integrator partners.",
+  "wedge": "Microsegmentation for a new private-cloud or AWS environment where existing appliances don't fit."
+ },
+ "risks": [
+  "Incumbent network security vendors bundle segmentation into existing products",
+  "Cloud providers' native controls improve",
+  "Complex deployments lengthen sales cycles",
+  "Performance limits at scale"
+ ],
+ "riskiest_assumption": {
+  "assumption": "Enterprises will buy a new vendor for east-west inspection instead of extending their incumbent firewall vendor into the cloud.",
+  "test": "Present the architecture to 10 network security leaders mid-migration and ask for a funded proof of concept.",
+  "success_signal": "At least 3 of 10 agree to a funded proof of concept within 2 weeks."
+ },
+ "open_questions": [
+  "Which cloud platform dominates target customers?",
+  "How much east-west traffic is encrypted?"
+ ]
+}

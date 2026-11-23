@@ -1,0 +1,47 @@
+{
+ "concept_id": "cal-01",
+ "lens": "technical-feasibility",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "A 30-person team with ML-security and network engineers can build a passive SPAN sensor with a raw-byte classifier in 18 months; the parts exist. The risk is quality, not plumbing: false-positive rates low enough for automated blocking, multi-protocol file reassembly at wire speed, encrypted traffic, and a sprawling enforcement-integration surface all sit inside one MVP.",
+ "objections": [
+  {
+   "objection": "Automated blocking needs a false-positive rate far below what raw-byte deep-learning classifiers typically achieve out of the box. Benign software churns as fast as malware (updates, installers, packed legitimate binaries), and a model retrained daily drifts on both sides. Without per-customer allowlisting, an analyst review loop and a conservative block threshold, the enforcement feature will be switched off after the first business-critical false block.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts[0]; concept:mvp.features[2]; concept:mvp.features[4] (no tuning period)"
+  },
+  {
+   "objection": "File and flow reassembly at wire speed is a large engineering surface: TCP reassembly, HTTP/SMTP/SMB/FTP extraction, chunked and compressed encodings, archives and nested documents, plus model inference on every object on commodity sensors. Open-source stacks (Zeek/Suricata file extraction) help, but sustaining 1 Gbps+ with deep-learning inference per file and per flow, without drops on a SPAN port, needs careful sampling, caching by hash and GPU or optimised CPU inference.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[0]; concept:build.hardest_parts[2]; https://en.wikipedia.org/wiki/Deep_packet_inspection"
+  },
+  {
+   "objection": "A passive sensor sees ciphertext for most web and mail traffic unless the customer already decrypts at a proxy and mirrors the cleartext. The MVP excludes an inline appliance, so payload classification may cover only a minority of files at many targets; flow-level classification of encrypted traffic is a different, harder model that the MVP does not scope.",
+   "severity": "major",
+   "evidence": "concept:risks[2]; concept:open_questions[0]; concept:mvp.out_of_scope"
+  },
+  {
+   "objection": "Integration sprawl: automated enforcement through 'existing firewalls, web proxies and endpoint agents' means building and maintaining connectors to many vendor APIs with different capabilities and auth models, on top of the sensor, model pipeline, kill-chain view and SaaS console. Five broad features in 18 months is tight; the MVP should pick two or three enforcement targets.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features; concept:build.months_to_mvp"
+  },
+  {
+   "objection": "Daily retraining and family attribution need a large, well-labelled corpus of both malware and clean files plus a validation harness against held-out and adversarial sets. Labels from multi-engine consensus are noisy and family names inconsistent; the data pipeline, not the network, is likely the long pole and is not costed.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts[1]; concept:open_questions[2]; https://www.av-test.org/en/statistics/malware/"
+  }
+ ],
+ "strongest_point": "Passive SPAN deployment avoids inline-availability risk, and the team profile (ML researchers, threat researchers, network engineers) matches the hardest parts; 18 months is plausible for a scoped first sensor.",
+ "what_would_change_my_mind": [
+  "A benchmark on a held-out, time-split corpus (train before date T, test after) showing detection above 95% at a false-positive rate of 1 in 10,000 or better on clean enterprise files",
+  "A prototype sensor sustaining 1 Gbps mirrored traffic with file extraction and inference on commodity hardware, with measured drop rate under 1%",
+  "Measured share of inspectable (cleartext or decrypted-and-mirrored) file traffic above 50% at 3 of 5 proof-of-value prospects",
+  "MVP narrowed to two enforcement integrations with the rest deferred"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://www.av-test.org/en/statistics/malware/",
+  "https://en.wikipedia.org/wiki/Deep_packet_inspection"
+ ]
+}

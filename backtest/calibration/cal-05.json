@@ -1,0 +1,138 @@
+{
+ "opening_id": "cal-05",
+ "slug": "split-endpoint-os-isolation",
+ "name": "Project Juniper",
+ "one_liner": "Split one corporate workstation into two isolated operating systems: an open one for the internet and a locked one for sensitive enterprise access.",
+ "buyer": {
+  "role": "CISO or VP IT infrastructure",
+  "company_profile": "Large regulated enterprises (banks, financial services, technology vendors) that today lock down endpoints or issue two laptops to privileged users."
+ },
+ "user": "Employees with privileged or sensitive access (IT admins, finance, traders, developers) and the desktop teams who manage their machines.",
+ "problem": {
+  "summary": "Enterprises lock down devices (no free browsing, app installs, USB or cloud use), frustrating employees and hurting productivity, or adopt an air-gap model where privileged users carry two laptops. Both are costly. Approaches that rely on the security of a single vulnerable operating system fail when users are tricked into running malware or a zero-day is exploited.",
+  "evidence": [
+   {
+    "claim": "Air-gapping separates sensitive systems from untrusted networks, at the cost of usability.",
+    "url": "https://en.wikipedia.org/wiki/Air_gap_(networking)"
+   },
+   {
+    "claim": "Hypervisors can run multiple isolated operating systems on one machine.",
+    "url": "https://en.wikipedia.org/wiki/Hypervisor"
+   },
+   {
+    "claim": "Security-focused desktop systems use virtualisation to compartmentalise untrusted activity.",
+    "url": "https://www.qubes-os.org/"
+   },
+   {
+    "claim": "Privileged access workstations are recommended for administrators to reduce credential theft risk.",
+    "url": "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "Hardware virtualisation support is standard on corporate laptops, making it practical to run two isolated OSes side by side with a seamless user experience; targeted phishing and zero-days make single-OS hardening insufficient.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Hypervisor",
+   "https://www.qubes-os.org/"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Thin hypervisor that runs a locked corporate OS and an unrestricted OS side by side",
+    "why": "Malware in one OS cannot reach the other."
+   },
+   {
+    "feature": "Seamless window integration so users see one desktop",
+    "why": "Avoid the usability cost of two laptops."
+   },
+   {
+    "feature": "Central management of both OS images and policies",
+    "why": "Desktop teams need fleet control."
+   },
+   {
+    "feature": "Controlled data transfer between the two sides",
+    "why": "Productivity without leakage."
+   }
+  ],
+  "out_of_scope": [
+   "Mobile devices",
+   "Mac endpoints",
+   "Detection and response"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "Bromium",
+   "url": "https://www.bromium.com/",
+   "how_we_differ": "Isolates the whole sensitive environment, not individual tasks."
+  },
+  {
+   "name": "VMware Horizon (VDI)",
+   "url": "https://www.vmware.com/products/horizon.html",
+   "how_we_differ": "Local execution with offline use and no data-centre VDI cost."
+  },
+  {
+   "name": "Menlo Security (browser isolation)",
+   "url": "https://www.menlosecurity.com/",
+   "how_we_differ": "Covers all untrusted activity (apps, USB), not only the browser."
+  },
+  {
+   "name": "Two physical laptops / privileged access workstations",
+   "url": "https://learn.microsoft.com/en-us/security/privileged-access-workstations/privileged-access-devices",
+   "how_we_differ": "Same separation on one device."
+  },
+  {
+   "name": "Qubes OS (free, open source)",
+   "url": "https://www.qubes-os.org/",
+   "how_we_differ": "Enterprise-manageable Windows experience rather than an expert Linux desktop."
+  }
+ ],
+ "differentiation": "Security by architecture rather than detection: two fully isolated OSes on one workstation, so users get freedom on one side while the corporate side stays locked; cheaper than two laptops or VDI, and stronger than single-OS hardening.",
+ "build": {
+  "team": "About 20 people: virtualisation and security engineers, with founders from elite military cyber units and enterprise security sales",
+  "months_to_mvp": 15,
+  "hardest_parts": [
+   "Hypervisor compatibility across hardware and Windows versions",
+   "Performance and battery life on laptops",
+   "Fitting into existing endpoint management tooling"
+  ]
+ },
+ "pricing": {
+  "model": "Annual subscription per protected endpoint",
+  "entry_price": "Working assumption: $200 per endpoint per year, 500-endpoint minimum",
+  "rationale": "Priced well below the cost of a second laptop or a VDI seat.",
+  "comparables": [
+   {
+    "vendor": "Virtual desktop infrastructure",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://www.vmware.com/products/horizon.html"
+   },
+   {
+    "vendor": "Endpoint isolation",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://www.bromium.com/"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten large banks, financial services firms and technology vendors that already issue separate devices to administrators or restrict internet access.",
+  "channel": "Direct enterprise sales leveraging investor and founder networks with large-company CISOs.",
+  "wedge": "Privileged IT administrators who today carry two laptops."
+ },
+ "risks": [
+  "Operating-system vendors build similar isolation natively",
+  "Hypervisor compatibility and support burden",
+  "Long enterprise sales cycles for endpoint architecture changes",
+  "User experience complaints stall roll-outs"
+ ],
+ "riskiest_assumption": {
+  "assumption": "Enterprises will replace locked-down or dual-device setups with a two-OS workstation at fleet scale.",
+  "test": "Interview 10 enterprise desktop/infra leads about current dual-device cost and willingness to pilot on 50 privileged users.",
+  "success_signal": "At least 4 of 10 commit to a paid pilot with budget identified."
+ },
+ "open_questions": [
+  "Does value extend beyond privileged users to the whole workforce?",
+  "How will this coexist with endpoint agents and management tools?"
+ ]
+}

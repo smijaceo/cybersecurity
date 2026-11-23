@@ -1,0 +1,143 @@
+{
+ "opening_id": "cal-03",
+ "slug": "devops-policy-engine-for-git",
+ "name": "Project Tamarind",
+ "one_liner": "A policy engine that catalogues an organisation's repositories and blocks pull requests that break internal security and best-practice rules.",
+ "buyer": {
+  "role": "VP R&D or head of DevOps",
+  "company_profile": "Software companies with 50-500 engineers split into many teams and microservices on GitHub, where standards drift between teams."
+ },
+ "user": "Developers (guidance in pull requests, CLI and Slack) and DevOps/platform engineers who define the policies.",
+ "problem": {
+  "summary": "With microservices built by distributed teams, code is committed faster and each team chooses its own components and practices. Operations is still responsible for making sure code is secure and compliant before it ships, but has no central view of what teams use and no automated way to enforce internal rules before merge, so problems are found after the commit.",
+  "evidence": [
+   {
+    "claim": "Microservice architectures split applications into many independently developed services owned by separate teams.",
+    "url": "https://en.wikipedia.org/wiki/Microservices"
+   },
+   {
+    "claim": "DevOps practice pushes faster delivery, shifting quality and security checks earlier into the pipeline.",
+    "url": "https://en.wikipedia.org/wiki/DevOps"
+   },
+   {
+    "claim": "Code review is the conventional gate before merge but is manual and inconsistent.",
+    "url": "https://en.wikipedia.org/wiki/Code_review"
+   },
+   {
+    "claim": "Policy-based management automates enforcement of rules across many systems.",
+    "url": "https://en.wikipedia.org/wiki/Policy-based_management"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "GitHub has become the de facto hub for development, and its pull-request checks API allows a third party to act as a merge gatekeeper.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/DevOps",
+   "https://en.wikipedia.org/wiki/Microservices"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Catalogue of all repositories, teams and components built from metadata only (no source code extracted)",
+    "why": "Central view without security objections to code access."
+   },
+   {
+    "feature": "Policy rules on pull requests (e.g. banned components, required files, secrets, approved versions)",
+    "why": "Catch violations before merge."
+   },
+   {
+    "feature": "Exception workflow for rules that aren't rigid",
+    "why": "Avoid blocking legitimate work."
+   },
+   {
+    "feature": "Developer guidance pushed to CLI and Slack",
+    "why": "Fix where developers work."
+   },
+   {
+    "feature": "Compliance report across all repositories",
+    "why": "Gives DevOps leaders a measurable view."
+   }
+  ],
+  "out_of_scope": [
+   "Deep static analysis of source code",
+   "Runtime protection",
+   "Non-GitHub platforms in v1"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "GitHub branch protection and required checks (bundled)",
+   "url": "https://github.com/",
+   "how_we_differ": "Organisation-wide policies and catalogue instead of per-repo settings."
+  },
+  {
+   "name": "SonarQube",
+   "url": "https://www.sonarqube.org/",
+   "how_we_differ": "Policy and component governance across teams rather than code-quality analysis."
+  },
+  {
+   "name": "Snyk",
+   "url": "https://snyk.io/",
+   "how_we_differ": "Broader internal best-practice rules, not only vulnerable dependencies."
+  },
+  {
+   "name": "Code Climate",
+   "url": "https://codeclimate.com/",
+   "how_we_differ": "Enforces organisation policy rather than maintainability metrics."
+  },
+  {
+   "name": "Danger (free, open source)",
+   "url": "https://danger.systems/",
+   "how_we_differ": "Centrally managed rules and reporting without per-repo scripting."
+  }
+ ],
+ "differentiation": "Organisation-wide catalogue plus policy enforcement on every pull request, using only metadata, with exceptions built in; aimed at DevOps leaders who want consistent standards across many teams without slowing developers.",
+ "build": {
+  "team": "3 founders + 5 engineers",
+  "months_to_mvp": 9,
+  "hardest_parts": [
+   "Defining policies that are valuable across very different companies",
+   "Avoiding developer friction and false blocks",
+   "Showing a measurable outcome a buyer will pay for"
+  ]
+ },
+ "pricing": {
+  "model": "SaaS per developer per month, free tier for small teams",
+  "entry_price": "Working assumption: $15 per developer per month; free up to 5 developers",
+  "rationale": "Per-seat pricing matches developer tooling norms and lets teams start self-serve.",
+  "comparables": [
+   {
+    "vendor": "Developer security tooling (per-developer SaaS)",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://snyk.io/"
+   },
+   {
+    "vendor": "Danger",
+    "price": "Free (open source)",
+    "source": "https://danger.systems/"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten Israeli and US scale-ups (50-300 engineers) on GitHub with a platform team, recruited from 40 discovery interviews; six already design partners.",
+  "channel": "Bottom-up via GitHub integration and developer community, then inside sales to DevOps leaders.",
+  "wedge": "Free GitHub app that reports policy violations across the organisation."
+ },
+ "risks": [
+  "GitHub adds equivalent organisation policies natively",
+  "Policies are company-specific, so value is hard to generalise",
+  "Developers perceive gatekeeping as friction",
+  "Unclear budget owner between security and engineering"
+ ],
+ "riskiest_assumption": {
+  "assumption": "DevOps leaders will pay for cross-team policy enforcement rather than relying on per-repo settings and code review.",
+  "test": "Offer a paid pilot to the six design partners after showing an organisation-wide violation report.",
+  "success_signal": "At least 3 of 6 design partners sign a paid pilot within 2 weeks."
+ },
+ "open_questions": [
+  "Which policies are universal enough to ship by default?",
+  "Is this a security product or a DevOps productivity product?",
+  "How large is the paying segment?"
+ ]
+}

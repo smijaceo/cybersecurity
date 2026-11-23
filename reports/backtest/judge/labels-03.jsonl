@@ -1,0 +1,150 @@
+{"id": "serverfault:serverfault:882025", "on_segment": "y", "need": "y", "reason": "Cannot reach registrar to report phishing site; abuse takedown gap"}
+{"id": "serverfault:serverfault:803092", "on_segment": "y", "need": "n", "reason": "Incident recovery how-to for hacked WordPress container"}
+{"id": "github:447802010", "on_segment": "n", "need": "n", "reason": "Xcode extension tutorial, not security"}
+{"id": "github:294166894", "on_segment": "y", "need": "y", "reason": "Feature request: offline wallet use for key security"}
+{"id": "github:345239186", "on_segment": "n", "need": "n", "reason": "Pull request data model RFC"}
+{"id": "github:64956985", "on_segment": "n", "need": "n", "reason": "Salesforce metadata backup size limit"}
+{"id": "github:336059071", "on_segment": "n", "need": "n", "reason": "Image hosting feature request"}
+{"id": "github:419237250", "on_segment": "n", "need": "n", "reason": "Project naming discussion"}
+{"id": "github:156490486", "on_segment": "n", "need": "n", "reason": "Elasticsearch JDBC integration problem"}
+{"id": "github:502871605", "on_segment": "n", "need": "n", "reason": "Game bot anti-cheat bypass request"}
+{"id": "github:214838097", "on_segment": "n", "need": "n", "reason": "Blog hosting on AWS"}
+{"id": "github:476583435", "on_segment": "n", "need": "n", "reason": "Nextcloud PHP upgrade bug"}
+{"id": "hn:8762502", "on_segment": "n", "need": "n", "reason": "Job ad for JavaScript engineer"}
+{"id": "hn:15661056", "on_segment": "y", "need": "n", "reason": "How to start learning pentesting; no gap"}
+{"id": "hn:14873692", "on_segment": "n", "need": "n", "reason": "Home physical security camera recommendation"}
+{"id": "hn:11046760", "on_segment": "y", "need": "n", "reason": "Asks for security analysis of a product; no gap"}
+{"id": "hn:8094468", "on_segment": "y", "need": "n", "reason": "How to learn computer security"}
+{"id": "hn:4695131", "on_segment": "y", "need": "n", "reason": "How-it-works question on form resubmission security"}
+{"id": "hn:466594", "on_segment": "n", "need": "n", "reason": "Rural wireless internet idea"}
+{"id": "stackexchange:security:213464", "on_segment": "y", "need": "y", "reason": "Asks for tool to build security audit reports"}
+{"id": "stackexchange:security:220536", "on_segment": "y", "need": "y", "reason": "Wants automated tool to track download hashes"}
+{"id": "serverfault:serverfault:192041", "on_segment": "y", "need": "y", "reason": "Wants way to scan server images for malicious code"}
+{"id": "serverfault:serverfault:516137", "on_segment": "y", "need": "n", "reason": "Asks difference between two Microsoft security tools"}
+{"id": "serverfault:serverfault:594311", "on_segment": "y", "need": "y", "reason": "Needs way to audit managers reading subordinates email"}
+{"id": "serverfault:serverfault:232297", "on_segment": "y", "need": "y", "reason": "SQL Server Audit lacks parameter values in logs"}
+{"id": "serverfault:serverfault:773509", "on_segment": "y", "need": "n", "reason": "auditd configuration how-to"}
+{"id": "serverfault:serverfault:831587", "on_segment": "y", "need": "y", "reason": "Wants tamper-proof audit trail of root admin"}
+{"id": "serverfault:serverfault:497961", "on_segment": "y", "need": "n", "reason": "Terminology question about Security Compliance Manager"}
+{"id": "serverfault:serverfault:766906", "on_segment": "y", "need": "y", "reason": "Compliance hold appears to miss OWA chat messages"}
+{"id": "serverfault:serverfault:885774", "on_segment": "n", "need": "n", "reason": "Oracle login issue caused by FIPS setting"}
+{"id": "serverfault:serverfault:324981", "on_segment": "y", "need": "y", "reason": "Repeatedly failing PCI compliance scans"}
+{"id": "serverfault:serverfault:174039", "on_segment": "n", "need": "n", "reason": "Email deliverability flagged as phishing"}
+{"id": "serverfault:serverfault:584384", "on_segment": "n", "need": "n", "reason": "Home-hosted site blocked by browser filter"}
+{"id": "serverfault:serverfault:790394", "on_segment": "y", "need": "y", "reason": "Ransomware infection, cannot locate source malware"}
+{"id": "serverfault:serverfault:995772", "on_segment": "y", "need": "y", "reason": "Cannot detect time-delayed ransomware or confirm clean backups"}
+{"id": "serverfault:serverfault:571477", "on_segment": "n", "need": "n", "reason": "rsyslog log routing configuration"}
+{"id": "github:427803769", "on_segment": "y", "need": "y", "reason": "Small teams cannot afford security expertise; tools too complex"}
+{"id": "github:541065932", "on_segment": "n", "need": "n", "reason": "Linter migration"}
+{"id": "github:495021718", "on_segment": "n", "need": "n", "reason": "Code signing bug in bundled tool"}
+{"id": "github:410671367", "on_segment": "n", "need": "n", "reason": "Code coverage tool deprecation"}
+{"id": "github:389036431", "on_segment": "n", "need": "n", "reason": "Code formatting tool choice"}
+{"id": "github:365073731", "on_segment": "y", "need": "y", "reason": "Feature request: Scala support in security scanner"}
+{"id": "github:238096402", "on_segment": "n", "need": "n", "reason": "SFTP connection library issue"}
+{"id": "github:424638831", "on_segment": "y", "need": "y", "reason": "Seeks easy coverage-based JVM fuzzer"}
+{"id": "github:242153275", "on_segment": "y", "need": "y", "reason": "Scanner false positive SQL injection alerts"}
+{"id": "github:462306332", "on_segment": "y", "need": "y", "reason": "Looking for vuln database tool for pentest reporting"}
+{"id": "github:272042394", "on_segment": "n", "need": "n", "reason": "Government hiring authorities playbook"}
+{"id": "github:509322490", "on_segment": "n", "need": "n", "reason": "Integration test setup for service mesh"}
+{"id": "github:435542376", "on_segment": "n", "need": "n", "reason": "Website browser compatibility"}
+{"id": "github:253112989", "on_segment": "n", "need": "n", "reason": "CPU threading and unrelated essay"}
+{"id": "hn:5104916", "on_segment": "n", "need": "n", "reason": "Linux admin job posting"}
+{"id": "hn:15482089", "on_segment": "y", "need": "n", "reason": "Anonymisation attack bounty announcement"}
+{"id": "hn:15481446", "on_segment": "y", "need": "n", "reason": "Anonymisation attack bounty announcement"}
+{"id": "hn:21869200", "on_segment": "n", "need": "n", "reason": "TV show fiction quote"}
+{"id": "hn:17971496", "on_segment": "y", "need": "n", "reason": "Question about HN onion service; no gap"}
+{"id": "stackexchange:security:120402", "on_segment": "y", "need": "y", "reason": "No scanner supports HTTP parameter pollution testing"}
+{"id": "stackexchange:security:192173", "on_segment": "y", "need": "y", "reason": "Seeks HIPAA-compliant BI reporting tool for PHI"}
+{"id": "stackexchange:security:110651", "on_segment": "y", "need": "y", "reason": "Seeks deniable multi-key encryption tool"}
+{"id": "stackexchange:security:180956", "on_segment": "y", "need": "n", "reason": "How-to secure API key design"}
+{"id": "stackexchange:security:196445", "on_segment": "y", "need": "n", "reason": "Is Heroku Flask setup secure question"}
+{"id": "stackexchange:security:185220", "on_segment": "y", "need": "n", "reason": "Asks for NIST documentation reference"}
+{"id": "serverfault:serverfault:207938", "on_segment": "y", "need": "y", "reason": "Wants scheduled network scan diff tool"}
+{"id": "serverfault:serverfault:489280", "on_segment": "y", "need": "n", "reason": "Windows audit policy configuration question"}
+{"id": "serverfault:serverfault:775038", "on_segment": "n", "need": "n", "reason": "Printer inventory script bug"}
+{"id": "serverfault:serverfault:426517", "on_segment": "y", "need": "y", "reason": "Exchange audit log lacks source computer"}
+{"id": "serverfault:serverfault:758563", "on_segment": "y", "need": "n", "reason": "Question about audit log host field"}
+{"id": "serverfault:serverfault:314713", "on_segment": "y", "need": "y", "reason": "Seeks network change compliance audit tool"}
+{"id": "serverfault:serverfault:988839", "on_segment": "y", "need": "y", "reason": "MSP lacks easy multi-tenant anti-phishing reporting"}
+{"id": "serverfault:serverfault:884321", "on_segment": "y", "need": "n", "reason": "Site flagged by Safe Browsing; asks why"}
+{"id": "serverfault:serverfault:909043", "on_segment": "y", "need": "n", "reason": "How to verify found ransomware key"}
+{"id": "serverfault:serverfault:356248", "on_segment": "n", "need": "n", "reason": "HTTP record-replay proxy for testing"}
+{"id": "github:330808972", "on_segment": "y", "need": "y", "reason": "Feature request: VPN status indicator for VPN tool"}
+{"id": "github:394341692", "on_segment": "n", "need": "n", "reason": "Learning analytics UI issues"}
+{"id": "github:205142843", "on_segment": "n", "need": "n", "reason": "Debugging notes"}
+{"id": "github:535175483", "on_segment": "n", "need": "n", "reason": "Documentation writing feedback"}
+{"id": "github:426846119", "on_segment": "n", "need": "n", "reason": "Graph visualization roadmap question"}
+{"id": "github:309140442", "on_segment": "n", "need": "n", "reason": "SharePoint file copy keeping permissions"}
+{"id": "github:287021384", "on_segment": "n", "need": "n", "reason": "Cloud provider list"}
+{"id": "github:374187367", "on_segment": "n", "need": "n", "reason": "Blog post about Musk"}
+{"id": "github:269224740", "on_segment": "n", "need": "n", "reason": "Hardware design change"}
+{"id": "github:539122609", "on_segment": "n", "need": "n", "reason": "Standards review editorial comments"}
+{"id": "github:373954055", "on_segment": "n", "need": "n", "reason": "Public policy comment letter"}
+{"id": "github:274928530", "on_segment": "n", "need": "n", "reason": "Software engineering ethics code"}
+{"id": "github:491871942", "on_segment": "n", "need": "n", "reason": "Hacker culture essay"}
+{"id": "github:137960938", "on_segment": "n", "need": "n", "reason": "Library asset overhead performance"}
+{"id": "github:428691270", "on_segment": "n", "need": "n", "reason": "Jupyter classroom ideas"}
+{"id": "github:380795984", "on_segment": "n", "need": "n", "reason": "Smart contract withdrawal change"}
+{"id": "github:274644632", "on_segment": "n", "need": "n", "reason": "Government procurement playbook"}
+{"id": "github:273618635", "on_segment": "n", "need": "n", "reason": "Policy document editorial comments"}
+{"id": "hn:5953139", "on_segment": "y", "need": "y", "reason": "Asks for tool to test browser TLS configuration"}
+{"id": "hn:3614557", "on_segment": "y", "need": "n", "reason": "Security book review"}
+{"id": "hn:7913422", "on_segment": "n", "need": "n", "reason": "Email digest tool request"}
+{"id": "hn:19378615", "on_segment": "y", "need": "n", "reason": "How to disclose a vulnerability to vendor"}
+{"id": "hn:278786", "on_segment": "n", "need": "n", "reason": "Robotics perception marketplace idea"}
+{"id": "stackexchange:security:159218", "on_segment": "y", "need": "y", "reason": "Seeks DLP tool with South African PII policies"}
+{"id": "stackexchange:security:222007", "on_segment": "y", "need": "n", "reason": "Conceptual question on key storage"}
+{"id": "stackexchange:security:199238", "on_segment": "y", "need": "y", "reason": "Seeks Windows local vulnerability/misconfiguration scanner"}
+{"id": "serverfault:serverfault:592872", "on_segment": "y", "need": "y", "reason": "Needs privileged root access without sharing passwords"}
+{"id": "serverfault:serverfault:344996", "on_segment": "y", "need": "n", "reason": "Apache file layout best-practice question"}
+{"id": "serverfault:serverfault:981094", "on_segment": "y", "need": "y", "reason": "Needs automated report of GPO exemptions across endpoints"}
+{"id": "serverfault:serverfault:274175", "on_segment": "y", "need": "y", "reason": "Needs service to resolve PCI findings; unclear guidance"}
+{"id": "serverfault:serverfault:587931", "on_segment": "y", "need": "y", "reason": "Wants mitigation for Heartbleed-themed phishing"}
+{"id": "serverfault:serverfault:840511", "on_segment": "y", "need": "y", "reason": "Recurring ransomware infection with unknown vector"}
+{"id": "ted:620655-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:618633-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:617653-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:617759-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:614141-2019", "on_segment": "y", "need": "y", "reason": "Tender procures computer audit/testing services"}
+{"id": "ted:612838-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:611281-2019", "on_segment": "y", "need": "y", "reason": "Tender includes managed security implementation services"}
+{"id": "ted:617149-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:612566-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:611169-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:609820-2019", "on_segment": "y", "need": "y", "reason": "Tender procures computer audit/testing services"}
+{"id": "ted:597548-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:598793-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:594084-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:591179-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:592199-2019", "on_segment": "y", "need": "y", "reason": "Tender procures computer audit/testing services"}
+{"id": "ted:589095-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:589168-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:586754-2019", "on_segment": "y", "need": "y", "reason": "Tender procures computer audit/testing services"}
+{"id": "ted:585908-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:581475-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:578046-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:573334-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:573166-2019", "on_segment": "n", "need": "n", "reason": "Tender for security hardware only"}
+{"id": "ted:569449-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:568447-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:565792-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:563670-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:563315-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:558958-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:559737-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:556641-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:554521-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:551207-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:547495-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:546517-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:547156-2019", "on_segment": "y", "need": "y", "reason": "Tender procures computer audit/testing services"}
+{"id": "ted:544839-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:545861-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:543956-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:542268-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:541620-2019", "on_segment": "n", "need": "n", "reason": "Tender for generic IT, no security capability"}
+{"id": "ted:541505-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:541574-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:540807-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:540158-2019", "on_segment": "y", "need": "y", "reason": "Tender procures security software"}
+{"id": "ted:540869-2019", "on_segment": "y", "need": "y", "reason": "Tender procures computer audit/testing services"}

@@ -1,0 +1,143 @@
+{"id": "github:259265015", "on_segment": "y", "need": "n", "reason": "Opinion recommendations on network segmentation, no gap stated"}
+{"id": "github:475550121", "on_segment": "n", "need": "n", "reason": "Machine learning essay, not security"}
+{"id": "github:475550270", "on_segment": "n", "need": "n", "reason": "Machine learning essay, not security"}
+{"id": "github:506380698", "on_segment": "n", "need": "n", "reason": "Hacker culture essay, not a security need"}
+{"id": "github:468647789", "on_segment": "n", "need": "n", "reason": "Software maintenance interview"}
+{"id": "github:468647900", "on_segment": "n", "need": "n", "reason": "Software maintenance interview"}
+{"id": "github:468647980", "on_segment": "n", "need": "n", "reason": "Software maintenance interview"}
+{"id": "github:367852227", "on_segment": "n", "need": "n", "reason": "Hacker culture essay, not a security need"}
+{"id": "github:529101368", "on_segment": "n", "need": "n", "reason": "Essay on memory and learning"}
+{"id": "github:529101497", "on_segment": "n", "need": "n", "reason": "Essay on memory and learning"}
+{"id": "github:529103850", "on_segment": "n", "need": "n", "reason": "Essay on memory and learning"}
+{"id": "github:441289362", "on_segment": "n", "need": "n", "reason": "Game crash log"}
+{"id": "github:374188453", "on_segment": "n", "need": "n", "reason": "Essay on Tesla and Musk"}
+{"id": "github:431637036", "on_segment": "n", "need": "n", "reason": "Game source code interviews"}
+{"id": "github:420078112", "on_segment": "n", "need": "n", "reason": "Game crash log"}
+{"id": "github:251369256", "on_segment": "n", "need": "n", "reason": "Game crash log"}
+{"id": "github:374187401", "on_segment": "n", "need": "n", "reason": "Essay on Tesla and Musk"}
+{"id": "github:191690366", "on_segment": "n", "need": "n", "reason": "Notes on unit testing"}
+{"id": "github:272705196", "on_segment": "n", "need": "n", "reason": "Rolling hash chunking discussion"}
+{"id": "hn:5231284", "on_segment": "y", "need": "y", "reason": "Asks for tool to check kernel for known exploits and notify"}
+{"id": "hn:20425754", "on_segment": "y", "need": "n", "reason": "Vendor explains 1Password secret key design"}
+{"id": "hn:6476619", "on_segment": "y", "need": "n", "reason": "Generic security engineer job ad"}
+{"id": "hn:6311169", "on_segment": "y", "need": "n", "reason": "Generic security engineer job ad"}
+{"id": "hn:6141605", "on_segment": "y", "need": "n", "reason": "Generic security engineer job ad"}
+{"id": "hn:4993476", "on_segment": "y", "need": "n", "reason": "Generic security researcher job ad"}
+{"id": "hn:2607627", "on_segment": "y", "need": "n", "reason": "Generic appsec engineer job ad"}
+{"id": "hn:21134226", "on_segment": "y", "need": "n", "reason": "Generic security engineer job ad"}
+{"id": "hn:20871273", "on_segment": "y", "need": "n", "reason": "Generic SOC consultant job ad"}
+{"id": "hn:20586519", "on_segment": "y", "need": "n", "reason": "Generic SOC consultant job ad"}
+{"id": "hn:19799205", "on_segment": "y", "need": "n", "reason": "Generic SOC consultant job ad"}
+{"id": "hn:19797948", "on_segment": "y", "need": "n", "reason": "Generic product security engineer job ad"}
+{"id": "hn:1969671", "on_segment": "n", "need": "n", "reason": "Personal relocation and job seeking"}
+{"id": "hn:19551872", "on_segment": "n", "need": "n", "reason": "Generic job ad for data company"}
+{"id": "hn:18811768", "on_segment": "y", "need": "n", "reason": "Generic senior security engineer job ad"}
+{"id": "hn:16070581", "on_segment": "y", "need": "n", "reason": "Job ad for security test platform developer"}
+{"id": "hn:9759573", "on_segment": "n", "need": "n", "reason": "Career advice on programming language choice"}
+{"id": "hn:17663418", "on_segment": "n", "need": "n", "reason": "Generic software engineer job ad"}
+{"id": "hn:17442280", "on_segment": "n", "need": "n", "reason": "Generic software engineer job ad"}
+{"id": "hn:15150367", "on_segment": "y", "need": "n", "reason": "Generic security engineer job ad"}
+{"id": "hn:9998864", "on_segment": "n", "need": "n", "reason": "Generic dev and ops job ad"}
+{"id": "hn:9639087", "on_segment": "n", "need": "n", "reason": "Kernel live-patching engineering job ad, security incidental"}
+{"id": "hn:9303633", "on_segment": "n", "need": "n", "reason": "Kernel live-patching engineering job ad, security incidental"}
+{"id": "hn:8980057", "on_segment": "n", "need": "n", "reason": "Kernel live-patching engineering job ad, security incidental"}
+{"id": "hn:6140478", "on_segment": "n", "need": "n", "reason": "Generic operations engineer job ad"}
+{"id": "hn:6140474", "on_segment": "n", "need": "n", "reason": "Generic operations engineer job ad"}
+{"id": "hn:15604930", "on_segment": "n", "need": "n", "reason": "Full stack developer job ad, security incidental"}
+{"id": "hn:1556070", "on_segment": "n", "need": "n", "reason": "Discussion of Microsoft-based startups"}
+{"id": "hn:9998701", "on_segment": "n", "need": "n", "reason": "PHP developer job ad at security vendor"}
+{"id": "hn:9996370", "on_segment": "n", "need": "n", "reason": "Kernel live-patching engineering job ad, security incidental"}
+{"id": "hn:20585869", "on_segment": "n", "need": "n", "reason": "Kernel live-patching engineering job ad, security incidental"}
+{"id": "hn:14462228", "on_segment": "n", "need": "n", "reason": "Kernel live-patching engineering job ad, security incidental"}
+{"id": "hn:12016825", "on_segment": "n", "need": "n", "reason": "Kernel live-patching engineering job ad, security incidental"}
+{"id": "hn:11815343", "on_segment": "n", "need": "n", "reason": "Kernel live-patching engineering job ad, security incidental"}
+{"id": "hn:10312162", "on_segment": "n", "need": "n", "reason": "Kernel live-patching engineering job ad, security incidental"}
+{"id": "hn:7600715", "on_segment": "n", "need": "n", "reason": "Airline bomb jokes, not cybersecurity"}
+{"id": "hn:21101773", "on_segment": "n", "need": "n", "reason": "Sex work policy discussion"}
+{"id": "hn:19589233", "on_segment": "n", "need": "n", "reason": "Social security finance discussion"}
+{"id": "hn:18178863", "on_segment": "y", "need": "n", "reason": "Opinion on DoD weapon system security metrics"}
+{"id": "hn:9921988", "on_segment": "y", "need": "n", "reason": "Opinion on incentives after Jeep hack"}
+{"id": "hn:8395437", "on_segment": "n", "need": "n", "reason": "Tuition and smoking cost discussion"}
+{"id": "hn:6278612", "on_segment": "n", "need": "n", "reason": "Cookie law tracking anecdote, privacy not security need"}
+{"id": "hn:4175629", "on_segment": "n", "need": "n", "reason": "Sales startup conflict of interest"}
+{"id": "hn:18385151", "on_segment": "n", "need": "n", "reason": "Passing remark on ssh complexity"}
+{"id": "hn:15971571", "on_segment": "n", "need": "n", "reason": "Harassment claims discussion"}
+{"id": "hn:8029771", "on_segment": "y", "need": "n", "reason": "Anecdote about keylogging awareness, no gap stated"}
+{"id": "hn:19264678", "on_segment": "n", "need": "n", "reason": "Healthcare billing discussion"}
+{"id": "hn:18378943", "on_segment": "y", "need": "n", "reason": "Opinion on email as username, no gap"}
+{"id": "hn:16428068", "on_segment": "y", "need": "n", "reason": "Opinion on CA trust model"}
+{"id": "hn:5803067", "on_segment": "n", "need": "n", "reason": "Airport physical security theater"}
+{"id": "hn:13225984", "on_segment": "n", "need": "n", "reason": "Passing mention of paying security staff"}
+{"id": "hn:7573341", "on_segment": "y", "need": "n", "reason": "Opinion on safe languages preventing bugs"}
+{"id": "hn:6004808", "on_segment": "n", "need": "n", "reason": "Social security and taxes discussion"}
+{"id": "hn:5217871", "on_segment": "n", "need": "n", "reason": "Social security and taxes discussion"}
+{"id": "hn:3451864", "on_segment": "n", "need": "n", "reason": "Social security and taxes discussion"}
+{"id": "hn:7554121", "on_segment": "n", "need": "n", "reason": "Building physical security and Airbnb"}
+{"id": "hn:7107057", "on_segment": "y", "need": "n", "reason": "Vendor explanation of Stripe.js security"}
+{"id": "hn:5852484", "on_segment": "y", "need": "n", "reason": "Comment on data security resilience, no gap"}
+{"id": "hn:19062337", "on_segment": "y", "need": "n", "reason": "Discussion of cyber insurance denial for NotPetya"}
+{"id": "hn:9999228", "on_segment": "n", "need": "n", "reason": "Generic job ad listing locations"}
+{"id": "hn:9824190", "on_segment": "n", "need": "n", "reason": "Government web dev job ad"}
+{"id": "hn:9813515", "on_segment": "n", "need": "n", "reason": "Government web dev job ad"}
+{"id": "hn:962834", "on_segment": "y", "need": "n", "reason": "Commentary on host breach, no tool gap"}
+{"id": "hn:9479669", "on_segment": "n", "need": "n", "reason": "Political discussion"}
+{"id": "hn:9309463", "on_segment": "n", "need": "n", "reason": "Home alarm insurance, physical security"}
+{"id": "hn:9232851", "on_segment": "n", "need": "n", "reason": "Cloud storage cost comparison"}
+{"id": "hn:9184307", "on_segment": "y", "need": "n", "reason": "Commentary on NSA hacking group"}
+{"id": "hn:8990840", "on_segment": "n", "need": "n", "reason": "Not about cybersecurity"}
+{"id": "hn:8912394", "on_segment": "n", "need": "n", "reason": "Not about cybersecurity"}
+{"id": "hn:8908705", "on_segment": "n", "need": "n", "reason": "Not about cybersecurity"}
+{"id": "hn:8784984", "on_segment": "y", "need": "n", "reason": "Commentary on Sony hack attribution"}
+{"id": "hn:8779847", "on_segment": "n", "need": "n", "reason": "Functional programming discussion"}
+{"id": "hn:8545701", "on_segment": "n", "need": "n", "reason": "Generic job ad"}
+{"id": "hn:8449789", "on_segment": "n", "need": "n", "reason": "Lisp machine history"}
+{"id": "hn:5350235", "on_segment": "n", "need": "n", "reason": "Conference costs, security mention in passing"}
+{"id": "hn:8887556", "on_segment": "n", "need": "n", "reason": "Bitcoin price discussion"}
+{"id": "hn:21718437", "on_segment": "n", "need": "n", "reason": "Amazon labour discussion"}
+{"id": "hn:17841741", "on_segment": "y", "need": "y", "reason": "Company security is horrible, asks what to do"}
+{"id": "hn:4767711", "on_segment": "n", "need": "n", "reason": "HTML email format debate, security passing"}
+{"id": "hn:4766765", "on_segment": "n", "need": "n", "reason": "HTML email format debate, security passing"}
+{"id": "hn:2693687", "on_segment": "y", "need": "y", "reason": "Asks for affordable Tripwire replacement for config verification"}
+{"id": "hn:18213111", "on_segment": "y", "need": "y", "reason": "Seeks phone alternative with security updates and privacy"}
+{"id": "hn:17881903", "on_segment": "y", "need": "n", "reason": "Philosophical comment on security cost"}
+{"id": "hn:19044591", "on_segment": "n", "need": "n", "reason": "Product shutdown, security passing"}
+{"id": "hn:18401902", "on_segment": "y", "need": "n", "reason": "Opinion that market does not pay for security"}
+{"id": "hn:17822432", "on_segment": "n", "need": "n", "reason": "Off-topic joke"}
+{"id": "hn:14509480", "on_segment": "n", "need": "n", "reason": "Currency anti-counterfeiting"}
+{"id": "hn:9419451", "on_segment": "y", "need": "y", "reason": "Common Criteria evaluations slow and lag current versions"}
+{"id": "hn:2267467", "on_segment": "y", "need": "n", "reason": "Opinion on Tor and adversary budgets"}
+{"id": "hn:20426631", "on_segment": "n", "need": "n", "reason": "Nuclear reactor physical security"}
+{"id": "hn:19250050", "on_segment": "y", "need": "n", "reason": "Opinion on cellular network authentication"}
+{"id": "hn:16988279", "on_segment": "y", "need": "y", "reason": "Affordable Android phones lack security updates"}
+{"id": "hn:13038934", "on_segment": "y", "need": "y", "reason": "HSM vendor expensive and unsupportive of Linux"}
+{"id": "hn:9938331", "on_segment": "n", "need": "n", "reason": "Business model discussion"}
+{"id": "hn:9859326", "on_segment": "n", "need": "n", "reason": "Chip manufacturing discussion"}
+{"id": "hn:9837373", "on_segment": "n", "need": "n", "reason": "Economics discussion"}
+{"id": "hn:9806336", "on_segment": "n", "need": "n", "reason": "Economics discussion"}
+{"id": "hn:9743214", "on_segment": "n", "need": "n", "reason": "Blockchain consensus economics"}
+{"id": "hn:9472201", "on_segment": "n", "need": "n", "reason": "Not about cybersecurity"}
+{"id": "hn:9457685", "on_segment": "n", "need": "n", "reason": "Not about cybersecurity"}
+{"id": "hn:9374949", "on_segment": "y", "need": "n", "reason": "Summary of DNSSEC argument"}
+{"id": "hn:9224725", "on_segment": "n", "need": "n", "reason": "YC application feedback"}
+{"id": "hn:9135566", "on_segment": "y", "need": "n", "reason": "Comment on hardware side-channel defences"}
+{"id": "hn:9089722", "on_segment": "y", "need": "n", "reason": "Explanation of formal verification limits"}
+{"id": "hn:9087182", "on_segment": "n", "need": "n", "reason": "Education advice"}
+{"id": "hn:8979330", "on_segment": "y", "need": "n", "reason": "Opinion on SSH key distribution practice"}
+{"id": "hn:8789683", "on_segment": "y", "need": "y", "reason": "Teams cannot afford upgrades to fix vulnerabilities"}
+{"id": "hn:8786457", "on_segment": "n", "need": "n", "reason": "Bitcoin adoption discussion"}
+{"id": "hn:8594240", "on_segment": "n", "need": "n", "reason": "Linux desktop preference"}
+{"id": "hn:8550641", "on_segment": "n", "need": "n", "reason": "Home physical monitoring product"}
+{"id": "hn:8530944", "on_segment": "y", "need": "n", "reason": "Comparison of MIG, GRR and osquery"}
+{"id": "hn:8474932", "on_segment": "n", "need": "n", "reason": "Not about cybersecurity"}
+{"id": "hn:8360099", "on_segment": "n", "need": "n", "reason": "Not about cybersecurity"}
+{"id": "hn:8275392", "on_segment": "n", "need": "n", "reason": "ID document fraud discussion"}
+{"id": "hn:8269315", "on_segment": "y", "need": "n", "reason": "Personal threat model description"}
+{"id": "hn:8228383", "on_segment": "y", "need": "n", "reason": "Historical opinion on Multics security model"}
+{"id": "hn:8162913", "on_segment": "n", "need": "n", "reason": "Not about cybersecurity"}
+{"id": "hn:8153696", "on_segment": "n", "need": "n", "reason": "Not about cybersecurity"}
+{"id": "hn:7938896", "on_segment": "n", "need": "n", "reason": "Not about cybersecurity"}
+{"id": "serverfault:serverfault:721597", "on_segment": "y", "need": "y", "reason": "No way to audit which apps use AD group"}
+{"id": "serverfault:serverfault:894690", "on_segment": "y", "need": "y", "reason": "O365 emails wrongly flagged as phishing"}
+{"id": "serverfault:serverfault:730362", "on_segment": "y", "need": "y", "reason": "Phishing files keep reappearing on compromised server"}
+{"id": "stackexchange:security:121062", "on_segment": "y", "need": "n", "reason": "General best-practice question on SMB security"}
+{"id": "serverfault:serverfault:390281", "on_segment": "y", "need": "n", "reason": "Vague request about PeerGuardian security aspects"}

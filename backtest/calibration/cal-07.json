@@ -1,0 +1,141 @@
+{
+ "opening_id": "cal-07",
+ "slug": "iot-device-security-for-makers",
+ "name": "Project Quill",
+ "one_liner": "An automated platform that analyses a connected device's firmware, tells its maker exactly which security requirements apply and how to meet them, and certifies the result.",
+ "buyer": {
+  "role": "VP R&D or head of product security at a device maker",
+  "company_profile": "Manufacturers of connected devices (cameras, TVs, routers, industrial and medical devices) with embedded Linux/RTOS firmware and no dedicated product security team."
+ },
+ "user": "Firmware and embedded engineers who must implement the security requirements.",
+ "problem": {
+  "summary": "IoT attacks show that even simple hacks have serious consequences, yet there are no actionable processes or standards that tell makers which security controls fit each specific device. Generic checklists are either too weak or impossible to implement on constrained hardware, so makers ship insecure devices or spend heavily on consultants.",
+  "evidence": [
+   {
+    "claim": "Botnets built from insecure IoT devices with default credentials launched record-scale attacks.",
+    "url": "https://en.wikipedia.org/wiki/Mirai_(malware)"
+   },
+   {
+    "claim": "IoT devices introduce security risks because of weak defaults and long-lived firmware.",
+    "url": "https://en.wikipedia.org/wiki/Internet_of_things"
+   },
+   {
+    "claim": "Firmware is embedded software that is rarely updated after shipping.",
+    "url": "https://en.wikipedia.org/wiki/Firmware"
+   },
+   {
+    "claim": "Embedded systems are resource-constrained, which limits the security controls they can run.",
+    "url": "https://en.wikipedia.org/wiki/Embedded_system"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "Large IoT botnets have raised attention from buyers and regulators, and device makers increasingly face customers asking for proof of security. Automated binary analysis now makes it feasible to assess firmware without source code.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Mirai_(malware)",
+   "https://en.wikipedia.org/wiki/Internet_of_things"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Upload a firmware image and get an automated analysis of components, configuration and exposures",
+    "why": "No source code or manual pentest needed."
+   },
+   {
+    "feature": "Device-specific security requirements derived from the device's type and analysis",
+    "why": "Balanced, actionable requirements instead of generic checklists."
+   },
+   {
+    "feature": "Implementation guidance for each requirement",
+    "why": "Makers lack in-house security experts."
+   },
+   {
+    "feature": "Security certification (physical and digital) for devices that meet the requirements",
+    "why": "Proof of security for the maker's customers."
+   },
+   {
+    "feature": "Lightweight on-device protection added post-deployment",
+    "why": "Covers devices already in the field."
+   }
+  ],
+  "out_of_scope": [
+   "Enterprise network monitoring of IoT",
+   "Consumer apps"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "UL cybersecurity assurance testing",
+   "url": "https://www.ul.com/",
+   "how_we_differ": "Automated and device-specific instead of manual lab testing."
+  },
+  {
+   "name": "Karamba Security",
+   "url": "https://karambasecurity.com/",
+   "how_we_differ": "Covers analysis, requirements and certification, not only runtime hardening."
+  },
+  {
+   "name": "Mocana",
+   "url": "https://www.mocana.com/",
+   "how_we_differ": "Analyses existing firmware rather than requiring an SDK integration."
+  },
+  {
+   "name": "Finite State",
+   "url": "https://finitestate.io/",
+   "how_we_differ": "Maker-side remediation and certification rather than buyer-side risk scoring."
+  },
+  {
+   "name": "binwalk and manual pentests (free/consulting)",
+   "url": "https://github.com/ReFirmLabs/binwalk",
+   "how_we_differ": "Automated end to end with guidance."
+  }
+ ],
+ "differentiation": "End-to-end and automated: analyses the actual firmware, generates requirements fitted to the device and the maker's business constraints, guides implementation and certifies the result, so makers without security teams can ship secure devices quickly.",
+ "build": {
+  "team": "About 25 people: binary-analysis and embedded security researchers led by serial security founders",
+  "months_to_mvp": 12,
+  "hardest_parts": [
+   "Automated analysis across many architectures and firmware formats",
+   "Building a requirement taxonomy that generalises across device types",
+   "Getting the certification recognised by buyers"
+  ]
+ },
+ "pricing": {
+  "model": "Annual SaaS per product line analysed, certification fee per device model",
+  "entry_price": "Working assumption: $25,000/year for up to 5 product lines, plus $5,000 per certification",
+  "rationale": "Cheaper than repeated manual pentests and lab certifications per model.",
+  "comparables": [
+   {
+    "vendor": "Third-party lab security certification",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://www.ul.com/"
+   },
+   {
+    "vendor": "Embedded runtime protection",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://karambasecurity.com/"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten mid-size makers of cameras, routers and smart-home devices facing security questions from large distributors or carriers.",
+  "channel": "Direct sales to device makers, partnerships with chip vendors and carriers that can require certification.",
+  "wedge": "Free automated firmware report showing the maker's top exposures."
+ },
+ "risks": [
+  "Device makers under price pressure won't pay for security without regulation",
+  "Certification without a recognised standard has limited weight",
+  "Analysis accuracy across exotic firmware",
+  "Large testing labs adopt automation"
+ ],
+ "riskiest_assumption": {
+  "assumption": "Device makers will pay for security before regulation forces them to.",
+  "test": "Offer free firmware reports to 20 makers and ask for a paid remediation and certification package.",
+  "success_signal": "At least 4 of 20 makers buy the paid package within 2 weeks of receiving the report."
+ },
+ "open_questions": [
+  "Will carriers and retailers require certification?",
+  "Which device categories are willing to pay first?"
+ ]
+}

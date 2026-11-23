@@ -1,0 +1,46 @@
+{
+ "concept_id": "cal-01",
+ "lens": "market-skeptic",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "Malware prevention is a real, budgeted, large pain: enterprises already buy sandboxes, NDR and endpoint tools for exactly this. But the concept's evidence is generic (sample counts, Wikipedia), shows no buyer voice, and the riskiest point is unproven: a separate budget line for a network verdict sensor beside sandbox and endpoint, while encryption shrinks payload visibility.",
+ "objections": [
+  {
+   "objection": "No buyer-side demand evidence. Every cited source is generic background (AV-TEST sample counts, Wikipedia articles on sandboxing, NDR and DPI); none shows a CISO naming sandbox latency or missed unknown malware as a budgeted priority. Sample volume is a vendor talking point, not purchase intent.",
+   "severity": "major",
+   "evidence": "concept:problem.evidence; input:themes is empty and flagged_claims is empty (cal-01.input.json)"
+  },
+  {
+   "objection": "Budget displacement, not new budget. Target buyers 'already run a firewall, sandbox and endpoint agent', so the money for unknown-malware detection is already allocated. The concept itself makes a separate line its riskiest assumption; realistically it must displace the sandbox renewal or ride the NDR line, which is anomaly-oriented and owned by incumbents.",
+   "severity": "major",
+   "evidence": "concept:riskiest_assumption.assumption; concept:buyer.company_profile"
+  },
+  {
+   "objection": "Shrinking addressable payload. A network sensor that classifies raw file bytes depends on seeing payloads; rising TLS adoption means a growing share of downloads are opaque unless the customer already decrypts at a proxy. The concept lists this only as an open question, but it directly caps the size of the problem the product can address.",
+   "severity": "major",
+   "evidence": "concept:open_questions[0]; concept:risks[2]; concept:mvp.out_of_scope (no inline/decrypting appliance)"
+  },
+  {
+   "objection": "Endpoint ML competes for the same pain. Pre-execution ML verdicts on files can also be delivered on the endpoint, where encryption is not a problem; buyers who adopt ML-based endpoint protection may see the network sensor as redundant, narrowing urgency to organisations with many unmanaged devices.",
+   "severity": "minor",
+   "evidence": "concept:risks[3]"
+  },
+  {
+   "objection": "Segment pick is plausible but unsized. Mid-size firms with a small SOC are named as first customers, yet the $50k/year entry price and a 30-person team imply needing hundreds of such accounts; the concept gives no count of 1,000+ staff organisations in banking, insurance and state/local government that run a SOC able to act on verdicts.",
+   "severity": "minor",
+   "evidence": "concept:go_to_market.first_customers; concept:pricing.entry_price"
+  }
+ ],
+ "strongest_point": "Unknown-malware prevention is an established, funded enterprise priority with proven spend on sandboxes and NDR; a faster, no-baseline verdict addresses a pain buyers already pay for.",
+ "what_would_change_my_mind": [
+  "Interviews with 15+ CISOs at target-segment firms where at least a third name sandbox latency/evasion or post-sandbox malware incidents as a funded priority for the next budget cycle",
+  "Data from 5 prospects showing over half of inbound file traffic is inspectable (decrypted or cleartext)",
+  "3 of 5 passive proofs of value finding confirmed misses, with a buyer willing to pay from sandbox or NDR budget"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://www.av-test.org/en/statistics/malware/",
+  "https://en.wikipedia.org/wiki/Network_detection_and_response"
+ ]
+}

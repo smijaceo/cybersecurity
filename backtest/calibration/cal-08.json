@@ -1,0 +1,142 @@
+{
+ "opening_id": "cal-08",
+ "slug": "vulnerability-remediation-orchestration",
+ "name": "Project Fennel",
+ "one_liner": "A SaaS platform that connects to existing scanners, DevOps and IT tools to prioritise vulnerabilities and orchestrate their remediation end to end.",
+ "buyer": {
+  "role": "CISO or CIO; vulnerability management program owner",
+  "company_profile": "Mid-size and large enterprises (1,000+ staff) running several vulnerability scanners and code-testing tools with thousands of open findings and slow patching."
+ },
+ "user": "Vulnerability management analysts, IT operations and DevOps engineers who apply fixes.",
+ "problem": {
+  "summary": "Scanners find far more vulnerabilities than teams can fix, and it often takes weeks or months before a patch rolls out. Known flaws are exploited in high-profile breaches. Detection is crowded, but remediation, coordinating teams, tasks and tools to actually fix issues, is manual work in spreadsheets and tickets.",
+  "evidence": [
+   {
+    "claim": "A major breach exploited a known web-framework vulnerability months after a patch was available.",
+    "url": "https://en.wikipedia.org/wiki/2017_Equifax_data_breach"
+   },
+   {
+    "claim": "Vulnerability management covers identifying, prioritising and remediating vulnerabilities, with remediation the slowest stage.",
+    "url": "https://en.wikipedia.org/wiki/Vulnerability_management"
+   },
+   {
+    "claim": "Patches must be tested and deployed across many systems, which delays remediation.",
+    "url": "https://en.wikipedia.org/wiki/Patch_(computing)"
+   },
+   {
+    "claim": "Thousands of new CVEs are published every year.",
+    "url": "https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "Software is adopted and shipped faster, increasing exposure, while DevOps and IT tools (configuration management, CI, ticketing) now expose APIs that make automated remediation feasible.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Vulnerability_management",
+   "https://en.wikipedia.org/wiki/DevOps"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Agentless API connectors to vulnerability scanners, code-testing tools, cloud, CMDB and ticketing",
+    "why": "Use the data customers already have; no network taps."
+   },
+   {
+    "feature": "Prioritisation using business, DevOps and IT context in addition to threat intelligence",
+    "why": "Fix what matters first."
+   },
+   {
+    "feature": "Remediation database of patches, scripts and workarounds per vulnerability",
+    "why": "Tells teams exactly how to fix."
+   },
+   {
+    "feature": "Orchestration engine that creates, routes and tracks remediation tasks and can push fixes via Puppet/Chef/Ansible",
+    "why": "Closed-loop remediation."
+   },
+   {
+    "feature": "Validation and risk reporting",
+    "why": "Proves the fix and shows risk reduction to CIOs/CISOs."
+   }
+  ],
+  "out_of_scope": [
+   "Own vulnerability scanning",
+   "Endpoint agents",
+   "Penetration testing"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "Kenna Security",
+   "url": "https://www.kennasecurity.com/",
+   "how_we_differ": "Goes beyond risk scoring to orchestrate and validate the fix."
+  },
+  {
+   "name": "RiskSense",
+   "url": "https://www.risksense.com/",
+   "how_we_differ": "Uses DevOps and IT data and a remediation database, not only threat-based prioritisation."
+  },
+  {
+   "name": "ServiceNow Vulnerability Response",
+   "url": "https://www.servicenow.com/products/vulnerability-response.html",
+   "how_we_differ": "Vendor-neutral remediation intelligence rather than a workflow on a CMDB."
+  },
+  {
+   "name": "Qualys",
+   "url": "https://www.qualys.com/",
+   "how_we_differ": "Aggregates many scanners and code tools instead of one vendor's findings."
+  },
+  {
+   "name": "Spreadsheets and Jira tickets (free/bundled)",
+   "url": "https://www.atlassian.com/software/jira",
+   "how_we_differ": "Automates routing, fixes and validation."
+  }
+ ],
+ "differentiation": "Focuses on the remediation gap rather than detection: agentless, works over existing tools' APIs, prioritises with business and DevOps context, and drives fixes to closure with a curated remediation database.",
+ "build": {
+  "team": "About 15 people: R&D in Israel plus US sales and support, founders from elite military cyber units",
+  "months_to_mvp": 8,
+  "hardest_parts": [
+   "Maintaining many tool integrations",
+   "Building a remediation database at scale",
+   "Getting IT and DevOps teams to accept automated changes"
+  ]
+ },
+ "pricing": {
+  "model": "Annual SaaS subscription per asset under management",
+  "entry_price": "Working assumption: $30,000/year for up to 2,500 assets",
+  "rationale": "Priced against analyst time saved and scanner spend.",
+  "comparables": [
+   {
+    "vendor": "Risk-based vulnerability management",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://www.kennasecurity.com/"
+   },
+   {
+    "vendor": "IT workflow vulnerability response",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://www.servicenow.com/products/vulnerability-response.html"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten US and Israeli enterprises with multiple scanners, a dedicated vulnerability management lead and an audit finding about patch latency.",
+  "channel": "Direct sales to CISOs/CIOs with beta access for qualified customers; partnerships with scanner vendors.",
+  "wedge": "Connect existing scanners and show a prioritised, deduplicated remediation plan within a day."
+ },
+ "risks": [
+  "Scanner vendors add remediation workflow",
+  "ITSM platforms own the workflow",
+  "Remediation database is hard to maintain",
+  "IT teams resist automated changes"
+ ],
+ "riskiest_assumption": {
+  "assumption": "Enterprises will pay a separate vendor for remediation orchestration on top of scanners and ITSM.",
+  "test": "Run a 2-week beta at 5 enterprises connecting their scanners and measure time-to-fix on a sample of findings.",
+  "success_signal": "Median time to remediate falls by 30%+ for the sample and 2 beta customers ask for a paid contract."
+ },
+ "open_questions": [
+  "Who owns remediation budget: security or IT?",
+  "How much automated fixing will customers allow?"
+ ]
+}

@@ -1,0 +1,1128 @@
+[
+ {
+  "theme_id": 0,
+  "keywords": [
+   "tool",
+   "tools",
+   "like",
+   "linux",
+   "sql",
+   "testing",
+   "anti",
+   "injection",
+   "xss",
+   "scanner"
+  ],
+  "signals": [
+   {
+    "title": "How to handle security updates within Docker containers?",
+    "body": "When deploying applications onto servers, there is typically a separation between what the application bundles with itself and what it expects from the platform (operating system and installed packages) to provide. One point of this is that the platf",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Tool for generating MD4 collisions",
+    "body": "There are a lot of research papers available online that discuss vulnerabilities of MD4 algorithm, but I couldn't find any implementation of these. Uptill now I have used tools like John the Ripper or MDCrack and tried to bruteforce the hash. But bru",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Best tool to BruteForcing RDP",
+    "body": "I have tried many tools and to do not seem to be successful with locking out an account I am testing on my network with an RDP domain. I used crowbar, ncrack and THC hydra but they don't seem to be working accurately. Can someone point me in the righ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Security of InstrumentationKey in Client Side Code",
+    "body": "Is there a more secure alternative to providing the InstrumentationKey directly in client-side code? I'd be concerned about a malicious user being able to easily add garbage telemetry data to my logs.",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "FLOSS Server management and audit tools",
+    "body": "I've been working with HP's Server Automation tool suite for a long time, and while it's a great tool - it's too much for a small business or home network to use (more accurately: it's way too expensive for anything less than a large company to affor",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "SQL Injection tool (Mac OS X)",
+    "body": "Do you know any software for searching (analyze) SQL injection (on website) from Snow Leopard ? I have found some that can run from Linux or Windows. I understand that most Linux (console) applications could be run under Mac Os x. But is there any GU",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Could a computer program be used to automate testing for trapdoors?",
+    "body": "Could a computer program given the source or object version of another program be used to automate testing for trapdoors/backdoors?",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Security web scanner tool for IIS/SQL Server",
+    "body": "I'm trying to do penetration testing of our ASP.NET web-site to check for security loopholes (specifically for SQL injections). We bought a commercial web scanner tool (IBM Rational AppScan), however it only does black box scanning for IIS and fails ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "unix config scanner / compliance checks",
+    "body": "I'm looking for a tool, that scans unix operating systems for configuration issues. E.g. a script that finds PermitRootLogin yes in the ssh config file or with other words: a script that automates compliance checks. Since there are quite a few config",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: Laptops Security for a 40 Startups \u2013 What are you using?",
+    "body": "What tools are you using to protect your laptops (Mac/Linux and Windows 10)? As long as we were a small team, with mainly linux and some Macs, we were \"fine\".. However, now as we grow, I need to get a unified security platform to protect them all. Wo",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "What is the alternative tool for Honeypots?",
+    "body": "Nowadays the tools of Honeypots are not reliable as before, because an attacker with some knowledge can detect it and override its power. So if I want something with the same characteristics as the honeypot, what would I use ?",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "rancid like tool for config files",
+    "body": "I need to be able to watch directories on our servers, and track changes to files as part of our audit compliance. I have adjusted auditd to watch the directories, and send all writes and attribute changes to syslog (which immediately forwards on to ",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 1,
+  "keywords": [
+   "security software",
+   "package",
+   "software",
+   "security",
+   "spain",
+   "data",
+   "software development",
+   "development",
+   "services",
+   "virus protection"
+  ],
+  "signals": [
+   {
+    "title": "Czechia-Pardubice: Security software package",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Germany-Hamburg: Security software package",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Czechia-Prague: Security software package",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Poland-Warsaw: Data security software package",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Spain-Santiago de Compostela: Data security software package",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Germany-Frankfurt-on-Main: Security software package",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Germany-Cologne: Security software development services",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Bulgaria-Sofia: Data security software package",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Spain-Campanillas: Virus protection software package",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Spain-Madrid: Security software package",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Belgium-Brussels: Security software package",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Sweden-Nyk\u00f6ping: Data security software package",
+    "body": "",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 2,
+  "keywords": [
+   "phishing",
+   "web",
+   "sites",
+   "website",
+   "hn",
+   "ask",
+   "files",
+   "new",
+   "domain",
+   "ask hn"
+  ],
+  "signals": [
+   {
+    "title": "Recommendations for a Certificate Management tool for Linux",
+    "body": "A client is looking to roll out OpenVPN to all its mobile employees and will use certificates on both the server and all clients. This creates a new challenge to manage all these certificates and handle certificate revocations and renewals. Any recom",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Proposal: HTML passwordrules attribute",
+    "body": "# HTML `passwordrules` attribute ## Motivation Some user agents offer to generate random per-site passwords on behalf of the user. Safari has built-in support for this, and add-on password managers such as 1Password add this functionality. This featu",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "How to automate publication of CRL and CRT files to CDP and AIA location?",
+    "body": "I'm setting up Two-Tier PKI for the first time in our Windows Server 2012 R2 environment and I've read several tutorials on setting this up. Some of the methodology is very different, but I've chosen to go with the guide at http://www.rebeladmin.com/",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Allow customization of directory where cached credential data is stored",
+    "body": "Currently, this directory is statically encoded as a subdirectory under `~/.aws`. However, it would be nice (for security reasons) to be able to store these credentials in another location. For example, when using MIT Kerberos on Linux, TGTs are stor",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: Securely exposing host just to webhooks?",
+    "body": "Background: I wish to listen for github webhooks on a Jenkins instance sitting in a private network. There are no public endpoints on the network, it's for internal services. Easy enough to add an endpoint that forwards to Jenkins, but I'm not a web ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Automate certificate signing in Linux",
+    "body": "In a private network I wish to automate signing for new clients/servers. Something like this: New client is created (dockers & etc) The client create a new private key and a CSR The client send the CSR to a different server which sign it using the CA",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "My website was used by a freak hacker as a phishing site! What can I do?",
+    "body": "My website was taken down a day back - got a message form the host saying that they recieved a complaint from the Bank of America that my website was being used for phishing customers. I managed to bring my site online and found a number of weird cod",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: Security assessment for small non-profit",
+    "body": "Hey all, I work with a small non-profit (~10 people) and we'd like an assessment done on our online presence (Wordpress, Roundcube email, Google Docs, Mailchimp, Twitter, Facebook) to ensure that it cannot be hijacked or destroyed. While, I have a pr",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "DNS security (hijacking?)",
+    "body": "I am hosting my website on Linode and am also using their DNS/naming servers. (ns1.linode.com etc.) It occurred to me that I never have had to authenticate that the domain is mine when I added it to the domain to the DNS manager, or at any other poin",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Report phishing websites",
+    "body": "Is there a central place to report domains that have made phishing attempts against my users? I usually make a report to the host of the domain (GoDaddy, generally) but I was wondering if there is a more effective place to send a report?",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "[Ask HN] Server Security and Hardening. How to non Sysadmins do it?",
+    "body": "I have a new web project about to surface for which I'm moving away from Rackspace Sites. After reading around I've decided to opt for a Linode VPS. The problem is that I have no experience in systems administration and in particular the initial setu",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: best security aware web hosting? (tired of malware scripts)",
+    "body": "I have a couple of sites on Dreamhost and malware scripts are inserted in our many PHP scripts (i.e: Wordpress) very often. I am thinking in moving our sites to specialized places. For example, move our blogs to wordpress.com, where I assume they pay",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 3,
+  "keywords": [
+   "add",
+   "developers",
+   "https",
+   "google",
+   "com",
+   "feature",
+   "page",
+   "security",
+   "link",
+   "google com"
+  ],
+  "signals": [
+   {
+    "title": "Replace Imagick with something better",
+    "body": "_EDIT (SEO): The PHP module \"imagick\" is not enabled although the theming app is. For favicon generation to work correctly, you need to install and enable this module._ A few days ago it was [brought up to my attention](https://github.com/nextcloud/v",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Recaptcha should support strict CSP style-src rules.",
+    "body": "[The documentation](https://developers.google.com/recaptcha/docs/faq#im-using-content-security-policy-csp-on-my-website-how-can-i-configure-it-to-work-with-recaptcha) now advice developers to enable style-src='unsafe-inline'. Should not Recaptcha giv",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Adding reCAPTCHA support for login",
+    "body": "## Adding reCAPTCHA support ### Problem Nowadays it's common that authentication API are brute-forced to gain access to sensible content. ### Solution Adding (re)captcha for login page using email/password combinaison will prevent a lot of brute-forc",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Urgent request from Chile: please allow contact removal from groups",
+    "body": "Dear Signal devs, I'm writing with a humble but rather urgent request that you please incorporate a feature to allow the removal of contacts from signal groups. I know this point has been raised several times (ie, [here](https://github.com/signalapp/",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: Dropbox security bug?",
+    "body": "I had always thought that my Dropbox shared folders required an invitation, to see the files, or at least I could copy the invitation link and send it directly to someone, who would then have to register to see the folder and files. But no, apparentl",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "What use to automate incident response?",
+    "body": "I am now read about TheHive Project - open source incident response platform. Today i asked developers about automatization of incidents, and find, that TheHive can't do this. Main feature for me is automatization in the following directions: get new",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Security Concerns and Questions",
+    "body": "Hello Team, I have a few questions related to security and I hope you guys can help me out. 1) I could not find anything in docs on how to enable encryption on rest and while data is in transit between nodes. Is there a way to do it using external to",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Add more automation around sending of security alerts",
+    "body": "There may already be a thing that does this and I'm missing it, but is there a tool that helps with generating and sending the security alerts in the google group, and then generates the post for the nodejs.org? If not, I am happy to try and with thi",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Offline use",
+    "body": "For maximum security it is best never to expose keys to an online machine, by generating wallets, and signing transactions completely offline. This client is very close to being able to do that, but doesn't quite work offline. If I download the page ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Suggestion: Add threads & verify if there is a writable path",
+    "body": "Hi leixyou, Let me first say that I really like your tool for IT security assessments. The reason why I'm writing to you is that I was wondering if it would be possible to add threads for the function --file ip.list? Also, it would be awesome if the ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Safe way to use third party services that require iframe/script embeds.",
+    "body": "## Overview For things like form embeds, we're currently allowing iframe/script tags in full html text format. This has XSS security risks. See if we can find a solution that would reduce/eliminate this risk. Perhaps CKEditor buttons for each third p",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 4,
+  "keywords": [
+   "dependencies",
+   "vulnerabilities",
+   "tools",
+   "projects",
+   "security",
+   "vulnerability",
+   "images",
+   "sub",
+   "security vulnerabilities",
+   "analysis"
+  ],
+  "signals": [
+   {
+    "title": "How to determine AWS security group dependencies?",
+    "body": "Amazon EC2 won't let me delete a security group, complaining that the group still has dependencies. How Can I find what those dependencies are? aws ec2 describe-security-groups doesn't say.",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: Found security flaws but vendor seems not to care. What should I do?",
+    "body": "I've found some web app vulnerabilities to some high profile services in my country, but the vendor doesn't seem interested in fixing them as 6 months have passed and they claim to have other things to do, which, judging by the announcements on the m",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Update dependencies to resolve security vulnerabilities in sub-dependencies",
+    "body": "**What would you like Renovate to be able to do?** GitHub informs of vulnerabilities for sub-dependencies present in package-lock.json, but Renovate doesn't cut PRs for updating the top-level dependencies that would resolve those vulnerabilities. **D",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: Which security vulnerability feeds should I Monitor?",
+    "body": "Hi, I'm building a security vulnerability alerts service (details below), to use myself, and I'll make it available to others too. For server and client side (incl. Javascript) vulnerabilities, and dev/ops' operating systems and tools (e.g. IntelliJ,",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Cybersecurity Learning",
+    "body": "**Name** Kate O'Brien **Describe the problem you'd like to solve** There can be huge pressures on small development teams to deploy without knowing anything about cybersecurity. You might have a team of one. You can't afford to have a cybersecurity e",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Scala Support",
+    "body": "**As a** Scala user **I want** linting and dependencies checked by Hawkeye **So that** I can include it in my for that toolchain. ### Description There is an `sbt` plugin for the OWASP deps checker that would cover scanning Scala projects for outdate",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Add docker images security check for CI",
+    "body": "There is a great tool that helps to analyze security for docker images: https://github.com/goodwithtech/dockle We can use it in the CI to make sure we are preparing good images.",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Automatically check dependency gems for security vulnerabilities",
+    "body": "**STORY** As a repository service manager, I want to make sure my dependencies a reviewed periodically, so that I don't leave open security vulnerabilities unaddressed. **DETAILS** There is a tool called Gymnasium which checks for know security issue",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Consider security and code quality tools",
+    "body": "There are a few security and code quality tools out there at the moment that we should consider for our contracts. There is a great list of existing tools [here](https://consensys.github.io/smart-contract-best-practices/security_tools/).",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Proposed new criterion: Require software composition analysis (SCA)",
+    "body": "I think the time has come to more directly require certain kinds of software composition analysis (SCA) tools (aka origin analysis tools). More specifically, projects should at least use tools to monitor their dependencies to determine if any of them",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 5,
+  "keywords": [
+   "email",
+   "emails",
+   "phishing",
+   "address",
+   "exchange",
+   "im",
+   "spam",
+   "using",
+   "sending",
+   "send"
+  ],
+  "signals": [
+   {
+    "title": "Virus sending phishing emails through exchange server",
+    "body": "It appears that there is a virus on my network somewhere that is sending phishing emails through my exchange server. I can see the messages in message tracking and I see many SMTP errors for NDR's and rejected connections from external servers, but I",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Distributed IMAP-Dictionary-Attack-Tool?",
+    "body": "I have a client with a hacked IMAP-Account, and the attacker(s) made thousands of password-attempts, probably with a fixed set of passwords, from different IPs before they got in. After successful password guessing I see 10-15 different IPs connectin",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Open Source tool to block email attachments",
+    "body": "Is there any way to stop users from sending attachments over Gmail or any web based email including private mail servers, if internet access is through a Linux box running Ip Tables/Squid etc. We are looking for a free/open source tool. Can this be a",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Compliance/e-discovery - message and SMS text archiving",
+    "body": "I work in the financial trading industry and have a forthcoming regulatory requirement to begin archiving electronic communications. This includes social media, instant messaging (e.g. AIM and Yahoo Messenger) and SMS/text messages. We have a good em",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: Secure email provider",
+    "body": "I was looking for a secure email address. After some research, Protonmail, although it looks good, and has a A+ SSL rating, can't be used with POP3/IMAP, only with their proprietary API with their web client or mobile client, and that is a deal break",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "How to improve DMARC Compliance?",
+    "body": "I've been monitoring our DMARC compliance with policy \"p=none\" for a month or two using both dmarcian and dmarcanalyzer. I've noticed that when we send a large email marketing campaign (10k+ emails), there is a spike in mail that fails DMARC that see",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "receiving phishing/spam from known address names and localhost",
+    "body": "We are using SmarterMail 11.2 and are receiving spam from senders in our address book (name only, different email). In the header i see \"Received: from localhost\" and other suspicious things. In the past this would be a compromised email account but ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Phishing/Spam using old MX record for direct sending which is circumventing Mimecast",
+    "body": "We've been using Mimecast for email security for a few months now and there's been a dozen or so incidents where the phish/spam senders have utilized the old MX records to send directly to our Office 365 users which is circumventing Mimecast complete",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "reporting abuse of phishing site (email not monitored)",
+    "body": "The following server is phishing our university site: http://webmailadm-unipi-it-src-login-php.mywap.lt/main.php?z=1 Looking into WHOIS database I find a contact email (which coincides with registrar email). I send an email and the response was: Hell",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Does Office365 Compliance hold Outlook OWA ChatMessages?",
+    "body": "In Office365 (pure), if you setup an In-Place hold on an Exchange online mailbox you can do searches in Compliance Admin Centre for kind:im to get IM messages. Such searches only return Skype for Business Online chats, apparently, not OWA IM's as per",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Inbound & outbound emails marked as phishing",
+    "body": "We look after multiple Office 365 tenants for hosted Exchange email. One tenant in particular has an issue where a lot of inbound and outbound emails are marked as phishing. The domain passes all DNS checks under the Admin console, and I can't find t",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 6,
+  "keywords": [
+   "business",
+   "small",
+   "small business",
+   "security",
+   "enterprise",
+   "audit",
+   "phone",
+   "startup",
+   "data",
+   "standard"
+  ],
+  "signals": [
+   {
+    "title": "What standard alternative to ISO 27001 can be used for a small business?",
+    "body": "The business in question has high requirements for information security due to the sensitive nature of their work. The company has 5 people on staff and work with consultants from time to time. Is there another information security standard that can ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "IT Audit checklist",
+    "body": "I recently have taken on the position of a one man show for a company that is going to have an audit. The network isn't anywhere close to prepared and I have been looking for a general audit checklist since one hasn't been provided by the auditors an",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: Security at my company is horrible, what can I do?",
+    "body": "I have joined a team working on maintaining and improving an old project around 4 months ago. The code is old and with horrible practices and no regard for security. I was OK-ish with it tho, since the app is B2B and can only be accessed via a whitel",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Phone Privacy for Small Business",
+    "body": "I'm a small business operator and I'm looking for ways to provide security and reasonable privacy for my own business communications and communications of customers. All these businesses operate outside the U.S. and have no need to export their data ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "SOC 2 audit for small business (6 employees) with no IT department",
+    "body": "One of our clients is demanding that we complete a SOC 2 Type II audit. There is no way we will meet the standard, and, considering we only handle publicly available data, it is ridiculous that they are asking for one. We're talking about 6-8 Excel f",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Managing critical passwords and data across a small business with a focus on business continuity",
+    "body": "I work with a small startup in the beginning of it's life cycle. I recently raised some security concerns involving business continuity and emergency preparedness. I have been trying to make a case for the importance of having a plan for incident res",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Are Ad-hoc security testing beneficial to small business?",
+    "body": "While reflecting on enterprise scale security program, I had this question if small scale businesses benefit at all from an ad-hoc security testing ? What are some suggestions that will solve the security problems in a small organization where human ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: Security audit or certification for enterprise sales?",
+    "body": "We've recently been going through the sales process with a mid-sized enterprise. We're in the final stages, but they're got a bit scared about dealing with a startup and are requesting a security audit or accreditation. We primarily deal with SMBs, s",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Disguised user location data collection on Huawei phone?",
+    "body": "I have a family friend that is 70+ yr olds. Unfortunately, the best deal I could find for him via his AT&T prepaid plan was a $70 Huawei Ascend XT2 @ Walmart (locked to AT&T). It's performance is great: fast charging, long-lasting battery, 2G of RAM,",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Drive-by Rowhammer attack uses GPU to compromise an Android phone",
+    "body": "Pretty much ready to ditch my smartphone. iPhones are too expensive and affordable Android phones are a security mess since they never get updated.",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 7,
+  "keywords": [
+   "command",
+   "https",
+   "cli",
+   "headers",
+   "default",
+   "com",
+   "configuration",
+   "automate",
+   "run",
+   "github com"
+  ],
+  "signals": [
+   {
+    "title": "CookieStorage with httpOnly",
+    "body": "** Which Category is your question related to? ** Auth ** What AWS Services are you utilizing? ** Cognito ** Provide additional details e.g. code snippets ** I'm using Amplify with my React app and would like to secure my API using JWTs (not using AW",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Strip internal mesh-machinery headers when sending requests/responses out of mesh",
+    "body": "**Describe the feature request** In a couple of situations Istio's default configuration exposes internal mesh-machinery headers outside of the mesh; either to callers or callees. _Ingress Gateway_ * **Response** header `x-envoy-upstream-service-time",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Remove eval and Function from build to support strict CSP",
+    "body": "### Bug Report or Feature Request (mark with an `x`) ``` - [ ] bug report -> please search issues before submitting - [x] feature request ``` ### Versions. ``` @angular/cli: 1.2.0 node: 8.1.0 os: darwin x64 @angular/animations: 4.2.5 @angular/common:",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "armitage find attack tool cli equivalent command",
+    "body": "Ive been using metasploit through the cli and a little through armitage. The tool in armitage to find attacks that gives you attacks that are more likely to work is quite useful, so i was wondering what is the cli command to run that if there is one.",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Metasploit automate actions when reverse shell connects",
+    "body": "I have used metasploit's netgear_wnr2000_rce to gain root shell access on a linux embedded device (no option for payloads). I am currently automating the process, and want to run a bash script when shell access is gained. I have investigated the meta",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Tool to grab sensitive information from command lines",
+    "body": "Of the information entered on the command line (command name and arguments) have to be considered public (everyone can access it using commands like ps). Is there a known tool to automate this kind of information gathering? This tool would look regul",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Debian package shouldn't install demo configuration by default",
+    "body": "The Debian package **opendistro-security** is installing the demo configuration by default via the *postinst* script. This causes problems with the [Puppet Forge Elasticsearch](https://forge.puppet.com/elastic/elasticsearch) module which installs the",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Make Memory Sanitizer actually usable",
+    "body": "Memory Sanitizer, the tool to detect use of uninitialized memory, is ostensibly supported but has no documentation on actually using it. Simply trying to use it [like any other sanitizer](https://github.com/japaric/rust-san) produces a false positive",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "How to automate OWASP ZAP Fuzzing",
+    "body": "Is there any way I can automate fuzzing in zap. I know how to do it manually. But is there any way to create test suite and execute?",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "How to automate Nikto output?",
+    "body": "When I run Nikto, its output details all the tests it ran, but I just want the bits where it found problems. How can I set it to only show errors? JohnFF",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Setup a fuzzer",
+    "body": "I know very little about java fuzzers, but should be a great way yo find test cases for things like #22. Based on a quick search, here are some possibles. I'm most interested in a coverage based pure jvm solution preferably that is easy to setup with",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 8,
+  "keywords": [
+   "pci",
+   "pci compliance",
+   "compliance",
+   "issues",
+   "aws",
+   "software",
+   "achieve",
+   "ran",
+   "trustwave",
+   "pro"
+  ],
+  "signals": [
+   {
+    "title": "CentOS PCI Compliance assessment",
+    "body": "We are currently working our way through a PCI compliance assessment on our server running CentOS. We are getting a lot of 'severe' issues with suggested fixes. The suggestions to rectify the issues are mostly to update the packages to the latest ver",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "PCI Compliance: File Integrity Checkers",
+    "body": "We're looking for a file integrity checker for our windows server environment. Anyone have any good suggestions?",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "TrustWave PCI Compliance - OpenSSH",
+    "body": "First time 'asker' on here, but wanted to say thanks to how much I've used this site and reading answers to questions I've had! Anyway, lately I've been having issues with a customer of ours who's server is failing the PCI Compliance scan from Trustw",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Has anyone achieved Level 1 PCI compliance on AWS?",
+    "body": "All the FAQs, documents and statements published by AWS aside, did any Level 1 merchant actually achieve PCI compliance on AWS yet? We're evaluating moving some of our services to EC2/VPC, but our auditor is saying that AWS hadn't been cooperative wh",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "PCI Compliance Scans",
+    "body": "I'm hoping to find a piece of software to assist me in catching PCI compliance failures in advance of the actual ASV scans. I would much prefer to run the scans against myself before I request another company to do so. Is there any software out there",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "PCI Compliance question from a merchant",
+    "body": "I'm a new business that conducts online auctions for estate sales. When searching for software to use, I had no idea about PCI Compliance. My merchant account told me it was easy. It would be if the developer of the software had created a hosted form",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Using EventStore For PCI Compliance?",
+    "body": "I have been hearing a lot of good things about EventStore 3 and am looking to upgrade my server event forwarding systems for PCI compliance next year and was wondering if anyone had looked at the possible uses of EventStore in a PCI logging scenario.",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Magento CE PCI Compliance",
+    "body": "We are currently trying to achieve PCI compliance using Trustwave's vulnerability scanner. The Magento version is 1.5.1.0, running on CentOS 5. We am down to the last issue according to the PCI Compliance report. We have disputed the issue but they h",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Justification for PCI DSS compliance",
+    "body": "I had a software for firewall analyzer, it had an issue and stopped from working. The problem is I lost all the logs was collocated from this application, I contacted the support team but they couldn't do anything. My question is: for PCI DSS complia",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Win XP Pro, IIS 5.1, PCI Compliance",
+    "body": "I have a client that was scanned and determined not to be PCI Compliant. I looked and they had IIS setup to allow a program from central office to push/pull info from their server. Many of the reasons they failed appeared to have been fixed in SPs (t",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Service to help with PCI compliance?",
+    "body": "We received an alert that we need to correct some issues with PCI compliance. Is there a service we can use to quickly resolve these issues? The auditing firm issuing the alert provides uninformative messages and instructions on how to correct the er",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 9,
+  "keywords": [
+   "pci",
+   "version",
+   "scan",
+   "compliance",
+   "pci compliance",
+   "php",
+   "14",
+   "amazon",
+   "pci dss",
+   "dss"
+  ],
+  "signals": [
+   {
+    "title": "PCI Compliance: install Apache 2.4.17 on Ubuntu 14.04.3?",
+    "body": "I have a VPS running Ubuntu 14.04.3. The latest Ubuntu-supported version of Apache for this release is Apache 2.4.7. But the company for which I configured the server is seeking PCI compliance, and has been denied due to security vulnerabilities patc",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ubuntu PCI-DSS Compliance Issue",
+    "body": "I'm trying to get PCI compliant and the PCI scanning company is flagging our Ubuntu 12.04 PHP 5.3.10-1ubuntu3.9 for CVE-2013-1635. According to http://people.canonical.com/~ubuntu-security/cve/2013/CVE-2013-1635.html the Ubuntu response is \"We do not",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Failed PCI-DSS Compliance | Submitting Evidence",
+    "body": "One of our web servers that is managed by a service provider (completely in their control, we have no login access) just failed PCI-DSS vuln. scan by TrustKeeper. The vuln scan detected the box as a Windows Server 2003 SP1 OS (extremely out of date).",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "PHP and PCI Compliance",
+    "body": "I have a web server that needs to pass a PCI compiance scan by ControlScan. Everything is good except for a scan they did of the PHP version. I believe I have the latest version that CentOS provides. Here's what they had to say: THREAT REFERENCE Summ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "PCI compliance Apache versions",
+    "body": "We are working with current version of Apache 2.4. 6 available in a Centos 7 repos. Installed with yum. and we are dealing with the PCI compliance and the report says: IP Address: x Host: x Path: THREAT REFERENCE Summary: vulnerable Apache version: 2",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "OpenSSL version causes PCI Compliance failure",
+    "body": "We have a client on AMI Linux (Amazon), which is currently using OpenSSL 1.0.1k-15.99. As far as I can tell Amazon is very good about backporting security patches as per this page: https://alas.aws.amazon.com/ And they have stated in more than one pl",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "PCI Compliance Distibution",
+    "body": "I run a small e-commerce website hosted on a dedicated server with Debian 6 Squeeze. I need to become PCI compliant (the card industry standard for security). Therefore I have registered with TrustWave TrustKeeper which scans my site for potential se",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Debian Stretch - PCI Compliance issue with OpenSSH version",
+    "body": "One of the servers I look after is failing a PCI Compliance ASV scan. The warning being picked up is: The SSH server running on the remote host is affected by an information disclosure vulnerability. According to its banner, the version of OpenSSH ru",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "PCI Compliance Apache Shiro fail",
+    "body": "On a CentOS LAMP box, a PCI compliance scan is failing on: Apache Shiro URI Path Security Traversal Information Disclosure http/80 As far as I can tell the server doesn't have Shiro installed, unless it's built in to Apache. I can't find any trace of",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Network scan for vulnerabilities free tool",
+    "body": "I have a huge distributed network with over 1000 servers and network devices. It is mix of operating systems. I'm looking for some free tool to scan network for SSL v2, SSL v3, RC4,TLS v1.0 and older. For example https://www.ssllabs.com/ssltest suits",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "PCI DSS Compliance on Ubuntu 10.04 LTS",
+    "body": "My company's web server has recently failed our quarterly PCI scan on the basis of the Apache HTTPOnly Cookie Disclosure, a vulnerability only fixed from apache 2.2.22 onwards. I'm currently running Ubuntu 10.04 LTS with apache 2.2.14 and have search",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 10,
+  "keywords": [
+   "key",
+   "encrypted",
+   "keys",
+   "encryption",
+   "private",
+   "private key",
+   "tls",
+   "text",
+   "time",
+   "edit"
+  ],
+  "signals": [
+   {
+    "title": "Filter TLS in Wireshark or other monitoring tool",
+    "body": "As part of the new best practices in hardening server communications I need to deny TLS 1.0 on the web server, before doing so I wish to identify the number of clients who connect with this level of encryption. Therefore I would like to know how to f",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "proposal: math/big: support for constant-time arithmetic",
+    "body": "# Problem: Constant-Time Arithmetic for Cryptographic Uses The math/big package naturally and inevitably gets used for cryptographic purposes, including in the standard Go crypto libraries. However, this usage is currently unsafe because math/big doe",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "SQL Server encryption - rotate keys for PCI compliance",
+    "body": "PCI compliance requires annual rotation of keys. The definition of \"rotation of keys\" that I keep coming across is decrypting your data, then re-encrypting with a new key. Really? Everyone out there is decrypting / encrypting all their encrypted data",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Is it possible to automate use of passphrase-encrypted private keys?",
+    "body": "Suppose I have a public/private keypair, which I would like to use to serve HTTPS from a webserver. The part I'm worried about is this: the private key is encrypted with a passphrase, so that if an attacker gains access to my webserver he doesn't get",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: Practical way to use encrypted email?",
+    "body": "I am looking for a practical way to do encrypted email and want to start phasing it in with friends, family and business partners (whenever possible) during the next few days. I am thinking of a solution that is easy to set up and feels clean, transp",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Cryptography key gathering tool",
+    "body": "I am wondering if there exist a tools which can return the value of the one of the private key if the following are known: 1) Encryption Algorithm 2) Public key 3) Plain text 4) Cipher text Or may be there a special methodology how to obtain that. I ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Encryption tool that supports multiple separate decryptions?",
+    "body": "Is there a tool that will allow me to encrypt n plaintexts with n corresponding keys such that: the cipher text is one file with no clue as to the value of n. decrypting with key i (1<=i<=n) produces plaintext i. n > 1 Edit: an example of a scheme th",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 11,
+  "keywords": [
+   "computer",
+   "services",
+   "audit",
+   "netherlands",
+   "testing",
+   "spain",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "signals": [
+   {
+    "title": "France-Le Havre: Computer audit consultancy and hardware consultancy services",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Netherlands-Utrecht: Computer audit and testing services",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Netherlands-Amersfoort: Computer audit and testing services",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "France-Modane: Computer audit services",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Spain-Vitoria-Gasteiz: Computer audit services",
+    "body": "",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "France-Le Bourget-du-Lac: Computer audit services",
+    "body": "",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 12,
+  "keywords": [
+   "yum",
+   "security",
+   "hard",
+   "make",
+   "expensive",
+   "centos",
+   "like",
+   "lock",
+   "important",
+   "hasn"
+  ],
+  "signals": [
+   {
+    "title": "Server room door security",
+    "body": "I wanted to know if anybody had any recommendations as to how to keep the server room secure from employees. There is a lock on the door, however, anybody with a building master (maintenance, owners, custodians, etc) can open it. It would be nice if ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "yum-security for CentOS?",
+    "body": "Last time I checked I was able to install yum-security in CentOS but since it doesn't use the official redhat mirrors I was unable to get it to actually work. Is there a way to make yum-security work or is there an alternative to yum-security on Cent",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: If security is so important, why do we make it so hard?",
+    "body": "I think we can all agree that server security is important, and general security like protection from man in the middle attacks. So why do we make it so hard? Why hasn't anyone taken up the mantel to automate even the basics like securing common serv",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ask HN: Security at my company is horrible, what can I do?",
+    "body": "Decide whether you're willing to leave the company or lose your job over this. It's not popular to say, but there are enough companies that will manage out individuals that bring up issues like this because there's no management backing and then it j",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Why I don't like smartcards, HSMs, YubiKeys, etc.",
+    "body": "That was exactly my problem. Also, the consultant they sent to help us with it didn't know anything about Linux when they knew that was our platform. I'd love to get hold of one of my old units from that vendor and try to attack it. I assume it hasn'",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Salted Password Hashing \u2013 Doing It Right",
+    "body": "I assess the vulnerability of applications for a living and I have been told over and over again by dev groups and ops that they can't upgrade their systems because it is too expensive. That's fine, but you need to understand you are making a securit",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 13,
+  "keywords": [
+   "audit",
+   "user",
+   "log",
+   "local",
+   "root",
+   "months",
+   "possible",
+   "password",
+   "policy",
+   "domain"
+  ],
+  "signals": [
+   {
+    "title": "Our security auditor is an idiot. How do I give him the information he wants?",
+    "body": "A security auditor for our servers has demanded the following within two weeks: A list of current usernames and plain-text passwords for all user accounts on all servers A list of all password changes for the past six months, again in plain-text A li",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Disable audit of Logon Logoff",
+    "body": "I have a SBS 08 with 50 users on my domain. In Event Viewer : Windows Logs > Security, I've got nearly 300,000 events about EventID 4624 Logon, 4634 Logoff, 4776 Credential Validation, 4769 Kerberos Service Ticket Operations in only... 2 days !!! I w",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Password change audit on solaris",
+    "body": "Is it possible for the Solaris audit sub system to log all password resets for local Solaris accounts? I can't find anything in Oracle's docs, or through general googling, so I'm curious whether this can be done, or if this is a technical limitation ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "AD Logon Audit for User",
+    "body": "I would like to audit a user's last logons - unfortunately we have 10 domain controllers and no centralized logging software. My question is what is the best way to request the last 'n' logon events from user 'x'. I then plan to do a $PS-Session to e",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Office365 Audit Log",
+    "body": "We have Office365 E3 and know the 90 day history restriction. Go forward we may use AdminTool or a script to log and build our own database. However is there a way to access a longer history because we wish to inspect the log for previous months (say",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Exchange 2010 security audit",
+    "body": "Our IT department has received reports from HR that managers are reading their subordinates email, and we've been tasked with identifying if there is a technical way to achieve this. I'm looking for help identifying if this is possible or not. We hav",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Keep Root Account Audit Trail",
+    "body": "I am the owner of a company. I want to keep an audit trail of our Unix administrator who has root access to the CentOS system. How can I configure it such that the audit trail cannot be bypassed and erased even for Root user? Thanks in advance!",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Enterprise Wide GPO Audit",
+    "body": "How can I generate a report of users who are exempt from a specific GPO? HR is asking me for a report of users who are exempt from an inactivity lockout group policy. Is there a way to run an automated report or is this something I'll need to do manu",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 14,
+  "keywords": [
+   "session",
+   "logs",
+   "database",
+   "logging",
+   "query",
+   "server",
+   "log",
+   "commands",
+   "simple",
+   "login"
+  ],
+  "signals": [
+   {
+    "title": "Terminal Server Logging",
+    "body": "Is there a simple utility to log terminal server use? I'd like to be able to do some simple monitoring of our terminal server and don't seem to be able to find any good way to do it. I'd want to track logins, session durations, disconnections, and fa",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "SSH session logging",
+    "body": "We have a policy of logging all SSH session activity for CYA purposes with our clients. With PuTTY under windows this is trivial, as we can log each session to a file using PuTTY's built-in logging facility . But when working from Linux workstations,",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "local mysql was hacked with ransomware hack. How to check if database data was downloaded?",
+    "body": "I had a test mysql database running on Vagrant dev box. Turns out the network wasn't that secure. All of the databases were deleted (and replaced with a DB ransomware note) and in the logs I can see all of the drop db commands. However, I don't see a",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Feature request: Pre/post query SQL for row level security",
+    "body": "In order to support querying a database with row level security (implemented via views in SQL server), we need to run some SQL before/after each query. In our case, we want to run something like ```exec sp_SetUserContext @CurrentUserId``` before ever",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Cloudwatch logs - audit user access",
+    "body": "I have a list of users in .passwd and access_log being uploaded to Cloudwatch. I need to make weekly report who from this list did access to server. Is there any way to automate this rather than checking logs manually for each user? There are several",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "User login monitoring tool",
+    "body": "Our client has a Windows workgroup LAN with a UNIX/Oracle database server. We want a tool which can log login/logout details of network users to the database server. The problem is that we can't access the database server, although that would have be",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Exchange Admin Audit log",
+    "body": "i was looking at the admin audit logs today and found it very usefull. But it doesn't include the source computer launching the commands. An example, i have the EMC on my computer modifying some distribution list on exchange which is a different mach",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Add/use visual indicator of VPN connection status in Gnome system tray.",
+    "body": "When connecting to a VPN using the Gnome desktop network manager, a visual indicator of the VPN connection status is displayed in the persistent menubar at the top of the screen. However, this tool only allows one to specify a single OpenVPN connecti",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 15,
+  "keywords": [
+   "pci",
+   "compliance",
+   "docker",
+   "environment",
+   "pci compliance",
+   "card",
+   "terminal",
+   "pdf",
+   "currently",
+   "customer"
+  ],
+  "signals": [
+   {
+    "title": "How to Isolate PCI Compliance",
+    "body": "We currently process, but do not store, credit card data. We authorize the cards via a self developed application using the authorize.net API. If possible, we would like to limit all requirements of PCI that effect our servers (such as installing Ant",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "PCI Compliance Problem",
+    "body": "My company is trying to become fully PCI Compliant and we are switching our outdated systems to use Authorize.net CIM among other things. But, currently we're all over the place and until our new database management system gets updated, I don't have ",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Virtual terminal PCI compliance",
+    "body": "The PCI DSS compliance rules say that if we use any computers to take card payments via a web based virtual terminal, then those PCs must be isolated from the rest of the IT network (otherwise the entire IT network comes under the scope of PCI compli",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "PCI Compliance - Encrypted Mobile Apps",
+    "body": "My company (health care) went through a PCI audit and needs to solve some major issues. Our branches collect CHD on paper and saves them to a network drive as a pdf that our corp office accesses to enter into Paymentech and charge them ongoing everch",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Docker / LXC and PCI-DSS Compliance",
+    "body": "We are in payment space and we have built out a lot of our processes in Docker for development environment purposes. Now, we are thinking about converting our production environment which is in Xen (HVM) farm into Docker/LXC environment to keep both ",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 16,
+  "keywords": [
+   "ransomware",
+   "server",
+   "file server",
+   "file",
+   "network",
+   "deleted",
+   "windows",
+   "files",
+   "malware",
+   "running"
+  ],
+  "signals": [
+   {
+    "title": "Restore Shadow Copy Deleted by Ransomware",
+    "body": "I got hit by the latest version of Crysis ransom ware on 14/09. I was lucky enough to pull the cable on the infected PC before it could spread to all servers on my network. However, it did spread to a file server (Server 2008 R2). The server has been",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Prevent Network Ransomware Malware Attack?",
+    "body": "I have a small network of Windows 7 PCs. I want to use a Windows NAS file server as a repository to safeguard the backup files from each Windows PC against a ransomware attack. In order for this strategy to work I need to be able to dynamically conne",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Ransomware infection: What to do",
+    "body": "t seems that somehow our domain computers have been infected by rasomware, turning files into encrypted files ending with .crypted. Lots of file have been changed and we do have back up. At the same time, scanning for actual malware/virus/trojan have",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Detecting .Money Ransomware on Windows Server 2019",
+    "body": "Problem A few weeks back we got hit with a Dharma Ransomware variant called \"Money\". We made the incorrect assumption that this variant began right at the time the user opened the malicious attachment or link. Saturday we found out that it was actual",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Sage2.0 Ransomware and Tomcat 7",
+    "body": "We have a tomcat server running on window 2012 server which seems to be constantly being attached by Sage 2.0 ransomeware. Some details of the sever, 1) Tomcat is running on port 80 and 8080. 2) Cygwin is also running. 3) There is no other ports open",
+    "segment": "open-discovery"
+   }
+  ]
+ },
+ {
+  "theme_id": 17,
+  "keywords": [
+   "audit",
+   "sql server",
+   "group",
+   "audit logs",
+   "2008",
+   "server 2008",
+   "application",
+   "does",
+   "logs",
+   "sql"
+  ],
+  "signals": [
+   {
+    "title": "Sonicwall Email Security Audit Logs",
+    "body": "I have a Sonicwall Email Security appliance from which I would like to extract the audit logs on a daily basis. Currently, I can only see how to get them manually by going to the web interface. Is there a way that I can automate the process, preferab",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Audit access to USB drives",
+    "body": "Is there a way to audit access to USB drives with built-in windows logging? We already do GP based auditing on our server's NTFS file system, but how do we extend that to workstations? There are no guaranteed of what kind of file system will be plugg",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Domain controller audit log",
+    "body": "I am part of an internal software development group for an enterprise. We are being asked to build an Active Directory management web application. 1 of the primary reasons is the need to generate audit logs for operations that users do such as creati",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Amazon Workspaces - Audit",
+    "body": "Is it possible to record Amazon Workspaces for audit purpose? I think that it's a common uses case but I couldn't find any documentation nor other solutions. Basically I would like to review the client activity by recording its screen 24/7 and perhap",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "MongoDB Oplog Security",
+    "body": "We are using a MongoDB replica set for sharing sessions and other (potentially sensitive) data in a web farm. All the data we store uses TTL indexes to expire documents after a relatively short period of time (say an hour) partly for security reasons",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Dynamics CRM 4.0 Access Audit?",
+    "body": "In Microsoft Dynamics CRM 4.0, is there any way to audit what records were viewed by a particular individual at what time without any special plugins? If you need a plugin, can you install the plugin and then look at past data?",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "SQL Server 2008 Audit Service",
+    "body": "I'm designing an application that will run on SQL Server 2008 R2. There's a requirement to audit any updates to a customer table. The new Audit service that was release as part of SQL Server 2008 seemed to be a great fit. Unfortunately, although I ha",
+    "segment": "open-discovery"
+   },
+   {
+    "title": "Audit Group Object Use?",
+    "body": "Say you have a Security group. It's undocumented, nobody knows \"what\" it does, but everybody \"knows\" it is used for something. If some application (SQL Server or some random web app) for instance, uses this AD group object as a reference for certain ",
+    "segment": "open-discovery"
+   }
+  ]
+ }
+]

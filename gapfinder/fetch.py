@@ -48,10 +48,10 @@ def fetch_rendered(url: str, timeout_ms: int = 45000) -> str:
             browser.close()
 
 
-def fetch_text(url: str, render: bool = False) -> str:
+def fetch_text(url: str, render: bool = False, max_chars: int = MAX_CHARS) -> str:
     html = fetch_rendered(url) if render else fetch_static(url)
     text = extract(html)
     if not render and len(text) < 300:
         # Probably a JavaScript app shell; render it.
         text = extract(fetch_rendered(url))
-    return text[:MAX_CHARS]
+    return text[:max_chars] if max_chars else text

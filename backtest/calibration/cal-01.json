@@ -1,0 +1,146 @@
+{
+ "opening_id": "cal-01",
+ "slug": "realtime-network-malware-verdicts",
+ "name": "Project Kestrel",
+ "one_liner": "A deep-learning network sensor that classifies every file and flow at wire speed and blocks unknown malware in under a second.",
+ "buyer": {
+  "role": "CISO or head of security operations",
+  "company_profile": "Mid-size to large enterprises (1,000+ staff) in banking, insurance and state/local government that already run a firewall, sandbox and endpoint agent but still see malware slip through."
+ },
+ "user": "SOC analysts and network security engineers who triage detections and tune enforcement on firewalls, proxies and endpoints.",
+ "problem": {
+  "summary": "New malware variants appear faster than signature and sandbox pipelines can process them; sandboxes take minutes per sample and evasive samples detect them. By the time a verdict arrives the payload has spread. Security teams need a verdict at first encounter, on the wire, without baselining periods or tuning, and with enough context (family, kill-chain stage, infected hosts) to act immediately.",
+  "evidence": [
+   {
+    "claim": "Hundreds of thousands of new malware samples are registered every day, overwhelming signature-based approaches.",
+    "url": "https://www.av-test.org/en/statistics/malware/"
+   },
+   {
+    "claim": "Sandboxes detonate samples in a restricted environment, which adds latency and can be evaded by environment-aware malware.",
+    "url": "https://en.wikipedia.org/wiki/Sandbox_(computer_security)"
+   },
+   {
+    "claim": "Network detection and response products inspect traffic to detect threats that endpoint tools miss.",
+    "url": "https://en.wikipedia.org/wiki/Network_detection_and_response"
+   },
+   {
+    "claim": "Deep packet inspection allows examining full payloads in transit, a prerequisite for content-level classification on the network.",
+    "url": "https://en.wikipedia.org/wiki/Deep_packet_inspection"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "Deep neural networks that read raw bytes now beat hand-engineered features on image and speech tasks, and cloud GPU training makes it affordable to retrain daily on fresh malware. Inference on commodity hardware is fast enough for sub-second verdicts.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Network_detection_and_response",
+   "https://www.av-test.org/en/statistics/malware/"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Passive network sensor (appliance or virtual) that reassembles files and flows and runs a proprietary neural network on raw bytes",
+    "why": "Verdict at first encounter without waiting for detonation."
+   },
+   {
+    "feature": "Sub-second verdicts with threat family and indicators of compromise",
+    "why": "Analysts need to know what it is, not just that it is bad."
+   },
+   {
+    "feature": "Automated enforcement via existing firewalls, web proxies and endpoint agents",
+    "why": "Blocking without adding an inline box that could break traffic."
+   },
+   {
+    "feature": "Kill-chain view of infected hosts",
+    "why": "Helps when an attack is already in progress."
+   },
+   {
+    "feature": "SaaS management console with no baselining or tuning period",
+    "why": "Shortens time to value versus anomaly-based tools."
+   }
+  ],
+  "out_of_scope": [
+   "Inline blocking appliance",
+   "Endpoint agent",
+   "Full packet capture and forensics storage",
+   "Managed detection service"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "FireEye network security (sandbox)",
+   "url": "https://www.fireeye.com/",
+   "how_we_differ": "We return verdicts in sub-seconds on the wire instead of minutes in a detonation chamber."
+  },
+  {
+   "name": "Darktrace",
+   "url": "https://www.darktrace.com/",
+   "how_we_differ": "No learning period: a pre-trained model classifies payloads, not deviations from a baseline."
+  },
+  {
+   "name": "Vectra",
+   "url": "https://www.vectra.ai/",
+   "how_we_differ": "We classify the malicious content itself rather than inferring attacker behaviour from metadata."
+  },
+  {
+   "name": "ExtraHop",
+   "url": "https://www.extrahop.com/",
+   "how_we_differ": "Focus on malware verdicts and prevention rather than network performance and visibility."
+  },
+  {
+   "name": "Suricata / Zeek with signature feeds (free)",
+   "url": "https://suricata.io/",
+   "how_we_differ": "Detects unknown variants that have no signature yet."
+  }
+ ],
+ "differentiation": "Pre-trained deep learning on raw bytes gives a verdict at first encounter, faster than sandboxes and without the weeks-long baselining of anomaly tools, while orchestrating blocks through controls the customer already owns. Usage-based pricing on traffic actually inspected lowers the up-front hardware commitment.",
+ "build": {
+  "team": "About 30 people: deep-learning researchers, threat researchers and network engineers, with founders from large-company ML security research",
+  "months_to_mvp": 18,
+  "hardest_parts": [
+   "Keeping false positives low enough to allow automated blocking",
+   "Retraining fast enough to keep up with drift in malware families",
+   "Wire-speed inference on commodity sensors",
+   "Proving efficacy against independent test sets buyers trust"
+  ]
+ },
+ "pricing": {
+  "model": "SaaS subscription priced on traffic actually inspected; sensor hardware right-sized and bundled",
+  "entry_price": "Working assumption: about $50,000/year for up to 1 Gbps inspected",
+  "rationale": "Usage-based pricing reduces capex compared with appliance-plus-sandbox purchases and lets a buyer start on one segment.",
+  "comparables": [
+   {
+    "vendor": "Network sandbox appliances",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://www.fireeye.com/"
+   },
+   {
+    "vendor": "Anomaly-based network detection",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://www.darktrace.com/"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten security-forward mid-market firms (insurance brokers, regional banks, state agencies) with a small SOC and a recent malware incident, willing to run a passive proof of value on a SPAN port.",
+  "channel": "Direct enterprise sales with proof-of-value deployments, then value-added resellers.",
+  "wedge": "Passive deployment beside the existing sandbox to show what it missed, then turn on automated blocking."
+ },
+ "risks": [
+  "Adversarial evasion of ML classifiers",
+  "Buyers' scepticism of near-100% detection claims without independent tests",
+  "Encrypted traffic reduces payload visibility",
+  "Incumbent firewall and endpoint vendors add ML detection to existing products",
+  "Long enterprise sales cycles for a new network sensor"
+ ],
+ "riskiest_assumption": {
+  "assumption": "Security teams will pay a separate budget line for a network malware-verdict sensor next to their existing sandbox and endpoint tools.",
+  "test": "Run passive 2-week proof of value at 5 prospects on mirrored traffic and report detections their existing stack missed.",
+  "success_signal": "At least 3 of 5 prospects see confirmed misses by their current stack and request a purchase quote."
+ },
+ "open_questions": [
+  "How much traffic is encrypted at target customers?",
+  "Will buyers let a model block automatically?",
+  "Is the moat the model or the data pipeline?"
+ ]
+}

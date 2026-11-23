@@ -1,0 +1,52 @@
+{
+ "concept_id": "cal-01",
+ "lens": "competitor-analyst",
+ "round": 1,
+ "score": 4,
+ "verdict": "no-go",
+ "summary": "The competitor table omits the most dangerous rivals: NGFW vendors (Palo Alto WildFire, Cisco/Sourcefire AMP, Fortinet, Check Point) already sit on the wire, own enforcement, and are adding fast verdicts; well-funded ML file-classifier startups can extend to network. A passive sensor that enforces through those same firewalls depends on the platform most likely to absorb it.",
+ "objections": [
+  {
+   "objection": "Most dangerous competitor is missing: next-generation firewall vendors, led by Palo Alto Networks. They already reassemble files inline at wire speed, run cloud sandbox analysis with fast signature distribution, and own the enforcement point. Adding a static ML verdict to an existing inline box is an incremental feature for them, sold into the same CISO budget with no new hardware.",
+   "severity": "fatal",
+   "evidence": "concept:competitors (no firewall vendor listed); https://en.wikipedia.org/wiki/Palo_Alto_Networks (acquisitions of Morta 2014 and Cyvera 2014 show active buying of advanced-threat and prevention tech)"
+  },
+  {
+   "objection": "Enforcement is orchestrated through firewalls, proxies and endpoint agents the customer already owns, so the product's value is delivered through competitors' control points. Those vendors can rate-limit integrations or bundle an equivalent verdict, leaving the sensor as a redundant detection layer.",
+   "severity": "major",
+   "evidence": "concept:mvp.features (Automated enforcement via existing firewalls, web proxies and endpoint agents); concept:mvp.out_of_scope (Inline blocking appliance)"
+  },
+  {
+   "objection": "ML-on-raw-bytes classification is not unique: venture-backed endpoint ML vendors already classify files pre-execution with static models and are raising large rounds; extending to a network file-extraction sensor is a short step for them, and incumbent AV vendors are retrofitting ML too.",
+   "severity": "major",
+   "evidence": "https://en.wikipedia.org/wiki/Cylance (founded 2012, $42M raised by 2015 for AI-based file classification); concept:risks (incumbent vendors add ML detection)"
+  },
+  {
+   "objection": "Free stack substitute: Zeek file extraction plus Suricata plus hash/YARA lookups and a commercial sandbox already gives many SOCs file-level network visibility; the concept's only claimed edge over it is unknown-variant detection, which must be proven against independent tests buyers do not yet trust.",
+   "severity": "major",
+   "evidence": "concept:competitors[Suricata / Zeek]; concept:build.hardest_parts (Proving efficacy against independent test sets buyers trust)"
+  },
+  {
+   "objection": "NDR/anomaly vendors (Darktrace, Vectra, ExtraHop) are already selling a passive SPAN-port sensor plus SaaS console to the same buyer; adding a payload classifier is on their roadmap path and they arrive with installed sensors.",
+   "severity": "minor",
+   "evidence": "https://en.wikipedia.org/wiki/Network_detection_and_response"
+  },
+  {
+   "objection": "Encrypted traffic shrinks the payload the sensor can see, pushing classification toward endpoints and TLS-decrypting firewalls, both owned by competitors.",
+   "severity": "minor",
+   "evidence": "concept:risks"
+  }
+ ],
+ "strongest_point": "Passive deployment beside an existing sandbox showing concrete misses is a credible wedge that does not require ripping out incumbents, and sub-second verdicts address a real sandbox latency gap.",
+ "what_would_change_my_mind": [
+  "An independent test (NSS Labs or AV-TEST style) showing materially higher unknown-malware detection than WildFire/AMP at comparable false-positive rates",
+  "3 of 5 proof-of-value prospects already running a leading NGFW sandbox show confirmed misses the sensor caught",
+  "A data source or model edge that firewall vendors cannot buy or replicate within 12 months"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Palo_Alto_Networks",
+  "https://en.wikipedia.org/wiki/Cylance",
+  "https://en.wikipedia.org/wiki/Network_detection_and_response"
+ ]
+}

@@ -111,6 +111,12 @@ def test_import_regulations(tmp_path):
     assert main(["--db", str(db), "import-regulations", str(f)]) == 0
     (sig,) = list(Store(db).iter_signals())
     assert sig["source"] == "regulation" and sig["created_at"] == "2026-09-11"
+    # a second phase of the same duty is a separate signal
+    rows.append(dict(rows[0], effective="2027-12-11"))
+    f.write_text("\n".join(json.dumps(r) for r in rows))
+    assert main(["--db", str(db), "import-regulations", str(f)]) == 0
+    assert len(list(Store(db).iter_signals())) == 2
+    rows = rows[:1]
     rows[0]["segment"] = "nope"
     f.write_text(json.dumps(rows[0]))
     assert main(["--db", str(db), "import-regulations", str(f)]) == 2

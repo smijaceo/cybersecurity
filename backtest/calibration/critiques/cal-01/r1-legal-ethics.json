@@ -1,0 +1,43 @@
+{
+ "concept_id": "cal-01",
+ "lens": "legal-ethics",
+ "round": 1,
+ "score": 7,
+ "verdict": "conditional",
+ "summary": "A passive network malware sensor is a well-trodden, legally accepted category with low dual-use risk. Legal exposure sits in payload custody (reassembled files of banks and state agencies feeding a SaaS console and daily retraining), employee-monitoring and TLS-interception rules, and liability for automated blocks and efficacy claims. All are fixable with contracts, deployment design and disciplined marketing.",
+ "objections": [
+  {
+   "objection": "Data custody is undefined. The sensor reassembles full files and flows from bank, insurer and state-agency traffic and the console is SaaS; daily retraining on 'fresh malware' implies customer samples leave the premises. Files carry customer PII, financial records and possibly criminal-justice data, triggering GLBA safeguards, state privacy and breach laws, CJIS-type security policies for agencies, and GDPR transfer rules for any EU customer. Without on-prem verdicts, metadata-only cloud telemetry and opt-in sample sharing, regulated buyers' legal reviews will stall or kill deals.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[0], concept:mvp.features[4], concept:why_now.summary, concept:buyer.company_profile"
+  },
+  {
+   "objection": "Liability for automated enforcement. The product pushes blocks to firewalls, proxies and endpoints from a model verdict. A false positive that blocks a payment file, a 911/benefits system update or a critical vendor patch creates contractual and possibly regulatory exposure for both the customer and the vendor. Contracts need liability caps, customer-approved enforcement policies, human-in-the-loop defaults and audit logs of each automated action.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[2], concept:build.hardest_parts[0], concept:open_questions[1]"
+  },
+  {
+   "objection": "Efficacy marketing risk. The concept itself anticipates 'near-100% detection' claims. Unsubstantiated detection-rate claims invite FTC Section 5 deception exposure, warranty disputes after a breach the product missed, and vendor-certification fights; independent test results must exist before such claims are made.",
+   "severity": "minor",
+   "evidence": "concept:risks[1], concept:build.hardest_parts[3]"
+  },
+  {
+   "objection": "Payload inspection of employee and citizen traffic: interception laws (US ECPA business-use/consent exceptions, two-party-consent states, EU works-council and proportionality rules for workplace monitoring) are satisfiable by the customer, but the vendor should ship deployment guidance, consent-banner templates, data-minimisation settings (e.g. skip health/banking categories when TLS decryption is used) and a DPA. Encrypted-traffic decryption, if added, sharpens this.",
+   "severity": "minor",
+   "evidence": "concept:problem.evidence[3], concept:risks[2]"
+  },
+  {
+   "objection": "Low but real dual-use: a fast byte-level verdict oracle (and any public scanning endpoint) can be used by malware authors to test evasion. Keep verdict APIs authenticated and rate-limited and do not offer a free public upload service.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Passive, SPAN-port deployment that enforces through controls the customer already owns is a conventional, legally accepted security architecture with minimal abuse potential.",
+ "what_would_change_my_mind": [
+  "A data-flow design where verdicts run on the sensor and only hashes/metadata leave the network by default, with opt-in sample sharing.",
+  "A standard DPA and liability-capped MSA accepted by legal teams at 2 of the first 5 regulated prospects (a bank and a state agency).",
+  "An independent efficacy test published before any detection-rate marketing."
+ ],
+ "resolved_prior": [],
+ "sources": []
+}

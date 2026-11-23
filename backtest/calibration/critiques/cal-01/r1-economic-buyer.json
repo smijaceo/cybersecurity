@@ -1,0 +1,46 @@
+{
+  "concept_id": "cal-01",
+  "lens": "economic-buyer",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "As a CISO I already pay for firewall, sandbox and EDR; this is a fourth malware-prevention line with no regulatory or audit driver. I would buy only after a passive proof of value shows confirmed misses by my stack, low false positives, and independent test results, and probably by deferring a sandbox renewal rather than adding net-new budget.",
+  "objections": [
+    {
+      "objection": "No dedicated budget line: the buyer already funds firewall, sandbox and endpoint for the same malware-prevention outcome, so this must displace an incumbent renewal (likely the sandbox) rather than add spend; the concept positions it beside the sandbox, which doubles cost instead of replacing it.",
+      "severity": "major",
+      "evidence": "concept:riskiest_assumption.assumption; concept:buyer.company_profile; https://en.wikipedia.org/wiki/Network_detection_and_response (NDR competes against SIEM and XDR for security budgets)"
+    },
+    {
+      "objection": "Nice-to-have, not must-have: no regulation, audit finding or insurance requirement mandates network malware verdicts; the only compelling trigger is a recent incident, which narrows the buyable pool to post-breach accounts.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.first_customers"
+    },
+    {
+      "objection": "CFO justification is weak without trusted proof: claims of near-100% detection are discounted unless backed by independent lab tests, and the concept lists such proof as a hardest part rather than a launch asset.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts; concept:risks"
+    },
+    {
+      "objection": "Prevention value depends on auto-blocking through my existing controls, which I will not enable until false positives are proven low; detection-only reduces it to another alert source for an already stretched SOC, which is harder to justify at $50k/year.",
+      "severity": "minor",
+      "evidence": "concept:open_questions; concept:pricing.entry_price"
+    },
+    {
+      "objection": "Growing encrypted traffic shrinks what the sensor can see, eroding the ROI case over the contract term unless decryption is already in place.",
+      "severity": "minor",
+      "evidence": "concept:risks"
+    }
+  ],
+  "strongest_point": "Passive SPAN-port proof of value beside the existing sandbox produces a concrete 'what your stack missed' report, exactly the artifact a CISO needs to justify spend to a CFO.",
+  "what_would_change_my_mind": [
+    "3 of 5 proof-of-value prospects find confirmed misses their sandbox and EDR did not catch",
+    "Fewer than 1 false positive per day at 1 Gbps, enough to enable auto-blocking",
+    "An independent lab test placing it at or above incumbent sandboxes",
+    "At least 2 buyers agree to fund it by not renewing their sandbox"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Network_detection_and_response"
+  ]
+}

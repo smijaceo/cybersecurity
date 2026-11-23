@@ -1,0 +1,47 @@
+{
+  "concept_id": "cal-02",
+  "lens": "market-skeptic",
+  "round": 1,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "Cloud misconfiguration risk is real and budgeted (a quote-based CSPM category already exists, compliance audits force spend), and the target base is large. But the concept proves none of its own demand: evidence is four Wikipedia pages, no buyer interviews, an empty input file, and the engineer-pays-vs-security-pays question is unresolved.",
+  "objections": [
+    {
+      "objection": "Demand evidence is generic background, not buyer pain. Every evidence item is a Wikipedia article establishing that IaC exists and misconfigurations happen; there are no interviews, survey data, incident counts or quotes from the named buyer (VP Eng / DevOps head / cloud CISO) saying this is an urgent, funded problem.",
+      "severity": "major",
+      "evidence": "concept:problem.evidence; input:themes and flagged_claims are empty"
+    },
+    {
+      "objection": "Buyer and user are split and the budget owner is unknown. Engineers adopt the free scanner, but the concept expects CISOs to pay; at 100-5,000 staff companies with 'small or no security team' there may be no CISO budget at all, and engineering leaders rarely budget for security tooling. The concept itself lists 'Who owns the budget?' as open.",
+      "severity": "major",
+      "evidence": "concept:open_questions; concept:buyer.company_profile; concept:go_to_market.channel"
+    },
+    {
+      "objection": "The validation test measures developer curiosity, not purchase intent. 500 repos running a free scanner in 2 weeks is GitHub adoption; 10 inbound 'requests' is not 10 budgets. Two weeks is also too short to see enterprise buying behaviour.",
+      "severity": "major",
+      "evidence": "concept:riskiest_assumption"
+    },
+    {
+      "objection": "Free substitutes cap willingness to pay for the core pain. Cloud Custodian already offers real-time policy enforcement, multi-cloud support and a Terraform shift-left mode for free, and AWS Config is bundled; many teams will judge 'good enough' before paying per resource.",
+      "severity": "minor",
+      "evidence": "https://cloudcustodian.io/"
+    },
+    {
+      "objection": "Per-resource pricing at about $10/resource/month implies $10k+/month for a modest 1,000-resource estate, which may exceed what a startup-stage buyer with no security team will pay and shrinks the reachable market to larger accounts.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price"
+    }
+  ],
+  "strongest_point": "Misconfiguration is the dominant cloud breach cause under shared responsibility, compliance audits (SOC 2, PCI) create a budgeted trigger, and tens of thousands of Terraform-on-cloud companies exist.",
+  "what_would_change_my_mind": [
+    "15+ discovery interviews where at least 5 target companies (Terraform on AWS, SOC 2 pending) name a specific budget owner and amount for IaC/cloud posture tooling",
+    "3+ signed paid pilots or LOIs at or near the stated per-resource price",
+    "Evidence that existing CSPM buyers are dissatisfied with runtime-only, security-console tools"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Infrastructure_as_code",
+    "https://cloudcustodian.io/",
+    "https://en.wikipedia.org/wiki/Cloud_computing_security"
+  ]
+}

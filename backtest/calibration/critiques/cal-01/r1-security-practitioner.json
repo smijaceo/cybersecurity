@@ -1,0 +1,48 @@
+{
+ "concept_id": "cal-01",
+ "lens": "security-practitioner",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "Passive SPAN deployment beside the existing sandbox is an easy, low-risk trial that SOCs accept, and family/IOC context fits triage. But payload classification goes blind on TLS without decryption, an opaque neural verdict is hard to trust for automated blocking, and out-of-band blocking via firewalls/EDR is post-delivery, so risk reduction depends on unproven precision and integrations.",
+ "objections": [
+  {
+   "objection": "Encrypted traffic: a passive SPAN sensor cannot reassemble files inside TLS. Most web and email-delivered payloads ride HTTPS/SMTP-TLS, so without a decryption point (which the MVP excludes by ruling out an inline appliance) the core 'classify every file at wire speed' claim covers a shrinking slice of traffic. Practitioners will ask this first in any proof of value.",
+   "severity": "major",
+   "evidence": "concept:risks (Encrypted traffic reduces payload visibility); concept:mvp.out_of_scope (Inline blocking appliance); concept:open_questions"
+  },
+  {
+   "objection": "Automated blocking on an opaque deep-learning verdict will not be switched on by a SOC until precision is proven in their environment; one blocked line-of-business installer or signed update is enough to get it turned off. The concept offers no explainability, allow-listing workflow or confidence thresholds, and treats near-zero false positives as an engineering task rather than a trust-building workflow.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts (Keeping false positives low enough to allow automated blocking); concept:open_questions (Will buyers let a model block automatically?)"
+  },
+  {
+   "objection": "'Blocks in under a second' is overstated for an out-of-band sensor: by the time a verdict is pushed to a firewall, proxy or EDR, the file has already been delivered. Real value is fast containment (block C2, quarantine host), not prevention, and each enforcement integration (multiple firewall, proxy and EDR vendors, each with its own API) is a maintenance burden and a new privileged credential the SOC must grant.",
+   "severity": "major",
+   "evidence": "concept:one_liner; concept:mvp.features (Automated enforcement via existing firewalls, web proxies and endpoint agents); concept:mvp.out_of_scope"
+  },
+  {
+   "objection": "Adversarial evasion of raw-byte classifiers (padding, appending benign bytes, packing) is a known weakness; attackers can test against the model if it ships on sensors. Without independent test results (e.g. third-party labs) practitioners will treat the detection claims as marketing.",
+   "severity": "minor",
+   "evidence": "concept:risks; concept:build.hardest_parts (Proving efficacy against independent test sets buyers trust)"
+  },
+  {
+   "objection": "Another console and another alert stream. Unless verdicts flow into the SIEM/SOAR the team already uses, analysts gain work rather than lose it; the MVP lists a SaaS console but no SIEM integration. The SaaS console also means sending file metadata or samples off-premises, which banks and government buyers may restrict.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features (SaaS management console); concept:buyer.company_profile"
+  }
+ ],
+ "strongest_point": "Passive SPAN-port proof of value next to the existing sandbox, showing concrete misses, is a low-risk, credible trial SOC teams readily agree to.",
+ "what_would_change_my_mind": [
+  "Proof-of-value data from 5 prospects showing that over 50% of malicious files were visible in cleartext or via an existing decryption point.",
+  "False-positive rate under 1 per 10,000 files with zero blocked business-critical software over a two-week trial.",
+  "At least 2 of 5 SOCs enabling automated containment after the trial.",
+  "An independent third-party efficacy test buyers recognise."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://www.av-test.org/en/statistics/malware/",
+  "https://en.wikipedia.org/wiki/Network_detection_and_response",
+  "https://en.wikipedia.org/wiki/Sandbox_(computer_security)"
+ ]
+}

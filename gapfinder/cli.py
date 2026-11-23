@@ -363,7 +363,9 @@ def cmd_import_regulations(args) -> int:
         return 2
     sigs = [Signal(
         source="regulation",
-        native_id=hashlib.sha1(f"{r.regulation}|{r.article}|{r.obligation}".encode()).hexdigest()[:16],
+        # effective date is part of the key: phased duties with the same text stay separate
+        native_id=hashlib.sha1(
+            f"{r.regulation}|{r.article}|{r.obligation}|{r.effective}".encode()).hexdigest()[:16],
         segment=r.segment, query="regulation-scout",
         title=f"{r.regulation}: {r.obligation}"[:300],
         body=f"{r.obligation} Applies to: {r.applies_to}. Jurisdiction: {r.jurisdiction}. "
@@ -428,7 +430,7 @@ def cmd_fetch(args) -> int:
     from .fetch import fetch_text
 
     try:
-        print(fetch_text(args.url, render=args.render))
+        print(fetch_text(args.url, render=args.render, max_chars=args.max_chars))
     except Exception as exc:
         log.error("fetch failed: %s", exc)
         return 1
@@ -559,6 +561,8 @@ def main(argv: list[str] | None = None) -> int:
     fp = sub.add_parser("fetch", help="print a web page's main text (for agents)")
     fp.add_argument("url")
     fp.add_argument("--render", action="store_true", help="render JavaScript with Chromium")
+    fp.add_argument("--max-chars", type=int, default=20000,
+                    help="truncate output (raise for long legal texts; 0 = no limit)")
     fp.set_defaults(func=cmd_fetch)
 
     args = p.parse_args(argv)

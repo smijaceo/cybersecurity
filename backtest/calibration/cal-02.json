@@ -1,0 +1,144 @@
+{
+ "opening_id": "cal-02",
+ "slug": "codified-cloud-infrastructure-security",
+ "name": "Project Larch",
+ "one_liner": "Developer-first cloud security that finds misconfigurations in infrastructure-as-code and running accounts and fixes them as code.",
+ "buyer": {
+  "role": "VP Engineering, head of DevOps/platform, or cloud-focused CISO",
+  "company_profile": "Cloud-native software companies (100-5,000 staff) on AWS/Azure/GCP that manage infrastructure with Terraform or CloudFormation and lack a large cloud security team."
+ },
+ "user": "DevOps, platform and DevSecOps engineers who own the infrastructure code.",
+ "problem": {
+  "summary": "Most cloud breaches come from small misconfigurations (public storage, open ports, missing encryption). Responsibility for infrastructure security has shifted to engineers who define it in code, but security tools alert in runtime consoles built for security teams, creating tickets instead of fixes and inflating the engineering backlog.",
+  "evidence": [
+   {
+    "claim": "Infrastructure is increasingly defined as code (Terraform, CloudFormation), so the configuration that creates risk lives in repositories.",
+    "url": "https://en.wikipedia.org/wiki/Infrastructure_as_code"
+   },
+   {
+    "claim": "Terraform is a widely adopted open-source infrastructure-as-code tool spanning multiple clouds.",
+    "url": "https://en.wikipedia.org/wiki/Terraform_(software)"
+   },
+   {
+    "claim": "Misconfigured cloud storage buckets are a recurring source of data exposure.",
+    "url": "https://en.wikipedia.org/wiki/Amazon_S3"
+   },
+   {
+    "claim": "Cloud security is a shared responsibility in which customers secure their own configuration.",
+    "url": "https://en.wikipedia.org/wiki/Cloud_computing_security"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "Infrastructure-as-code has become the default way to provision cloud, so policies can be checked in pull requests and fixes delivered as code. DevOps teams now own security outcomes but existing tools are not developer-friendly.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Infrastructure_as_code",
+   "https://en.wikipedia.org/wiki/DevOps"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Open-source static scanner for Terraform and CloudFormation with hundreds of built-in policies",
+    "why": "Bottom-up adoption by engineers and a community moat."
+   },
+   {
+    "feature": "Runtime scan of cloud accounts with drift detection against the IaC",
+    "why": "Catch issues created outside code."
+   },
+   {
+    "feature": "Automated remediation delivered as pull requests or code snippets",
+    "why": "Fixes, not tickets."
+   },
+   {
+    "feature": "CI/CD and VCS integrations (GitHub, GitLab, Jenkins)",
+    "why": "Meet engineers where they work."
+   },
+   {
+    "feature": "Compliance benchmark mapping (CIS, SOC 2, PCI)",
+    "why": "Gives the security buyer a reason to pay."
+   }
+  ],
+  "out_of_scope": [
+   "Workload/container runtime protection",
+   "Agent-based host security",
+   "Network firewalling"
+  ]
+ },
+ "competitors": [
+  {
+   "name": "Check Point CloudGuard Dome9",
+   "url": "https://www.checkpoint.com/cloudguard/",
+   "how_we_differ": "Built for engineers and code, not a runtime console for security teams."
+  },
+  {
+   "name": "AWS Config (bundled)",
+   "url": "https://aws.amazon.com/config/",
+   "how_we_differ": "Multi-cloud, scans code before deployment and fixes it as code."
+  },
+  {
+   "name": "Cloud Custodian (free, open source)",
+   "url": "https://cloudcustodian.io/",
+   "how_we_differ": "Pre-deployment IaC scanning plus managed policies and remediation PRs."
+  },
+  {
+   "name": "Snyk",
+   "url": "https://snyk.io/",
+   "how_we_differ": "Focus on cloud infrastructure configuration rather than application dependencies."
+  },
+  {
+   "name": "Prowler (free, open source)",
+   "url": "https://github.com/prowler-cloud/prowler",
+   "how_we_differ": "Covers code and runtime with automated fixes, not only audit reports."
+  }
+ ],
+ "differentiation": "Shift-left by design: one policy set across IaC and runtime, remediation delivered as code, and an open-source scanner that engineers adopt freely before the company buys the platform. Sells to the CISO top-down while engineers pull it in bottom-up.",
+ "build": {
+  "team": "About 15 people: security and cloud engineers with prior security-startup founders",
+  "months_to_mvp": 9,
+  "hardest_parts": [
+   "Policy coverage across many cloud resource types and IaC frameworks",
+   "Reliable automated fixes that don't break infrastructure",
+   "Converting free open-source users to paid",
+   "Mapping runtime resources back to the code that created them"
+  ]
+ },
+ "pricing": {
+  "model": "Free open-source scanner and free community tier; paid SaaS priced per cloud resource scanned",
+  "entry_price": "Working assumption: free up to 100 resources; about $10 per resource per month beyond",
+  "rationale": "Low-friction start lets engineers adopt without procurement; per-resource pricing scales with cloud footprint.",
+  "comparables": [
+   {
+    "vendor": "Cloud security posture management platforms",
+    "price": "No public list price at the time (quote-based enterprise sale)",
+    "source": "https://www.checkpoint.com/cloudguard/"
+   },
+   {
+    "vendor": "Cloud Custodian",
+    "price": "Free (open source)",
+    "source": "https://cloudcustodian.io/"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten venture-backed cloud-native SaaS companies with Terraform-managed AWS, a small or no security team and a SOC 2 audit coming.",
+  "channel": "Open-source community (GitHub, DevOps meetups) feeding a self-serve tier, plus direct sales to CISOs.",
+  "wedge": "Free IaC scanner in CI that flags misconfigurations in pull requests."
+ },
+ "risks": [
+  "Cloud providers bundle native posture checks for free",
+  "Open-source users never convert to paid",
+  "Crowded cloud security posture market",
+  "Larger security platforms add IaC scanning"
+ ],
+ "riskiest_assumption": {
+  "assumption": "Engineering teams will adopt a security scanner in their pipelines voluntarily and their companies will pay for the managed platform.",
+  "test": "Publish the open-source scanner and measure weekly active CI usage and inbound requests for the paid tier over 2 weeks.",
+  "success_signal": "At least 500 repositories running the scanner and 10 inbound requests from companies for the paid platform."
+ },
+ "open_questions": [
+  "Who owns the budget: engineering or security?",
+  "Will automated remediation be trusted in production?",
+  "How defensible is an open-source policy library?"
+ ]
+}

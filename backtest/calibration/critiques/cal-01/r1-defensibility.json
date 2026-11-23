@@ -1,0 +1,46 @@
+{
+ "concept_id": "cal-01",
+ "lens": "defensibility",
+ "round": 1,
+ "score": 4,
+ "verdict": "conditional",
+ "summary": "The claimed moat is a proprietary raw-byte model, but models are copyable: firewall, sandbox and endpoint incumbents own the traffic, telemetry and malware corpora needed to train equivalents and can ship ML verdicts as a feature. Orchestrating blocks through their controls deepens dependence on likely copiers. Any durable edge must come from a data flywheel the concept doesn't yet describe.",
+ "objections": [
+  {
+   "objection": "The core differentiator is a technique, not a moat. Deep learning on raw bytes is published, general-purpose method; once it is shown to work, any vendor with ML staff can train a comparable classifier. The concept itself doesn't know whether the moat is the model or the data pipeline.",
+   "severity": "major",
+   "evidence": "concept:differentiation; concept:open_questions[2]"
+  },
+  {
+   "objection": "Incumbents hold the scarcer asset: labelled malware data. Firewall/sandbox vendors and endpoint vendors see vast sample volumes from installed bases and threat-intel feeds; a startup must buy or build its corpus. Data advantage runs against the entrant, so the most likely copier (a next-gen firewall or sandbox vendor) can match or beat the model within a few quarters.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts[1]; concept:risks[3]"
+  },
+  {
+   "objection": "Enforcement via the customer's existing firewall, proxy and endpoint makes the product an add-on to the very platforms that can copy it. Those vendors control the APIs, can restrict or bundle, and can pitch 'same verdict, no extra sensor'. There is no workflow lock-in when blocking lives in someone else's console.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[2]; concept:mvp.out_of_scope (no inline appliance, no endpoint agent)"
+  },
+  {
+   "objection": "Low switching costs. A passive SPAN-port sensor with no baselining is designed to be easy to try, which also makes it easy to rip out; no stored forensics or history accumulates in the product to raise exit cost.",
+   "severity": "minor",
+   "evidence": "concept:mvp.out_of_scope (no full packet capture/forensics storage); concept:go_to_market.wedge"
+  },
+  {
+   "objection": "Open-source signature engines plus ML plugins and free community models could erode the low end; NDR vendors already sell ML-based detection on the same sensor form factor and could add payload classification.",
+   "severity": "minor",
+   "evidence": "https://en.wikipedia.org/wiki/Network_detection_and_response"
+  }
+ ],
+ "strongest_point": "A 30-person specialist ML research team with a daily retraining pipeline and independent efficacy results could hold a 1-2 year execution lead and build trust incumbents' bolt-on features lack.",
+ "what_would_change_my_mind": [
+  "A data flywheel: every deployed sensor contributes new labelled samples that measurably improve detection for all customers, with detection on unseen families improving release over release",
+  "Independent test results (third-party lab) where the model beats incumbent firewall/sandbox ML on unknown samples by a wide margin, sustained over 12+ months",
+  "Evidence that customers rely on the kill-chain view and verdict history in their SOC workflow (e.g. integration into ticketing/SIEM playbooks) so removal carries real cost",
+  "Defensible IP or exclusive data partnerships (e.g. malware corpus access) that incumbents cannot replicate quickly"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://en.wikipedia.org/wiki/Network_detection_and_response"
+ ]
+}

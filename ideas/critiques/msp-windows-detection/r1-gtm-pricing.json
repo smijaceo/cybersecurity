@@ -1,0 +1,52 @@
+{
+  "concept_id": "msp-windows-detection",
+  "lens": "gtm-pricing",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Cheap, founder-sellable, low-CAC motion fits a solo founder, but the ROI pitch (GB saved) only bites for MSSPs on per-GB SIEMs like Sentinel; Wazuh, Graylog Open and Elastic self-hosted don't bill ingest, and Cribl is free to 1TB/day. A flat $249 for 50 tenants caps expansion and leaves churn-prone, copyable content as the whole subscription.",
+  "objections": [
+    {
+      "objection": "The dollar ROI behind the price applies to a minority of the named targets. Self-hosted Wazuh, Graylog Open and Elastic have no ingest fee; Wazuh Cloud is priced by agents and retention ($571/month for up to 100 agents), Huntress and Blumira are flat. Only Sentinel-style per-GB SIEMs turn 'GB saved' into cash, so the 'log diet' wedge mostly yields disk savings, not a budget line.",
+      "severity": "major",
+      "evidence": "https://wazuh.com/cloud/ ; concept:buyer.company_profile ; concept:risks[2]"
+    },
+    {
+      "objection": "The rationale says pipeline tools are priced for enterprises, but Cribl Stream's Free tier processes up to 1TB/day with unlimited pipelines, far above any 10-150-client SMB MSSP's Windows volume. The real price anchor is free (Cribl Free plus community Sysmon configs plus built-in Sysmon), so $249/month must be justified by maintenance and support alone.",
+      "severity": "major",
+      "evidence": "https://cribl.io/pricing/ ; concept:pricing.rationale"
+    },
+    {
+      "objection": "Flat $249/month for up to 50 tenants (~$5/tenant) has no expansion path: revenue doesn't grow as the MSSP adds clients, and MSPs who resell per client get no per-client SKU to mark up. At ~$3k ACV, $300k ARR needs ~100 paying MSSPs from a niche of small security-led MSPs. Per-client comparables are far higher (ADAudit Plus $495-595/yr per 2 servers; Wazuh Cloud $571/month).",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price ; concept:pricing.comparables[3] ; https://wazuh.com/cloud/"
+    },
+    {
+      "objection": "Churn risk is structural: once configs are deployed via GPO/RMM, a customer can cancel and keep running them; Sysmon/audit-policy schemas change rarely, so 'monthly maintenance' may not be felt as monthly value. Subscription retention depends on recurring deliverables (new detections, per-client reports) not yet defined.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[1] ; concept:risks[1]"
+    },
+    {
+      "objection": "First-ten plan leans on r/msp and vendor-neutral communities plus 'a few contacts'; vendor self-promotion is policed there, and the success signal (3 paid pilots and 10 pricing requests in 2 weeks) is optimistic. Pilot price ($500) and tuning price ($2,500) are inconsistent, muddying the paid-pilot test.",
+      "severity": "minor",
+      "evidence": "concept:riskiest_assumption.success_signal ; concept:pricing.entry_price"
+    },
+    {
+      "objection": "Liability for dropped events could force contract terms (indemnity caps, coverage SLAs) that a $249 subscription can't carry, lengthening procurement with MSSPs that have their own client contracts.",
+      "severity": "minor",
+      "evidence": "concept:risks[3]"
+    }
+  ],
+  "strongest_point": "Low price, open-source inbound and founder-led tuning give revenue from month one with near-zero CAC, in the founder's own specialty, sold through MSPs who already deploy via RMM.",
+  "what_would_change_my_mind": [
+    "Data showing at least 40% of target MSSPs pay per-GB ingest (e.g. Sentinel, Graylog Security)",
+    "3 pilots converting to subscriptions at a per-client price (e.g. $5-15/client/month) with 6-month retention",
+    "An RMM or SIEM vendor willing to OEM or marketplace-list the packs"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://wazuh.com/cloud/",
+    "https://cribl.io/pricing/",
+    "https://learn.microsoft.com/en-us/azure/sentinel/billing"
+  ]
+}

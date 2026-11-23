@@ -1,0 +1,51 @@
+{
+ "concept_id": "smb-compliance-reporting",
+ "lens": "competitor-analyst",
+ "round": 1,
+ "score": 4,
+ "verdict": "conditional",
+ "summary": "The concept benchmarks itself against enterprise GRC and a one-off $699 WISP, but the tax-pro niche already has vertical recurring offerings: Verito's $999/yr WISP with annual updates, and SBTPG/Watch Cloud bundling custom annually-updated WISPs, an on-call incident response team and MDR, payable from refund-transfer fees. The remaining differentiators (FTC clock, tabletop) are thin and easily added.",
+ "objections": [
+  {
+   "objection": "Most dangerous competitor is Santa Barbara Tax Products Group (Green Dot) reselling Watch Cloud Cyber Security: tiered per-device plans for tax practices with a WISP written for you, a custom WISP drafted, reviewed and updated annually, quarterly briefings, a dedicated advisor and an incident response team on standby, plus MDR, backup and phishing training. It reaches the exact buyer through the bank-product relationship they already have and lets the fee be withheld from funded tax-prep fees, so there is no cash outlay. This is the 'ongoing program plus incident help' the concept claims nobody sells, with real security controls attached.",
+   "severity": "major",
+   "evidence": "https://www.sbtpg.com/all-in-one-cybersecurity/"
+  },
+  {
+   "objection": "The competitor table and price rationale miss recurring vertical WISP offers. Verito sells its VeritShield WISP at $999 with annual updates included, aimed at tax and accounting firms, alongside FTC-compliant managed IT and hosting. At ~$1,180 in year one and $588/yr after, Safeguards Desk is not an order of magnitude cheaper than the real comparables. It sits at the same price as hosting vendors that also run the firm's infrastructure. The 'cheaper than $7.5k SOC 2 platforms' framing compares against products this buyer never considers.",
+   "severity": "major",
+   "evidence": "https://verito.com/written-information-security-plan"
+  },
+  {
+   "objection": "The differentiators are features that anyone in the niche can add within a quarter: a 30-day deadline calculator, a reportability questionnaire, a sign-off page and a 30-minute tabletop. The FTC notification itself is a short online form, and the rule's 500-consumer threshold means most 1-10 person offices rarely or never trigger it. The incident clock is a rarely used feature, not a recurring reason to pay. Hosting vendors (Rightworks, ACE, Verito) and SBTPG already market FTC Safeguards compliance and can add it to their WISP deliverable.",
+   "severity": "major",
+   "evidence": "concept:mvp.features"
+  },
+  {
+   "objection": "When an incident does happen, the cyber insurer's breach coach and panel counsel take over reportability decisions, usually for free to the policyholder. That leaves the paid incident-support allowance squeezed between the insurer and, for firms with one, the MSP. The concept itself leaves this as an open question rather than a positioning decision.",
+   "severity": "major",
+   "evidence": "concept:open_questions"
+  },
+  {
+   "objection": "Search results describe SafeGuardGRC as a GRC platform for CPA firms, tax preparers and their MSPs. It reportedly generates firm-specific WISPs, incident response plans, risk assessments and data inventories, tracks state breach-notification laws, and offers multi-tenant MSP dashboards and white-label. That would pre-empt the planned MSP white-label channel. I could not open the listing (G2 returned 403), so I treat this as unverified. A PR Newswire release about another WISP tool for tax and accounting firms (2025-26) also points to new SaaS entrants.",
+   "severity": "minor",
+   "evidence": ""
+  },
+  {
+   "objection": "Free substitutes set the price anchor: IRS Pub 5708, the Drake knowledge-base WISP guidance and the NATP resources. Tax software vendors (Drake, TaxAct, Intuit) already publish WISP content and could bundle a guided WISP and annual attestation workflow at no charge.",
+   "severity": "minor",
+   "evidence": "concept:competitors"
+  }
+ ],
+ "strongest_point": "A hands-on practitioner who actually inspects the office's M365/Windows setup and runs a tabletop is more credible than template or bank-product bundles, and fits a local, relationship-driven buyer.",
+ "what_would_change_my_mind": [
+  "Interviews with 10 tax offices using Verito, ACE or SBTPG/Watch Cloud show they got only a document: no tailored risk assessment, no tabletop and no reportability help. At least 3 of them pay a Safeguards Desk deposit anyway.",
+  "A signed referral or white-label deal with an MSP, cyber insurer or tax-software vendor that offsets the bundlers' distribution advantage.",
+  "A pricing check showing the Watch Cloud tiers cost more than 3x Safeguards Desk for a 5-device office, with no comparable incident/reportability support at the lower tiers."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://www.sbtpg.com/all-in-one-cybersecurity/",
+  "https://verito.com/written-information-security-plan"
+ ]
+}

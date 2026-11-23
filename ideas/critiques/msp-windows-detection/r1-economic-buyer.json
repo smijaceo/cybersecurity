@@ -1,0 +1,47 @@
+{
+ "concept_id": "msp-windows-detection",
+ "lens": "economic-buyer",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "As an MSSP owner, $249/month is an easy card swipe, but it is a discretionary margin optimisation, not a must-have. For my Wazuh or Graylog Open stack there is no per-GB licence to cut; on Sentinel the ingest is often billed to the client. I would buy only after the log-diet report shows saved dollars that I keep, with zero detection loss.",
+ "objections": [
+  {
+   "objection": "The savings that justify the subscription often don't land on the buyer's P&L. Graylog Open has no volume limit and Wazuh is free, so for the concept's core target the saving is only disk and compute on a self-hosted cluster. On Sentinel, MSSPs typically manage client workspaces through Lighthouse, where the client's Azure subscription pays the per-GB ingest. In both cases the MSSP owner has no ingest line to cut.",
+   "severity": "major",
+   "evidence": "https://graylog.org/pricing/ (Open: 'No volume restrictions'; licensing applies only to Enterprise/Security from 10 GB/day); concept:buyer.company_profile; concept:pricing.rationale"
+  },
+  {
+   "objection": "It is a nice-to-have, not a must-have. No regulation, audit finding or insurer requirement demands detection-mapped Windows logging packs. The concept itself lists 'do insurers ask for server logon evidence?' as an open question. Without that forcing function it competes with EDR, backup and RMM renewals for the same discretionary tooling budget, and it is the first thing deferred.",
+   "severity": "major",
+   "evidence": "concept:open_questions[4]; concept:riskiest_assumption"
+  },
+  {
+   "objection": "Flat-priced MSP SIEMs remove the cost case entirely. Huntress prices per data source with Smart Filtering and pooled allowances, and Blumira is flat per employee. An MSP owner on either has no volume bill, so the purchase rests on the logon-evidence and ransomware packs. Those overlap with Huntress/EDR detections and ADAudit-style tools the MSP may already resell.",
+   "severity": "major",
+   "evidence": "concept:competitors[2] (Huntress Smart Filtering inside its own SIEM); concept:pricing.comparables[2] (Blumira flat per employee); concept:risks[2]. https://www.huntress.com/pricing/siem returned 403; per-source pricing comes from search-result summaries only."
+  },
+  {
+   "objection": "Liability and vendor risk land on me. If a pack drops an event later needed in a client incident, my MSSP carries the blame with the client and my insurer. The packs come from a solo founder, so monthly maintenance (the thing I'm paying for) has a bus factor of one. I'd need contract terms, coverage-test evidence and an exit plan (configs stay usable if the vendor disappears) before signing.",
+   "severity": "major",
+   "evidence": "concept:build.team; concept:risks[3]"
+  },
+  {
+   "objection": "The price is so low it signals 'GitHub config with a support plan'. That makes it easy to approve but hard to rank above the free baseline. Unless the paid tier holds clearly differentiated value (per-client reports, RMM verification, release testing), I'd fork the free repo once and stop paying.",
+   "severity": "minor",
+   "evidence": "concept:pricing.entry_price; concept:pricing.model"
+  }
+ ],
+ "strongest_point": "Sentinel MSSPs paying per-GB analytics ingest (reportedly about $4.30/GB) save far more than $249/month by trimming a few GB/day, and the log-diet report gives a CFO-ready number.",
+ "what_would_change_my_mind": [
+  "Pilot data from 3+ MSSPs showing the saving lands on the MSSP's own costs (not the client's Azure bill) and covers the subscription at least 3x, with Atomic Red Team replays showing no loss of mapped detections",
+  "Evidence that cyber-insurance questionnaires or SOC 2/ISO audits of MSSP clients ask for server logon/RDP evidence or audit-policy baselines, turning the logon pack into a compliance must-have",
+  "At least 5 MSSPs that resell the monthly per-client access report as a billable line item, so the product becomes a revenue source rather than a cost",
+  "Contract terms and an escrow/perpetual-config clause that cap the MSSP's liability and vendor risk"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://graylog.org/pricing/",
+  "https://azure.microsoft.com/en-us/pricing/details/microsoft-sentinel/"
+ ]
+}

@@ -1,0 +1,53 @@
+{
+  "concept_id": "msp-windows-detection",
+  "lens": "defensibility",
+  "round": 1,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "QuietWin sells static, copyable config content, and its open-core plan gives the baseline away. MIT-licensed sysmon-modular already ships ATT&CK-mapped profiles. Sentinel ships curated Windows event sets, and Huntress filters at the source for MSPs. The only plausible moats are a cross-MSSP volume and coverage dataset, RMM deployment lock-in and founder trust. The concept builds none of them on purpose.",
+  "objections": [
+    {
+      "objection": "The product is text files. Once one paying MSSP has the packs, anyone can copy, fork or reshare them, and the open-core baseline publishes the method itself. Monthly maintenance is a service, not a moat, because a funded copier or a community maintainer can match a solo founder's update cadence.",
+      "severity": "major",
+      "evidence": "concept:pricing.model; concept:risks[1]; concept:build.hardest_parts[2]"
+    },
+    {
+      "objection": "Strong free substitutes already cover the core claim of detection-mapped, volume-tiered configs. sysmon-modular (MIT) ships Balanced, MDE-augment and other profiles, an ATT&CK Navigator coverage layer and a coverage command, and it is actively maintained. Cribl's free packs claim 25-70% Windows event size reduction, and Cribl is free up to 1TB/day.",
+      "severity": "major",
+      "evidence": "https://github.com/olafhartong/sysmon-modular ; https://github.com/criblpacks/cribl-windows-events"
+    },
+    {
+      "objection": "Microsoft is the most likely copier and can do it within a quarter. Sentinel already offers curated 'Common' and 'Minimal' Windows security event sets that cut volume while keeping an audit trail or breach signals. Microsoft owns built-in Sysmon, so it can ship a default or recommended config through Windows Update and Sentinel and Defender content at no extra charge.",
+      "severity": "major",
+      "evidence": "https://learn.microsoft.com/en-us/azure/sentinel/windows-security-event-id-reference ; concept:why_now.summary"
+    },
+    {
+      "objection": "The MSP channel is already held by bundled players. Huntress Managed SIEM filters Windows events at the source with its own EDR agent and gives MSPs free internal licenses. Wazuh, Graylog (Illuminate Sysmon content pack) and RMM vendors can add a 'recommended Windows pack' to products MSPs already pay for. Vendor neutrality matters only to MSSPs who would otherwise write the packs themselves.",
+      "severity": "major",
+      "evidence": "concept:competitors[2]; concept:risks[0]"
+    },
+    {
+      "objection": "The concept puts its few lock-in levers out of scope. With no hosted service, no customer data and no per-client state, switching cost is close to zero: an MSSP can cancel and keep the last pack version they downloaded.",
+      "severity": "minor",
+      "evidence": "concept:mvp.out_of_scope"
+    },
+    {
+      "objection": "The price is too low to fund a durable lead. At $249/month for up to 50 tenants, it takes many customers to pay for the replay test lab and multi-SIEM translations that would be the real barrier.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price"
+    }
+  ],
+  "strongest_point": "An Atomic Red Team replay lab proving that each pack keeps detections firing, plus per-client volume measurements, is hard work that copiers rarely do and could build trust.",
+  "what_would_change_my_mind": [
+    "A plan to keep coverage-test results and anonymized per-client volume and coverage benchmarks from 20+ MSSPs as a proprietary dataset that free configs cannot show",
+    "A stateful layer such as RMM-integrated per-tenant drift detection, versioned rollout history or client-facing reports that MSPs depend on monthly",
+    "A signed OEM or distribution deal with an RMM or SIEM vendor",
+    "Evidence that paying pilots renew after receiving the packs, for example 3 of 5 renew at month 3 because of updates and support"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://github.com/olafhartong/sysmon-modular",
+    "https://github.com/criblpacks/cribl-windows-events",
+    "https://learn.microsoft.com/en-us/azure/sentinel/windows-security-event-id-reference"
+  ]
+}

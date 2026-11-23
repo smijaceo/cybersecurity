@@ -1,0 +1,54 @@
+{
+  "concept_id": "smb-compliance-reporting",
+  "lens": "security-practitioner",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "A founder-run onboarding that actually checks MFA, backups and M365 settings would improve on a template-only WISP for offices with no IT. But the ongoing program is self-attested reminder emails with no technical verification. It omits the rule's monitoring, logging and scanning controls. The incident clock cannot answer the forensic questions that decide whether a breach is reportable, and it may clash with insurer breach coaches.",
+  "objections": [
+    {
+      "objection": "The program mostly produces paperwork and does little to reduce risk. After a single 90-minute point-in-time review, assurance rests on quarterly emails asking the owner to confirm that MFA is still on, leavers are removed and backups restore. Nothing connects to Microsoft 365, Google or endpoints (for example read-only Graph API checks for MFA, stale accounts, risky sign-ins or mailbox forwarding rules), so the evidence folder records what the owner says, not what is configured. Business email compromise and credential theft, the incidents most likely to hit these offices, go undetected.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[4] (quarterly reminder emails, owner-maintained evidence folder); concept:mvp.features[0] (one-off screen-share inventory)"
+    },
+    {
+      "objection": "The tailored program leaves out the technical controls the rule requires, so offices that rely on it stay non-compliant. Section 314.4(c)(8) requires monitoring and logging of authorized users' activity. Section 314.4(d)(2) requires continuous monitoring, or else annual penetration testing plus vulnerability assessments at least every six months. The MVP has none of these and explicitly puts monitoring out of scope, yet it promises a WISP and risk assessment 'mapped to 16 CFR 314.4'. An examiner or an insurer's forensics team would find the gap.",
+      "severity": "major",
+      "evidence": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.4 ((c)(8), (d)(2)); concept:mvp.out_of_scope ('24/7 monitoring or MDR')"
+    },
+    {
+      "objection": "The incident clock asks the owner the questions that decide reportability (was the data encrypted, was the key compromised, how many consumers, was data acquired) when the owner cannot answer them without forensics. Under 314.4(j) and the 'notification event' definition, unauthorized access is presumed to be acquisition unless the firm has reliable evidence otherwise. A form that records the owner's guesses as 'reasoning' can produce a confidently wrong 'not reportable' record, which is worse than having no record.",
+      "severity": "major",
+      "evidence": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314 (314.2(m) notification event: access presumed to be acquisition); concept:mvp.features[1]"
+    },
+    {
+      "objection": "In a real incident, a small firm with cyber insurance phones the insurer's hotline. Panel breach counsel then directs the response and usually wants decisions and analysis kept under privilege. A third-party SaaS timeline of reasoning and decisions, held by a non-lawyer vendor, may be discoverable, and counsel may tell the client to stop using it. That would sideline the product's flagship feature at the very moment it is meant to matter. The concept raises this only as an open question.",
+      "severity": "major",
+      "evidence": "concept:open_questions[5] (breach coach takeover unresolved); concept:mvp.features[2]"
+    },
+    {
+      "objection": "The plan to have the owner run PowerShell hardening scripts depends on access and trust. Owners without IT skills running scripts against Windows and Microsoft 365, or the founder holding admin sessions over screen-share, creates its own risk of outages or lockouts and liability exposure. Where an outside IT provider or MSP already manages the tenant, it will resist unreviewed changes. The founder becomes a privileged third party that the firm must assess under 314.4(f), and the vendor holds inventories and breach records, so it needs a security posture of its own that it can demonstrate.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[5]; concept:build.team"
+    },
+    {
+      "objection": "For the smallest target offices the pitch overstates what the rule requires. Under 314.6, firms holding data on fewer than 5,000 consumers are exempt from the written risk assessment (b)(1), the testing (d)(2), the written incident response plan (h) and board reporting (i). Many 1-3 person tax offices sit below that line, so the tabletop and the 'tested IRP' are good practice rather than legal duties. Practitioners will notice if the marketing blurs that distinction.",
+      "severity": "minor",
+      "evidence": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.6"
+    }
+  ],
+  "strongest_point": "A hands-on Windows/M365 practitioner who checks MFA, backups and accounts live, then runs a tabletop, gives no-IT offices real hygiene gains that a downloaded template never delivers.",
+  "what_would_change_my_mind": [
+    "A 10-office pilot showing that a read-only M365/Google Workspace connector (Graph API) continuously verifies MFA, stale accounts, forwarding rules and risky sign-ins, and that findings are fixed within 30 days.",
+    "The program covers 314.4(c)(8) and (d)(2), for example with an included external vulnerability scan every six months and alerting from M365 audit logs.",
+    "At least two cyber insurers' breach counsel confirm they would accept or use the incident record, or there is a documented handoff that preserves privilege.",
+    "A lawyer-reviewed decision tree that defaults to 'presume reportable, call counsel' whenever acquisition cannot be ruled out."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314",
+    "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.4",
+    "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.6",
+    "https://www.irs.gov/newsroom/irs-security-summit-remind-tax-pros-they-need-a-written-information-security-plan-to-protect-client-data"
+  ]
+}

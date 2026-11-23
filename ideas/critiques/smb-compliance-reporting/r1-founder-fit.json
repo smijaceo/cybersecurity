@@ -1,0 +1,49 @@
+{
+  "concept_id": "smb-compliance-reporting",
+  "lens": "founder-fit",
+  "round": 1,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "Buildable alone in a month, cheap to run and services-first, so it fits the founder's constraints. But the buyer is a tax-office owner the founder has no network or domain standing with, selling is seasonal and one office at a time at ~$1.2k first-year value, and the compliance and liability side is a new domain. Viable if reached through a channel the founder's Windows/M365 credibility actually opens.",
+  "objections": [
+    {
+      "objection": "No route to the buyer. The founder has 'a few industry contacts' in security, not among tax preparers, bookkeepers or mortgage brokers. Tax owners buy security from tax-industry vendors they already trust (tax software, bank-product and hosting firms such as SBTPG with Watch Cloud and Verito bundle WISP and cyber services). A solo outsider has to win association speaking slots and owner trust from zero, and the 10-clients-in-a-quarter plan assumes a network that does not exist.",
+      "severity": "major",
+      "evidence": "config/founder.yaml:constraints.network; concept:go_to_market.first_customers; https://www.sbtpg.com/all-in-one-cybersecurity/; https://verito.com/wisp"
+    },
+    {
+      "objection": "Time to meaningful revenue is long. Selling is limited to May-December, and today (late November 2026) about five weeks remain before tax season closes the window until May 2027. At $590 + $49/month, ten clients bring about $11.8k in the first year, not 'a modest founder income floor in the first quarter'. Reaching the ~$90k ARR target needs about 150 one-to-one founder sales, which is roughly two to three selling seasons.",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price; concept:pricing.rationale; concept:go_to_market.wedge; concept:risks (seasonality)"
+    },
+    {
+      "objection": "The founder would have to learn a new domain. Their Windows/M365 skills cover the hardening checklist and the technical review. But the product's value claims rest on GLBA/Safeguards interpretation, 50 state breach-notification laws, reportability decisions and possibly acting as an outsourced Qualified Individual. Learning enough to be credible and safe would take about 2-3 months, plus paying for lawyer review of the decision tree. Note that 16 CFR 314.6 exempts firms with fewer than 5,000 consumers, which covers most 1-10 person offices, from the written risk assessment, written incident response plan and testing duties. A founder who doesn't know the rule well would oversell the very features being charged for.",
+      "severity": "major",
+      "evidence": "https://www.ecfr.gov/api/versioner/v1/full/2026-11-01/title-16.xml?part=314&section=314.6; concept:build.hardest_parts; concept:open_questions"
+    },
+    {
+      "objection": "Bootstrapped cash outlay before first revenue: lawyer review of the reportability tree and E&O/cyber liability insurance, which the concept itself requires, plus association sponsorship or conference fees to get in front of owners. These are modest for a funded company but real for a founder with no capital.",
+      "severity": "minor",
+      "evidence": "concept:risks (liability and unauthorized-practice)"
+    },
+    {
+      "objection": "Service delivery scales linearly with the founder's hours. Onboarding, a yearly tabletop, incident support and reminders for 150 clients come to about 450+ hours a year on top of sales, and every hour of incident support lands at unpredictable moments. This is workable solo, but it caps growth unless a channel takes over delivery.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "One-month MVP, near-zero running costs and paid-from-day-one productized service, with Windows/M365 hardening the founder can deliver credibly and quickly.",
+  "what_would_change_my_mind": [
+    "Before May 2027 the founder lines up a channel that opens the buyer: one MSP serving 20+ accounting firms agrees to white-label or resell the program, or a state EA/tax-practitioner association books a webinar.",
+    "At least 3 signed annual agreements or 5 paid deposits come from offices outside the founder's existing contacts.",
+    "A lawyer-reviewed reportability tree and an E&O quote come in under $3k combined.",
+    "The concept is redesigned around a better fit: a fixed-fee 'M365/Windows Safeguards hardening plus a WISP that matches your setup' sold to MSPs that serve tax offices, with the incident clock added later."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://www.irs.gov/newsroom/irs-security-summit-remind-tax-pros-they-need-a-written-information-security-plan-to-protect-client-data",
+    "https://www.ecfr.gov/api/versioner/v1/full/2026-11-01/title-16.xml?part=314&section=314.6",
+    "https://www.sbtpg.com/all-in-one-cybersecurity/",
+    "https://verito.com/wisp"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "concept_id": "ai-agent-access-control",
+  "lens": "gtm-pricing",
+  "round": 1,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "The $3,500 entry price is easy for a small company to approve, but it underprices a two-week scope below the small-business pentest floor. A solo founder can't hit the stated volume. The $400 retainer competes with a $15/user self-serve tool and with free managed settings. No budget line exists yet, and the channels are slow and high-friction for an unknown founder.",
+  "objections": [
+    {
+      "objection": "The unit economics don't close. A two-week sprint covering inventory, a hands-on red team, a policy pack for four agents, CI hardening and audit setup is about 60-80 hours, which is $45-60/hour at $3,500. The rationale assumes three to four sprints a month, but one founder can deliver about two, and the build plan itself only adds a subcontractor above two a month. Selling the sprints and running the free checks also takes time, so realistic gross is about $5-7k/month, and subcontracting a tester at this price leaves almost no margin.",
+      "severity": "major",
+      "evidence": "concept:pricing.rationale; concept:pricing.entry_price; concept:build.team"
+    },
+    {
+      "objection": "The price is below market and signals junior work. Human-led LLM/agent assessments for small companies are quoted at roughly $5k-25k, and small-business pentests at about $4k-25k. Charging $3,500 for a larger scope than a pentest weakens credibility, which is already the founder's main problem. It also leaves no room for insurance, rules-of-engagement overhead or a reseller's cut.",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price; concept:risks (credibility, liability/insurance); web search of 2026 LLM security audit pricing guides (vendor blogs, unverified)"
+    },
+    {
+      "objection": "The retainer has weak value and will likely churn. At $400/month it costs about the same as Knostic Kirin Team for 25 developers ($15/user = $375/month), which enforces policy continuously and self-serve. Claude Code managed settings also give admins policy that can't be overridden, for free. Once the policy is installed, a CTO has little reason to keep paying for 'policy updates', so expect most retainers to end within 3-6 months.",
+      "severity": "major",
+      "evidence": "input:themes[0].market_research.vendors[Knostic Kirin].pricing; https://code.claude.com/docs/en/permissions.md (Managed settings section)"
+    },
+    {
+      "objection": "The buyer has no budget line, so this is a discretionary purchase. SOC 2 doesn't name coding-agent controls, and the concept lists whether auditors or questionnaires ask about them as an open question. Without that trigger, CTOs at 15-150 person companies will defer the purchase, which makes for long, uneven deal flow on a services business with no backlog.",
+      "severity": "major",
+      "evidence": "concept:riskiest_assumption; concept:open_questions[0]; concept:risks (demand risk)"
+    },
+    {
+      "objection": "The channels are high-friction for an unknown founder. In the free check, a stranger asks to run an inventory script across developers' agent configs, which is a big trust request. Cold 'exposure notes' sent to companies about their public repos can read as vulnerability shaming and convert poorly. SOC 2 consultants and vCISOs earn little reselling a $3.5k sprint (a 20% cut is about $700), so they have little reason to promote it.",
+      "severity": "minor",
+      "evidence": "concept:go_to_market.wedge; concept:go_to_market.channel"
+    },
+    {
+      "objection": "There is little room to expand. The price is capped at 25 developers in companies of 150 or fewer, and the retainer is flat. More revenue per account would need upsells such as re-tests, more seats or a later product, none of which is priced or planned.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price; concept:mvp.out_of_scope"
+    }
+  ],
+  "strongest_point": "A published fixed price under typical approval thresholds, in a market where MCP-governance vendors are quote-only, plus a cheap, concrete two-week test of whether anyone will pay.",
+  "what_would_change_my_mind": [
+    "At least 2 of 30 free checks convert to signed sprints at $6k or more (not $3.5k) within 2 weeks",
+    "2 or more SOC 2 consultants or vCISOs commit in writing to refer clients",
+    "At least 3 customer security questionnaires or auditor requests seen that ask specifically about coding-agent controls",
+    "A retainer that includes quarterly re-tests, with at least half of the first sprint customers taking it"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://code.claude.com/docs/en/permissions.md"
+  ]
+}

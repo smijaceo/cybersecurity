@@ -1,0 +1,55 @@
+{
+  "concept_id": "smb-compliance-reporting",
+  "lens": "gtm-pricing",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Owners clearly pay $699-$999 for tax-pro WISPs, so willingness to pay is real. But Verito already sells a recurring WISP ($499 first year, then $999/yr) through a 1,000-firm hosting base. That weakens 'recurring beats one-off'. A $588/yr contract sold founder-led to seasonal 1-10 person offices also faces CAC, renewal and incident-hour risk.",
+  "objections": [
+    {
+      "objection": "The positioning rests on 'recurring program beats a one-off $699 document', but a direct competitor already sells a recurring tax-pro WISP: Verito's VeritShield costs $499 for the first year, then $999/year, with unlimited plan updates all year. The concept's first year (~$1,178) costs more than Verito's, so the subscription case has to rest almost entirely on the incident clock and tabletop. The concept does not list Verito as a competitor or price against it.",
+      "severity": "major",
+      "evidence": "https://verito.com/buy-wisp-d"
+    },
+    {
+      "objection": "There is a distribution gap. Verito (hosting for 1,000+ accounting firms), ACE Cloud Hosting and Rightworks sell WISPs as add-ons to hosting their customers already pay for. The concept relies on founder-led direct sales, association webinars and 50 cold emails to win $588/yr contracts from tiny offices that are unreachable January to April. No CAC or payback model shows the channel can support this contract value. The setup fee pays for onboarding, not for acquisition.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.channel; https://www.acecloudhosting.com/written-information-security-plan/"
+    },
+    {
+      "objection": "Renewal risk is high. The trigger owners act on is the WISP attestation at PTIN renewal (a checkbox), which a free IRS Pub 5708 template already satisfies. After year 1 the deliverables are reminder emails, a 30-minute tabletop and an incident clock most clients will never use. The concept itself flags low enforcement against tiny firms, so the year-2 renewal at $588 is the weak point. Expect ACE/Verito-style churn back to a cheaper document.",
+      "severity": "major",
+      "evidence": "concept:risks; concept:riskiest_assumption; https://www.irs.gov/newsroom/irs-security-summit-remind-tax-pros-they-need-a-written-information-security-plan-to-protect-client-data"
+    },
+    {
+      "objection": "The revenue maths is optimistic. Ten clients yield about $5.9k in setup fees plus $5.9k ARR, about $11.8k in the first year, which is not a founder income floor 'in the first quarter'. Reaching 150 clients (~$88k ARR) needs about 150 closes in roughly 8 sellable months a year, with no channel partner yet.",
+      "severity": "minor",
+      "evidence": "concept:pricing.rationale"
+    },
+    {
+      "objection": "The comparables flatter the price. Secureframe, Sprinto, KnowBe4 and UK Cyber Essentials are not what a 3-person tax office compares against. The real comparables are the free IRS Pub 5708 template, the $699 ACE WISP and Verito's $499/$999 subscription.",
+      "severity": "minor",
+      "evidence": "concept:pricing.comparables"
+    },
+    {
+      "objection": "Two included hours of incident support, plus E&O/cyber insurance the concept says it needs, eat into a $588/yr contract. A real incident will run far past 2 hours, and the overage rate is not stated. One bad incident at a client could cost more than that client's lifetime value.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price; concept:risks"
+    }
+  ],
+  "strongest_point": "The concept has a concrete, regulation-anchored wedge: WISP attestation at PTIN renewal plus the FTC 30-day rule. Owners already pay $699-$999 for WISPs, so the price point is credible.",
+  "what_would_change_my_mind": [
+    "At least 5 paid deposits at $590 + $49/month in the 2-week test, including at least 2 from prospects who already hold a Verito, ACE or Rightworks WISP.",
+    "At least 6 of 10 interviewees saying they would renew for the incident clock and tabletop alone.",
+    "A written referral or co-marketing commitment from a state EA/tax-practitioner association, a cyber insurer or a tax-software vendor.",
+    "A CAC estimate under ~$300 per client from the first 10 closes."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://verito.com/buy-wisp-d",
+    "https://www.acecloudhosting.com/written-information-security-plan/",
+    "https://www.rightworks.com/?p=32699",
+    "https://secureframe.com/pricing",
+    "https://www.irs.gov/newsroom/irs-security-summit-remind-tax-pros-they-need-a-written-information-security-plan-to-protect-client-data"
+  ]
+}

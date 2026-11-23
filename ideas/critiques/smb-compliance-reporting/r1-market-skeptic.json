@@ -1,0 +1,54 @@
+{
+ "concept_id": "smb-compliance-reporting",
+ "lens": "market-skeptic",
+ "round": 1,
+ "score": 4,
+ "verdict": "no-go",
+ "summary": "The WISP duty is real across 100k+ US tax offices, but the paid features rest on duties most targets lack. Firms under 5,000 consumers need no written IR plan or risk assessment. The 500-consumer FTC clock rarely fires. No evidence comes from tax-office owners, and current spending is one-off, about $699.",
+ "objections": [
+  {
+   "objection": "The concept sells a 'tested incident response plan' and a risk assessment because 'the rule asks for a program that is tested'. 16 CFR 314.6 exempts firms holding data on fewer than 5,000 consumers from 314.4(b)(1) (written risk assessment), (d)(2) (pen testing and monitoring), (h) (written incident response plan) and (i) (annual report). That covers most 1-10 person tax and bookkeeping offices. Without a legal mandate for the parts that justify a subscription, it is a nice-to-have.",
+   "severity": "major",
+   "evidence": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.6 ; concept:mvp.features[3].why"
+  },
+  {
+   "objection": "The headline wedge, the FTC 30-day clock, only applies to events involving 500 or more consumers' unencrypted data. The IRS counted roughly 250 tax-pro breach reports in most of 2024 and nearly 300 in H1 2025, against about 129k tax-prep businesses plus CPA and bookkeeping firms. That is well under 1% of offices a year, and some of those fall below 500 consumers. A clock that almost no customer will ever use is hard to sell as a recurring need, and when it is needed the cyber insurer's breach coach usually runs the incident.",
+   "severity": "major",
+   "evidence": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.4 ; IRS IR-2024-308 and IR-2025-88 (via search results) ; concept:go_to_market.wedge"
+  },
+  {
+   "objection": "None of the demand evidence comes from the named buyer. The problem.evidence items are regulation text, a 2018 Security StackExchange post about SOC 2, a 2010 ServerFault audit checklist question, a 2022 HN comment on awareness training and vendor pricing pages. No tax-preparer, bookkeeper or mortgage-broker owner says they need an ongoing program or incident help. Engagement on the theme's need statements is 0-1.",
+   "severity": "major",
+   "evidence": "concept:problem.evidence ; input:themes[0].need_statements"
+  },
+  {
+   "objection": "Observed willingness to pay is for a one-off document bought at PTIN-renewal time ($699 ACE, Rightworks, IRS free Pub 5708 template). The W-12 line is an awareness acknowledgment, not proof the WISP is audited, and enforcement against tiny firms looks negligible. The bet that owners will move to ~$1,180 in year one and $588 a year after that has no evidence yet.",
+   "severity": "major",
+   "evidence": "https://www.acecloudhosting.com/written-information-security-plan/ ; concept:riskiest_assumption"
+  },
+  {
+   "objection": "The tax-software ecosystem already sells 'custom WISP drafted, reviewed and updated annually' plus device security in the preparer's existing purchase flow (SBTPG, Verito, Rightworks). That leaves a small remaining market of owners who want a live program but don't buy it from their software, bank-product or hosting vendor.",
+   "severity": "minor",
+   "evidence": "https://www.sbtpg.com/all-in-one-cybersecurity/"
+  },
+  {
+   "objection": "Seasonality takes about a third of the year out of selling, and the mortgage-broker segment is only asserted. Neither need statements nor counts are given for it.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts"
+  }
+ ],
+ "strongest_point": "There is a real, universal legal duty (WISP plus FTC notice) across 100k+ US tax offices, the IRS reminds them yearly, and owners already pay about $700 for the document.",
+ "what_would_change_my_mind": [
+  "At least 5 refundable deposits or 3 signed annual agreements from tax or bookkeeping offices within 2 weeks (the concept's own test).",
+  "At least 6 of 10 owners describing a real past incident where they did not know their reporting duty.",
+  "Evidence that FTC or state AG enforcement, or cyber-insurer underwriting questions, now demand a tested IR plan from firms under 5,000 consumers.",
+  "A renewal rate above 70% for an existing annual managed-WISP offer aimed at tax pros."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.6",
+  "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.4",
+  "https://www.sbtpg.com/all-in-one-cybersecurity/",
+  "https://www.irs.gov/node/148911"
+ ]
+}

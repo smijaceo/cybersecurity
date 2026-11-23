@@ -1,0 +1,52 @@
+{
+ "concept_id": "ai-agent-access-control",
+ "lens": "defensibility",
+ "round": 1,
+ "score": 3,
+ "verdict": "no-go",
+ "summary": "A fixed-fee service that configures controls the agent vendors own and keep expanding. Claude Code already ships managed settings, managed MCP allowlists, a default guard and unattended deny modes; dcg (6.4k stars) does AST command guarding across five agents; GitHub Agentic Workflows makes CI agents read-only by default. The planned open-source kit removes the only proprietary asset. Reputation is the only possible moat.",
+ "objections": [
+  {
+   "objection": "The core deliverable configures controls that the platform owners control and keep bundling. Claude Code already has managed settings that users cannot override, allowManagedPermissionRulesOnly, managed-mcp.json server allowlists, a built-in guard loaded by default under managed settings, MCP tool-name deny globs, and denyInsteadOfPrompting for unattended runs. Each release shrinks the policy-design work the sprint sells, and the concept lists this bundling as a risk without a counter.",
+   "severity": "fatal",
+   "evidence": "https://code.claude.com/docs/en/permissions.md; concept:risks[2]"
+  },
+  {
+   "objection": "The claimed technical differentiator, shell-AST hook scripts across agents, already exists free. Destructive Command Guard (6.4k stars) hooks Claude Code, Codex, Gemini, Copilot and Cursor, scans heredocs and inline scripts, has 50+ rule packs and a CI scan mode. longline and claw-hooks parse bash with tree-sitter against YAML or TOML rules. A client or another consultant can install these without the sprint.",
+   "severity": "major",
+   "evidence": "https://github.com/Dicklesworthstone/destructive_command_guard; concept:mvp.features[2]"
+  },
+  {
+   "objection": "The kit will be open source and the client gets the policy pack, so the accumulated policy is not proprietary. Every engagement teaches competitors and clients what to copy, and the retainer ($400/month) has no switching cost: the controls live in the client's native agent settings and log store, which is the concept's own selling point.",
+   "severity": "major",
+   "evidence": "concept:differentiation; concept:mvp.features[5]; concept:pricing.entry_price"
+  },
+  {
+   "objection": "The likeliest copiers are the channel partners, not vendors. SOC 2 readiness consultants, vCISOs and AppSec boutiques already own the buyer relationship and the audit-evidence workflow. Once OWASP Agentic Top 10 questions become routine they can add a one-week 'AI coding tool controls' line item using the same free hooks and OSS guards. Compliance platforms (Vanta, Drata) are adding AI-governance and agent-governance modules that could absorb the evidence half.",
+   "severity": "major",
+   "evidence": "concept:go_to_market.channel; concept:competitors[5]"
+  },
+  {
+   "objection": "CI hardening is moving to the platform: GitHub Agentic Workflows runs agent jobs read-only, sends writes through safe outputs and runs a threat-detection job before writes. The read-only downgrade and canary work becomes a default, not a service. The search-result docs say this; I could not open github.blog from this environment.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[3]"
+  },
+  {
+   "objection": "Red-team findings and exposure data from engagements could become a moat: a corpus of real agent-injection paths and a benchmark. The concept does not plan to collect, anonymise or publish this data, so the only durable asset goes uncaptured.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Hands-on prompt-injection red-teaming against the client's own setup draws on the founder's offensive skills and is harder to bundle than configuration. Public write-ups can build a reputation moat.",
+ "what_would_change_my_mind": [
+  "After 10 engagements, a proprietary corpus of agent-injection test cases or findings that free tools and vendor guards miss in at least 30% of clients",
+  "At least 2 SOC 2 or vCISO firms signed as exclusive resellers rather than competitors",
+  "Retainer churn under 20% over 6 months despite native managed-policy releases",
+  "A named auditor or questionnaire standard citing the founder's control set as a reference"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://code.claude.com/docs/en/permissions.md",
+  "https://github.com/Dicklesworthstone/destructive_command_guard"
+ ]
+}

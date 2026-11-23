@@ -1,0 +1,52 @@
+{
+  "concept_id": "smb-compliance-reporting",
+  "lens": "technical-feasibility",
+  "round": 1,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "Software is a small CRUD app (questionnaire, WISP generator, incident case with deadline, timeline, reminders) that one founder can build; most value is delivered as service. Real risks: the program omits 314.4(d)(2) scanning and the 5,000-consumer branching, the lawyer-reviewed decision tree and state-law table sit outside the one-month plan, and the app itself holds sensitive incident data.",
+  "objections": [
+    {
+      "objection": "The 'program mapped to 16 CFR 314.4' leaves out 314.4(d)(2): absent continuous monitoring, firms must run annual penetration tests and vulnerability assessments at least every six months. Firms with 5,000+ consumers (likely for a 20-person mortgage broker or an established tax office with retained records) need this. Smaller firms are exempt from (b)(1), (d)(2), (h) and (i) under 314.6, so the WISP generator and tabletop must branch on consumer count. Adding six-monthly scanning means an endpoint/external scanning toolchain and recurring delivery time that the ~3 h/client/year budget does not include.",
+      "severity": "major",
+      "evidence": "https://www.ecfr.gov/api/versioner/v1/full/2025-01-01/title-16.xml?part=314&section=314.4 ; https://www.ecfr.gov/api/versioner/v1/full/2025-01-01/title-16.xml?part=314&section=314.6 ; concept:mvp.features[0], concept:build.hardest_parts[1]"
+    },
+    {
+      "objection": "The critical path to a sellable incident clock is content, not code: a lawyer-reviewed reportability decision tree (notification event, encryption and key-compromise test, 500-consumer threshold, discovery date set by any employee's knowledge) plus a state breach-notification table covering every US state and territory that must be kept current. Neither fits a one-month solo MVP or the stated budget (capital: none), and the table is an ongoing maintenance load that the plan does not account for.",
+      "severity": "major",
+      "evidence": "concept:build.months_to_mvp, concept:build.hardest_parts[0], concept:build.hardest_parts[3], concept:mvp.features[1]"
+    },
+    {
+      "objection": "The web app will store each client's asset and vendor inventory, MFA and backup gaps, and live incident details: a ready-made target list. That makes the vendor a service provider subject to each client's 314.4(f) oversight. It needs MFA, tenant isolation, encryption, audit logging and a documented security program of its own, which is more than a one-month CRUD build. In the most common incident (a compromised Microsoft 365 mailbox), email-based login, reset and reminders fail just when the clock is needed, so out-of-band access has to be designed in.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[1], concept:mvp.features[2], concept:buyer.company_profile"
+    },
+    {
+      "objection": "There is no API for the FTC submission (the rule specifies an electronic form on ftc.gov) or for desktop tax software (Drake, Lacerte, ProSeries, UltraTax), so 'pre-filled FTC report' and inventory are copy-and-paste and manual screen-share work. This is acceptable, but it caps automation and keeps delivery hours per client tied to the founder.",
+      "severity": "minor",
+      "evidence": "https://www.ecfr.gov/api/versioner/v1/full/2025-01-01/title-16.xml?part=314&section=314.4"
+    },
+    {
+      "objection": "Shipping PowerShell hardening scripts to unmanaged offices running mixed Windows editions and Microsoft 365 SKUs means testing across many configurations, and the founder carries change risk (e.g. locking the owner out with conditional-access or MFA changes) with no rollback tooling.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[5]"
+    },
+    {
+      "objection": "Incident support is bursty and synchronous. Several clients with incidents in the same week (for example a phishing wave against tax pros) would overwhelm a solo founder who also does onboarding, and 2 included hours per client per year is a thin buffer.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price, concept:build.team"
+    }
+  ],
+  "strongest_point": "The technical surface is deliberately small and plays to the founder's Windows and Microsoft 365 strengths. A services-first MVP can launch with simple software and no integrations to maintain.",
+  "what_would_change_my_mind": [
+    "A tiered WISP template that branches on the 314.6 5,000-consumer line, with a costed plan for six-monthly vulnerability assessment (tool, hours per client) for firms above it",
+    "A signed engagement and quote for counsel review of the decision tree, with delivery inside the MVP window, plus a named, maintained source for state breach laws",
+    "A security design for the app (MFA, per-tenant encryption, out-of-band incident access) reviewed before the first client's data goes in",
+    "Time logs from 5 pilot clients showing setup at 6 h or less and the steady state at 3 h a year or less"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://www.ecfr.gov/api/versioner/v1/full/2025-01-01/title-16.xml?part=314&section=314.4",
+    "https://www.ecfr.gov/api/versioner/v1/full/2025-01-01/title-16.xml?part=314&section=314.6"
+  ]
+}

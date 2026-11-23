@@ -1,0 +1,58 @@
+{
+  "concept_id": "ai-agent-access-control",
+  "lens": "competitor-analyst",
+  "round": 1,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "The buyer's own SOC 2 platform is moving into this space: Vanta is acquiring Pillar and has published free agentic controls, and Drata sells an inline agent proxy. Knostic Kirin gives 25 developers continuous enforcement and audit logs for about $4.5k a year. Boutique coding-agent assessments and free CI scanners already exist. The sprint survives only as an implementation partner for those platforms.",
+  "objections": [
+    {
+      "objection": "Most dangerous competitor: Vanta, the SOC 2 platform the named buyer (the SOC 2 evidence owner) already pays for. Vanta is acquiring Pillar Security, whose product covers coding-agent discovery, permission and MCP config scanning, and runtime blocking. Its AI Inventory discovers agents and MCP servers, a paid inventory-and-guardrails module is 'coming soon', and it ships 65 free open-source Agentic Trust Controls. That bundle covers the inventory, enforced guardrails and control narrative, which are three of the sprint's six deliverables, sold inside a contract the buyer has already signed.",
+      "severity": "major",
+      "evidence": "https://www.vanta.com/products/ai-governance"
+    },
+    {
+      "objection": "Drata, the other SOC 2 platform these companies use, has an AI Agent Governance product in limited availability. It uses a device sensor plus a proxy that checks each agent tool request against plain-English policy, with a durable evidence feed for auditors. Today it targets enterprises running Anthropic agents, but it shows that the 'audit trail mapped to SOC 2' deliverable is becoming a built-in platform feature, not a service.",
+      "severity": "major",
+      "evidence": "https://securitybrief.co.uk/story/drata-launches-ai-agent-governance-for-anthropic-users"
+    },
+    {
+      "objection": "Knostic Kirin is free for 1-5 users and $15/user/month after that. For the 25-developer scope that is about $375/month, roughly the same as the $400 retainer. It covers Claude Code, Cursor, Copilot and Windsurf, with organisational policy, configuration enforcement, MCP and hooks visibility and audit logs. A CTO comparing the two gets ongoing enforcement plus dashboards for about the price of the sprint, so the hand-built hook-script kit competes against a maintained product. The concept also says it would recommend Kirin, which feeds the substitute.",
+      "severity": "major",
+      "evidence": "https://www.knostic.ai/pricing"
+    },
+    {
+      "objection": "The service niche already has occupants. Christian Schneider sells a fixed-scope 'Coding Agent Security' assessment covering ten domains: MCP, CI/CD agents, managed settings, logging and a 9-month roadmap. Appsecco sells fixed-scope MCP pentests with public research behind them. Solo sellers offer agent/MCP audit sprints for $99 to $1,000. The concept's competitor table lists only generic pentest and vCISO firms, so it misses these direct rivals, who also have a head start on the credibility the founder lacks.",
+      "severity": "major",
+      "evidence": "https://christian-schneider.net/consulting/coding-agent-security/"
+    },
+    {
+      "objection": "The CI hardening and workflow scanner are mostly available for free. zizmor already flags dangerous triggers (pull_request_target), excessive permissions and secret exposure in GitHub workflows. GitHub Agentic Workflows makes agent jobs read-only by default, with sanitised safe-outputs as the write path. The remaining differentiators are the canary secret and untrusted-input downgrade, which are small.",
+      "severity": "minor",
+      "evidence": "https://github.github.com/gh-aw/introduction/overview/"
+    },
+    {
+      "objection": "Agent vendors keep expanding native managed settings and hooks (Claude Code, Cursor, Copilot, Gemini CLI policy engine). Each release shrinks the 'design and maintain the rules' work that the concept itself names as the service. The concept lists this risk but has no answer to it.",
+      "severity": "minor",
+      "evidence": "concept:risks"
+    }
+  ],
+  "strongest_point": "No platform does hands-on prompt-injection red teaming against a client's own agent setup; that part is hard to bundle and plays to the founder's offensive skills.",
+  "what_would_change_my_mind": [
+    "Evidence that Vanta's and Drata's agent guardrails stay enterprise-priced or leave out coding agents for 12+ months",
+    "2 or more SOC 2 consultants, or a Vanta/Drata partner program, agree to resell the sprint as implementation services",
+    "3 of 10 prospects who already know Kirin or Vanta still choose the sprint",
+    "The red-team phase sells on its own at $3,500"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://www.vanta.com/products/ai-governance",
+    "https://securitybrief.co.uk/story/drata-launches-ai-agent-governance-for-anthropic-users",
+    "https://www.knostic.ai/pricing",
+    "https://christian-schneider.net/consulting/coding-agent-security/",
+    "https://appsecco.com/mcp-pentesting",
+    "https://jackjin1997.github.io/agent-audit-sprint/",
+    "https://docs.zizmor.sh/audits/",
+    "https://github.github.com/gh-aw/introduction/overview/"
+  ]
+}

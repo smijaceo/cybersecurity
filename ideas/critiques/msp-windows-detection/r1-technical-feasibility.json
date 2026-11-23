@@ -1,0 +1,53 @@
+{
+ "concept_id": "msp-windows-detection",
+ "lens": "technical-feasibility",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "The core (audit policy, Sysmon and WEF configs mapped to detections) is squarely buildable by this founder. The MVP as listed is not: four SIEMs, two Sysmon variants, four server roles, RMM scripts, a volume simulator and an attack-replay lab in two months, solo. Narrow to one SIEM and the configs, and push the simulator and logon reports back.",
+ "objections": [
+  {
+   "objection": "Scope versus schedule: 7 features, 4 role packs, 3 content packs, 4 SIEM mappings, 2+ RMM integrations and an Atomic Red Team test lab is a matrix of 50+ artefacts to build and test. That is roughly 5-7 months for one person, not 2. Each SIEM needs its own collector syntax (Wazuh localfile queries, Winlogbeat/Sidecar for Graylog, Elastic Agent policies, AMA data collection rules) and its own query language for detections and reports.",
+   "severity": "major",
+   "evidence": "concept:build.months_to_mvp; concept:build.team; concept:mvp.features"
+  },
+  {
+   "objection": "The coverage-versus-volume report is the hardest feature, and it is what the sale rests on. To show GB saved, it must read per-event-ID volume out of each SIEM's own store (OpenSearch, Elasticsearch, Log Analytics) or the collector. To show coverage kept, it must evaluate Sigma rules against the filtered set. Agent-side filtering is limited: Windows XPath supports no contains or starts-with, and Azure Monitor DCRs allow 20 expressions. Field-level drops (e.g. noisy 4663 paths) therefore need SIEM-side transforms, which behave differently in each SIEM.",
+   "severity": "major",
+   "evidence": "https://learn.microsoft.com/azure/azure-monitor/vm/data-collection-windows-events"
+  },
+  {
+   "objection": "Built-in Sysmon runs only on Windows 11 and Windows Server 2025, cannot coexist with standalone Sysmon, and renders localized messages. Most SMB client servers run Server 2016-2022, so every pack has to support standalone Sysmon as well. MSPs then have to migrate per host, uninstalling standalone Sysmon before enabling the built-in one. The 'why now' platform covers a minority of the target fleet.",
+   "severity": "major",
+   "evidence": "https://learn.microsoft.com/windows/security/operating-system-security/sysmon/overview"
+  },
+  {
+   "objection": "The ongoing maintenance load is underestimated. Every month, the OS versions x roles x SIEMs x Sysmon schema versions matrix has to be re-tested in a replay lab, and the lab itself (DC, file server, RDS host, workstations, four SIEM stacks) costs hosting money and founder time. That eats into the time needed for selling and for tuning engagements.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts"
+  },
+  {
+   "objection": "The per-client monthly logon access report has no execution engine in free SIEMs. Graylog sells scheduled reports only in its paid Enterprise and Security tiers. Without them, the product needs its own report runner, which the 'content, not a platform' design rules out.",
+   "severity": "minor",
+   "evidence": "https://graylog.org/pricing/"
+  },
+  {
+   "objection": "Canary folders rely on file-share SACL auditing (4663). That needs per-client share discovery and careful SACL scoping, or it adds exactly the file-server noise the volume pack is meant to remove. Getting it right adds tuning work for each client.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features"
+  }
+ ],
+ "strongest_point": "No hosted service and no agent: the product is versioned configs, queries and scripts in the founder's exact specialty, so ops risk is low and a first useful release is genuinely quick.",
+ "what_would_change_my_mind": [
+  "A cut MVP of Wazuh only (or Wazuh plus Sentinel), standalone and built-in Sysmon, DC and file-server packs, and a volume script that reads one SIEM, shipped in 8-10 weeks.",
+  "A CI lab that replays 20+ ATT&CK techniques and shows the mapped Sigma rules still fire after filtering.",
+  "A pilot that measures 40%+ Windows volume reduction on real client data without losing any mapped detection."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://learn.microsoft.com/windows/security/operating-system-security/sysmon/overview",
+  "https://learn.microsoft.com/azure/azure-monitor/vm/data-collection-windows-events",
+  "https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/configuration.html",
+  "https://graylog.org/pricing/"
+ ]
+}

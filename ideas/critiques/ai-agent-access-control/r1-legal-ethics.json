@@ -1,0 +1,53 @@
+{
+  "concept_id": "ai-agent-access-control",
+  "lens": "legal-ethics",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Nothing here is illegal by design, and pentest-style services have well-known legal templates. But four things need redesign before launch: outbound 'exposure notes' that read as vulnerability-for-sale, an uninsured solo founder running injection attacks against production-wired agents, hook audit logs that capture code, secrets and employee activity, and selling bypassable hooks as 'enforced' controls and SOC 2 evidence.",
+  "objections": [
+    {
+      "objection": "The outbound lead source scans strangers' public repositories for exploitable agent workflows and sends them an 'exposure note' with a sales quote. Unsolicited vulnerability notices tied to a paid offer look like extortion to the recipient, breach the norms of coordinated disclosure, and invite complaints to GitHub about bulk scraping and contacting users for sales. They also hand the same list of exploitable targets to anyone who sees the scanner or the notes. Any check that goes beyond reading the YAML, such as opening a test issue to confirm the trigger, is unauthorised testing. Disclosure has to be separated from selling: free and private notices under a published disclosure policy, with no pitch attached, or the channel should be dropped.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.channel ('outbound to companies whose public repositories run agents on untrusted issue/PR events ... sent a short exposure note'); concept:revision_log[1]"
+    },
+    {
+      "objection": "The red team runs prompt-injection attacks against agents that hold real GitHub, cloud and production-data credentials, and it plants issues and poisoned files. The client can authorise testing of its own assets, but not of third-party MCP servers, SaaS APIs or shared cloud tenants that an injected agent may reach. A successful injection can delete data, push code or exfiltrate customer PII, and a solo, bootstrapped founder carries that liability personally. The concept names 'scoped rules of engagement and insurance' only as a risk. Neither is in the MVP or in the price. A $3,500 sprint has to absorb professional liability/E&O and cyber cover, a written authorisation letter, a contractual liability cap, and a rule to test against sandboxed or least-privilege tokens and never production ones.",
+      "severity": "major",
+      "evidence": "concept:risks[4]; concept:mvp.features[1]; concept:buyer.company_profile ('MCP servers wired to GitHub, cloud and production data'); concept:pricing.entry_price"
+    },
+    {
+      "objection": "Data custody is underspecified. Claude Code hooks receive the full tool_input, including every shell command, plus transcript_path and the inherited environment, so hook-based audit logs and the inventory script will capture source code, secrets and customer data that pass through agents. 'Secrets stripped' is a best-effort regex promise. The founder also reviews blocked-call logs on retainer, which makes them a processor of client data and possibly of personal data, needing a DPA, a retention policy and their own security controls. They would be a sub-processor that the client's own SOC 2 vendor review has to cover. Logging every developer command is also employee monitoring, which needs notice and, in the EU, a lawful basis and sometimes works-council consultation.",
+      "severity": "major",
+      "evidence": "https://code.claude.com/docs/en/hooks (input includes tool_input.command, transcript_path; 'A hook process inherits the parent environment'); concept:mvp.features[0]; concept:mvp.features[4]; concept:mvp.features[5]"
+    },
+    {
+      "objection": "Misrepresentation risk. The pack is sold as 'enforced tool policy' and as audit evidence, but the vendor docs say hooks are not a hard gate. Claude Code says to use the permission system rather than a hook to enforce a hard allow or deny, and a timed-out PreToolUse hook does not block the call. A client that tells its auditor or its customers' questionnaires that agent tool use is 'enforced', and then suffers an incident, has a misrepresentation claim against the founder. The deliverables, contract and control narrative must describe the pack as a guardrail with stated bypasses. The concept admits this for CI only.",
+      "severity": "major",
+      "evidence": "https://code.claude.com/docs/en/hooks ('use the permission system rather than a hook to enforce a hard allow or deny'; timed-out hook 'doesn't block the tool call'); concept:one_liner; concept:risks[4]"
+    },
+    {
+      "objection": "The compliance framing needs care. OWASP's Agentic Top 10 is a community guidance list, not a regulation or an audit standard. A 'control narrative mapped to SOC 2' prepared by a non-CPA must not imply that it meets a criterion. Only the client's auditor decides that. Marketing should not suggest that auditors require agent controls until the open question is answered.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[4]; concept:open_questions[0]"
+    },
+    {
+      "objection": "Dual use: an open-source workflow scanner that finds exploitable agent CI jobs at scale is also an attacker's target finder. Publishing it needs a responsible-release decision, for example releasing only the defensive self-scan mode.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[0]; concept:differentiation"
+    }
+  ],
+  "strongest_point": "It is a defensive, client-authorised service built on vendors' own documented hook mechanisms. It holds no persistent credentials and avoids SaaS-UI automation and ToS conflicts.",
+  "what_would_change_my_mind": [
+    "A signed engagement template with an authorisation letter, a third-party scope exclusion and a liability cap.",
+    "Quotes showing that E&O and cyber cover fit within the $3,500 sprint margin.",
+    "A red-team test plan that uses only sandboxed or least-privilege tokens and never production credentials.",
+    "A DPA and log-retention design where logs stay in the client's store and the founder's access is read-only and time-boxed.",
+    "The outbound exposure-note channel replaced by a free, no-pitch disclosure policy.",
+    "Deliverable wording reviewed so that 'enforced' and 'SOC 2' claims match the hook documentation's stated limits."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://code.claude.com/docs/en/hooks"
+  ]
+}

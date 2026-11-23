@@ -1,0 +1,57 @@
+{
+  "concept_id": "msp-windows-detection",
+  "lens": "legal-ethics",
+  "round": 1,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "Legally low-risk: defensive content, holds no customer logs, minimal dual-use. Fixable issues: liability when a pack drops events a client's regulator, contract or incident needed; employee-monitoring law for per-user access reports; data custody in the tuning and log-diet steps; attribution duties for CC-BY/DRL-licensed upstream content; no redistributing standalone Sysmon.",
+  "objections": [
+    {
+      "objection": "Volume reduction can push an MSSP's client below its own logging or retention duties (PCI DSS Req. 10, HIPAA 164.312(b) audit controls, NIS2 or cyber-insurance terms). When an incident needs a dropped event, the MSSP will point to QuietWin's 'detections still covered' claim. The concept names the liability risk but leaves contract language as an open question, and a solo founder has no tech E&O cover budgeted.",
+      "severity": "major",
+      "evidence": "concept:risks[3]; concept:open_questions[3]; concept:mvp.features[4] (coverage-versus-volume report claims detections still covered)"
+    },
+    {
+      "objection": "The logon evidence pack produces per-client monthly reports of who logged in, session length and privilege use, which is employee monitoring. In the EU this needs a legal basis, transparency and proportionality under GDPR, and often a DPIA. In Germany it is subject to works-council co-determination for technical monitoring devices (BetrVG s.87(1) no.6). The MSP's client is the controller, but packs and report templates shipped without guidance expose the MSP and invite misuse.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[2]; concept:user (MSP technicians hand the monthly per-client access report to the client)"
+    },
+    {
+      "objection": "Data custody is not quite 'no customer logs'. The 5-day tuning engagement and the log-diet script run against client collectors holding usernames, IPs and command lines. The founder needs a DPA/sub-processor position, NDAs and a script that provably keeps data local, or MSSPs bound by their own client contracts can't let them in.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[6]; concept:go_to_market.wedge (run one script on a client's collector)"
+    },
+    {
+      "objection": "Upstream content carries licence duties. SwiftOnSecurity sysmon-config is CC BY 4.0 (attribution in the text). SigmaHQ rules are DRL 1.1, which requires crediting the rule author in any view that shows matches, so the per-SIEM output mappings must carry author fields. sysmon-modular is MIT. A paid pack that quietly forks these without attribution is both an ethics problem and a reputational risk in this community.",
+      "severity": "minor",
+      "evidence": "https://github.com/SigmaHQ/Detection-Rule-License"
+    },
+    {
+      "objection": "Standalone Sysmon is still needed for pre-2025 Server and Windows 10 fleets, and the Sysinternals licence forbids publishing the software for others to copy. RMM scripts must fetch it from Microsoft rather than bundle the binary.",
+      "severity": "minor",
+      "evidence": "https://learn.microsoft.com/en-us/sysinternals/license-terms"
+    },
+    {
+      "objection": "Mild dual-use: a public, ATT&CK-mapped list of which events the standard pack drops tells attackers what MSSP clients are blind to. Keep drop rationale for less-common events in the paid tier, or document compensating detections.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "Ships configuration content, not a hosted service. It holds no customer logs and runs no privileged agent, and dropping unneeded events serves data minimisation, so the regulatory and abuse surface is small.",
+  "what_would_change_my_mind": [
+    "A lawyer-reviewed subscription agreement with a liability cap, a no-warranty-of-completeness clause and a client-acknowledgement step before any pack drops events",
+    "A per-pack table mapping kept events to PCI DSS 10, HIPAA 164.312(b) and NIS2 logging duties",
+    "An EU-ready employee-monitoring notice and DPIA template shipped with the logon evidence report",
+    "A data-handling statement for the tuning engagement and log-diet script (local-only processing, DPA template)",
+    "Tech E&O insurance quoted at under $2k/year"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://learn.microsoft.com/windows/security/operating-system-security/sysmon/overview",
+    "https://learn.microsoft.com/en-us/sysinternals/license-terms",
+    "https://github.com/SigmaHQ/Detection-Rule-License",
+    "https://github.com/SwiftOnSecurity/sysmon-config",
+    "https://raw.githubusercontent.com/SwiftOnSecurity/sysmon-config/master/sysmonconfig-export.xml",
+    "https://github.com/olafhartong/sysmon-modular"
+  ]
+}

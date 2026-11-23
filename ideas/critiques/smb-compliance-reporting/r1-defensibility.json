@@ -1,0 +1,53 @@
+{
+ "concept_id": "smb-compliance-reporting",
+ "lens": "defensibility",
+ "round": 1,
+ "score": 3,
+ "verdict": "no-go",
+ "summary": "Every component (tailored WISP, reminders, tabletop, 30-day deadline form) is already sold or trivially copied by players who own distribution to tax offices: SBTPG bundles a done-for-you WISP, incident team and MDR billed from refund-transfer fees; WISP Builder adds live experts. The incident clock is a weekend feature. Only founder trust and relationships defend it, which do not scale.",
+ "objections": [
+  {
+   "objection": "The most likely copier is already in market with superior distribution: Santa Barbara Tax Products Group (Green Dot), embedded in tax-software bank-product flows, sells an IRS 4557/FTC Safeguards bundle via Watch Cloud with a custom WISP drafted and updated annually, quarterly briefings with a dedicated advisor, an incident response team on standby and MDR, and lets preparers pay by withholding the fee from refund-transfer fees. Adding a 30-day FTC clock and a tabletop is a quarter's work for them, and they reach every enrolled preparer at zero CAC.",
+   "severity": "fatal",
+   "evidence": "https://www.sbtpg.com/all-in-one-cybersecurity/"
+  },
+  {
+   "objection": "A tax-industry incumbent already ships the software half: WISP Builder (Tangible Values / Practice Panda, 40 years serving tax pros) offers an online WISP builder with e-signed staff acknowledgement, training, automated review reminders, and live expert WISP Assist/Review upgrades. The concept's 'ongoing program vs one-off document' differentiation is already covered by an established vendor with an existing tax-practitioner customer base.",
+   "severity": "major",
+   "evidence": "https://finanzen.net/nachricht/aktien/wisp-builder-announces-expansion-of-its-wisp-security-services-to-comply-with-mandatory-irs-and-ftc-protocols-14877388"
+  },
+  {
+   "objection": "The claimed differentiator, the incident reporting clock, is a form plus a date calculation plus a lawyer-reviewed decision tree. It has no data or network effect, and the concept itself makes the deadline calculator free top-of-funnel. Any competitor (or an MSP compliance tool like ControlMap, or the cyber insurer's breach coach, who already takes over incidents) can replicate it in weeks; the concept even lists breach-coach handoff as an open question.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[1]; concept:go_to_market.channel; concept:open_questions[5]"
+  },
+  {
+   "objection": "The 'moat' is the founder personally running onboarding, tabletops and incident hours. That is a services relationship, not a product moat: it caps at ~150 clients (concept's own risk), cannot be sold to an acquirer, and is matched by any MSP or Verito/Rightworks-style host adding a security advisor. Switching costs are low: the deliverable is a WISP document and an evidence folder the client keeps.",
+   "severity": "major",
+   "evidence": "concept:risks[2]; concept:build.team; concept:competitors"
+  },
+  {
+   "objection": "The regulatory-trust angle is thinner than the concept implies: 16 CFR 314.6 exempts firms holding data on fewer than 5,000 consumers from the written risk assessment, written incident response plan (314.4(h)) and board reporting, which covers many 1-10 person offices. The parts that differentiate the program most (formal risk assessment, tested IR plan) are not legally required for much of the target, so a cheaper template competitor can credibly claim 'compliant'.",
+   "severity": "major",
+   "evidence": "https://www.ecfr.gov/api/versioner/v1/full/2025-01-01/title-16.xml?part=314&section=314.6"
+  },
+  {
+   "objection": "Free substitutes anchor the price: the IRS Publication 5708 template is free and repeatedly promoted by the IRS/Security Summit, so any vendor can bundle a 'tailored' version at near-zero marginal cost.",
+   "severity": "minor",
+   "evidence": "https://www.irs.gov/newsroom/irs-security-summit-remind-tax-pros-they-need-a-written-information-security-plan-to-protect-client-data"
+  }
+ ],
+ "strongest_point": "A credible hands-on practitioner who actually inspects the office's M365/Windows setup and runs tabletops builds personal trust that template and bundled-MDR vendors deliver poorly.",
+ "what_would_change_my_mind": [
+  "An exclusive or preferred referral deal with a cyber insurer, state tax-practitioner association or tax-software vendor that routes members to this program and not to SBTPG/WISP Builder.",
+  "Evidence that incident records across clients form a proprietary dataset (e.g. anonymised reportability decisions validated by counsel or FTC outcomes) that improves the decision tree in a way copiers cannot match.",
+  "Retention data: over 85% annual renewal among the first 30 clients despite SBTPG/WISP Builder being offered to them.",
+  "A white-label MSP channel signed with 3+ MSPs serving accounting firms, creating distribution lock-in that incidents run through this platform."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://www.sbtpg.com/all-in-one-cybersecurity/",
+  "https://finanzen.net/nachricht/aktien/wisp-builder-announces-expansion-of-its-wisp-security-services-to-comply-with-mandatory-irs-and-ftc-protocols-14877388",
+  "https://www.ecfr.gov/api/versioner/v1/full/2025-01-01/title-16.xml?part=314&section=314.6"
+ ]
+}

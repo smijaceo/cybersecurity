@@ -1,0 +1,58 @@
+{
+ "concept_id": "msp-windows-detection",
+ "lens": "competitor-analyst",
+ "round": 1,
+ "score": 4,
+ "verdict": "no-go",
+ "summary": "The core product, ATT&CK-mapped Windows logging configs, is already given away: sysmon-modular is MIT-licensed and maintained, Yamato Security maps audit settings to Sigma coverage, Sentinel ships curated event sets, and Cribl is free to 1TB/day. MSP-focused SIEMs (Huntress, Blumira, LimaCharlie) remove the volume pain. What's left to sell is a thin maintenance and reporting layer.",
+ "objections": [
+  {
+   "objection": "Free, maintained, ATT&CK-mapped configs already exist and are what MSSPs reach for first. Olaf Hartong's sysmon-modular (MIT, 3.2k stars, active CI, ATT&CK Navigator export, balanced/verbose/MDE-augment profiles) and Yamato Security's EnableWindowsLogSettings (audit settings with per-log Sigma rule counts) cover the open-source baseline and much of the 'detection-mapped, maintained' paid claim. The concept's table lumps these together as generic 'community configs', but they are neither generic nor unmaintained.",
+   "severity": "fatal",
+   "evidence": "https://github.com/olafhartong/sysmon-modular ; https://github.com/Yamato-Security/EnableWindowsLogSettings ; concept:competitors[5].how_we_differ"
+  },
+  {
+   "objection": "Platform bundling already does the volume-reduction job inside the SIEMs the concept targets. Microsoft Sentinel's Windows Security Events connector offers curated Minimal and Common event sets, which Microsoft describes as reducing volume while keeping a full audit trail, plus XPath/DCR filtering at no extra charge. Microsoft also now ships built-in Sysmon and could publish a recommended config at any time. The Sentinel slice of the market therefore gets most of the 'log diet' free from the vendor.",
+   "severity": "major",
+   "evidence": "https://learn.microsoft.com/en-us/azure/sentinel/windows-security-event-id-reference ; concept:why_now.summary"
+  },
+  {
+   "objection": "Cribl Stream is free up to 1TB/day with no licence, which covers every MSSP in the stated 10-150 SMB-client range. Its Pack Dispensary has shipped Windows event reduction packs claiming 25-70% reduction. The concept compares itself only to Cribl's paid Standard tier and says 'we need no pipeline'. An MSSP with any engineering capacity can get the same reduction free, with a community behind it.",
+   "severity": "major",
+   "evidence": "https://cribl.io/pricing/ ; https://github.com/criblpacks/cribl-windows-events ; concept:pricing.rationale"
+  },
+  {
+   "objection": "The MSP channel is moving to flat-priced or per-sensor managed SIEMs that do the filtering themselves. Huntress Managed SIEM applies Smart Filtering at the source and prices per data source with a SOC included. Blumira is flat per employee. LimaCharlie charges about $3 per sensor including Windows event logs and offers MSSP tiers. On these platforms the volume ROI behind the $249/month disappears. The concept admits this risk but its competitor table understates it: Huntress is the most dangerous competitor because it already owns the MSP relationship.",
+   "severity": "major",
+   "evidence": "https://www.huntress.com/blog/unlocking-siem-the-role-of-smart-filtering ; https://limacharlie.io/pricing ; concept:risks[2]"
+  },
+  {
+   "objection": "Commercial detection-content vendors sell adjacent coverage-gap products to MSSPs. SOC Prime's Data Audit maps SIEM data to ATT&CK to find blind spots and is sold alongside thousands of Sigma rules with MSSP/MDR tiers. It could add 'collect these events, drop those' recommendations as a feature. Graylog Illuminate and Wazuh's default Windows/Sysmon rulesets could likewise ship tuned collection guidance.",
+   "severity": "minor",
+   "evidence": "https://aws.amazon.com/marketplace/pp/prodview-erv2qyopmya6q"
+  },
+  {
+   "objection": "The logon evidence pack competes with cheap, entrenched tools. ManageEngine ADAudit Plus starts at about $245/year (100 workstations) and $495/year (2 file servers), per the input's own flagged claim, and has turnkey reports. SIEM-native report queries are a weaker substitute for MSPs who just want a PDF for the client.",
+   "severity": "minor",
+   "evidence": "input:flagged_claims[0]"
+  }
+ ],
+ "strongest_point": "No vendor sells one SIEM-agnostic, monthly-maintained Windows collection layer that covers Wazuh, Graylog, Elastic and Sentinel and is deployed through MSP RMM tools. That niche is real, if narrow.",
+ "what_would_change_my_mind": [
+  "Interviews with 10 small MSSPs on volume-billed SIEMs showing that at least 5 tried sysmon-modular, Sentinel event sets or free Cribl and still pay to close the gap",
+  "Pilot data showing QuietWin packs cut 30%+ more volume than sysmon-modular plus Sentinel 'Common' at equal Sigma coverage",
+  "An RMM or SIEM vendor (NinjaOne, Graylog, Wazuh) agreeing to OEM or resell the packs"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://github.com/olafhartong/sysmon-modular",
+  "https://github.com/Yamato-Security/EnableWindowsLogSettings",
+  "https://learn.microsoft.com/en-us/azure/sentinel/windows-security-event-id-reference",
+  "https://cribl.io/pricing/",
+  "https://github.com/criblpacks/cribl-windows-events",
+  "https://www.huntress.com/blog/unlocking-siem-the-role-of-smart-filtering",
+  "https://www.huntress.com/pricing/siem",
+  "https://limacharlie.io/pricing",
+  "https://aws.amazon.com/marketplace/pp/prodview-erv2qyopmya6q"
+ ]
+}

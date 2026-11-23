@@ -1,0 +1,49 @@
+{
+ "concept_id": "ai-agent-access-control",
+ "lens": "technical-feasibility",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "A one-month MVP is realistic for a services kit: inventory script, workflow scanner, manual red team, hook configs. Two claims are weaker than stated. 'Enforced' controls rest on hooks that fail open, can be overridden unless pushed by MDM or enterprise plans, and miss interpreter indirection. A policy compiler for four fast-changing agents is a maintenance burden for one person.",
+ "objections": [
+  {
+   "objection": "The shell-AST differentiator is mostly already native and does not create a security boundary. Claude Code already splits compound commands on &&, ||, ;, | and applies deny rules inside subshells and command substitutions. Its own docs say Bash rules are 'not a security boundary around the program' and that argument patterns are fragile, for example a variable holding the URL. A parser that runs before execution still cannot see through python -c, a script written and then run, make targets, or package install scripts. Real containment means an OS sandbox and network-egress limits, and the MVP does not install them. The control narrative will overstate risk reduction unless it adds those layers.",
+   "severity": "major",
+   "evidence": "https://code.claude.com/docs/en/permissions.md (Compound commands; 'isn't a security boundary'); concept:mvp.features[2]"
+  },
+  {
+   "objection": "Without central delivery the controls are not enforced, and at the target company size central delivery is uneven. Cursor team and enterprise hooks are Enterprise-plan only. Project and user hooks.json files can be edited by the developer. Cursor and Claude Code hooks fail open by default on crashes, timeouts and non-zero exits other than 2, unless failClosed or onFailure: block is set on every hook. Claude Code needs allowManagedHooksOnly in managed settings, and Gemini needs admin-tier TOML in system paths with strict permission checks. A 15-150 person firm without MDM, or on Cursor Business, gets advisory config that an auditor should not accept as 'enforced'.",
+   "severity": "major",
+   "evidence": "https://cursor.com/docs/agent/hooks (team/enterprise hooks Enterprise only; 'fail-open by default'; failClosed); https://code.claude.com/docs/en/hooks (failed hook non-blocking unless onFailure: block); concept:one_liner"
+  },
+  {
+   "objection": "One YAML policy compiled into four agents' native formats means four different semantics and update cycles, and coverage differs by surface. Cursor cloud agents skip beforeMCPExecution, run no hooks in early read-only turns, and send HTTP MCP calls through Cursor's backend, where updated_input is ignored. Copilot cloud agent supports only a subset of events. Gemini uses a priority-tiered TOML policy engine rather than arbitrary scripts. Keeping a compiler, a parser and its regression tests current across weekly agent releases, alongside client delivery and sales, will crowd out a solo founder's time. Each gap is a silent hole in a control a client was told is in place.",
+   "severity": "major",
+   "evidence": "https://cursor.com/docs/agent/hooks (cloud agent limitations); https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-hooks ('Only a subset of events is supported'); https://geminicli.com/docs/core/policy-engine/; concept:build.hardest_parts[2]"
+  },
+  {
+   "objection": "The CI canary and read-only downgrade run in the same runner as the agent. They catch only secrets that pass verbatim through hook-visible tool I/O, not base64 output or exfiltration by a spawned child process. They are not a substitute for removing write tokens and secrets from untrusted-event jobs. That fix is a workflow change, and existing open-source Actions scanners already flag much of it.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[3]; concept:risks[4]"
+  },
+  {
+   "objection": "Red-teaming clients' real agents with production-connected MCP servers is the operationally hardest part. It needs a disposable-environment method (a repo fork, scoped test tokens, a mock MCP server) built before the first sprint, which the one-month plan does not budget. The 2-week, $3,500 sprint leaves little time per client to build that environment.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts[1]; concept:pricing.entry_price"
+  }
+ ],
+ "strongest_point": "The building blocks are real and documented. Claude Code, Cursor, Copilot and Gemini all expose blocking pre-tool hooks or policy engines, so a skilled solo tester can deliver working controls without building a platform.",
+ "what_would_change_my_mind": [
+  "A pilot on two real client setups where the kit is deployed centrally (MDM or managed settings), fail-closed, alongside sandbox or egress controls, and where a red-team suite of 20+ injection cases, including interpreter indirection, is blocked or detected.",
+  "A test matrix showing each policy rule's effect in all four agents, CI modes included.",
+  "A record of upkeep under one day per month across two agent release cycles."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://code.claude.com/docs/en/hooks",
+  "https://code.claude.com/docs/en/permissions.md",
+  "https://cursor.com/docs/agent/hooks",
+  "https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-hooks",
+  "https://geminicli.com/docs/core/policy-engine/"
+ ]
+}

@@ -1,0 +1,47 @@
+{
+ "concept_id": "ai-agent-access-control",
+ "lens": "market-skeptic",
+ "round": 1,
+ "score": 4,
+ "verdict": "conditional",
+ "summary": "The evidence is GitHub feature requests from agent builders, tool maintainers and rival vendors, not from CTOs or compliance owners at 15-150 person SaaS firms. Surveys show weak AI-coding governance, but the budgeted worry is insecure generated code, not agent tool-call hardening. SOC 2 does not require these controls. Demand is plausible but unproven and not yet urgent.",
+ "objections": [
+  {
+   "objection": "The demand signal comes from the wrong people. Nearly all need statements are GitHub issues filed against agent frameworks (openclaw, hermes-agent, claude-code, MCP spec SEPs) by developers and tool authors, with engagement of 0-55. They are feature requests to vendors, not purchase intent from the named buyer. One of the concept's headline evidence items, claude-code #60246 (team MCP governance), was filed by the founder of a commercial MCP governance product. Its 4 human comments came from that founder and two other MCP-governance vendors, and it got 1 reaction before it was closed as not planned. Several other items are idea-generator repos or vendors' own roadmaps (MosslandOpenDevs, aegisora, AgentWiseAI).",
+   "severity": "major",
+   "evidence": "https://github.com/anthropics/claude-code/issues/60246; input:themes[0].need_statements"
+  },
+  {
+   "objection": "The 'must-have' trigger is assumed. The pitch rests on SOC 2 owners needing coding-agent evidence, but the AICPA has published no AI-specific criteria. The AI evidence that auditors improvise covers AI vendors' own models (training lineage, inference logging, LLM subprocessors), not the coding agents on developers' laptops. The concept itself lists 'do auditors ask about coding agents?' as an open question. With no audit finding or regulation behind it, this is a discretionary spend for a company with no AppSec engineer.",
+   "severity": "major",
+   "evidence": "https://labs.cloudsecurityalliance.org/research/csa-research-note-soc2-ai-controls-gap-20260830-csa-styled/; concept:open_questions[0]"
+  },
+  {
+   "objection": "The pain buyers report is a different pain. In Black Duck's March 2026 survey (831 engineers), 70% lack full AI-coding governance, but the problems they report are the review, testing and rework of AI-generated code. 64% worry about security defects in that code. Prompt-injected tool calls and MCP permissions do not appear among the top bottlenecks. Teams with a budget for AI-coding security will spend it first on SAST/SCA and code review, where incumbents already sell, not on agent hardening.",
+   "severity": "major",
+   "evidence": "https://www.infosecurity-magazine.com/news/ai-coding-adoption-governance-lags/"
+  },
+  {
+   "objection": "Urgency depends on an incident. Without a widely reported breach at a small SaaS company caused by a prompt-injected coding agent or MCP tool, small CTOs will defer this. The concept admits the same thing in risks[3] and in the riskiest assumption, so the market's timing depends on events outside the founder's control.",
+   "severity": "minor",
+   "evidence": "concept:risks[3]"
+  },
+  {
+   "objection": "Market size is not the constraint, but the reachable slice is narrow. Perhaps tens of thousands of B2B SaaS firms with 15-150 employees exist worldwide. Requiring SOC 2 activity, heavy MCP use wired to production and no AppSec staff cuts that to the low thousands. That is enough for 30-40 sprints a year, but the slice is thin, hard to identify and shrinks as agent vendors ship managed policies.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "Adoption is near-universal (97%) and governance is formalised at only 30%, so the gap is real. A cheap 2-week test with free exposure checks validates demand before much is spent.",
+ "what_would_change_my_mind": [
+  "At least 8 of 30 offered exposure checks booked and 2 paid sprints within 2 weeks",
+  "At least 3 SOC 2 consultants or auditors confirm that clients get coding-agent or MCP questions in customer questionnaires or audits",
+  "5 CTOs at target firms already have a written AI-agent control request from a customer or auditor"
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://github.com/anthropics/claude-code/issues/60246",
+  "https://labs.cloudsecurityalliance.org/research/csa-research-note-soc2-ai-controls-gap-20260830-csa-styled/",
+  "https://www.infosecurity-magazine.com/news/ai-coding-adoption-governance-lags/"
+ ]
+}

@@ -1,0 +1,57 @@
+{
+  "concept_id": "msp-windows-detection",
+  "lens": "market-skeptic",
+  "round": 1,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "The pain is real, but the evidence comes from in-house admins on old Q&A threads and from an enterprise survey, not from small MSSPs saying they would pay. Many targets run Wazuh or Graylog Open or flat-priced SIEMs with no ingest bill, and free maintained configs exist. The serviceable market is likely low thousands of firms at $3k/year. Demand is unproven until pilots convert.",
+  "objections": [
+    {
+      "objection": "The people complaining are not the named buyer. The need statements come from in-house sysadmins asking ServerFault or Security.SE how to log terminal-server logons or quiet Graylog. None comes from an MSSP owner who pays a recurring fee to fix Windows volume. Q&A questions show a how-to gap, not purchase intent, and they are mostly answered with free GPO and audit-policy advice.",
+      "severity": "major",
+      "evidence": "input:themes[theme_id=4].need_statements; concept:buyer.role; https://serverfault.com/questions/13451/terminal-server-logging"
+    },
+    {
+      "objection": "The evidence is old. The top need statement ('Terminal Server Logging', 114 engagement) was asked in May 2009. The SIEM pre-filtering question dates from Aug 2013, 'SIEM system, what are the benefits?' from Dec 2011, 'OSSEC as a SIEM' from Sep 2013 and the Graylog audit-noise post from Sep 2021. No recent signal shows small MSSPs asking for this, so the concept cannot show that the pain is urgent now.",
+      "severity": "major",
+      "evidence": "https://api.stackexchange.com/2.3/questions/13451;1078821;874140;539342?site=serverfault (creation dates 2009-05-28, 2021-09-27, 2017-09-17, 2013-09-16)"
+    },
+    {
+      "objection": "The cost-pain evidence describes the wrong segment. The Help Net Security/Dynatrace report surveyed 450 senior IT leaders at large enterprises, with about $2.5M a year spent on logging. It says nothing about a 5-analyst MSSP. Several SIEMs the concept names have no per-GB bill: Wazuh and Graylog Open are self-hosted, and Blumira and Huntress are flat-priced. Those MSSPs pay in disk and hardware, not licences, so a $249/month dollar-savings pitch is weak for them. The concept admits this share is unknown.",
+      "severity": "major",
+      "evidence": "https://www.helpnetsecurity.com/2026/06/19/report-log-management-security-risk/; concept:open_questions[0]; concept:risks[2]"
+    },
+    {
+      "objection": "Free alternatives already cover the core need. sysmon-modular is actively maintained, builds versioned configs for several Sysmon releases, has an MDE-augment profile and has ATT&CK-mapped modules. It is close to what the paid tier promises. Buyers who already use free community content are not a budgeted market. Microsoft's built-in Sysmon also takes custom configs, so the value left to sell is narrow: per-SIEM mappings plus a volume report.",
+      "severity": "major",
+      "evidence": "https://github.com/olafhartong/sysmon-modular; concept:competitors[5]"
+    },
+    {
+      "objection": "The market is small. Security-led MSPs and MSSPs with 2-15 analysts that pay volume-billed SIEM ingest for Windows-heavy SMB fleets probably number in the low thousands worldwide. At $249/month (about $3k/year), even 150 customers is under $0.5M ARR. That can support a solo lifestyle business, not a venture-scale one, and the concept gives no count of target firms.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price; concept:buyer.company_profile"
+    },
+    {
+      "objection": "The logon-evidence and ransomware-precursor packs widen the pitch, but their own demand evidence is equally anecdotal. Those buyers already have budgeted products: ADAudit Plus from $245-$595/year, EDR bundles and backup vendors' anti-ransomware. The concept does not show these packs would win budget from tools MSPs already resell.",
+      "severity": "minor",
+      "evidence": "input:flagged_claims[0]; input:themes[theme_id=33].market_research"
+    }
+  ],
+  "strongest_point": "The riskiest-assumption test is cheap, fast and well designed: a free baseline, a log-diet script and $500 hand-done pilots will show real willingness to pay within weeks.",
+  "what_would_change_my_mind": [
+    "3 or more paid $500 pilots and 10 or more MSSPs asking for subscription pricing within two weeks of the r/msp and Wazuh/Graylog posts",
+    "Interviews with 15 small MSSPs in which at least half pay per-GB SIEM ingest and name Windows events as their biggest line",
+    "Recent (2025-2026) posts from MSSP owners complaining about Windows ingest cost",
+    "A measured Windows-volume cut of 40% or more in the pilots, worth more than $249/month per MSSP"
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://serverfault.com/questions/13451/terminal-server-logging",
+    "https://security.stackexchange.com/questions/41068/siem-log-pre-filtering-question",
+    "https://serverfault.com/questions/1078821/windows-server-audit-logs",
+    "https://api.stackexchange.com/2.3/questions/13451;1078821;874140;539342?site=serverfault",
+    "https://api.stackexchange.com/2.3/questions/41068;9684?site=security",
+    "https://www.helpnetsecurity.com/2026/06/19/report-log-management-security-risk/",
+    "https://github.com/olafhartong/sysmon-modular"
+  ]
+}

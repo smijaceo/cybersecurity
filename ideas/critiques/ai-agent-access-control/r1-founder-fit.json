@@ -1,0 +1,50 @@
+{
+ "concept_id": "ai-agent-access-control",
+ "lens": "founder-fit",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "A services-first, near-zero-cost sprint suits a solo bootstrapped founder, and the red-team work uses their offensive skills. But the buyer (SaaS CTOs) won't recognise their Windows/CompTIA/CTF credentials. Agent, CI and SOC 2 work is a new domain, sales depend on a few contacts, and solo red-teaming of production credentials carries liability. Viable if credibility is built publicly first.",
+ "objections": [
+  {
+   "objection": "Credibility gap with the named buyer. CTOs at 15-150 person SaaS firms buy on visible AppSec or AI-security track record. The founder's proof is CompTIA certifications, CTFs and Windows detection, with no published agent or LLM security research. The concept admits this as its hardest part but plans no time for it before the 2-week sales test.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts[0]; config/founder.yaml background.certifications, background.hands_on"
+  },
+  {
+   "objection": "Core founder strengths go mostly unused, and three new domains must be learned. Windows internals and Sysmon/WEF detection barely matter on the mostly macOS/Linux developer and CI fleets of small SaaS companies. The founder must learn the hook and policy formats of four fast-changing agents, GitHub Actions/CI attack paths, and SOC 2 control narratives. That is realistically 2-4 months before the first sprint can be delivered with confidence, not the 1-month MVP.",
+   "severity": "major",
+   "evidence": "concept:build.months_to_mvp; concept:mvp.features; https://code.claude.com/docs/en/hooks"
+  },
+  {
+   "objection": "First-customer plan exceeds a solo founder's reach. The plan needs 8 booked checks and 2 signed sprints within 2 weeks, from a few contacts, SOC 2 consultant partners who don't exist yet, and cold LinkedIn. Without a reputation, a 4-12 week cycle per first deal is more likely, so first revenue lands around month 3-5.",
+   "severity": "major",
+   "evidence": "concept:riskiest_assumption.success_signal; concept:go_to_market.first_customers; config/founder.yaml constraints.network"
+  },
+  {
+   "objection": "Liability is a real risk for a solo founder. Prompt-injection testing runs against clients' real agents, which hold GitHub, cloud and production-data access. One destructive tool call could ruin a one-person firm. Clients commonly require proof of E&O and cyber insurance (broker averages suggest about $1-3k a year), so that is an upfront cost and an underwriting hurdle before the first sprint.",
+   "severity": "major",
+   "evidence": "concept:risks[4]"
+  },
+  {
+   "objection": "The income model overstates one person's capacity. A 2-week sprint with a red team, policy pack and audit integration, plus selling, retainers and kit maintenance across four agents, allows about 2 sprints a month, not 3-4. That caps revenue near $7-9k a month until productised.",
+   "severity": "minor",
+   "evidence": "concept:pricing.rationale"
+  },
+  {
+   "objection": "As agent vendors ship managed policies (Claude Code already offers managed hooks and allowManagedHooksOnly), the setup work shrinks. The founder has to keep re-learning the platforms while also selling.",
+   "severity": "minor",
+   "evidence": "https://code.claude.com/docs/en/hooks"
+  }
+ ],
+ "strongest_point": "Services-first with a fixed fee, near-zero running costs and an open-source kit. The red-team core plays directly to the founder's offensive-testing and Python automation skills.",
+ "what_would_change_my_mind": [
+  "Before selling, the founder publishes 2-3 reproducible prompt-injection or CI-agent exposure write-ups (or a CVE or vendor-acknowledged finding) together with the open-source workflow scanner.",
+  "2 of 10 contacted SOC 2 readiness consultants or vCISOs agree in writing to refer clients, and at least one paid pilot closes within 8 weeks of launch.",
+  "Re-scoped variant: lead with the free CI workflow scanner and public research to earn credibility, and sell CI-agent hardening first, which is deterministic and lower liability than live red teams. Sell through vCISO and MSP partners, then add an endpoint detection pack (Sysmon/EDR-style rules for agent-spawned shells and MCP processes) that uses the founder's detection-engineering strength."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://code.claude.com/docs/en/hooks"
+ ]
+}

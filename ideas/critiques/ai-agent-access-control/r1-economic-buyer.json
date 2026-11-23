@@ -1,0 +1,53 @@
+{
+  "concept_id": "ai-agent-access-control",
+  "lens": "economic-buyer",
+  "round": 1,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "As the CTO signing this, $3,500 fits on a card without CFO review, but nothing forces me to spend it. SOC 2 has no AI criteria and auditors improvise, so a policy doc and an inventory satisfy most questionnaires. The recurring $400 retainer loses to a $15/user product with audit logs. Letting an unknown consultant red-team our production credentials is a bigger approval than the price.",
+  "objections": [
+    {
+      "objection": "No must-have trigger. The AICPA has published no AI-specific Trust Services Criteria; AI evidence requests are ad hoc overlays that vary by audit firm, and they centre on the company's own AI product (model lineage, inference logs), not on developer coding agents. Enterprise questionnaires mostly ask for an AI tool inventory and an acceptable-use policy, which my compliance platform's templates or a vCISO already cover. Without an audit finding, an incident or a named customer requirement, this is a discretionary 'nice-to-have', and the concept itself admits this in its riskiest assumption.",
+      "severity": "major",
+      "evidence": "https://labs.cloudsecurityalliance.org/research/csa-research-note-soc2-ai-controls-gap-20260830-csa-styled/; concept:riskiest_assumption.assumption"
+    },
+    {
+      "objection": "No budget line of its own, and the lines it would draw from are already committed. At 15-150 people the security spend is the compliance platform, the SOC 2 auditor and the annual pentest. To fund this I would rather ask my existing pentest vendor or my compliance provider to add 'AI coding tool' scope than onboard a new solo vendor; SMB compliance-as-a-service providers already publish AI-coding-assistant control guidance for SOC 2 and ISO 27001 clients.",
+      "severity": "major",
+      "evidence": "https://bastion.tech/blog/ai-coding-assistants-security-risks-soc2-iso27001; concept:buyer.company_profile"
+    },
+    {
+      "objection": "The recurring part loses to a product on my own cost comparison. Knostic Kirin is free up to 5 users and $15/user/month above that, with organisational policy, audit logs and cross-org MCP/hook visibility; for 25 developers that is about $375/month, the same as the $400 retainer, but it is continuous, vendor-maintained and needs no person. The one-off sprint is easy to justify; the retainer that makes the business work is what I would cancel after quarter one.",
+      "severity": "major",
+      "evidence": "https://www.knostic.ai/pricing; concept:pricing.entry_price"
+    },
+    {
+      "objection": "Approval friction exceeds the price. A red team run against our real agents, repos and production-connected MCP servers needs a signed rules of engagement, an MSA, proof of professional liability and cyber insurance, and confidence in the tester. A solo founder with no AI-security track record makes my legal and security sign-off harder than the $3,500 cheque, and that slows or kills the deal regardless of price.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts; concept:risks"
+    },
+    {
+      "objection": "Hard to justify to a CFO in money terms. The concept gives no avoided-loss figure, no deal it unblocked and no insurer discount. A CFO will accept 'a customer questionnaire asked and we lost or delayed a deal' far more readily than OWASP agentic risk mappings.",
+      "severity": "minor",
+      "evidence": "concept:problem.summary"
+    },
+    {
+      "objection": "Bundling erodes the reason to pay over time: agent vendors ship managed settings and organisation policies for free, so next year I may expect my Claude Code, Cursor or Copilot business plan to cover what the sprint installs.",
+      "severity": "minor",
+      "evidence": "concept:risks"
+    }
+  ],
+  "strongest_point": "At $3,500 one-off the sprint sits under most CTO approval thresholds and gives a compliance owner a concrete artefact to show customers asking about AI tooling.",
+  "what_would_change_my_mind": [
+    "At least 3 of 10 target companies show a customer questionnaire, auditor request or insurer question specifically about coding agents or MCP.",
+    "2 or more SOC 2 auditors or readiness firms name coding-agent controls as a finding or required evidence.",
+    "2 signed sprints where the buyer cites a blocked or delayed deal as the reason to buy.",
+    "3 of the first 5 sprint customers choose the retainer after comparing it with a $15/user self-serve product."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://labs.cloudsecurityalliance.org/research/csa-research-note-soc2-ai-controls-gap-20260830-csa-styled/",
+    "https://bastion.tech/blog/ai-coding-assistants-security-risks-soc2-iso27001",
+    "https://www.knostic.ai/pricing"
+  ]
+}

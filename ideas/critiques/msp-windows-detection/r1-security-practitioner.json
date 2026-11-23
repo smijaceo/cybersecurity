@@ -1,0 +1,53 @@
+{
+  "concept_id": "msp-windows-detection",
+  "lens": "security-practitioner",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Reviewable config content with no hosted logs or privileged service is easy for an MSSP to trust. But built-in Sysmon misses most SMB servers, agent-side drops can't be undone, the ransomware pack duplicates EDR, and pushing GPO/Sysmon changes to 50 tenants through RMM is a change-risk MSSPs will resist without staged rollout and proof of coverage.",
+  "objections": [
+    {
+      "objection": "The why-now rests on built-in Sysmon, but Microsoft ships it only on Windows 11 and Server 2025, it cannot coexist with standalone Sysmon, and its rendered messages are localized. SMB client estates run mostly Server 2016-2022, so packs must support two Sysmon flavours, migration (uninstall standalone first) and parsers that read XML fields only. Monthly maintenance is double work, not a single built-in target.",
+      "severity": "major",
+      "evidence": "https://learn.microsoft.com/windows/security/operating-system-security/sysmon/overview"
+    },
+    {
+      "objection": "Filtering at the source (audit policy, Sysmon excludes, Wazuh eventchannel XPath queries, Sentinel DCR XPath) drops events before they are stored anywhere, so a wrong exclusion is an unrecoverable forensic gap. Atomic Red Team replay shows that mapped detections still fire. It does not prove that incident-response questions (lateral movement timelines, logoff times, object access) can still be answered. Out-of-scope 'no archive' leaves no safety net. An MSSP's IR lead will not sign off without a cheap archive tier or a full-fidelity window.",
+      "severity": "major",
+      "evidence": "concept:mvp.out_of_scope; concept:build.hardest_parts"
+    },
+    {
+      "objection": "Microsoft already gives Sentinel users curated Minimal and Common Windows Security event sets built for volume reduction with a full audit trail, and Wazuh ships a Windows eventchannel ruleset with documented XPath filtering. The paid delta over these free defaults is unproven for the Sentinel and Wazuh users the concept targets first.",
+      "severity": "major",
+      "evidence": "https://learn.microsoft.com/en-us/azure/sentinel/windows-security-event-id-reference"
+    },
+    {
+      "objection": "The ransomware-precursor pack adds little risk reduction. Every mainstream EDR an MSSP deploys (Defender, SentinelOne, Huntress, etc.) already detects and usually blocks vssadmin/wmic shadow-copy deletion. Canary folders audited through SACL 4663 events reach the SIEM after agent/WEF shipping and rule latency of minutes, often after encryption has spread. They also fire on AV scans, backup and indexing unless they are carefully excluded. With no response action, this is an alert, not prevention.",
+      "severity": "major",
+      "evidence": "concept:mvp.features (ransomware-precursor pack)"
+    },
+    {
+      "objection": "Pushing third-party audit-policy GPOs, Sysmon configs and scripts to up to 50 client tenants through RMM is a supply-chain and change-management risk (post-Kaseya MSPs are wary). It can also override clients' existing advanced audit subcategory settings or EDR-required auditing. Packs need signing, diff and preview, staged rings, and a rollback per tenant.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features (RMM scripts)"
+    },
+    {
+      "objection": "Logon evidence reports depend on 4624/4634/4778/4779 being collected. Several of these are high-volume, which works against the volume-cut promise. The concept must show both goals hold together for RDS hosts.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "Content-only delivery (plain XML/GPO configs, no agent, no log custody, no admin credentials held) is transparent and easy for a cautious MSSP to review and trust.",
+  "what_would_change_my_mind": [
+    "Pilots at 3 MSSPs showing at least 40% Windows volume cut versus Sentinel 'Common' or Wazuh defaults (not versus 'All'), with mapped detections still firing in Atomic Red Team replay.",
+    "A tabletop IR exercise at each pilot that answers the standard lateral-movement and logon-timeline questions from retained data only.",
+    "Packs tested on Server 2016-2022 with standalone Sysmon as well as built-in Sysmon on Win11/Server 2025.",
+    "RMM rollout with signed packs, staged rings and one-click per-tenant rollback."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://learn.microsoft.com/windows/security/operating-system-security/sysmon/overview",
+    "https://learn.microsoft.com/en-us/azure/sentinel/windows-security-event-id-reference",
+    "https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/configuration.html"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "concept_id": "ai-agent-access-control",
+  "lens": "security-practitioner",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "The red-team findings and CI workflow hardening would be useful to a small SaaS team, and a fixed fee keeps it easy to buy. But the core deliverable, hook scripts installed per laptop, is a guardrail that is client-side and fails open. A practitioner can disable or route around it unless it is backed by MDM or Team/Enterprise managed settings and OS-level sandboxing. The access the red team needs and the canary-based CI control both need redesign.",
+  "objections": [
+    {
+      "objection": "The 'enforced tool policy' is client-side and bypassable. Claude Code's own docs call even server-managed settings 'a client-side control, not a security boundary' that users on unmanaged devices can bypass without admin rights, for example by pointing at a third-party provider or editing the cached file. Org-wide enforcement needs Claude Teams/Enterprise or MDM, and Cursor team and enterprise hooks are Enterprise-only. Without these, project or user hooks can be overridden by any developer, so a 15-150 person company gets advisory controls sold as enforced ones.",
+      "severity": "major",
+      "evidence": "https://code.claude.com/docs/en/server-managed-settings (Security considerations; Requirements: Claude for Teams or Enterprise); concept:mvp.features[2]"
+    },
+    {
+      "objection": "Hooks fail open by default: in Cursor, a hook that crashes, times out or exits with an unexpected code lets the action proceed unless failClosed is set. A custom shell-AST parser maintained by one person across four fast-changing agents will break on new tool names and input formats, and every break silently becomes allow-all. Parsing the command text also misses indirection. The agent writes a script file and then runs it, or calls an interpreter. The robust control the vendors already ship, OS-level sandboxing with managed network allowlists, is missing from the MVP.",
+      "severity": "major",
+      "evidence": "https://cursor.com/docs/agent/hooks (fail-open by default, failClosed option); https://code.claude.com/docs/en/server-managed-settings (Bash rule limits; sandbox allowManagedDomainsOnly); concept:build.hardest_parts[2]"
+    },
+    {
+      "objection": "The access request is hard to grant. A two-week outsider runs prompt-injection attacks against agents wired to GitHub, cloud and production data, and runs an inventory script over developers' agent configs. MCP configs routinely hold API tokens in env blocks, and 'secrets stripped' is a promise a cautious CTO has to verify. Many buyers will insist on a sandboxed copy, and then the findings no longer show their real exposure.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[0]; concept:mvp.features[1]; concept:risks[4]"
+    },
+    {
+      "objection": "The CI canary secret only catches verbatim exfiltration. If the agent base64-encodes or splits the value, or exfiltrates a real secret instead of the canary, nothing fires. 'Downgrade to read-only when input is untrusted' depends on classifying the trigger correctly. The fix that actually works is least-privilege GITHUB_TOKEN permissions, no secrets on untrusted triggers, and environment protection, which zizmor/actionlint-style scanners and GitHub's own guidance already cover for free.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[3]"
+    },
+    {
+      "objection": "Audit logs go 'into the client's existing log store', but most 15-150 person SaaS companies have no SIEM that collects logs from developer laptops. Hook logs written locally can be edited by the user, so their value as SOC 2 evidence is weak unless the logs are shipped to a store the user can't tamper with.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[4]"
+    }
+  ],
+  "strongest_point": "Hands-on prompt-injection findings against the client's own agent and CI setup give engineers concrete, reproducible proof that is far more convincing than a policy template.",
+  "what_would_change_my_mind": [
+    "A pilot at 2-3 real clients where controls are deployed through managed settings/MDM plus native sandboxing, not per-user hooks alone.",
+    "A re-test showing the policy, with hooks set fail-closed, survives script-file and interpreter bypasses.",
+    "At least 2 CTOs grant red-team access to their real (non-cloned) agent setup under signed rules of engagement.",
+    "One SOC 2 auditor accepts the shipped, tamper-resistant audit logs as evidence."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://code.claude.com/docs/en/settings",
+    "https://code.claude.com/docs/en/server-managed-settings",
+    "https://cursor.com/docs/agent/hooks",
+    "https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-hooks"
+  ]
+}

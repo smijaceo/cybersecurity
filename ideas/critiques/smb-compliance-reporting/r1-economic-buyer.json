@@ -1,0 +1,55 @@
+{
+  "concept_id": "smb-compliance-reporting",
+  "lens": "economic-buyer",
+  "round": 1,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "As a 3-person tax office owner the WISP is a real legal duty, but I already meet it with a free IRS template or a one-off $699 WISP, and $297-697/yr cyber insurance gives me breach response and pre-breach legal help. Under 5,000 consumers the written IR plan isn't even required. $1,180 for year one buys too little I can't get cheaper.",
+  "objections": [
+    {
+      "objection": "The money has to come from the same small pot as cyber insurance, and insurance wins. Tax-preparer cyber plans cost $297-697 a year and include data breach response, pre-breach legal access, breach preparedness and staff training videos, plus real coverage. Faced with $1,180 for Safeguards Desk, I keep the policy and drop this. The incident clock and 2 support hours duplicate what my insurer's breach coach and panel counsel already do, and they pay the bills.",
+      "severity": "major",
+      "evidence": "https://www.ptin.org/insurance/cyber"
+    },
+    {
+      "objection": "The must-have part is cheap; the recurring part is optional for most targets. Under 16 CFR 314.6, a firm with customer information on fewer than 5,000 consumers is exempt from 314.4(h) (written incident response plan), (d)(2) (continuous monitoring or annual pen test/vulnerability scans) and (i) (annual report to the board). That covers most 1-10 person tax offices. The tabletop and tested IR plan sold as compliance are therefore good practice, not a legal duty. I can't use the regulation to justify a subscription to myself or my accountant.",
+      "severity": "major",
+      "evidence": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.6"
+    },
+    {
+      "objection": "The PTIN renewal and Form W-12 wedge is weaker than the concept assumes. The W-12 question asks whether the preparer is aware of the WISP duty; it does not ask for proof of a plan. Owners already tick it holding a free Pub 5708 template. The template satisfies the trigger moment, so nothing at renewal pushes me to pay.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.wedge"
+    },
+    {
+      "objection": "There is no enforcement or audit finding I can show my CFO (my spouse or my own accountant). I found no FTC Safeguards action against a small tax practice; the known tax-prep case is TaxSlayer, a large online provider, and the concept itself lists enforcement against tiny firms as an open question. The 30-day FTC clock needs 500+ affected consumers and unencrypted data, so for many offices it is a rare, once-a-decade event. Without a fear trigger this is a nice-to-have bought only after an incident.",
+      "severity": "major",
+      "evidence": "concept:open_questions"
+    },
+    {
+      "objection": "Managed IT and hosting vendors for tax firms already sell a WISP bundled with security support the owner may already buy (ACE: flat $699 custom WISP with risk assessment and 24x7 managed security support). For offices with any IT or hosting provider, this is a second invoice for something the incumbent vendor can claim to cover.",
+      "severity": "minor",
+      "evidence": "https://www.acecloudhosting.com/written-information-security-plan/"
+    },
+    {
+      "objection": "The value to me is mostly the founder's time (onboarding, tabletop, M365 checks), not the software. If I pay for that, I'd rather pay a one-off hardening visit than an ongoing $49/month whose renewal value I can't see in a year with no incident. Churn after year one looks likely.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price"
+    }
+  ],
+  "strongest_point": "The WISP duty is real federal law owners are reminded of every year, and a hands-on Windows/M365 practitioner who tailors it beats a template a busy owner never tested.",
+  "what_would_change_my_mind": [
+    "A cyber insurer or tax-preparer insurance program (e.g. the PTIN.org/NAEA plans) agrees to refer, bundle or discount premiums for firms on the program, so it replaces rather than adds to the insurance spend.",
+    "At least 3 of 10 interviewed owners show a concrete pressure: an insurer questionnaire, an IRS/FTC inquiry, a client or bank asking for proof of a tested plan, or a past incident they mishandled.",
+    "Evidence of FTC or IRS (e-file provider sanctions) enforcement reaching sub-20-person tax or mortgage offices since May 2024.",
+    "Repositioning to firms above 5,000 consumers (where 314.4(h), (d)(2) and (i) apply) or to small RIAs under Reg S-P, where the recurring IR and testing work is a legal requirement, with 3 signed annual agreements at the stated price.",
+    "First-year renewal data: at least 70% of pilot clients renew without an incident having occurred."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.6",
+    "https://www.ptin.org/insurance/cyber",
+    "https://taxslayerpro.com/product-partnerships/ero-cyber-security",
+    "https://www.acecloudhosting.com/written-information-security-plan/"
+  ]
+}

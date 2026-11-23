@@ -22,6 +22,20 @@ Each signal gets two labels.
 
 `need` can only be `y` when `on_segment` is `y`.
 
+## Source-specific rules (decision D16)
+
+- **Open discovery** (`segment = open-discovery`): `on_segment = y` for any cybersecurity need.
+- **Public tenders** (`source = ted`; text may be in any EU language — read it as is): a contract
+  notice is a buyer formally procuring something. `need = y` when it procures a security
+  capability in the segment (product, managed service, audit/testing); `n` for hardware-only
+  purchases, generic IT, or when security is incidental.
+- **Job postings** (`source = jobs`): `need = y` only when the posting shows recurring security
+  work a product could take on or a gap the team is hiring around (e.g. "manually triage
+  alerts", "build our vulnerability management program", "own SOC 2 evidence collection").
+  A generic role description or a tool list alone is `n`.
+- **Regulations** (`source = regulation`): `need = y` when the obligation requires an
+  organisation in the segment to do or evidence something a product or service could support.
+
 ## Output
 
 One JSON object per signal: `{"id": ..., "on_segment": "y"|"n", "need": "y"|"n", "reason": "<= 15 words"}`.

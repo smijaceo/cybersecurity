@@ -1,0 +1,75 @@
+{
+  "concept_id": "cra-sbom-vex",
+  "lens": "technical-feasibility",
+  "round": 2,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "Much more buildable. Self-hosting, four features and six months suit two engineers, and the riskiest rules already exist in OE-core. The remaining work is a data join: OE build evidence is keyed by recipe and CPE product, DT findings by SBOM PURL. Kirkstone BSPs lack vex.bbclass, and the kernel rule should use compiled files, not .config.",
+  "objections": [
+    {
+      "objection": "The core build-evidence join is harder than the feature list implies. vex.bbclass writes per-recipe status keyed by recipe name and CVE_PRODUCT (an NVD/CPE product name), with no PURLs. Dependency-Track findings are keyed by the SBOM component's PURL/CPE. Where the SBOM came from Syft/Trivy scanning a rootfs rather than Yocto's own SPDX, recipe-to-component mapping is fuzzy, and a wrong match can wrongly carry a not_affected status. v1 should require a Yocto-generated SBOM, or treat unmatched components as a hard 'no evidence' result.",
+      "severity": "major",
+      "evidence": "https://raw.githubusercontent.com/openembedded/openembedded-core/master/meta/classes/vex.bbclass"
+    },
+    {
+      "objection": "Coverage across Yocto releases. vex.bbclass and OE's kernel CVE enrichment script are on scarthgap but not on kirkstone. Kirkstone is still common in vendor BSPs (NXP, TI and others lag), so the ingest must also parse older cve-check JSON and handle per-branch format differences. That adds to an already tight six months and to every later release.",
+      "severity": "major",
+      "evidence": "https://raw.githubusercontent.com/openembedded/openembedded-core/kirkstone/meta/classes/vex.bbclass (404) vs scarthgap (200); concept:build.hardest_parts"
+    },
+    {
+      "objection": "The kernel rule is specified as mapping kernel .config options to CVEs, but kernel CVE records name affected files, not Kconfig symbols. OE-core's improve_kernel_cve_report.py already does this properly, matching kernel CNA records against the compiled-file list from the kernel SPDX (SPDX_INCLUDE_COMPILED_SOURCES). Reuse that approach. That lowers the build risk, but it also narrows the paid 'additional cut' compared with free OE tooling.",
+      "severity": "minor",
+      "evidence": "https://raw.githubusercontent.com/openembedded/openembedded-core/master/scripts/contrib/improve_kernel_cve_report.py"
+    },
+    {
+      "objection": "Two-way sync with DT analysis state. DT stores one analysis per project/component/vulnerability. VEXpath's ledger keys on release, dependency path and build-config hash, and it must not overwrite analysts' edits. Conflict rules, plus the DT v4-to-v5 API differences, need tests against both majors.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts"
+    },
+    {
+      "objection": "A self-hosted product shifts the cost to support: upgrades, offline or air-gapped vulnerability data, and customer-key signing (HSM/PKCS#11 or file keys). This is manageable for a container next to DT, but release engineering should be budgeted from month one.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "Rescoped MVP (no multi-tenancy, no portal, no evidence pack) fits two specialists in six months, built largely on DT 5.1, OE vex/cve-check and existing CSAF libraries.",
+  "what_would_change_my_mind": [
+    "A prototype that joins vex.bbclass/cve-check output to DT findings on 3 real firmware builds (at least one kirkstone), with match coverage reported and zero wrong carries on manual review.",
+    "Measured extra cut beyond CVE_STATUS plus OE's improve_kernel_cve_report.py of at least 20% of open findings on those builds.",
+    "Shown write-back to DT 5.1 analysis that preserves manual analyst edits across a re-import."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "PURL-based CSAF matching rests on data that mostly isn't there (Siemens CSAF has no PURLs)",
+      "resolved": true,
+      "note": "CSAF matching demoted to one input, limited to feeds with PURLs; build evidence is now the primary source."
+    },
+    {
+      "objection": "Red Hat VEX uses source-RPM PURLs that don't match scanner binary RPMs, and its format changed in 2026",
+      "resolved": true,
+      "note": "Binary-to-source-RPM mapping is now an explicit feature and hardest part, and Red Hat is no longer central for the embedded buyer. Maintenance stays a stated risk."
+    },
+    {
+      "objection": "Five features plus multi-tenant SaaS in 5 months for 2 engineers is too tight",
+      "resolved": true,
+      "note": "Cut to 4 features, self-hosted, no portal/evidence pack/multi-tenancy, 6 months. Plausible, though the cross-release Yocto ingest still makes it tight."
+    },
+    {
+      "objection": "No invalidation rule for inherited not_affected decisions",
+      "resolved": true,
+      "note": "Re-open on any change to version, dependency path or build-config hash; conservative and testable."
+    },
+    {
+      "objection": "Operating a CSAF trusted-provider portal adds ongoing operations",
+      "resolved": true,
+      "note": "Portal removed; export only, and customers publish."
+    }
+  ],
+  "sources": [
+    "https://raw.githubusercontent.com/openembedded/openembedded-core/master/meta/classes/vex.bbclass",
+    "https://raw.githubusercontent.com/openembedded/openembedded-core/master/scripts/contrib/improve_kernel_cve_report.py",
+    "https://raw.githubusercontent.com/openembedded/openembedded-core/kirkstone/meta/classes/vex.bbclass",
+    "https://raw.githubusercontent.com/openembedded/openembedded-core/scarthgap/meta/classes/vex.bbclass",
+    "https://dependencytrack.org/news/dependency-track-5-1"
+  ]
+}

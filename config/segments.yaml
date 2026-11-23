@@ -27,9 +27,28 @@ segments:
     terms: ["user access review", "privileged access management", "SSO tax",
             "employee offboarding", "SCIM provisioning"]
 
+  ai-agent-security:   # decision D17
+    description: Securing AI/LLM systems and agents — prompt injection, agent permissions and tool
+      access, MCP servers, model/data leakage, AI governance and policy enforcement.
+    terms: ["prompt injection", "AI agent security", "LLM security", "MCP server security"]
+
   smb-security-ops:
     description: Small teams with no SOC — alert overload, affordable detection, compliance.
     terms: ["small business security", SIEM, "EDR for small", "SOC 2 compliance tool"]
+
+  open-discovery:      # decision D17: pain phrases with no segment terms
+    description: Any cybersecurity need — tools, services, operations, compliance — not limited
+      to a predefined segment.
+    queries:
+      github: ['"is there a tool" security', '"looking for a tool" security',
+               '"too expensive" security', '"alternative to" security']
+      hn: ['"is there a tool" security', '"looking for a" security tool', '"ask hn" security',
+           '"we pay" security', '"too expensive" security']
+      serverfault: [security, audit, compliance, phishing, ransomware, logging]
+      stackexchange: [tool, compliance, "small business", automate]
+      ted: ['"security"']
+      jobs: ['"security engineer"', '"SOC analyst"', '"detection engineer"',
+             '"GRC"', '"security operations"']
 
 # ---------------------------------------------------------------------------
 # Phase 2 reference data (decision D7: reuse curated lists and public datasets)

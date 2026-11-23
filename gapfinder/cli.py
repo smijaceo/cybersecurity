@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+from datetime import date
 import json
 import logging
 import sys
@@ -29,7 +30,7 @@ DEFAULT_PHASE2 = ROOT / "reports" / "phase2"
 #   Conversations"); title match is precise but low volume. ~300 requests/day quota.
 # Separating real need statements from general discussion is the Phase 2 relevance filter.
 PHRASE_SOURCES = {"github"}
-QUOTED_TERM_SOURCES = {"hn"}
+QUOTED_TERM_SOURCES = {"hn", "ted"}   # ted: FT~("term") within security procurement codes
 
 log = logging.getLogger("gapfinder")
 
@@ -40,7 +41,12 @@ def load_config(path: Path) -> dict:
 
 
 def build_queries(config: dict, segment: str, source: str) -> list[str]:
-    terms = config["segments"][segment]["terms"]
+    seg = config["segments"][segment]
+    if source in seg.get("queries", {}):  # explicit per-source queries (e.g. open discovery)
+        return list(seg["queries"][source])
+    if seg.get("queries") and not seg.get("terms"):
+        return []  # query-only segment that doesn't cover this source
+    terms = seg.get("terms", [])
     if source in QUOTED_TERM_SOURCES:
         return [f'"{t}"' for t in terms]
     if source not in PHRASE_SOURCES:
@@ -62,7 +68,11 @@ def cmd_collect(args) -> int:
             print(f"removed {store.delete_segment(segment)} old signals from {segment}")
     total = 0
     for source in args.source:
-        collector = COLLECTORS[source]()
+        try:
+            collector = COLLECTORS[source](before=args.before)
+        except ValueError as exc:  # e.g. a live job board asked for history
+            log.warning("skipping %s: %s", source, exc)
+            continue
         for segment in segments:
             for query in build_queries(config, segment, source):
                 try:
@@ -324,6 +334,37 @@ def cmd_panel(args) -> int:
     return 0 if results else 1
 
 
+def cmd_import_regulations(args) -> int:
+    import hashlib
+
+    from . import schemas
+    from .models import Signal
+
+    config = load_config(args.config)
+    try:
+        rows = schemas.load_jsonl(args.path, schemas.RegulationSignal)
+    except schemas.SchemaError as exc:
+        log.error("%s", exc)
+        return 2
+    bad = sorted({r.segment for r in rows} - set(config["segments"]))
+    if bad:
+        log.error("unknown segment(s): %s", ", ".join(bad))
+        return 2
+    sigs = [Signal(
+        source="regulation",
+        native_id=hashlib.sha1(f"{r.regulation}|{r.article}|{r.obligation}".encode()).hexdigest()[:16],
+        segment=r.segment, query="regulation-scout",
+        title=f"{r.regulation}: {r.obligation}"[:300],
+        body=f"{r.obligation} Applies to: {r.applies_to}. Jurisdiction: {r.jurisdiction}. "
+             f"Effective {r.effective}. {r.article}".strip(),
+        url=r.source, created_at=r.effective, engagement=1,
+        metadata={"regulation": r.regulation, "jurisdiction": r.jurisdiction,
+                  "applies_to": r.applies_to, "article": r.article}) for r in rows]
+    n = Store(args.db).upsert(sigs)
+    print(f"imported {n} regulatory obligations from {args.path}")
+    return 0
+
+
 def cmd_fetch(args) -> int:
     from .fetch import fetch_text
 
@@ -347,6 +388,8 @@ def main(argv: list[str] | None = None) -> int:
     c.add_argument("--source", action="append", choices=sorted(COLLECTORS),
                    help="source (repeatable; default all)")
     c.add_argument("--limit", type=int, default=30, help="max results per query")
+    c.add_argument("--before", type=date.fromisoformat,
+                   help="only items created before YYYY-MM-DD (backtest, D18)")
     c.add_argument("--fresh", action="store_true",
                    help="delete the segments' existing signals first (after changing search terms)")
     c.set_defaults(func=cmd_collect)
@@ -429,6 +472,11 @@ def main(argv: list[str] | None = None) -> int:
     pn.add_argument("--scoring", type=Path, default=DEFAULT_SCORING)
     pn.add_argument("--report", type=Path, default=ROOT / "reports" / "phase4" / "panel.md")
     pn.set_defaults(func=cmd_panel)
+
+    ir = sub.add_parser("import-regulations",
+                        help="validate and import the regulation scout's obligations as signals")
+    ir.add_argument("path", type=Path)
+    ir.set_defaults(func=cmd_import_regulations)
 
     fp = sub.add_parser("fetch", help="print a web page's main text (for agents)")
     fp.add_argument("url")

@@ -16,10 +16,10 @@ class HackerNewsCollector(Collector):
     min_interval = 0.5
 
     def collect(self, segment: str, query: str, limit: int = 50) -> Iterable[Signal]:
-        data = self.get_json(
-            URL,
-            {"query": query, "tags": "(story,comment)", "hitsPerPage": min(limit, 100)},
-        )
+        params = {"query": query, "tags": "(story,comment)", "hitsPerPage": min(limit, 100)}
+        if self.before:
+            params["numericFilters"] = f"created_at_i<{self.before_ts()}"
+        data = self.get_json(URL, params)
         for hit in data.get("hits", []):
             is_comment = "comment" in hit.get("_tags", [])
             title = hit.get("title") or hit.get("story_title") or ""

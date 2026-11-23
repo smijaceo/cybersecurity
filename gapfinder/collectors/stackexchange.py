@@ -23,6 +23,8 @@ class StackExchangeCollector(Collector):
     def __init__(self, *args, site: str = "security", **kwargs):
         super().__init__(*args, **kwargs)
         self.site = site
+        if site != "security":
+            self.name = site  # e.g. "serverfault": its own source name and audience
 
     def collect(self, segment: str, query: str, limit: int = 50) -> Iterable[Signal]:
         data = self.get_json(
@@ -34,6 +36,7 @@ class StackExchangeCollector(Collector):
                 "order": "desc",
                 "sort": "relevance",
                 "filter": "withbody",
+                **({"todate": self.before_ts()} if self.before else {}),
             },
         )
         if data.get("backoff"):

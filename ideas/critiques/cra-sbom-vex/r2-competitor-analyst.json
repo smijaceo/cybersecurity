@@ -1,0 +1,82 @@
+{
+  "concept_id": "cra-sbom-vex",
+  "lens": "competitor-analyst",
+  "round": 2,
+  "score": 4,
+  "verdict": "no-go",
+  "summary": "The revision answers round 1: it builds on Dependency-Track, sits beside the CRA suites and names SecObserve and CRAVEX. But the new core, Yocto build evidence turned into VEX, is already covered elsewhere: by Yocto's own official sbom-cve-check, by bitvex, by VulnScout and by Lynx Vigiles. The competitor table names none of them. What is left is DT write-back, invalidation and signing, which is thin.",
+  "objections": [
+    {
+      "objection": "Most dangerous competitor: Bootlin's sbom-cve-check. It has been the Yocto Project's official CVE-monitoring tool since the Wrynose release, it is free (GPLv2), and it works on exactly the inputs VEXpath reads: the SPDX3 SBOM and the vex.bbclass rootfs.json. It marks kernel CVEs not applicable when the affected source file is not compiled in, which is finer than VEXpath's kernel-option rule. It also exports a Yocto VEX manifest with statements and justifications and emits not_affected for disputed CVEs. This is the 'paid additional cut' in the wedge, and every Yocto user now gets it upstream for free.",
+      "severity": "fatal",
+      "evidence": "https://bootlin.com/?p=22076 ; https://bootlin.com/blog/sbom-cve-check-updates-new-release-meta-sbom-cve-check-possible-yocto-integration-fosdem-talk/ ; concept:go_to_market.wedge ; concept:mvp.features[1]"
+    },
+    {
+      "objection": "Lynx (Timesys) Vigiles is an established commercial product for this exact buyer, and the concept leaves it out. Its meta-timesys Yocto layer uploads the kernel and U-Boot .config to filter CVEs and keeps a not-affected list. It markets triage decisions, release-by-release records of how each CVE was handled, VEX export, KEV prioritisation and EU CRA reporting for embedded Linux, Yocto, Buildroot and custom BSPs. It also has NXP as a BSP distribution channel. VEXpath's line that 'nobody affordable turns embedded build evidence into reviewed VEX' is not supported until it is checked against Vigiles' pricing and NXP bundle.",
+      "severity": "major",
+      "evidence": "https://vigiles.lynx.com/docs/build-system-docs/meta_timesys.html ; https://www.timesys.com/?p=30183 ; concept:differentiation"
+    },
+    {
+      "objection": "Free open-source tools already cover the rest of the embedded workbench. bitvex is a free CLI that turns Yocto SPDX into OpenVEX using kernel .config, device-tree 'disabled' peripherals and U-Boot config. It also produces delta VEX between builds and has a watch mode that re-scans when SBOMs or configs change, which is close to VEXpath's invalidation idea. VulnScout from Savoir-faire Linux imports Yocto cve-check/VEX with SPDX, has a triage UI, records VEX assessments with AI suggestions that need human approval, and exports CycloneDX and OpenVEX. Device-tree filtering already goes further than VEXpath's MVP.",
+      "severity": "major",
+      "evidence": "https://docs.rs/crate/bitvex/0.3.1 ; https://github.com/savoirfairelinux/vulnscout"
+    },
+    {
+      "objection": "What remains distinct is two-way Dependency-Track sync, invalidation of inherited decisions and signing with the customer's key. These are workflow features, not a product moat. Any of the above could add them, and so could DT 5.1, since its VEX import already exists. sbom-cve-check output plus DT VEX import already gets most teams the free importer that VEXpath plans to give away.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[2] ; concept:mvp.features[3] ; https://dependencytrack.org/news/dependency-track-5-1"
+    },
+    {
+      "objection": "The EUR 3,480/yr add-on is now priced against free upstream tooling and an incumbent embedded vendor, not only against CRA suites. A buyer adds it on top of a suite at EUR 1,188-3,588, so the triage step costs as much as the whole suite.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price"
+    }
+  ],
+  "strongest_point": "I found no tool that keeps per-release VEX decisions natively inside Dependency-Track with conservative invalidation and signing. That gives a narrow but real slot for teams that have standardised on DT.",
+  "what_would_change_my_mind": [
+    "A side-by-side test on 3 real Yocto firmware data sets showing VEXpath resolves 30%+ more findings, with zero wrong not_affected calls, than sbom-cve-check (compiled-sources on) plus bitvex, after both are imported into DT 5.1.",
+    "Vigiles pricing or NXP-bundle terms that confirm it is out of reach or a poor fit for 50-500-person makers, plus 3 discovery calls where Vigiles or VulnScout users name a gap VEXpath fills.",
+    "A repositioning onto the free upstream tools rather than against them, for example a supported, DT-native ledger and signing layer on sbom-cve-check output, sold with Bootlin, Savoir-faire Linux or a Yocto consultancy as a signed partner.",
+    "Evidence that DT maintainers will not take Yocto VEX import and cross-release decision inheritance into scope within 12 months."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Dependency-Track 5.1 and funded CSAF work close the gap (most dangerous competitor in round 1).",
+      "resolved": true,
+      "note": "Repositioned to build on DT: it writes back into DT's analysis and consumes DT's CSAF when that lands. This conflict is gone, but DT plus free Yocto tooling still sets the free baseline."
+    },
+    {
+      "objection": "Missed self-serve CRA suites (CVD Portal, CRA Evidence, CRA-Ready) priced below VEXpath.",
+      "resolved": true,
+      "note": "The suites are now listed, the Art. 14 workflow and evidence pack are dropped, and VEXpath is sold beside them. The add-on still costs as much as a whole suite."
+    },
+    {
+      "objection": "Free SecObserve and DejaCode/CRAVEX cover the VEX workbench.",
+      "resolved": true,
+      "note": "Both are named and the product is differentiated on embedded build evidence. That differentiation now collides with sbom-cve-check, bitvex and VulnScout."
+    },
+    {
+      "objection": "sbomify is a closer rival than a partner.",
+      "resolved": true,
+      "note": "The hosted portal is dropped, sbomify is framed as an integration target and a possible rival, and the risk is kept."
+    },
+    {
+      "objection": "Funded enterprise vendors could add a self-serve tier within a quarter.",
+      "resolved": false,
+      "note": "Unchanged by design. An embedded-specialist incumbent, Lynx Vigiles, already covers the Yocto build-evidence segment and is missing from the analysis."
+    },
+    {
+      "objection": "The defensible core (CSAF matching) is a perishable feature, not a product.",
+      "resolved": false,
+      "note": "The core moved to build-evidence rules, and those are already free upstream (sbom-cve-check compiled-source filtering, bitvex kernel/DT/U-Boot filters) and commercial (Vigiles kernel config filter). The feature-not-product problem remains."
+    }
+  ],
+  "sources": [
+    "https://bootlin.com/?p=22076",
+    "https://bootlin.com/blog/sbom-cve-check-updates-new-release-meta-sbom-cve-check-possible-yocto-integration-fosdem-talk/",
+    "https://docs.rs/crate/bitvex/0.3.1",
+    "https://github.com/savoirfairelinux/vulnscout",
+    "https://vigiles.lynx.com/docs/build-system-docs/meta_timesys.html",
+    "https://www.timesys.com/?p=30183"
+  ]
+}

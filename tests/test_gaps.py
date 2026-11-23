@@ -25,8 +25,12 @@ def test_demand_features_recent_share():
     now = datetime(2026, 11, 22, tzinfo=timezone.utc)
     sigs = [{"created_at": "2026-01-01T00:00:00+00:00", "engagement": 5, "segment": "a"},
             {"created_at": "2019-01-01T00:00:00+00:00", "engagement": 1, "segment": "b"}]
-    f = gaps.demand_features(sigs, recent_years=2, now=now)
-    assert f == {"need_signals": 2, "engagement": 6, "recent_share": 0.5, "segments": ["a", "b"]}
+    for s, src in zip(sigs, ("github", "ted")):
+        s["source"] = src
+    f = gaps.demand_features(sigs, recent_years=2, now=now,
+                             audience_weights={"developer": 1.0, "buyer": 2.5})
+    assert f == {"need_signals": 2, "weighted_need": 3.5, "audience_mix": {"buyer": 1, "developer": 1},
+                 "engagement": 6, "recent_share": 0.5, "segments": ["a", "b"]}
 
 
 def theme(name, need=10, repos=100, crowded=2, wtp=2, pain=0.1, bundling="medium", relevance=2):
@@ -60,3 +64,10 @@ def test_monetization_rewards_wtp_and_low_bundling():
                          theme("paid", wtp=3, pain=0.4, bundling="low")], W)
     assert ranked[0]["name"] == "paid"
     assert ranked[0]["scores"]["monetization"] == 1.0
+
+
+def test_buyer_demand_outranks_same_count_of_developer_demand():
+    dev = theme("dev", need=10)
+    buy = theme("buy", need=10)
+    dev["demand"]["weighted_need"], buy["demand"]["weighted_need"] = 10, 25
+    assert gaps.score([dev, buy], W)[0]["name"] == "buy"

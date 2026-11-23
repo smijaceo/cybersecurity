@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import logging
 import time
+from datetime import date, datetime, timezone
 from typing import Iterable
 
 import requests
@@ -19,7 +20,14 @@ class Collector:
     name: str = "base"
     min_interval: float = 1.0  # seconds between requests to this source
 
-    def __init__(self, session: requests.Session | None = None, sleep=time.sleep):
+    supports_before = True  # False for sources with no history (e.g. live job boards)
+
+    def __init__(self, session: requests.Session | None = None, sleep=time.sleep,
+                 before: date | None = None):
+        """`before`: only collect items created before this date (used by the backtest, D18)."""
+        if before and not self.supports_before:
+            raise ValueError(f"{self.name} has no history; it can't collect before {before}")
+        self.before = before
         self.session = session or requests.Session()
         self.session.headers.setdefault("User-Agent", USER_AGENT)
         self._sleep = sleep
@@ -46,6 +54,12 @@ class Collector:
         if retry_after and retry_after.isdigit():
             return min(float(retry_after), 120)
         return min(10 * 2**attempt, 120)
+
+    def before_ts(self) -> int | None:
+        if not self.before:
+            return None
+        return int(datetime(self.before.year, self.before.month, self.before.day,
+                            tzinfo=timezone.utc).timestamp())
 
     def collect(self, segment: str, query: str, limit: int) -> Iterable[Signal]:
         raise NotImplementedError

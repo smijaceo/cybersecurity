@@ -8,6 +8,8 @@ from datetime import datetime, timezone
 import numpy as np
 from scipy.stats import rankdata
 
+from .models import audience
+
 
 def percentile_rank(values: list[float]) -> list[float]:
     """Rank in [0, 1]; ties share the average rank (scipy). A single value ranks 0.5."""
@@ -26,7 +28,8 @@ def top_k_similar(centroid: np.ndarray, matrix: np.ndarray, k: int) -> tuple[flo
     return float(sims[idx].mean()), [int(i) for i in idx]
 
 
-def demand_features(signals: list[dict], recent_years: int, now: datetime | None = None) -> dict:
+def demand_features(signals: list[dict], recent_years: int, now: datetime | None = None,
+                    audience_weights: dict | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
     cutoff = now.replace(year=now.year - recent_years)
     recent = 0
@@ -36,8 +39,16 @@ def demand_features(signals: list[dict], recent_years: int, now: datetime | None
                 recent += 1
         except ValueError:
             pass
+    weights = audience_weights or {}
+    mix: dict[str, int] = {}
+    for s in signals:
+        a = audience(s["source"])
+        mix[a] = mix.get(a, 0) + 1
     return {
         "need_signals": len(signals),
+        # Buyers' needs count more than developers' (decision D16).
+        "weighted_need": round(sum(weights.get(a, 1.0) * n for a, n in mix.items()), 2),
+        "audience_mix": dict(sorted(mix.items())),
         "engagement": sum(s["engagement"] for s in signals),
         "recent_share": recent / len(signals) if signals else 0.0,
         "segments": sorted({s["segment"] for s in signals}),
@@ -58,7 +69,7 @@ def score(themes: list[dict], weights: dict) -> list[dict]:
         return percentile_rank([f(t) for t in themes])
 
     d = [0.5 * a + 0.3 * b + 0.2 * c for a, b, c in zip(
-        ranks(lambda t: t["demand"]["need_signals"]),
+        ranks(lambda t: t["demand"].get("weighted_need", t["demand"]["need_signals"])),
         ranks(lambda t: math.log1p(t["demand"]["engagement"])),
         ranks(lambda t: t["demand"]["recent_share"]))]
     oss = [0.4 * a + 0.3 * b + 0.3 * c for a, b, c in zip(

@@ -40,7 +40,8 @@ class GitHubIssuesCollector(Collector):
         data = self.get_json(
             URL,
             {
-                "q": f"{query} in:title,body is:issue",
+                "q": f"{query} in:title,body is:issue"
+                     + (f" created:<{self.before.isoformat()}" if self.before else ""),
                 "sort": "reactions",
                 "order": "desc",
                 "per_page": min(limit, 100),

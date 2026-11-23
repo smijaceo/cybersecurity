@@ -35,3 +35,20 @@ class Signal:
 
 def iso_from_unix(ts: int | float) -> str:
     return datetime.fromtimestamp(ts, tz=timezone.utc).isoformat()
+
+
+# Who is speaking in each source (decision D16). Buyers hold budgets; practitioners run the
+# tools; developers build them. Demand scoring weights these differently (config/scoring.yaml).
+AUDIENCE = {
+    "github": "developer",
+    "hn": "practitioner",
+    "stackexchange": "practitioner",
+    "serverfault": "practitioner",
+    "ted": "buyer",
+    "jobs": "buyer",
+    "regulation": "buyer",
+}
+
+
+def audience(source: str) -> str:
+    return AUDIENCE.get(source, "practitioner")

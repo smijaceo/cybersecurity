@@ -96,6 +96,19 @@ class FactCheck(Strict):
     problems: list[FactCheckProblem]
 
 
+# ---------------------------------------------------------------- regulation scout (D16)
+
+class RegulationSignal(Strict):
+    regulation: str            # e.g. "EU Cyber Resilience Act (Regulation 2024/2847)"
+    jurisdiction: str          # e.g. "EU", "US federal", "US — New York"
+    obligation: str            # what must be done or evidenced, in plain words
+    applies_to: str            # who is obliged (size, sector, role)
+    effective: str = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")  # date the obligation applies
+    segment: str               # segment key from config/segments.yaml
+    source: str = Url          # primary text (official journal, regulator page)
+    article: str = ""          # article/section reference
+
+
 # ---------------------------------------------------------------- Phase 3 concepts
 
 class Sourced(Strict):

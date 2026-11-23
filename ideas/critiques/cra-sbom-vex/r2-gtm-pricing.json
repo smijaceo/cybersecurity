@@ -1,0 +1,84 @@
+{
+  "concept_id": "cra-sbom-vex",
+  "lens": "gtm-pricing",
+  "round": 2,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "The revision makes the pricing coherent: EUR add-on beside CRA suites, an uncapped per-product unit, and a product-led channel. But a EUR 3,480 ACV sold self-hosted to a few thousand Yocto makers gives a thin revenue ceiling. Yocto 6.0 now ships free sbom-cve-check and kernel compiled-source filtering, which shrinks the paid delta buyers will pay for.",
+  "objections": [
+    {
+      "objection": "The free baseline moved up under the price. Yocto 6.0 made Bootlin's sbom-cve-check the official CVE tool. It consumes vex.bbclass CVE_STATUS and OpenVEX annotations and treats CVEs in sources that are not compiled in as not applicable. OE-Core's improve_kernel_cve_report.py does the same for kernel CVEs using compiled-file lists. Two of VEXpath's core evidence rules (CVE_STATUS, kernel 'code not present') are therefore free in the buyer's build. EUR 290/month has to be justified by the ledger, invalidation, DT write-back and signing alone. The riskiest-assumption test measures the cut against 'DT 5.1 + CVE_STATUS', not against sbom-cve-check, so it overstates the value buyers will pay for.",
+      "severity": "major",
+      "evidence": "https://raw.githubusercontent.com/bootlin/sbom-cve-check/main/README.md; https://docs.yoctoproject.org/security-manual/vulnerabilities.html; concept:riskiest_assumption.success_signal"
+    },
+    {
+      "objection": "The revenue ceiling is too low for the team. The segment is 'a few thousand' EU embedded-Linux makers (concept:open_questions[4]). A product-led funnel from a niche open-source importer that converts 1-3% gives tens of customers at about EUR 3.5-8k each, roughly EUR 100-300k ARR after 18-24 months. That does not fund 3 FTEs plus self-hosted support. Partner resale margins (typically 20-30%) cut net ACV further. The model needs either a much larger segment (software vendors, non-Yocto RTOS) or a higher price backed by proven time savings.",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price; concept:open_questions[4]; concept:build.team"
+    },
+    {
+      "objection": "Self-hosted software bought by card is an unusual purchase path for 50-1,000-person industrial makers. On-prem software that touches unreleased firmware SBOMs normally goes through IT/security review, a supplier onboarding form and a PO. So the product-led motion may still stall in procurement, which revives the round-1 CAC problem. Self-hosting also brings per-customer support costs (upgrades, offline vulnerability feeds, DT version drift) that a EUR 3.5k ACV cannot absorb.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.channel; concept:mvp.out_of_scope[3]; concept:build.hardest_parts[4]"
+    },
+    {
+      "objection": "Revenue still depends on the deadline. Most buyers will act only when an OEM asks or as December 2027 approaches. That compresses sales into 2027 after a 6-month build, and post-deadline churn may follow once the backlog is triaged.",
+      "severity": "minor",
+      "evidence": "concept:risks[2]"
+    },
+    {
+      "objection": "EU single-tenant hosting at +EUR 150/month is likely below cost once ISO 27001, per-tenant upgrades and on-call are counted. Price it as a design-partner-only service, or at cost-plus.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price; concept:risks[4]"
+    },
+    {
+      "objection": "The free importer competes with Yocto's own free path. sbom-cve-check already exports results and Dependency-Track can ingest VEX, so the 'oe-vex-to-dependency-track' importer may not stand out enough in the OE community to act as the top-of-funnel the product-led plan depends on.",
+      "severity": "minor",
+      "evidence": "concept:go_to_market.wedge"
+    }
+  ],
+  "strongest_point": "Coherent public EUR pricing as an add-on beside CRA suites, with an uncapped per-product-line unit that matches how CRA obligations attach and grows with portfolios.",
+  "what_would_change_my_mind": [
+    "On 5 prospect data sets, VEXpath resolves 30%+ of findings that remain open after Yocto 6.0 sbom-cve-check (with compiled-source filtering) plus DT 5.1, with zero wrong not_affected.",
+    "3+ design partners pay EUR 290/month or more through a self-serve or online-quote path without a full supplier-onboarding cycle, and median close time is under 45 days.",
+    "Evidence that the reachable market is 5,000+ firms, or that software-vendor and RTOS segments convert at similar rates, supporting EUR 1M+ ARR within 3 years.",
+    "A CRA suite (CVD Portal, sbomify) or Yocto consultancy (e.g. Bootlin, Linutronix) signs a resale or bundle agreement with committed volume.",
+    "Measured analyst time saved per release worth more than 3x the price at a typical customer (e.g. 2+ engineer-days a month)."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Contract value does not support the sales motion (founder-led Mittelstand selling at ~$6k ACV).",
+      "resolved": false,
+      "note": "The channel moved to product-led and partner resale, with founder-led selling limited to 10 design partners. But ACV fell to EUR 3,480, and self-hosted card purchase at industrial firms is unproven, so CAC payback is still at risk."
+    },
+    {
+      "objection": "Price anchored by cheaper CRA-branded self-serve tools.",
+      "resolved": true,
+      "note": "Repriced in EUR as an add-on beside suites and the evidence pack dropped. The anchor problem returns from free Yocto tooling (new objection)."
+    },
+    {
+      "objection": "Free wedge gives away the core noise-cut aha.",
+      "resolved": true,
+      "note": "The importer now only surfaces the build's own CVE_STATUS; the further cut is paid. But much of that further cut is now free upstream in sbom-cve-check."
+    },
+    {
+      "objection": "Deadline-driven, lumpy revenue.",
+      "resolved": false,
+      "note": "Unchanged by design and acknowledged in risks."
+    },
+    {
+      "objection": "Low expansion ceiling and ambiguous product unit.",
+      "resolved": true,
+      "note": "Tier cap removed (EUR 49 per extra product line). The SBOM-project-root definition is reasonable, though it remains an open question."
+    },
+    {
+      "objection": "Notified bodies unlikely partners; USD pricing.",
+      "resolved": true,
+      "note": "Notified bodies removed from the channel; prices quoted in EUR excl. VAT."
+    }
+  ],
+  "sources": [
+    "https://raw.githubusercontent.com/bootlin/sbom-cve-check/main/README.md",
+    "https://docs.yoctoproject.org/security-manual/vulnerabilities.html"
+  ]
+}

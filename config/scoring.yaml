@@ -10,7 +10,12 @@ weights:              # decision D11 (monetization focus)
 
 demand:
   recent_years: 2     # signals newer than this count as "recent"
-  # demand = 0.5 * rank(need statements) + 0.3 * rank(log engagement) + 0.2 * rank(recent share)
+  audience_weights:   # decision D16: who is speaking (gapfinder/models.py AUDIENCE)
+    developer: 1.0
+    practitioner: 1.5
+    buyer: 2.5
+  # demand = 0.5 * rank(audience-weighted need statements) + 0.3 * rank(log engagement)
+  #        + 0.2 * rank(recent share)
 
 supply:               # decisions D10, D11
   # open_source = 0.4 * rank(log repo count) + 0.3 * rank(log top stars) + 0.3 * rank(active top repos)

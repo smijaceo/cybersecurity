@@ -201,7 +201,8 @@ def theme_features(theme_list: list[dict], names: dict[int, dict], threat: dict[
             "search_query": meta["search_query"],
             "keywords": t["keywords"],
             "stability": t["stability"],
-            "demand": gaps.demand_features(sigs, scoring["demand"]["recent_years"]),
+            "demand": gaps.demand_features(sigs, scoring["demand"]["recent_years"],
+                                           audience_weights=scoring["demand"].get("audience_weights")),
             "supply": {
                 **{k: repos[k] for k in ("total_repos", "top_stars", "active_top_repos",
                                          "top_repos")},
@@ -293,7 +294,9 @@ def render_report(ranked: list[dict], excluded: list[dict], meta: dict, scoring:
             f"> {t['need']}", "",
             f"Gap score **{t['gap_score']}** · stability {t['stability']} · segments: "
             f"{', '.join(d['segments'])} · keywords: {', '.join(t['keywords'][:6])}", "",
-            f"- **Demand**: {d['need_signals']} need statements, total engagement "
+            f"- **Demand**: {d['need_signals']} need statements ("
+            + ", ".join(f"{n} {a}" for a, n in d.get("audience_mix", {}).items())
+            + f"), total engagement "
             f"{d['engagement']}, {d['recent_share']:.0%} from the last "
             f"{scoring['demand']['recent_years']} years.",
             f"**Opportunity:** {m['summary']}", "",

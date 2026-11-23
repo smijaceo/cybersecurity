@@ -1,0 +1,78 @@
+{
+  "concept_id": "cross-cloud-workload-identity",
+  "lens": "market-skeptic",
+  "round": 2,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "The revision is more honest. It drops dead keys, prices a one-off job as a one-off and names the demand gap as the riskiest assumption. The demand evidence has not changed: it is still AWS-only developer tool-lag issues. Each new filter narrows a segment that is still unsized, and Datadog shows GCP keys declining. Fund the 40-lead test, not the build.",
+  "objections": [
+    {
+      "objection": "Demand is still inferred. The revision keeps the same AWS-only developer issues, filed against upstream tools, and adds no buyer-side signal: no platform lead, auditor finding or consultancy describes in-use AWS-GCP or CI keys they would pay to remove. The concept admits this in risks[5] and riskiest_assumption.",
+      "severity": "major",
+      "evidence": "input:themes[0].need_statements; input:themes[0].stability; concept:risks[5]; concept:riskiest_assumption"
+    },
+    {
+      "objection": "Narrowing the segment shrank the market without sizing it. The target is now AWS-primary and GCP-secondary companies with 50-1,000 employees that use GitHub Actions, have a GCP org created before 3 May 2024, have a CSPM key finding open for months, and run no Vault or Teleport. Each filter cuts the count, and no estimate is given. With about $7.8k of first-year value and mostly one-off revenue, $10M ARR needs roughly 1,300 new logos every year. That is implausible from an unsized niche.",
+      "severity": "major",
+      "evidence": "concept:buyer.company_profile; concept:pricing.rationale; concept:open_questions[1]"
+    },
+    {
+      "objection": "The problem is shrinking on the GCP half of the product. Datadog finds GCP service accounts with keys older than a year fell from 62% to 55% in a year. Google enforces key-creation blocking for every organisation created on or after 3 May 2024. Over half of old AWS keys are unused, which is hygiene and outside this product's scope. The pool of in-use, boundary-crossing keys may be only a handful per estate, and it gets smaller every year.",
+      "severity": "major",
+      "evidence": "https://www.datadoghq.com/state-of-cloud-security-2025/"
+    },
+    {
+      "objection": "The easiest share of the target keys, static AWS/GCP keys in GitHub Actions, already has official step-by-step guides and maintained actions. Teams that have left those findings open for months may be showing low priority rather than lack of capacity. If so, they will defer a $6,000 fee too, until an audit forces the work.",
+      "severity": "major",
+      "evidence": "concept:pricing.rationale (one engineer-day per key is the concept's own estimate); concept:mvp.features[2]"
+    },
+    {
+      "objection": "WTP still rests on adjacent per-identity products. Nothing shows anyone paying a fixed fee for key-to-federation remediation, and consultancies may prefer to bill the hours themselves (open_questions[2]).",
+      "severity": "minor",
+      "evidence": "concept:pricing.comparables; concept:open_questions[2]"
+    }
+  ],
+  "strongest_point": "The riskiest-assumption test is well designed. A self-hosted report, filtered to in-use keys that the CSPM has left open, followed by an LOI or deposit, gives the cheap and direct buyer-side demand evidence that is missing today.",
+  "what_would_change_my_mind": [
+    "At least 10 of the 40 contacted platform leads run the scanner, and the median report shows 10 or more in-use AWS-GCP or CI keys that a CSPM finding has left open for over 3 months.",
+    "At least 3 LOIs or 50% deposits at $6,000 within two weeks of the report review.",
+    "A bottom-up count (e.g. BigQuery/Vertex usage among AWS-primary firms from job postings or technographics) showing more than 3,000 qualifying companies.",
+    "At least one DevOps consultancy commits to reselling the fixed-price migration to 5 or more clients."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Cross-cloud need is assumed, not shown (all need statements AWS-only).",
+      "resolved": false,
+      "note": "Acknowledged and moved into risks and the riskiest assumption, but no new cross-cloud evidence was added."
+    },
+    {
+      "objection": "Developer feature requests, some already fixed upstream, are not buyer purchase intent.",
+      "resolved": false,
+      "note": "The claims were reworded accurately and the RunPod item was dropped. The evidence is still developer tool-lag, with no buyer voice."
+    },
+    {
+      "objection": "Prevalence is not budgeted pain; over half of old keys are unused.",
+      "resolved": true,
+      "note": "The product now scopes to in-use boundary-crossing keys and states the shrinking-problem risk. Whether enough such keys exist is still untested (objection 3)."
+    },
+    {
+      "objection": "Segment narrow and unsized.",
+      "resolved": false,
+      "note": "The segment was narrowed further and sizing was deferred to an open question. The problem got worse, not better."
+    },
+    {
+      "objection": "Demand is episodic, so subscription retention is weak.",
+      "resolved": true,
+      "note": "Pricing now matches the one-off job ($6,000 migration plus $150/month monitoring). The cost of this is a need for constant new logos, covered under objection 2."
+    },
+    {
+      "objection": "WTP evidence from adjacent products; Vault price unverified.",
+      "resolved": false,
+      "note": "The Vault anchor was dropped and an LOI/deposit test was added, but no direct WTP evidence exists yet."
+    }
+  ],
+  "sources": [
+    "https://www.datadoghq.com/state-of-cloud-security-2025/",
+    "https://cloud.google.com/resource-manager/docs/secure-by-default-organizations"
+  ]
+}

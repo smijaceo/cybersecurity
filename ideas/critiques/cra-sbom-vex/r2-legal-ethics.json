@@ -1,0 +1,74 @@
+{
+  "concept_id": "cra-sbom-vex",
+  "lens": "legal-ethics",
+  "round": 2,
+  "score": 8,
+  "verdict": "go",
+  "summary": "The revision fixes every round-1 issue. It is self-hosted, so no cross-customer exposure map exists. KEV no longer triggers Art. 14 drafts, suggestions never auto-apply, documents are signed with the customer's key, publishing is private by default, and the copy makes no conformity claims. What remains is normal launch work: VEXpath's own CRA duties, enforceable contract terms, and safeguards for hosted design-partner and test data.",
+  "objections": [
+    {
+      "objection": "VEXpath is itself a commercial product with digital elements sold in the EU, so the CRA applies to it. Its reporting duties under Art. 14 have applied since 11 Sep 2026. By 11 Dec 2027 it needs Annex I conformity, its own SBOM, a coordinated vulnerability disclosure (CVD) policy, support-period commitments and CE marking. It is not an Annex III important product, so self-assessment is enough. Even so, the 6-month, two-engineer plan doesn't cost any of this in. A CRA tool that can't show its own compliance would hurt its credibility.",
+      "severity": "major",
+      "evidence": "https://www.european-cyber-resilience-act.com/Cyber_Resilience_Act_Annex_3.html; concept:build.team; concept:build.months_to_mvp; concept:pricing.model (\"self-hosted container\")"
+    },
+    {
+      "objection": "The liability mitigations are listed in the risks but are not yet contract terms. The 2024 Product Liability Directive treats software as a product. A tool that contributed to an unpatched device injuring a person could therefore leave VEXpath exposed as a component maker, and contract caps do not bind injured third parties. Caps between businesses still work for economic loss. The terms of service, the design-partner agreement and a professional-indemnity insurance quote should all exist before the first paid pilot.",
+      "severity": "minor",
+      "evidence": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402853; concept:risks[4]"
+    },
+    {
+      "objection": "The custody problem is reduced but not gone. Design partners on 'EU single-tenant hosting', and NDA data sets processed by hand on an 'isolated laptop' during the test, will still contain unpatched exposure maps. That data needs written handling rules: encryption, deletion after the test, no reuse across prospects, and a data-processing agreement.",
+      "severity": "minor",
+      "evidence": "concept:mvp.out_of_scope[3]; concept:riskiest_assumption.test"
+    },
+    {
+      "objection": "Vendor CSAF terms are only partly settled. Red Hat's security data is CC BY 4.0, which allows commercial use with attribution, so its main source is clear. Other providers are still unchecked, and any CSAF-derived justification embedded in exported VEX must carry attribution.",
+      "severity": "minor",
+      "evidence": "https://access.redhat.com/security/data; concept:open_questions[6]"
+    }
+  ],
+  "strongest_point": "It is a defensive, self-hosted tool that leaves every decision, signing key and disclosure timing with the manufacturer, and its regulatory claims are now accurate (Art. 14(8), no conformity claim).",
+  "what_would_change_my_mind": [
+    "A dated plan, with a budget, for VEXpath's own CRA compliance: a published CVD policy and security contact, a product SBOM, the Art. 14 reporting process, a stated support period, and Annex I self-assessment before Dec 2027.",
+    "Signed terms of service and a design-partner agreement that leave decisions with the customer, cap liability for economic loss and cover data processing, plus a professional-indemnity insurance quote below 5% of first-year revenue.",
+    "A licence check showing that the top 10 CSAF trusted providers allow commercial ingestion with attribution."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "No data-custody plan for a cross-customer exposure map",
+      "resolved": true,
+      "note": "v1 is self-hosted and multi-tenant SaaS is out of scope, so VEXpath holds no cross-customer map. The single-tenant hosting option and the test data still need handling rules (residual minor)."
+    },
+    {
+      "objection": "KEV-triggered 24h/72h draft misreads Art. 14",
+      "resolved": true,
+      "note": "The feature was removed, and KEV now only raises queue priority. why_now states the Art. 14 trigger correctly, and the Art. 14 workflow is left to CRA suites."
+    },
+    {
+      "objection": "Liability for wrong not_affected calls",
+      "resolved": true,
+      "note": "The design side is fixed: suggestions are never auto-applied, a named reviewer must sign off, automation is logged, conservative invalidation re-opens decisions and documents use the customer's key. The contract and insurance side is still a plan (residual minor)."
+    },
+    {
+      "objection": "Overstating CRA requirements",
+      "resolved": true,
+      "note": "The one-liner was reworded and the evidence pack dropped. why_now says the CRA mandates neither VEX nor CSAF, and conformity claims are explicitly out of scope."
+    },
+    {
+      "objection": "Hosted portal could publish unpatched exposure",
+      "resolved": true,
+      "note": "The portal was removed. Exports are private by default, and VEXpath publishes nothing."
+    },
+    {
+      "objection": "Vendor CSAF licence terms",
+      "resolved": false,
+      "note": "VEXpath now links to advisories instead of republishing them, and the licence check is an open question. Red Hat is confirmed as CC BY 4.0; the other providers are still unchecked."
+    }
+  ],
+  "sources": [
+    "https://www.european-cyber-resilience-act.com/Cyber_Resilience_Act_Annex_3.html",
+    "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202402853",
+    "https://access.redhat.com/security/data",
+    "https://www.cyberresilienceact.eu/the-cyber-resilience-act/"
+  ]
+}

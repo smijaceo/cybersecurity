@@ -1,66 +1,106 @@
 {
-  "round": 3,
-  "checked": 24,
+  "round": 2,
+  "checked": 66,
   "problems": [
     {
-      "theme_id": 0,
-      "claim": "WTP: 'Anchore $34,500/yr per host on AWS Marketplace ... GitHub exports SBOMs on its free dependency graph'",
-      "issue": "The AWS Marketplace listing prices 'Anchore Enterprise Cloud Image' at $34,500 per 12 months as one flat dimension: 'a single host Anchore Enterprise deployment'. That is a flat price for a single-host deployment, not a per-host rate. The cited GitHub docs page explains how to export an SBOM from the dependency graph but never says the feature is free or which plans include it, so 'free dependency graph' is not supported by the cited source."
+      "theme_id": 4,
+      "claim": "WTP: ADAudit Plus from $595/yr",
+      "issue": "The ManageEngine page shows cheaper plans than $595: $245/year for 100 workstations and $495/year for 2 Windows file servers. $595 is the 2-domain-controller Standard plan, not the starting price."
     },
     {
-      "theme_id": 2,
-      "claim": "Snyk Open Source pricing: 'Free tier; Team $25/contributing dev/month, 5-dev minimum, up to 10 contributing devs; Enterprise custom' (source: snyk.io/start/team)",
-      "issue": "The page supports the Free plan, $25 per contributing developer/month, the 5-developer minimum and the 10-developer cap ($1,375 annually). It says nothing about an Enterprise plan or custom pricing, so 'Enterprise custom' is not supported by this source."
-    },
-    {
-      "theme_id": 2,
-      "claim": "GitHub Code Security (Dependabot): 'Dependabot alerts/updates plus premium dependency review bundled into GitHub'; pricing 'Code Security $30/active committer/month; basic Dependabot included with GitHub'",
-      "issue": "The changelog confirms $30 per month per active committer and says GitHub Team organizations can now buy Code Security, which includes 'Dependabot features'. It never says basic Dependabot is included free with GitHub, and it does not mention 'premium dependency review'. Both statements are unsupported by the cited source. The post is also specifically about GitHub Team plan customers, not SMB to enterprise generally."
-    },
-    {
-      "theme_id": 2,
-      "claim": "WTP: 'Buyers pay, but switch on price, and free Dependabot sets a low baseline.'",
-      "issue": "None of the three wtp_sources (snyk.io/start/team, the GitHub changelog, mend.io/pricing) shows buyers switching on price, and none says Dependabot is free. The Snyk $25 and GitHub $30 prices and Mend's per-contributing-developer pricing with no list price are supported. The switching and free-Dependabot conclusions are not."
-    },
-    {
-      "theme_id": 3,
-      "claim": "WorkOS pricing: 'Per connection: $125/mo for connections 1-15, falling to $65 at 51-100; SSO and SCIM billed as separate connections' (source: workos.com/pricing)",
-      "issue": "The page lists '$125 / ea' (1-15) down to '$65 / ea' (51-100) under both Single Sign-On and Directory Sync. It never states a monthly billing period for connections; '/mo' appears only for other items such as Audit Logs and Radar. The FAQ says 'Each enterprise customer you support with SSO or Directory Sync is counted as one connection', which does not clearly say SSO and SCIM are billed as separate connections and can be read as the opposite. Separate price tables imply separate billing, but the page never states it."
-    },
-    {
-      "theme_id": 3,
-      "claim": "WTP: IT buyers '... resent the SSO/SCIM tax.'",
-      "issue": "The cited wtp_sources (Stytch pricing, Stytch AWS Marketplace listing, Okta pricing) support the prices: Stytch 5 free connections then $125 per connection; a $25,000/12-month Stytch Platform contract; Okta Core Essentials $14 and Essentials $17, billed annually with a $1,500 minimum; Lifecycle Management an add-on on Starter. None of them shows buyer resentment of an 'SSO/SCIM tax'. That part is unsupported by the WTP sources."
-    },
-    {
-      "theme_id": 7,
-      "claim": "Teleport pricing: 'not public (quote-based; usage-based on monthly active users and Teleport Protected Resources, with each tbot machine-identity instance counted as a TPR ...)'; segment 'mid-market / enterprise' (source: Teleport_Pricing_Guide_Rev_June_16_2026 PDF)",
-      "issue": "The PDF supports MAU and TPR usage-based metrics and 'We count each unique instance of tbot as a TPR'. It publishes no prices but never says pricing is quote-based or names a sales contact, and it says nothing about mid-market buyers; it covers only the 'Enterprise Edition'. 'Quote-based' and 'mid-market' are inferences, not statements from the source. The gapfinder fetch of the PDF failed; it was read after downloading it with curl."
-    },
-    {
-      "theme_id": 8,
-      "claim": "Cribl Stream pricing: 'Cribl.Cloud free up to 1 TB/day; paid Stream ingest credits ~$0.27/GB (Standard, up to 5 TB/day) to $0.32/GB (Enterprise), $1 per credit, plus worker infrastructure' (source: cribl.io/pricing)",
-      "issue": "Neither the fetched page text nor the raw HTML of cribl.io/pricing contains a $0.27/GB or $0.32/GB rate. The only per-GB figures are static-egress charges of 0.06-0.12 credits/GB. The rendered fetch timed out, and WebFetch cannot resolve cribl.io in this session. The page does support $1 = 1 credit, Standard up to 5TB/day, a Free plan up to 1TB/day, Stream priced 'based on GBs of data ingested' and an extra managed-infrastructure fee. However, it qualifies the 1TB/day free figure with '* See Cribl.Cloud section for data limits and availability in cloud', so 'Cribl.Cloud free up to 1 TB/day' is not shown. The segment 'enterprise / large SOC' is also not stated."
-    },
-    {
-      "theme_id": 8,
-      "claim": "WTP: 'Enterprises pay per-GB pipeline fees (Cribl.Cloud ~$0.27-0.32/GB in credits above a free tier of up to 1 TB/day)'",
-      "issue": "The only support for a per-GB price is one PeerSpot reviewer's estimate ('approximately $0.32 per GB for ST enterprise estimate'). No cited source shows $0.27/GB, and cribl.io/pricing shows no per-GB ingest rate (see the Cribl vendor row). The rest checks out: the CrowdStrike release confirms it agreed to acquire Onum; PeerSpot reviewers call Cribl 'costly as it scales with data volumes', ask for 'Better options based on user base, enterprise size, or data volume', and one says 'at a small level, the pricing is good'."
+      "theme_id": 9,
+      "claim": "Vendor Anchore Enterprise: pricing not public (pricing page lists deployment options only, no prices)",
+      "issue": "The cited source is anchore.com/platform/. It says nothing about pricing or a pricing page, so it does not support the pricing claim."
     },
     {
       "theme_id": 10,
-      "claim": "WTP: 'HCP Vault Dedicated ~$112.17/client/month (Standard, official price list)' (source: hashicorp.com/pricing/all)",
-      "issue": "Unverified: the source could not be read. gapfinder fetch returned HTTP 429. fetch --render returned a bot challenge page ('Failed to verify your browser, Code 21'). WebFetch returned HTTP 404 for both hashicorp.com/pricing/all and www.hashicorp.com/en/pricing/all. No figure, tier or unit could be checked. The other WTP figures are confirmed: Aembit Teams from $20/workload/month and Cyera Identity (Oasis) Starter Pack $100,000 per 12 months."
+      "claim": "Vendor Pillar Security (Pillar for AI Coding Agents): discovers local coding agents, scans permissions/MCP configs; AWS Marketplace $175,000/12 months",
+      "issue": "The cited AWS listing describes the general Pillar Security Platform (AI apps, agents, MCP, red teaming, guardrails). It does not mention coding agents or local agent discovery. The $175,000/12 months is for the whole platform, not a coding-agent product."
     },
     {
-      "theme_id": 11,
-      "claim": "Interlynk pricing: 'free Community tier; AWS Marketplace 12-month SaaS contracts by active developers: $18,000 (10), $36,000 (25), $60,000 (50), $100,000 (100)'; segment 'SMB to enterprise, device makers'",
-      "issue": "The listing confirms the four 12-month prices, which are for a product named 'AWS SBOM Manager (SaaS)'. It mentions only a 'free trial', not a free Community tier, so the free tier is unsupported. On buyers, the listing names medical device manufacturers, connected-device and firmware teams, AI providers and '100+ regulated companies'. It says nothing about SMBs."
+      "theme_id": 12,
+      "claim": "Vendor Vanta: no rate card on site; Essentials $14,000 / Plus $21,500 / Professional $23,000 (1-20 employees); audit extra",
+      "issue": "The AWS prices are correct. But the same listing says to 'preview pricing for 1-20 employees and more at vanta.com/pricing', which contradicts 'no rate card on site'. Nothing on the page says the audit costs extra."
     },
     {
-      "theme_id": 14,
-      "claim": "WTP: 'Manifest signed a three-year device-maker deal (value undisclosed)' (wtp_source: commission.europa.eu Cyber Resilience Act news, 2026-09-11)",
-      "issue": "The cited European Commission page covers only CRA reporting obligations, which start 11 Sep 2026, with main obligations from 11 Dec 2027. It never mentions Manifest or any deal. The Manifest deal is supported only by the PR Newswire release in the vendor row (a three-year SaaS agreement with a publicly traded medical device maker, May 2024, value not disclosed), which is not among the wtp_sources. The cited WTP source does not support this claim."
+      "theme_id": 16,
+      "claim": "WTP: Large enterprises spend ~$2.5M/yr on logging and 67% say cost outweighs value",
+      "issue": "Dynatrace gives ~$2.5M as the average annual spend of its survey respondents. It does not describe them as large enterprises. The 67% figure is supported."
+    },
+    {
+      "theme_id": 19,
+      "claim": "WTP: Devolutions lists packages at $48-650/user/year",
+      "issue": "The $650 is a struck-through list price. The current price of that top package is $325, so the published range is $48-$325 per user per year."
+    },
+    {
+      "theme_id": 22,
+      "claim": "Vendor GitHub Code Security: basic Dependabot included with GitHub",
+      "issue": "The cited changelog gives only Code Security at $30 per active committer per month, which includes Dependabot features. It does not say basic Dependabot is free or included with GitHub."
+    },
+    {
+      "theme_id": 27,
+      "claim": "Vendor Vanta: compliance automation with NIS2 task templates and CMMC/NIST 800-171 mappings",
+      "issue": "The cited vanta.com/products/cmmc page covers CMMC, NIST 800-171/172, SSP and POA&M only. It does not mention NIS2."
+    },
+    {
+      "theme_id": 27,
+      "claim": "WTP: NIS2-Autopilot EUR 249-799/mo",
+      "issue": "The cited Capterra page (plain and rendered fetch) gives only a starting price of EUR 249 per month, flat rate. There is no EUR 799 figure."
+    },
+    {
+      "theme_id": 30,
+      "claim": "Vendor Fortinet FortiGate + FortiGuard/FortiCare: NGFW appliances with annual FortiGuard subscriptions and FortiCare support; segment SMB to enterprise, public sector",
+      "issue": "The cited page is a Gartner Magic Quadrant landing page about enterprise networks. It does not mention FortiGuard or FortiCare subscriptions, SMB or public-sector buyers."
+    },
+    {
+      "theme_id": 30,
+      "claim": "Vendor Check Point Quantum (Spark to 16000+): Quantum gateways with SandBlast/threat-prevention subscriptions; segment mid-market and enterprise, public sector",
+      "issue": "The cited blog post covers the Hybrid Mesh Firewall MQ leadership for 'enterprises'. It does not mention Quantum, Spark, 16000+, SandBlast, subscriptions, mid-market or public sector."
+    },
+    {
+      "theme_id": 33,
+      "claim": "WTP: paid backup and file-security products with public per-device and per-server prices (Acronis, Veeam, ManageEngine) sell widely",
+      "issue": "None of the WTP sources is a ManageEngine page, so the ManageEngine part has no source. No source shows that these products 'sell widely'."
+    },
+    {
+      "theme_id": 40,
+      "claim": "WTP: buyers still file issues about missing policy-as-code control of paid Defender plans",
+      "issue": "The cited GitHub issue #735 is from May 2023, and its author closed it. The author found the setting can be applied when the deployment is part of a policy. The issue does not show a current, unresolved complaint."
+    },
+    {
+      "theme_id": 44,
+      "claim": "Vendor Anchore Enterprise: imports SPDX and CycloneDX 1.0-1.6 SBOMs",
+      "issue": "The cited AWS Marketplace listing does not mention SPDX, CycloneDX or any format versions. The prices ($34,500 Cloud Image, $50,000 Helm) are supported."
+    },
+    {
+      "theme_id": 45,
+      "claim": "Vendor Fairwinds Insights: Kubernetes policy management and admission control using Polaris, OPA and Kyverno",
+      "issue": "The cited pricing page lists only a 'Kubernetes Policy Management' module. It does not mention Polaris, OPA, Kyverno or admission control."
+    },
+    {
+      "theme_id": 48,
+      "claim": "Vendor secunet SINA Workstation S: BSI-approved Lenovo ThinkPad bundle, sold via government framework contracts; segment federal government, Bundeswehr, defence industry",
+      "issue": "The cited BSI page describes a notebook hardware/software bundle with VPN, disk encryption and parallel guest OSes, for the federal administration. It does not mention Lenovo ThinkPad, framework contracts, the Bundeswehr or the defence industry."
+    },
+    {
+      "theme_id": 48,
+      "claim": "WTP: state police tendering up to 6,000 approved clients",
+      "issue": "The Saarland police TED notice requires the VPN solution to scale to up to 6,000 endpoints. That is a scalability requirement, not an order for 6,000 clients."
+    },
+    {
+      "theme_id": 50,
+      "claim": "Vendor RadarFirst: incident decisioning incl. SEC materiality; segment enterprise",
+      "issue": "The cited Capterra page lists typical users as freelancers, small businesses, mid-size businesses and enterprises. It does not mention SEC materiality. 'Contact vendor' pricing is supported."
+    },
+    {
+      "theme_id": 50,
+      "claim": "WTP: SMB NIS2 platforms start ~EUR 10,000",
+      "issue": "The only source is SECJUR's own blog, stating its own product costs 'ab 10.000 Euro' for the German Mittelstand. It is one vendor's self-reported price, not evidence of where SMB NIS2 platforms in general start."
+    },
+    {
+      "theme_id": 55,
+      "claim": "Vendor Semgrep Supply Chain: Team $30 per contributor/month (some Semgrep pages show $40)",
+      "issue": "The cited semgrep.dev/pricing page shows $30/month/contributor for Supply Chain and has no $40 figure."
     }
   ]
 }

@@ -97,7 +97,7 @@ Collect posts, questions and issues where people express a need, for the four se
 ## Phase 2 — Gap analysis · `done` (PM sign-off 2026-11-23, D14)
 
 Turn raw signals into a ranked list of unmet needs, each with evidence.
-Output: **[reports/gaps-2026-11-23.md](../reports/gaps-2026-11-23.md)** (with paid market, D11). The first, open-source-only run is kept as [reports/gaps-2026-11-22.md](../reports/gaps-2026-11-22.md).
+Output: **[reports/gaps-2026-11-23-iteration1.md](../reports/gaps-2026-11-23-iteration1.md)** (with paid market, D11); iteration 2: [reports/gaps-2026-11-23-iteration2.md](../reports/gaps-2026-11-23-iteration2.md). The first, open-source-only run is kept as [reports/gaps-2026-11-22.md](../reports/gaps-2026-11-22.md).
 
 | Deliverable | Status | How (reused projects per D7) |
 |---|---|---|
@@ -283,12 +283,20 @@ and is kept as the baseline.
 | Workstream | Deliverables | Exit criteria | Status |
 |---|---|---|---|
 | A. Founder fit (D15) | `config/founder.yaml`; `founder-fit` critic lens; variant judge scores founder fit | Every concept scored on founder fit | code done |
-| B. Buyer-side demand (D16) | Collectors: Server Fault, TED tenders (security CPV codes, open contract notices), job postings (Remotive, HN Who is hiring); regulation-scout agent; `audience` per source; demand weights buyer evidence (buyer 2.5, practitioner 1.5, developer 1.0) | ≥ 30% of need statements from buyer/practitioner sources; each source tested with canned responses | code done, collection run next |
-| C. Open discovery (D17) | `open-discovery` (pain phrases, per-source queries) and `ai-agent-security` segments | Discovery run completed; new themes reviewed in the gap report | code done, collection run next |
+| B. Buyer-side demand (D16) | Collectors: Server Fault, TED tenders (security CPV codes, open contract notices), job postings (Remotive, HN Who is hiring); regulation-scout agent; `audience` per source; demand weights buyer evidence (buyer 2.5, practitioner 1.5, developer 1.0) | ≥ 30% of need statements from buyer/practitioner sources; each source tested with canned responses | ✅ done — need statements 225 → 732, buyer+practitioner share 11% → 58% (TED 232, Server Fault 76, regulations 33; job postings yielded only 1 need statement) |
+| C. Open discovery (D17) | `open-discovery` (pain phrases, per-source queries) and `ai-agent-security` segments | Discovery run completed; new themes reviewed in the gap report | ✅ done — 62 themes, 24 coherent and ranked in [reports/gaps-2026-11-23-iteration2.md](../reports/gaps-2026-11-23-iteration2.md); new AI-agent themes (tool-call permission gating, MCP authorization) rank 2–3 |
 | D. Backtest (D18) | `config/backtest.yaml` (pre-registered); time-cutoff gap-finder backtest; panel calibration on anonymised historical pitches; `reports/backtest.md` | Results reported with limitations, before the iteration-2 shortlist | done — [reports/backtest.md](../reports/backtest.md): gap finder recall@10 0.22 (finds compliance/pain-driven markets, misses technology-shift ones); panel AUC 0.78 but p = 0.17 on 8 companies and every historical company scored 5–6, so the GO threshold of 7 is miscalibrated |
 | E. Stronger panel (D19) | `economic-buyer`, `defensibility`, `founder-fit` lenses; 3 concept variants per opening + variant judge | Phase 3/4 re-run with variants and nine lenses | code done; go/no-go now requires all nine lenses |
 
 Then: re-run Phase 1 → 2 → PM shortlist → 3 → 4 with the saved workflows.
+
+**Iteration-2 gap analysis (2026-11-23):** 2,747 signals, 732 need statements, 24 coherent gaps.
+Every gap is commercially crowded (crowdedness 2–3); the only crowdedness-2 gap is regulatory
+incident reporting. Researchers repeatedly point to the same wedge for small-business themes:
+cheap, done-for-you products sold through MSPs. Two "privileged access management procurement"
+themes are near-duplicates (clustering split them). Fact-check of revised claims: 20 of 66
+still not fully supported by their cited source. Job postings produced almost no need
+statements under the relevance rubric; keep them as a source of context, not demand.
 
 ## Phase 5 — Validation loop · `not started`
 

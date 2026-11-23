@@ -1,368 +1,506 @@
 [
  {
-  "opening_id": "cra-sbom-vex",
-  "name": "VEXpath",
-  "slug": "vexpath",
-  "one_liner": "Self-hostable VEX decision engine for embedded device makers: turns Yocto build data, vendor CSAF and Dependency-Track findings into signed, evidence-backed per-release VEX.",
-  "entry_price": "EUR 290/month billed annually (EUR 3,480/year) for up to 5 product lines, self-hosted; EUR 49 per additional product line per month with no tier cap; EU single-tenant hosting +EUR 150/month",
+  "opening_id": "ai-agent-access-control",
+  "name": "Agent Hardening Sprint",
+  "slug": "agent-hardening-sprint",
+  "one_liner": "Fixed-fee red team of a small company's coding agents, MCP servers and CI agent jobs, then hardening through vendor-native managed settings, sandboxing and tested guardrails.",
+  "entry_price": "$6,500 fixed fee for up to 25 developers and 3 CI repositories (2-week sprint: inventory, red team, CI hardening, native-control setup, re-test); quarterly re-test $1,800; partners buy at $5,000",
   "final_round": 2,
-  "decision": "CONDITIONAL",
-  "mean": 5.83,
-  "min": 4,
   "scores": {
    "market-skeptic": 5,
-   "competitor-analyst": 4,
-   "security-practitioner": 6,
-   "technical-feasibility": 7,
-   "gtm-pricing": 5,
-   "legal-ethics": 8
-  },
-  "fatal": [
-   [
-    "competitor-analyst",
-    "Most dangerous competitor: Bootlin's sbom-cve-check. It has been the Yocto Project's official CVE-monitoring tool since the Wrynose release, it is free (GPLv2), and it works on exactly the inputs VEXpath reads: the SPDX3 SBOM and the vex.bbclass rootfs.json. It marks kernel CVEs not applicable when the affected source file is not compiled in, which is finer than VEXpath's kernel-option rule. It also exports a Yocto VEX manifest with statements and justifications and emits not_affected for disputed CVEs. This is the 'paid additional cut' in the wedge, and every Yocto user now gets it upstream for free."
-   ]
-  ],
-  "lenses": 6,
-  "round1_mean": 5.17,
-  "majors": [
-   [
-    "market-skeptic",
-    "The repositioned compliance hook does not carry the product. Art. 14(8) requires informing users, 'where appropriate' in machine-readable form, only after the manufacturer becomes aware of an actively exploited vulnerability or severe incident. That is a rare event for a mid-size maker and is a notification duty, not a duty to publish per-release not_affected VEX across all findings. The bulk of VEXpath's value (noise cut, cross-release ledger) has no regulatory pull; it relies on OEM customer demand that the evidence does not show."
-   ],
-   [
-    "market-skeptic",
-    "Demand evidence is unchanged: developer GitHub issues (engagement 1-43), some from open-source maintainers with no budget, and none from a Yocto device maker's PSIRT or CRA owner. The revision admits this in risks and moves the burden to the riskiest-assumption test, which is right, but until that test runs there is no sign of budgeted pain in the named segment."
-   ],
-   [
-    "market-skeptic",
-    "The narrowing compounds the size problem. The buyer now has to be an EU maker with 50-1,000 staff, firmware on Yocto/embedded Linux, already producing SBOMs, already running Dependency-Track or OE cve-check, and with a named CRA owner. Each filter cuts the pool; the concept itself guesses 'a few thousand' for a broader profile with no source. At EUR 3.5k ACV, even 300 customers is about EUR 1M ARR, so the segment may not support a venture-scale company."
-   ],
-   [
-    "market-skeptic",
-    "Budget competition inside the CRA stack. CVD Portal sells Art. 14 reporting plus SBOM management, remediation tracking and CSAF advisories from EUR 1,188-3,588/yr, grant-eligible. VEXpath at EUR 3,480/yr roughly doubles a mid-size maker's CRA tooling spend for one sub-step that the suite already lists. Buyers who must justify spend to a regulatory or quality manager will likely accept the suite's manual VEX first."
-   ],
-   [
-    "competitor-analyst",
-    "Lynx (Timesys) Vigiles is an established commercial product for this exact buyer, and the concept leaves it out. Its meta-timesys Yocto layer uploads the kernel and U-Boot .config to filter CVEs and keeps a not-affected list. It markets triage decisions, release-by-release records of how each CVE was handled, VEX export, KEV prioritisation and EU CRA reporting for embedded Linux, Yocto, Buildroot and custom BSPs. It also has NXP as a BSP distribution channel. VEXpath's line that 'nobody affordable turns embedded build evidence into reviewed VEX' is not supported until it is checked against Vigiles' pricing and NXP bundle."
-   ],
-   [
-    "competitor-analyst",
-    "Free open-source tools already cover the rest of the embedded workbench. bitvex is a free CLI that turns Yocto SPDX into OpenVEX using kernel .config, device-tree 'disabled' peripherals and U-Boot config. It also produces delta VEX between builds and has a watch mode that re-scans when SBOMs or configs change, which is close to VEXpath's invalidation idea. VulnScout from Savoir-faire Linux imports Yocto cve-check/VEX with SPDX, has a triage UI, records VEX assessments with AI suggestions that need human approval, and exports CycloneDX and OpenVEX. Device-tree filtering already goes further than VEXpath's MVP."
-   ],
-   [
-    "competitor-analyst",
-    "What remains distinct is two-way Dependency-Track sync, invalidation of inherited decisions and signing with the customer's key. These are workflow features, not a product moat. Any of the above could add them, and so could DT 5.1, since its VEX import already exists. sbom-cve-check output plus DT VEX import already gets most teams the free importer that VEXpath plans to give away."
-   ],
-   [
-    "security-practitioner",
-    "The kernel-config evidence rule is already in free upstream tooling. OE-core's improve_kernel_cve_report.py takes the compiled-file list from the kernel SPDX and marks a version-affected CVE as 'not-applicable-config' when its programFiles were not compiled. Kernel CVEs are the bulk of embedded Linux noise. Teams on current Yocto who run this plus vex.bbclass will import an already-reduced report into DT. The 'additional cut' shown in the wedge may be small, and that is exactly the number the buyer's engineer will check."
-   ],
-   [
-    "security-practitioner",
-    "Workflow competition from a free Yocto-native triage UI. Savoir-faire Linux's VulnScout (GPL-3.0) ingests Yocto cve-check/VEX, SPDX and CycloneDX, has a web triage UI with VEX assessments per project and variant, CI policy checks and CycloneDX/OpenVEX export. Embedded teams evaluating 'a triage tool beside our build' will find it first. VEXpath's remaining edge for a practitioner is DT write-back, cross-release invalidation, CSAF export and signing. Those are real but narrower, and the concept does not list VulnScout."
-   ],
-   [
-    "security-practitioner",
-    "The invalidation rule fights reuse. A new firmware release almost always changes some component versions and the image's build-config hash. If any change to 'build-config hash' re-opens an inherited decision, most decisions re-open every release and the cross-release time saving disappears. If the rule is scoped per component (the relevant recipe's config and patches, or the kernel options touched by the CVE's files), it must be shown to be safe. The design needs per-finding evidence fingerprints, not a global hash. As written, the rule is either unsafe or unhelpful."
-   ],
-   [
-    "technical-feasibility",
-    "The core build-evidence join is harder than the feature list implies. vex.bbclass writes per-recipe status keyed by recipe name and CVE_PRODUCT (an NVD/CPE product name), with no PURLs. Dependency-Track findings are keyed by the SBOM component's PURL/CPE. Where the SBOM came from Syft/Trivy scanning a rootfs rather than Yocto's own SPDX, recipe-to-component mapping is fuzzy, and a wrong match can wrongly carry a not_affected status. v1 should require a Yocto-generated SBOM, or treat unmatched components as a hard 'no evidence' result."
-   ],
-   [
-    "technical-feasibility",
-    "Coverage across Yocto releases. vex.bbclass and OE's kernel CVE enrichment script are on scarthgap but not on kirkstone. Kirkstone is still common in vendor BSPs (NXP, TI and others lag), so the ingest must also parse older cve-check JSON and handle per-branch format differences. That adds to an already tight six months and to every later release."
-   ],
-   [
-    "gtm-pricing",
-    "The free baseline moved up under the price. Yocto 6.0 made Bootlin's sbom-cve-check the official CVE tool. It consumes vex.bbclass CVE_STATUS and OpenVEX annotations and treats CVEs in sources that are not compiled in as not applicable. OE-Core's improve_kernel_cve_report.py does the same for kernel CVEs using compiled-file lists. Two of VEXpath's core evidence rules (CVE_STATUS, kernel 'code not present') are therefore free in the buyer's build. EUR 290/month has to be justified by the ledger, invalidation, DT write-back and signing alone. The riskiest-assumption test measures the cut against 'DT 5.1 + CVE_STATUS', not against sbom-cve-check, so it overstates the value buyers will pay for."
-   ],
-   [
-    "gtm-pricing",
-    "The revenue ceiling is too low for the team. The segment is 'a few thousand' EU embedded-Linux makers (concept:open_questions[4]). A product-led funnel from a niche open-source importer that converts 1-3% gives tens of customers at about EUR 3.5-8k each, roughly EUR 100-300k ARR after 18-24 months. That does not fund 3 FTEs plus self-hosted support. Partner resale margins (typically 20-30%) cut net ACV further. The model needs either a much larger segment (software vendors, non-Yocto RTOS) or a higher price backed by proven time savings."
-   ],
-   [
-    "gtm-pricing",
-    "Self-hosted software bought by card is an unusual purchase path for 50-1,000-person industrial makers. On-prem software that touches unreleased firmware SBOMs normally goes through IT/security review, a supplier onboarding form and a PO. So the product-led motion may still stall in procurement, which revives the round-1 CAC problem. Self-hosting also brings per-customer support costs (upgrades, offline vulnerability feeds, DT version drift) that a EUR 3.5k ACV cannot absorb."
-   ],
-   [
-    "legal-ethics",
-    "VEXpath is itself a commercial product with digital elements sold in the EU, so the CRA applies to it. Its reporting duties under Art. 14 have applied since 11 Sep 2026. By 11 Dec 2027 it needs Annex I conformity, its own SBOM, a coordinated vulnerability disclosure (CVD) policy, support-period commitments and CE marking. It is not an Annex III important product, so self-assessment is enough. Even so, the 6-month, two-engineer plan doesn't cost any of this in. A CRA tool that can't show its own compliance would hurt its credibility."
-   ]
-  ],
-  "riskiest_assumption": {
-   "assumption": "On real Yocto/embedded-Linux firmware SBOMs, evidence rules resolve a large share of the findings that Dependency-Track 5.1 plus OpenEmbedded's own CVE_STATUS leave open, without wrong not_affected calls, and that saving is worth EUR 290/month to mid-size device makers.",
-   "test": "In 2 weeks, without building the product: (a) from 15 discovery calls with CRA owners at 50-500-person EU device makers (sourced via Yocto/OE and Dependency-Track communities and a CRA consultancy), collect 5 firmware SBOM + build-artefact sets under NDA, processed on the prospect's premises or an isolated laptop; apply the rules by hand with scripts and have the prospect's engineer review every not_affected; (b) at the end of each call show the result or a mock and ask for a paid design-partner LOI at the entry price.",
-   "success_signal": "In at least 3 of 5 data sets, 30%+ of findings left open after DT 5.1 + CVE_STATUS are resolved with documented evidence and zero wrong not_affected on review; and at least 4 of 15 sign a LOI at EUR 290/month or more, with at least 3 accepting self-hosted deployment and naming who approves the spend."
-  },
-  "change_my_mind": [
-   [
-    "market-skeptic",
-    "At least 4 of 15 CRA owners at 50-500-person EU Yocto device makers sign a EUR 290/month LOI with a named spend approver (the concept's own test)."
-   ],
-   [
-    "competitor-analyst",
-    "A side-by-side test on 3 real Yocto firmware data sets showing VEXpath resolves 30%+ more findings, with zero wrong not_affected calls, than sbom-cve-check (compiled-sources on) plus bitvex, after both are imported into DT 5.1."
-   ],
-   [
-    "security-practitioner",
-    "On 5 real Yocto firmware data sets, after vex.bbclass, improve_kernel_cve_report.py with SPDX compiled files, and DT 5.1, VEXpath resolves 30%+ of the remaining findings with zero wrong not_affected on engineer review."
-   ],
-   [
-    "technical-feasibility",
-    "A prototype that joins vex.bbclass/cve-check output to DT findings on 3 real firmware builds (at least one kirkstone), with match coverage reported and zero wrong carries on manual review."
-   ],
-   [
-    "gtm-pricing",
-    "On 5 prospect data sets, VEXpath resolves 30%+ of findings that remain open after Yocto 6.0 sbom-cve-check (with compiled-source filtering) plus DT 5.1, with zero wrong not_affected."
-   ],
-   [
-    "legal-ethics",
-    "A dated plan, with a budget, for VEXpath's own CRA compliance: a published CVD policy and security contact, a product SBOM, the Art. 14 reporting process, a stated support period, and Annex I self-assessment before Dec 2027."
-   ]
-  ]
- },
- {
-  "opening_id": "buyer-side-provisioning",
-  "name": "LeaverCheck",
-  "slug": "leavercheck",
-  "one_liner": "Read-only offboarding verification: within an hour of an Okta or Entra deactivation, checks every app, including non-SCIM ones, and chases leftover accounts.",
-  "entry_price": "$1/user/month billed annually (minimum $250/month), unlimited apps; free one-time orphan-account scan from CSV exports",
-  "final_round": 2,
-  "decision": "CONDITIONAL",
-  "mean": 5.5,
-  "min": 4,
-  "scores": {
-   "market-skeptic": 4,
-   "competitor-analyst": 4,
+   "competitor-analyst": 5,
    "security-practitioner": 7,
    "technical-feasibility": 7,
-   "gtm-pricing": 4,
-   "legal-ethics": 7
+   "gtm-pricing": 6,
+   "legal-ethics": 7,
+   "economic-buyer": 5,
+   "defensibility": 4,
+   "founder-fit": 6
   },
-  "fatal": [
-   [
-    "competitor-analyst",
-    "Most dangerous competitor: Vanta, with Drata close behind. The buyer is defined by a SOC 2 or ISO 27001 cycle, so most already pay for one of them. Vanta starts offboarding when the IdP suspends a user (or the HRIS marks them terminated). It lists the leaver's known accounts, auto-detects deactivation in monitored integrations, assigns tasks for the rest, and blocks completion until those are done. Drata's tests fail when a terminated person keeps access in connected systems, under a one-business-day control. LeaverCheck's per-leaver check, chase-up and auditor log largely duplicate a tool the buyer already owns, and the concept's competitor table omits both."
-   ]
-  ],
-  "lenses": 6,
-  "round1_mean": 4.5,
+  "fatal": [],
+  "lenses": 9,
+  "decision": "PROMISING",
+  "mean": 5.75,
+  "min": 4,
+  "above_successes": 1,
+  "above_failures": 4,
+  "n_successes": 4,
+  "n_failures": 4,
+  "founder_fit": 6,
+  "round1_mean": 4.38,
   "majors": [
    [
     "market-skeptic",
-    "Verification-only is a vitamin on top of a painkiller the buyer already has. The buyer keeps paying for whatever path does the deprovisioning (LCM, Scimify, Workflows, tickets) and is asked to add a budget line to check it. The concept admits auditors accept ticketed offboarding and that buyers must 'value catching misses sooner, not just passing the audit'. No budget exists for that today."
+    "The whole concept now rests on the trigger, and no evidence shows that it exists. The buyer is a CTO with a written customer-questionnaire item, auditor question or near-miss about coding agents. Published AI vendor questionnaire guidance (Vanta, GRC templates) asks about training on customer data, prompt retention, sub-processors and shadow AI. It does not ask for adversarial testing of developers' agents, MCP permissions or CI agent jobs. The concept cites no questionnaire, auditor or customer that asks for this. SOC 2 has no AI criteria (CSA). Without such a document, a red team is a discretionary $6,500."
    ],
    [
     "market-skeptic",
-    "Still no evidence from the named buyer. The revision says so ('the input has no more buyer-side evidence'). Need statements remain developers asking for SCIM in their own products, plus one HN comment. WTP is still 2 of 5. Every demand claim now rests on a test that has not run."
-   ],
-   [
-    "market-skeptic",
-    "The incidence data that would show the pain is common comes from vendors and skews to enterprise. CloudEagle's '48% of former employees still have active access' comes from a survey of 1,000 enterprise CIOs/CISOs by a vendor selling the fix, not from 150-1,500-person companies. Leftover accounts in SSO-enforced apps can't be logged into once the IdP account is deactivated, so the urgent pain is limited to apps that use local logins. That is a smaller set than '10+ non-SCIM apps'."
-   ],
-   [
-    "market-skeptic",
-    "The revenue ceiling looks small. At $1/user/month with a $250 minimum, ACV is about $3K-18K and typically about $6K. Suppose roughly 10-20K reachable US and EU tech or services firms of 150-1,500 employees run Okta or Entra with SOC 2 (my estimate). Then 2% penetration is about 300 customers, or about $2M ARR. That supports a small business but needs near-zero CAC, which founder-led sales does not provide."
+    "The problem evidence still comes from developers and tool authors. The new items (headless MCP auto-approval, an MCP read-only bypass, a missing subagent validator) are bugs in agent and MCP projects, reported by their own maintainers or users. They show that the risk is technically real. They do not show that a small-company CTO will pay an outsider to find it. None of them involves a target-profile company that was harmed, or one that asked for help."
    ],
    [
     "competitor-analyst",
-    "The remaining wedge, apps with no integration, is a short step for the incumbents. Vanta already has a private-integration API that pushes user accounts in and links them to IdP users for account tests, an Access File Uploader for apps it can't connect to, and an offboarding API. Adding 'upload this app's export, diff it against leavers' to offboarding is a feature, not a product, and could ship next quarter. Meanwhile the GTM plans to partner with these same compliance-automation tools, which hands the most likely acquirer-or-cloner the roadmap."
+    "Most dangerous competitor is still Vanta, and the threat now hits the core. Vanta's Pillar roadmap lists AI inventory and runtime monitoring for January 2027, red teaming ('adversarial testing tailored to your business context') for Spring 2027 and runtime enforcement for Summer 2027, sold inside the SOC 2 platform the named co-buyer already pays for. Pillar's catalogue includes coding agents and MCP servers. The concept's strongest claim, red teaming that platforms do not bundle, has a public expiry date. The implementation-partner role also depends on a Vanta partner track for AI services, and none has been published."
    ],
    [
     "competitor-analyst",
-    "Nudge Security sells offboarding for exactly the 'beyond the IdP' gap, and is missing from the table. It discovers SaaS accounts, shadow IT and OAuth grants per identity, including apps outside SSO. It nudges IT or users to remove access where it can't automate. It uses password resets to lock leavers out of unmanaged accounts. It offers 'find lingering access on Day One' of a free trial, the same hook as LeaverCheck's free scan, but needs no CSVs from app owners."
+    "The claimed asset, a private injection suite of 30+ cases, is being commoditised. Promptfoo ships free, open coding-agent red-team plugins for repo-text injection, terminal-output injection, secret env and file reads, sandbox read and write escape, network egress bypass, delayed CI exfiltration and automation poisoning, run against an isolated repo copy. That is most of the concept's suite and test method. GitInject (live GitHub workflow injection) and SuperClaw add open tooling. An in-house platform engineer, or any pentest firm, can run this, so the work shifts from owning a suite to delivery and judgment."
    ],
    [
     "competitor-analyst",
-    "SaaS-management and IGA platforms (Zluri, Torii, Lumos, Stitchflow, ConductorOne) already sell user-list reconciliation, and Okta ISPM covers identity posture. ConductorOne's Apache-2.0 Baton toolkit lists principals across apps and diffs sync runs, now continued in baton-sdk. That gives a scripting IT team, or any bridge vendor such as Scimify or Aquera, a free read-only connector base to build the same check."
+    "The concept understates the boutique overlap. Its table says Appsecco 'tests MCP servers', but Appsecco sells fixed-price product security testing for agent workflows, MCP tools and connected data sources, with a 48-hour quote and a retest within 30 days. That is the same fixed-fee, retest-included structure, from a firm with published research and a client base. The differentiation from Christian Schneider holds, since his offer is an interview-based assessment and explicitly 'not a pentest'."
    ],
    [
     "security-practitioner",
-    "The trigger isn't reliable. Okta event hooks are best-effort, retry at most once, time out after 3 seconds and guarantee no maximum delay, so a dropped deactivation event means that leaver is never checked, with no visible error. Leavers who are suspended, unassigned from the app group, or disabled by HR-driven Entra sync (rather than deactivated) may not fire the expected event at all. Without a periodic reconciliation against the System Log, Entra audit logs and directory state, the per-leaver log misses exactly the cases it exists to catch."
-   ],
-   [
-    "security-practitioner",
-    "Export-fed apps get weak assurance. In the long tail, which is also where SSO usually isn't enforced and the real risk sits, the data the check relies on comes from the same app owner who is supposed to remove the account. That owner can upload a stale, filtered or edited CSV, and nothing proves the export is complete or recent. A 'checked' entry built on a three-week-old export looks the same in an audit log as a live API read unless the log records the data source, the export's timestamp and who uploaded it, and flags stale exports as not checked."
-   ],
-   [
-    "security-practitioner",
-    "Risk coverage is incomplete. A leaver is only truly gone when their personal API tokens, OAuth grants to third-party apps, active sessions, shared or service accounts they knew the password to, and SSH or deploy keys are also gone. A user-list check sees none of these. In SSO-enforced apps, which are the API-connected ones, the main residual risk is exactly these tokens, so a 'no leftover account' result can still leave live access. The pitch that leavers are 'actually gone everywhere' overstates what the product checks."
+    "The hardening leans on the native sandbox with an egress allowlist, but Claude Code's sandbox covers shell commands only. File tools, MCP servers and hooks run outside it. The concept's headline exposure is MCP servers wired to GitHub, cloud and production data, so a poisoned issue that makes the agent call a write-capable MCP tool is not contained by the sandbox. MCP risk has to be cut at the server: an allowlist (allowedMcpServers/managed-mcp.json), per-tool deny rules, least-privilege tokens for each MCP server, and read-only database roles. None of these is named as a deliverable."
    ],
    [
     "technical-feasibility",
-    "The trigger can't be relied on by itself. Okta event hooks are best-effort: delivery is at least once, Okta retries at most once, it doesn't retry 4xx responses, it times out after 3 seconds and it guarantees no maximum delay. A dropped hook means a leaver who is never checked, which gives silent false assurance. Entra has no equivalent push for audit events, so its checks depend on polling the audit log, and Entra Free keeps that log for only 7 days. The MVP needs a System Log and audit-log poller that reconciles against the hooks, idempotent handling of event IDs, and alerts when a poll falls behind."
-   ],
-   [
-    "technical-feasibility",
-    "Read-only list endpoints don't see everything, and some only come with admin-grade tokens. Notion's list-users excludes guests, so guest and contractor leftovers are invisible to it, and personal access tokens can't list users at all. Atlassian org API keys last at most a year, and without scopes they can reach every admin API. Slack needs users:read plus users:read.email to match on email. Each connector needs a documented coverage boundary (which account types, which plan tiers) shown per leaver, or the check log overstates what was checked."
+    "The new containment layer does not cover the main attack surface. Claude Code's sandbox covers shell commands only. Local MCP servers, hooks and the built-in file and web tools run outside it with full user access, and allowedDomains does not limit WebFetch. A poisoned issue that drives an MCP tool such as GitHub, a database or mail is limited only by the MCP allowlist, permission rules and token scope, not by the sandbox or the egress allowlist. The hardening must add per-server least-privilege tokens, deny rules on MCP write tools and possibly containerised MCP servers. The bypass list must say plainly that the sandbox does not cover MCP."
    ],
    [
     "gtm-pricing",
-    "The target buyer (a SOC 2/ISO shop with an audit in the next six months) very likely already pays for a compliance-automation platform. Vanta's offboarding workflow reportedly detects accounts in connected apps through mostly read-only integrations and auto-closes the task once deprovisioning is detected. Apps without an integration sit under 'Unmonitored Accounts', where an admin attests removal by hand. That covers most of LeaverCheck's value for API apps inside a budget line the buyer already has, so the channel plan to 'partner with compliance-automation tools' means courting the most dangerous substitute. What's left is better coverage of unmonitored apps, and that relies on CSV uploads, which is not much better than the attestation the buyer already does."
+    "Demand still depends on a trigger and has no budget line. Narrowing the buyer to companies with a written questionnaire item, an auditor question or a near-miss is honest, but it shrinks the funnel to a segment nobody has sized. It also makes deal flow follow the slow, uneven questionnaire cycle. No evidence yet shows partners or CTOs actually have such requests in hand."
    ],
    [
     "gtm-pricing",
-    "The price is set by a competitor anchor, not by value, and the anchor works against it. The rationale benchmarks Scimify at $0.90/user/month, but Scimify does the deprovisioning. Charging $1/user/month just to check is more than the bridge that does the work, which is a hard sentence for a buyer to accept. Per-IdP-user pricing also charges for every employee when the value sits in a handful of leavers a month on 10+ non-SCIM apps."
-   ],
-   [
-    "gtm-pricing",
-    "The unit economics are still thin. At $250/month minimum and about $6K for 500 users, a typical deal is $3-6K a year. The motion is founder-led sales opened by a concierge scan that someone diffs by hand, plus a GDPR DPA and a security review (lighter now, but still needed for holding the employee directory and read tokens). The concept rates willingness to pay 2 of 5. A $3-6K ACV can fund only self-serve conversion, and the funnel described is services-led."
+    "Two sprints a month is optimistic for one person who must also write 2-3 public research pieces, keep a 30+ case injection suite current across four agents, run free self-scan walkthroughs, manage partners and handle engagement paperwork. Early utilisation is more likely 1-1.5 sprints a month, so $6.5-10k gross before insurance and partner discounts. First revenue is expected around month 3-5, so year one may bring in well under $100k."
    ],
    [
     "legal-ethics",
-    "The riskiest-assumption test has 20 prospects send 90 days of IdP deactivations plus full user exports from 5-10 apps, diffed by hand in a spreadsheet, before the company has a DPA, sub-processor list, retention rule or SOC 2. That is personal data on employees and leavers, processed by a vendor that may not yet exist as a company. Under GDPR Art. 28 the controller may use only processors that give sufficient guarantees, under a contract. Many IT managers' own policies will stop them sharing this, and those who do share it create exposure for both sides."
+    "The red team runs on 'a fork of a real repo' with the client's real MCP server versions in a disposable environment. Unless that environment runs in the client's own cloud account, with the client's own agent licences, the founder now holds the client's private source code. Every injection run also sends that code to an LLM provider under the founder's API account and data terms, not the client's. This contradicts the claim that 'the founder never holds client data'. It also makes the founder a sub-processor that the client's SOC 2 vendor review and its customers' DPAs have to cover. The concept needs a custody design before the first sprint. The default should be an environment in the client's tenant, using the client's agent accounts, destroyed at the end of the sprint with written confirmation. Otherwise it needs a DPA, a named LLM provider with zero-retention terms, encryption, and deletion on close."
+   ],
+   [
+    "legal-ethics",
+    "The liability controls are listed but not yet contracted or priced. 'Production credentials only with written approval' leaves a door open that a client under deadline pressure will push through, and a successful injection with a production token can delete or exfiltrate data. E&O and cyber cover for a new solo firm doing offensive testing remains an open question. The rationale says the price 'covers insurance', but gives no quote. Before selling, the founder needs three things: a signed engagement template with an authorisation letter, a third-party exclusion and a liability cap at or near the fee; a written rule that production testing uses read-only or single-resource tokens and has a rollback plan; and a bound policy."
+   ],
+   [
+    "economic-buyer",
+    "The new price puts the sprint head-to-head with the security spend I already have. $6,500 is about what a small SaaS pays for its whole annual pentest: fixed-price vendors quote $4,000 for web app and API plus $2,400 for cloud, $6,400 in total. That pentest is what customers and SOC 2 auditors actually ask for. At $3,500 I could put it on a card; at $6,500 it needs a budget conversation, and the CFO will ask why a coding-agent test costs as much as the test of our product. Without a written trigger, I defer it to next year's budget."
+   ],
+   [
+    "economic-buyer",
+    "The must-have trigger is still an assumption, not evidence. The revision narrows the buyer to companies with a written questionnaire item or auditor question about coding agents, but the concept shows none. The enterprise AI questionnaires I can find ask about the vendor's AI product (model behaviour, refusals, retention, training, guardrails), not about how its developers configure Claude Code or MCP. The concept itself says SOC 2 has no AI criteria. The segment that has a real trigger may be very small."
+   ],
+   [
+    "defensibility",
+    "The 'private, growing injection-test suite' the differentiation names as the asset is already free and maintained. Promptfoo's coding-agent collection covers repo prompt injection, terminal-output injection, secret env/file reads, sandbox read/write escape, egress bypass, delayed CI exfil, automation poisoning and verifier sabotage, with MCP plugins and disposable-checkout guidance. That is a superset of the planned 30+ cases, backed by a vendor that is part of OpenAI."
+   ],
+   [
+    "defensibility",
+    "The likeliest copier is still the small pentest, vCISO and SOC 2 readiness firm, now invited in as a reseller. Wholesale resale at $5,000 is not exclusive and teaches the method: after a few sprints a partner can run Promptfoo plus native managed settings itself and keep the whole $6,500. Established boutiques that already sell coding-agent or MCP assessments (listed in competitors) can add a fixed price within a quarter."
+   ],
+   [
+    "defensibility",
+    "There are no switching costs. Fixes live in the client's native managed settings, sandbox config and log store by design, and the quarterly re-test ($1,800) can go to any tester. Compliance platforms (Vanta, Drata) that own the buyer relationship could add an automated red-team check or a partner service and pull re-tests away."
+   ],
+   [
+    "founder-fit",
+    "Credibility is still unproven and everything depends on it. The plan now puts 2-3 write-ups before selling, but the direct and partner channels both need the founder to look like a coding-agent security expert. Established boutiques already publish deep coding-agent work, such as Christian Schneider's ten-domain assessment and cheat sheet. Pentest and vCISO firms will not resell an unknown solo tester's red team until they see a finding or a reference client."
+   ],
+   [
+    "founder-fit",
+    "Time to first revenue is long for a founder with no capital. The plan needs 3 months to build the test environment, the 30+ case suite and the write-ups, plus about a month to learn agent managed settings, sandbox and hook semantics, GitHub Actions attack paths and SOC 2 control wording. With the 2-week test after that and a typical first-deal cycle, the first $6,500 arrives around month 4-6. The founder has plenty of time, so this is survivable but not fast. A paid one-repository CI test could close earlier."
    ]
   ],
   "riskiest_assumption": {
-   "assumption": "Mid-market IT teams on Okta or Entra find leftover accounts in non-SCIM apps often enough, and care enough, to pay about $1/user/month for continuous read-only leaver verification on top of whatever offboarding they already do.",
-   "test": "Over two weeks, offer 20 qualifying IT managers a free concierge orphan scan: they send the last 90 days of IdP deactivations plus user exports from 5-10 non-SCIM apps, and we diff them by hand in a spreadsheet. At the readout, ask for a paid pilot or LOI at $1/user/month.",
-   "success_signal": "At least 8 of 20 scans find one or more active accounts belonging to a user deactivated in the IdP more than 7 days earlier, and at least 5 companies sign an LOI or paid pilot at $1/user/month or more."
+   "assumption": "Enough 15-150 person SaaS companies have a concrete trigger (a customer questionnaire item, auditor question or near-miss about coding agents) to pay about $6,500 for a red team and hardening now, directly or through a partner firm.",
+   "test": "In two weeks: interview 10 SOC 2 readiness, vCISO or small pentest firms about how often clients get coding-agent or MCP questions and offer them the wholesale sprint; contact 20 CTOs from the founder's network and research readers, ask whether they have such a request in writing, and offer a pre-sold sprint with a $1,000 deposit.",
+   "success_signal": "At least 3 of 10 partner firms report clients with written coding-agent questions and 2 agree in writing to refer or resell, and at least 1 CTO pays a deposit at $6,500 (or 2 at the one-repository CI test)."
   },
   "change_my_mind": [
    [
     "market-skeptic",
-    "The concierge test meets its own bar: at least 8 of 20 mid-market scans find active leftover accounts more than 7 days after IdP deactivation, at least half of them in apps without SSO enforcement, and at least 5 LOIs or paid pilots at $1/user/month or more."
+    "3 of 10 SOC 2 readiness, vCISO or pentest firms show redacted client questionnaires or audit requests that ask about coding-agent, MCP or CI-agent controls"
    ],
    [
     "competitor-analyst",
-    "At least 6 of the 20 concierge scans find leftover accounts at companies that already run Vanta or Drata offboarding, in apps those platforms mark as unmonitored or don't list."
+    "Vanta/Pillar red teaming ships for AI apps only, or at enterprise tiers only, and leaves developer coding agents and CI agent jobs out of scope through 2027"
    ],
    [
     "security-practitioner",
-    "A daily reconciliation against the Okta System Log, Entra audit logs and directory state, which catches 100% of leavers in a pilot, including ones whose event hook delivery failed."
+    "MCP-specific hardening added as a deliverable: allowlist plus per-server least-privilege tokens or read-only roles, and a re-test showing a poisoned issue can no longer trigger a write-capable MCP tool."
    ],
    [
     "technical-feasibility",
-    "A per-app matrix for the 12 target connectors showing a non-admin list-users scope on the tiers buyers actually hold, plus which account types (guests, contractors, bots) each one misses"
+    "A pilot client where an MCP-driven injection case (poisoned issue to a GitHub or database MCP write) is blocked by token scope or deny rules, not only shell cases by the sandbox."
    ],
    [
     "gtm-pricing",
-    "In the concierge test, at least 5 of 20 scanned companies already use Vanta or Drata and still find 1 or more active leaver accounts those tools missed"
+    "At least 3 of 10 interviewed SOC 2 readiness, vCISO or pentest firms show client questionnaires with coding-agent or MCP items, and 2 sign a resale agreement at $5,000 wholesale"
    ],
    [
     "legal-ethics",
-    "A one-page DPA, NDA and 30-day deletion commitment signed before any concierge scan, with exports cut to identifier, status and role columns."
+    "A custody design where the disposable test environment runs in the client's tenant with the client's agent accounts, or a signed DPA with named zero-retention LLM terms and deletion on close."
+   ],
+   [
+    "economic-buyer",
+    "3 of 10 partner firms show redacted client questionnaires or auditor requests that name coding agents, MCP or CI agent jobs."
+   ],
+   [
+    "defensibility",
+    "Within 6 months, 2 or more vendor-acknowledged findings or CVEs in coding agents or popular MCP servers published under the founder's name"
+   ],
+   [
+    "founder-fit",
+    "Within 3 months, 2-3 public reproducible coding-agent or CI-agent injection write-ups, at least one acknowledged by a vendor or maintainer, plus a talk accepted at a BSides or similar event."
    ]
   ]
  },
  {
-  "opening_id": "cross-cloud-workload-identity",
-  "name": "Keybridge",
-  "slug": "keybridge",
-  "one_liner": "Turns the static AWS and GCP keys your cross-cloud and GitHub Actions workloads still use into linted native-federation pull requests, run inside your cloud.",
-  "entry_price": "Free self-hosted report; Migration $6,000 one-off per estate for up to 25 in-use boundary-crossing keys on the three supported paths ($150 per extra key); then Monitor $150/month flat for up to 100 AWS accounts and GCP projects.",
+  "opening_id": "smb-compliance-reporting",
+  "name": "Safeguards Desk",
+  "slug": "safeguards-desk",
+  "one_liner": "Verified FTC Safeguards program for small tax, mortgage and accounting offices: read-only Microsoft 365 checks, required scans and tests, and evidence from real configuration.",
+  "entry_price": "Program tier (firms with 5,000+ consumers): $490 setup + $179/month billed annually, up to 20 users, including continuous M365 checks, two external scans, one annual pen test, a tabletop and the annual report. Core tier (under 5,000): $39/month, monitor and WISP only.",
   "final_round": 2,
-  "decision": "NO-GO",
-  "mean": 5.33,
-  "min": 4,
   "scores": {
-   "market-skeptic": 4,
-   "competitor-analyst": 4,
+   "market-skeptic": 5,
+   "competitor-analyst": 5,
    "security-practitioner": 6,
-   "technical-feasibility": 6,
-   "gtm-pricing": 5,
-   "legal-ethics": 7
+   "technical-feasibility": 7,
+   "gtm-pricing": 6,
+   "legal-ethics": 7,
+   "economic-buyer": 5,
+   "defensibility": 4,
+   "founder-fit": 7
   },
   "fatal": [],
-  "lenses": 6,
-  "round1_mean": 4.67,
+  "lenses": 9,
+  "decision": "PROMISING",
+  "mean": 5.62,
+  "min": 4,
+  "above_successes": 1,
+  "above_failures": 4,
+  "n_successes": 4,
+  "n_failures": 4,
+  "founder_fit": 7,
+  "round1_mean": 4.75,
   "majors": [
    [
     "market-skeptic",
-    "Demand is still inferred. The revision keeps the same AWS-only developer issues, filed against upstream tools, and adds no buyer-side signal: no platform lead, auditor finding or consultancy describes in-use AWS-GCP or CI keys they would pay to remove. The concept admits this in risks[5] and riskiest_assumption."
+    "The new wedge rests on a segment nobody has sized. We don't know how many 3-20 person tax, CPA and mortgage offices hold data on 5,000+ consumers, or whether they know it. Sources disagree on how to count consumers (active versus all retained records), so many owners will self-classify under the line and buy the $39 Core tier or the free IRS template. The concept lists this as its first open question. Without a count, the 40-client target can't be judged against the size of the market."
    ],
    [
     "market-skeptic",
-    "Narrowing the segment shrank the market without sizing it. The target is now AWS-primary and GCP-secondary companies with 50-1,000 employees that use GitHub Actions, have a GCP org created before 3 May 2024, have a CSPM key finding open for months, and run no Vault or Teleport. Each filter cuts the count, and no estimate is given. With about $7.8k of first-year value and mostly one-off revenue, $10M ARR needs roughly 1,300 new logos every year. That is implausible from an unsized niche."
+    "Under 314.4(d)(2), the annual pen test and six-monthly scans are needed only 'absent effective continuous monitoring'. SBTPG/Watch Cloud already sells MDR plus 'Microsoft 365 & Google Workspace monitoring' through the tax-pro channel, and MSPs will say their RMM/EDR stack is continuous monitoring. Many firms above 5,000 consumers will reasonably believe they already meet the testing duty, which shrinks the market that is legally forced to buy. The concept's own continuous M365 monitor also blurs the line."
    ],
    [
     "market-skeptic",
-    "The problem is shrinking on the GCP half of the product. Datadog finds GCP service accounts with keys older than a year fell from 62% to 55% in a year. Google enforces key-creation blocking for every organisation created on or after 3 May 2024. Over half of old AWS keys are unused, which is hygiene and outside this product's scope. The pool of in-use, boundary-crossing keys may be only a handful per estate, and it gets smaller every year."
+    "The demand evidence still does not come from the named buyer. problem.evidence is regulation text plus old HN, ServerFault and StackExchange posts from tech-adjacent small firms. No tax-office, CPA or mortgage-broker owner or MSP asks for verification or testing. The revision log admits the problem was not changed. The pain is mandated on paper, but there is no evidence it is felt or budgeted."
    ],
    [
     "market-skeptic",
-    "The easiest share of the target keys, static AWS/GCP keys in GitHub Actions, already has official step-by-step guides and maintained actions. Teams that have left those findings open for months may be showing low priority rather than lack of capacity. If so, they will defer a $6,000 fee too, until an audit forces the work."
+    "The levers that turn a duty into budget are weak for this segment. FTC enforcement against sub-20-person firms is rare. Industry guides to cyber-insurance requirements (seen only in search results, not opened) say small-firm applications gate on MFA, EDR and backups, and treat pen-test or scan summaries as optional evidence asked for at higher limits. Owners already pay $999 for a WISP plus $297-$697 for insurance, and have little outside pressure to add about $2,150 a year."
    ],
    [
     "competitor-analyst",
-    "Most dangerous competitor is still Wiz, and its threat is no longer hypothetical. Wiz Code's Green Agent already does Keybridge's two paid steps for findings in general. It maps a cloud finding to its owner by correlating cloud logs, tags, commit history and service catalogs, then 'generates the exact code fix and opens a Pull Request', or passes the plan to a coding agent such as Claude Code. Wiz already sees in-use access keys across AWS and GCP in many target accounts. A key-to-federation fix is therefore a remediation template inside a shipping agent, not a new product. The concept still says Wiz 'stops at the finding'."
+    "The most dangerous competitor is now Kaseya, with the MSP stack around it. The concept's channel is MSPs 'that lack security-testing staff', but those MSPs don't need staff: Kaseya's vPenTest runs automated internal and external pen tests monthly or on demand and is pitched as producing compliance-ready reports. ConnectSecure sells scheduled vulnerability scanning plus compliance reporting to MSPs 'in highly regulated industries'. An MSP that owns these tools can deliver 314.4(d)(2) evidence itself and keep the margin. It has no reason to resell a solo founder's manual test at 30% off. Kaseya also owns Compliance Manager GRC, so a Safeguards template on top is a short step."
    ],
    [
     "competitor-analyst",
-    "The IAM half of the paid migration is already free from an NHI vendor. Clutch Security publishes Federator under GPL-3.0, with Terraform templates for CI/CD-to-cloud federation (including GitHub Actions) and cloud-to-cloud IAM federation between AWS, Azure and GCP. These are Keybridge's three supported paths. Clutch's own process ends in a 'Protect' stage where static credentials are migrated to federation. The concept's Clutch row ('sold to enterprises; we do one narrow remediation job') misses that Clutch gives away the templates and owns the remediation story."
+    "The read-only M365 posture monitor, the concept's core feature, is commodity in the MSP channel. Microsoft 365 Lighthouse gives CSP partners SMB security baselines and multi-tenant risk views at no extra cost. CIPP (open source, built for MSPs) does multi-tenant standards and compliance reporting. Maester runs 2,000+ read-only checks against CIS/CISA baselines for free. The MFA, leaver, forwarding-rule and admin-role checks in the MVP are a subset of what partners already run. What's left to differentiate is the mapping to Safeguards sections and the report wording, not the detection."
    ],
    [
     "competitor-analyst",
-    "The consumer-side change is the new claimed moat (workflow YAML, Kubernetes annotation, credential-config file, removing env vars). Coding agents already produce exactly this kind of change, and Wiz now routes findings to them. Once a buyer has a key finding plus the free Federator templates and the cloud docs, Claude Code or Copilot can write the two-sided PR. The fixed $6,000 fee competes with an afternoon of agent-assisted work, not with five engineer-weeks. The concept's DIY anchor assumes manual work and is not evidenced."
+    "Cynomi already sells an FTC Safeguards vCISO platform to MSPs and MSSPs. It automates risk assessments, program documentation and compliance reporting, and names mortgage brokers, tax preparers and accounting firms as targets. That is the partner console, tailored-WISP and risk-assessment layer of this MVP. It is already funded and already in the MSP channel. With Cynomi plus vPenTest, an MSP gets the whole Program tier from existing vendors."
+   ],
+   [
+    "competitor-analyst",
+    "Vertical WISP SaaS has moved toward 'continuous'. SafeGuardGRC/Kompflow sells a firm-specific WISP aligned with FTC 314 and Pub 4557 for $499 the first year, then $99/year, with auto-updates. Its higher tiers advertise a risk assessment, IR playbooks, vendor inventory, insurer questionnaires and 'continuous control testing'. The Core tier at $39/month (~$470/yr) is about 5x that price, and a WISP 'regenerated from findings' will not stay unique."
    ],
    [
     "security-practitioner",
-    "The PR path's permissions and hosting are not specified. The listed GitHub App scopes are org Secrets read and Contents read, and those cannot open PRs. Opening PRs needs Contents write and Pull requests write, and editing .github/workflows files needs the Workflows write permission. That last one lets the app change CI jobs that already hold cloud credentials. The concept doesn't say whether the App and its private key are hosted by the vendor or the customer. A vendor-hosted App with org-wide workflow write is exactly the custody the revision set out to remove. Security reviewers will ask for the App to be self-hosted or per-repo, or for PRs to be pushed from the customer's own runner."
+    "The monitor reports by monthly email, but the signals it collects are attacks in progress. An external forwarding rule, a new Global Admin or a risky sign-in means business email compromise is happening now. Learning about it up to 30 days later is post-mortem evidence, not detection. On Entra ID Free tenants (Business Basic/Standard), sign-in and audit logs are kept for only 7 days, so a monthly pull misses most activity unless the product polls daily and stores the data. It needs near-real-time alerts to the owner and MSP for high-severity changes, and daily collection, or it does not reduce BEC risk or meaningfully address 314.4(c)(8) user-activity monitoring."
    ],
    [
     "security-practitioner",
-    "Attribution coverage will be partial for the most common consumers. CloudTrail management events record the access key ID, source IP and user agent. But S3 object reads and writes are data events and are not logged unless the customer enabled them, and many cross-cloud keys exist only to move data into or out of S3. On GCP, Data Access audit logs are off by default except for some BigQuery services, so GKE or Vertex consumers of JSON keys may show no data-plane trail. The 'unknown, no PR' rule is honest. It also means a sizable share of keys may get no remediation, and the share-attributed rate is the product's real efficacy number."
+    "The penetration test covers only 'internet-facing services and the M365 tenant', within a budget of about 8 founder hours per client per year that must also cover two scans, a tabletop and the report. Small tax and mortgage offices usually expose almost nothing externally. Their real compromise paths are phishing, infostealers or remote-access tools on workstations, shared local admin accounts, and tax or LOS software on office PCs. A test that never touches endpoints or the internal network produces a clean dated report while the main attack surface goes untested. That is checkbox compliance, the problem round 1 flagged in a new form, and an incident on an untested workstation would expose it."
+   ],
+   [
+    "security-practitioner",
+    "The checks the concept lists need tenant-wide application permissions: AuditLog.Read.All for sign-ins, MailboxSettings.Read for inbox rules on every mailbox, Policy/Directory reads, and app-only Exchange Online access for forwarding. These permissions stay granted indefinitely across dozens of financial firms' tenants. One stolen app secret or certificate, or a compromise of the founder's laptop, becomes a read path into every client and a ready map of their weaknesses (the findings database). Attackers have abused OAuth apps this way before. A solo founder running the platform with no 24/7 coverage is a concentrated supply-chain risk. MSPs and the 314.4(f) oversight duty will ask for evidence the concept does not yet plan: certificate auth held in an HSM or Key Vault, per-tenant app registrations or GDAP, Conditional Access for workload identities, an independent assessment, and a breach notification commitment."
    ],
    [
     "technical-feasibility",
-    "'AWS workload to GCP' counts as one path, but GCP documents three different mechanisms. The AWS provider and its credential config cover only EC2 VMs. EKS goes through the Kubernetes OIDC issuer setup with projected service-account tokens. Lambda and ECS need either env-var credentials or AWS outbound federation through a generic OIDC provider, plus an executable- or file-sourced credential config. The concept rules out shipping its own helper, but no maintained helper exists for that last case. So there are about five templates with their own consumer changes and test rigs, not three."
+    "Holding admin-consented application permissions (AuditLog.Read.All, Directory/Policy read, MailboxSettings read, Exchange.ManageAsApp) for dozens of financial-firm tenants makes one app secret or certificate a key to all of them. Read-only scopes still expose inbox rules, sign-in logs and the full user directory, which is exactly the reconnaissance a BEC attacker wants. The revision names vendor security as a hardest part but does not design it: certificate-only credentials in an HSM or Key Vault, per-tenant token isolation, no standing human access, and a 314.4(f)-ready security program. A solo founder has to build this to production quality inside the same three months."
    ],
    [
     "technical-feasibility",
-    "The access model doesn't match the feature. With only 'Secrets read' and 'Contents read', a GitHub App can't push a branch or open a PR. It also needs Contents write and Pull requests write on every consumer repo, and probably Workflows write, because the change edits .github/workflows files. Also, if Keybridge hosts the App, its private key and installation tokens sit with the vendor, which contradicts 'nothing leaves the customer's environment'. Each customer has to register their own App, or the tool has to run as an Action with a scoped token. That is install friction against the one-hour target."
+    "Graph does not expose external forwarding settings (mailbox ForwardingSmtpAddress, remote-domain auto-forward, outbound spam policy). These need Exchange Online PowerShell app-only access, which requires Exchange.ManageAsApp plus a Microsoft Entra directory role assigned to the app's service principal in each client tenant, with certificate authentication and a PowerShell runtime in the backend. That is a per-tenant onboarding step beyond one-click admin consent, and small-office owners or wary MSPs may refuse it. It also complicates a Python/Graph-only backend."
    ],
    [
     "technical-feasibility",
-    "Attribution still has blind spots that the confidence label hides rather than fixes. CloudTrail LookupEvents covers only management events for 90 days, one region per call, at 2 requests per second per account per region. A key used only for S3 Get/PutObject (the typical CI artifact upload) leaves no trace there. GitHub-hosted runners come from large shared IP ranges, so matching depends on secret names in workflows plus run timestamps. Expect a large 'unknown' share. That shrinks the set of keys you can sell a migration for, and it needs the customer to enable data-event trails first."
+    "Signal coverage varies by licence. Risky users and risk detections need Entra ID P2, which few 3-20-seat offices have. Sign-in log and registration-detail reports are tied to premium tiers, so they may be missing on Business Basic or Standard tenants. MFA coverage then has to fall back to per-user authentication-method enumeration and a check on security defaults or conditional access. The concept names this risk, but the MVP needs a per-SKU check matrix and test tenants for each SKU before launch, or the monthly evidence quietly varies by client."
+   ],
+   [
+    "technical-feasibility",
+    "Founder hours are underestimated. An annual pen test of external services plus an M365 tenant (scoping, written authorization, testing, retest, report), two scans with triage, a tabletop and an annual report will not fit in about 8 hours per client unless the test is a templated tool run. A templated run risks not counting as 'penetration testing' under 314.4(d)(2). At a realistic 15-25 hours, 40 clients needs 600-1,000 hours a year beside running the platform."
    ],
    [
     "gtm-pricing",
-    "Revenue is mostly non-recurring. Year one is about $7,800 and year two is $1,800 (Monitor at $150/month), and the concept itself doubts that monitoring will be renewed. To reach $1M in new revenue a year, the company has to close about 130 migrations a year, each needing attribution review and merged PRs across repos it doesn't own. That is a productised-services business with a SaaS cost base (2 engineers plus SOC 2 Type I), not a recurring-revenue one. Nothing in the plan expands an account after the first migration."
+    "The go-to-market now depends on MSP resale: half of the first ten customers and the core channel. But the concept's own risks say MSPs may treat findings about their clients' tenants as a threat. A 30% margin on $179/month is about $54/month per office, a small incentive against the reputational risk of a third party grading their work. Many MSPs also already run their own scanning or compliance tooling. There is no MSP letter of intent, no partner economics and no CAC or payback figure for either channel."
    ],
    [
     "gtm-pricing",
-    "The channel rests on two unproven bets. One is self-serve conversion of a $6k one-off buy, which still needs a GitHub App install with org Secrets read plus a security sign-off, so it is not a credit-card purchase. The other is consultancies reselling, which the concept itself lists as an open question because they may prefer to bill by the hour. With one founder-seller and both bets unproven, the motion defaults to founder-led selling, which the concept admits this ACV can't fund."
-   ],
-   [
-    "gtm-pricing",
-    "The DIY anchor is the vendor's own estimate and is weak at the expected estate size. The success signal expects a median of about 10 in-use keys. At 'one engineer-day per key' that is two engineer-weeks, so a $6,000 fee saves little. It saves even less once the free report has already named each key's consumer, which is the hardest part (attribution). The free tier may hand over enough for teams to finish the job themselves, perhaps with AI coding assistants and the clouds' published docs."
+    "Willingness to pay at $2.1k is unproven. The buyer's reference spend is a $999 Verito WISP plus $297-$697 insurance, and the concept itself flags low FTC enforcement and possible unawareness of the 5,000-consumer duty. Program costs $2,638 in year one with setup, roughly double the current spend. Unless an insurer questionnaire or examiner asks for test evidence, owners may keep the document plus insurance."
    ],
    [
     "legal-ethics",
-    "The GitHub permission model is understated and possibly vendor-custodied. The MVP opens PRs that edit .github/workflows files, but it describes the GitHub App as 'org Secrets read and Contents read'. GitHub requires Contents (write) and Workflows (write) to change workflow files, and Pull requests (write) to open PRs. Write access to every repo's CI definitions is a top-tier supply-chain grant. If Keybridge operates one multi-tenant App and holds its private key and webhook endpoint, a vendor breach gives an attacker workflow-write across all customers. That is the round-1 concentration risk in a new form, and it contradicts 'nothing leaves the customer's environment'. Fix: each customer registers its own App (manifest flow) or uses a self-hosted PAT/App, the key stays in the customer's account, and the permissions are stated accurately."
+    "Testing authorization does not cover third-party assets. Many target offices run tax or loan software on hosted desktops (Verito and ACE, which the concept lists as competitors, are hosting providers), on MSP-managed firewalls or on ISP-owned gear. A signature from the office owner does not authorize testing infrastructure the office does not own. Without the host's written consent, the test risks unauthorized access under the CFAA and state laws and breaches the host's terms. Microsoft's Rules of Engagement also bind the owner's authorized agents. They prohibit post-exploit actions, lateral movement, phishing through Microsoft services, DoS and the use of credentials other than your own. The M365 'pen test' therefore has to be scoped as configuration review plus limited testing, not as an attack simulation."
+   ],
+   [
+    "legal-ethics",
+    "The liability and insurance fix is still only a plan. The concept now adds active testing against production systems at financial offices. An outage or lockout during filing season, a missed critical finding later exploited, or a report a regulator rejects as (d)(2) evidence (open_questions[3]) could each lead to a claim. No E&O/cyber quote, liability cap or reviewed engagement terms exist yet, and the founder carries all of it personally."
+   ],
+   [
+    "economic-buyer",
+    "The wedge duty has a cheaper exit. 314.4(d)(2) requires annual pen tests and six-monthly vulnerability assessments only 'absent effective continuous monitoring'. If I already pay an MSP or a bundle such as SBTPG/Watch Cloud for 24x7 MDR, my IT provider will tell me that is continuous monitoring and the test is optional. So for many target firms the must-have becomes a nice-to-have, and I would not cut anything to fund it."
+   ],
+   [
+    "economic-buyer",
+    "Still no fear trigger I can show my CFO. No audit asks for the test, the concept itself lists FTC/state enforcement against sub-20-person firms and insurer questionnaires as open questions, and the 5,000-consumer count is my own estimate. A cost-conscious owner can count conservatively, file under the 314.6 exemption and keep the free template. The duty is real, but nothing makes me prove it."
+   ],
+   [
+    "economic-buyer",
+    "The price roughly doubles my current spend with no budget line to take it from. Year one is $490 + $2,148 = $2,638, against today's $999 Verito WISP or a free template plus $297-697 insurance. Being cheaper than a $3k-15k standalone pen test does not help: I never budgeted for a pen test, so I compare against what I pay now, not against an engagement I never bought."
+   ],
+   [
+    "defensibility",
+    "The most likely copier is now the partner channel itself. MSPs serving these offices can already put together the same Program from tools they have or get free. Microsoft 365 Lighthouse (no extra cost for CSP partners) offers an SMB security baseline, MFA adoption and risky sign-ins across tenants. Open-source CIPP checks tenant standards every 12 hours and reports, alerts on or fixes drift. ConnectSecure runs scheduled internal and external scans with white-label compliance reports. Kaseya vPenTest runs scheduled internal and external pen tests with auto-generated reports, which users call CREST-approved tests for SMB clients. Mapping that output to 314.4(d)(2) and a WISP is a template job. A partner-first plan teaches MSPs the playbook and then loses them."
+   ],
+   [
+    "defensibility",
+    "The M365 posture monitor, now the core feature, is commodity. Its checks are MFA coverage, leavers, forwarding rules, admin roles and risky sign-ins. Lighthouse covers MFA and risky sign-ins with SMB baselines for free, and CIPP covers drift for free. The monitor has no proprietary data and no network effect, and a single admin-consented Graph app is the same access every MSP tool uses."
+   ],
+   [
+    "defensibility",
+    "The bundlers with distribution can add the wedge in a quarter. SBTPG/Watch Cloud already sells a WISP, MDR and advisor briefings, billed from refund-transfer fees, and Verito already sells recurring WISPs. Either can add an automated external pen test and scan SKU (vPenTest-type tooling resells to providers) and a 'Safeguards testing' line item, reaching tax offices at near-zero CAC. The concept itself says its defence here is 'thin and relationship-based rather than a product moat'."
+   ],
+   [
+    "defensibility",
+    "The only thing automated tools lack is the founder's hands-on manual test and judgment. That is a services edge: it caps at about 40-60 clients, cannot be sold to an acquirer, and has no regulatory premium unless a manual test counts for more than an automated one under 314.4(d)(2), which the concept leaves open. If automated tests suffice, a cheaper automated rival can credibly claim the same compliance."
+   ],
+   [
+    "founder-fit",
+    "The paid core is now a founder-run annual penetration test, and the founder's testing record is CTFs plus PenTest+. There are no client engagements, references or sample reports. An MSP that resells the test under its own brand, an E&O/cyber insurer pricing a solo tester's cover, and an owner whose regulator may ask 'who tested you' will all want proof of earlier paid work. Without it the price is hard to defend and cover may cost more. This can be fixed: a few discounted or free scoped tests with written authorization and permission to use the client as a reference, plus a redacted sample report, before the paid launch."
+   ],
+   [
+    "founder-fit",
+    "The channel is now right for a technical founder: MSPs speak the founder's language and mortgage brokers buy all year. But it is still unbuilt. The founder has 'a few industry contacts', and the concept's own risks say MSPs may see a third party's findings on their tenants as grading their work. MSPs that already run compliance-as-a-service, such as ScalePad ControlMap priced per client per month, have a tool and may only want testing hours, not the whole Program. If no MSP signs, the plan falls back to one-to-one founder sales, which round 1 judged slow."
    ]
   ],
   "riskiest_assumption": {
-   "assumption": "Mid-market AWS+GCP teams that already have CSPM key findings still carry enough in-use, boundary-crossing keys (not dead ones) that they will pay a fixed fee to have them migrated rather than do it themselves.",
-   "test": "Publish the read-only scanner as a script that runs in the customer's account and prints a local report; offer it to 40 platform leads from DevOps communities, the GitHub issues in the evidence and two DevOps consultancies. For those who run it, review the report with them and offer the $6,000 migration with a signed LOI or 50% deposit.",
-   "success_signal": "At least 10 of 40 run the script; the median report shows 10 or more in-use keys crossing AWS, GCP or CI that their CSPM finding has not closed for 3+ months; at least 3 sign an LOI or pay a deposit within two weeks; at least 2 security leads say they would approve the access model without escalation."
+   "assumption": "Small financial offices above 5,000 consumers, or MSPs on their behalf, will pay about $2k/year for verified configuration and 314.4(d)(2) testing on top of the WISP and cyber insurance they already buy.",
+   "test": "In two weeks, without building software: offer 15 MSPs that serve accounting or mortgage offices a white-label pilot, and email 40 mortgage brokers and established tax offices a fixed-fee $490 'Safeguards testing check' (manual external scan plus a read-only M365 review delivered by hand). In 10 owner calls, ask about consumer count, insurer questionnaires and whether anyone has asked for proof of testing.",
+   "success_signal": "At least 3 paid $490 checks or 1 MSP letter of intent covering 10+ client offices, and at least 4 of 10 owners above 5,000 consumers saying they have no annual test or vulnerability assessment and would pay to have one."
   },
   "change_my_mind": [
    [
     "market-skeptic",
-    "At least 10 of the 40 contacted platform leads run the scanner, and the median report shows 10 or more in-use AWS-GCP or CI keys that a CSPM finding has left open for over 3 months."
+    "The concept's own test passes: at least 3 paid $490 checks or 1 MSP letter of intent covering 10+ offices within two weeks."
    ],
    [
     "competitor-analyst",
-    "Wiz Green Agent and Clutch, tested on a real estate, do not produce a working two-sided federation change for an in-use AWS key or GCP JSON key used by GitHub Actions or EKS."
+    "2-3 MSPs that serve accounting or mortgage offices and already own vPenTest, ConnectSecure or Cynomi sign a letter of intent to resell the Program, and say what they can't get from those tools."
    ],
    [
     "security-practitioner",
-    "A documented GitHub App manifest and deployment model in which the App is customer-hosted or PRs are pushed from the customer's runner, with no vendor-held token that has workflow write."
+    "The monitor collects data daily and sends same-day alerts for external forwarding, new privileged roles and MFA removal; a 10-tenant pilot detects and contains at least one real or simulated BEC indicator within 24 hours."
    ],
    [
     "technical-feasibility",
-    "A prototype on 3 real AWS+GCP+GitHub estates where at least 70% of in-use boundary-crossing keys get high-confidence attribution from default-on logs plus workflow-run timing."
+    "A working prototype that onboards 3 real tenants (Business Basic, Standard and Premium) with one consent flow and returns MFA, forwarding and admin-role findings on each, with the Exchange role step timed and accepted"
    ],
    [
     "gtm-pricing",
-    "At least 3 of the 40 test prospects pay the $6,000 deposit or sign an LOI after seeing their free report, and their reports median 15+ in-use boundary-crossing keys."
+    "One signed MSP letter of intent covering 10+ client offices at the wholesale price, or at least 3 paid $490 testing checks from the 2-week test."
    ],
    [
     "legal-ethics",
-    "The GitHub integration is documented as a customer-registered App (or customer-held token) whose private key never leaves the customer, with the exact permission list: Secrets read, Contents write, Workflows write and Pull requests write, scoped to selected repos."
+    "A lawyer-reviewed engagement letter and test authorization template that requires the host's or MSP's written consent for any asset the office does not own, and an M365 test scope written to Microsoft's Rules of Engagement"
+   ],
+   [
+    "economic-buyer",
+    "Cyber insurer or tax-pro/mortgage insurance programs ask for evidence of an annual test or vulnerability scans in renewal questionnaires, or discount premiums for it, so the spend moves into the insurance line."
+   ],
+   [
+    "defensibility",
+    "An exclusive or preferred referral agreement with a tax-pro or mortgage cyber-insurance program (e.g. PTIN.org's) or a state association that names this Program as accepted testing evidence for underwriting or premium credit."
+   ],
+   [
+    "founder-fit",
+    "The founder completes 3 scoped tests, at a discount if needed, that give written references and a redacted sample report, before May 2027."
+   ]
+  ]
+ },
+ {
+  "opening_id": "msp-windows-detection",
+  "name": "QuietWin",
+  "slug": "quietwin",
+  "one_liner": "Verified Windows logging coverage for MSSPs on Wazuh: per-tenant audit-policy and Sysmon rollout, drift alerts and a monthly client evidence report.",
+  "entry_price": "$9 per client tenant/month, minimum $149/month (e.g. $450/month at 50 tenants); onboarding $2,500 fixed, with a $500 single-tenant pilot credited toward it",
+  "final_round": 2,
+  "scores": {
+   "market-skeptic": 4,
+   "competitor-analyst": 5,
+   "security-practitioner": 6,
+   "technical-feasibility": 6,
+   "gtm-pricing": 6,
+   "legal-ethics": 7,
+   "economic-buyer": 6,
+   "defensibility": 4,
+   "founder-fit": 7
+  },
+  "fatal": [],
+  "lenses": 9,
+  "decision": "WEAK",
+  "mean": 5.5,
+  "min": 4,
+  "above_successes": 1,
+  "above_failures": 2,
+  "n_successes": 4,
+  "n_failures": 4,
+  "founder_fit": 7,
+  "round1_mean": 5,
+  "majors": [
+   [
+    "market-skeptic",
+    "There is still no buyer-side demand signal. All eight problem.evidence items come from in-house admins, a vendor blog or an enterprise survey, and most date from 2009-2021. The concept's own risks admit this. The new value claims (per-tenant drift alerts, a resellable client evidence report) have no evidence at all that any MSSP or SMB client asked for them."
+   ],
+   [
+    "market-skeptic",
+    "Narrowing the target makes the market smaller. The target is now MSSPs with 2-15 analysts that run their own Wazuh for Windows-heavy SMB clients and will not use Huntress, Blumira or LimaCharlie. That is a subset of a niche already estimated at low thousands. At $9 per tenant ($450/month at 50 tenants, about $5.4k/year), even 200 customers is roughly $1M ARR. The concept still gives no count. Its only route to scale is a Wazuh or RMM partner, and that is an open question."
+   ],
+   [
+    "market-skeptic",
+    "The forcing function is assumed, not shown. The pitch now depends on PCI DSS 10, HIPAA and cyber-insurance clients asking their MSSP for server logon evidence. The concept lists whether insurers or auditors actually ask for this as an open question. If they don't, the client report is a nice-to-have, and the MSSP cannot easily resell it per client."
+   ],
+   [
+    "competitor-analyst",
+    "The coverage verifier and drift alerts largely duplicate Wazuh Security Configuration Assessment (SCA). Wazuh ships CIS SCA policies that already run auditpol checks per agent, for example 'Audit Logon' Success and Failure, 'Audit Process Creation' and 'Audit Security Group Management'. Custom SCA YAML can check registry values (log sizes), running processes (Sysmon) and command output, and results show in the dashboard and alert when a check changes state. Per-tenant rollout of eventchannel collection and SCA policies is native through agent groups and agent.conf. An MSSP engineer can rebuild most of the 'stateful layer' with free features and no extra agent-side script, and Wazuh could ship a 'Windows logging coverage' SCA policy in a point release."
+   ],
+   [
+    "competitor-analyst",
+    "The concept says 'free Wazuh has no scheduled per-client evidence report', but the Wazuh 5.0 Reporting module supports scheduled and on-demand reports from saved dashboards, visualizations and searches, delivered by email under indexer RBAC. With a saved per-agent-group dashboard, a free monthly client PDF is a configuration task. The report runner's uniqueness shrinks to report content, such as logon and RDP narratives and coverage status, rather than the ability to produce and schedule a report."
+   ],
+   [
+    "competitor-analyst",
+    "Huntress remains the most dangerous channel competitor, with Wazuh close behind. Narrowing to MSSPs that 'keep their own Wazuh stack' avoids competing on volume, but it targets the segment that managed SIEMs bundling a SOC (Huntress, Blumira, LimaCharlie MSSP tiers) are pulling away. The addressable base shrinks while the product is being built, and the concept already calls it lifestyle-scale."
+   ],
+   [
+    "security-practitioner",
+    "The 'Lean' profile drops events in Wazuh agent eventchannel XPath queries, and the concept names Wazuh compressed archives as the full-fidelity safety net. Wazuh archives only hold events that the manager received, so events filtered at the agent never reach archives.json. The safety net does not cover the drops it is meant to back. An IR lead who reads the docs will catch this, and the drops stay unrecoverable. Real options: keep full collection and filter with manager-side rules (archive everything, alert on less), or keep a local full-size Windows log retention window on each host."
+   ],
+   [
+    "security-practitioner",
+    "The paid 'stateful layer' is a custom verifier pushed through RMM, but Wazuh already does this natively. SCA policies run scheduled per-agent command and registry checks (auditpol output, Sysmon service and config hash, EventLog MaxSize) and report pass/fail changes into Wazuh. Agent groups (agent.conf) push localfile/eventchannel config per tenant. A practitioner would rather run vendor-native SCA YAML than grant a solo vendor's signed scripts execution on 50 tenants through RMM. Rebuild the verifier as SCA policies plus group config, and keep RMM only for GPO and Sysmon install. That cuts both the trust burden and the 'Wazuh could add it' gap to a thin layer."
+   ],
+   [
+    "security-practitioner",
+    "Configuration state is not delivery. Correct auditpol and Sysmon settings still lose events when the agent's client buffer overflows, when EPS limits are hit, when channels are disabled, or when an agent goes silent. A monthly client report that says 'covered' on config checks alone gives false assurance, and that report is a liability for the MSSP. Drift checks need an end-to-end heartbeat: generate a known test event per channel on each host and alert when it does not land in the indexer."
+   ],
+   [
+    "technical-feasibility",
+    "Schedule is still optimistic. Thirteen weeks have to cover: 3-5 weeks learning Wazuh (the concept's own estimate); 4 role packs x Keep/Lean x standalone/built-in Sysmon; a verifier; decoders, rules and dashboards; a PDF report runner; signed RMM rollout with rings and rollback; compliance and DPIA templates; and a replay lab of ~20 techniques per role (~80 tests). Paid onboarding also starts in month one. A realistic figure is 4-5 months, or 3 months with the lab and Lean profiles deferred."
+   ],
+   [
+    "technical-feasibility",
+    "Wazuh indexes alerts, not events. Archives are off by default and need logall_json plus extra index storage before raw events can be searched. Per-event-ID volume and a complete logon/RDP/logoff report therefore only work in one of two ways. Either the packs ship rules that raise every 4624/4634/4778/4779/4672 event to an indexed alert level, which adds the indexer volume the product is meant to tame, or the MSSP indexes archives. Wazuh Cloud has no shell on the manager, so the runner can only use APIs. The concept doesn't choose between these designs."
+   ],
+   [
+    "gtm-pricing",
+    "Cancel-and-keep is still structural. The verifier, drift rules, dashboards and report runner all run inside the MSSP's environment with no hosted component or licence check, so after onboarding an MSSP can stop paying and keep drift alerts and monthly reports running. The subscription then sells only future updates and support, which change slowly (audit-policy and Sysmon schemas are stable)."
+   ],
+   [
+    "gtm-pricing",
+    "The planned scalable channel is weak. Wazuh's partner program has Gold and Platinum tiers for resellers and MSSPs who pay Wazuh to join (search results put the first-year cost at about $3.2k-$9.9k). It offers Wazuh Cloud, multi-tenancy and listing as a certified service partner, not a marketplace for third-party content. Without it, distribution is founder-led community work into a niche of low-thousands firms."
+   ],
+   [
+    "gtm-pricing",
+    "The revenue ceiling is set by founder time. At $9/tenant and 20-60 tenants, a typical MSSP pays $149-$540/month (about $1.8k-$6.5k ARR) plus a one-off $2,500 onboarding the founder delivers personally. One person can probably run 1-2 onboardings a month alongside pack maintenance and the replay lab, so 12-month ARR is likely $50-100k. The concept already calls this lifestyle-scale."
+   ],
+   [
+    "legal-ethics",
+    "The product now issues client-facing evidence: a monthly PDF with 'coverage status' and per-pack PCI DSS 10 / HIPAA 164.312(b) mapping. MSSP clients will attach it to audit evidence or cyber-insurance questionnaires. If drift went undetected or the mapping is read as 'compliant', a misstatement to an insurer can jeopardise cover, and the claim chain runs MSSP to QuietWin. The lawyer-reviewed agreement with liability cap, no-completeness warranty and E&O cover is still listed as a need, not done, and the report needs explicit 'not a compliance attestation' wording and a stated verification time window."
+   ],
+   [
+    "economic-buyer",
+    "The new forcing function is weak. PCI DSS Req. 10 and HIPAA 164.312(b) require that audit logs exist and are reviewed. They don't require this product. Free Wazuh already ships regulatory-compliance tagging and dashboards (PCI DSS, HIPAA, GDPR, NIST) in its ruleset, so the compliance reason is claimed by what I already run. Most SMB card merchants are SAQ-level, and the HIPAA rule is non-prescriptive. No auditor finding or insurer clause yet makes me buy, and the insurer question is still open."
+   ],
+   [
+    "economic-buyer",
+    "The economics rest on reselling the report, which is untested. If clients won't pay a separate line for a 'monthly evidence report', the fee is pure cost and I expect monthly reporting to be part of the managed-security fee I already charge. The concept's own success signal (4 of 15 would resell) is an intention, not a price clients have accepted."
+   ],
+   [
+    "economic-buyer",
+    "Build versus buy. The named user is my own detection engineer. sysmon-modular and Yamato give the configs for free. A PowerShell verifier plus a few Wazuh rules and an indexer query for a PDF is a few weeks of in-house work that I own forever. At $9/tenant I'd pay only if the replay-tested maintenance and Sysmon-migration support clearly beat that one-off effort. I'd want the pilot to show hours saved per tenant."
+   ],
+   [
+    "economic-buyer",
+    "Vendor risk now sits on my clients' domain controllers. The product pushes auditpol, Sysmon and scripts via RMM from a one-person vendor with no SOC 2 or security attestation. My clients' vendor-risk questionnaires and my own E&O carrier will ask about that supply chain. Signed packs and staged rings help, but I'd need attestation-grade evidence and a code-review right before rollout to every client DC."
+   ],
+   [
+    "defensibility",
+    "Wazuh itself is the most likely copier, and it could ship this within a quarter. Its SCA module runs YAML policies with registry and command checks (for example auditpol output, the Sysmon service and log-size keys) and raises alerts whenever a check changes status. Its agent groups push one agent.conf per group to that group's agents. The 'coverage verifier + drift alert' is therefore one SCA policy plus group configs, and Wazuh already ships CIS-based Windows policies. A 'Windows logging coverage' policy would be a small release item."
+   ],
+   [
+    "defensibility",
+    "The stateful layer is still copyable files on the customer's side. The verifier, decoders, rules, dashboards and report runner all run inside the MSSP environment with no hosted service, so a customer can cancel and keep running the last version. A Wazuh partner or consultant can also repackage it for their own clients. The state (per-tenant drift history) lives in the MSSP's indexer, not with QuietWin."
+   ],
+   [
+    "defensibility",
+    "The only real moat named in the revision log, an opt-in cross-MSSP coverage benchmark, is missing from the MVP features and appears only as a hope in risks. Local-only tooling with no data leaving the MSSP makes it hard to build. Without it there are no data or network effects."
+   ],
+   [
+    "founder-fit",
+    "Scope is narrower but still heavy for one person in 3 months: 4 role packs x 2 Sysmon flavours x Keep/Lean profiles, a verifier deployed 'via RMM' without naming which RMM (NinjaOne, Datto, N-able, ConnectWise each need their own script packaging and test tenant), a PDF report runner against the Wazuh indexer, a ~20-technique replay CI lab, compliance mappings and DPIA templates, plus 3-5 weeks learning Wazuh decoders and dashboards. Realistic first sellable cut is 4-5 months unless v1 is DC + workstation packs, one RMM and a simple HTML report."
+   ],
+   [
+    "founder-fit",
+    "Credibility with MSSP owners is addressed only by plan, not proof: the founder still has no production SOC/MSSP history, and the concept itself budgets 3-6 months of public replay-tested work before trust. Combined with 3 months to MVP, realistic recurring revenue starts at month 6-9; until then income depends on $500 pilots and $2,500 onboardings closed from a few contacts."
+   ]
+  ],
+  "riskiest_assumption": {
+   "assumption": "Small MSSPs on Wazuh will pay per client tenant for verified, monitored Windows coverage and a client evidence report, rather than deploying free configs themselves.",
+   "test": "Over two weeks, hold 15 short calls with Wazuh-running MSSPs from the founder's contacts and Wazuh/r/msp communities, showing a mock client evidence report and drift alert (slides, no product), asking what they use today and offering the $500 single-tenant pilot with payment up front.",
+   "success_signal": "At least 6 of 15 say they tried free configs (sysmon-modular, Yamato, Wazuh defaults) and still lack per-tenant verification or client reports, at least 4 say they would resell the report per client, and at least 2 pay the $500 pilot."
+  },
+  "change_my_mind": [
+   [
+    "market-skeptic",
+    "The riskiest-assumption test passes: at least 6 of 15 Wazuh MSSPs lack per-tenant verification or reports, at least 4 would resell the report, and at least 2 pay the $500 pilot"
+   ],
+   [
+    "competitor-analyst",
+    "In 15 interviews, at least 6 Wazuh MSSPs say they know SCA and Wazuh reporting but still would not build per-tenant coverage checks and client reports themselves"
+   ],
+   [
+    "security-practitioner",
+    "The 'Lean' profile is redesigned so that every drop can be recovered (manager-side filtering with archives on, or a documented local retention window), and an IR tabletop at a pilot answers lateral-movement and logon-timeline questions."
+   ],
+   [
+    "technical-feasibility",
+    "A written design choice for logon and volume data (custom alert rules versus an indexed archives index), with the measured indexer-volume cost on one real tenant."
+   ],
+   [
+    "gtm-pricing",
+    "2 of 3 pilot MSSPs renew past month 3 and at least one resells the evidence report to a client at a markup"
+   ],
+   [
+    "legal-ethics",
+    "A signed, lawyer-reviewed subscription agreement with liability cap, no-completeness warranty and MSSP-owned change approval"
+   ],
+   [
+    "economic-buyer",
+    "At least 3 pilot MSSPs that bill clients for the monthly evidence report (e.g. $20+/client/month) and renew at month 3"
+   ],
+   [
+    "defensibility",
+    "The cross-MSSP coverage benchmark built into the MVP (opt-in anonymized coverage and volume metrics from 20+ MSSPs) and shown in client reports that free SCA policies cannot match"
+   ],
+   [
+    "founder-fit",
+    "v1 cut to DC + workstation packs, one named RMM and a simple report, shipped in 8-10 weeks with replay-test results public on GitHub."
    ]
   ]
  }

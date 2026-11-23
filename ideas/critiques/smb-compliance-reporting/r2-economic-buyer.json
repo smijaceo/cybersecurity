@@ -1,0 +1,84 @@
+{
+  "concept_id": "smb-compliance-reporting",
+  "lens": "economic-buyer",
+  "round": 2,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "As owner of a 12-person mortgage or tax office above 5,000 consumers I now see a real legal line item: scans and an annual test, priced well under a standalone pen test. But the rule lets me use continuous monitoring instead, nobody enforces or audits it, and $2,638 in year one doubles what I spend today.",
+  "objections": [
+    {
+      "objection": "The wedge duty has a cheaper exit. 314.4(d)(2) requires annual pen tests and six-monthly vulnerability assessments only 'absent effective continuous monitoring'. If I already pay an MSP or a bundle such as SBTPG/Watch Cloud for 24x7 MDR, my IT provider will tell me that is continuous monitoring and the test is optional. So for many target firms the must-have becomes a nice-to-have, and I would not cut anything to fund it.",
+      "severity": "major",
+      "evidence": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.4"
+    },
+    {
+      "objection": "Still no fear trigger I can show my CFO. No audit asks for the test, the concept itself lists FTC/state enforcement against sub-20-person firms and insurer questionnaires as open questions, and the 5,000-consumer count is my own estimate. A cost-conscious owner can count conservatively, file under the 314.6 exemption and keep the free template. The duty is real, but nothing makes me prove it.",
+      "severity": "major",
+      "evidence": "concept:open_questions"
+    },
+    {
+      "objection": "The price roughly doubles my current spend with no budget line to take it from. Year one is $490 + $2,148 = $2,638, against today's $999 Verito WISP or a free template plus $297-697 insurance. Being cheaper than a $3k-15k standalone pen test does not help: I never budgeted for a pen test, so I compare against what I pay now, not against an engagement I never bought.",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price"
+    },
+    {
+      "objection": "Tier cannibalisation: the $39/month Core tier includes the M365 monitor. A firm above 5,000 consumers can buy Core and argue that the monitor, perhaps plus its MSP's EDR, is the 'other system to detect changes' that replaces the test. The concept gives me the argument for the cheap tier.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price"
+    },
+    {
+      "objection": "Proof I would need before paying: a founder-run test on a 12-seat office has a tiny scope, often just the M365 tenant and a firewall. I would need assurance that an FTC or state examiner accepts it as an annual pen test, and that the solo vendor carries E&O and cyber cover. Both are open questions in the concept.",
+      "severity": "minor",
+      "evidence": "concept:open_questions"
+    },
+    {
+      "objection": "In the MSP channel the cheque-signer changes, but the money still comes from me. The MSP buys wholesale and marks up, so my monthly IT invoice rises by about $180+. Many owners already push back on MSP add-ons, and the MSP must sell the Safeguards duty to me anyway.",
+      "severity": "minor",
+      "evidence": "concept:pricing.model"
+    }
+  ],
+  "strongest_point": "For firms above 5,000 consumers and without real continuous monitoring, it delivers a dated, legally named deliverable (scans plus annual test) at a fraction of standalone pen-test prices.",
+  "what_would_change_my_mind": [
+    "Cyber insurer or tax-pro/mortgage insurance programs ask for evidence of an annual test or vulnerability scans in renewal questionnaires, or discount premiums for it, so the spend moves into the insurance line.",
+    "State mortgage regulators (e.g. NMLS multistate exams) or the FTC request pen-test or scan evidence from small brokers, shown by at least 2 examination requests seen by interviewed owners.",
+    "In the riskiest-assumption test, at least 3 paid $490 checks from owners who already have MSP/MDR coverage, showing the continuous-monitoring route does not kill the sale.",
+    "An MSP letter of intent covering 10+ offices at wholesale, with the MSP stating it will bill clients for it rather than absorb it.",
+    "Counsel or a published FTC/insurer position that a founder-run test of this scope counts as 314.4(d)(2) penetration testing."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Insurance wins the same small budget and the incident clock duplicates the breach coach.",
+      "resolved": true,
+      "note": "Paid incident hours removed; the first-hour card hands off to the insurer; the paid value is now testing and verification, which insurance does not provide. The total spend still competes with the insurance budget (see new price objection)."
+    },
+    {
+      "objection": "Recurring IR/testing work is not a legal duty for firms under 5,000 consumers.",
+      "resolved": true,
+      "note": "Resegmented to firms with 5,000+ consumers, scoping at onboarding and an honestly labelled $39 Core tier for exempt firms."
+    },
+    {
+      "objection": "The PTIN renewal/W-12 wedge is a checkbox a free template satisfies.",
+      "resolved": true,
+      "note": "Wedge changed to the 314.4(d)(2) testing duty, which has a dated deliverable."
+    },
+    {
+      "objection": "No enforcement or audit finding to justify the purchase; nice-to-have until an incident.",
+      "resolved": false,
+      "note": "Still listed as an open question; consumer counts are self-assessed, and the continuous-monitoring alternative weakens the legal trigger further."
+    },
+    {
+      "objection": "Managed IT/hosting vendors already bundle a WISP with security support.",
+      "resolved": true,
+      "note": "Repositioned as an evidence and testing layer that MSPs resell, not a rival bundle. But MDR bundles now create the continuous-monitoring exit (new objection)."
+    },
+    {
+      "objection": "Value is mostly founder time; renewal unclear without an incident; churn after year one.",
+      "resolved": true,
+      "note": "Annual test and six-monthly scans give a recurring legal reason to renew for firms that owe them. Churn risk remains if the firm switches to the MDR/continuous-monitoring route."
+    }
+  ],
+  "sources": [
+    "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.4",
+    "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-16?part=314&section=314.6"
+  ]
+}

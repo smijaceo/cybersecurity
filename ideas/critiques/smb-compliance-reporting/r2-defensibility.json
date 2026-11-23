@@ -1,0 +1,87 @@
+{
+ "concept_id": "smb-compliance-reporting",
+ "lens": "defensibility",
+ "round": 2,
+ "score": 4,
+ "verdict": "no-go",
+ "summary": "The revision finds a real gap: verified M365 configuration plus 314.4(d)(2) testing for firms with 5,000+ consumers. But every piece is available to the MSP channel it relies on: free Microsoft 365 Lighthouse and open-source CIPP for tenant checks, ConnectSecure for scans, Kaseya vPenTest for scheduled pen tests. What is left is founder services and a template mapping, not a moat.",
+ "objections": [
+  {
+   "objection": "The most likely copier is now the partner channel itself. MSPs serving these offices can already put together the same Program from tools they have or get free. Microsoft 365 Lighthouse (no extra cost for CSP partners) offers an SMB security baseline, MFA adoption and risky sign-ins across tenants. Open-source CIPP checks tenant standards every 12 hours and reports, alerts on or fixes drift. ConnectSecure runs scheduled internal and external scans with white-label compliance reports. Kaseya vPenTest runs scheduled internal and external pen tests with auto-generated reports, which users call CREST-approved tests for SMB clients. Mapping that output to 314.4(d)(2) and a WISP is a template job. A partner-first plan teaches MSPs the playbook and then loses them.",
+   "severity": "major",
+   "evidence": "https://www.kaseya.com/products/network-penetration-testing-tool"
+  },
+  {
+   "objection": "The M365 posture monitor, now the core feature, is commodity. Its checks are MFA coverage, leavers, forwarding rules, admin roles and risky sign-ins. Lighthouse covers MFA and risky sign-ins with SMB baselines for free, and CIPP covers drift for free. The monitor has no proprietary data and no network effect, and a single admin-consented Graph app is the same access every MSP tool uses.",
+   "severity": "major",
+   "evidence": "https://learn.microsoft.com/microsoft-365/lighthouse/m365-lighthouse-overview"
+  },
+  {
+   "objection": "The bundlers with distribution can add the wedge in a quarter. SBTPG/Watch Cloud already sells a WISP, MDR and advisor briefings, billed from refund-transfer fees, and Verito already sells recurring WISPs. Either can add an automated external pen test and scan SKU (vPenTest-type tooling resells to providers) and a 'Safeguards testing' line item, reaching tax offices at near-zero CAC. The concept itself says its defence here is 'thin and relationship-based rather than a product moat'.",
+   "severity": "major",
+   "evidence": "concept:risks[0]; https://www.sbtpg.com/all-in-one-cybersecurity/"
+  },
+  {
+   "objection": "The only thing automated tools lack is the founder's hands-on manual test and judgment. That is a services edge: it caps at about 40-60 clients, cannot be sold to an acquirer, and has no regulatory premium unless a manual test counts for more than an automated one under 314.4(d)(2), which the concept leaves open. If automated tests suffice, a cheaper automated rival can credibly claim the same compliance.",
+   "severity": "major",
+   "evidence": "concept:open_questions[3]; concept:risks[5]; concept:build.hardest_parts[2]"
+  },
+  {
+   "objection": "Switching costs are low. Deliverables are dated PDFs (scan reports, test report, WISP, annual report) that the client keeps. In the white-label channel the MSP owns the end client, so it can swap the back-end vendor without the office noticing.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[5]; concept:pricing.model"
+  },
+  {
+   "objection": "Possible moats are named but not secured: insurer or association referral deals and a body of evidence insurers accept in underwriting are only open questions, with no exclusive arrangement in place.",
+   "severity": "minor",
+   "evidence": "concept:open_questions[2]; concept:competitors[3]"
+  }
+ ],
+ "strongest_point": "Clean vertical positioning on a concrete legal duty (314.4(d)(2) testing above 5,000 consumers), delivered by a credentialed tester. Document vendors and endpoint bundlers do not offer it today.",
+ "what_would_change_my_mind": [
+  "An exclusive or preferred referral agreement with a tax-pro or mortgage cyber-insurance program (e.g. PTIN.org's) or a state association that names this Program as accepted testing evidence for underwriting or premium credit.",
+  "FTC guidance, a consent order or examiner feedback showing that automated scanner/pen-test output alone does not satisfy 314.4(d)(2), which would turn the manual test into a regulatory moat.",
+  "MSP partners contractually committed to this platform for 2+ years with 10+ offices each, plus evidence that they did not switch to vPenTest/ConnectSecure/Lighthouse after seeing the reports.",
+  "A Safeguards-specific evidence dataset that improves checks or underwriting in ways copiers cannot reproduce, e.g. insurer claim-outcome data across clients that has been linked to findings."
+ ],
+ "resolved_prior": [
+  {
+   "objection": "SBTPG/Watch Cloud already sells a WISP+MDR+incident bundle via the bank-product channel and could add the 30-day clock in a quarter",
+   "resolved": false,
+   "note": "Repositioned as a verification and testing layer beside endpoint bundles, so there is less head-on overlap. But SBTPG could add automated scans and a pen-test SKU just as easily, and the concept admits the defence is thin."
+  },
+  {
+   "objection": "WISP Builder already ships the ongoing WISP program software half",
+   "resolved": true,
+   "note": "The WISP is no longer the product; differentiation now rests on tenant verification and (d)(2) testing, which WISP Builder does not offer."
+  },
+  {
+   "objection": "The incident reporting clock is a form and a date calculation, copyable in weeks",
+   "resolved": true,
+   "note": "Demoted to a free first-hour card that hands off to counsel or the insurer; it is no longer claimed as the differentiator."
+  },
+  {
+   "objection": "The moat is founder-run services with low switching costs and a cap on client numbers",
+   "resolved": false,
+   "note": "Still true: the manual test, tabletops and scans are founder hours (cap about 40-60 clients), and deliverables are portable PDFs. The white-label channel adds some stickiness for the MSP, but the MSP owns the client."
+  },
+  {
+   "objection": "The 314.6 exemption makes the regulatory-trust angle thin for most of the target",
+   "resolved": true,
+   "note": "Resegmented to firms with 5,000+ consumers, where the risk assessment, IR plan and testing are legal duties; exempt firms are a labelled Core tier."
+  },
+  {
+   "objection": "Free IRS Pub 5708 template anchors the price",
+   "resolved": true,
+   "note": "Conceded openly for firms under 5,000 consumers; the Program is sold on testing and verification that a template cannot provide."
+  }
+ ],
+ "sources": [
+  "https://learn.microsoft.com/microsoft-365/lighthouse/m365-lighthouse-overview",
+  "https://github.com/KelvinTegelaar/CIPP",
+  "https://docs.cipp.app/user-documentation/tenant/standards",
+  "https://connectsecure.com/for-msps",
+  "https://www.kaseya.com/products/network-penetration-testing-tool",
+  "https://www.sbtpg.com/all-in-one-cybersecurity/"
+ ]
+}

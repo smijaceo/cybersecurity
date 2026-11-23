@@ -1,0 +1,74 @@
+{
+  "concept_id": "smb-compliance-reporting",
+  "lens": "founder-fit",
+  "round": 2,
+  "score": 7,
+  "verdict": "conditional",
+  "summary": "Much better fit. The product now rests on M365 checks and 314.4(d)(2) scans and pen tests, which the founder can do. A $490 manual check can earn money within weeks, and running costs stay low. Two gaps remain. The founder has no record of paid pen tests, which buyers, MSPs and E&O insurers will ask for. And the MSP channel has to be built from a few contacts.",
+  "objections": [
+    {
+      "objection": "The paid core is now a founder-run annual penetration test, and the founder's testing record is CTFs plus PenTest+. There are no client engagements, references or sample reports. An MSP that resells the test under its own brand, an E&O/cyber insurer pricing a solo tester's cover, and an owner whose regulator may ask 'who tested you' will all want proof of earlier paid work. Without it the price is hard to defend and cover may cost more. This can be fixed: a few discounted or free scoped tests with written authorization and permission to use the client as a reference, plus a redacted sample report, before the paid launch.",
+      "severity": "major",
+      "evidence": "config/founder.yaml:background.hands_on; concept:go_to_market.wedge; concept:build.hardest_parts (liability, E&O/cyber cover priced before the first test)"
+    },
+    {
+      "objection": "The channel is now right for a technical founder: MSPs speak the founder's language and mortgage brokers buy all year. But it is still unbuilt. The founder has 'a few industry contacts', and the concept's own risks say MSPs may see a third party's findings on their tenants as grading their work. MSPs that already run compliance-as-a-service, such as ScalePad ControlMap priced per client per month, have a tool and may only want testing hours, not the whole Program. If no MSP signs, the plan falls back to one-to-one founder sales, which round 1 judged slow.",
+      "severity": "major",
+      "evidence": "config/founder.yaml:constraints.network; concept:go_to_market.channel; concept:risks (channel risk); https://scalepad.com/controlmap/pricing"
+    },
+    {
+      "objection": "Hours and revenue are optimistic. About 8 founder hours per client a year must cover onboarding, two scans and their review, a pen test of external services and the M365 tenant with a written report, a tabletop and the annual report. 15-20 hours in year one is more realistic. If half the clients come through MSPs at 30% off, 40 clients bring about $73k, not $86k. That is still a workable solo business at roughly 600-800 delivery hours a year, but reaching it probably takes 18-24 months rather than one year.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts (8 hours per client); concept:pricing.entry_price; concept:pricing.model (30% wholesale)"
+    },
+    {
+      "objection": "Some cash and setup is needed before the first test for a founder with no capital. That means E&O/cyber cover, a lawyer for the 314.4(f) service-provider agreement, the test authorization and the liability cap, and a legal entity. A multi-tenant Graph app also has to complete Microsoft publisher verification through a Partner Center account, or admins will see an 'unverified publisher' warning at consent. The verification itself is free.",
+      "severity": "minor",
+      "evidence": "concept:build.team; https://learn.microsoft.com/en-us/entra/identity-platform/publisher-verification-overview"
+    },
+    {
+      "objection": "A solo founder must build and run a multi-tenant app that holds findings for many financial firms. It needs per-tenant isolation, audit logging and a documented security program that clients' vendor oversight will accept. A breach would end the business. The founder has the skills for this, but it uses up part of the three-month MVP and adds ongoing upkeep.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts (securing the vendor itself)"
+    }
+  ],
+  "strongest_point": "The paid value is now Windows/M365 checks and offensive testing, which match the founder's skills. A manual $490 check can bring revenue within weeks, before any software exists.",
+  "what_would_change_my_mind": [
+    "The founder completes 3 scoped tests, at a discount if needed, that give written references and a redacted sample report, before May 2027.",
+    "An E&O/cyber quote for a solo tester comes in at or under about $3k a year, with a lawyer-drafted authorization and liability cap.",
+    "One MSP serving 10 or more accounting or mortgage offices signs a letter of intent or pays for a pilot, or 3 of the $490 checks in the riskiest-assumption test are paid by offices outside the founder's existing contacts.",
+    "Measured delivery time on the first 5 Program clients is 12 hours or less per client a year."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "No route to the buyer: no network among tax preparers, and tax owners buy from tax-industry vendors they already trust.",
+      "resolved": false,
+      "note": "Partly resolved. The channel moved to MSP partners and to mortgage brokers, a route a technical founder can use. But no partner exists yet, and the founder's network is still thin."
+    },
+    {
+      "objection": "Time to meaningful revenue is long: seasonal selling, $11.8k from ten clients in year one, about 150 sales needed for the target.",
+      "resolved": true,
+      "note": "Mortgage brokers buy all year, the target is now 40 clients at about $2.15k, and the $490 manual check earns money early. The estimate is still optimistic (see objection 3), but it is no longer a major issue."
+    },
+    {
+      "objection": "New domain: GLBA interpretation, 50-state breach laws and reportability decisions would take months to learn, with a risk of overselling against the 314.6 exemption.",
+      "resolved": true,
+      "note": "The reportability engine and the state-law table are gone. The legal content is now scoping by 314.4/314.6 text plus wording reviewed by counsel. The founder can learn this in a few weeks."
+    },
+    {
+      "objection": "Cash outlay before revenue: lawyer review, E&O/cyber insurance, association fees.",
+      "resolved": false,
+      "note": "Smaller, because no reportability tree needs review. But E&O cover for pen testing and the 314.4(f) contract are still needed (objection 4)."
+    },
+    {
+      "objection": "Service delivery scales with founder hours: about 450+ hours a year for 150 clients, with bursty incident support.",
+      "resolved": true,
+      "note": "No incident hours are sold, and 40 clients keeps the hours workable for one person, even at a more realistic 15-20 hours per client."
+    }
+  ],
+  "sources": [
+    "https://www.ecfr.gov/api/versioner/v1/full/2026-11-01/title-16.xml?part=314&section=314.4",
+    "https://scalepad.com/controlmap/pricing",
+    "https://learn.microsoft.com/en-us/entra/identity-platform/publisher-verification-overview"
+  ]
+}

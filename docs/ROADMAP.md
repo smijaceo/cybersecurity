@@ -268,7 +268,7 @@ only developer GitHub issues — independently confirms the iteration-2 diagnosi
 **Exit criteria:** every concept has a scored critique from all six lenses in the final round;
 a ranked shortlist with a go/no-go recommendation for the PM.
 
-## Iteration 2 — Fix the pipeline's blind spots · `in progress`
+## Iteration 2 — Fix the pipeline's blind spots · `done` (2026-11-23)
 
 Source checks (2026-11-23): Server Fault, TED API v3, Remotive and HN Who-is-hiring respond
 without keys. Reddit public JSON (403), Mastodon infosec.exchange tag timeline (422), Bluesky
@@ -286,13 +286,26 @@ and is kept as the baseline.
 | B. Buyer-side demand (D16) | Collectors: Server Fault, TED tenders (security CPV codes, open contract notices), job postings (Remotive, HN Who is hiring); regulation-scout agent; `audience` per source; demand weights buyer evidence (buyer 2.5, practitioner 1.5, developer 1.0) | ≥ 30% of need statements from buyer/practitioner sources; each source tested with canned responses | ✅ done — need statements 225 → 732, buyer+practitioner share 11% → 58% (TED 232, Server Fault 76, regulations 33; job postings yielded only 1 need statement) |
 | C. Open discovery (D17) | `open-discovery` (pain phrases, per-source queries) and `ai-agent-security` segments | Discovery run completed; new themes reviewed in the gap report | ✅ done — 62 themes, 24 coherent and ranked in [reports/gaps-2026-11-23-iteration2.md](../reports/gaps-2026-11-23-iteration2.md); new AI-agent themes (tool-call permission gating, MCP authorization) rank 2–3 |
 | D. Backtest (D18) | `config/backtest.yaml` (pre-registered); time-cutoff gap-finder backtest; panel calibration on anonymised historical pitches; `reports/backtest.md` | Results reported with limitations, before the iteration-2 shortlist | done — [reports/backtest.md](../reports/backtest.md): gap finder recall@10 0.22 (finds compliance/pain-driven markets, misses technology-shift ones); panel AUC 0.78 but p = 0.17 on 8 companies and every historical company scored 5–6, so the GO threshold of 7 is miscalibrated |
-| E. Stronger panel (D19) | `economic-buyer`, `defensibility`, `founder-fit` lenses; 3 concept variants per opening + variant judge | Phase 3/4 re-run with variants and nine lenses | code done; verdicts now relative to history (D20); Phase 3/4 run on the D21 shortlist in progress |
+| E. Stronger panel (D19) | `economic-buyer`, `defensibility`, `founder-fit` lenses; 3 concept variants per opening + variant judge | Phase 3/4 re-run with variants and nine lenses | ✅ done — three variants per opening (winners: QuietWin, Safeguards Desk, Agent Hardening Sprint); nine-lens panel: [reports/phase4/panel.md](../reports/phase4/panel.md) |
 
 Then: re-run Phase 1 → 2 → PM shortlist → 3 → 4 with the saved workflows.
 
 **Shortlist (D21):** msp-windows-detection (themes 4, 16, 33), smb-compliance-reporting (50, 12),
 ai-agent-access-control (10, 0). Panel verdicts: STRONG / PROMISING / WEAK relative to the
 backtest's historical companies (D20). Iteration-1 concepts and critiques: `ideas/iteration1/`.
+
+**Iteration-2 panel (2026-11-23, nine lenses, 65 agents, no failures)**
+
+| Concept | Verdict | Mean (8 calibration lenses) r1 → r2 | Founder fit | Fatal |
+|---|---|---|---|---|
+| Agent Hardening Sprint — $6,500 two-week red-team + hardening sprint for 15–150 person SaaS teams using coding agents | PROMISING (above 4/4 failures, 1/4 successes) | 4.38 → 5.75 | 6 | 0 |
+| Safeguards Desk — FTC Safeguards programme and testing for 3–20 person tax, CPA and mortgage offices, $490 setup + $179/month | PROMISING (above 4/4 failures, 1/4 successes) | 4.75 → 5.62 | 7 | 0 |
+| QuietWin — detection-mapped Windows logging packs for small MSSPs on Wazuh, $9/tenant/month | WEAK (above 2/4 failures, 1/4 successes) | 5.0 → 5.5 | 7 | 0 |
+
+No fatal objections remain (the six-lens baseline had one per concept). The market skeptic's
+major objection is the same on all three: no evidence from the named buyer. Desk research
+can't close that; only the riskiest-assumption tests (Phase 5) can. Defensibility is the
+weakest lens everywhere (4).
 
 **Iteration-2 gap analysis (2026-11-23):** 2,747 signals, 732 need statements, 24 coherent gaps.
 Every gap is commercially crowded (crowdedness 2–3); the only crowdedness-2 gap is regulatory

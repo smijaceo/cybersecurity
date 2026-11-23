@@ -1,0 +1,53 @@
+{
+  "concept_id": "cross-cloud-workload-identity",
+  "lens": "market-skeptic",
+  "round": 1,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "Static cloud keys are widespread, but nothing in the evidence shows the concept's actual pain: cross-cloud keys that a platform lead will pay to remove. All need statements are AWS-only SDK/tool-lag requests from developers, some already fixed upstream. The target segment is narrow and unsized, and demand looks episodic, driven by audits, which points to a one-off migration rather than a subscription.",
+  "objections": [
+    {
+      "objection": "The cross-cloud need is assumed, not shown. All 11 need statements are AWS-only credential-chain or tool-lag issues (Vault, External Secrets, Bun, SDKs, EKS aws-auth). None describes a static key crossing AWS/GCP/Azure, and the concept itself admits the cross-cloud need is inferred. The theme's stability score is 0.41.",
+      "severity": "major",
+      "evidence": "input:themes[0].need_statements; input:themes[0].stability; concept:risks[4]"
+    },
+    {
+      "objection": "These are developer feature requests to upstream projects, not purchase intent from the named buyer (head of platform). The fix they ask for is upstream support, and some of it has already shipped: External Secrets #2951 was closed as completed in March 2025, and Pod Identity worked by v0.9.20. Vault #16268 has only 25 thumbs-up in more than four years. Engagement is low and keeps shrinking as tools catch up.",
+      "severity": "major",
+      "evidence": "https://github.com/external-secrets/external-secrets/issues/2951"
+    },
+    {
+      "objection": "Prevalence is not the same as budgeted pain. Datadog finds that 59% of AWS IAM users have an access key older than a year, but more than half of those keys have gone unused for over 90 days. Most of the backlog is hygiene: deleting dead keys, which CSPMs and IAM Access Analyzer already flag for free. Keys that are both in use and cross a boundary, and so need federation work, may number only a handful per company. That is too few to justify $400/month.",
+      "severity": "major",
+      "evidence": "https://www.datadoghq.com/state-of-cloud-security-2025/"
+    },
+    {
+      "objection": "The segment is narrow and unsized. It needs companies with 50-1,000 employees that are truly multi-cloud with 200-5,000 workloads and have no Vault or Teleport. At $400/month, $10M ARR would take about 2,000 such customers. The concept gives no estimate of how many exist, and most mid-market SaaS companies are mostly single-cloud, using a second cloud only for one service such as BigQuery.",
+      "severity": "major",
+      "evidence": "concept:buyer.company_profile; concept:pricing.entry_price; concept:open_questions[1]"
+    },
+    {
+      "objection": "Demand is episodic. It is triggered by a SOC 2 finding or a leaked-key incident, and the job ends once the keys are gone. Drift alerts for new long-lived keys are already a CSPM or SCP feature, so retention after the migration is weak.",
+      "severity": "major",
+      "evidence": "concept:risks[2]; concept:go_to_market.first_customers"
+    },
+    {
+      "objection": "The willingness-to-pay evidence comes from adjacent products, namely secrets managers and workload IAM platforms billed per identity. It does not show anyone paying for static-key remediation. One of the three anchor prices (HCP Vault, ~$112/client) is also unverified.",
+      "severity": "minor",
+      "evidence": "input:flagged_claims[0]; input:themes[0].market_research.wtp_evidence"
+    }
+  ],
+  "strongest_point": "Long-lived cloud keys are measurably common and slow to fall (Datadog: AWS share flat year over year). Audits and secret-leak incidents create real, recurring trigger events.",
+  "what_would_change_my_mind": [
+    "Free key reports from 10 or more multi-cloud mid-market companies show a median of 15 or more in-use keys crossing a cloud or CI boundary that the company's CSPM has not already flagged and fixed.",
+    "At least 3 platform leads prepay or sign an LOI at $400/month.",
+    "A bottom-up count (e.g. from cloud marketplace or job-posting data) shows more than 5,000 qualifying multi-cloud companies with 50-1,000 employees.",
+    "Retention evidence: pilot customers keep paying after their first migration wave."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://github.com/external-secrets/external-secrets/issues/2951",
+    "https://github.com/hashicorp/vault/issues/16268",
+    "https://www.datadoghq.com/state-of-cloud-security-2025/"
+  ]
+}

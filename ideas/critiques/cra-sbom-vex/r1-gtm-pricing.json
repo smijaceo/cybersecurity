@@ -1,0 +1,54 @@
+{
+  "concept_id": "cra-sbom-vex",
+  "lens": "gtm-pricing",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Real budget trigger (CRA) and a sensible per-product unit, but a ~$6k ACV can't carry founder-led, webinar and partner selling into EU manufacturers with PO-driven procurement. Cheap self-serve CRA tools (sbomify $159, Verimu, CRA-Ready) already anchor 'CRA compliance' far lower, and the expansion ceiling (~$18k) and post-deadline churn limit LTV.",
+  "objections": [
+    {
+      "objection": "Contract value does not support the sales motion. $5,900/year entry with founder-led sales, association webinars and consultancy partnerships means multi-stakeholder deals (product security, quality/regulatory, engineering, purchasing) at DACH Mittelstand firms that buy via PO; a 3-6 month cycle for a $6k ACV gives CAC payback well beyond 12 months, and one founder-seller caps throughput at a few dozen deals a year. The concept itself says the budget owner is unknown.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.channel; concept:pricing.entry_price; concept:open_questions[4]"
+    },
+    {
+      "objection": "Price anchor is set by cheaper CRA-branded self-serve tools, not by Interlynk/Anchore. sbomify Business ($159/month) already includes 5 products, Dependency-Track scanning and a CRA Compliance Wizard; Verimu sells a 24h/72h/14d notification workflow, KEV prioritisation and CRA reports on a self-serve plan (reported EUR 149/month); CRA-Ready lists $49-99/month with 24h/72h/14d reporting. VEXpath's 'CRA evidence pack' is commoditised at 1/3-1/10 of its price, so the 3x premium rests on CSAF matching and VEX triage alone, which buyers framing this as 'CRA compliance' may not value.",
+      "severity": "major",
+      "evidence": "https://sbomify.com/pricing/; https://verimu.com/pricing; https://www.capterra.com/p/10045966/CRA-Ready/"
+    },
+    {
+      "objection": "The free wedge gives away the core 'aha' (noise cut via CSAF on an existing Dependency-Track) before payment; after initial triage, inherited decisions mean ongoing work per release is small, so the paid value is mostly hosting and publishing, which sbomify already prices low. Expect hard conversion and churn after first audit or once Dependency-Track ships CSAF ingestion (#2353).",
+      "severity": "major",
+      "evidence": "concept:go_to_market.wedge; concept:risks[1]"
+    },
+    {
+      "objection": "Deadline-driven, lumpy revenue: with main obligations from 11 Dec 2027, most mid-size makers will defer purchase until a customer or authority forces it, compressing the sales window into 2027 while the startup must fund 5 months of build plus a long cycle.",
+      "severity": "minor",
+      "evidence": "concept:risks[2]"
+    },
+    {
+      "objection": "Expansion ceiling is low: tiers top out at $1,490/month (25 products, ~$18k/year) with unlimited users, so net revenue retention depends on product-count growth that is slow at device makers. 'Product line with supported release branches' is ambiguous and invites tier-gaming or disputes.",
+      "severity": "minor",
+      "evidence": "concept:pricing.model"
+    },
+    {
+      "objection": "Notified bodies are unlikely recommendation partners because they must remain independent of the manufacturers they assess; USD pricing for an EU-first buyer is also a small friction (quote EUR with VAT handling).",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "Per-product, public pricing between free Dependency-Track and $18k+ quote-only platforms matches how CRA obligations attach, and a measurable 'noise cut' demo on the buyer's own data is a strong sales asset.",
+  "what_would_change_my_mind": [
+    "At least 4 of 15 discovery calls end in a signed pilot LOI at $490/month or more, with an identified budget owner who can approve without a procurement cycle.",
+    "Average sales cycle under 60 days for the first 5 paying customers, or 2+ customers arriving self-serve via the open-source CSAF bridge.",
+    "Demonstrated median noise cut of 50%+ on typical embedded Linux/RTOS stacks (not just RHEL-based), justifying the premium over sbomify/Verimu.",
+    "A CRA consultancy or industry association agreeing to resell or bundle it, cutting CAC.",
+    "Evidence that customers or market surveillance authorities ask specifically for VEX/CSAF, making it a must-have rather than nice-to-have."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://sbomify.com/pricing/",
+    "https://verimu.com/pricing",
+    "https://www.capterra.com/p/10045966/CRA-Ready/"
+  ]
+}

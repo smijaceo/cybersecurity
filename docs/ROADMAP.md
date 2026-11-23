@@ -257,6 +257,22 @@ lens ≥ 5, no fatal objection; CONDITIONAL = mean ≥ 5.5, every lens ≥ 3; el
 **Exit criteria:** every concept has a scored critique from all six lenses in the final round;
 a ranked shortlist with a go/no-go recommendation for the PM.
 
+## Iteration 2 — Fix the pipeline's blind spots · `in progress`
+
+Agreed with the PM on 2026-11-23 after reviewing what the pipeline was missing (D15–D19).
+Real-buyer validation (Phase 5) waits until the PM is ready. The six-lens Phase 4 run finishes
+and is kept as the baseline.
+
+| Workstream | Deliverables | Exit criteria | Status |
+|---|---|---|---|
+| A. Founder fit (D15) | `config/founder.yaml`; `founder-fit` critic lens; ranking shows fit | Every concept scored on founder fit | not started |
+| B. Buyer-side demand (D16) | Collectors: Server Fault, TED tenders, job postings (Arbeitnow, Remotive, HN Who is hiring); regulation-scout agent; `audience` on every signal; demand weights buyer evidence | ≥ 30% of need statements from buyer/practitioner sources; each source tested with canned responses | not started |
+| C. Open discovery (D17) | `open-discovery` and `ai-agent-security` segments; themes can propose segments | Discovery run completed; new themes reviewed in the gap report | not started |
+| D. Backtest (D18) | `config/backtest.yaml` (pre-registered); time-cutoff gap-finder backtest; panel calibration on anonymised historical pitches; `reports/backtest.md` | Results reported with limitations, before the iteration-2 shortlist | not started |
+| E. Stronger panel (D19) | `economic-buyer`, `defensibility`, `founder-fit` lenses; 3 concept variants per opening + variant judge | Phase 3/4 re-run with variants and nine lenses | not started |
+
+Then: re-run Phase 1 → 2 → PM shortlist → 3 → 4 with the saved workflows.
+
 ## Phase 5 — Validation loop · `not started`
 
 Scheduled re-collection to track trends; compare critic predictions with real-world signals

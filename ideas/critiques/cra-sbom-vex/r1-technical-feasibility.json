@@ -1,0 +1,46 @@
+{
+ "concept_id": "cra-sbom-vex",
+ "lens": "technical-feasibility",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "The workbench, VEX export and evidence log are buildable by two strong engineers, mostly from open-source parts. The flagship CSAF-matching noise cut is not. Siemens CSAF names products by model number with no PURLs. Red Hat VEX uses source-RPM PURLs and changed format in 2026. Embedded stacks mostly lack vendor CSAF. Five months for five features plus a multi-tenant SaaS is tight.",
+ "objections": [
+  {
+   "objection": "PURL-based CSAF matching (feature 2, the demo wedge) rests on data that mostly isn't there. Siemens ProductCERT's CSAF identifies affected products only by model_numbers, with no PURLs or component-level product tree. Those advisories describe Siemens products, not the open-source components in a customer's SBOM, so they rarely match. CSAF requires only one identifier type, so PURL coverage depends on the vendor.",
+   "severity": "major",
+   "evidence": "https://cert-portal.siemens.com/productcert/csaf/ssa-712929.json"
+  },
+  {
+   "objection": "Even where PURLs exist, they don't line up with scanner output. Red Hat's GA VEX files dropped per-architecture entries and identify components by source RPM (arch=src, epoch forced). Syft and Trivy SBOMs list binary RPMs with arch qualifiers, so a binary-to-source package mapping and qualifier normalisation layer is needed for each distro. Red Hat reworked its VEX format in early 2026, so this needs ongoing maintenance per vendor feed.",
+   "severity": "major",
+   "evidence": "https://redhatproductsecurity.github.io/security-data-guidelines/vex-ga-details/"
+  },
+  {
+   "objection": "Scope versus team and time. The 5-month MVP for 2 engineers has five features: SBOM normalisation (CycloneDX/SPDX versions, missing graphs, container layers), a CSAF aggregator plus matcher, a triage workbench with cross-release inheritance, signed CycloneDX and CSAF publishing to a hosted portal, and a CRA evidence pack. It also needs SaaS basics such as multi-tenancy, auth/SSO, billing and the security posture that PSIRT buyers audit. A realistic plan is 7-9 months, or a narrower MVP.",
+   "severity": "major",
+   "evidence": "concept:build.months_to_mvp"
+  },
+  {
+   "objection": "Carrying a not_affected decision into a later release is listed as a hardest part, but no invalidation rule is given. If the dependency path, version or build configuration changes and the decision silently carries over, the product publishes a wrong VEX in a regulator-facing document. This needs a conservative, tested rule from day one, such as re-queueing any change to the path or version.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts"
+  },
+  {
+   "objection": "Running a CSAF trusted-provider-style portal for customers adds operational work: provider-metadata, ROLIE feeds, signing keys and TLS. Open-source tools (csaf_distribution, secvisogram) cut the build effort but not the ongoing operations. Dependency-Track's Fraunhofer/BSI-funded CSAF mirroring is in progress, and its maintainers flag matching performance as an open design problem.",
+   "severity": "minor",
+   "evidence": "https://github.com/DependencyTrack/dependency-track/issues/2353"
+  }
+ ],
+ "strongest_point": "Most of the stack exists as open source (CycloneDX/SPDX libraries, CSAF tooling, DT REST API, KEV feed), and the triage workbench and VEX export carry little technical risk.",
+ "what_would_change_my_mind": [
+  "Run the matcher prototype on 5 real customer SBOMs exported from Dependency-Track (at least 2 embedded Linux or Yocto) and show that vendor CSAF matching auto-resolves at least 25% of findings, with zero wrong not_affected calls on manual review.",
+  "A scoped 5-month plan that defers either the hosted CSAF portal or the CRA evidence pack, or an added engineer."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://github.com/DependencyTrack/dependency-track/issues/2353",
+  "https://cert-portal.siemens.com/productcert/csaf/ssa-712929.json",
+  "https://redhatproductsecurity.github.io/security-data-guidelines/vex-ga-details/"
+ ]
+}

@@ -1,0 +1,77 @@
+{
+  "concept_id": "buyer-side-provisioning",
+  "lens": "competitor-analyst",
+  "round": 2,
+  "score": 4,
+  "verdict": "no-go",
+  "summary": "The pivot to read-only verification gets out of Aquera's and Scimify's way, but walks into the buyer's compliance platform. Vanta and Drata already start leaver checks from Okta or Entra deactivation, check integrated apps and fail tests on leftover accounts. Nudge Security sells offboarding beyond SSO. What remains unique is CSV ingestion and chase-up, a thin feature-sized moat.",
+  "objections": [
+    {
+      "objection": "Most dangerous competitor: Vanta, with Drata close behind. The buyer is defined by a SOC 2 or ISO 27001 cycle, so most already pay for one of them. Vanta starts offboarding when the IdP suspends a user (or the HRIS marks them terminated). It lists the leaver's known accounts, auto-detects deactivation in monitored integrations, assigns tasks for the rest, and blocks completion until those are done. Drata's tests fail when a terminated person keeps access in connected systems, under a one-business-day control. LeaverCheck's per-leaver check, chase-up and auditor log largely duplicate a tool the buyer already owns, and the concept's competitor table omits both.",
+      "severity": "fatal",
+      "evidence": "https://help.vanta.com/en/articles/11345609-offboarding-personnel ; https://help.drata.com/en/articles/4777040-test-infrastructure-accounts-properly-removed ; concept:buyer.company_profile ; concept:competitors"
+    },
+    {
+      "objection": "The remaining wedge, apps with no integration, is a short step for the incumbents. Vanta already has a private-integration API that pushes user accounts in and links them to IdP users for account tests, an Access File Uploader for apps it can't connect to, and an offboarding API. Adding 'upload this app's export, diff it against leavers' to offboarding is a feature, not a product, and could ship next quarter. Meanwhile the GTM plans to partner with these same compliance-automation tools, which hands the most likely acquirer-or-cloner the roadmap.",
+      "severity": "major",
+      "evidence": "https://help.vanta.com/en/articles/11345421-access-file-uploader ; https://developer.vanta.com/docs/offboard-people ; concept:go_to_market.channel"
+    },
+    {
+      "objection": "Nudge Security sells offboarding for exactly the 'beyond the IdP' gap, and is missing from the table. It discovers SaaS accounts, shadow IT and OAuth grants per identity, including apps outside SSO. It nudges IT or users to remove access where it can't automate. It uses password resets to lock leavers out of unmanaged accounts. It offers 'find lingering access on Day One' of a free trial, the same hook as LeaverCheck's free scan, but needs no CSVs from app owners.",
+      "severity": "major",
+      "evidence": "https://nudgesecurity.com/use-cases/it-offboarding"
+    },
+    {
+      "objection": "SaaS-management and IGA platforms (Zluri, Torii, Lumos, Stitchflow, ConductorOne) already sell user-list reconciliation, and Okta ISPM covers identity posture. ConductorOne's Apache-2.0 Baton toolkit lists principals across apps and diffs sync runs, now continued in baton-sdk. That gives a scripting IT team, or any bridge vendor such as Scimify or Aquera, a free read-only connector base to build the same check.",
+      "severity": "major",
+      "evidence": "https://github.com/ConductorOne/baton ; concept:risks"
+    },
+    {
+      "objection": "Price positioning is awkward. At $1/user/month LeaverCheck costs more than Scimify, which starts at $0.90 and actually deprovisions. A buyer could fairly ask why the checker costs more than the doer, and the bridge vendor can bundle a verification report at near-zero marginal cost.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price"
+    }
+  ],
+  "strongest_point": "Independent, path-agnostic, read-only verification is a cleaner trust story than any write-side bridge. Long-tail apps without integrations are a real blind spot in Vanta and Drata offboarding.",
+  "what_would_change_my_mind": [
+    "At least 6 of the 20 concierge scans find leftover accounts at companies that already run Vanta or Drata offboarding, in apps those platforms mark as unmonitored or don't list.",
+    "A signed integration or marketplace partnership with Vanta or Drata, where LeaverCheck pushes verified account status into their offboarding through the private-integration API, priced as an add-on they won't build themselves.",
+    "Evidence that Nudge Security and SaaS-management tools miss at least 30% of the non-SCIM leftover accounts LeaverCheck finds in a head-to-head on the same customers.",
+    "At least 5 paying customers who already own Vanta, Drata or Nudge and still buy LeaverCheck at $1/user/month or more."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Aquera already ships the exact hosted SCIM gateway architecture with both IdP channels.",
+      "resolved": true,
+      "note": "The concept dropped the write-side gateway and lists Aquera as a path it verifies, not a rival product."
+    },
+    {
+      "objection": "Scimify is the self-serve, OIN-listed bridge at $0.90/user/month with unlimited apps, which inverts per-app pricing.",
+      "resolved": true,
+      "note": "The concept no longer sells a bridge and dropped per-app pricing. But $1/user/month for checking, above Scimify's price for doing the deprovisioning, is a new and smaller pricing tension (minor)."
+    },
+    {
+      "objection": "The browser-agent long tail is contested by Cerby, Aquera, Stitchflow and Zluri.",
+      "resolved": true,
+      "note": "Browser agents are removed. The long tail is covered by CSV exports, so it no longer competes on automation depth."
+    },
+    {
+      "objection": "Nightly orphan-account verification is a thin moat (Aquera audit reports, SaaS-management reconciliation, Baton).",
+      "resolved": false,
+      "note": "Verification is now the whole product, so this objection got worse. Vanta and Drata offboarding checks, Nudge Security and open-source Baton all cover the same ground for the target buyer."
+    },
+    {
+      "objection": "A late entrant competes for OIN shelf space against established Okta partners.",
+      "resolved": true,
+      "note": "The product no longer seeks the same OIN slot. Bundling risk has moved from Okta partners to the compliance platforms the buyer already pays for."
+    }
+  ],
+  "sources": [
+    "https://help.vanta.com/en/articles/11345609-offboarding-personnel",
+    "https://developer.vanta.com/docs/offboard-people",
+    "https://help.vanta.com/en/articles/11345421-access-file-uploader",
+    "https://help.drata.com/en/articles/4777040-test-infrastructure-accounts-properly-removed",
+    "https://nudgesecurity.com/use-cases/it-offboarding",
+    "https://github.com/ConductorOne/baton"
+  ]
+}

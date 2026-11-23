@@ -1,0 +1,84 @@
+{
+ "concept_id": "buyer-side-provisioning",
+ "lens": "security-practitioner",
+ "round": 2,
+ "score": 7,
+ "verdict": "conditional",
+ "summary": "The pivot to read-only verification fixes the trust problem. IT teams can approve read tokens and exports, and the product can't break anything. What's left is assurance quality. Trigger delivery is best-effort, export-fed apps are self-reported and stale, and only named user records are checked. Any of these can turn a 'checks run' log into false comfort unless the gaps are shown explicitly.",
+ "objections": [
+  {
+   "objection": "The trigger isn't reliable. Okta event hooks are best-effort, retry at most once, time out after 3 seconds and guarantee no maximum delay, so a dropped deactivation event means that leaver is never checked, with no visible error. Leavers who are suspended, unassigned from the app group, or disabled by HR-driven Entra sync (rather than deactivated) may not fire the expected event at all. Without a periodic reconciliation against the System Log, Entra audit logs and directory state, the per-leaver log misses exactly the cases it exists to catch.",
+   "severity": "major",
+   "evidence": "https://developer.okta.com/docs/concepts/event-hooks/; concept:mvp.features[0]"
+  },
+  {
+   "objection": "Export-fed apps get weak assurance. In the long tail, which is also where SSO usually isn't enforced and the real risk sits, the data the check relies on comes from the same app owner who is supposed to remove the account. That owner can upload a stale, filtered or edited CSV, and nothing proves the export is complete or recent. A 'checked' entry built on a three-week-old export looks the same in an audit log as a live API read unless the log records the data source, the export's timestamp and who uploaded it, and flags stale exports as not checked.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[2]; concept:mvp.features[5]; concept:risks[2]"
+  },
+  {
+   "objection": "Risk coverage is incomplete. A leaver is only truly gone when their personal API tokens, OAuth grants to third-party apps, active sessions, shared or service accounts they knew the password to, and SSH or deploy keys are also gone. A user-list check sees none of these. In SSO-enforced apps, which are the API-connected ones, the main residual risk is exactly these tokens, so a 'no leftover account' result can still leave live access. The pitch that leavers are 'actually gone everywhere' overstates what the product checks.",
+   "severity": "major",
+   "evidence": "concept:buyer.company_profile; concept:mvp.features[1]"
+  },
+  {
+   "objection": "Truly read-only scopes are uneven. Several common apps need an admin or 'view setup' role to list all users with their status, and the concept already says some apps only offer admin tokens. If, in practice, a quarter or more of the 12 connectors need admin-equivalent tokens, the multi-tenant credential-concentration problem returns in a smaller form, and security reviews get longer again.",
+   "severity": "minor",
+   "evidence": "concept:build.hardest_parts[1]"
+  },
+  {
+   "objection": "The data store is a reconnaissance prize. Each tenant's database holds the full user lists of many apps, plus emails and the leaver timeline: a map of who has access where, and which leftover accounts are still live. That is attractive to phishers and insiders. Customers will ask for tenant isolation, encryption, short retention and a way to keep findings from becoming an attack list.",
+   "severity": "minor",
+   "evidence": "concept:risks[4]"
+  },
+  {
+   "objection": "Alert fatigue risk. Contractors on personal domains, shared mailboxes, renamed users and app owners who never act will create a stream of reopened tasks. If the false-positive rate or the share of overdue tasks is high, IT will mute the Slack channel and the closed loop will stop working.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[3]; concept:mvp.features[4]"
+  }
+ ],
+ "strongest_point": "Read-only and independent of the write path: it verifies whatever offboarding path the buyer uses, can't make a destructive mistake, and fits a light security review.",
+ "what_would_change_my_mind": [
+  "A daily reconciliation against the Okta System Log, Entra audit logs and directory state, which catches 100% of leavers in a pilot, including ones whose event hook delivery failed.",
+  "Every check-log entry carries its data source, data timestamp and uploader, and stale exports are marked unchecked; auditors at 2 or more firms accept the format.",
+  "10 or more of the 12 launch connectors work with a genuinely read-only scope on the plan tiers buyers actually hold.",
+  "Phase-2 checks for API tokens and OAuth grants in at least the top 5 apps, or the marketing explicitly scoped to 'user accounts only'.",
+  "A pilot with 5 or more customers where at least 80% of findings are confirmed real, and app owners close at least 70% of tasks before the deadline."
+ ],
+ "resolved_prior": [
+  {
+   "objection": "Unattended browser connectors need SSO-bypass admin accounts and TOTP seeds.",
+   "resolved": true,
+   "note": "Browser agents, stored passwords and TOTP seeds are out of scope; the long tail is covered by exports."
+  },
+  {
+   "objection": "Concentration risk: a pre-SOC 2 startup holds admin credentials for many apps across many customers.",
+   "resolved": true,
+   "note": "Largely resolved: only read tokens are held and admin-only tokens are refused. A smaller version of the risk remains where list-users needs an admin role, plus aggregated directory data."
+  },
+  {
+   "objection": "Async SCIM gives false assurance in the IdP audit log.",
+   "resolved": true,
+   "note": "The product is out of the SCIM path, but a new assurance gap appears: event hooks are best-effort, so checks can be silently missed without reconciliation."
+  },
+  {
+   "objection": "Wrong-account deprovisioning from fragile identity matching.",
+   "resolved": true,
+   "note": "The product never writes, and ambiguous matches are flagged for review. The remaining cost of bad matching is alert noise, not damage."
+  },
+  {
+   "objection": "Risk reduction is uneven where SSO is already enforced.",
+   "resolved": false,
+   "note": "Partly addressed by prioritising non-SSO apps, but those are mostly export-fed with weak assurance, and token or OAuth residual risk in SSO apps isn't checked."
+  },
+  {
+   "objection": "Cloud-only browser agent excludes buyers who require on-prem admin sessions.",
+   "resolved": true,
+   "note": "Moot: there's no browser agent, and customers upload exports themselves."
+  }
+ ],
+ "sources": [
+  "https://developer.okta.com/docs/concepts/event-hooks/",
+  "https://api.slack.com/methods/users.list"
+ ]
+}

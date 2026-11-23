@@ -1,0 +1,54 @@
+{
+  "concept_id": "cra-sbom-vex",
+  "lens": "legal-ethics",
+  "round": 1,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "A defensive tool with little potential for misuse, but the hosted-only design would hold a sensitive, cross-customer map of unpatched exposures, and the concept has no data-protection plan. Its KEV-triggered 24h/72h draft misreads the CRA Article 14 trigger, and it does not settle who is liable for auto-suggested 'not_affected' calls. All of this is fixable before launch.",
+  "objections": [
+    {
+      "objection": "Data custody is the biggest legal and ethical exposure, and the concept never addresses it. Per release, the SaaS would store each customer's full component inventory, its open 'affected' and 'under_investigation' findings, and drafts about actively exploited vulnerabilities written before disclosure. Across many makers, that is a ready-made target list for supply-chain attackers. On-premise deployment is out of scope. The plan names no hosting region, encryption or tenant-isolation design, certification (ISO 27001 or SOC 2) or breach-notification terms. DACH industrial buyers, and their own NIS2 supply-chain checks, will ask for all of these before uploading SBOMs.",
+      "severity": "major",
+      "evidence": "concept:mvp.out_of_scope (\"On-premise deployment\"); concept:mvp.features[0]; concept:mvp.features[4]; concept:build.team"
+    },
+    {
+      "objection": "The '24h/72h exploited-vulnerability draft triggered by a KEV listing' does not match the law. Under Art. 14(1)-(2), the trigger is the manufacturer becoming aware of an actively exploited vulnerability contained in its own product. Recital 68 ties this to a manufacturer establishing that a security breach affecting its users resulted from a malicious actor using the flaw. A KEV entry for an upstream component neither creates that duty nor is needed for it. Building on KEV invites two errors: over-reporting non-exploited issues to CSIRTs and ENISA, and false assurance that silence means no clock is running. The product and its marketing must describe the trigger correctly and leave the 'actively exploited' determination to the manufacturer.",
+      "severity": "major",
+      "evidence": "https://prighter.com/resources/laws/cyber-resilience-act/articles/article-14; https://www.eucybersecurity.org/glossary/actively-exploited-vulnerability; concept:mvp.features[4]"
+    },
+    {
+      "objection": "Liability for wrong 'not_affected' calls is pushed into a single risk line. Three MVP features make VEXpath a co-author of statements that customers and regulators rely on: auto-resolving findings from vendor CSAF matches, inheriting decisions across releases, and publishing signed VEX/CSAF documents. A bad PURL match or a stale inherited decision can tell downstream operators not to patch an exploitable device. The concept needs several protections before launch: human sign-off that cannot be bypassed, records showing which suggestions were automated, and an automatic re-review when a dependency path changes. Contract terms should cap liability, state that decisions belong to the customer and make clear who signs the documents (the customer's key, not VEXpath's). The founders should also budget for professional-indemnity insurance. Software is increasingly within EU product-liability rules, so contract caps alone may not shield the company.",
+      "severity": "major",
+      "evidence": "concept:risks[5]; concept:mvp.features[2]; concept:mvp.features[3]; concept:build.hardest_parts[1]"
+    },
+    {
+      "objection": "Several phrases risk overstating what the CRA requires: 'priced for CRA compliance', 'CRA evidence pack' and VEX/CSAF as the compliance answer. Annex I Part II(1) requires a machine-readable SBOM covering at least top-level dependencies. That SBOM goes in the technical documentation and need not be public. No harmonised standard had been cited as of September 2026, and the CRA mandates neither VEX nor CSAF. The marketing must not imply conformity or a presumption of conformity. Art. 14(8)'s 'structured, machine-readable format' for informing users is the defensible hook.",
+      "severity": "minor",
+      "evidence": "https://fossa.com/blog/sbom-requirements-cra-cyber-resilience-act; concept:one_liner; concept:open_questions[0]"
+    },
+    {
+      "objection": "The hosted customer portal could publish SBOMs and 'affected' statements for releases that are still unpatched, which gives attackers a roadmap. It would also cut across the coordinated vulnerability disclosure policy the CRA requires (Art. 13(8)). Publishing should be private by default, with access controls and an embargo or release gate, so the tool can't become a disclosure channel by accident.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[3]; https://prighter.com/resources/laws/cyber-resilience-act/articles/article-13"
+    },
+    {
+      "objection": "Ingesting and redisplaying third-party vendor CSAF advisories (Red Hat, Oracle, Siemens and others) depends on each provider's terms of use and licence, including attribution and limits on redistribution or commercial reuse. The terms need checking per provider, and VEXpath should link to vendor advisories rather than republish them.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "It is a defensive product with little potential for misuse. Art. 14(8) explicitly asks manufacturers to inform users in a structured, machine-readable format, and CSAF/VEX fits that request.",
+  "what_would_change_my_mind": [
+    "A written security and data-handling design before the pilots: EU-only hosting, per-tenant encryption, private-by-default publishing, and a dated plan for SOC 2 or ISO 27001.",
+    "The exploited-vulnerability feature reframed as a manual 'mark product actively exploited' workflow with Art. 14 deadline timers, with KEV used only as a prompt to investigate, and an EU regulatory lawyer reviewing the wording.",
+    "Pilot contract and terms of service that keep decisions with the customer, cap liability, have documents signed with the customer's own key, and log every auto-suggestion and its human approver. Professional-indemnity insurance quoted at an affordable premium.",
+    "A licence check showing that the top 10 CSAF trusted providers allow commercial ingestion and matching."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://prighter.com/resources/laws/cyber-resilience-act/articles/article-14",
+    "https://prighter.com/resources/laws/cyber-resilience-act/articles/article-13",
+    "https://www.eucybersecurity.org/glossary/actively-exploited-vulnerability",
+    "https://fossa.com/blog/sbom-requirements-cra-cyber-resilience-act"
+  ]
+}

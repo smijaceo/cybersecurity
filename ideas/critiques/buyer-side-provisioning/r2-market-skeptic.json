@@ -1,0 +1,76 @@
+{
+ "concept_id": "buyer-side-provisioning",
+ "lens": "market-skeptic",
+ "round": 2,
+ "score": 4,
+ "verdict": "conditional",
+ "summary": "The pivot fixes pricing and pool width, but it sells a second-order product: checking that offboarding worked, on top of tools already paid for. Buyer-side demand evidence is still zero, incidence data is vendor-sourced and enterprise-skewed, and auditors accept tickets. At about $6K ACV the reachable market looks small. The fix is the concierge scan, and it has to pass.",
+ "objections": [
+  {
+   "objection": "Verification-only is a vitamin on top of a painkiller the buyer already has. The buyer keeps paying for whatever path does the deprovisioning (LCM, Scimify, Workflows, tickets) and is asked to add a budget line to check it. The concept admits auditors accept ticketed offboarding and that buyers must 'value catching misses sooner, not just passing the audit'. No budget exists for that today.",
+   "severity": "major",
+   "evidence": "concept:competitors[6].how_we_differ; concept:risks[1]"
+  },
+  {
+   "objection": "Still no evidence from the named buyer. The revision says so ('the input has no more buyer-side evidence'). Need statements remain developers asking for SCIM in their own products, plus one HN comment. WTP is still 2 of 5. Every demand claim now rests on a test that has not run.",
+   "severity": "major",
+   "evidence": "concept:revision_log[16]; input:themes[0].market_research.willingness_to_pay"
+  },
+  {
+   "objection": "The incidence data that would show the pain is common comes from vendors and skews to enterprise. CloudEagle's '48% of former employees still have active access' comes from a survey of 1,000 enterprise CIOs/CISOs by a vendor selling the fix, not from 150-1,500-person companies. Leftover accounts in SSO-enforced apps can't be logged into once the IdP account is deactivated, so the urgent pain is limited to apps that use local logins. That is a smaller set than '10+ non-SCIM apps'.",
+   "severity": "major",
+   "evidence": "https://www.cloudeagle.ai/newsroom/48-of-former-employees-still-have-saas-access-months-after-leaving-cloudeagles-own-iga-report"
+  },
+  {
+   "objection": "The revenue ceiling looks small. At $1/user/month with a $250 minimum, ACV is about $3K-18K and typically about $6K. Suppose roughly 10-20K reachable US and EU tech or services firms of 150-1,500 employees run Okta or Entra with SOC 2 (my estimate). Then 2% penetration is about 300 customers, or about $2M ARR. That supports a small business but needs near-zero CAC, which founder-led sales does not provide.",
+   "severity": "major",
+   "evidence": "concept:pricing.entry_price; concept:buyer.company_profile; concept:risks[5]"
+  },
+  {
+   "objection": "The long tail depends on app owners outside IT uploading exports on schedule. That is unpaid work for people who don't feel the pain. If they don't do it, coverage decays and the product looks less valuable at renewal. That pushes the product toward the done-for-you service model that buyers already pay Stitchflow for.",
+   "severity": "minor",
+   "evidence": "concept:risks[2]; concept:competitors[2]"
+  }
+ ],
+ "strongest_point": "The riskiest-assumption test is cheap, buyer-side and falsifiable. It checks both incidence (orphans found in 8 of 20 scans) and payment (5 LOIs at a stated price) before any build.",
+ "what_would_change_my_mind": [
+  "The concierge test meets its own bar: at least 8 of 20 mid-market scans find active leftover accounts more than 7 days after IdP deactivation, at least half of them in apps without SSO enforcement, and at least 5 LOIs or paid pilots at $1/user/month or more.",
+  "Two or more SOC 2 audit firms or compliance-automation vendors (Vanta, Drata) state that they would require or credit per-leaver verification beyond a ticket trail, or would resell it.",
+  "Independent, non-vendor data on leftover-account incidence or breaches at companies of 150-1,500 employees."
+ ],
+ "resolved_prior": [
+  {
+   "objection": "Wrong complainant: need statements come from developers, not IT buyers",
+   "resolved": false,
+   "note": "Unchanged by the concept's own admission. A concierge scan is planned to test buyer pain but hasn't run."
+  },
+  {
+   "objection": "Willingness to pay unverified (WTP 2/5, unsupported 'SCIM tax' resentment claim)",
+   "resolved": false,
+   "note": "Dropped the resentment pitch and made the test sharper (LOIs at $1/user/month), but there is still no evidence of payment."
+  },
+  {
+   "objection": "Labour ROI negative at target size",
+   "resolved": true,
+   "note": "Price fell to about $6K/year for 500 users, near my labour estimate. But the product saves no offboarding labour, so the purchase is now purely a risk purchase (new objection 1)."
+  },
+  {
+   "objection": "Headline 721-app statistic is vendor marketing",
+   "resolved": true,
+   "note": "Now labelled as Stitchflow's own data and no longer used to size the market."
+  },
+  {
+   "objection": "Proof of payment points to a services-led, done-for-you model",
+   "resolved": false,
+   "note": "Only the scan is concierge. Ongoing export uploads by app owners recreate a service burden (objection 5)."
+  },
+  {
+   "objection": "Narrow addressable pool (needs the Okta LCM tier)",
+   "resolved": true,
+   "note": "Only deactivation events are needed, so any Okta or Entra tier qualifies. I couldn't verify event-hook or Entra audit-log API licensing here."
+  }
+ ],
+ "sources": [
+  "https://www.cloudeagle.ai/newsroom/48-of-former-employees-still-have-saas-access-months-after-leaving-cloudeagles-own-iga-report"
+ ]
+}

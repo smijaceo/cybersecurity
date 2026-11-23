@@ -1,0 +1,49 @@
+{
+  "concept_id": "cross-cloud-workload-identity",
+  "lens": "security-practitioner",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Practitioners would welcome having static keys removed through native federation with no broker in the path, and Terraform PRs fit how they already work. But the native APIs can't attribute key usage as the concept claims, generated trust policies risk swapping leaked keys for over-broad federation, and the product needs multi-cloud and CI read access. As designed, adoption would stall.",
+  "objections": [
+    {
+      "objection": "Usage attribution is weaker than claimed. IAM's AccessKeyLastUsed returns only the date, service and region of the most recent use. It gives no source IP and no history. GitHub's secrets API returns secret names, not values, so a CI secret can't be tied to a key ID that way. Accurate attribution needs CloudTrail, often in a separate log-archive account. S3 and other data-plane calls are not logged by default, and GCP and Azure need their own log sources. The likely result is misattributed or 'unknown' usage, the exact failure the concept lists as its hardest part. Practitioners won't merge a cutover PR, or deactivate a key, on weak attribution.",
+      "severity": "major",
+      "evidence": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_AccessKeyLastUsed.html; concept:mvp.features[0]; concept:build.hardest_parts[0]"
+    },
+    {
+      "objection": "Federation can move risk instead of removing it. Generated trust configurations become the new attack surface. A GCP AWS-provider pool with no attribute condition lets any role in the trusted AWS account in, because the condition is optional. GitHub OIDC trust with a wildcard 'sub' lets any repo or branch assume the role. An Entra federated credential can be scoped too broadly. The same goes for missing sts:IdentityTokenAudience limits on AWS outbound tokens. A tool that emits these at scale for every source-target pair needs strict, testable defaults and policy linting. Without them a security reviewer will treat its PRs as risky. The concept says 'least-privilege', but there is no design behind it.",
+      "severity": "major",
+      "evidence": "https://docs.cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds; https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/; concept:mvp.features[1]"
+    },
+    {
+      "objection": "The access request is a hard sell. The product asks for read access to IAM, CloudTrail, GCP and Azure logs, and GitHub/GitLab org metadata across every account. From a 3-person vendor, that is a complete map of where the customer's long-lived keys are and which are still active. That data is high value to an attacker. A breach of the vendor (the Shai-Hulud class the concept itself cites) would expose it. Many teams will insist the scanner run in their own environment, and the concept leaves that as an open question rather than the default. The open-source credential helper also sits in the credential path of production workloads, so it needs signed releases and supply-chain assurances before platform teams deploy it.",
+      "severity": "major",
+      "evidence": "concept:open_questions[2]; concept:build.hardest_parts[2]; concept:mvp.features[2]"
+    },
+    {
+      "objection": "Detection is already covered by tools buyers run. Wiz and other CSPMs, IAM Access Analyzer unused-access findings, Security Hub/Config rules and GitGuardian already flag old and unused access keys. So the inventory adds little on its own, and the value depends on remediation PRs being correct. Many long-lived keys were also created by hand or by vendors, outside Terraform, so a Terraform PR does not apply to them. Hand-off to the third-party tool (e.g. a SaaS that only accepts an access key) is often impossible.",
+      "severity": "minor",
+      "evidence": "concept:risks[0]"
+    },
+    {
+      "objection": "Some cross-cloud cases are already simple. AWS-to-GCP federation needs no change on the AWS side; GCP verifies through GetCallerIdentity. GitHub OIDC to all three clouds is well documented. The remaining static keys often sit with third-party SaaS or tools that can't federate, which this product explicitly leaves out of scope.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "It removes the credential rather than brokering it: native free mechanisms, no proxy in the request path, reviewable IaC PRs, so nothing breaks if the vendor disappears.",
+  "what_would_change_my_mind": [
+    "On 5 real multi-cloud estates, usage attribution (CloudTrail plus GCP/Azure logs) correctly identifies the consumer of >=90% of active keys, checked by the platform team, and no cutover breaks production.",
+    "A policy-linting design with published tests that blocks wildcard GitHub 'sub' claims, unconditioned GCP AWS-provider pools and missing audience restrictions in every generated trust config.",
+    "A self-hosted or in-account scanner as the default deployment, so no cross-account read role is granted to the vendor, plus signed, reproducible builds of the credential helper.",
+    "3+ security leads at target companies saying they would approve the access model and merge generated PRs after review."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/",
+    "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html",
+    "https://docs.aws.amazon.com/IAM/latest/APIReference/API_AccessKeyLastUsed.html",
+    "https://docs.cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds"
+  ]
+}

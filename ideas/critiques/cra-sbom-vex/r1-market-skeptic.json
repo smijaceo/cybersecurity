@@ -1,0 +1,53 @@
+{
+  "concept_id": "cra-sbom-vex",
+  "lens": "market-skeptic",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "CRA creates a real, dated, per-product obligation and a large pool of EU makers, but the evidence for paid VEX/CSAF triage is developer feature requests, not buyer budgets. The CRA mandates a non-public, top-level SBOM and vulnerability handling, not VEX or CSAF, so many mid-size makers may meet it with free Dependency-Track plus spreadsheets until 2027.",
+  "objections": [
+    {
+      "objection": "The demand evidence is a handful of developer GitHub issues, not purchase intent from the named buyer. Only one has meaningful engagement (DT #2353, 43 engagement, 13 upvotes over almost four years); the others have 1-7. None comes from a PSIRT lead or regulatory manager at a 50-1,000-person EU maker, and some (rustsec, graal, CycloneDX spec) are open-source maintainers with no budget at all.",
+      "severity": "major",
+      "evidence": "input:themes[theme_id=14].need_statements (engagement 43, 24, 7, 6, 2, 1); https://github.com/DependencyTrack/dependency-track/issues/2353"
+    },
+    {
+      "objection": "The compliance hook is weaker than the pitch implies. The CRA requires an SBOM covering at least top-level dependencies, kept in technical documentation and given to market surveillance authorities on request; it need not be public. VEX/CSAF appear in BSI TR-03183 guidance, not as a CRA obligation. 'Documented vulnerability handling' can be met with free tools plus a log, so VEX publishing is a nice-to-have for most of the target segment unless downstream OEM customers demand it.",
+      "severity": "major",
+      "evidence": "https://fossa.com/blog/sbom-requirements-cra-cyber-resilience-act; concept:open_questions[0]; concept:risks[3]"
+    },
+    {
+      "objection": "Urgency is deadline-shaped and late. The 24h/72h reporting since September 2026 concerns actively exploited vulnerabilities, which a mid-size maker meets rarely and can handle manually; the main obligations land in December 2027. Mid-size firms without a mature PSIRT typically buy compliance tooling close to the deadline or when a customer or authority forces it, so 2027 revenue is likely thin and lumpy for a seed-stage company.",
+      "severity": "major",
+      "evidence": "https://commission.europa.eu/news-and-media/news/safer-and-more-secure-digital-products-2026-09-11_en; concept:risks[2]"
+    },
+    {
+      "objection": "Willingness-to-pay evidence is from enterprise contracts (Interlynk $18k+, Anchore $34.5k+, an undisclosed Manifest medical-device deal), which says nothing about whether mid-size firms already on free Dependency-Track will pay $5.9k for an add-on. The cheapest validated comparable, sbomify at $159/month, already claims a CRA wizard, which anchors this segment's price expectations lower.",
+      "severity": "major",
+      "evidence": "input:themes[theme_id=14].market_research.wtp_evidence; concept:pricing.comparables"
+    },
+    {
+      "objection": "The core noise-reduction value (vendor CSAF matching) may be commoditised in the free tool the buyer already runs: DT #2353 is open, but Fraunhofer AISEC reported funding and started work in October 2026, with maintainers asking for an ADR. If it lands within 12-18 months, the 'VEX in a day' wedge shrinks to hosting and publishing.",
+      "severity": "minor",
+      "evidence": "https://github.com/DependencyTrack/dependency-track/issues/2353"
+    },
+    {
+      "objection": "The size of the market for this exact profile is unquantified: EU makers with 50-1,000 staff that already produce SBOMs and run Dependency-Track and have a named CRA owner. That intersection is probably a few thousand firms at most, and the self-hosting DT users in it skew towards do-it-yourself teams with low willingness to pay.",
+      "severity": "minor",
+      "evidence": "concept:buyer.company_profile; concept:go_to_market.first_customers"
+    }
+  ],
+  "strongest_point": "A binding EU regulation with fixed dates attaches per-product vulnerability-handling duties to tens of thousands of makers, including mid-size firms that enterprise SBOM vendors don't serve.",
+  "what_would_change_my_mind": [
+    "At least 4 of 15 EU CRA owners at 50-500-person makers sign a $490/month pilot LOI (the concept's own test).",
+    "At least 8 of 15 show a written VEX/advisory request from a downstream OEM customer or a CRA tooling budget line for 2026-2027.",
+    "A draft harmonised standard or market surveillance guidance that expects VEX/CSAF for vulnerability handling.",
+    "CSAF matching cuts findings by 50% or more on two real embedded Linux customer SBOMs."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://github.com/DependencyTrack/dependency-track/issues/2353",
+    "https://fossa.com/blog/sbom-requirements-cra-cyber-resilience-act",
+    "https://commission.europa.eu/news-and-media/news/safer-and-more-secure-digital-products-2026-09-11_en"
+  ]
+}

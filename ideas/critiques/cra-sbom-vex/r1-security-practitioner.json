@@ -1,0 +1,51 @@
+{
+ "concept_id": "cra-sbom-vex",
+ "lens": "security-practitioner",
+ "round": 1,
+ "score": 5,
+ "verdict": "conditional",
+ "summary": "PSIRT teams do need per-release VEX decisions, and the scanner-agnostic design that keeps Dependency-Track fits how they work. But the CSAF noise cut misses the embedded Linux core of the buyer base. Auto-suggesting and inheriting 'not_affected' without reachability is risky for regulator-facing output. A SaaS-only design holding every shipped release's SBOM will meet resistance from industrial makers.",
+ "objections": [
+  {
+   "objection": "The headline noise cut rests on vendor CSAF matching, which helps teams built on RHEL, Oracle or Siemens products. Typical device makers build on Yocto/embedded Linux, RTOS and open-source components, which publish no vendor CSAF. Yocto already produces VEX from build metadata (vex.bbclass, CVE_STATUS, sbom-cve-check in Yocto 6.0). Many findings are 'not affected' because the code is compiled out or a config option is off, and CSAF matching cannot show that. The 'VEX in a day' demo would underperform on exactly the buyer named in the concept.",
+   "severity": "major",
+   "evidence": "concept:risks[4]; concept:open_questions[1]; concept:go_to_market.first_customers (Yocto VEX tooling, e.g. vex.bbclass/sbom-cve-check, seen in search results only; docs.yoctoproject.org not reachable from this session)"
+  },
+  {
+   "objection": "Trust in 'not_affected'. The workbench auto-resolves findings and inherits decisions across releases, while code-level reachability and binary analysis are out of scope. The justifications therefore come from identifier matching, not proof. A wrong 'not_affected' that is signed and published to customers and authorities is a false negative with compliance consequences. Experienced PSIRTs will treat auto-suggestions as noise unless each one shows its evidence (CSAF product-tree match, dependency path, build config) and the system re-opens decisions when a dependency path changes. The concept lists this as a hardest part but gives no design for it.",
+   "severity": "major",
+   "evidence": "concept:mvp.out_of_scope (code-level reachability); concept:build.hardest_parts[1]; concept:go_to_market.wedge"
+  },
+  {
+   "objection": "Data custody. The product requires uploading every shipped release's full SBOM, together with the list of known-unpatched and under-investigation vulnerabilities, to a startup's multi-tenant SaaS. That data is an attack map of the customer's fielded products. On-premises deployment is explicitly out of scope. DACH industrial-automation and building-tech makers, the first-customer target, often run self-hosted Dependency-Track for exactly this reason. Many will require EU hosting, ISO 27001/TISAX-style assurance or self-hosting before they grant access.",
+   "severity": "major",
+   "evidence": "concept:mvp.out_of_scope ('On-premise deployment'); concept:go_to_market.first_customers"
+  },
+  {
+   "objection": "Workflow fit against Dependency-Track itself. Funded work to bring CSAF advisory mirroring into Dependency-Track started in September 2026 (ADR 040, with matching under design). Teams that already triage in DT would get that matching where their analysts already work. Running triage across two tools that both hold analysis state (DT import plus the VEXpath workbench) also splits the source of truth, which practitioners dislike.",
+   "severity": "major",
+   "evidence": "https://github.com/DependencyTrack/dependency-track/issues/2353"
+  },
+  {
+   "objection": "The CRA 24h/72h draft is triggered by a KEV listing. CRA reporting concerns actively exploited vulnerabilities in the manufacturer's own product. A KEV entry for a component does not mean the shipped product is exploitable or exploited, and KEV lags and under-covers OT and embedded CVEs. Treat it as a triage alert, not a report draft, or it will produce false alarms.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[4]"
+  },
+  {
+   "objection": "Integration scope is thin for device makers. Release and firmware engineers need ticketing (Jira) and CI gating, plus the ability to read Yocto/SPDX 3 VEX annotations. Without these, decisions are re-keyed and drift from the build.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "It sits on existing scanners and Dependency-Track rather than replacing them, and it targets the real practitioner gap: recorded, per-release, reusable VEX decisions with reviewer sign-off and atomic SBOM+VEX publishing.",
+ "what_would_change_my_mind": [
+  "A noise-cut run on 5 real customer SBOMs (at least 3 embedded Linux/Yocto) resolving >=50% of findings with auditable justifications and zero wrong 'not_affected' on a security engineer's review.",
+  "Ingesting Yocto/SPDX build-time VEX annotations (CVE_STATUS, sbom-cve-check output) alongside vendor CSAF.",
+  "A self-hosted or EU single-tenant deployment option, or 3+ DACH makers confirming they would upload release SBOMs to the hosted service.",
+  "A decision-invalidation design that re-opens inherited 'not_affected' decisions when a component's dependency path or build config changes."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://github.com/DependencyTrack/dependency-track/issues/2353"
+ ]
+}

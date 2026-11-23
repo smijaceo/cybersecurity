@@ -2,21 +2,21 @@
  "opening_id": "cross-cloud-workload-identity",
  "slug": "keybridge",
  "name": "Keybridge",
- "one_liner": "Finds the static cloud keys your workloads use across AWS, GCP, Azure, CI and on-prem, then replaces them with free native federation, priced per account, not per workload.",
+ "one_liner": "Turns the static AWS and GCP keys your cross-cloud and GitHub Actions workloads still use into linted native-federation pull requests, run inside your cloud.",
  "buyer": {
-  "role": "Head of platform / DevOps lead (at smaller firms the VP Engineering or the first security hire)",
-  "company_profile": "Software companies with 50-1,000 employees running workloads on two or more of AWS, GCP and Azure plus CI (GitHub Actions, GitLab) and some on-prem or edge hosts; 200-5,000 workloads, so per-workload pricing ($20/workload/month) becomes a five- or six-figure annual bill; still carrying long-lived IAM user keys and service-account JSON keys between environments, often flagged by an auditor, a leaked-key incident or a SOC 2 finding."
+  "role": "Head of platform / DevOps lead (at smaller firms the VP Engineering or the first security hire), usually after a SOC 2 or CSPM finding on long-lived keys they have not managed to close",
+  "company_profile": "Software and data companies with 50-1,000 employees that are AWS-primary and also use GCP for one or two services (BigQuery, Vertex AI, GKE) with GitHub Actions CI; GCP organisation created before May 2024 (so service-account key creation was not blocked by default); already run a CSPM, Prowler or IAM Access Analyzer that flags old keys, yet still carry in-use AWS IAM user keys and GCP JSON keys that cross the AWS-GCP or CI boundary because nobody has had the week it takes to wire federation and change the consumers."
  },
- "user": "Platform and DevOps engineers who wire workloads (Kubernetes pods, Lambdas, CI jobs, VMs, third-party tools) to cloud APIs and today rotate or paste static keys when a tool does not support the provider's native credential chain.",
+ "user": "Platform and DevOps engineers who own the CI workflows, Kubernetes manifests and Terraform that connect workloads (GitHub Actions jobs, EKS/GKE pods, Lambdas, VMs) to AWS and GCP APIs, and who would review and merge the generated pull requests.",
  "problem": {
-  "summary": "Every cloud now offers free short-lived workload credentials, but each mechanism (IRSA, EKS Pod Identity, IAM Roles Anywhere, GCP and Azure workload identity federation) works only inside its own tooling and needs per-pair trust setup. Tools lag the mechanisms, so teams fall back to static keys whenever a workload crosses a cloud, a CI system or an on-prem boundary. Paid fixes charge per workload or identity, which punishes workload-heavy mid-market teams.",
+  "summary": "Short-lived workload credentials are now free in AWS and GCP, and CSPMs already flag old keys, yet the keys stay: 59% of AWS IAM users still have an active key over a year old. Removing an in-use key that crosses AWS, GCP or CI means finding its consumer, writing per-pair trust configuration and changing the consumer's code or manifests. Tools lag the mechanisms, and paid fixes are per-workload brokers or enterprise NHI platforms.",
   "evidence": [
    {
     "claim": "Vault's AWS secrets engine lacked support for IAM Roles Anywhere, leaving workloads outside AWS without short-lived role credentials through the tool teams already pay for.",
     "url": "https://github.com/hashicorp/vault/issues/16268"
    },
    {
-    "claim": "External Secrets did not work with the new EKS Pod Identity Agent, which injects credentials through a different endpoint than IRSA.",
+    "claim": "External Secrets v0.9.9 did not work with the new EKS Pod Identity Agent, which injects credentials through a different endpoint than IRSA; tool support trails each new AWS mechanism.",
     "url": "https://github.com/external-secrets/external-secrets/issues/2951"
    },
    {
@@ -32,107 +32,110 @@
     "url": "https://github.com/aws/aws-sdk-go-v2/issues/2867"
    },
    {
-    "claim": "ECR's 12-hour credential expiry forces teams on a third-party GPU platform to refresh credentials manually, and they ask for permanent keys instead.",
-    "url": "https://github.com/runpod/runpod-python/issues/415"
-   },
-   {
     "claim": "Per-identity and per-client pricing scales with machine count (Infisical Pro $20-23/identity, Aembit $20/workload), penalising workload-heavy teams.",
     "url": "https://dev.to/beton/infisical-pricing-teardown-2026-1ang"
    }
   ]
  },
  "why_now": {
-  "summary": "The free federation building blocks are now complete across the big three: AWS added IAM outbound identity federation (STS GetWebIdentityToken, at no additional cost, in all commercial, GovCloud and China Regions), so AWS workloads can present short-lived JWTs to GCP, Azure and SaaS; Google Cloud and Microsoft Entra already accept such tokens via workload identity federation. What is missing is the cross-cloud wiring, inventory and fallbacks for tools that do not support them. Meanwhile leaked static secrets keep growing: GitGuardian counted 28.65 million new hardcoded secrets in public GitHub commits in 2025 (+34% year over year), found that over 64% of valid secrets from 2022 were still valid in January 2026, and that 59% of machines compromised by Shai-Hulud 2 were CI/CD runners.",
+  "summary": "AWS added IAM outbound identity federation (STS GetWebIdentityToken, no additional cost), so AWS workloads can present short-lived JWTs to GCP and SaaS, and GCP workload identity federation accepts AWS identities; both halves of AWS-GCP keyless access are now free. Yet the backlog is not shrinking: Datadog's 2025 report finds 59% of AWS IAM users with an active key older than a year, unchanged since 2024, and GitGuardian counted 28.65 million new hardcoded secrets on public GitHub in 2025. Google now blocks service-account key creation by default only for organisations created on or after 3 May 2024, so older GCP estates keep their JSON keys.",
   "sources": [
    "https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/",
    "https://cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds",
-   "https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation",
-   "https://blog.gitguardian.com/the-state-of-secrets-sprawl-2026/"
+   "https://www.datadoghq.com/state-of-cloud-security-2025/",
+   "https://blog.gitguardian.com/the-state-of-secrets-sprawl-2026/",
+   "https://docs.cloud.google.com/resource-manager/docs/secure-by-default-organizations"
   ]
  },
  "mvp": {
   "features": [
    {
-    "feature": "Read-only static-key inventory: connects to AWS, GCP and Azure accounts and GitHub/GitLab orgs, lists long-lived IAM user access keys, GCP service-account keys and Entra app secrets, and shows where each one is used (last-used source IP/service, CI secret names) and which cloud boundary it crosses.",
-    "why": "Gives the buyer a number to act on and a reason to pay before anything is changed; uses read-only APIs so security review is light."
+    "feature": "Self-hosted scanner (CLI, GitHub Action or Terraform-deployed job in the customer's own AWS account) that imports existing key findings (IAM credential report, IAM Access Analyzer, Prowler) and GCP service-account keys, and keeps only keys that are in use and cross the AWS-GCP or CI boundary. Nothing leaves the customer's environment; an optional opt-in summary sends counts only.",
+    "why": "Detection is already free and bundled, so v1 does not rebuild it; running in the customer's account removes the vendor-custody, log-export and GDPR-processor problems and shortens security review."
    },
    {
-    "feature": "Federation plan generator: for each key, proposes the native free replacement (IRSA / EKS Pod Identity, IAM Roles Anywhere, AWS outbound federation to GCP/Azure, GCP and Entra workload identity federation, GitHub/GitLab OIDC) and emits a Terraform/OpenTofu pull request with the trust policies and least-privilege role.",
-    "why": "The credential issuance is free and native; the work buyers lack is the per-pair trust configuration, which is where they give up and keep static keys."
+    "feature": "Consumer attribution with a confidence label: correlates CloudTrail management events (source IP, user agent, role), GitHub Actions runner ranges and workflow files that reference secret names (via a GitHub App with org Secrets read and Contents read, never admin:org), and GCP audit logs where enabled. Keys it cannot attribute are marked 'unknown' and get no cutover PR.",
+    "why": "GetAccessKeyLastUsed returns only date, service and region, so attribution must come from logs; being explicit about confidence is what makes a practitioner willing to merge."
    },
    {
-    "feature": "Open-source credential helper (credential_process / exec plugin / sidecar) that turns a native identity into credentials for the target cloud via the default credential chain, for tools that do not support Pod Identity, Roles Anywhere or cross-cloud federation.",
-    "why": "Covers the tool-lag cases in the evidence (Vault, External Secrets, Bun, ECR refresh) without asking upstream tools to change; also the open-source adoption channel."
+    "feature": "Two-sided migration PRs for three supported paths only: GitHub Actions OIDC to AWS, GitHub Actions OIDC to GCP, and AWS workload to GCP via workload identity federation. Each change set covers the IAM/trust side (Terraform/OpenTofu) and the consumer side (workflow YAML permissions and auth step, Kubernetes service-account annotation, GCP credential-config file, removal of key env vars).",
+    "why": "A trust policy alone is half a migration; the consumer change is where teams stall and where breakage happens."
    },
    {
-    "feature": "Cutover tracking and drift alerts: marks each static key as replaced, verifies the federated path is in use, then prompts deactivation; alerts when a new long-lived key appears.",
-    "why": "Turns a one-off migration into a recurring control that auditors (SOC 2, ISO 27001) can see, which justifies a subscription."
+    "feature": "Mandatory policy-lint gate with published tests: blocks wildcard or missing GitHub 'sub' conditions, GCP AWS-provider pools without an attribute condition, missing audience restrictions, and runs IAM Access Analyzer policy validation on every generated AWS policy. PRs are never auto-merged.",
+    "why": "Federation must not replace a leaked key with an over-broad trust; strict, testable defaults are the safety case a security reviewer can check."
    },
    {
-    "feature": "Evidence export: per-account report of keys found, replaced and remaining, with dates.",
-    "why": "Gives the platform lead something to hand the auditor or CISO; this report is what the buyer is paying for."
+    "feature": "Shadow-mode cutover and monitoring: after merge, verifies in logs that the federated path is used and the key is idle for a set period before proposing deactivation; afterwards alerts when a new in-use boundary-crossing key appears and exports a dated per-estate record of keys found, replaced and remaining.",
+    "why": "Reduces the outage risk of deactivation and gives the platform lead a record for auditors, without claiming to certify any control."
    }
   ],
   "out_of_scope": [
-   "Issuing our own credentials, running a token broker in the request path or a proxy that injects credentials (Aembit's model); v1 only configures the clouds' free native mechanisms.",
-   "General secrets storage and rotation of database or SaaS API keys (Vault, Infisical, Akeyless).",
-   "AI agent / MCP identity and human access (PAM, SSO).",
-   "SPIFFE/SPIRE deployment and service-to-service mTLS.",
-   "Policy engines with conditional access; NHI posture scoring across SaaS (Cyera Identity / Oasis)."
+   "Azure/Entra, GitLab CI and on-prem (IAM Roles Anywhere needs a customer PKI); these come after the three AWS-GCP-GitHub paths are proven.",
+   "Our own credential helper or SDK shims; v1 points to the clouds' maintained helpers instead.",
+   "Keys held by third-party SaaS or platforms that cannot federate (e.g. tools that accept only an access key); flagged, not migrated.",
+   "Issuing credentials, a token broker in the request path or a credential-injecting proxy (Aembit's model).",
+   "Hosted multi-tenant scanning with cross-account roles into customer clouds, and any ingestion of customer logs on our side.",
+   "General secrets storage and rotation (Vault, Infisical, Akeyless), AI-agent identity, PAM, SPIFFE/SPIRE."
   ]
  },
  "competitors": [
   {
-   "name": "Native cloud federation (AWS IRSA / EKS Pod Identity / IAM Roles Anywhere / outbound identity federation, GCP and Entra workload identity federation)",
+   "name": "Native cloud federation (AWS outbound identity federation, GitHub OIDC to AWS/GCP, GCP workload identity federation)",
    "url": "https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/",
-   "how_we_differ": "Free and what we build on, not against: we discover where it is not used yet, generate the cross-cloud trust configuration and fill gaps for tools that do not support it. Each cloud documents only its own side."
+   "how_we_differ": "Free and what we configure, not replace. Each cloud documents only its own side; we write both sides plus the consumer change, linted, for the estate's actual keys."
+  },
+  {
+   "name": "Free/bundled detection: IAM Access Analyzer unused-access findings, Prowler (open source)",
+   "url": "https://hub.prowler.com/check/iam_rotate_access_key_90_days",
+   "how_we_differ": "These find old and unused keys and recommend rotation or deactivation. We take their findings as input and do the remaining work for keys that are still in use: attribution and the two-sided federation change."
+  },
+  {
+   "name": "Wiz (CSPM, owned by Google)",
+   "url": "https://www.wiz.io/blog/how-to-get-rid-of-aws-access-keys-part-1-the-easy-wins",
+   "how_we_differ": "Wiz finds keys on disk and in use and publishes the key-to-role playbook; it stops at the finding. We produce the change set. Wiz adding this is our biggest risk (see risks); we aim to be useful to Wiz customers, not to compete on detection."
   },
   {
    "name": "Aembit Workload IAM",
    "url": "https://aembit.io/faq/",
-   "how_we_differ": "Aembit runs a policy-based workload IAM platform at $20/workload/month (Teams) with a free tier of 10 workloads. We charge a flat price per cloud account with unlimited workloads, and leave no broker in the request path, so nothing breaks if we disappear."
+   "how_we_differ": "Aembit brokers access at $20/workload/month (Teams) with a free 10-workload tier and stays in the request path. We remove the key and leave only native federation, so nothing depends on us at runtime."
   },
   {
-   "name": "Infisical",
-   "url": "https://infisical.com/pricing",
-   "how_we_differ": "Infisical is a secrets manager priced per identity ($20/identity/month annually, Pro); its AWS auth still issues its own tokens. We remove secrets instead of storing them, and do not charge per identity."
+   "name": "Clutch Security",
+   "url": "https://www.clutch.security/",
+   "how_we_differ": "Clutch discovers and correlates non-human identities and secrets across cloud, SaaS, CI/CD and vaults, sold to enterprises. We do one narrow remediation job with a public, fixed price for mid-market teams."
   },
   {
-   "name": "HCP Vault Dedicated (HashiCorp/IBM)",
-   "url": "https://hashicorp.com/pricing/all",
-   "how_we_differ": "Vault generates dynamic AWS credentials but per-client pricing and cluster operation make it a heavy buy for this goal, and it lagged new AWS mechanisms (Roles Anywhere). We are a lightweight layer over native federation."
+   "name": "GitGuardian NHI Governance",
+   "url": "https://www.gitguardian.com/nhi-governance",
+   "how_we_differ": "Tracks secret consumers, rotation dates and stale secrets and semi-automates rotation. Rotation keeps a static key; we replace it with federation."
   },
   {
    "name": "Teleport Machine & Workload Identity",
    "url": "https://goteleport.com/pricing/guide/",
-   "how_we_differ": "Bundled into Teleport Enterprise and billed per protected resource, quote-only. We are self-serve with a public price and need no Teleport deployment."
+   "how_we_differ": "Bundled into Teleport Enterprise, billed per protected resource, quote-only, and requires running tbot. We need no new runtime component."
   },
   {
    "name": "Cyera Identity (formerly Oasis NHI Security Cloud)",
    "url": "https://aws.amazon.com/marketplace/pp/prodview-wl52yxutluvma",
-   "how_we_differ": "Enterprise NHI discovery and posture, $100,000/12-month starter pack on AWS Marketplace. We do a narrower job (cloud static keys to federation) and remediate it, for mid-market budgets."
-  },
-  {
-   "name": "SPIFFE / SPIRE (open source)",
-   "url": "https://spiffe.io/docs/latest/spire-about/",
-   "how_we_differ": "Free workload attestation and identity, but a system to deploy and operate, mostly certificate-based and Kubernetes-centric. We reuse the identities clouds already issue and need no new infrastructure."
+   "how_we_differ": "Enterprise NHI discovery and posture from a $100,000/12-month starter pack. We are a fraction of that price and do remediation, not posture."
   }
  ],
- "differentiation": "The clouds now give short-lived workload credentials away; what mid-market teams lack is the time to find every static key and wire up each cross-cloud trust. Keybridge does that job, opens Terraform pull requests to native mechanisms and adds an open-source helper for tools that lag. Flat per-account pricing means 2,000 workloads cost the same as 20, and no proxy or broker sits in the request path, so there is no lock-in and no new outage risk.",
+ "differentiation": "Detection of old keys is already free; what is missing is closing the findings that are still in use. Keybridge takes existing findings, attributes each in-use AWS-GCP or CI key to its consumer with a stated confidence, and opens linted two-sided pull requests to free native federation. It runs in the customer's own account, leaves no broker in the request path and charges a fixed price per migration, not per workload.",
  "build": {
-  "team": "2 engineers (cloud IAM and Terraform depth) + 1 founder-seller",
-  "months_to_mvp": 4,
+  "team": "2 engineers (AWS/GCP IAM and Terraform depth) + 1 founder-seller; part-time security/compliance contractor for SOC 2 Type I",
+  "months_to_mvp": 5,
   "hardest_parts": [
-   "Attributing where a static key is used (CloudTrail last-used data, CI secret references, GCP/Azure logs) accurately enough that a generated replacement does not break production.",
-   "Generating correct least-privilege trust policies for every source-target pair (EKS, ECS, Lambda, GKE, AKS, VMs, GitHub/GitLab, on-prem with Roles Anywhere certificates) and keeping up as the clouds change these APIs.",
-   "Getting read-only access to several cloud accounts approved at mid-market companies without a long security review.",
-   "Keeping the credential helper compatible with SDK default chains across languages and runtimes (Go, Python, Node, Bun, JVM)."
+   "Attributing in-use keys to consumers from CloudTrail and GCP audit logs when data events and GCP Data Access logs are off by default, and being honest when attribution is 'unknown'.",
+   "Generating correct consumer-side changes (workflow YAML, Kubernetes annotations, credential-config files) across repos the product does not own, so a merged PR does not break production.",
+   "Lint rules that catch over-broad trust (wildcard sub, unconditioned GCP AWS providers, missing audience) with no false sense of safety; keeping templates current as AWS and GCP change federation APIs.",
+   "Packaging the scanner so a mid-market security team can run it in their own account in under an hour."
   ]
  },
  "pricing": {
-  "model": "Subscription per connected cloud account / project / subscription, unlimited workloads; free tier for discovery; open-source credential helper.",
-  "entry_price": "Free inventory for up to 3 cloud accounts; Team $400/month (billed annually) for up to 10 cloud accounts plus GitHub/GitLab orgs, unlimited workloads, remediation PRs and drift alerts; $30/month per additional account.",
-  "rationale": "A team with 500 workloads would pay about $10,000/month on Aembit Teams or Infisical Pro list prices; $400/month undercuts that by an order of magnitude while still a meaningful recurring line for a 3-person company. Pricing on accounts, not workloads, removes the per-machine penalty that the input names as the main paid-market gap, and matches how buyers think about cloud estate. Enterprise NHI platforms (Cyera Identity at $100k/year) set the ceiling.",
+  "model": "Fixed-price migration per estate plus a flat monitoring subscription by estate size; free self-hosted key report. Optional resale through DevOps consultancies.",
+  "entry_price": "Free self-hosted report; Migration $6,000 one-off per estate for up to 25 in-use boundary-crossing keys on the three supported paths ($150 per extra key); then Monitor $150/month flat for up to 100 AWS accounts and GCP projects.",
+  "rationale": "The real alternative is doing it by hand, not Aembit: at our own estimate of about one engineer-day per in-use key (attribute, change both sides, verify, deactivate), 25 keys is roughly five engineer-weeks, so $6,000 is priced below that. Brokering the same 25 workloads on Aembit Teams list price would cost about $500/month for as long as the broker stays in place; per-identity secrets managers (Infisical Pro) store secrets rather than remove them. Pricing per migration matches a job that is mostly one-off, and a flat estate band avoids penalising AWS Organizations with many accounts. Year-one value per customer is about $7,800, which forces a low-touch motion (see risks). Enterprise NHI platforms (Cyera Identity at $100k/year) set the ceiling.",
   "comparables": [
    {
     "vendor": "Aembit Workload IAM",
@@ -152,28 +155,65 @@
   ]
  },
  "go_to_market": {
-  "first_customers": "Ten 50-500 person SaaS or data companies running on AWS plus GCP or Azure (often for BigQuery, Vertex/Azure OpenAI or a customer-mandated cloud), with GitHub Actions CI and a few hundred to a few thousand workloads; each has at least one SOC 2 finding or near-miss about long-lived cloud keys, a platform team of 2-6 and no Vault or Teleport deployment.",
-  "channel": "Open-source credential helper and a free 'static key report' that runs read-only in minutes; content and Terraform modules for each cross-cloud pair (e.g. 'EKS to BigQuery without a JSON key'); answers in the GitHub issues where users hit tool lag; listing in the AWS and GCP marketplaces to draw on committed spend; later, SOC 2 auditors and compliance platforms as referral partners.",
-  "wedge": "The free key report: it shows a platform lead how many long-lived keys cross cloud boundaries today, then converts on the first automated pull request that removes one."
+  "first_customers": "Ten 50-500 person AWS-primary SaaS or data companies using GCP for BigQuery, Vertex AI or GKE and GitHub Actions for CI, with a GCP organisation created before May 2024; each already has a CSPM or Prowler finding on long-lived keys that has stayed open for months, a platform team of 2-6 and no Vault or Teleport deployment.",
+  "channel": "Free self-hosted report as a GitHub Action and CLI; content per migration path ('BigQuery from EKS without a JSON key'); resale and referral through DevOps consultancies and fractional platform teams who run migrations for SOC 2-bound startups; SOC 2 auditors and vCISOs as referrers. No cloud-marketplace listing in year one.",
+  "wedge": "The free report answers a question the CSPM does not: which of your open key findings are still in use across AWS, GCP or CI, who uses them, and the PR that fixes each. It converts on the first merged, linted migration PR."
  },
  "risks": [
-  "Bundling (high): AWS, Google and Microsoft keep adding free federation and could add cross-cloud setup wizards or key-usage reports; IAM Access Analyzer and cloud security posture tools (Wiz, native CSPMs) already flag old access keys. The product must stay a remediation tool, not a finding list.",
-  "Crowding and consolidation: Aembit, Infisical, Akeyless, Teleport and Cyera Identity all sell workload identity; Aembit's free 10-workload tier and $20/workload Teams plan compete directly for small estates, and acquirers (Palo Alto/CyberArk, Cyera) can bundle discovery into larger deals.",
-  "Low price ceiling: the core value is configuration of free mechanisms, so buyers may treat it as a one-off migration and churn once their keys are gone; drift alerts and audit evidence must justify ongoing payment.",
-  "Technical: a wrong generated trust policy or misattributed key usage can break production or over-grant access, and read-only access to many accounts is itself a sensitive permission buyers must trust.",
-  "Thin and unstable demand signal: the theme scored only 0.41 on stability and the evidence is mostly AWS-only tool-lag issues, so the cross-cloud need is inferred rather than shown directly."
+  "Bundling (high): Wiz (Google) already sees keys and their use in many target accounts and publishes the replacement playbook; a 'generate fix' feature there, or a native AWS/GCP federation wizard, would remove most of our value. Clutch, Astrix (to Cisco) and Cyera Identity can add migration playbooks to enterprise NHI suites.",
+  "Small, shrinking problem: Datadog finds over half of old-key holders have not used them for 90+ days, which is hygiene CSPMs already handle; GCP blocks new service-account keys by default for organisations created since May 2024. In-use boundary-crossing keys may be only a handful per company.",
+  "Weak economics: ~$7,800 first-year value and a mostly one-off job mean low retention after migration and little room for founder-led selling; the business only works if self-hosted install is self-serve and consultancies resell migrations.",
+  "Technical and liability: wrong attribution or a generated consumer change can break production, and an over-broad trust can over-grant access. Mitigations are confidence labels, the lint gate, shadow-mode cutover, no auto-merge, and terms with a liability cap and no warranty of policy correctness; reports must not be marketed as compliance certification.",
+  "Trust and supply chain: even self-hosted, the scanner and GitHub App sit near credentials; they need signed, reproducible releases, minimal permissions and a SOC 2 Type I before paid launch, which costs time and money for a three-person company.",
+  "Thin demand signal: the input's evidence is AWS-only tool-lag issues filed by developers (theme stability 0.41); the cross-cloud need and the buyer's willingness to pay are inferred, not shown."
  ],
  "riskiest_assumption": {
-  "assumption": "Mid-market platform teams will pay a recurring subscription to get rid of cross-cloud static keys, rather than doing the native federation setup themselves or taking Aembit's free tier.",
-  "test": "Run a landing page plus a manual 'static key report' offer (customer runs a published read-only script; we return a per-key replacement plan) to 40 platform leads from DevOps communities and the GitHub issues in the evidence; ask those who receive a report to pre-commit to the $400/month plan with a signed letter of intent or annual prepayment at a discount.",
-  "success_signal": "At least 10 of 40 run the script, the median report finds 15 or more long-lived keys used across a cloud or CI boundary, and at least 3 sign an LOI or prepay within two weeks."
+  "assumption": "Mid-market AWS+GCP teams that already have CSPM key findings still carry enough in-use, boundary-crossing keys (not dead ones) that they will pay a fixed fee to have them migrated rather than do it themselves.",
+  "test": "Publish the read-only scanner as a script that runs in the customer's account and prints a local report; offer it to 40 platform leads from DevOps communities, the GitHub issues in the evidence and two DevOps consultancies. For those who run it, review the report with them and offer the $6,000 migration with a signed LOI or 50% deposit.",
+  "success_signal": "At least 10 of 40 run the script; the median report shows 10 or more in-use keys crossing AWS, GCP or CI that their CSPM finding has not closed for 3+ months; at least 3 sign an LOI or pay a deposit within two weeks; at least 2 security leads say they would approve the access model without escalation."
  },
  "open_questions": [
-  "How many long-lived cloud keys does a typical 50-500 person multi-cloud company actually have crossing boundaries, and how many workloads depend on them?",
-  "Is the cross-cloud case common enough, or is the real volume in AWS-only tool lag that AWS will fix itself?",
-  "Will buyers grant read-only access to every cloud account and CI org to a young vendor, or must the scanner run fully in their environment?",
-  "Does per-account pricing hold, or do buyers expect a one-off migration fee plus a small monitoring subscription?",
-  "Can the HCP Vault per-client price (flagged as unverified) be confirmed from a primary source to strengthen the price comparison?",
-  "How fast will AWS, Google and Microsoft ship their own cross-cloud setup tooling?"
+  "How many in-use (not dead) boundary-crossing keys does a typical AWS+GCP mid-market estate have, and how many does attribution from default-on logs resolve?",
+  "How many qualifying AWS-primary companies with a pre-2024 GCP organisation and GitHub Actions exist (bottom-up count needed before this can be sized)?",
+  "Will DevOps consultancies resell a fixed-price migration, or treat it as work they would rather bill by the hour?",
+  "Will buyers keep paying for monitoring after the migration, or is this a one-off product that should be priced entirely up front?",
+  "How quickly will Wiz, AWS or Google ship a native 'fix this key with federation' flow?",
+  "Can the HCP Vault per-client price (flagged as unverified) be confirmed from a primary source?"
+ ],
+ "revision_log": [
+  "[competitor-analyst] Inventory and drift alerts are free/bundled (Access Analyzer, Prowler, Wiz, GitGuardian) → dropped our own discovery; v1 imports existing findings and keeps only in-use boundary-crossing keys; wedge reframed around closing open findings; Prowler/Access Analyzer and GitGuardian added as competitors.",
+  "[competitor-analyst] Missing NHI vendors (Clutch, Astrix/Cisco) → Clutch added to competitors, Astrix/Cisco and Clutch named in bundling risk; Infisical, Vault and SPIFFE removed from the table to fit the closest rivals.",
+  "[competitor-analyst] GCP blocks service-account key creation by default → buyer narrowed to GCP organisations created before May 2024; added to why_now and risks as a shrinking-problem risk.",
+  "[competitor-analyst] Wiz is the most dangerous competitor → added as competitor and first named in bundling risk; positioned as a complement for Wiz customers; not removed as a risk.",
+  "[competitor-analyst] Terraform PRs are easy to reproduce with AI assistants and modules → partly changed: value moved to attribution with confidence, consumer-side changes and lint gate; not changed in full: the DIY alternative is real and is now the pricing anchor.",
+  "[competitor-analyst] Credential helper overlaps maintained helpers; Aembit free tier covers small estates → helper dropped from v1; Aembit tier acknowledged in competitors.",
+  "[gtm-pricing] Core job is a one-off migration, renewal fragile → pricing changed to a fixed $6,000 migration fee plus $150/month flat monitoring.",
+  "[gtm-pricing] Sales motion doesn't fit a $4.8k ACV and vendor security review → scanner is self-hosted by default to avoid vendor review; channel adds consultancy resale; weak economics stated as a risk.",
+  "[gtm-pricing] Anchor against Aembit's 500-workload bill is misleading → rationale re-anchored on DIY engineer time (our estimate, stated as such) and Aembit's cost for ~25 workloads.",
+  "[gtm-pricing] Open-source helper and modules give away the value → helper dropped; free tier is now the report only, migration PRs are paid.",
+  "[gtm-pricing] Per-account pricing penalises AWS Organizations → replaced by a flat band up to 100 accounts/projects.",
+  "[gtm-pricing] Marketplace listings don't fit this ACV → removed from channel for year one.",
+  "[legal-ethics] Custody and concentration risk of a hosted service with cross-account roles → scanner runs in the customer's account; hosted multi-tenant scanning moved out of scope; SOC 2 Type I before paid launch added to build and risks.",
+  "[legal-ethics] 'Read-only' understates access (admin:org, CloudTrail) → GitHub access via a GitHub App with org Secrets read and Contents read only; log access stays in the customer's account; feature text no longer claims a light review.",
+  "[legal-ethics] Personal data in audit logs makes us a processor → no log ingestion on our side; optional telemetry is counts only.",
+  "[legal-ethics] Liability for generated IAM → mandatory lint gate, no auto-merge, shadow-mode cutover, and terms with a liability cap and no correctness warranty, recorded in risks.",
+  "[legal-ethics] Audit-evidence framing → export described as a dated record, not certification; stated in risks.",
+  "[legal-ethics] Dual-use of the scanner → not changed further: it runs with the account owner's own permissions and sends nothing out by default, which is the mitigation the critique asks for.",
+  "[market-skeptic] Cross-cloud need is assumed, not shown → not changed: the input has no direct cross-cloud evidence; kept as the riskiest assumption and listed in risks, with the test tightened to in-use keys left open by a CSPM.",
+  "[market-skeptic] Need statements are developer feature requests, some fixed upstream → External Secrets claim reworded to the version it affected, RunPod item dropped; thin signal kept in risks.",
+  "[market-skeptic] Prevalence is not budgeted pain (Datadog: over half of old keys unused) → scanner keeps only in-use keys; Datadog figure added to why_now and risks.",
+  "[market-skeptic] Segment narrow and unsized → segment narrowed further to AWS-primary + GCP + GitHub Actions; sizing added as an open question rather than invented.",
+  "[market-skeptic] Demand is episodic → pricing now matches a one-off job (migration fee) with a small monitoring tail.",
+  "[market-skeptic] WTP evidence from adjacent products, Vault unverified → not changed: comparables kept as adjacent anchors, Vault not used; LOI/deposit test is the direct WTP check.",
+  "[security-practitioner] Usage attribution is weaker than claimed → attribution now from CloudTrail/GCP audit logs and workflow files, with confidence labels; 'unknown' keys get no cutover PR.",
+  "[security-practitioner] Federation can move risk (wildcard sub, unconditioned pools, missing audience) → mandatory, tested lint gate plus IAM Access Analyzer policy validation added to the MVP.",
+  "[security-practitioner] Access request is a hard sell; helper in credential path → self-hosted scanner by default; helper dropped; signed reproducible releases listed in risks.",
+  "[security-practitioner] Detection already covered; many keys outside Terraform or held by SaaS → detection imported rather than built; non-federating SaaS keys explicitly out of scope.",
+  "[security-practitioner] Some cross-cloud cases are already simple → not changed in substance: being documented is not the same as done, and the open findings in the target segment are the evidence we test for.",
+  "[technical-feasibility] Attribution not available from read-only APIs → feature rebuilt on logs with confidence labels; hardest part restated.",
+  "[technical-feasibility] Terraform PR covers only the IAM side → migration PRs now include consumer-side changes for the supported paths.",
+  "[technical-feasibility] Scope too big for 2 engineers in 4 months → MVP cut to GitHub Actions to AWS, GitHub Actions to GCP and AWS to GCP; Azure, GitLab, Roles Anywhere and the helper out of scope; estimate raised to 5 months with a part-time compliance contractor.",
+  "[technical-feasibility] Credential helper adds less than claimed → dropped from v1.",
+  "[technical-feasibility] Roles Anywhere needs customer PKI → on-prem moved out of scope."
  ]
 }

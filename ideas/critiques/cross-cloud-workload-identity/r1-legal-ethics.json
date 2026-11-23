@@ -1,0 +1,56 @@
+{
+ "concept_id": "cross-cloud-workload-identity",
+ "lens": "legal-ethics",
+ "round": 1,
+ "score": 6,
+ "verdict": "conditional",
+ "summary": "Ethically clean in intent: it removes secrets, never stores their values, and remediates by pull request. But a young SaaS holding read roles into many customers' clouds and CI orgs, plus a per-key map of where credentials live, is a prime supply-chain target. The access needed is broader than \"read-only\" suggests, and liability for generated IAM policy is unaddressed.",
+ "objections": [
+  {
+   "objection": "Custody and concentration risk: the hosted service would hold cross-account read roles for AWS, GCP and Azure plus GitHub/GitLab org tokens for every customer, and would compile an inventory of each live static key with where it is used. A breach of the vendor hands attackers a ready target list across all customers. That raises the duty of care and the breach-notification exposure far above what a 3-person company can carry. Without a mode that runs the scanner inside the customer's environment, and without SOC 2 or ISO 27001 of its own (Aembit already advertises both), this will not pass a security review.",
+   "severity": "major",
+   "evidence": "concept:build.hardest_parts[2]; concept:open_questions[2]; https://aembit.io/faq/"
+  },
+  {
+   "objection": "\"Read-only, so security review is light\" understates the access required. GitHub's API needs the admin:org scope for classic tokens, or the org-level Secrets (read) permission, to list organisation Actions secrets. The values stay hidden, but these are administrative-tier grants that security teams scrutinise. Per-key attribution of source IPs also needs CloudTrail and GCP/Azure log access, because AWS GetAccessKeyLastUsed returns only the date, service and region. That is far broader than reading key metadata.",
+   "severity": "major",
+   "evidence": "https://docs.github.com/en/rest/actions/secrets; https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetAccessKeyLastUsed.html; concept:mvp.features[0]"
+  },
+  {
+   "objection": "Personal-data processing: CloudTrail and Azure/GCP audit logs contain source IP addresses, IAM user names (often people's names or emails) and user agents, and these are personal data under GDPR. If the service ingests them, it becomes a processor. It then needs a DPA, a sub-processor list, data residency and retention rules, and a basis for EU-US transfers. The concept says nothing about any of this.",
+   "severity": "major",
+   "evidence": "concept:mvp.features[0] (last-used source IP); https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetAccessKeyLastUsed.html"
+  },
+  {
+   "objection": "Product liability for generated IAM: a wrong trust policy can over-grant cross-cloud access, for example a GitHub OIDC trust with no sub/repo condition or an over-broad GCP principalSet. Misattributing a key's usage before deactivation can cause outages. The concept admits both risks but offers no warranty disclaimer, liability cap, mandatory human review or policy linting gate. The marketing of 'least-privilege' and audit evidence could be read as a warranty of correctness.",
+   "severity": "major",
+   "evidence": "concept:risks[3]; concept:build.hardest_parts[0]; concept:mvp.features[1]"
+  },
+  {
+   "objection": "Audit-evidence framing: the reports are sold as what the buyer hands to SOC 2/ISO 27001 auditors. The product must not imply that it certifies compliance or that 'keys remaining = 0' satisfies a control, or it invites misrepresentation claims when an auditor disagrees.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[4]"
+  },
+  {
+   "objection": "Dual-use: the open-source scanner/report script and the cross-cloud credential helper are equally useful to an attacker who has gained a foothold, for mapping which keys cross boundaries and pivoting. This risk is modest and typical for security tooling, but the published discovery script should need the permissions of the account owner and should not exfiltrate anything.",
+   "severity": "minor",
+   "evidence": ""
+  }
+ ],
+ "strongest_point": "No broker in the request path, key values never read or stored, and remediation delivered as reviewable Terraform pull requests keep the customer in control and limit custody.",
+ "what_would_change_my_mind": [
+  "An MVP whose scanner and log analysis run entirely in the customer's account (self-hosted container or CloudFormation/Terraform stack) and send back only aggregated key metadata, with no CloudTrail or log export to the vendor.",
+  "GitHub access through a GitHub App limited to org Secrets (read), not admin:org tokens.",
+  "Template ToS and DPA with a liability cap, plus mandatory human approval of generated policies.",
+  "Generated trust policies gated by policy linting (IAM Access Analyzer validate-policy and GCP/Azure equivalents).",
+  "A funded SOC 2 Type I timeline before paid launch.",
+  "3 of 5 pilot security reviewers approving the access model without escalation."
+ ],
+ "resolved_prior": [],
+ "sources": [
+  "https://docs.github.com/en/rest/actions/secrets",
+  "https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetAccessKeyLastUsed.html",
+  "https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/",
+  "https://aembit.io/faq/"
+ ]
+}

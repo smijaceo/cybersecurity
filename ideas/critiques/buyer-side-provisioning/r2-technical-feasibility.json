@@ -1,0 +1,86 @@
+{
+ "concept_id": "buyer-side-provisioning",
+ "lens": "technical-feasibility",
+ "round": 2,
+ "score": 7,
+ "verdict": "go",
+ "summary": "The read-only pivot makes this buildable. The work is an event listener, about 12 list-user connectors, CSV ingestion, matching and a task loop, which two engineers can ship in 4 months. What's left is reliability work: Okta hooks are best-effort, read scopes leave blind spots, and export-fed apps can't meet the one-hour promise. All of it is fixable.",
+ "objections": [
+  {
+   "objection": "The trigger can't be relied on by itself. Okta event hooks are best-effort: delivery is at least once, Okta retries at most once, it doesn't retry 4xx responses, it times out after 3 seconds and it guarantees no maximum delay. A dropped hook means a leaver who is never checked, which gives silent false assurance. Entra has no equivalent push for audit events, so its checks depend on polling the audit log, and Entra Free keeps that log for only 7 days. The MVP needs a System Log and audit-log poller that reconciles against the hooks, idempotent handling of event IDs, and alerts when a poll falls behind.",
+   "severity": "major",
+   "evidence": "https://developer.okta.com/docs/concepts/event-hooks/ (best-effort, at most one retry, no max delay); https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention (audit logs 7 days on Free); concept:mvp.features[0]"
+  },
+  {
+   "objection": "Read-only list endpoints don't see everything, and some only come with admin-grade tokens. Notion's list-users excludes guests, so guest and contractor leftovers are invisible to it, and personal access tokens can't list users at all. Atlassian org API keys last at most a year, and without scopes they can reach every admin API. Slack needs users:read plus users:read.email to match on email. Each connector needs a documented coverage boundary (which account types, which plan tiers) shown per leaver, or the check log overstates what was checked.",
+   "severity": "major",
+   "evidence": "https://developers.notion.com/reference/get-users (guests not included; PATs cannot list users); https://support.atlassian.com/organization-administration/docs/manage-an-organization-with-the-admin-apis/ (key max one year; unscoped keys reach all admin APIs); https://docs.slack.dev/reference/methods/users.list; concept:mvp.features[1]"
+  },
+  {
+   "objection": "The one-liner promises a check of every app within an hour, but export-fed apps can only be checked as fresh as their last upload, which could be weeks old. The product must label each result with the age of its source data and not report an app as verified from a stale export. Otherwise the core promise is technically false for the long tail.",
+   "severity": "minor",
+   "evidence": "concept:one_liner; concept:mvp.features[2]; concept:build.hardest_parts[2]"
+  },
+  {
+   "objection": "There's a timing race with the write path. Bridges, Okta LCM and Entra's periodic provisioning cycle deprovision asynchronously, so a check that runs right after deactivation will flag accounts that are still being removed. Checks need per-path grace windows and scheduled re-checks before anything is escalated to an app owner, or the first week of alerts will be mostly noise.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[4]"
+  },
+  {
+   "objection": "Matching on immutable IdP IDs only works where an app stores the SSO subject. Non-SSO apps, which are the main target, mostly expose only an email and a display name. Expect a large manual-review queue at onboarding, and a design for persistent manual links that survive email renames.",
+   "severity": "minor",
+   "evidence": "concept:mvp.features[3]; concept:build.hardest_parts[0]"
+  },
+  {
+   "objection": "OAuth app registration and marketplace review (Slack app distribution, Atlassian, others) for about 12 vendors, along with token rotation, lands on two engineers. SOC 2 Type II can't be finished by month 4 because it needs an observation period. The plan should target Type I or readiness at launch.",
+   "severity": "minor",
+   "evidence": "concept:build.months_to_mvp; concept:build.hardest_parts[3]"
+  }
+ ],
+ "strongest_point": "Reading user lists and diffing them against deactivations is a small, stable integration surface with no write path, browser agents or MFA. The scope now fits two engineers in four months.",
+ "what_would_change_my_mind": [
+  "A per-app matrix for the 12 target connectors showing a non-admin list-users scope on the tiers buyers actually hold, plus which account types (guests, contractors, bots) each one misses",
+  "A prototype that uses Okta hooks plus System Log reconciliation and loses no deactivations over 30 days in a test org, with measured detection latency",
+  "Data from the concierge scans showing a false-positive rate under 10% after grace windows, and the share of matches that needed manual review",
+  "Measured connector upkeep of 2 engineer-hours or less per connector per month over the pilot"
+ ],
+ "resolved_prior": [
+  {
+   "objection": "Paywalled apps often paywall user-management APIs too (Notion is list-only), which pushes coverage onto browser agents",
+   "resolved": true,
+   "note": "The read-only design only needs list-users, which Notion and others expose, and apps without it go through exports. The remaining gap is visibility (Notion omits guests), not a forced browser path."
+  },
+  {
+   "objection": "The scope doesn't fit 2 engineers in 5 months",
+   "resolved": true,
+   "note": "The SCIM server, browser platform and write vault are gone. About 12 read connectors, CSV ingestion, matching and a task loop is a credible 4-month MVP for two engineers."
+  },
+  {
+   "objection": "The browser path needs an IdP service identity with a stored MFA factor or a break-glass admin",
+   "resolved": true,
+   "note": "Browser agents and stored admin credentials are out of scope."
+  },
+  {
+   "objection": "Connector maintenance cost exceeds the per-app price",
+   "resolved": true,
+   "note": "Read-only list endpoints change rarely, and per-user pricing pools upkeep across apps. Token rotation (Atlassian keys last at most a year) is still a chore but a small one."
+  },
+  {
+   "objection": "SCIM client quirks differ between Okta and Entra",
+   "resolved": true,
+   "note": "There's no SCIM server. It's replaced by a dependency on hook reliability and audit-log polling, which is raised as a new objection."
+  },
+  {
+   "objection": "OIN and Entra gallery listing is per-app",
+   "resolved": true,
+   "note": "There's one IdP-side integration. Per-vendor OAuth app registration replaces it as a smaller task."
+  }
+ ],
+ "sources": [
+  "https://developer.okta.com/docs/concepts/event-hooks/",
+  "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention",
+  "https://docs.slack.dev/reference/methods/users.list",
+  "https://developers.notion.com/reference/get-users",
+  "https://support.atlassian.com/organization-administration/docs/manage-an-organization-with-the-admin-apis/"
+ ]
+}

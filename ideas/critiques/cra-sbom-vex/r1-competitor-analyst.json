@@ -1,0 +1,60 @@
+{
+  "concept_id": "cra-sbom-vex",
+  "lens": "competitor-analyst",
+  "round": 1,
+  "score": 4,
+  "verdict": "no-go",
+  "summary": "The competitor table leaves out the most direct rivals: cheap self-serve CRA platforms (CVD Portal, CRA Evidence, CRA-Ready) that already bundle SBOM registries, VEX/CSAF export and Article 14 workflows below VEXpath's price, and free SecObserve. Dependency-Track 5.1 now ships component-level VEX and KEV, and CSAF ingestion is funded and in progress. What is left is a narrow, perishable feature set.",
+  "objections": [
+    {
+      "objection": "Most dangerous competitor: OWASP Dependency-Track itself. The wedge is 'what DT lacks', and DT is closing that gap. v5.1 added VEX exports that name the affected component, VEX import from other tools, CISA and EU KEV mirroring, and Red Hat version comparison that removes UBI false positives. Fraunhofer AISEC contributors got funding in Sep 2026 for CSAF ingestion; by Oct 2026 a mirroring prototype and ADRs were under maintainer review. Once matching lands, the 'VEX in a day' noise-cut demo is free.",
+      "severity": "major",
+      "evidence": "https://github.com/DependencyTrack/dependency-track/issues/2353 ; https://dependencytrack.org/news/dependency-track-5-1"
+    },
+    {
+      "objection": "The concept misses a cohort of self-serve, EU-focused CRA platforms that already price below it and cover more of the CRA job. CVD Portal (Porta Regulus B.V., hosted in Germany) sells Article 14 24h/72h/14d reporting, an SBOM registry, KEV checks and CSAF 2.0 advisory export for EUR 1,188/yr. Its full conformity tier is EUR 3,588/yr for 3 products, then EUR 99 per product per month, and it is on AWS Marketplace. CRA Evidence lists VEX authoring, an ENISA reporting workflow and SBOM drift detection. CRA-Ready starts at $49/month. VEXpath's $5,900/yr for triage alone sits above the whole-CRA suites a CRA owner will shortlist first.",
+      "severity": "major",
+      "evidence": "https://cvdportal.com/pricing ; https://aws.amazon.com/marketplace/pp/prodview-gyxmox4nnchuk ; https://craevidence.com/pricing"
+    },
+    {
+      "objection": "Free open-source tools already cover the VEX workbench. SecObserve (Telekom/MaibornWolff lineage) imports and exports VEX in CSAF, CycloneDX and OpenVEX. It matches by PURL, scopes VEX per product and branch/version, maps justifications between formats and versions its documents. AboutCode's DejaCode/CRAVEX is explicitly aimed at SMEs for CRA and exports a combined SBOM+VEX, which covers the 'atomic publishing' feature. The concept's competitor table names neither.",
+      "severity": "major",
+      "evidence": "https://secobserve.github.io/SecObserve/integrations/vex ; https://aboutcode.org/docs/getting_started/cravex/"
+    },
+    {
+      "objection": "sbomify is a closer rival than the 'likely partner' framing suggests. Business at $159/month already bundles 5 products, OSV plus Dependency-Track scanning rescanned daily, a CRA Compliance Wizard, a Transparency Exchange API and a trust center on the customer's domain. Enterprise can use the customer's own DT instance. VEX authoring is a small step on top of an existing DT-backed scan, and sbomify owns the publishing endpoint that VEXpath's output would flow into.",
+      "severity": "major",
+      "evidence": "https://sbomify.com/pricing/ ; concept:competitors[1].how_we_differ"
+    },
+    {
+      "objection": "Funded enterprise vendors (ArmorCode with CRA SBOM/VEX management since Jun 2026, Finite State CRA packages, Manifest, Interlynk, Anchore's EU CRA quickstart) and SCA suites (Mend, FOSSA, JFrog CRA briefs) can add a self-serve tier or a per-product SKU within a quarter if mid-market CRA demand appears. They already have the scanners and buyers.",
+      "severity": "minor",
+      "evidence": "https://helpnetsecurity.com/2026/06/17/armorcode-agentic-ai-platform-cra-capabilities/"
+    },
+    {
+      "objection": "The remaining defensible core is vendor-CSAF-to-PURL matching plus safe inheritance of VEX decisions across releases. That is a feature, not a product. It depends on uneven vendor CSAF coverage (the concept's own risk list concedes embedded stacks) and is the exact piece being built into DT.",
+      "severity": "minor",
+      "evidence": "concept:risks[4]"
+    }
+  ],
+  "strongest_point": "Vendor-CSAF-to-SBOM matching with cross-release VEX inheritance is still unshipped in Dependency-Track and in the cheap CRA suites, and a team with CSAF standards expertise has a real head start.",
+  "what_would_change_my_mind": [
+    "A side-by-side test on 3 real device-maker SBOMs showing VEXpath cuts findings materially (e.g. 50%+) more than DT 5.1 plus SecObserve, and more than CVD Portal or CRA Evidence on the same inputs.",
+    "DT maintainers state that CSAF matching (not only mirroring) is out of scope or more than 12 months away, or VEXpath becomes the reference implementation, giving it a hosted-DT plus CSAF position.",
+    "A repositioning that complements the CRA suites instead of competing with them: a matching/VEX engine sold through CVD Portal, sbomify or CRA consultancies, with at least one signed integration partner.",
+    "5 of 15 discovery calls where buyers who have evaluated CVD Portal, CRA Evidence or sbomify say those tools fail on triage noise and they would pay $490/month on top."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://github.com/DependencyTrack/dependency-track/issues/2353",
+    "https://dependencytrack.org/news/dependency-track-5-1",
+    "https://sbomify.com/pricing/",
+    "https://cvdportal.com/pricing",
+    "https://aws.amazon.com/marketplace/pp/prodview-gyxmox4nnchuk",
+    "https://craevidence.com/pricing",
+    "https://www.capterra.com/p/10045966/CRA-Ready/",
+    "https://secobserve.github.io/SecObserve/integrations/vex",
+    "https://aboutcode.org/docs/getting_started/cravex/",
+    "https://dev.to/craevidence"
+  ]
+}

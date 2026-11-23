@@ -1,0 +1,79 @@
+{
+  "concept_id": "cra-sbom-vex",
+  "lens": "market-skeptic",
+  "round": 2,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "The revision is more honest and cheaper, but demand is still unproven. The new Art. 14(8) hook covers only actively exploited vulnerabilities and severe incidents, not routine not_affected triage, so the paid driver is downstream OEM requests nobody has evidenced. Narrowing to Yocto makers running Dependency-Track also shrinks an already unsized market.",
+  "objections": [
+    {
+      "objection": "The repositioned compliance hook does not carry the product. Art. 14(8) requires informing users, 'where appropriate' in machine-readable form, only after the manufacturer becomes aware of an actively exploited vulnerability or severe incident. That is a rare event for a mid-size maker and is a notification duty, not a duty to publish per-release not_affected VEX across all findings. The bulk of VEXpath's value (noise cut, cross-release ledger) has no regulatory pull; it relies on OEM customer demand that the evidence does not show.",
+      "severity": "major",
+      "evidence": "https://prighter.com/resources/laws/cyber-resilience-act/articles/article-14; concept:why_now.summary"
+    },
+    {
+      "objection": "Demand evidence is unchanged: developer GitHub issues (engagement 1-43), some from open-source maintainers with no budget, and none from a Yocto device maker's PSIRT or CRA owner. The revision admits this in risks and moves the burden to the riskiest-assumption test, which is right, but until that test runs there is no sign of budgeted pain in the named segment.",
+      "severity": "major",
+      "evidence": "input:themes[theme_id=14].need_statements; concept:risks[2]; concept:revision_log (market-skeptic, 'not changed in evidence')"
+    },
+    {
+      "objection": "The narrowing compounds the size problem. The buyer now has to be an EU maker with 50-1,000 staff, firmware on Yocto/embedded Linux, already producing SBOMs, already running Dependency-Track or OE cve-check, and with a named CRA owner. Each filter cuts the pool; the concept itself guesses 'a few thousand' for a broader profile with no source. At EUR 3.5k ACV, even 300 customers is about EUR 1M ARR, so the segment may not support a venture-scale company.",
+      "severity": "major",
+      "evidence": "concept:buyer.company_profile; concept:open_questions[4]; concept:pricing.entry_price"
+    },
+    {
+      "objection": "Budget competition inside the CRA stack. CVD Portal sells Art. 14 reporting plus SBOM management, remediation tracking and CSAF advisories from EUR 1,188-3,588/yr, grant-eligible. VEXpath at EUR 3,480/yr roughly doubles a mid-size maker's CRA tooling spend for one sub-step that the suite already lists. Buyers who must justify spend to a regulatory or quality manager will likely accept the suite's manual VEX first.",
+      "severity": "major",
+      "evidence": "https://cvdportal.com/pricing; concept:pricing.rationale"
+    },
+    {
+      "objection": "Urgency remains deadline-shaped: main obligations land 11 December 2027 and the revision left this unchanged. Expect thin 2027 revenue and a buying spike late in 2027, which a seed company must survive on design-partner income.",
+      "severity": "minor",
+      "evidence": "concept:revision_log (market-skeptic, 'Urgency ... not changed')"
+    }
+  ],
+  "strongest_point": "Binding CRA dates plus a cheap, self-hosted, DT-native add-on aimed at embedded makers the enterprise SBOM vendors ignore; the test now asks for paid LOIs and a named approver.",
+  "what_would_change_my_mind": [
+    "At least 4 of 15 CRA owners at 50-500-person EU Yocto device makers sign a EUR 290/month LOI with a named spend approver (the concept's own test).",
+    "At least 8 of 15 can show a written VEX or vulnerability-status request from a downstream OEM or operator in the last 12 months.",
+    "A sourced count (industry-association or Yocto/DT community data) of at least 2,000 EU makers matching the narrowed profile.",
+    "A CRA suite (CVD Portal, sbomify) agrees to resell or bundle the engine, showing a channel that reaches buyers at this ACV.",
+    "A draft harmonised standard or market surveillance guidance that expects VEX/CSAF for routine vulnerability handling."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Demand evidence is developer GitHub issues, not purchase intent from the named buyer.",
+      "resolved": false,
+      "note": "Evidence unchanged; acknowledged in risks and the test now requires LOIs and a named approver, which is the right fix but not yet run."
+    },
+    {
+      "objection": "Compliance hook weaker than pitched: CRA mandates neither VEX nor CSAF.",
+      "resolved": false,
+      "note": "Overclaim removed, which is good, but the replacement hook (Art. 14(8)) only covers actively exploited vulnerabilities and severe incidents, so routine triage still lacks regulatory pull."
+    },
+    {
+      "objection": "Urgency is deadline-shaped and late.",
+      "resolved": false,
+      "note": "Not changed by design; lower price and product-led motion reduce burn per deal but not the timing."
+    },
+    {
+      "objection": "WTP evidence comes from enterprise contracts and sbomify anchors prices low.",
+      "resolved": true,
+      "note": "Price cut to EUR 3,480/yr and framed as an add-on beside suites; enterprise comparables kept as ceiling; WTP is now tested directly. Budget competition with suites remains (new objection)."
+    },
+    {
+      "objection": "CSAF matching may be commoditised in Dependency-Track.",
+      "resolved": true,
+      "note": "Core moved to Yocto build evidence, invalidation and signing; DT's CSAF matching becomes an input."
+    },
+    {
+      "objection": "Market size for the exact profile is unquantified.",
+      "resolved": false,
+      "note": "Added as an open question, but the narrowed profile makes the pool smaller and it is still unsourced."
+    }
+  ],
+  "sources": [
+    "https://prighter.com/resources/laws/cyber-resilience-act/articles/article-14",
+    "https://cvdportal.com/pricing"
+  ]
+}

@@ -1,0 +1,179 @@
+{
+ "opening_id": "cross-cloud-workload-identity",
+ "slug": "keybridge",
+ "name": "Keybridge",
+ "one_liner": "Finds the static cloud keys your workloads use across AWS, GCP, Azure, CI and on-prem, then replaces them with free native federation, priced per account, not per workload.",
+ "buyer": {
+  "role": "Head of platform / DevOps lead (at smaller firms the VP Engineering or the first security hire)",
+  "company_profile": "Software companies with 50-1,000 employees running workloads on two or more of AWS, GCP and Azure plus CI (GitHub Actions, GitLab) and some on-prem or edge hosts; 200-5,000 workloads, so per-workload pricing ($20/workload/month) becomes a five- or six-figure annual bill; still carrying long-lived IAM user keys and service-account JSON keys between environments, often flagged by an auditor, a leaked-key incident or a SOC 2 finding."
+ },
+ "user": "Platform and DevOps engineers who wire workloads (Kubernetes pods, Lambdas, CI jobs, VMs, third-party tools) to cloud APIs and today rotate or paste static keys when a tool does not support the provider's native credential chain.",
+ "problem": {
+  "summary": "Every cloud now offers free short-lived workload credentials, but each mechanism (IRSA, EKS Pod Identity, IAM Roles Anywhere, GCP and Azure workload identity federation) works only inside its own tooling and needs per-pair trust setup. Tools lag the mechanisms, so teams fall back to static keys whenever a workload crosses a cloud, a CI system or an on-prem boundary. Paid fixes charge per workload or identity, which punishes workload-heavy mid-market teams.",
+  "evidence": [
+   {
+    "claim": "Vault's AWS secrets engine lacked support for IAM Roles Anywhere, leaving workloads outside AWS without short-lived role credentials through the tool teams already pay for.",
+    "url": "https://github.com/hashicorp/vault/issues/16268"
+   },
+   {
+    "claim": "External Secrets did not work with the new EKS Pod Identity Agent, which injects credentials through a different endpoint than IRSA.",
+    "url": "https://github.com/external-secrets/external-secrets/issues/2951"
+   },
+   {
+    "claim": "Vault's client did not follow the AWS SDK default credential chain in IAM auth mode, so profile- and role-based setups failed.",
+    "url": "https://github.com/hashicorp/vault/issues/12568"
+   },
+   {
+    "claim": "Bun's S3 client could only be authorised with an explicit access key and secret, not the role credentials of the Lambda or Fargate runtime.",
+    "url": "https://github.com/oven-sh/bun/issues/22711"
+   },
+   {
+    "claim": "Users want the AWS SDK to pick up a role ARN with the environment credential provider for environments where web identity is not available.",
+    "url": "https://github.com/aws/aws-sdk-go-v2/issues/2867"
+   },
+   {
+    "claim": "ECR's 12-hour credential expiry forces teams on a third-party GPU platform to refresh credentials manually, and they ask for permanent keys instead.",
+    "url": "https://github.com/runpod/runpod-python/issues/415"
+   },
+   {
+    "claim": "Per-identity and per-client pricing scales with machine count (Infisical Pro $20-23/identity, Aembit $20/workload), penalising workload-heavy teams.",
+    "url": "https://dev.to/beton/infisical-pricing-teardown-2026-1ang"
+   }
+  ]
+ },
+ "why_now": {
+  "summary": "The free federation building blocks are now complete across the big three: AWS added IAM outbound identity federation (STS GetWebIdentityToken, at no additional cost, in all commercial, GovCloud and China Regions), so AWS workloads can present short-lived JWTs to GCP, Azure and SaaS; Google Cloud and Microsoft Entra already accept such tokens via workload identity federation. What is missing is the cross-cloud wiring, inventory and fallbacks for tools that do not support them. Meanwhile leaked static secrets keep growing: GitGuardian counted 28.65 million new hardcoded secrets in public GitHub commits in 2025 (+34% year over year), found that over 64% of valid secrets from 2022 were still valid in January 2026, and that 59% of machines compromised by Shai-Hulud 2 were CI/CD runners.",
+  "sources": [
+   "https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/",
+   "https://cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds",
+   "https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation",
+   "https://blog.gitguardian.com/the-state-of-secrets-sprawl-2026/"
+  ]
+ },
+ "mvp": {
+  "features": [
+   {
+    "feature": "Read-only static-key inventory: connects to AWS, GCP and Azure accounts and GitHub/GitLab orgs, lists long-lived IAM user access keys, GCP service-account keys and Entra app secrets, and shows where each one is used (last-used source IP/service, CI secret names) and which cloud boundary it crosses.",
+    "why": "Gives the buyer a number to act on and a reason to pay before anything is changed; uses read-only APIs so security review is light."
+   },
+   {
+    "feature": "Federation plan generator: for each key, proposes the native free replacement (IRSA / EKS Pod Identity, IAM Roles Anywhere, AWS outbound federation to GCP/Azure, GCP and Entra workload identity federation, GitHub/GitLab OIDC) and emits a Terraform/OpenTofu pull request with the trust policies and least-privilege role.",
+    "why": "The credential issuance is free and native; the work buyers lack is the per-pair trust configuration, which is where they give up and keep static keys."
+   },
+   {
+    "feature": "Open-source credential helper (credential_process / exec plugin / sidecar) that turns a native identity into credentials for the target cloud via the default credential chain, for tools that do not support Pod Identity, Roles Anywhere or cross-cloud federation.",
+    "why": "Covers the tool-lag cases in the evidence (Vault, External Secrets, Bun, ECR refresh) without asking upstream tools to change; also the open-source adoption channel."
+   },
+   {
+    "feature": "Cutover tracking and drift alerts: marks each static key as replaced, verifies the federated path is in use, then prompts deactivation; alerts when a new long-lived key appears.",
+    "why": "Turns a one-off migration into a recurring control that auditors (SOC 2, ISO 27001) can see, which justifies a subscription."
+   },
+   {
+    "feature": "Evidence export: per-account report of keys found, replaced and remaining, with dates.",
+    "why": "Gives the platform lead something to hand the auditor or CISO; this report is what the buyer is paying for."
+   }
+  ],
+  "out_of_scope": [
+   "Issuing our own credentials, running a token broker in the request path or a proxy that injects credentials (Aembit's model); v1 only configures the clouds' free native mechanisms.",
+   "General secrets storage and rotation of database or SaaS API keys (Vault, Infisical, Akeyless).",
+   "AI agent / MCP identity and human access (PAM, SSO).",
+   "SPIFFE/SPIRE deployment and service-to-service mTLS.",
+   "Policy engines with conditional access; NHI posture scoring across SaaS (Cyera Identity / Oasis)."
+  ]
+ },
+ "competitors": [
+  {
+   "name": "Native cloud federation (AWS IRSA / EKS Pod Identity / IAM Roles Anywhere / outbound identity federation, GCP and Entra workload identity federation)",
+   "url": "https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/",
+   "how_we_differ": "Free and what we build on, not against: we discover where it is not used yet, generate the cross-cloud trust configuration and fill gaps for tools that do not support it. Each cloud documents only its own side."
+  },
+  {
+   "name": "Aembit Workload IAM",
+   "url": "https://aembit.io/faq/",
+   "how_we_differ": "Aembit runs a policy-based workload IAM platform at $20/workload/month (Teams) with a free tier of 10 workloads. We charge a flat price per cloud account with unlimited workloads, and leave no broker in the request path, so nothing breaks if we disappear."
+  },
+  {
+   "name": "Infisical",
+   "url": "https://infisical.com/pricing",
+   "how_we_differ": "Infisical is a secrets manager priced per identity ($20/identity/month annually, Pro); its AWS auth still issues its own tokens. We remove secrets instead of storing them, and do not charge per identity."
+  },
+  {
+   "name": "HCP Vault Dedicated (HashiCorp/IBM)",
+   "url": "https://hashicorp.com/pricing/all",
+   "how_we_differ": "Vault generates dynamic AWS credentials but per-client pricing and cluster operation make it a heavy buy for this goal, and it lagged new AWS mechanisms (Roles Anywhere). We are a lightweight layer over native federation."
+  },
+  {
+   "name": "Teleport Machine & Workload Identity",
+   "url": "https://goteleport.com/pricing/guide/",
+   "how_we_differ": "Bundled into Teleport Enterprise and billed per protected resource, quote-only. We are self-serve with a public price and need no Teleport deployment."
+  },
+  {
+   "name": "Cyera Identity (formerly Oasis NHI Security Cloud)",
+   "url": "https://aws.amazon.com/marketplace/pp/prodview-wl52yxutluvma",
+   "how_we_differ": "Enterprise NHI discovery and posture, $100,000/12-month starter pack on AWS Marketplace. We do a narrower job (cloud static keys to federation) and remediate it, for mid-market budgets."
+  },
+  {
+   "name": "SPIFFE / SPIRE (open source)",
+   "url": "https://spiffe.io/docs/latest/spire-about/",
+   "how_we_differ": "Free workload attestation and identity, but a system to deploy and operate, mostly certificate-based and Kubernetes-centric. We reuse the identities clouds already issue and need no new infrastructure."
+  }
+ ],
+ "differentiation": "The clouds now give short-lived workload credentials away; what mid-market teams lack is the time to find every static key and wire up each cross-cloud trust. Keybridge does that job, opens Terraform pull requests to native mechanisms and adds an open-source helper for tools that lag. Flat per-account pricing means 2,000 workloads cost the same as 20, and no proxy or broker sits in the request path, so there is no lock-in and no new outage risk.",
+ "build": {
+  "team": "2 engineers (cloud IAM and Terraform depth) + 1 founder-seller",
+  "months_to_mvp": 4,
+  "hardest_parts": [
+   "Attributing where a static key is used (CloudTrail last-used data, CI secret references, GCP/Azure logs) accurately enough that a generated replacement does not break production.",
+   "Generating correct least-privilege trust policies for every source-target pair (EKS, ECS, Lambda, GKE, AKS, VMs, GitHub/GitLab, on-prem with Roles Anywhere certificates) and keeping up as the clouds change these APIs.",
+   "Getting read-only access to several cloud accounts approved at mid-market companies without a long security review.",
+   "Keeping the credential helper compatible with SDK default chains across languages and runtimes (Go, Python, Node, Bun, JVM)."
+  ]
+ },
+ "pricing": {
+  "model": "Subscription per connected cloud account / project / subscription, unlimited workloads; free tier for discovery; open-source credential helper.",
+  "entry_price": "Free inventory for up to 3 cloud accounts; Team $400/month (billed annually) for up to 10 cloud accounts plus GitHub/GitLab orgs, unlimited workloads, remediation PRs and drift alerts; $30/month per additional account.",
+  "rationale": "A team with 500 workloads would pay about $10,000/month on Aembit Teams or Infisical Pro list prices; $400/month undercuts that by an order of magnitude while still a meaningful recurring line for a 3-person company. Pricing on accounts, not workloads, removes the per-machine penalty that the input names as the main paid-market gap, and matches how buyers think about cloud estate. Enterprise NHI platforms (Cyera Identity at $100k/year) set the ceiling.",
+  "comparables": [
+   {
+    "vendor": "Aembit Workload IAM",
+    "price": "Free up to 10 workloads; Teams from $20/workload/month",
+    "source": "https://aembit.io/faq/"
+   },
+   {
+    "vendor": "Infisical",
+    "price": "Pro $20/identity/month billed annually ($23 monthly)",
+    "source": "https://infisical.com/pricing.md"
+   },
+   {
+    "vendor": "Cyera Identity (Oasis) on AWS Marketplace",
+    "price": "Starter Pack $100,000 per 12 months",
+    "source": "https://aws.amazon.com/marketplace/pp/prodview-wl52yxutluvma"
+   }
+  ]
+ },
+ "go_to_market": {
+  "first_customers": "Ten 50-500 person SaaS or data companies running on AWS plus GCP or Azure (often for BigQuery, Vertex/Azure OpenAI or a customer-mandated cloud), with GitHub Actions CI and a few hundred to a few thousand workloads; each has at least one SOC 2 finding or near-miss about long-lived cloud keys, a platform team of 2-6 and no Vault or Teleport deployment.",
+  "channel": "Open-source credential helper and a free 'static key report' that runs read-only in minutes; content and Terraform modules for each cross-cloud pair (e.g. 'EKS to BigQuery without a JSON key'); answers in the GitHub issues where users hit tool lag; listing in the AWS and GCP marketplaces to draw on committed spend; later, SOC 2 auditors and compliance platforms as referral partners.",
+  "wedge": "The free key report: it shows a platform lead how many long-lived keys cross cloud boundaries today, then converts on the first automated pull request that removes one."
+ },
+ "risks": [
+  "Bundling (high): AWS, Google and Microsoft keep adding free federation and could add cross-cloud setup wizards or key-usage reports; IAM Access Analyzer and cloud security posture tools (Wiz, native CSPMs) already flag old access keys. The product must stay a remediation tool, not a finding list.",
+  "Crowding and consolidation: Aembit, Infisical, Akeyless, Teleport and Cyera Identity all sell workload identity; Aembit's free 10-workload tier and $20/workload Teams plan compete directly for small estates, and acquirers (Palo Alto/CyberArk, Cyera) can bundle discovery into larger deals.",
+  "Low price ceiling: the core value is configuration of free mechanisms, so buyers may treat it as a one-off migration and churn once their keys are gone; drift alerts and audit evidence must justify ongoing payment.",
+  "Technical: a wrong generated trust policy or misattributed key usage can break production or over-grant access, and read-only access to many accounts is itself a sensitive permission buyers must trust.",
+  "Thin and unstable demand signal: the theme scored only 0.41 on stability and the evidence is mostly AWS-only tool-lag issues, so the cross-cloud need is inferred rather than shown directly."
+ ],
+ "riskiest_assumption": {
+  "assumption": "Mid-market platform teams will pay a recurring subscription to get rid of cross-cloud static keys, rather than doing the native federation setup themselves or taking Aembit's free tier.",
+  "test": "Run a landing page plus a manual 'static key report' offer (customer runs a published read-only script; we return a per-key replacement plan) to 40 platform leads from DevOps communities and the GitHub issues in the evidence; ask those who receive a report to pre-commit to the $400/month plan with a signed letter of intent or annual prepayment at a discount.",
+  "success_signal": "At least 10 of 40 run the script, the median report finds 15 or more long-lived keys used across a cloud or CI boundary, and at least 3 sign an LOI or prepay within two weeks."
+ },
+ "open_questions": [
+  "How many long-lived cloud keys does a typical 50-500 person multi-cloud company actually have crossing boundaries, and how many workloads depend on them?",
+  "Is the cross-cloud case common enough, or is the real volume in AWS-only tool lag that AWS will fix itself?",
+  "Will buyers grant read-only access to every cloud account and CI org to a young vendor, or must the scanner run fully in their environment?",
+  "Does per-account pricing hold, or do buyers expect a one-off migration fee plus a small monitoring subscription?",
+  "Can the HCP Vault per-client price (flagged as unverified) be confirmed from a primary source to strengthen the price comparison?",
+  "How fast will AWS, Google and Microsoft ship their own cross-cloud setup tooling?"
+ ]
+}

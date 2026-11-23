@@ -2,14 +2,14 @@
  "opening_id": "cra-sbom-vex",
  "slug": "vexpath",
  "name": "VEXpath",
- "one_liner": "Hosted SBOM impact and VEX/CSAF workbench that tells mid-size product makers which CVEs actually affect each shipped release, priced for CRA compliance.",
+ "one_liner": "Self-hostable VEX decision engine for embedded device makers: turns Yocto build data, vendor CSAF and Dependency-Track findings into signed, evidence-backed per-release VEX.",
  "buyer": {
-  "role": "Head of product security / PSIRT lead (often the VP Engineering or quality/regulatory manager at smaller firms)",
-  "company_profile": "EU-selling software vendors and connected-device / industrial equipment makers with 50-1,000 employees and 3-30 product lines; already generating SBOMs (Syft, CycloneDX plugins, Trivy) and often running self-hosted Dependency-Track, but with no answer for publishing VEX/CSAF advisories and documenting vulnerability handling before CRA reporting (since 11 Sep 2026) and main obligations (11 Dec 2027)."
+  "role": "Head of product security / PSIRT lead; at smaller firms the VP Engineering or the quality/regulatory manager who owns CRA",
+  "company_profile": "EU-selling connected-device and industrial-equipment makers with 50-1,000 employees and 3-30 product lines whose firmware is built on Yocto/OpenEmbedded or another embedded Linux, already producing SBOMs and running self-hosted Dependency-Track or OE cve-check, and facing downstream OEM/operator requests for vulnerability status before CRA reporting (since 11 Sep 2026) and main obligations (11 Dec 2027). Software-only vendors on enterprise distros are a secondary segment."
  },
- "user": "Product security engineers and release/firmware engineers who triage SBOM vulnerability findings per release, write 'not affected' justifications, and publish customer-facing advisories.",
+ "user": "Product security engineers and firmware/release engineers who triage SBOM vulnerability findings per firmware release, record 'not affected' justifications, and hand machine-readable status to customers.",
  "problem": {
-  "summary": "Mid-size manufacturers can now produce SBOMs, but cannot cheaply turn them into defensible answers to 'is our shipped release affected?'. Free Dependency-Track flags every CVE without parent-component, container or vendor-advisory context, cannot ingest vendor CSAF advisories, and treats BOM and VEX as separate uploads. Commercial platforms that do this are quote-only or $18k-$50k+ per year. Under the CRA, teams must handle vulnerabilities per product and report exploited ones within 24 hours, so noisy, unexplained findings become a compliance cost.",
+  "summary": "Device makers can now produce SBOMs, but cannot cheaply turn them into defensible answers to 'is this shipped firmware release affected?'. Scanners flag every CVE without dependency-path, container or build context, vendor CSAF advisories can't be matched, and BOM and VEX drift apart. Embedded teams hold the evidence (patches, kernel config, CVE_STATUS) in their build, not in their triage tool. Commercial platforms that bridge this are quote-only or $18k+ per year.",
   "evidence": [
    {
     "claim": "Dependency-Track users ask for CSAF advisory ingestion because CPE is not granular enough to tell which part of a vendor product (e.g. RHEL) is affected.",
@@ -46,90 +46,100 @@
   ]
  },
  "why_now": {
-  "summary": "The EU Cyber Resilience Act's reporting obligations applied from 11 September 2026: manufacturers must send an early warning within 24 hours and a notification within 72 hours for actively exploited vulnerabilities, for all products on the EU market including those already sold. Its main obligations apply from 11 December 2027, leaving roughly a year to put vulnerability handling in place. Germany's BSI already publishes TR-03183 guidance, with a dedicated SBOM part (v2.1.0, with CycloneDX/SPDX field mapping) and a vulnerability reports part, aimed at manufacturers without mature security processes - exactly this buyer.",
+  "summary": "CRA reporting obligations have applied since 11 September 2026 (24h early warning and 72h notification once a manufacturer becomes aware of an actively exploited vulnerability in its product), and main obligations apply from 11 December 2027. Article 14(8) asks manufacturers to inform impacted users, where appropriate, in a structured, machine-readable format, which VEX/CSAF satisfies; the CRA itself mandates neither format. Germany's BSI TR-03183 gives SBOM and vulnerability-report guidance aimed at less mature manufacturers. Tooling has also matured enough to build on: Dependency-Track 5.1 now exports component-level VEX and mirrors CISA/EU KEV, and OpenEmbedded's vex class emits build-time vulnerability status (CVE_STATUS) per image, but nothing joins the two into reviewed, per-release decisions.",
   "sources": [
    "https://commission.europa.eu/news-and-media/news/safer-and-more-secure-digital-products-2026-09-11_en",
-   "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html"
+   "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03183/TR-03183_node.html",
+   "https://prighter.com/resources/laws/cyber-resilience-act/articles/article-14",
+   "https://dependencytrack.org/news/dependency-track-5-1",
+   "https://raw.githubusercontent.com/openembedded/openembedded-core/master/meta/classes/vex.bbclass"
   ]
  },
  "mvp": {
   "features": [
    {
-    "feature": "Per-release SBOM ingest (CycloneDX/SPDX via CI action or API, plus import from an existing Dependency-Track instance) with full dependency-path view: root component, direct vs transitive, container/image of origin.",
-    "why": "Gives the parent-component and container context users ask Dependency-Track for, and keeps teams' existing scanners and DT investment."
+    "feature": "Per-release ingest from Dependency-Track (API) or CycloneDX/SPDX upload, plus OpenEmbedded build artefacts (vex.bbclass image JSON with CVE_STATUS, applied patches, kernel .config), with dependency path and container/image of origin per finding.",
+    "why": "Brings the build-time evidence embedded teams already have next to the findings, and keeps their scanners and Dependency-Track."
    },
    {
-    "feature": "Vendor CSAF advisory ingestion (Red Hat, Oracle, Siemens and other CSAF trusted providers) matched to SBOM components by PURL, overriding CPE-level false matches.",
-    "why": "The most-engaged unmet request in the input; directly removes noise for device makers built on commercial distros."
+    "feature": "Evidence rules that propose (never apply) VEX statuses, each with its proof attached: CVE_STATUS patched/not-applicable, kernel option disabled (code_not_present), fixed upstream version, Red Hat CSAF VEX matched through a binary-to-source-RPM mapping, other vendor CSAF only where it carries PURLs. KEV listing raises queue priority only.",
+    "why": "Cuts noise on embedded stacks where vendor CSAF is absent, and makes every suggestion auditable rather than a black-box match."
    },
    {
-    "feature": "VEX triage workbench: queue of findings per release, status (affected / not_affected / fixed / under_investigation) with CISA-style justification picker, inherit-decision-across-releases, and reviewer sign-off.",
-    "why": "Turns noisy findings into recorded decisions; reuse across releases is where small teams save time."
+    "feature": "Decision ledger: per release, affected / not_affected / fixed / under_investigation with CISA justification, mandatory named reviewer sign-off, a record of which suggestions were automated, and conservative invalidation (any change to component version, dependency path or build-config hash re-opens an inherited decision).",
+    "why": "Reuse across releases is where small teams save time; invalidation makes reuse safe for documents customers and authorities rely on."
    },
    {
-    "feature": "Atomic publishing: export a release's SBOM plus matching CycloneDX VEX and CSAF 2.0 VEX/advisory documents, signed, to a hosted customer portal or the vendor's own site.",
-    "why": "Solves the BOM/VEX sync problem and gives customers and authorities a machine-readable answer."
-   },
-   {
-    "feature": "CRA evidence pack: per product, a timestamped log of vulnerabilities, decisions and fix releases, plus a 24h/72h exploited-vulnerability draft triggered by a KEV listing.",
-    "why": "Maps the work to the compliance deadline the buyer is paying to meet."
+    "feature": "Write-back and export: push decisions into Dependency-Track's analysis so DT stays the team's source of truth, and export CycloneDX VEX and CSAF 2.0 VEX matched to the release SBOM, signed with the customer's own key, for publishing on the customer's site, sbomify or a CRA suite. Private by default; nothing is published by VEXpath.",
+    "why": "Fixes BOM/VEX drift and avoids a second triage tool, while leaving publication and disclosure timing with the manufacturer."
    }
   ],
   "out_of_scope": [
-   "SBOM generation and binary/firmware analysis (integrate Syft, Trivy, cdxgen; leave binaries to ONEKEY/Finite State)",
-   "Code-level reachability analysis",
-   "Direct submission to the ENISA Single Reporting Platform (drafts only until its API is stable)",
-   "Licence compliance, full CRA conformity assessment and technical-file authoring",
-   "On-premise deployment"
+   "Hosted customer advisory portal / CSAF trusted-provider hosting (export only; partner with sbomify or CRA suites)",
+   "Article 14 reporting workflow and ENISA Single Reporting Platform submission (left to CRA suites such as CVD Portal; we export a status summary they can use)",
+   "SBOM generation, binary/firmware analysis and code-level reachability (integrate Syft, Trivy, cdxgen, OE; leave binaries to ONEKEY/Finite State)",
+   "Multi-tenant SaaS: v1 ships as a self-hosted container next to Dependency-Track; EU single-tenant hosting only for design partners",
+   "Licence compliance, conformity assessment and technical-file authoring; any claim of CRA conformity"
   ]
  },
  "competitors": [
   {
-   "name": "OWASP Dependency-Track (free, self-hosted)",
-   "url": "https://github.com/DependencyTrack/dependency-track",
-   "how_we_differ": "We import from it rather than replace it, and add what it lacks: vendor CSAF matching, parent/container context, atomic SBOM+VEX publishing, hosting and support."
+   "name": "OWASP Dependency-Track 5.1 (free, self-hosted)",
+   "url": "https://dependencytrack.org/news/dependency-track-5-1",
+   "how_we_differ": "5.1 added component-level VEX export/import and KEV, and CSAF mirroring is in funded development. We build on it, writing decisions back into DT, and add what it doesn't plan: build-config evidence from Yocto, safe cross-release invalidation, customer-key signing. If DT ships CSAF matching we consume it."
+  },
+  {
+   "name": "OpenEmbedded/Yocto vex class and cve-check (free)",
+   "url": "https://raw.githubusercontent.com/openembedded/openembedded-core/master/meta/classes/vex.bbclass",
+   "how_we_differ": "Emits build-time CVE status per image but no triage workflow, review, cross-release ledger or CycloneDX/CSAF VEX tied to the shipped SBOM. We are its consumer, not its replacement."
+  },
+  {
+   "name": "SecObserve (free, open source)",
+   "url": "https://secobserve.github.io/SecObserve/integrations/vex",
+   "how_we_differ": "A capable general vulnerability-management tool with CSAF/CycloneDX/OpenVEX import-export per product and branch. It is another source of truth beside DT and has no embedded build evidence or invalidation rules; we target teams that want to stay in DT."
+  },
+  {
+   "name": "AboutCode DejaCode / CRAVEX (free, open source)",
+   "url": "https://aboutcode.org/docs/getting_started/cravex/",
+   "how_we_differ": "SME-oriented CRA/SBOM+VEX application centred on product and licence inventory. We specialise in evidence-backed triage on embedded firmware and offer a supported commercial licence."
+  },
+  {
+   "name": "Self-serve CRA suites: CVD Portal, CRA Evidence, CRA-Ready",
+   "url": "https://cvdportal.com/pricing",
+   "how_we_differ": "They sell the whole CRA process (Art. 14 reporting, SBOM registry, CSAF export, conformity) from EUR 1,188/yr. Their VEX is manual authoring on SBOM-level findings. We are the triage engine that feeds them, sold beside them, not instead."
   },
   {
    "name": "sbomify",
    "url": "https://sbomify.com/pricing/",
-   "how_we_differ": "sbomify is an SBOM publishing hub and trust center with a CRA wizard, scanning via OSV/Dependency-Track. We focus on the triage step before publishing: impact analysis, CSAF matching and VEX authoring. Likely partner or acquirer as much as rival."
+   "how_we_differ": "SBOM hub with DT/OSV scanning, CRA wizard and trust center at $159/month. It owns publishing; we own the decision before it. Integration target first, rival if it adds triage."
   },
   {
-   "name": "Interlynk (SBOM Manager on AWS Marketplace)",
+   "name": "Interlynk, Anchore Enterprise, ArmorCode, Manifest, Cybeats",
    "url": "https://aws.amazon.com/marketplace/pp/prodview-n6mc7symiq2rm",
-   "how_we_differ": "Interlynk prices by active developers from $18k/year. We price per product with public self-serve pricing well under that, for teams with few developers per product line."
+   "how_we_differ": "Enterprise SBOM/VEX platforms from $18k-$50k/yr or quote-only, SaaS-first and priced per developer or deal. We are self-hosted, per product, with public pricing for mid-size firmware teams."
   },
   {
-   "name": "Anchore Enterprise",
-   "url": "https://anchore.com/pricing/",
-   "how_we_differ": "Anchore is a scanning and policy platform at $34.5k-$50k/year plus support. We don't scan; we sit on any scanner's output and specialise in VEX/CSAF and CRA evidence."
-  },
-  {
-   "name": "Manifest / Cybeats SBOM Studio / Finite State",
+   "name": "Finite State / ONEKEY",
    "url": "https://finitestate.io/sbom-management",
-   "how_we_differ": "Quote-only enterprise platforms aimed at large medical and connected-device makers. We serve the mid-size tail they don't sell to, with self-serve onboarding."
-  },
-  {
-   "name": "Bundled cloud/registry SBOM features (AWS Inspector SBOM export, Docker Scout, GitHub attestations, JFrog Xray)",
-   "url": "https://docs.aws.amazon.com/inspector/latest/user/sbom-export.html",
-   "how_we_differ": "They generate or attach SBOMs inside one platform. None produces cross-vendor, per-release VEX/CSAF decisions for customers and regulators."
+   "how_we_differ": "Binary/firmware analysis with exploit context, quote-only. Complementary: we take their or any scanner's findings and manage per-release decisions."
   }
  ],
- "differentiation": "VEXpath is the only option priced and built for a mid-size manufacturer's real job: deciding, per shipped release, which CVEs matter and publishing that decision as VEX/CSAF. It keeps existing scanners and Dependency-Track, adds vendor-CSAF matching and dependency-path context to cut noise, and prices per product with self-serve onboarding, between free tools and $18k-$50k quote-led platforms.",
+ "differentiation": "VEXpath is a triage engine, not another CRA suite or SBOM hub. It runs next to the Dependency-Track a device maker already has, reads the evidence that lives in its Yocto build, proposes VEX statuses with proof attached, re-opens decisions when a release changes, and hands signed VEX to whatever publishes it. Free tools hold findings; suites hold paperwork; enterprise platforms cost $18k+. Nobody affordable turns embedded build evidence into reviewed VEX.",
  "build": {
-  "team": "2 engineers (one with CycloneDX/CSAF standards experience) + 1 founder-seller with product-security/PSIRT background",
-  "months_to_mvp": 5,
+  "team": "2 engineers (one embedded Linux/Yocto, one with CycloneDX/CSAF and Dependency-Track API experience) + 1 founder-seller with product-security/PSIRT background",
+  "months_to_mvp": 6,
   "hardest_parts": [
-   "Reliable PURL matching between SBOM components and vendor CSAF product trees, which use inconsistent product identifiers",
-   "Carrying VEX decisions across releases safely: knowing when a dependency-path change invalidates an earlier 'not_affected'",
-   "Normalising messy real-world SBOMs (missing dependency graphs, mixed CycloneDX/SPDX versions, container layers)",
-   "Keeping pace with CRA harmonised standards and ENISA reporting-platform formats that are still being finalised"
+   "Reading build evidence reliably across Yocto releases and BSP layers (CVE_STATUS reasons, patch metadata, kernel config to CVE mapping) and tying it to scanner PURLs",
+   "Vendor CSAF matching where it exists: Red Hat VEX identifies source RPMs (arch=src) while scanners list binary RPMs, and its format changed in 2026; most other vendor CSAF (e.g. Siemens) has no PURLs",
+   "A conservative, tested invalidation rule for inherited decisions so a stale not_affected is never exported",
+   "Two-way sync with Dependency-Track analysis state without conflicts or overwriting analysts' work",
+   "Shipping a self-hosted product (upgrades, offline vulnerability data, customer-key signing) that small teams can run"
   ]
  },
  "pricing": {
-  "model": "Annual SaaS subscription per product line (a product with its supported release branches), unlimited users; tiers by product count",
-  "entry_price": "$490/month billed annually (~$5,900/year) for up to 5 products; $1,490/month for up to 25 products",
-  "rationale": "Per-product pricing matches how CRA obligations attach (per product) and how mid-size makers think about cost, unlike per-developer pricing that punishes small firmware teams. The entry tier sits about 3x above sbomify Business, justified by triage and CSAF matching rather than publishing alone, and at roughly a third of Interlynk's smallest $18k contract, low enough for a team-lead card or a small purchase order without procurement.",
+  "model": "Annual licence per product line (one firmware/product family with its maintained release branches; defined by SBOM project root), unlimited users, self-hosted container; EU single-tenant hosting as a paid option. Quoted in EUR excl. VAT.",
+  "entry_price": "EUR 290/month billed annually (EUR 3,480/year) for up to 5 product lines, self-hosted; EUR 49 per additional product line per month with no tier cap; EU single-tenant hosting +EUR 150/month",
+  "rationale": "Priced as an add-on beside a EUR 1,188-3,588 CRA suite or a $159/month SBOM hub, not as a replacement for them, so the whole CRA stack stays well under Interlynk's smallest $18k contract and within card or grant-funded budgets. Self-hosting removes multi-tenant hosting cost. Uncapped per-product pricing lets revenue grow with portfolios. The low ACV only works with product-led and partner-led acquisition; founder-led selling is reserved for ten design partners.",
   "comparables": [
    {
     "vendor": "sbomify Business",
@@ -154,29 +164,68 @@
   ]
  },
  "go_to_market": {
-  "first_customers": "Ten EU (DACH/Nordics/Benelux first) industrial-automation, building-tech and IoT makers and B2B software vendors with 50-500 staff, already running Dependency-Track or Trivy, with a named person newly responsible for CRA, and with downstream OEM customers already requesting SBOM/VEX.",
-  "channel": "Founder-led sales into the Dependency-Track and CycloneDX communities (an open-source CSAF-to-Dependency-Track bridge as lead magnet), CRA webinars with industry associations (e.g. ZVEI, VDMA) and partnerships with CRA consultancies and notified bodies who need a tool to recommend.",
-  "wedge": "Free 'VEX in a day' import: connect an existing Dependency-Track instance, auto-resolve findings using vendor CSAF advisories, and show the noise cut (e.g. '412 findings to 37 that need a decision') before asking for payment."
+  "first_customers": "Ten EU (DACH/Nordics/Benelux first) industrial-automation, building-tech and IoT makers with 50-500 staff, firmware on Yocto/embedded Linux, already running Dependency-Track or OE cve-check, with a named CRA owner and at least one downstream OEM or operator asking for vulnerability status or VEX. Signed as paid design partners with a data-handling agreement.",
+  "channel": "Product-led through an Apache-licensed 'oe-vex-to-dependency-track' importer published in the Yocto/OpenEmbedded and Dependency-Track communities, with self-serve trial and card/online-quote purchase; integrations and referral margin with CRA suites and SBOM hubs (CVD Portal, sbomify) and embedded-Linux/CRA consultancies who resell; founder-led sales only for the design partners. No notified bodies (independence).",
+  "wedge": "The free importer pushes the build's own CVE_STATUS into Dependency-Track and reports how many findings remain open. The paid engine then works the remainder (kernel config, patches, vendor CSAF, invalidation, signed export) and shows the additional cut, with evidence, on the buyer's own data."
  },
  "risks": [
-  "Crowding from below and above: sbomify already offers a CRA wizard and Dependency-Track scanning at $159/month, and funded vendors (Anchore, Interlynk, Manifest, ArmorCode) can add self-serve tiers as CRA demand grows.",
-  "Bundling: Dependency-Track may add CSAF ingestion and atomic BOM+VEX upload (both are open feature requests), and SCA suites or GitHub could ship VEX authoring, removing the core noise-reduction story.",
-  "Deadline-driven demand: many mid-size makers may defer spending until late 2027 or until a customer or market surveillance authority forces it, giving lumpy, late revenue.",
-  "Regulatory uncertainty: CRA harmonised standards and ENISA platform formats are not final; if they don't require VEX/CSAF specifically, the compliance hook weakens to 'nice to have'.",
-  "Technical: vendor CSAF coverage is uneven outside large vendors (Red Hat, Oracle, Siemens), so noise reduction may be much smaller for typical embedded stacks than the demo suggests.",
-  "Liability: customers relying on our 'not_affected' auto-suggestions in regulator-facing documents could blame us for wrong calls; decisions must stay human-signed."
+  "Bundling: Dependency-Track 5.1 already exports component-level VEX and tracks KEV, CSAF ingestion is funded and in progress, and OpenEmbedded already emits build-time VEX. If DT adds matching and better OE import, our value narrows to evidence rules, invalidation and signing; we build on DT and contribute upstream rather than compete with it.",
+  "Crowding: free SecObserve and DejaCode/CRAVEX cover VEX authoring, and cheap CRA suites (CVD Portal from EUR 1,188/yr, CRA Evidence, CRA-Ready, sbomify) list VEX or CSAF export. Buyers may see VEX as a suite checkbox; we win only if triage depth on embedded firmware visibly saves engineer time, or through partner distribution. Funded enterprise vendors could also add a self-serve tier.",
+  "Weak, late demand and costly acquisition: problem evidence is developer feature requests, not buyer budgets; the CRA mandates neither VEX nor CSAF; many makers will wait for an OEM customer or December 2027; and a EUR 3.5k ACV cannot carry multi-stakeholder Mittelstand sales, so product-led and partner channels must work or CAC payback fails.",
+  "Technical: the noise cut on embedded stacks is unproven; vendor CSAF is sparse or lacks PURLs, Red Hat changed its VEX format in 2026, and build-evidence rules may resolve fewer findings than the demo suggests.",
+  "Liability and data custody: a wrong exported not_affected can tell operators not to patch. Mitigations are mandatory human sign-off, logged automation, customer-key signing, contractual liability caps and professional-indemnity insurance, but EU product-liability rules for software may limit contractual caps. Hosted customers will require EU hosting and ISO 27001; self-hosting reduces but does not remove this.",
+  "Regulatory: harmonised standards and ENISA formats are not final and may not reference VEX/CSAF; marketing must sell Art. 14(8) machine-readable user information and customer demand, never conformity."
  ],
  "riskiest_assumption": {
-  "assumption": "Mid-size EU manufacturers will pay ~$6k/year now (before December 2027) for VEX/CSAF triage on top of free Dependency-Track, rather than living with noise or buying a cheaper publishing tool like sbomify.",
-  "test": "Over 2 weeks, run 15 discovery calls with CRA owners at 50-500-person EU device/software makers sourced from Dependency-Track/CycloneDX community channels and an industry-association CRA webinar; show a clickable mock and one manual 'noise cut' on their own exported Dependency-Track findings, then ask for a paid pilot letter of intent at the entry price.",
-  "success_signal": "At least 4 of 15 sign a pilot LOI at $490/month or more, and at least 8 confirm an existing VEX/advisory request from a customer or a named budget for CRA tooling before end of 2027."
+  "assumption": "On real Yocto/embedded-Linux firmware SBOMs, evidence rules resolve a large share of the findings that Dependency-Track 5.1 plus OpenEmbedded's own CVE_STATUS leave open, without wrong not_affected calls, and that saving is worth EUR 290/month to mid-size device makers.",
+  "test": "In 2 weeks, without building the product: (a) from 15 discovery calls with CRA owners at 50-500-person EU device makers (sourced via Yocto/OE and Dependency-Track communities and a CRA consultancy), collect 5 firmware SBOM + build-artefact sets under NDA, processed on the prospect's premises or an isolated laptop; apply the rules by hand with scripts and have the prospect's engineer review every not_affected; (b) at the end of each call show the result or a mock and ask for a paid design-partner LOI at the entry price.",
+  "success_signal": "In at least 3 of 5 data sets, 30%+ of findings left open after DT 5.1 + CVE_STATUS are resolved with documented evidence and zero wrong not_affected on review; and at least 4 of 15 sign a LOI at EUR 290/month or more, with at least 3 accepting self-hosted deployment and naming who approves the spend."
  },
  "open_questions": [
-  "Do CRA harmonised standards or market surveillance authorities expect VEX/CSAF specifically, or will any documented vulnerability handling do?",
-  "How much does vendor CSAF matching actually cut findings on typical embedded Linux / RTOS stacks versus enterprise distros?",
-  "Does sbomify (or another SBOM hub) already plan VEX authoring, making it a competitor rather than a partner?",
-  "Are Dependency-Track's CSAF (#2353) and atomic BOM+VEX (#1872) requests still open, and on its roadmap?",
-  "Who owns the budget in a 200-person device maker: product security, quality/regulatory or engineering?",
-  "Is per-product pricing understood by buyers, given how product lines and release branches vary?"
+  "Do CRA harmonised standards, market surveillance authorities or downstream OEMs expect VEX/CSAF specifically, or will any documented vulnerability handling do?",
+  "How much of the residual noise on typical Yocto/RTOS firmware is resolvable from build evidence versus needing reachability or binary analysis?",
+  "Will Dependency-Track's CSAF work (#2353) include matching, and on what timeline; could VEXpath contribute it or be the reference integration?",
+  "Will CVD Portal, sbomify or similar suites integrate or resell a triage engine, or build VEX triage themselves?",
+  "How many EU device makers fit the profile (50-1,000 staff, embedded Linux, SBOMs, a named CRA owner)? Likely a few thousand; needs sizing from industry-association data.",
+  "Who owns the budget in a 200-person device maker: product security, quality/regulatory or engineering; and can it be bought on a card or via SECURE grant funding?",
+  "Do the top vendor CSAF trusted providers' terms allow commercial ingestion and matching (we link rather than republish)?",
+  "Is the per-product-line unit (SBOM project root) clear enough to avoid tier disputes?"
+ ],
+ "revision_log": [
+  "[competitor-analyst] Dependency-Track 5.1 shipped component VEX/KEV and CSAF ingestion is funded → repositioned to build on DT (write-back, consume its CSAF when it lands); core moved from CSAF matching to Yocto build evidence, invalidation and signing; DT 5.1 added as competitor and in why_now",
+  "[competitor-analyst] Missed self-serve CRA suites (CVD Portal, CRA Evidence, CRA-Ready) priced below VEXpath → added as competitor; dropped the CRA evidence pack and Art. 14 workflow to complement rather than compete; positioned as triage engine sold beside suites; entry price cut to EUR 3,480/yr",
+  "[competitor-analyst] Free SecObserve and DejaCode/CRAVEX cover VEX workbench and SBOM+VEX export → added both as competitors; differentiation now rests on embedded build evidence and DT-native workflow, which neither offers; crowding stated in risks",
+  "[competitor-analyst] sbomify is a closer rival than 'partner' → reframed as integration target first and rival if it adds triage; hosted portal dropped so we don't overlap its publishing; risk kept",
+  "[competitor-analyst] Funded vendors can add a self-serve tier quickly → not changed in design: they are SaaS-first and per-developer, while VEXpath is self-hosted and per product; added to crowding risk",
+  "[competitor-analyst] Defensible core is a perishable CSAF-matching feature → core changed to build-evidence rules plus decision invalidation and signing, with CSAF matching as one input; the 'feature not product' risk remains in risks[0]",
+  "[gtm-pricing] ~$6k ACV can't carry founder-led Mittelstand sales → channel changed to product-led (open-source importer, self-serve trial, card/online quote) plus partner resale; founder-led sales limited to 10 design partners; CAC risk stated",
+  "[gtm-pricing] Price anchored by cheaper CRA-branded tools → priced in EUR as an add-on (EUR 290/month) beside a suite instead of a 3x premium over sbomify; dropped the commoditised CRA evidence pack",
+  "[gtm-pricing] Free wedge gives away the noise-cut aha → free importer now only surfaces the build's own CVE_STATUS in DT; the paid engine does the further cut, invalidation and signed export",
+  "[gtm-pricing] Deadline-driven lumpy revenue → not changed: inherent to CRA; kept in risks and the test now asks for named spend approver and OEM demand",
+  "[gtm-pricing] Low expansion ceiling and ambiguous product unit → removed the 25-product cap (EUR 49 per extra product line, uncapped) and defined a product line by SBOM project root; open question kept",
+  "[gtm-pricing] Notified bodies unlikely partners; USD pricing → removed notified bodies from channel; pricing now in EUR excl. VAT",
+  "[legal-ethics] No data-custody plan for a cross-customer exposure map → v1 is self-hosted next to DT; EU single-tenant hosting only as option; multi-tenant SaaS out of scope; test data processed on prospect premises; EU hosting/ISO 27001 need stated in risks",
+  "[legal-ethics] KEV-triggered 24h/72h draft misreads Art. 14 → feature removed; KEV only raises queue priority; Art. 14 workflow left to CRA suites; why_now now states the trigger as the manufacturer becoming aware of an actively exploited vulnerability in its product",
+  "[legal-ethics] Liability for wrong not_affected → suggestions never auto-applied, mandatory named reviewer sign-off, automation logged, conservative invalidation, customer-key signing; liability caps, PI insurance and EU product-liability limits added to risks",
+  "[legal-ethics] Overstating CRA requirements → one-liner no longer says 'priced for CRA compliance'; why_now says the CRA mandates neither VEX nor CSAF and uses Art. 14(8) as the hook; regulatory risk says never to claim conformity",
+  "[legal-ethics] Hosted portal could publish unpatched exposure → hosted portal removed; exports private by default, publication and timing stay with the manufacturer",
+  "[legal-ethics] Vendor CSAF licence terms → we link to vendor advisories rather than republish; licence check added to open questions",
+  "[market-skeptic] Demand evidence is developer issues, not buyer budgets → not changed in evidence (input has no buyer data); stated in risks and the riskiest-assumption test now requires LOIs, a named spend approver and OEM demand",
+  "[market-skeptic] Compliance hook weaker than pitched → pitch moved to Art. 14(8) machine-readable user information and downstream OEM requests; CRA's non-mandate of VEX/CSAF stated in why_now and risks",
+  "[market-skeptic] Urgency is late and deadline-shaped → not changed: real constraint; lower price and product-led motion reduce cash burn per deal; kept in risks",
+  "[market-skeptic] WTP evidence comes from enterprise contracts → price cut to EUR 3,480/yr and framed against suite prices; enterprise comparables kept only as ceiling; WTP is the second half of the riskiest assumption",
+  "[market-skeptic] CSAF matching may be commoditised in DT → CSAF matching is now one input among build-evidence rules; we consume DT's matching if it ships",
+  "[market-skeptic] Market size unquantified → narrowed segment to embedded-Linux device makers and added sizing as an open question with a rough 'few thousand' expectation",
+  "[security-practitioner] CSAF noise cut misses embedded Linux core → MVP now ingests OE vex.bbclass CVE_STATUS, patch metadata and kernel config; vendor CSAF demoted to one source; buyer narrowed to Yocto/embedded-Linux makers",
+  "[security-practitioner] Trust in auto not_affected without reachability → every suggestion carries its evidence, is never auto-applied, needs named sign-off; invalidation re-opens on any version, path or build-config change; reachability stays out of scope and is a risk",
+  "[security-practitioner] Data custody for DACH industrial makers → self-hosted by default, EU single-tenant hosting optional",
+  "[security-practitioner] Split source of truth with DT → decisions are written back into DT's analysis; VEXpath proposes and ledgers, DT stays where analysts work",
+  "[security-practitioner] KEV is a triage alert, not a report draft → KEV now only raises queue priority",
+  "[security-practitioner] Thin integrations (Jira, CI, Yocto/SPDX 3 VEX) → Yocto build-time VEX ingest added to MVP; Jira/CI gating not added to v1 to protect scope (open for v1.1)",
+  "[technical-feasibility] Siemens CSAF has no PURLs → vendor CSAF matching limited to feeds that carry PURLs; build evidence is the primary source; noted in hardest_parts",
+  "[technical-feasibility] Red Hat VEX uses source RPMs and changed format in 2026 → binary-to-source-RPM mapping listed as a hardest part and feature detail; maintenance risk in risks",
+  "[technical-feasibility] 5 features plus multi-tenant SaaS in 5 months is too tight → MVP cut to 4 features, hosted portal, evidence pack and multi-tenancy dropped, self-hosted delivery; months_to_mvp raised to 6",
+  "[technical-feasibility] No invalidation rule for inherited decisions → rule defined: any change to component version, dependency path or build-config hash re-opens the decision",
+  "[technical-feasibility] Running a CSAF provider portal adds operations → portal removed; export only, customers publish via their site, sbomify or a CRA suite"
  ]
 }

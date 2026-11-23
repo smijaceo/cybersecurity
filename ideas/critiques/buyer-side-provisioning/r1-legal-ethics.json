@@ -14,7 +14,7 @@
     {
       "objection": "Positioning the product as a way around SCIM paywalls invites 'circumvent usage limits' claims. Atlassian's Cloud Terms bar customers from interfering with or circumventing Product usage limits or Scope of Use restrictions. Pricing rationale explicitly sells the bridge as cheaper than GitHub Enterprise's SCIM uplift, which reads as tier-avoidance in a dispute and in any Okta/Microsoft gallery review.",
       "severity": "major",
-      "evidence": "https://www.atlassian.com/legal/cloud-terms-of-service (s.2.x: may not interfere with or circumvent Product usage limits); concept:pricing.rationale; concept:risks[3]"
+      "evidence": "https://www.atlassian.com/legal/cloud-terms-of-service (s.2.2(g): may not interfere with or circumvent Product usage limits); concept:pricing.rationale; concept:risks[3]"
     },
     {
       "objection": "A multi-tenant service holding admin credentials to many companies' SaaS apps is a supply-chain target; one compromise grants account-creation rights across all customers. Per-tenant KMS keys do not help if the worker that decrypts them is compromised. The MVP has no stated design for customer-held keys, a local agent option, or least-privilege machine accounts, and a 5-month MVP with 2 engineers makes SOC 2 Type II at launch implausible.",
@@ -33,7 +33,12 @@
     }
   ],
   "strongest_point": "Customer-authorised admin automation with low dual-use risk; API-first connectors are clearly lawful, and some vendors (monday.com s.2.7) explicitly allow customer-authorised third-party agents.",
-  "what_would_change_my_mind": "Counsel review of the top 25 target apps' terms showing that 20+ permit API or dedicated service/bot accounts for user management without enterprise tiers; a design using machine accounts or customer-run agents so no human admin credentials or MFA seeds are held centrally; written non-objection from 3 major app vendors or acceptance into the Okta Integration Network; positioning rewritten from 'avoid the SCIM tax' to 'automate apps without SCIM'.",
+  "what_would_change_my_mind": [
+    "Counsel review of the top 25 target apps' terms showing 20+ permit API or dedicated service/bot accounts for user management without an enterprise tier.",
+    "A design using machine accounts or customer-run agents, so no human admin credentials or MFA seeds are held centrally.",
+    "Written non-objection from 3 major app vendors, or acceptance into the Okta Integration Network / Entra app gallery.",
+    "Positioning rewritten from 'avoid the SCIM tax' to 'automate apps without SCIM', with evidence claims limited to 'checks run'."
+  ],
   "resolved_prior": [],
   "sources": [
     "https://www.figma.com/legal/tos/",

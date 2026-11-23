@@ -1,0 +1,53 @@
+{
+  "concept_id": "cross-cloud-workload-identity",
+  "lens": "gtm-pricing",
+  "round": 1,
+  "score": 4,
+  "verdict": "conditional",
+  "summary": "$400/month (~$4.8k ACV) is cheap to buy but too small for a motion that needs read-only access to every cloud account and CI org, which means security review and founder selling. The recurring value is weak: once keys are migrated, drift alerts overlap free CSPM/Access Analyzer checks, so churn looks likely. The anchor against Aembit's 500-workload bill overstates the savings.",
+  "objections": [
+    {
+      "objection": "The core job is a one-off migration. After the keys are replaced, what's left is 'alert on a new long-lived key' and an evidence report. IAM Access Analyzer, native CSPMs and Wiz-class tools already flag old access keys, so year-2 renewal at $4.8k is fragile. The concept names this churn risk itself but has no pricing answer, such as a migration fee plus a smaller monitoring tier.",
+      "severity": "major",
+      "evidence": "concept:risks[2]; concept:risks[0]; concept:mvp.features[3]"
+    },
+    {
+      "objection": "The sales motion doesn't fit the contract value. Self-serve requires the buyer to grant a young vendor read access to every AWS/GCP/Azure account and GitHub/GitLab org. At 50-1,000-person SOC 2 companies, that triggers vendor security review (questionnaire, SOC 2 report request), which a 3-person startup without its own SOC 2 can't clear quickly. If one founder-seller spends 4-8 weeks per $4.8k deal, the ACV can't fund the channel. Ten customers is about $48k ARR, which doesn't sustain a team of three.",
+      "severity": "major",
+      "evidence": "concept:build.hardest_parts[2]; concept:pricing.entry_price; concept:build.team; concept:open_questions[2]"
+    },
+    {
+      "objection": "The price anchor is misleading. The rationale compares against Aembit or Infisical for 500 workloads (~$10k/month), but the concept's own success signal expects about 15 long-lived keys crossing boundaries per company. Brokering only those workloads on Aembit costs roughly $100-300/month, and the first 10 are free. Infisical bills per identity, humans included, and it stores secrets rather than removing them, so it is a different job. The real alternative is a few engineer-days doing native federation by hand, which is free and works with the open-source helper and Terraform modules this concept gives away.",
+      "severity": "major",
+      "evidence": "concept:pricing.rationale; concept:riskiest_assumption.success_signal; https://aembit.io/faq/ (Teams from $20/workload/month; free up to 10 workloads); https://infisical.com/pricing.md (billed per identity, human plus machine)"
+    },
+    {
+      "objection": "Giving away the open-source helper and per-pair Terraform modules hands over most of the remediation value. Content-led adoption reaches engineers who will do the work themselves, not the budget holder, and the GitHub issues in the evidence come from developers asking upstream projects for fixes, not buyers.",
+      "severity": "minor",
+      "evidence": "concept:go_to_market.channel; input:themes[0].need_statements"
+    },
+    {
+      "objection": "Per-account pricing doesn't match how mid-market AWS estates are set up. Organizations and Control Tower setups commonly run 20-100+ accounts, so at $30 per extra account a 60-account estate costs about $1,900/month. That's unpredictable and penalises good account hygiene, the same kind of per-unit penalty the concept criticises in others. A flat estate-size band would be clearer.",
+      "severity": "minor",
+      "evidence": "concept:pricing.entry_price"
+    },
+    {
+      "objection": "Marketplace listings (AWS/GCP) charge listing fees, and procurement through private offers is aimed at large commitments. At $4.8k ACV, drawing on committed spend is an unlikely buying path for this ICP.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "A free read-only key report is a cheap, concrete wedge that gives the buyer a number tied to an audit finding, and the public price is far below enterprise NHI platforms.",
+  "what_would_change_my_mind": [
+    "At least 3 of 40 platform leads in the stated test sign LOIs or prepay the annual plan after seeing their key report, and they say the ongoing monitoring (not the migration) is why they'd renew.",
+    "Evidence that the scanner can run entirely in the customer's environment (CLI/GitHub Action) and pass a mid-market security review in under 2 weeks, so self-serve conversion works without founder selling.",
+    "A revised model, such as a one-off migration fee ($5-15k per estate) plus a cheaper monitoring subscription, or bundling with a compliance platform (Vanta/Drata integration), that shows an ACV and payback that can fund the channel.",
+    "Interview data showing the median target company has 30+ static keys crossing a cloud/CI boundary that need ongoing control, not a one-time cleanup."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://aembit.io/faq/",
+    "https://infisical.com/pricing.md",
+    "https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/"
+  ]
+}

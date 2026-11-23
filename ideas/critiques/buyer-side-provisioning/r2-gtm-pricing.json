@@ -1,0 +1,77 @@
+{
+  "concept_id": "buyer-side-provisioning",
+  "lens": "gtm-pricing",
+  "round": 2,
+  "score": 4,
+  "verdict": "no-go",
+  "summary": "The read-only pivot fixes the trust problem and makes pricing coherent, but it walks into the SOC 2 buyer's existing compliance platform. Vanta-class tools already check offboarding through read-only integrations, and the concept courts them as partners. What remains is a $3-6K ACV for unproven pain, sold founder-led with concierge scans, plus churn after each audit.",
+  "objections": [
+    {
+      "objection": "The target buyer (a SOC 2/ISO shop with an audit in the next six months) very likely already pays for a compliance-automation platform. Vanta's offboarding workflow reportedly detects accounts in connected apps through mostly read-only integrations and auto-closes the task once deprovisioning is detected. Apps without an integration sit under 'Unmonitored Accounts', where an admin attests removal by hand. That covers most of LeaverCheck's value for API apps inside a budget line the buyer already has, so the channel plan to 'partner with compliance-automation tools' means courting the most dangerous substitute. What's left is better coverage of unmonitored apps, and that relies on CSV uploads, which is not much better than the attestation the buyer already does.",
+      "severity": "major",
+      "evidence": "https://help.vanta.com/en/articles/11345609-offboarding-personnel (from search results; the page itself could not be opened from this session); concept:go_to_market.channel; concept:buyer.company_profile"
+    },
+    {
+      "objection": "The price is set by a competitor anchor, not by value, and the anchor works against it. The rationale benchmarks Scimify at $0.90/user/month, but Scimify does the deprovisioning. Charging $1/user/month just to check is more than the bridge that does the work, which is a hard sentence for a buyer to accept. Per-IdP-user pricing also charges for every employee when the value sits in a handful of leavers a month on 10+ non-SCIM apps.",
+      "severity": "major",
+      "evidence": "concept:pricing.rationale; concept:pricing.entry_price; concept:competitors"
+    },
+    {
+      "objection": "The unit economics are still thin. At $250/month minimum and about $6K for 500 users, a typical deal is $3-6K a year. The motion is founder-led sales opened by a concierge scan that someone diffs by hand, plus a GDPR DPA and a security review (lighter now, but still needed for holding the employee directory and read tokens). The concept rates willingness to pay 2 of 5. A $3-6K ACV can fund only self-serve conversion, and the funnel described is services-led.",
+      "severity": "major",
+      "evidence": "concept:risks (Low ACV, Willingness to pay); concept:go_to_market.wedge; concept:riskiest_assumption.test"
+    },
+    {
+      "objection": "The buying trigger is the audit, which makes churn seasonal. The free one-time scan delivers the 'aha' (finding orphans), and a quarterly manual reconciliation passes the audit. Many buyers will take the scan, clean up and not subscribe, or buy annually before the audit and drop it once they pass. Coverage decay from export uploads that stop coming in also erodes perceived value at renewal.",
+      "severity": "minor",
+      "evidence": "concept:competitors (Ticket plus spreadsheet); concept:hardest_parts"
+    },
+    {
+      "objection": "Expansion is limited to headcount. With onboarding and movers out of scope and no write side, there's no second product to upsell. Headcount growth at 150-1,500-employee firms adds perhaps 10-20% a year, so net revenue retention will struggle to exceed 100% once churn is counted.",
+      "severity": "minor",
+      "evidence": ""
+    }
+  ],
+  "strongest_point": "The free orphan-account scan is a crisp, low-friction wedge with a tangible result, and read-only scope genuinely shortens security review at a card-swipe price.",
+  "what_would_change_my_mind": [
+    "In the concierge test, at least 5 of 20 scanned companies already use Vanta or Drata and still find 1 or more active leaver accounts those tools missed",
+    "At least 5 LOIs or paid pilots at $1/user/month or more, with at least 3 converting without founder-run custom work",
+    "A compliance platform (Vanta, Drata, Secureframe) agrees to an integration that feeds LeaverCheck results into its 'unmonitored accounts' view, rather than shipping the feature itself",
+    "Pricing tied to non-SCIM apps or leavers checked, showing a stated value per finding, and a blended ACV of at least $10K"
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Small wedge ACV can't fund a security review for a vendor holding admin credentials",
+      "resolved": false,
+      "note": "Partly resolved: read-only scopes and CSV exports shrink the review a lot. But ACV fell to about $3-6K, so the sales-cost problem stays."
+    },
+    {
+      "objection": "Weak labour ROI for apps with no SCIM at $149-299 per app",
+      "resolved": false,
+      "note": "The price is lower and the pitch moved to risk evidence. ROI now depends on how often orphan accounts occur and how much buyers value catching them, which is unproven (WTP 2/5), and auditors accept manual checks."
+    },
+    {
+      "objection": "API tier competes with Okta Workflows the buyer already owns",
+      "resolved": true,
+      "note": "No longer sells writes. But the same 'already owned' problem now applies to compliance platforms that check offboarding."
+    },
+    {
+      "objection": "Narrow discount against Stitchflow's managed service",
+      "resolved": true,
+      "note": "A different product at a much lower price, so the Stitchflow comparison no longer drives the deal."
+    },
+    {
+      "objection": "SEO directory channel already owned by Stitchflow",
+      "resolved": true,
+      "note": "Dropped. The free scan and admin communities are a reasonable channel, though audit-firm and compliance-tool partnerships are doubtful."
+    },
+    {
+      "objection": "Per-app line-item churn and capped expansion",
+      "resolved": false,
+      "note": "Per-user pricing removes per-app churn, but post-audit churn and headcount-only expansion remain."
+    }
+  ],
+  "sources": [
+    "https://help.vanta.com/en/articles/11345609-offboarding-personnel"
+  ]
+}

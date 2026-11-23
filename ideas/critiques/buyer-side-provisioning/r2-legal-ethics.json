@@ -1,0 +1,68 @@
+{
+  "concept_id": "buyer-side-provisioning",
+  "lens": "legal-ethics",
+  "round": 2,
+  "score": 7,
+  "verdict": "go",
+  "summary": "The read-only pivot removes the round-1 problems: no shared human logins, no MFA seeds, no tier circumvention, no admin-credential vault. Remaining issues are ordinary data-protection hygiene, now concentrated in the concierge scan and emailed CSV exports (whole user lists sent before any DPA), plus contract wording so 'checks run' never reads as a guarantee.",
+  "objections": [
+    {
+      "objection": "The riskiest-assumption test has 20 prospects send 90 days of IdP deactivations plus full user exports from 5-10 apps, diffed by hand in a spreadsheet, before the company has a DPA, sub-processor list, retention rule or SOC 2. That is personal data on employees and leavers, processed by a vendor that may not yet exist as a company. Under GDPR Art. 28 the controller may use only processors that give sufficient guarantees, under a contract. Many IT managers' own policies will stop them sharing this, and those who do share it create exposure for both sides.",
+      "severity": "major",
+      "evidence": "https://gdpr-info.eu/art-28-gdpr/; concept:riskiest_assumption.test; concept:go_to_market.wedge"
+    },
+    {
+      "objection": "Emailed and uploaded app exports usually contain every column the app exports (names, titles, last login, sometimes billing or guest/external-collaborator data). Matching only needs identifier, status and role. Without column stripping on ingest, a fixed retention period and a non-email upload path, this breaks Art. 5(1)(c) minimisation and storage limitation. Email inboxes are also a leaky place to receive directory dumps.",
+      "severity": "minor",
+      "evidence": "https://gdpr-info.eu/art-5-gdpr/; concept:mvp.features[2]"
+    },
+    {
+      "objection": "A read-only list-users token is still a full directory of the customer's staff, guests and contractors in each app. Many of them are an admin-scoped token with a read label, and the concept says it will 'confine' some admin tokens rather than refuse them outright. A hosted multi-tenant store of these tokens is still a breach target, though far less dangerous than write credentials. The concept needs a published per-app scope list and a rule that admin-only tokens are refused, not just isolated.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts[1]; concept:risks[4]"
+    },
+    {
+      "objection": "The liability limits ('checks run', no guarantee of completeness) are listed only as a risk and are not yet in the MVP or the auditor-export wording. The free scan's 'leftover-accounts report' will also be read as a finding of fact. If a mismatch makes a customer chase or wrongly accuse an app owner, or misses a live account, customers will cite the report. The terms need disclaimers, and the report has to show which apps were and weren't covered.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[5]; concept:risks[3]"
+    }
+  ],
+  "strongest_point": "Read-only, customer-authorised verification that never writes, stores no human logins or MFA seeds and needs no browser automation: low dual-use potential and little vendor-terms exposure.",
+  "what_would_change_my_mind": [
+    "A one-page DPA, NDA and 30-day deletion commitment signed before any concierge scan, with exports cut to identifier, status and role columns.",
+    "A published per-app table for the 12 connectors showing a genuinely read-only scope on the tiers buyers hold, with admin-only apps routed to exports.",
+    "Customer terms and report templates reviewed by counsel, stating coverage per app and disclaiming completeness."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Browser-agent fallback replays shared human admin logins and MFA seeds that vendor terms (Figma, GitHub) forbid.",
+      "resolved": true,
+      "note": "Browser agents, stored admin passwords and TOTP seeds are out of scope. Access is through API tokens the customer issues, or exports."
+    },
+    {
+      "objection": "Positioning as a way around SCIM paywalls invites circumvention claims (Atlassian s.2.2(g)).",
+      "resolved": true,
+      "note": "The product no longer provisions, and the 'SCIM tax' pitch is gone. Reading user lists through permitted APIs or exports gets around no tier limit."
+    },
+    {
+      "objection": "A multi-tenant vault of admin credentials is a supply-chain target, and SOC 2 at launch is implausible.",
+      "resolved": true,
+      "note": "Only least-privileged read tokens are held, which greatly reduces the blast radius. Some residual directory-exposure risk remains (see objection 3), and SOC 2 is still listed among the hardest parts."
+    },
+    {
+      "objection": "Selling nightly verification as 'audit evidence' creates liability if a connector silently misses a deprovision.",
+      "resolved": true,
+      "note": "The log now records 'checks run' without claiming completeness. The contract terms still need to be written (see objection 4)."
+    },
+    {
+      "objection": "GDPR processor duties, and admin-console screenshots retained as excessive evidence.",
+      "resolved": true,
+      "note": "With no browser agents there are no screenshots, and DPAs, a sub-processor list and short retention are now in the risks. CSV exports bring a smaller minimisation issue back (objection 2)."
+    }
+  ],
+  "sources": [
+    "https://gdpr-info.eu/art-28-gdpr/",
+    "https://gdpr-info.eu/art-5-gdpr/",
+    "https://www.figma.com/legal/tos/"
+  ]
+}

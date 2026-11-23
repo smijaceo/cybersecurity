@@ -1,0 +1,29 @@
+# Founder profile (decision D15). Summarised from the PM's own description; no name or links.
+# Used by the founder-fit critic lens and the panel ranking.
+
+background:
+  education: MS in cybersecurity
+  certifications: [CompTIA A+, Network+, Security+, PenTest+, CySA+, Project+]
+  hands_on:
+    - CTF competitions (offensive and defensive)
+    - Windows administration and internals
+    - Kali Linux / penetration testing tooling
+    - Python and automation
+    - Windows detection engineering (Windows Event Forwarding + Sysmon detection for logons)
+  strengths_inferred:
+    - Can build security tooling and detections without hiring engineers
+    - Credible with practitioners (SOC analysts, sysadmins, pentesters)
+
+constraints:
+  capital: none                  # bootstrapped: no paid ads, no large infrastructure bills
+  time: plenty                   # can work full time on it
+  network: a few industry contacts
+  team: solo technical founder   # no co-founder yet; no dedicated salesperson
+
+implications:                     # how critics should read the constraints
+  - Prefer time to first revenue in months, not years; services-first or paid pilots are fine.
+  - Prefer sales motions one technical founder can run (self-serve, community, MSP/partner channels,
+    marketplaces) over long enterprise procurement cycles.
+  - Prefer low running costs (no heavy data processing or 24/7 managed service on day one).
+  - Prefer domains where existing skills give credibility (Windows, detection, offensive testing,
+    automation) — or say what must be learned and how long that takes.

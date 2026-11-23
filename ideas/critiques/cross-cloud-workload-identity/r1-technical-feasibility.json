@@ -1,0 +1,51 @@
+{
+  "concept_id": "cross-cloud-workload-identity",
+  "lens": "technical-feasibility",
+  "round": 1,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "Listing static keys and emitting trust-policy Terraform are tractable, and the federation primitives exist (AWS outbound JWTs, GCP and Entra federation). But the native APIs don't show where a key is used, CI secret values can't be read, and cutover means changing workload code and manifests, not just IAM. That's too much for 2 engineers in 4 months across three clouds.",
+  "objections": [
+    {
+      "objection": "Usage attribution, which every later feature depends on, isn't available from the read-only APIs the MVP plans to use. AWS GetAccessKeyLastUsed returns only date, service and region, with no source IP or caller. GCP Activity Analyzer returns only the last authentication date per key. Source detail needs CloudTrail (S3 and other data events aren't logged by default), GCP Data Access audit logs (off by default) and Entra service-principal sign-in logs. Each has to be enabled and ingested per account, and history is missing until it is. GitHub's secrets API lists names but never values, so a CI secret can't be matched to an access key ID directly, only inferred from runner IPs and user agents in CloudTrail.",
+      "severity": "major",
+      "evidence": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_AccessKeyLastUsed.html; https://docs.cloud.google.com/policy-intelligence/docs/activity-analyzer-service-account-authentication; https://docs.github.com/en/rest/actions/secrets (secrets listed 'without revealing their encrypted values'); concept:build.hardest_parts[0]"
+    },
+    {
+      "objection": "A Terraform PR covers only the IAM side. Removing a static key also means changing the consumer: Kubernetes service-account annotations or Pod Identity associations, CI workflow YAML (id-token permissions, auth actions), GCP credential-config files or Azure federated-credential env vars, and app code that reads AWS_ACCESS_KEY_ID or a JSON key file. Those live in app repos and deploy tooling the product doesn't model. Without them the 'cutover' PR is half a migration, and the risk of breaking production (the concept's own top hard part) falls on the customer.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[1]; concept:mvp.features[3]; https://docs.cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds (per-workload credential configuration step)"
+    },
+    {
+      "objection": "The scope is too big for the team and the time. Five features, three clouds plus GitHub and GitLab, and about 8 compute source types (EKS, ECS, Lambda, GKE, AKS, VMs, CI, on-prem Roles Anywhere) give dozens of source-target trust templates. Each needs end-to-end testing with real accounts, and the clouds keep changing them: AWS outbound federation needs per-account enablement and new STS condition keys. Add an open-source credential helper in several languages, plus drift alerting and evidence export. 2 engineers can't credibly do all of this in 4 months. A realistic MVP is AWS plus one target (GCP) plus GitHub Actions only.",
+      "severity": "major",
+      "evidence": "concept:build.team; concept:build.months_to_mvp; https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/ (account enablement, sts:GetWebIdentityToken permission, DurationSeconds 60-3600)"
+    },
+    {
+      "objection": "The credential helper adds less than claimed. GCP client libraries already consume AWS credentials natively (GetCallerIdentity-based federation, no AWS-side change), AWS has credential_process, and Entra reads federated token files. Tools in the evidence that accept only explicit static keys (Bun S3) or run on third-party platforms (RunPod ECR) can't call a helper or refresh short-lived credentials. Injecting temporary keys into env vars breaks long-running processes when the keys expire.",
+      "severity": "minor",
+      "evidence": "https://docs.cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds; concept:problem.evidence"
+    },
+    {
+      "objection": "On-prem replacement through IAM Roles Anywhere needs a customer PKI (a CA trust anchor, certificate issuance and renewal on every host). That's a deployment project, not a generated PR, and it widens support scope a lot.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[1]"
+    }
+  ],
+  "strongest_point": "No broker in the request path: the product only configures free native federation, so the runtime has no availability risk and the read-only inventory is low-risk, quick to build and to sell.",
+  "what_would_change_my_mind": [
+    "A prototype on 3 real multi-cloud estates that attributes at least 80% of active static keys to a specific workload or CI job using only default-on logs.",
+    "One generated end-to-end cutover (IAM plus consumer change) merged in a customer environment without an incident.",
+    "The MVP cut to AWS to GCP and GitHub Actions OIDC only, with the 4-month estimate rebuilt from that scope."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/",
+    "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html",
+    "https://docs.aws.amazon.com/IAM/latest/APIReference/API_AccessKeyLastUsed.html",
+    "https://docs.github.com/en/rest/actions/secrets",
+    "https://docs.cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds",
+    "https://docs.cloud.google.com/policy-intelligence/docs/activity-analyzer-service-account-authentication",
+    "https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-sign-ins"
+  ]
+}

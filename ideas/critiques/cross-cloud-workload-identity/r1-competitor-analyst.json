@@ -1,0 +1,58 @@
+{
+  "concept_id": "cross-cloud-workload-identity",
+  "lens": "competitor-analyst",
+  "round": 1,
+  "score": 4,
+  "verdict": "no-go",
+  "summary": "The free inventory wedge is already commoditized by AWS IAM Access Analyzer, Prowler, Wiz and GitGuardian. Well-funded NHI vendors missing from the competitor table, Clutch, Astrix (Cisco) and Entro (SailPoint), cover cloud and CI keys. GCP blocks key creation by default. Only remediation PRs are open, and AI coding assistants and native docs make that thin.",
+  "objections": [
+    {
+      "objection": "The inventory and drift-alert features are already free or bundled. AWS IAM Access Analyzer reports unused access keys with remediation steps, Prowler checks key age and usage as open source, Wiz publishes key-usage data from its CSPM (31% of keys inactive for 90+ days), and GitGuardian NHI Governance tracks consumers, rotation and stale secrets. A buyer with a SOC 2 finding usually already runs one of these, so the 'free static key report' wedge shows them nothing new.",
+      "severity": "major",
+      "evidence": "https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-findings-remediate.html ; https://hub.prowler.com/check/iam_rotate_access_key_90_days ; https://www.wiz.io/blog/how-to-get-rid-of-aws-access-keys-part-1-the-easy-wins ; https://www.gitguardian.com/nhi-governance ; concept:go_to_market.wedge"
+    },
+    {
+      "objection": "The competitor table leaves out the most relevant NHI vendors, and they are consolidating into platforms that can add a 'migrate to federation' playbook. Clutch Security ($28.5M raised; AWS Marketplace starter at $50k/yr) covers NHIs across cloud, CI/CD, code and vaults and writes about AWS outbound federation replacing keys. Cisco is buying Astrix for about $400M and SailPoint and Palo Alto (CyberArk) are consolidating the category. Each has a sales force already inside the buyers Keybridge targets.",
+      "severity": "major",
+      "evidence": "https://www.clutch.security/blog ; https://futurumgroup.com/insights/does-cisco-put-an-astrix-on-the-agentic-identity-race/ ; concept:competitors"
+    },
+    {
+      "objection": "The clouds are shrinking the problem as well as supplying the parts. Google Cloud enforces the disabling of service-account key creation and upload on every organization created since 3 May 2024. AWS added console friction for creating access keys in 2023 and made outbound federation free. The GCP JSON-key half of the cross-cloud story shrinks every year without Keybridge, and a native 'connect to GCP/Azure' wizard in any of the three consoles would erase the PR-generator value.",
+      "severity": "major",
+      "evidence": "https://docs.cloud.google.com/resource-manager/docs/secure-by-default-organizations ; https://www.wiz.io/blog/how-to-get-rid-of-aws-access-keys-part-1-the-easy-wins ; concept:why_now.sources"
+    },
+    {
+      "objection": "Most dangerous competitor: Wiz. It already inventories access keys and where they are used across AWS, GCP and Azure in many of the target accounts, publishes the key-to-role replacement playbook, and is owned by Google, which also owns GCP workload identity federation. Adding 'generate the federation fix' to an existing finding is one feature for Wiz. For Keybridge it is the whole paid product.",
+      "severity": "major",
+      "evidence": "https://www.wiz.io/blog/how-to-get-rid-of-aws-access-keys-part-1-the-easy-wins ; concept:risks"
+    },
+    {
+      "objection": "The paid core, Terraform PRs for trust policies, is easy to reproduce. HCP Terraform dynamic provider credentials, Teleport Machine & Workload Identity (which issues credentials for Roles Anywhere, GCP WIF and Entra), the per-cloud Terraform modules and AI coding assistants already produce this configuration. Each migration is a one-off, so buyers can do it in a sprint and skip the subscription.",
+      "severity": "major",
+      "evidence": "https://goteleport.com/docs/machine-workload-identity/iac-mwi ; concept:mvp.features ; concept:risks"
+    },
+    {
+      "objection": "The open-source credential helper overlaps with maintained helpers: AWS's own Roles Anywhere credential helper, SPIFFE helpers and Teleport's tbot. Aembit's free 10-workload tier also covers the small estates that make up the first customers.",
+      "severity": "minor",
+      "evidence": "https://aembit.io/faq/"
+    }
+  ],
+  "strongest_point": "Nobody sells cheap, self-serve remediation that turns found keys into native-federation Terraform PRs. Per-account pricing with no broker fills a real gap below $50k-$100k NHI platforms.",
+  "what_would_change_my_mind": [
+    "In 15 mid-market multi-cloud companies that already run Wiz, Prowler or Access Analyzer, at least 8 still have 10 or more boundary-crossing keys more than 6 months after the finding.",
+    "At least 3 of them pay for Keybridge's PR-based remediation over an AI-assisted DIY attempt.",
+    "Confirmation that neither Wiz nor Clutch has a remediation-PR feature on its roadmap."
+  ],
+  "resolved_prior": [],
+  "sources": [
+    "https://aembit.io/faq/",
+    "https://www.wiz.io/blog/how-to-get-rid-of-aws-access-keys-part-1-the-easy-wins",
+    "https://docs.cloud.google.com/resource-manager/docs/secure-by-default-organizations",
+    "https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-findings-remediate.html",
+    "https://hub.prowler.com/check/iam_rotate_access_key_90_days",
+    "https://www.gitguardian.com/nhi-governance",
+    "https://www.clutch.security/blog",
+    "https://futurumgroup.com/insights/does-cisco-put-an-astrix-on-the-agentic-identity-race/",
+    "https://goteleport.com/docs/machine-workload-identity/iac-mwi"
+  ]
+}

@@ -187,7 +187,7 @@ automated readers (HashiCorp). The ranking was identical in all three rounds. De
   "projects keep being asked for X" rather than "no product does X". The Phase 4 competitor
   critic must test that.
 
-## Phase 3 — Idea generation · `in progress`
+## Phase 3 — Idea generation · `done` (2026-11-23)
 
 One structured startup concept per opening on the PM's shortlist
 ([config/shortlist.yaml](../config/shortlist.yaml), decision D14), commercial per D4:
@@ -203,12 +203,29 @@ One structured startup concept per opening on the PM's shortlist
 | `concept-writer` agent ([.claude/agents/concept-writer.md](../.claude/agents/concept-writer.md)) | done |
 | `concept-render`: schema + grounding check (evidence and price comparables must trace to collected, fact-checked data), writes `ideas/<slug>.md` | done |
 | `concepts` workflow ([.claude/workflows/concepts.js](../.claude/workflows/concepts.js)) | done |
-| Three concepts written and rendered | in progress |
+| Three concepts written and rendered | done — [VEXpath](../ideas/vexpath.md), [SCIMbridge](../ideas/scimbridge.md), [Keybridge](../ideas/keybridge.md) |
 
 **Exit criteria:** 3–5 concepts from the shortlist, each passing `concept-render` (schema and
-grounding).
+grounding). ✅
 
-## Phase 4 — Critic panel · `not started`
+| Concept | Opening | Entry price | Riskiest assumption |
+|---|---|---|---|
+| VEXpath | CRA SBOM/VEX compliance | $490/month (≤ 5 products) | Mid-size EU makers pay ~$6k/yr before Dec 2027 for VEX/CSAF triage on top of free Dependency-Track |
+| SCIMbridge | Buyer-side provisioning | $149/month per API-backed app | Mid-market IT pays per app for a self-serve SCIM bridge instead of manual offboarding or tier upgrades |
+| Keybridge | Cross-cloud workload identity | Free ≤ 3 accounts; $400/month ≤ 10 | Platform teams pay a subscription to remove cross-cloud static keys rather than set up native federation themselves |
+
+**Notes**
+- Each concept states its own cheap (≤ 2 weeks, no build) test and success threshold.
+- Writers didn't reuse any fact-checker-flagged claim. New facts (CRA dates, BSI TR-03183,
+  cloud federation docs, GitGuardian 2026 report) were opened via `gapfinder fetch`, because
+  the agents' WebFetch still can't reach many hosts.
+- Closest existing competitors surfaced during writing: sbomify (CRA wizard, low end) for
+  VEXpath; Stitchflow and Zluri (non-SCIM app automation) for SCIMbridge; Aembit's free tier
+  and native cloud federation for Keybridge. The Phase 4 competitor critic should start there.
+- One unsourced claim in Keybridge's `risks` (Access Analyzer / Wiz flag old keys); the rubric
+  only requires sources in `why_now` and `competitors`.
+
+## Phase 4 — Critic panel · `not started` (next)
 
 Claude Code subagents in `.claude/agents/` (decision D2), each with a fixed rubric, scoring 1–10
 with objections and the evidence that would change their mind:

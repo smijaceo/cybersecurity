@@ -1,0 +1,711 @@
+{
+ "opening_id": "msp-windows-detection",
+ "priority": 1,
+ "thesis": "Windows detection and logging done for small businesses through the MSPs that already run their IT: per-server logon and user-activity auditing, detection-aware reduction of the log noise that makes SIEMs unaffordable, and low-false-positive file-share ransomware canaries with guided restore. Researchers on all three gaps independently named the same wedge: cheap, done-for-you, sold via MSPs. Builds directly on the founder's WEF/Sysmon detection work.",
+ "themes": [
+  {
+   "theme_id": 4,
+   "name": "User activity audit logging on servers",
+   "need": "Admins struggle to capture and review who logged in and what they did on servers, databases, domain controllers and SaaS like Office 365.",
+   "gap_score": 0.59,
+   "stability": 0.76,
+   "need_statements": [
+    {
+     "title": "Terminal Server Logging",
+     "body": "Is there a simple utility to log terminal server use? I'd like to be able to do some simple monitoring of our terminal server and don't seem to be able to find any good way to do it. I'd want to track logins, session durations, disconnections, and failed login attempts. Ideally it'd just be somethin",
+     "url": "https://serverfault.com/questions/13451/terminal-server-logging",
+     "engagement": 114
+    },
+    {
+     "title": "SIEM system, what are the benefits?",
+     "body": "Each person in the company has a unique username/password, and nobody should log in with his username/password but him. I want a program that would inspect the logs that includes a list of all the people that came to work today, and inspect the list of the logged in users (from the AD or wherever is",
+     "url": "https://security.stackexchange.com/questions/9684/siem-system-what-are-the-benefits",
+     "engagement": 64
+    },
+    {
+     "title": "SSH session logging",
+     "body": "We have a policy of logging all SSH session activity for CYA purposes with our clients. With PuTTY under windows this is trivial, as we can log each session to a file using PuTTY's built-in logging facility . But when working from Linux workstations, it's not quite as simple. Note that server-side l",
+     "url": "https://serverfault.com/questions/313234/ssh-session-logging",
+     "engagement": 52
+    },
+    {
+     "title": "local mysql was hacked with ransomware hack. How to check if database data was downloaded?",
+     "body": "I had a test mysql database running on Vagrant dev box. Turns out the network wasn't that secure. All of the databases were deleted (and replaced with a DB ransomware note) and in the logs I can see all of the drop db commands. However, I don't see any sign of dump or mysql dump commands anywhere. T",
+     "url": "https://serverfault.com/questions/946620/local-mysql-was-hacked-with-ransomware-hack-how-to-check-if-database-data-was-d",
+     "engagement": 39
+    },
+    {
+     "title": "Ask HN: Running legacy IE/ActiveX clients without local admin rights?",
+     "body": "We are currently maintaining a very old client-server architecture. The server collects real-time data from a large number of sensors and controllers, transmitting it to a legacy database under continuous, massive load (writes every few seconds). The problem is the client side. It\u2019s ancient, strictl",
+     "url": "https://news.ycombinator.com/item?id=47486365",
+     "engagement": 34
+    },
+    {
+     "title": "Ansible enable audit logging",
+     "body": "I am looking for audit logging in Ansible. I am running my playbook as root, but i want to write in log who the local user is executing the playbook. Please help in enabling logs to show user.",
+     "url": "https://serverfault.com/questions/887548/ansible-enable-audit-logging",
+     "engagement": 31
+    },
+    {
+     "title": "rancid like tool for config files",
+     "body": "I need to be able to watch directories on our servers, and track changes to files as part of our audit compliance. I have adjusted auditd to watch the directories, and send all writes and attribute changes to syslog (which immediately forwards on to my splunk server) this is helpful, it shows who ch",
+     "url": "https://security.stackexchange.com/questions/33763/rancid-like-tool-for-config-files",
+     "engagement": 18
+    },
+    {
+     "title": "Domain controller audit log",
+     "body": "I am part of an internal software development group for an enterprise. We are being asked to build an Active Directory management web application. 1 of the primary reasons is the need to generate audit logs for operations that users do such as creating/deleteing objects, updating attributes, adding/",
+     "url": "https://serverfault.com/questions/328968/domain-controller-audit-log",
+     "engagement": 16
+    },
+    {
+     "title": "Amazon Workspaces - Audit",
+     "body": "Is it possible to record Amazon Workspaces for audit purpose? I think that it's a common uses case but I couldn't find any documentation nor other solutions. Basically I would like to review the client activity by recording its screen 24/7 and perhaps store the recordings on S3.",
+     "url": "https://serverfault.com/questions/620032/amazon-workspaces-audit",
+     "engagement": 12
+    },
+    {
+     "title": "Windows Server Audit Logs",
+     "body": "I have a windows server 2012r2 domain controller and file server. I enabled auditing for a specific folder i want to monitor. I am collecting logs on a centralized graylog server. I am getting the audit logs correctlly, the problem is i am getting also a ton of logs of the files being accessed by th",
+     "url": "https://serverfault.com/questions/1078821/windows-server-audit-logs",
+     "engagement": 10
+    },
+    {
+     "title": "User login monitoring tool",
+     "body": "Our client has a Windows workgroup LAN with a UNIX/Oracle database server. We want a tool which can log login/logout details of network users to the database server. The problem is that we can't access the database server, although that would have been the easier solution, due to some company policy",
+     "url": "https://security.stackexchange.com/questions/36971/user-login-monitoring-tool",
+     "engagement": 6
+    },
+    {
+     "title": "Office365 Audit Log",
+     "body": "We have Office365 E3 and know the 90 day history restriction. Go forward we may use AdminTool or a script to log and build our own database. However is there a way to access a longer history because we wish to inspect the log for previous months (say 2 years ago) and my question is broken into three",
+     "url": "https://serverfault.com/questions/966752/office365-audit-log",
+     "engagement": 4
+    },
+    {
+     "title": "Feature Request - Diagnostic Settings to Event Hub / Questions",
+     "body": "Hey all, Love your work here. The \"Deploy Diagnostic Settings to Azure Services\" initiative works very well, but I have a few clients who would like to use Event Hub to collect their data, so it can then be collected by 3rd party SIEM tools. There is a built in initiative called \"Enable audit catego",
+     "url": "https://github.com/Azure/Azure-Landing-Zones/issues/1844",
+     "engagement": 2
+    },
+    {
+     "title": "Exchange Admin Audit log",
+     "body": "i was looking at the admin audit logs today and found it very usefull. But it doesn't include the source computer launching the commands. An example, i have the EMC on my computer modifying some distribution list on exchange which is a different machine. In the logs it will say source as being the e",
+     "url": "https://serverfault.com/questions/426517/exchange-admin-audit-log",
+     "engagement": 2
+    },
+    {
+     "title": "OpenShift action audit log",
+     "body": "Good day everyone ! I am looking if there is any way to audit or look at a audit log for any specific actions done by a specific user on a deployment for example. My goal would be to see, who scaled up or down a specific deployment or statefulSet, change storage size or settings. Something along the",
+     "url": "https://serverfault.com/questions/1147510/openshift-action-audit-log",
+     "engagement": 2
+    },
+    {
+     "title": "Network Change Control & Compliance",
+     "body": "I'm looking for a network change management & compliance audit tool, I know that SolarWinds and tufin are very know. Do you have any experience that you can share regarding these two or other?",
+     "url": "https://serverfault.com/questions/314713/network-change-control-compliance",
+     "engagement": 2
+    },
+    {
+     "title": "Report accessible to view users",
+     "body": "Hello I\u2019m reaching out to ask if there is a way to run a report of users currently listed in Finjector for our units and folders. We\u2019re looking to have a report available that would allow us to regularly review and ensure that system user access is kept up to date. Please let me know if such a repor",
+     "url": "https://github.com/ucdavis/finjector/issues/371",
+     "engagement": 1
+    },
+    {
+     "title": "Stealth Health-Tech Startup",
+     "body": "Stealth Health-Tech Startup | Senior Backend/Infrastructure Engineer | San Francisco | ONSITE | Full-time | [salary range] + generous equity We're a rapidly growing, venture-backed stealth startup helping people understand their medical records and lab results. We need an engineer to own security (H",
+     "url": "https://news.ycombinator.com/item?id=50429861",
+     "engagement": 1
+    },
+    {
+     "title": "Audit trasspasing information",
+     "body": "I would like to know if there is a way to audit what files a user is \"passing\" from the file server to their local environment. I have the event viewer enabled but I can only see which file the user has accessed or deleted, but we need to know if any employee is transferring files to their local env",
+     "url": "https://serverfault.com/questions/1156997/audit-trasspasing-information",
+     "engagement": 1
+    },
+    {
+     "title": "Enterprise Wide GPO Audit",
+     "body": "How can I generate a report of users who are exempt from a specific GPO? HR is asking me for a report of users who are exempt from an inactivity lockout group policy. Is there a way to run an automated report or is this something I'll need to do manually? We have over 500 end-points across three sit",
+     "url": "https://serverfault.com/questions/981094/enterprise-wide-gpo-audit",
+     "engagement": 1
+    },
+    {
+     "title": "Audit logging for compliance",
+     "body": "## Summary Add comprehensive audit logging to track who accessed what sessions and what commands were executed. ## Motivation Enterprise and regulated environments require: - Compliance with security policies (SOC2, ISO27001, etc.) - Incident investigation capabilities - User activity tracking - Acc",
+     "url": "https://github.com/cuzic/bunterm/issues/5",
+     "engagement": 0
+    },
+    {
+     "title": "Audit Group Object Use?",
+     "body": "Say you have a Security group. It's undocumented, nobody knows \"what\" it does, but everybody \"knows\" it is used for something. If some application (SQL Server or some random web app) for instance, uses this AD group object as a reference for certain permissions that are application specific... Is th",
+     "url": "https://serverfault.com/questions/721597/audit-group-object-use",
+     "engagement": 0
+    }
+   ],
+   "market_research": {
+    "theme_id": 4,
+    "vendors": [
+     {
+      "name": "Netwrix Auditor",
+      "url": "https://netwrix.com",
+      "offering": "Audits user activity and changes across AD, Entra ID, M365, file servers, Windows Server",
+      "pricing": "Essentials self-service from $20 per enabled AD user + cloud-only Entra ID user (up to 250 identities); larger estates quote-only",
+      "segment": "SMB to enterprise",
+      "source": "https://netwrix.com/en/buy-now"
+     },
+     {
+      "name": "ManageEngine ADAudit Plus",
+      "url": "https://www.manageengine.com/products/active-directory-audit/",
+      "offering": "AD, Azure AD, file server, member server and workstation logon/change auditing",
+      "pricing": "Annual per server: 2 DCs $595 Standard / $945 Professional; Azure AD tenant from $995; 2 Windows file servers $495",
+      "segment": "SMB / mid-market",
+      "source": "https://www.manageengine.com/products/active-directory-audit/pricing-details.html"
+     },
+     {
+      "name": "Quest Change Auditor",
+      "url": "https://www.quest.com/products/change-auditor-for-active-directory",
+      "offering": "Real-time who-changed-what auditing for AD, Entra ID, Exchange, SQL Server, file systems",
+      "pricing": "not public (licensed per enabled user account via resellers)",
+      "segment": "enterprise",
+      "source": "https://www.cdw.com/product/Quest-ChangeAuditor-for-Active-Directory-license/1616572"
+     },
+     {
+      "name": "Lepide Auditor (Lepide Data Security Platform)",
+      "url": "https://www.lepide.com",
+      "offering": "Change and activity auditing for AD, file servers, Entra ID and other platforms",
+      "pricing": "not public; quoted per user, per year, per platform (Core/Plus/Advanced tiers)",
+      "segment": "SMB / mid-market",
+      "source": "https://www.lepide.com/quoterequest.html"
+     },
+     {
+      "name": "Syteca (formerly Ekran System)",
+      "url": "https://ekransystem.com",
+      "offering": "Session recording and user activity monitoring on servers and desktops",
+      "pricing": "not public; licensed per monitored endpoint plus management panel",
+      "segment": "mid-market / enterprise",
+      "source": "https://ekransystem.com/de/buy/licensing-scheme"
+     },
+     {
+      "name": "Teleport",
+      "url": "https://goteleport.com",
+      "offering": "Infrastructure access with SSH, desktop, Kubernetes session recording and structured audit logs",
+      "pricing": "Billed on monthly active users and protected resources; list price not public",
+      "segment": "developers / mid-market / enterprise",
+      "source": "https://goteleport.com/_uploads/Teleport_Pricing_Guide_Rev_June_16_2026_5f41774f5e.pdf"
+     },
+     {
+      "name": "StrongDM",
+      "url": "https://strongdm.com",
+      "offering": "Privileged access proxy for servers and databases with session recording and audit trails",
+      "pricing": "Single per-user SKU, list price not public; AWS Marketplace lists $840 per additional user",
+      "segment": "mid-market / enterprise",
+      "source": "https://aws.amazon.com/marketplace/pp/prodview-57vja26o4xz66"
+     },
+     {
+      "name": "AdminDroid Office 365 Reporter",
+      "url": "https://admindroid.com",
+      "offering": "Microsoft 365 audit reporting with retention beyond native audit log window",
+      "pricing": "Free edition plus premium Standard/Pro editions with add-on packs; prices not public",
+      "segment": "SMB / mid-market",
+      "source": "https://admindroid.com/resources/pdf/product/microsoft365-management/licensing-faq.pdf?5110_18"
+     }
+    ],
+    "crowdedness": 3,
+    "paid_market_gaps": [
+     {
+      "gap": "Per-enabled-user licensing becomes very expensive for organizations with thousands of AD accounts",
+      "evidence": "https://capterra.com/p/164872/Netwrix-Auditor/reviews/"
+     },
+     {
+      "gap": "Microsoft 365 audit history beyond 180 days needs E5 or audit add-on per user; E3/Business tenants underserved",
+      "evidence": "https://learn.microsoft.com/purview/audit-log-retention-policies"
+     },
+     {
+      "gap": "Each source (DCs, Entra tenants, file servers, workstations) is priced as a separate add-on, inflating mixed-estate cost",
+      "evidence": "https://www.manageengine.com/products/active-directory-audit/pricing-details.html"
+     },
+     {
+      "gap": "Free Linux session recording (tlog) is unreliable for root and loses recordings on reboot by default",
+      "evidence": "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html/recording_sessions/getting-started-with-session-recording_getting-started-with-session-recording"
+     }
+    ],
+    "willingness_to_pay": 2,
+    "wtp_evidence": "Established auditing products publish prices SMBs buy (ADAudit Plus from $595/yr, Netwrix from $20/user); Netwrix Capterra reviewers mostly cite setup, reporting and usability issues; several praise its cost.",
+    "wtp_sources": [
+     "https://www.manageengine.com/products/active-directory-audit/pricing-details.html",
+     "https://netwrix.com/en/buy-now",
+     "https://capterra.com/p/164872/Netwrix-Auditor/reviews/"
+    ],
+    "bundling_risk": "medium",
+    "bundling_note": "Microsoft (Purview Audit, 180 days standard) and AWS (90-day free CloudTrail event history) bundle native logs, but unified cross-system on-prem server/DB/AD review is not given away.",
+    "summary": "Crowded, mature market (Netwrix, ManageEngine, Quest, Lepide, PAM vendors) with cloud-native logs bundled. Only narrow wedge: cheap, per-server-priced unified activity review plus long M365 retention for SMBs priced out of per-user tools."
+   },
+   "threat": {
+    "theme_id": 4,
+    "techniques": [
+     "T1078.002",
+     "T1021",
+     "T1136.002"
+    ],
+    "threat_relevance": 2,
+    "reason": "Login and activity auditing helps detect valid-account misuse and lateral movement, mainly after the fact."
+   },
+   "open_source_leaders": [
+    {
+     "name": "spatie/laravel-activitylog",
+     "url": "https://github.com/spatie/laravel-activitylog",
+     "stars": 5918,
+     "days_since_push": 9
+    },
+    {
+     "name": "brexhq/substation",
+     "url": "https://github.com/brexhq/substation",
+     "stars": 410,
+     "days_since_push": 13
+    },
+    {
+     "name": "CodesWhat/drydock",
+     "url": "https://github.com/CodesWhat/drydock",
+     "stars": 280,
+     "days_since_push": 0
+    },
+    {
+     "name": "Sfedfcv/redesigned-pancake",
+     "url": "https://github.com/Sfedfcv/redesigned-pancake",
+     "stars": 280,
+     "days_since_push": 2016
+    },
+    {
+     "name": "el1ght/aulite",
+     "url": "https://github.com/el1ght/aulite",
+     "stars": 195,
+     "days_since_push": 161
+    }
+   ]
+  },
+  {
+   "theme_id": 16,
+   "name": "SIEM log collection and noise filtering",
+   "need": "Small security teams struggle to choose a SIEM, ingest logs from varied sources and filter noise so alerts are useful.",
+   "gap_score": 0.5,
+   "stability": 0.94,
+   "need_statements": [
+    {
+     "title": "SIEM log pre-filtering question",
+     "body": "As everyone knows each company wants to save as much money as possible. I have been tasked with pre-filtering logs on less important status/health messages before they get to the SIEM. Does anyone see the risks involved when pre-filtering before going to SIEM? Why would someone not do this and or is",
+     "url": "https://security.stackexchange.com/questions/41068/siem-log-pre-filtering-question",
+     "engagement": 29
+    },
+    {
+     "title": "Are SIEM and NIDS/HIDS complementary?",
+     "body": "I just would like to have your feedback if you were involved with Security Information and Event Management. From your experience, do we have to add a SIEM to an existing NIDS (snort) and HIDS (ossec)? It seems to be quite huge and expensive to set up this kind of software - SIEM (and team dealing w",
+     "url": "https://security.stackexchange.com/questions/133218/are-siem-and-nids-hids-complementary",
+     "engagement": 17
+    },
+    {
+     "title": "DNS Processor for Ingest Pipelines",
+     "body": "### Description TL:DR - There needs to be a DNS processor for Ingest Pipelines. We have been using Elastic as a SIEM for nearly four years, and we have now spent the last ~15 months rolling it out as a Data Lake and Infrastructure Monitoring tool for the rest of our company. Over the years, we have ",
+     "url": "https://github.com/elastic/elasticsearch/issues/91624",
+     "engagement": 16
+    },
+    {
+     "title": "SIEM Alien Vault recommended method for muting noise",
+     "body": "I have installed Alien Vault into my environment and I am seeing a ton of logs going into the SIEM. Upon further investigation, I see that these are being generated by AlienVault itself. I think that these events are noisy and create complacency where I need to see real events. I assume that most pe",
+     "url": "https://security.stackexchange.com/questions/161782/siem-alien-vault-recommended-method-for-muting-noise",
+     "engagement": 16
+    },
+    {
+     "title": "Feature request: Support for heartbeat messages for outputs",
+     "body": "**Motivation** We would like to send falco messages from multiple clusters to a SIEM. It would be nice if the SIEM could detect if we stopped receiving logs from a given cluster though (for example, if the cluster has an outbound firewall configured that breaks connectivity). We could configure the ",
+     "url": "https://github.com/falcosecurity/falcosidekick/issues/278",
+     "engagement": 14
+    },
+    {
+     "title": "OSSEC as a SIEM",
+     "body": "I am working on a log aggregation project and wanted to add some minor correlations/security intelligence to the mix. Currently I have logs from ~400 servers coming into a syslog-ng box. I was looking into a few programs such as SEC (Simple Event Correlator), OSSEC, etc. to do this. For SEC, I could",
+     "url": "https://serverfault.com/questions/539342/ossec-as-a-siem",
+     "engagement": 13
+    },
+    {
+     "title": "Product recommendation for SIEM/log management",
+     "body": "I am looking at purchasing a SIEM/log management solution. I've read quite a few reviews but was wondering if you all had any personal preference. 2 products that I am especially interested in is Splunk and NitroSecurity's ESM and ELM product. Thanks.",
+     "url": "https://serverfault.com/questions/145626/product-recommendation-for-siem-log-management",
+     "engagement": 11
+    },
+    {
+     "title": "Is it possible to automatically collect chromebook system logs for SIEM ingestion?",
+     "body": "I'm planning to have a subset of end users running Chromebooks and would like to ingest system logs for those devices into a SIEM solution. Is there a way to do this? I see from Google documentation that there's a manual process for retrieving logs, but I'm not seeing a method to automatically forwa",
+     "url": "https://serverfault.com/questions/1002822/is-it-possible-to-automatically-collect-chromebook-system-logs-for-siem-ingestio",
+     "engagement": 9
+    },
+    {
+     "title": "Tender No 20 SIEM-SOC Solution 2026",
+     "body": "The Irish Air Navigation Service (AirNav) wish to tender for a SIEM/SOC Solution for a period of three (3) years The Irish Air Navigation Service (AirNav) wish to tender for a SIEM/SOC Solution for a period of three (3) years",
+     "url": "https://ted.europa.eu/en/notice/-/detail/766413-2026",
+     "engagement": 1
+    },
+    {
+     "title": "Collecting Attacker Feeds",
+     "body": "Hi, I'd like to collect all the feeds that's been detected by tpotce in 24 hours and block them in SIEM. I want to do this automatically for every 24 hours. Is there a way in this tool to do this? or do I have to use Crontab actions",
+     "url": "https://github.com/telekom-security/tpotce/issues/1545",
+     "engagement": 0
+    },
+    {
+     "title": "[FEATURE] Real-time SIEM integration with automatic alert processing",
+     "body": "**Is your feature request related to a problem? Please describe.** The platform currently has SIEM connector stub code but no actual real-time integration. Security teams receive hundreds of alerts daily from SIEMs (Splunk, Elastic, QRadar) but must manually copy-paste alerts into ZainGuard for anal",
+     "url": "https://github.com/ZainGuard/InvestigAI/issues/4",
+     "engagement": 0
+    }
+   ],
+   "market_research": {
+    "theme_id": 16,
+    "vendors": [
+     {
+      "name": "Cribl Stream",
+      "url": "https://cribl.io/pricing/",
+      "offering": "Vendor-neutral pipeline to filter, reduce and route logs before SIEM",
+      "pricing": "Free up to 1TB/day (no license); Cribl.Cloud paid via Cribl Credits ($1 = 1 credit); self-managed Standard license $4,800 for up to 100GB/day",
+      "segment": "enterprise / mid-market",
+      "source": "https://cribl.io/pricing/"
+     },
+     {
+      "name": "Datadog Observability Pipelines",
+      "url": "https://www.datadoghq.com/product/observability-pipelines/",
+      "offering": "Filter, sample, drop and route logs/security data before downstream tools",
+      "pricing": "$0.095-$0.12 per ingested GB/month; Plus $1,950-$2,808 per vCPU/month",
+      "segment": "enterprise / mid-market",
+      "source": "https://www.datadoghq.com/pricing/list/"
+     },
+     {
+      "name": "Observo AI (SentinelOne)",
+      "url": "https://www.sentinelone.com/press/sentinelone-to-acquire-observo-ai-to-revolutionize-siem-and-security-operations/",
+      "offering": "AI data pipeline claiming up to 80% SIEM volume reduction with rehydration",
+      "pricing": "not public",
+      "segment": "enterprise",
+      "source": "https://www.sentinelone.com/press/sentinelone-to-acquire-observo-ai-to-revolutionize-siem-and-security-operations/"
+     },
+     {
+      "name": "Tenzir",
+      "url": "https://docs.tenzir.com/faqs",
+      "offering": "Security data pipeline platform, open-source engine, on-prem and air-gapped",
+      "pricing": "Community Edition free up to 1TB/day; paid editions not public",
+      "segment": "mid-market / enterprise",
+      "source": "https://www.helpnetsecurity.com/2023/08/09/tenzir-security-data-pipeline-platform/"
+     },
+     {
+      "name": "Edge Delta",
+      "url": "https://edgedelta.com/ai-data-foundation",
+      "offering": "Telemetry pipelines with edge processing for logs, metrics and security data",
+      "pricing": "reported free pipeline throughput since April 2026; storage 0.25 credits/GB (third-party)",
+      "segment": "mid-market / enterprise",
+      "source": "https://cubeapm.com/blog/edge-delta-pricing-and-review/"
+     },
+     {
+      "name": "Blumira",
+      "url": "https://www.blumira.com/pricing",
+      "offering": "SMB SIEM with prebuilt noise-filtered detections, unlimited ingest, 1-year retention",
+      "pricing": "per knowledge-worker employee, flat, no data limits; ~$12-$21/employee/month (third-party)",
+      "segment": "SMB / MSP",
+      "source": "https://www.capterra.com/p/208225/Blumira/pricing/"
+     },
+     {
+      "name": "Huntress Managed SIEM",
+      "url": "https://www.huntress.com/pricing/siem",
+      "offering": "Managed SIEM with source-side Smart Filtering and 24/7 SOC",
+      "pricing": "per data source, pooled volume; dollar rate not public",
+      "segment": "SMB / MSP",
+      "source": "https://www.huntress.com/blog/unlocking-siem-the-role-of-smart-filtering"
+     },
+     {
+      "name": "Graylog Security",
+      "url": "https://graylog.org/pricing/",
+      "offering": "SIEM/log management; Graylog Open free, Security licensed by volume",
+      "pricing": "from 10 GB/day or 100 GCUs; dollar price not public (Open free, no cap)",
+      "segment": "SMB / mid-market",
+      "source": "https://graylog.org/pricing/"
+     }
+    ],
+    "crowdedness": 3,
+    "paid_market_gaps": [
+     {
+      "gap": "Teams drop logs to cut cost, creating forensic blind spots; need detection-aware filtering with cheap archive and rehydration",
+      "evidence": "https://www.helpnetsecurity.com/2026/06/19/report-log-management-security-risk/"
+     },
+     {
+      "gap": "Independent pipeline vendors are being absorbed by SIEM/XDR vendors, shrinking vendor-neutral options",
+      "evidence": "https://www.securityweek.com/sentinelone-to-acquire-observo-ai-in-225-million-deal/"
+     },
+     {
+      "gap": "Pipeline tools are priced and built for enterprises (per-vCPU tiers, credits); small teams must author filters themselves",
+      "evidence": "https://www.datadoghq.com/pricing/list/"
+     },
+     {
+      "gap": "Free ingest grants cover only the SIEM vendor's own sources; third-party sources stay volume-billed",
+      "evidence": "https://azure.microsoft.com/en-us/pricing/offers/sentinel-microsoft-365-offer"
+     }
+    ],
+    "willingness_to_pay": 2,
+    "wtp_evidence": "Large enterprises spend ~$2.5M/yr on logging and 67% say cost outweighs value; SentinelOne paid ~$225M for Observo. Small teams lean on flat-priced SMB SIEMs or free tiers.",
+    "wtp_sources": [
+     "https://www.dynatrace.com/news/blog/log-management-research-key-findings/",
+     "https://www.securityweek.com/sentinelone-to-acquire-observo-ai-in-225-million-deal/",
+     "https://www.blumira.com/pricing"
+    ],
+    "bundling_risk": "high",
+    "bundling_note": "Cribl gives 1TB/day free, Edge Delta reportedly made pipeline throughput free, Graylog Open is uncapped, and Microsoft Sentinel ingests Azure Activity/O365 audit logs free plus E5 grants.",
+    "summary": "Crowded: Cribl, Datadog and SIEM-owned pipelines serve enterprises, flat-priced SMB SIEMs (Blumira, Huntress) bake in noise filtering, and free tiers abound. Thin opening only for detection-aware, vendor-neutral reduction packaged for MSPs or small teams."
+   },
+   "threat": {
+    "theme_id": 16,
+    "techniques": [
+     "T1685.001",
+     "T1685.002",
+     "T1685.005"
+    ],
+    "threat_relevance": 2,
+    "reason": "Centralised log collection preserves evidence against log tampering and enables detection, indirectly."
+   },
+   "open_source_leaders": [
+    {
+     "name": "Graylog2/graylog2-server",
+     "url": "https://github.com/Graylog2/graylog2-server",
+     "stars": 8182,
+     "days_since_push": 0
+    },
+    {
+     "name": "dogoncouch/LogESP",
+     "url": "https://github.com/dogoncouch/LogESP",
+     "stars": 229,
+     "days_since_push": 1186
+    },
+    {
+     "name": "gebruder/wirken",
+     "url": "https://github.com/gebruder/wirken",
+     "stars": 220,
+     "days_since_push": 0
+    },
+    {
+     "name": "azure-ad-b2c/siem",
+     "url": "https://github.com/azure-ad-b2c/siem",
+     "stars": 68,
+     "days_since_push": 1258
+    },
+    {
+     "name": "dogoncouch/siemstress",
+     "url": "https://github.com/dogoncouch/siemstress",
+     "stars": 41,
+     "days_since_push": 3165
+    }
+   ]
+  },
+  {
+   "theme_id": 33,
+   "name": "Ransomware detection and recovery for file servers",
+   "need": "Small IT teams whose file servers or networks are hit by ransomware need to detect, remove, prevent it and restore files.",
+   "gap_score": 0.446,
+   "stability": 1.0,
+   "need_statements": [
+    {
+     "title": "Restore Shadow Copy Deleted by Ransomware",
+     "body": "I got hit by the latest version of Crysis ransom ware on 14/09. I was lucky enough to pull the cable on the infected PC before it could spread to all servers on my network. However, it did spread to a file server (Server 2008 R2). The server has been taken offline and The malware managed to deleted ",
+     "url": "https://serverfault.com/questions/874140/restore-shadow-copy-deleted-by-ransomware",
+     "engagement": 15
+    },
+    {
+     "title": "How to remove crypto-ransomware on my network domain",
+     "body": "Today some computer on my domain got infected with crypto-ransomware and have infected some folders on file server that only some computers on network have access to. So I presume one or more of five computers that can access to that folders got infected. Ransomware encrypted files and gave them nam",
+     "url": "https://serverfault.com/questions/671954/how-to-remove-crypto-ransomware-on-my-network-domain",
+     "engagement": 7
+    },
+    {
+     "title": "AWS Glacier and Ransomware",
+     "body": "I'm trying to understand the structure of how AWS Glacier works because I have a problem. Problem : I have a NAS that backs up to Glacier about once a week. About two weeks ago the NAS got infected with ransomeware so if I retrieved the data now I would just be obtaining useless encrypted files. Que",
+     "url": "https://serverfault.com/questions/1062989/aws-glacier-and-ransomware",
+     "engagement": 5
+    },
+    {
+     "title": "Prevent Network Ransomware Malware Attack?",
+     "body": "I have a small network of Windows 7 PCs. I want to use a Windows NAS file server as a repository to safeguard the backup files from each Windows PC against a ransomware attack. In order for this strategy to work I need to be able to dynamically connect the NAS file server to the network, copy the .T",
+     "url": "https://serverfault.com/questions/849984/prevent-network-ransomware-malware-attack",
+     "engagement": 5
+    },
+    {
+     "title": "Ransomware infection: What to do",
+     "body": "t seems that somehow our domain computers have been infected by rasomware, turning files into encrypted files ending with .crypted. Lots of file have been changed and we do have back up. At the same time, scanning for actual malware/virus/trojan have so far not resulted with anything. I haven't scan",
+     "url": "https://serverfault.com/questions/790394/ransomware-infection-what-to-do",
+     "engagement": 3
+    },
+    {
+     "title": "Detecting .Money Ransomware on Windows Server 2019",
+     "body": "Problem A few weeks back we got hit with a Dharma Ransomware variant called \"Money\". We made the incorrect assumption that this variant began right at the time the user opened the malicious attachment or link. Saturday we found out that it was actually time-delayed like a lot of them are these days,",
+     "url": "https://serverfault.com/questions/995772/detecting-money-ransomware-on-windows-server-2019",
+     "engagement": 3
+    },
+    {
+     "title": "Sage2.0 Ransomware and Tomcat 7",
+     "body": "We have a tomcat server running on window 2012 server which seems to be constantly being attached by Sage 2.0 ransomeware. Some details of the sever, 1) Tomcat is running on port 80 and 8080. 2) Cygwin is also running. 3) There is no other ports open externally. We are not sure how the infection is ",
+     "url": "https://serverfault.com/questions/840511/sage2-0-ransomware-and-tomcat-7",
+     "engagement": 1
+    }
+   ],
+   "market_research": {
+    "theme_id": 33,
+    "vendors": [
+     {
+      "name": "Acronis Cyber Protect",
+      "url": "https://www.acronis.com/en/products/cyber-protect/purchasing/",
+      "offering": "Backup plus anti-ransomware/cryptojacking protection and malware scanning of backups before restore",
+      "pricing": "Per device subscription; Standard from $85/year, Advanced from $129/year (list)",
+      "segment": "SMB / MSP",
+      "source": "https://www.acronis.com/en/products/cyber-protect/purchasing/"
+     },
+     {
+      "name": "Veeam Data Platform Foundation",
+      "url": "https://veeam.com/products/veeam-data-platform/foundation-edition.html?ad=pricing",
+      "offering": "Backup with inline entropy/extension malware detection engine and clean restore",
+      "pricing": "10-instance pack $1,630/12 months incl. 24/7 support (AWS Marketplace)",
+      "segment": "mid-market / enterprise",
+      "source": "https://aws.amazon.com/marketplace/pp/prodview-5khxcjnxp7xoq"
+     },
+     {
+      "name": "Datto SIRIS",
+      "url": "https://www.datto.com/products/siris/",
+      "offering": "MSP BCDR appliance; backups scanned for ransomware, cloud deletion defense, instant restore",
+      "pricing": "not public (quote via MSP)",
+      "segment": "SMB via MSPs",
+      "source": "https://www.datto.com/products/siris/"
+     },
+     {
+      "name": "Varonis Data Security Platform",
+      "url": "https://www.varonis.com/it/solutions/ransomware-prevention?hsLang=it",
+      "offering": "File-activity behavior analytics detecting and stopping ransomware on file servers, optional MDDR",
+      "pricing": "not public (quote-based); reviewers call it expensive",
+      "segment": "enterprise",
+      "source": "https://www.peerspot.com/questions/what-is-your-experience-regarding-pricing-and-costs-for-varonis-platform"
+     },
+     {
+      "name": "Netwrix Threat Manager",
+      "url": "https://netwrix.com/ThreatManager",
+      "offering": "Real-time detection of mass file changes and abnormal encryption with automated response",
+      "pricing": "not public (contact sales)",
+      "segment": "mid-market / enterprise",
+      "source": "https://www.softwareadvice.com/cybersecurity/netwrix-stealthdefend-profile"
+     },
+     {
+      "name": "ManageEngine DataSecurity Plus",
+      "url": "https://www.manageengine.com/data-security/",
+      "offering": "File server auditing with ransomware detection and automated response scripts",
+      "pricing": "File server auditing from $745/year for 2 Windows file servers",
+      "segment": "SMB / mid-market",
+      "source": "https://www.manageengine.com/in/data-security/compare-editions.html"
+     },
+     {
+      "name": "Superna Ransomware Defender / Data Security Edition",
+      "url": "https://www.storagenewsletter.com/2025/05/22/superna-launches-data-security-essentials-for-dell-powerstore/",
+      "offering": "Real-time ransomware detection and lockout for enterprise NAS (PowerScale, PowerStore, Qumulo)",
+      "pricing": "not public (per-appliance license)",
+      "segment": "enterprise",
+      "source": "https://www.storagenewsletter.com/2025/05/22/superna-launches-data-security-essentials-for-dell-powerstore/"
+     },
+     {
+      "name": "Nasuni Ransomware Protection",
+      "url": "https://nasuni.com/product/ransomware-protection",
+      "offering": "Edge ransomware detection on cloud file platform, targeted restore of infected files",
+      "pricing": "Add-on, fixed capacity tier per year, 3-year contract; list price not public",
+      "segment": "enterprise",
+      "source": "https://nasuni.com/pricing"
+     }
+    ],
+    "crowdedness": 3,
+    "paid_market_gaps": [
+     {
+      "gap": "File-server behavior detection (Varonis, Netwrix, Superna) is quote-only, enterprise-priced; little for 1-3 server shops",
+      "evidence": "https://www.peerspot.com/questions/what-is-your-experience-regarding-pricing-and-costs-for-varonis-platform"
+     },
+     {
+      "gap": "Storage-native detection locked to specific enterprise NAS platforms and multi-year capacity contracts",
+      "evidence": "https://nasuni.com/pricing"
+     },
+     {
+      "gap": "Deception/canary detection costly for small teams; median Thinkst Canary deal about $9,900/year",
+      "evidence": "https://vendr.com/marketplace/thinkst-canary"
+     },
+     {
+      "gap": "Endpoint anti-ransomware on file shares produces false positives blocking legitimate writes (e.g. AutoCAD exports)",
+      "evidence": "https://community.sophos.com/products/intercept/f/feedback/94130/intercept-x-block-access-from-client-when-start-export-in-autocad"
+     }
+    ],
+    "willingness_to_pay": 2,
+    "wtp_evidence": "Established paid backup and file-security products with public per-device and per-server prices (Acronis, Veeam, ManageEngine) sell widely; enterprise buyers pay large sums for Varonis.",
+    "wtp_sources": [
+     "https://www.acronis.com/en/products/cyber-protect/purchasing/",
+     "https://aws.amazon.com/marketplace/pp/prodview-5khxcjnxp7xoq",
+     "https://info.varonis.com/hubfs/docs/whitepapers/en/Forrester%20TEI%20of%20Varonis%20Data%20Security%20Platform.pdf"
+    ],
+    "bundling_risk": "high",
+    "bundling_note": "Microsoft Defender for Business ($3/user/month, servers add-on) includes ransomware attack disruption, and Synology DSM offers immutable snapshots with ransomware-triggered snapshots.",
+    "summary": "Crowded: backup vendors, EDR and enterprise file-security platforms all cover it, and Microsoft/NAS vendors bundle protection. Only narrow opening: cheap, low-false-positive file-share canary detection plus guided restore for 1-3 server SMBs or MSPs."
+   },
+   "threat": {
+    "theme_id": 33,
+    "techniques": [
+     "T1486",
+     "T1490",
+     "T1485"
+    ],
+    "threat_relevance": 3,
+    "reason": "Ransomware detection and file restoration directly counters common, actively exploited encryption-for-impact attacks."
+   },
+   "open_source_leaders": [
+    {
+     "name": "fcorbelli/zpaqfranz",
+     "url": "https://github.com/fcorbelli/zpaqfranz",
+     "stars": 513,
+     "days_since_push": 0
+    },
+    {
+     "name": "Nilespand/acronis-true-image-win",
+     "url": "https://github.com/Nilespand/acronis-true-image-win",
+     "stars": 367,
+     "days_since_push": 1
+    },
+    {
+     "name": "pricejing1995/acronis-true-image-win",
+     "url": "https://github.com/pricejing1995/acronis-true-image-win",
+     "stars": 364,
+     "days_since_push": 1
+    },
+    {
+     "name": "soimy/c3rb3r-rescue",
+     "url": "https://github.com/soimy/c3rb3r-rescue",
+     "stars": 362,
+     "days_since_push": 23
+    },
+    {
+     "name": "lithnet/access-manager",
+     "url": "https://github.com/lithnet/access-manager",
+     "stars": 266,
+     "days_since_push": 5
+    }
+   ]
+  }
+ ],
+ "flagged_claims": [
+  {
+   "theme_id": 4,
+   "claim": "WTP: ADAudit Plus from $595/yr",
+   "issue": "The ManageEngine page shows cheaper plans than $595: $245/year for 100 workstations and $495/year for 2 Windows file servers. $595 is the 2-domain-controller Standard plan, not the starting price."
+  },
+  {
+   "theme_id": 16,
+   "claim": "WTP: Large enterprises spend ~$2.5M/yr on logging and 67% say cost outweighs value",
+   "issue": "Dynatrace gives ~$2.5M as the average annual spend of its survey respondents. It does not describe them as large enterprises. The 67% figure is supported."
+  },
+  {
+   "theme_id": 33,
+   "claim": "WTP: paid backup and file-security products with public per-device and per-server prices (Acronis, Veeam, ManageEngine) sell widely",
+   "issue": "None of the WTP sources is a ManageEngine page, so the ManageEngine part has no source. No source shows that these products 'sell widely'."
+  }
+ ]
+}

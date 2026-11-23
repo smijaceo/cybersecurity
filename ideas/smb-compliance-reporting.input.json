@@ -1,0 +1,451 @@
+{
+ "opening_id": "smb-compliance-reporting",
+ "priority": 2,
+ "thesis": "A self-serve, low-cost regulatory incident-reporting clock and done-for-you security program for small and mid-size firms facing NIS2 (\"important entities\"), the FTC Safeguards Rule and SEC rules for small firms, likely sold through MSSPs and MSPs. The only gap rated crowdedness 2/3, and a compliance-driven market of the kind the backtest shows the method can find.",
+ "themes": [
+  {
+   "theme_id": 50,
+   "name": "Regulatory incident reporting and breach notification",
+   "need": "Firms under NIS2, BSIG, SEC Reg S-P and the FTC Safeguards Rule must report incidents to authorities and notify affected people on deadlines.",
+   "gap_score": 0.497,
+   "stability": 0.92,
+   "need_statements": [
+    {
+     "title": "2026 - EEA System for monitoring and event management (MDR) - Qualification part",
+     "body": "Ask\u00f8y and \u00d8ygarden municipalities shall procure a general, 24 hour (24/7/365) MDR service for proactive security monitoring and support for handling IT security incidents. The service shall reduce the time from a security incident occurring until it is discovered, assessed, notified and handled, and",
+     "url": "https://ted.europa.eu/en/notice/-/detail/792782-2026",
+     "engagement": 1
+    },
+    {
+     "title": "EU NIS2 Directive (Directive (EU) 2022/2555): Report significant incidents to the CSIRT or authority: early warning within 24 hours, incident notification with initial assessment and IoCs within 72 hours, final report within one month.",
+     "body": "Report significant incidents to the CSIRT or authority: early warning within 24 hours, incident notification with initial assessment and IoCs within 72 hours, final report within one month. Applies to: Essential and important entities in NIS2 sectors (generally medium-sized and larger). Jurisdiction",
+     "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+     "engagement": 1
+    },
+    {
+     "title": "German NIS2 Implementation Act \u2014 BSI-Gesetz (BSIG) 2025: Report significant security incidents to the joint BSI/BBK reporting office: early report within 24 hours, notification within 72 hours, final report within one month.",
+     "body": "Report significant security incidents to the joint BSI/BBK reporting office: early report within 24 hours, notification within 72 hours, final report within one month. Applies to: Particularly important and important entities (besonders wichtige / wichtige Einrichtungen). Jurisdiction: Germany. Effe",
+     "url": "https://www.gesetze-im-internet.de/bsig_2025/__32.html",
+     "engagement": 1
+    },
+    {
+     "title": "SEC Regulation S-P amendments (17 CFR 248.30): Adopt an incident response program and notify affected individuals within 30 days of unauthorized access to sensitive customer information; oversee service providers, who must notify within 72 hours.",
+     "body": "Adopt an incident response program and notify affected individuals within 30 days of unauthorized access to sensitive customer information; oversee service providers, who must notify within 72 hours. Applies to: Larger broker-dealers, investment companies, registered investment advisers, funding por",
+     "url": "https://www.federalregister.gov/documents/2024/06/03/2024-11116/regulation-s-p-privacy-of-consumer-financial-information-and-safeguarding-customer-information",
+     "engagement": 1
+    },
+    {
+     "title": "SEC Regulation S-P amendments (17 CFR 248.30): Adopt an incident response program and notify affected individuals within 30 days of unauthorized access to sensitive customer information; oversee service providers, who must notify within 72 hours.",
+     "body": "Adopt an incident response program and notify affected individuals within 30 days of unauthorized access to sensitive customer information; oversee service providers, who must notify within 72 hours. Applies to: Smaller covered institutions (broker-dealers, advisers, investment companies, transfer a",
+     "url": "https://www.federalregister.gov/documents/2024/06/03/2024-11116/regulation-s-p-privacy-of-consumer-financial-information-and-safeguarding-customer-information",
+     "engagement": 1
+    },
+    {
+     "title": "FTC Standards for Safeguarding Customer Information (Safeguards Rule, 16 CFR 314) amendment: Notify the FTC electronically within 30 days of discovering a security event involving the customer information of at least 500 consumers.",
+     "body": "Notify the FTC electronically within 30 days of discovering a security event involving the customer information of at least 500 consumers. Applies to: Non-bank financial institutions under FTC jurisdiction (e.g. mortgage brokers, auto dealers, tax preparers). Jurisdiction: US federal. Effective 2024",
+     "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314/section-314.4",
+     "engagement": 1
+    },
+    {
+     "title": "Repeated GCP Compliance Notifications",
+     "body": "I have been on GCP for roughly 3 months now. In that 3 months I have received 6 notices from GCP saying that one of my compute engines is creating a denial of service attack. They provide the IP address of the CE, and the time the attack triggered the compliance alert (which this last notice was 202",
+     "url": "https://serverfault.com/questions/1084571/repeated-gcp-compliance-notifications",
+     "engagement": 0
+    }
+   ],
+   "market_research": {
+    "theme_id": 50,
+    "vendors": [
+     {
+      "name": "RadarFirst (Radar Privacy)",
+      "url": "https://www.radarfirst.com/",
+      "offering": "Incident decisioning: jurisdiction-specific breach notification logic, SEC materiality, audit-ready records",
+      "pricing": "not public (contact vendor)",
+      "segment": "enterprise",
+      "source": "https://www.capterra.com/p/187954/RADAR/"
+     },
+     {
+      "name": "BreachRx (Rex Platform)",
+      "url": "https://www.breachrx.com/",
+      "offering": "Incident response management; regulatory agent maps disclosure rules across 200+ regulations",
+      "pricing": "not public (contact vendor)",
+      "segment": "enterprise",
+      "source": "https://siliconangle.com/2026/06/25/breachrx-launches-rex-platform-coordinate-ai-era-incident-response"
+     },
+     {
+      "name": "OneTrust Incident & Breach Response",
+      "url": "https://www.onetrust.com/manage-incident-and-breach-response-with-onetrust",
+      "offering": "Incident register with breach-law database, jurisdiction workflows, notification deadlines and templates",
+      "pricing": "not public",
+      "segment": "enterprise",
+      "source": "https://onetrust.com/news/onetrust-enhances-incident-breach-response"
+     },
+     {
+      "name": "Securiti Breach Management",
+      "url": "https://securiti.ai/products/breach-management",
+      "offering": "Breach workflow, affected-individual identification from data graph, jurisdictional notification automation",
+      "pricing": "not public",
+      "segment": "enterprise",
+      "source": "https://securiti.ai/glossary/data-breach-notification/"
+     },
+     {
+      "name": "SECJUR Digital Compliance Office",
+      "url": "https://www.secjur.com/",
+      "offering": "German NIS2 compliance platform with 24h/72h/1-month BSI reporting workflow",
+      "pricing": "from EUR 10,000 (per vendor's own guide)",
+      "segment": "SMB, mid-market (Germany)",
+      "source": "https://www.secjur.com/blog/nis2-software"
+     },
+     {
+      "name": "ComplyAuto",
+      "url": "https://complyauto.com/",
+      "offering": "FTC Safeguards compliance for auto dealers: incident response plan builder, breach-reporting guidance",
+      "pricing": "not public",
+      "segment": "SMB (auto dealerships)",
+      "source": "https://complyauto.com/ftc-safeguards/"
+     },
+     {
+      "name": "Kroll Breach Notification",
+      "url": "https://www.kroll.com/en/services/cyber/breach-notification",
+      "offering": "Managed notification letters, mailing, call centers and identity monitoring for affected people",
+      "pricing": "not public",
+      "segment": "enterprise, mid-market (often via cyber insurers)",
+      "source": "https://www.kroll.com/en/services/cyber/breach-notification"
+     },
+     {
+      "name": "Experian Data Breach Resolution",
+      "url": "https://experian.com/data-breach/services",
+      "offering": "Notification by mail/email in 100+ countries, address lookup, call center, credit monitoring",
+      "pricing": "not public",
+      "segment": "enterprise, mid-market",
+      "source": "https://experian.com/data-breach/services"
+     }
+    ],
+    "crowdedness": 2,
+    "paid_market_gaps": [
+     {
+      "gap": "Enterprise decisioning tools (RadarFirst, BreachRx, OneTrust) quote-only; no self-serve product for small NIS2 or FTC-covered firms",
+      "evidence": "https://www.capterra.com/p/187954/RADAR/"
+     },
+     {
+      "gap": "Enterprise GRC offers NIS2 three-stage BSI reporting only as add-on or configuration, not ready workflow",
+      "evidence": "https://www.secjur.com/blog/nis2-software"
+     },
+     {
+      "gap": "Multi-regime triage (NIS2, DORA, Reg S-P, FTC) at one incident: hundreds of concurrent obligations overwhelm processes",
+      "evidence": "https://www.nasdaq.com/press-release/breachrx-research-modern-cyberattacks-create-hundreds-simultaneous-reporting"
+     },
+     {
+      "gap": "No tool drafts filings straight into national portals; BSI portal submissions are manual via ELSTER-based accounts",
+      "evidence": "https://www.computerweekly.com/de/news/366636992/NIS2-Unternehmen-koennen-sich-registrieren-und-anmelden"
+     }
+    ],
+    "willingness_to_pay": 2,
+    "wtp_evidence": "Enterprises buy quote-only tools (BreachRx: 100+ customers incl. Amex, Coinbase; $15M Series A in May 2025); SMB NIS2 platforms start ~EUR 10,000.",
+    "wtp_sources": [
+     "https://siliconangle.com/2026/06/25/breachrx-launches-rex-platform-coordinate-ai-era-incident-response",
+     "https://www.secjur.com/blog/nis2-software"
+    ],
+    "bundling_risk": "medium",
+    "bundling_note": "Cloud providers don't give away jurisdictional notification logic, but GRC/privacy suites (OneTrust, ServiceNow, NIS2 compliance platforms) and MDR/incident-response retainers bundle reporting, and authorities run free portals.",
+    "summary": "Established enterprise tools and notification services exist; the opening is a self-serve, low-cost multi-regime reporting clock for SMB and mid-market firms (NIS2 'important entities', FTC-covered non-banks, small RIAs/broker-dealers), likely sold via MSSPs/MDR."
+   },
+   "threat": {
+    "theme_id": 50,
+    "techniques": [],
+    "threat_relevance": 0,
+    "reason": "Post-incident regulatory reporting and notification; no effect on attacker behaviour."
+   },
+   "open_source_leaders": [
+    {
+     "name": "VAIXLNS/VAIXLNS",
+     "url": "https://github.com/VAIXLNS/VAIXLNS",
+     "stars": 8,
+     "days_since_push": 81
+    },
+    {
+     "name": "VarrunVashisht/Enterprise-Cyber-GRC-ISO-27001-ISMS-NovaTrust-Bank",
+     "url": "https://github.com/VarrunVashisht/Enterprise-Cyber-GRC-ISO-27001-ISMS-NovaTrust-Bank",
+     "stars": 6,
+     "days_since_push": 258
+    },
+    {
+     "name": "atanu1982/Critical-HIPAA-Compliance-Updated-Checklist-under-Trump-Administration-for-2018",
+     "url": "https://github.com/atanu1982/Critical-HIPAA-Compliance-Updated-Checklist-under-Trump-Administration-for-2018",
+     "stars": 5,
+     "days_since_push": 3105
+    },
+    {
+     "name": "nusRying/ai-safety-monitoring",
+     "url": "https://github.com/nusRying/ai-safety-monitoring",
+     "stars": 4,
+     "days_since_push": 45
+    },
+    {
+     "name": "FreeDurok/ICE-Incident-Compliance-Engine",
+     "url": "https://github.com/FreeDurok/ICE-Incident-Compliance-Engine",
+     "stars": 3,
+     "days_since_push": 357
+    }
+   ]
+  },
+  {
+   "theme_id": 12,
+   "name": "Affordable security programs for small businesses",
+   "need": "Small businesses and nonprofits without IT staff struggle to run security audits, assessments, awareness training and SOC 2 or Cyber Essentials.",
+   "gap_score": 0.596,
+   "stability": 0.8,
+   "need_statements": [
+    {
+     "title": "IT Audit checklist",
+     "body": "I recently have taken on the position of a one man show for a company that is going to have an audit. The network isn't anywhere close to prepared and I have been looking for a general audit checklist since one hasn't been provided by the auditors and haven't found much good information out there. D",
+     "url": "https://serverfault.com/questions/142737/it-audit-checklist",
+     "engagement": 66
+    },
+    {
+     "title": "Ask HN: Security at my company is horrible, what can I do?",
+     "body": "I have joined a team working on maintaining and improving an old project around 4 months ago. The code is old and with horrible practices and no regard for security. I was OK-ish with it tho, since the app is B2B and can only be accessed via a whitelisted IP. Now we have been told that on our produc",
+     "url": "https://news.ycombinator.com/item?id=17840003",
+     "engagement": 24
+    },
+    {
+     "title": "Ask HN: Security audit for startup / OSS projects",
+     "body": "I run a startup whose code is public and I'd like to have the code audited for vulnerabilities, does anyone know of services that exist to do this that aren't enterprise focused? Even HackerOne has gone full-enterprise in recent years, but it's not only large companies that need these services.",
+     "url": "https://news.ycombinator.com/item?id=25520219",
+     "engagement": 23
+    },
+    {
+     "title": "Ask HN: Security audits. Worth it? Who's good?",
+     "body": "Hi all, I'm beginning a project which will create a web based software as a service. I've little experience in web security and I'm considering budgeting for a web security audit to find security issues in the finished product. The product itself doesn't need to handle payments or store personal inf",
+     "url": "https://news.ycombinator.com/item?id=23918219",
+     "engagement": 19
+    },
+    {
+     "title": "Ask HN: Security Awareness Training",
+     "body": "I'm at a bit of a loss. Just wanted to ask the community if there were any recommendations for decent security awareness training. This requirement is coming up more and more with regulators and underwriters. In essence, this is of course more 'box ticking' and has little to do with actual security,",
+     "url": "https://news.ycombinator.com/item?id=30288999",
+     "engagement": 17
+    },
+    {
+     "title": "Phone Privacy for Small Business",
+     "body": "I'm a small business operator and I'm looking for ways to provide security and reasonable privacy for my own business communications and communications of customers. All these businesses operate outside the U.S. and have no need to export their data to U.S. servers. All the smartphones I've seen see",
+     "url": "https://security.stackexchange.com/questions/44863/phone-privacy-for-small-business",
+     "engagement": 17
+    },
+    {
+     "title": "SOC 2 audit for small business (6 employees) with no IT department",
+     "body": "One of our clients is demanding that we complete a SOC 2 Type II audit. There is no way we will meet the standard, and, considering we only handle publicly available data, it is ridiculous that they are asking for one. We're talking about 6-8 Excel files per year that represent a very small but crit",
+     "url": "https://security.stackexchange.com/questions/194368/soc-2-audit-for-small-business-6-employees-with-no-it-department",
+     "engagement": 14
+    },
+    {
+     "title": "Ask HN: Security assessment for small non-profit",
+     "body": "Hey all, I work with a small non-profit (~10 people) and we'd like an assessment done on our online presence (Wordpress, Roundcube email, Google Docs, Mailchimp, Twitter, Facebook) to ensure that it cannot be hijacked or destroyed. While, I have a programming background, I'd like a professional's ta",
+     "url": "https://news.ycombinator.com/item?id=16255598",
+     "engagement": 13
+    },
+    {
+     "title": "Cyber Essentials at a small business (20 employees) that keeps all business data within SaaS",
+     "body": "Background I've recently joined a rapidly growing small business (from 4 to 20 people in last 12 months) with a very DIY IT setup. It's fallen to me (I'm a developer so I just happen to be sitting nearest IT world...) to improve their security and specifically we are aiming to achieve compliance wit",
+     "url": "https://security.stackexchange.com/questions/252530/cyber-essentials-at-a-small-business-20-employees-that-keeps-all-business-data",
+     "engagement": 5
+    },
+    {
+     "title": "SSO Tax- SaaS companies basis of upgrading from standard to enterprise",
+     "body": "",
+     "url": "https://news.ycombinator.com/item?id=38688926",
+     "engagement": 1
+    },
+    {
+     "title": "Ask HN: Is there still a reason to use Okta for SSO? Okta vs. Google SSO",
+     "body": "My company has been an Okta customer for several years and I'm responsible for administering it. However I don't have experience with other SSO products, so would be interested to hear what the experience is like on the other side. The key thing for me is SCIM provisioning support, but not just that",
+     "url": "https://news.ycombinator.com/item?id=35644662",
+     "engagement": 0
+    },
+    {
+     "title": "Kanidm: A simple, secure and fast identity management platform",
+     "body": "I would have thought that in SCIM provisioning people would invest more time researching for existing projects. Said that, I fully understand why people would not invest enough time to understand the Grouper environment, I going through it and feels like a punishment. If someone wants to see the pot",
+     "url": "https://news.ycombinator.com/item?id=28887656",
+     "engagement": 0
+    },
+    {
+     "title": "Problem: Employees share team account credentials in chat messages with no secure handoff",
+     "body": "**JTBD:** When multiple people on a team need access to a shared service account, I want a secure way to hand off credentials and document who has access, so we can stop sharing passwords over Slack or email where they're exposed in message history indefinitely. ## Context & frequency Employees on s",
+     "url": "https://github.com/muaddibco/RealWorldProblems/issues/358",
+     "engagement": 0
+    },
+    {
+     "title": "Cybersecurity training programs don't prevent phishing scams",
+     "body": "Re: the receive email -> click URL -> enter credentials. We need SSO to stop being gated behind enterprise tiers. SSO tax is real, and can help solve this problem. I've moaned about this before as the leader of an IT team for a medium-sized company reliant on a lot of SaaS. Enterprise plans are too ",
+     "url": "https://news.ycombinator.com/item?id=45531438",
+     "engagement": 0
+    },
+    {
+     "title": "How I changed my D-Link camera to a locally managed IP camera",
+     "body": "Could I ask for some advice? I was gifted a new rando chinese IP cam that uses the mobile app. It's not googlable. I've been using as a outside security camera. The camera saves to an SD card continuously, and has a paid option to use the cloud which I did not take. It has a mobile app, KP WIFICAM, ",
+     "url": "https://news.ycombinator.com/item?id=36560346",
+     "engagement": 0
+    },
+    {
+     "title": "Disguised user location data collection on Huawei phone?",
+     "body": "I have a family friend that is 70+ yr olds. Unfortunately, the best deal I could find for him via his AT&T prepaid plan was a $70 Huawei Ascend XT2 @ Walmart (locked to AT&T). It's performance is great: fast charging, long-lasting battery, 2G of RAM, and intuitive UI (despite being Huawei's custom m",
+     "url": "https://news.ycombinator.com/item?id=18213111",
+     "engagement": 0
+    }
+   ],
+   "market_research": {
+    "theme_id": 12,
+    "vendors": [
+     {
+      "name": "Vanta",
+      "url": "https://www.vanta.com/",
+      "offering": "Compliance automation for SOC 2, ISO 27001 and other frameworks",
+      "pricing": "no rate card on site; AWS Marketplace 12-month: Essentials from $14,000, Plus $21,500, Professional $23,000 (1-20 employees); audit extra",
+      "segment": "startups to enterprise",
+      "source": "https://aws.amazon.com/marketplace/pp/prodview-5ophamrbfxt44"
+     },
+     {
+      "name": "Drata",
+      "url": "https://drata.com/",
+      "offering": "Compliance automation platform for SOC 2, ISO 27001 with trust center",
+      "pricing": "quote on site; AWS Marketplace Foundation Package list price $15,000 for 1-50 FTE companies",
+      "segment": "startups, mid-market",
+      "source": "https://aws.amazon.com/marketplace/pp/prodview-3xw4sjqv2pb22"
+     },
+     {
+      "name": "Secureframe",
+      "url": "https://secureframe.com/",
+      "offering": "Compliance automation for SOC 2, ISO 27001, HIPAA and more",
+      "pricing": "Fundamentals starting at $7,500/year; higher tiers quote",
+      "segment": "startups, SMB, mid-market",
+      "source": "https://secureframe.com/pricing"
+     },
+     {
+      "name": "Sprinto",
+      "url": "https://sprinto.com/",
+      "offering": "GRC automation for SOC 2/ISO 27001 for cloud-native teams",
+      "pricing": "AWS Marketplace: Starter (SOC 2 or ISO 27001, up to 25 employees) $8,500; audit separate",
+      "segment": "startups, SMB",
+      "source": "https://aws.amazon.com/marketplace/pp/prodview-upzeowcpyofas"
+     },
+     {
+      "name": "Comp AI",
+      "url": "https://trycomp.ai/",
+      "offering": "AI compliance automation for SOC 2, ISO 27001, HIPAA, GDPR",
+      "pricing": "not public (quote by frameworks scoped)",
+      "segment": "startups, SMB",
+      "source": "https://trycomp.ai/pricing"
+     },
+     {
+      "name": "KnowBe4 Security Awareness Training",
+      "url": "https://www.knowbe4.com/",
+      "offering": "Security awareness training and simulated phishing",
+      "pricing": "per seat, 3-year term: SAT Foundation $2.40/seat/month at 25-50 seats (May 2026 MSRP); nonprofit discounts on request",
+      "segment": "SMB to enterprise",
+      "source": "https://knowbe4.com/pricing-security-awareness-training"
+     },
+     {
+      "name": "Huntress Managed Security Awareness Training",
+      "url": "https://www.huntress.com/",
+      "offering": "Managed awareness training and phishing simulation, largely sold via MSPs",
+      "pricing": "per active learner per month, billed annually; price not public",
+      "segment": "SMB via MSPs",
+      "source": "https://www.huntress.com/pricing/sat"
+     },
+     {
+      "name": "CyberSmart",
+      "url": "https://cybersmart.co.uk/",
+      "offering": "Cyber Essentials certification platform with device monitoring for UK small businesses",
+      "pricing": "quote; includes IASME certification fee (IASME fee from \u00a3320+VAT)",
+      "segment": "SMB, micro businesses (UK)",
+      "source": "https://cybersmart.co.uk/plans"
+     }
+    ],
+    "crowdedness": 3,
+    "paid_market_gaps": [
+     {
+      "gap": "SOC 2 platforms start around $8.5k-$15k/year before a $10k-$50k audit; unaffordable for sub-10-person firms handling low-risk data",
+      "evidence": "https://aws.amazon.com/marketplace/pp/prodview-5ophamrbfxt44"
+     },
+     {
+      "gap": "No-IT micro businesses and nonprofits lack a guided, done-for-you program; platforms assume an engineer to integrate and remediate",
+      "evidence": "https://security.stackexchange.com/questions/194368/soc-2-audit-for-small-business-6-employees-with-no-it-department"
+     },
+     {
+      "gap": "Awareness training priced from 25-seat bands and 3-year terms; Microsoft phishing simulation locked to E5/Defender Plan 2",
+      "evidence": "https://learn.microsoft.com/en-us/defender-office-365/attack-simulation-training-get-started"
+     },
+     {
+      "gap": "SaaS vendors gate SSO behind enterprise tiers, inflating small-company security costs 3x-10x",
+      "evidence": "https://sso.tax/"
+     }
+    ],
+    "willingness_to_pay": 2,
+    "wtp_evidence": "Buyers pay public list prices: SOC 2/ISO platforms $4,500-$8,500 per 12 months on AWS Marketplace, Cyber Essentials from \u00a3320+VAT, awareness training $2.40/seat/month at 25-50 seats (3-year term).",
+    "wtp_sources": [
+     "https://aws.amazon.com/marketplace/pp/prodview-upzeowcpyofas",
+     "https://www.ncsc.gov.uk/information/cyber-essentials",
+     "https://knowbe4.com/pricing-security-awareness-training"
+    ],
+    "bundling_risk": "medium",
+    "bundling_note": "Clouds don't bundle SOC 2 automation, but governments give free prep (NCSC action plan, CISA scanning) and Microsoft bundles training in higher tiers.",
+    "summary": "Crowded, well-funded compliance-automation and training markets serve funded startups; the opening is a cheap, done-for-you program for sub-20-person firms and nonprofits without IT, likely sold through MSPs or bundled with certification."
+   },
+   "threat": {
+    "theme_id": 12,
+    "techniques": [],
+    "threat_relevance": 1,
+    "reason": "Broad small-business audits and training; general hygiene with no specific technique link among candidates."
+   },
+   "open_source_leaders": [
+    {
+     "name": "Rastaman4e/-1",
+     "url": "https://github.com/Rastaman4e/-1",
+     "stars": 83,
+     "days_since_push": 2046
+    },
+    {
+     "name": "NestieGuilas/Marketing-Platform-",
+     "url": "https://github.com/NestieGuilas/Marketing-Platform-",
+     "stars": 26,
+     "days_since_push": 1957
+    },
+    {
+     "name": "Tradewindfinance2/What-Lessons-has-COVID-19-Taught-Buyers-and-Suppliers",
+     "url": "https://github.com/Tradewindfinance2/What-Lessons-has-COVID-19-Taught-Buyers-and-Suppliers",
+     "stars": 5,
+     "days_since_push": 1797
+    },
+    {
+     "name": "Tradewindfinance2/Why-is-International-Trade-Finance-Important-to-SMEs---Tradewindfinance",
+     "url": "https://github.com/Tradewindfinance2/Why-is-International-Trade-Finance-Important-to-SMEs---Tradewindfinance",
+     "stars": 3,
+     "days_since_push": 1604
+    },
+    {
+     "name": "FlyFireFight/PrivacyPolicy",
+     "url": "https://github.com/FlyFireFight/PrivacyPolicy",
+     "stars": 3,
+     "days_since_push": 1546
+    }
+   ]
+  }
+ ],
+ "flagged_claims": [
+  {
+   "theme_id": 12,
+   "claim": "Vendor Vanta: no rate card on site; Essentials $14,000 / Plus $21,500 / Professional $23,000 (1-20 employees); audit extra",
+   "issue": "The AWS prices are correct. But the same listing says to 'preview pricing for 1-20 employees and more at vanta.com/pricing', which contradicts 'no rate card on site'. Nothing on the page says the audit costs extra."
+  },
+  {
+   "theme_id": 50,
+   "claim": "Vendor RadarFirst: incident decisioning incl. SEC materiality; segment enterprise",
+   "issue": "The cited Capterra page lists typical users as freelancers, small businesses, mid-size businesses and enterprises. It does not mention SEC materiality. 'Contact vendor' pricing is supported."
+  },
+  {
+   "theme_id": 50,
+   "claim": "WTP: SMB NIS2 platforms start ~EUR 10,000",
+   "issue": "The only source is SECJUR's own blog, stating its own product costs 'ab 10.000 Euro' for the German Mittelstand. It is one vendor's self-reported price, not evidence of where SMB NIS2 platforms in general start."
+  }
+ ]
+}

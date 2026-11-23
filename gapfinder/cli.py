@@ -333,6 +333,8 @@ def cmd_panel(args) -> int:
     from . import panel
 
     cfg = load_config(args.scoring)["panel"]
+    if cfg.get("mode") == "history":  # resolve relative to the repository, not the cwd
+        cfg["history"]["results"] = str(ROOT / cfg["history"]["results"])
     try:
         results = panel.run(args.ideas_dir, cfg, args.report)
     except (ValueError, FileNotFoundError) as exc:

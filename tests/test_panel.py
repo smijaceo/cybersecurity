@@ -99,3 +99,23 @@ def test_decide_uses_configured_lenses():
     p = panel_of([8, 8, 8, 8, 8, 8])          # only the original six lenses
     assert panel.decide(p, six)["decision"] == "GO"
     assert panel.decide(p, CFG)["decision"] == "INCOMPLETE"
+
+
+def test_decide_history(tmp_path):
+    ref = {"successes": [5.0, 5.88, 5.88, 6.0], "failures": [5.0, 5.38, 5.5, 5.5]}
+    cfg = {"lenses": list(schemas.LENSES), "history": {"lenses": list(schemas.LENSES[:8])}}
+    strong = panel.decide_history(panel_of([6] * 8 + [3]), cfg, ref)
+    assert strong["decision"] == "STRONG" and strong["mean"] == 6 and strong["founder_fit"] == 3
+    assert (strong["above_successes"], strong["above_failures"]) == (3, 4)
+    assert panel.decide_history(panel_of([6, 6, 6, 6, 5, 5, 6, 6, 9]), cfg, ref)["decision"] == "PROMISING"  # 5.75
+    assert panel.decide_history(panel_of([5] * 9), cfg, ref)["decision"] == "WEAK"
+    p = panel_of([6] * 9)
+    p.pop("founder-fit")
+    assert panel.decide_history(p, cfg, ref)["decision"] == "INCOMPLETE"
+
+
+def test_history_reference(tmp_path):
+    f = tmp_path / "r.json"
+    f.write_text(json.dumps({"calibration": {"concepts": [
+        {"outcome": "success", "mean": 6}, {"outcome": "failure", "mean": 5}]}}))
+    assert panel.history_reference(f) == {"successes": [6], "failures": [5]}

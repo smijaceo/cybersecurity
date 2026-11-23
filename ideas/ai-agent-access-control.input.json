@@ -1,0 +1,672 @@
+{
+ "opening_id": "ai-agent-access-control",
+ "priority": 3,
+ "thesis": "Policy enforcement and audit for AI agents' tool calls and MCP access \u2014 cheap, cross-agent, including headless/CI agent runs \u2014 for small and mid-size development teams below enterprise contracts. Crowded and fast-bundling (funded gateways, identity incumbents, cloud providers); demand comes almost entirely from developers. A deliberate bet on a fast-moving market.",
+ "themes": [
+  {
+   "theme_id": 10,
+   "name": "Permission gating for AI agent tool calls",
+   "need": "Users of AI coding agents need per-tool permission rules, read-only modes and defences so prompt-injected content cannot trigger unsafe tool calls.",
+   "gap_score": 0.617,
+   "stability": 0.65,
+   "need_statements": [
+    {
+     "title": "Curated memory roots (`MEMORY.md` / `USER.md`) are silently and permanently excluded from bootstrap injection by the provenance ratchet \u2014 including after ordinary agent behavior (a web-search turn), with no diagnostics, no CLI, and no recovery",
+     "body": "### Summary `MEMORY.md` / `USER.md` are the curated roots that get injected into every new session's bootstrap prompt. Their injection is gated by a per-file provenance record (`originClass`). Once that record becomes `\"untrusted\"`, the file is silently dropped from the bootstrap prompt **forever** ",
+     "url": "https://github.com/openclaw/openclaw/issues/153426",
+     "engagement": 21
+    },
+    {
+     "title": "Background task notifications trigger autonomous API calls \u2014 model responds as if it were the user",
+     "body": "## Bug: Background task notifications trigger autonomous API calls with `bypassPermissions` \u2014 model responds as if it were the user ### Summary When a background task (launched via `run_in_background`) completes while the REPL is idle, Claude Code materializes the task-notification as a synthetic `t",
+     "url": "https://github.com/anthropics/claude-code/issues/39027",
+     "engagement": 20
+    },
+    {
+     "title": "Proposal: Untrusted Annotation for Tool Responses",
+     "body": "**Background** Attackers can reliably manipulate agent behavior by planting malicious instructions inside User Generated Content (UGC) and server responses, which the agent blindly ingests when executing tools, potentially causing prompt injections. While agents should defend against prompt injectio",
+     "url": "https://github.com/webmachinelearning/webmcp/issues/136",
+     "engagement": 16
+    },
+    {
+     "title": "Feature request: read-only / plan-mode equivalent for non-interactive `-p` runs",
+     "body": "## Summary Antigravity CLI 1.0.0 has no equivalent to Gemini CLI's `--approval-mode plan` for non-interactive (`-p` / `--print`) runs. In `-p` mode, `agy` auto-approves all tool calls \u2014 including `write_file` \u2014 which makes it unsafe for scripted automation that processes untrusted input (e.g. agent-",
+     "url": "https://github.com/google-antigravity/antigravity-cli/issues/45",
+     "engagement": 14
+    },
+    {
+     "title": "[RFC] Architecture for Robust Agents: Implementing a \"Discriminator Layer\" Middleware",
+     "body": "**The Scalability Bottleneck** Currently, OpenClaw operates as a pure Generator. It relies on the Planner to be both creative *and* safe. This creates a fragility loop: if the Planner is jailbroken or hallucinates, there is no system-level check to stop it, forcing reliance on manual user approval (",
+     "url": "https://github.com/openclaw/openclaw/issues/9030",
+     "engagement": 13
+    },
+    {
+     "title": "Detect remote administration tool (rat)",
+     "body": "I suspect being the victim of a hacking attack. What steps should I take to ensure that no rat software is running on my computer? I checked the autostart by executing initctl list but im not sure if this is alright: indicator-application start/running, process 2557 unicast-local-avahi stop/waiting ",
+     "url": "https://security.stackexchange.com/questions/165003/detect-remote-administration-tool-rat",
+     "engagement": 9
+    },
+    {
+     "title": "Which tool to use to automate REST API pentest",
+     "body": "I want to run an automated REST API pentest, and I want to integrate my test into CI/CD pipeline. Note: I have the openapi specification of the APIs that I want to test. My automated test will be divided into 2 parts: Anti-regression testing of the APIs based on known scenarios (happy path and unhap",
+     "url": "https://security.stackexchange.com/questions/277069/which-tool-to-use-to-automate-rest-api-pentest",
+     "engagement": 8
+    },
+    {
+     "title": "feat: Tool Permission Gating System (per-tool rules + mode-based fallback)",
+     "body": "## Problem Hermes currently has a narrow approval system that only gates **dangerous shell commands** via pattern matching inside `terminal_tool`. All other tools \u2014 file writes, code execution, browser automation, delegation, memory writes \u2014 execute without any user confirmation. The only modes avai",
+     "url": "https://github.com/NousResearch/hermes-agent/issues/21849",
+     "engagement": 7
+    },
+    {
+     "title": "CLI Schema - enforcing a security policy for AI agents",
+     "body": "### Describe the feature or problem you\u2019d like to solve I'd like to provide my sandboxed AI agent access to `gh`, but be able to enforce a security policy on which subcommands I allow, and which I disallow. ### Proposed solution I'd like the `gh` CLI schema to be easily machine-readable or CLI comma",
+     "url": "https://github.com/cli/cli/issues/12912",
+     "engagement": 5
+    },
+    {
+     "title": "[REVIEW] agent-security: bind approvals to exact tool artifacts and MCP provenance",
+     "body": "## Skill Being Reviewed **Skill name:** agent-security **Skill path:** `skills/ai-security/agent-security/` ## False Positive Analysis **Benign code that triggers a false positive:** ```yaml agent_audit: store_raw_prompts: false store_chain_of_thought: false store_prompt_hash: true store_policy_trac",
+     "url": "https://github.com/UnitOneAI/SecuritySkills/issues/1595",
+     "engagement": 5
+    },
+    {
+     "title": "Feature Request: Granular Permissions Control for Agent Tools",
+     "body": "Subject: Feature Request: Granular Permissions Control for Agent Tools Dear Trae AI Development Team, I would like to propose a new feature that I believe would significantly enhance the flexibility and security of agent configuration within Trae AI. 1. Summary of the Feature Request: Implement gran",
+     "url": "https://github.com/Trae-AI/TRAE/issues/1051",
+     "engagement": 4
+    },
+    {
+     "title": "feat: Add tool-call authorization hook and prompt injection guidance",
+     "body": "### Problem to solve Tools registered with `Agent(tools=[...])` are executed based on LLM output (`Agent._execute_tool_calls` in `agent/agent.py`). The LLM's tool-call decision is influenced by user input and by content returned from earlier tool calls \u2014 both attacker-controlled in the standard thre",
+     "url": "https://github.com/prajwalsuryawanshi/agentapi/issues/88",
+     "engagement": 3
+    },
+    {
+     "title": "[Bug]: Provider content-blocks (prompt injection / secret detection) leave sessions unrecoverable \u2014 harness should rewrite around the block instead of replaying the identical request",
+     "body": "### Operating System Linux (reproduced on GitHub-hosted runners and containerized agent runtimes; the behavior is platform-independent) ### Installation Method Other \u2014 observed in an agent session driven through an engine-driver harness (GitHub Agentic Workflows v0.93.5, codex engine `@openai/codex`",
+     "url": "https://github.com/OpenHands/OpenHands/issues/19018",
+     "engagement": 3
+    },
+    {
+     "title": "Feature: Native secret redaction to prevent credential leakage to LLM",
+     "body": "## Problem AI coding agents can inadvertently leak secrets (API keys, tokens, passwords) to LLM providers through: 1. **Tool outputs**: Reading `.env` files, running commands that print secrets, accessing config files 2. **Context accumulation**: Secrets persist in conversation history across multip",
+     "url": "https://github.com/anomalyco/opencode/issues/39512",
+     "engagement": 3
+    },
+    {
+     "title": "Agent Governance Control Plane",
+     "body": "Problem: Teams deploying coding or operational agents have no way to enforce which tools an agent may call at runtime, require human approval before a high-risk action fires, or produce an audit trail that proves which agent did what. Today this is enforced ad-hoc by per-agent scripts, by running ag",
+     "url": "https://github.com/awiseguy88/AgentWiseAI/issues/110",
+     "engagement": 2
+    },
+    {
+     "title": "feat: governance guard for tool calls \u2014 deterministic policy evaluation, cost tracking, and audit",
+     "body": "### Description ## Feature request I'd like to propose/contribute a governance integration for Pydantic AI that evaluates deterministic security policies before tool execution, tracks cost, and produces structured audit records. ### Proposed API Pydantic AI's dependency injection system is a natural",
+     "url": "https://github.com/pydantic/pydantic-ai/issues/5789",
+     "engagement": 2
+    },
+    {
+     "title": "[Feature]: Let a CLI-backend harness redact tool output before the backend writes its own native transcript",
+     "body": "## Summary Give a CLI-backend harness a way to transform tool output **before** the backend persists its own native record, so secrets that appear in tool results can be redacted at the boundary instead of swept up afterwards. ## Problem to solve OpenClaw already has the right hook. `tool_result_per",
+     "url": "https://github.com/openclaw/openclaw/issues/185518",
+     "engagement": 2
+    },
+    {
+     "title": "Add a redaction system for tool output",
+     "body": "## Proposed Docs ### Introduction linux-mcp-server contains a simple redaction system that is applied to data returned from the target system before it reaches the chat model, both for fixed tools and for Guarded Command Execution. The goal of this system is to avoid sending certain information from",
+     "url": "https://github.com/rhel-lightspeed/linux-mcp-server/issues/626",
+     "engagement": 1
+    },
+    {
+     "title": "[Idea] MCP Transcript Commitment Ledger for Tamper-Evident AI Agent Actions in DAO Treasury Ops",
+     "body": "## Idea Summary - **Idea Title**: MCP Transcript Commitment Ledger for Tamper-Evident AI Agent Actions in DAO Treasury Ops - **Core Analysis**: The real problem is not just sandbox escape; it is that agent actions are too easy to dispute after the fact. DeepSeek Harness-style failures prove that exe",
+     "url": "https://github.com/MosslandOpenDevs/agentic-orchestrator/issues/5005",
+     "engagement": 1
+    },
+    {
+     "title": "[Idea] Cloudflare Zero Trust Ephemeral Agent Relay for Mossland Web3 Signoffs",
+     "body": "## Idea Summary - **Idea Title**: Cloudflare Zero Trust Ephemeral Agent Relay for Mossland Web3 Signoffs - **Core Analysis**: The real problem is not just a DeepSeek Harness patch gap; it is that LLM agents are being treated like trusted backend workers while they remain externally steerable. Once p",
+     "url": "https://github.com/MosslandOpenDevs/agentic-orchestrator/issues/5008",
+     "engagement": 1
+    },
+    {
+     "title": "[Feature] Support LiteLLM routing natively inside the Policy Engine",
+     "body": "### Description Currently, Aegisora's runtime proxy intercepts AI agent actions before execution and relies on a default inference provider (Groq/OpenAI) for certain risk evaluation tasks. As we expand our multi-agent governance capabilities, we want to allow developers to route these internal polic",
+     "url": "https://github.com/aegisora-ai/aegisora/issues/19",
+     "engagement": 1
+    },
+    {
+     "title": "Add Domain whitelisting for a stagehand session",
+     "body": "I want to enforce a guardrail to terminate a session if an agent clicks on a link that is outside of an allowed list of domains. See claude proposal: When running an autonomous agent.execute() loop, the agent can freely navigate to any URL. The goto tool calls page.goto(url) with no validation ([got",
+     "url": "https://github.com/browserbase/stagehand/issues/2272",
+     "engagement": 1
+    },
+    {
+     "title": "feat(security): prompt-injection detector (input + ingestion-time) (placeholder)",
+     "body": "## Placeholder \u2014 second-wave B2B / AI safety feature ## Idea Output-side guardrails (hallucination block, judge, citation validator) already exist in `services/rag/`. The **input** side has nothing dedicated to prompt-injection \u2014 only generic NoSQL/XSS sanitization in `securitySanitizer`. A vendor u",
+     "url": "https://github.com/andrelair-platform/retrieva/issues/220",
+     "engagement": 0
+    },
+    {
+     "title": "factory: prompt-injection screening at triage + secrets canary in the gate",
+     "body": "## What Add a sanitizer step at triage: wrap ingested ticket bodies in strict delimiters, flag instruction-looking lines for the reviewer contract, and plant a per-run canary env var that the deterministic gate fails on if it ever appears in worker output. ## Why now Microsoft Threat Intelligence di",
+     "url": "https://github.com/mikeroySoft/ideas/issues/118",
+     "engagement": 0
+    },
+    {
+     "title": "feat(runner): add OpenShell sandbox backend as alternative to Docker",
+     "body": "## Summary Add [NVIDIA OpenShell](https://github.com/NVIDIA/OpenShell) as an alternative execution backend for Rascal runs. OpenShell provides sandboxed, policy-controlled execution environments for AI agents with defense-in-depth security (Landlock filesystem isolation, seccomp syscall filtering, O",
+     "url": "https://github.com/rtzll/rascal/issues/195",
+     "engagement": 0
+    },
+    {
+     "title": "[Gateway/Bot] No model-isolated in-turn credential prompt \u2014 an agent needing a secret/sudo password/one-time code must leak it into context or fail",
+     "body": "## Summary When an agent needs a credential **mid-turn** that it doesn't already hold \u2014 a sudo password for a shell command, an API key for a tool, a one-time 2FA code \u2014 there is no safe way for the gateway to ask the conversing human and receive the answer **without that value entering the model's ",
+     "url": "https://github.com/MervinPraison/PraisonAI/issues/6223",
+     "engagement": 0
+    },
+    {
+     "title": "[Feature] Make live attacks realistic: tool-result injection, interception, corroborated findings",
+     "body": "## Problem ziran's live attacks are less realistic than the best products in the review in #534. Three gaps matter most. 1. **Indirect injection is simulated.** The vectors in `indirect_injection*.yaml` and `rag_poisoning.yaml` put the payload in the user prompt and describe it as coming from a docu",
+     "url": "https://github.com/taoq-ai/ziran/issues/535",
+     "engagement": 0
+    }
+   ],
+   "market_research": {
+    "theme_id": 10,
+    "vendors": [
+     {
+      "name": "Knostic Kirin",
+      "url": "https://www.knostic.ai/coding-assistants-agents-mcp",
+      "offering": "In-agent policy checks on every coding-agent tool call, MCP validation across Cursor, Claude Code, Copilot",
+      "pricing": "Free for 1-5 users; Team $15/user/month; Enterprise via sales",
+      "segment": "developers / SMB / mid-market",
+      "source": "https://www.knostic.ai/pricing"
+     },
+     {
+      "name": "Pillar Security (Pillar for AI Coding Agents)",
+      "url": "https://www.pillar.security/blog/introducing-pillar-for-ai-coding-agents",
+      "offering": "Discovers local coding agents, scans permissions/MCP configs, runtime detection of prompt injection and tool abuse",
+      "pricing": "AWS Marketplace: Pillar Security Platform $175,000/12 months",
+      "segment": "enterprise",
+      "source": "https://aws.amazon.com/marketplace/pp/prodview-xphnsjsox7vjw"
+     },
+     {
+      "name": "Lasso Security",
+      "url": "https://www.lasso.security/use-cases/ai-coding-assistants",
+      "offering": "Inspects coding-agent and MCP tool calls and scans tool outputs before the agent acts",
+      "pricing": "code-assistant price not public; AWS Marketplace annual commits $20,000 (GenAI Chatbots) and $50,000 (LLM gateway) per 12 months",
+      "segment": "enterprise / mid-market",
+      "source": "https://aws.amazon.com/marketplace/pp/prodview-7ygm7pa3k5agg"
+     },
+     {
+      "name": "Prompt Security (SentinelOne)",
+      "url": "https://www.sentinelone.com/press/sentinelone-to-acquire-prompt-security-to-advance-genai-security/",
+      "offering": "MCP gateway with allow/block/redact per call; covers AI code assistants like Cursor",
+      "pricing": "not public",
+      "segment": "enterprise",
+      "source": "https://www.sentinelone.com/press/sentinelone-to-acquire-prompt-security-to-advance-genai-security/"
+     },
+     {
+      "name": "Runlayer",
+      "url": "https://www.securityweek.com/runlayer-raises-30-million-in-series-a-funding/",
+      "offering": "MCP control layer watching every agent action, blocking suspicious calls, audit logs",
+      "pricing": "not public",
+      "segment": "enterprise",
+      "source": "https://techcrunch.com/2025/11/17/mcp-ai-agent-security-startup-runlayer-launches-with-8-unicorns-11m-from-khoslas-keith-rabois-and-felicis"
+     },
+     {
+      "name": "Invariant Labs Guardrails",
+      "url": "https://invariantlabs.ai/blog/guardrails",
+      "offering": "MCP/LLM proxy gateway enforcing deterministic contextual rules and tool-call restrictions",
+      "pricing": "not public",
+      "segment": "developers / enterprise",
+      "source": "https://invariantlabs.ai/blog/guardrails"
+     },
+     {
+      "name": "Amazon Bedrock AgentCore Policy",
+      "url": "https://aws.amazon.com/bedrock/agentcore/pricing/",
+      "offering": "Cedar policies check every agent tool call through AgentCore Gateway, allow or deny",
+      "pricing": "usage-based, per authorization request (rate not captured) plus per-token natural-language authoring",
+      "segment": "developers / enterprise on AWS",
+      "source": "https://aws.amazon.com/about-aws/whats-new/2026/03/policy-amazon-bedrock-agentcore-generally-available"
+     },
+     {
+      "name": "Docker MCP Gateway",
+      "url": "https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/",
+      "offering": "Open-source MCP proxy running servers in restricted containers with access control and call tracing",
+      "pricing": "gateway open source; Docker AI Governance version invite-only, price not public",
+      "segment": "developers / enterprise",
+      "source": "https://docs.docker.com/ai/mcp-catalog-and-toolkit/mcp-gateway/"
+     }
+    ],
+    "crowdedness": 3,
+    "paid_market_gaps": [
+     {
+      "gap": "Enterprise platforms sell via large annual commits (Pillar $175k, Lasso $20k+); small teams have few paid options besides Knostic.",
+      "evidence": "https://aws.amazon.com/marketplace/pp/prodview-xphnsjsox7vjw"
+     },
+     {
+      "gap": "Native agent permission rules are pattern-based; argument rules are bypassable by compound commands, pushing users to sandboxing.",
+      "evidence": "https://code.claude.com/docs/en/permissions.md"
+     },
+     {
+      "gap": "Headless/non-interactive agent runs often auto-approve all tool calls, with no read-only or plan mode.",
+      "evidence": "https://github.com/google-antigravity/antigravity-cli/issues/45"
+     },
+     {
+      "gap": "Per-call policy engines do not yet correlate sequences of individually allowed calls into malicious workflows.",
+      "evidence": "https://developer.microsoft.com/blog/securing-mcp-a-control-plane-for-agent-tool-execution/"
+     }
+    ],
+    "willingness_to_pay": 2,
+    "wtp_evidence": "Public prices exist: Pillar platform $175,000/12 months and Lasso for GenAI Chatbots $20,000 annual commit (12 months) on AWS Marketplace, Knostic Kirin $15/user/month.",
+    "wtp_sources": [
+     "https://aws.amazon.com/marketplace/pp/prodview-xphnsjsox7vjw",
+     "https://aws.amazon.com/marketplace/pp/prodview-7ygm7pa3k5agg",
+     "https://www.knostic.ai/pricing"
+    ],
+    "bundling_risk": "high",
+    "bundling_note": "Agent vendors ship free permission rules and managed deny settings (Claude Code), AWS meters Cedar tool-call policy in AgentCore, and Microsoft and Docker give away open-source MCP policy gateways.",
+    "summary": "Crowded and consolidating (SentinelOne-Prompt, well-funded Pillar, Lasso, Runlayer) with free native and cloud controls. Narrow opening: cheap cross-agent policy enforcement for small and mid-size dev teams, including headless/CI agent runs, below enterprise annual commits."
+   },
+   "threat": {
+    "theme_id": 10,
+    "techniques": [
+     "T1698",
+     "T1699",
+     "T1700"
+    ],
+    "threat_relevance": 3,
+    "reason": "Directly blocks prompt-injection-driven unsafe tool calls and exfiltration, an actively exploited agent attack path."
+   },
+   "open_source_leaders": [
+    {
+     "name": "ai-boost/awesome-harness-engineering",
+     "url": "https://github.com/ai-boost/awesome-harness-engineering",
+     "stars": 5224,
+     "days_since_push": 0
+    },
+    {
+     "name": "withcoral/coral",
+     "url": "https://github.com/withcoral/coral",
+     "stars": 5027,
+     "days_since_push": 1
+    },
+    {
+     "name": "aipotheosis-labs/aci",
+     "url": "https://github.com/aipotheosis-labs/aci",
+     "stars": 4940,
+     "days_since_push": 21
+    },
+    {
+     "name": "cosmicstack-labs/mercury-agent",
+     "url": "https://github.com/cosmicstack-labs/mercury-agent",
+     "stars": 4060,
+     "days_since_push": 0
+    },
+    {
+     "name": "golemcloud/golem",
+     "url": "https://github.com/golemcloud/golem",
+     "stars": 1507,
+     "days_since_push": 0
+    }
+   ]
+  },
+  {
+   "theme_id": 0,
+   "name": "Authorization and auditing for MCP tool access",
+   "need": "Teams adopting MCP servers struggle to scope tool permissions, give agents their own credentials, keep secrets out of tool inputs and audit tool calls.",
+   "gap_score": 0.599,
+   "stability": 0.55,
+   "need_statements": [
+    {
+     "title": "SEP-1299: Server-Side Authorization Management with Client Session Binding",
+     "body": "## Preamble **Title**: Server-Side Authorization Management with Client Session Binding **Author**: @DickHardt **Status**: Draft **Type**: Feature **Created**: 2025-08-04 *Holding on creating a PR until there is community interest in this enhancement.* ## Abstract This SEP proposes moving OAuth auth",
+     "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1299",
+     "engagement": 55
+    },
+    {
+     "title": "Feature Request: Add wildcard support for MCP tool permissions",
+     "body": "### **Title: Feature Request: Add wildcard support for MCP tool permissions** **Labels:** `enhancement`, `feature-request`, `mcp`, `permissions` ### Is your feature request related to a problem? Please describe. Configuring permissions for Model Context Protocol (MCP) tools is currently inflexible a",
+     "url": "https://github.com/anthropics/claude-code/issues/6010",
+     "engagement": 16
+    },
+    {
+     "title": "SEP-1708: MCP Client-Brokered Filesystem Access",
+     "body": "# SEP-1708: MCP Client-Brokered Filesystem Access ## Preamble * title: SEP-1708: MCP Client-Brokered Filesystem Access * author: Casey Boyle (GitHub: boylec) * status: Draft * type: Standards Track (Protocol Extension) * created: 2025-10-23 * revised: 2025-11-02 * note: Enhanced with comprehensive s",
+     "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1708",
+     "engagement": 14
+    },
+    {
+     "title": "MCP Actions Backend Audit Logging",
+     "body": "### \ud83d\udcdc Issue Labels - [x] Please familiarize yourself with the issue labels used in this project: [LABELS.md](https://github.com/backstage/backstage/blob/master/LABELS.md) ### \ud83d\udd0e Search Terms ```plain - `audit-logging` - `auditorService` - `MCP` - `mcp-actions-backend` ``` ### \ud83d\uddc3\ufe0f Project Area Unknown ",
+     "url": "https://github.com/backstage/backstage/issues/32104",
+     "engagement": 13
+    },
+    {
+     "title": "feat(scaffolder): passing secrets as raw input to the execute-template MCP tool is a security anti-pattern",
+     "body": "### \ud83d\udcdc Issue Labels - [x] Please familiarize yourself with the issue labels used in this project: [LABELS.md](https://github.com/backstage/backstage/blob/master/LABELS.md) ### \ud83d\udd0e Search Terms ```plain scaffolder execute-template MCP secrets input anti-pattern token passthrough mcp-actions-backend secr",
+     "url": "https://github.com/backstage/backstage/issues/34728",
+     "engagement": 10
+    },
+    {
+     "title": "[FEATURE] PreApiCall / PostApiCall hooks to prevent secret exfiltration to API providers and attackers",
+     "body": "## Problem When using Claude Code, sensitive data can leave the user's machine through **two channels**: ### 1. Data sent to the LLM provider (Anthropic API) All code, file contents, command outputs, and user prompts are sent to the API. This includes: - API keys and credentials embedded in configur",
+     "url": "https://github.com/anthropics/claude-code/issues/39882",
+     "engagement": 8
+    },
+    {
+     "title": "[Feature]: propagate per-run metadata from POST /v1/runs to MCP tools/call requests",
+     "body": "## Problem When Hermes executes a run and calls tools on a remote MCP server, the MCP requests carry only the static credentials configured in `config.yaml` (`headers: {Authorization: Bearer \u2026}`). There is no way for the MCP server to correlate a `tools/call` with the specific run (or end-user) that",
+     "url": "https://github.com/NousResearch/hermes-agent/issues/64890",
+     "engagement": 7
+    },
+    {
+     "title": "[feat] Per-agent MCP credentials: let each custom agent call an MCP server under its own identity",
+     "body": "### Before you start - [x] I searched [existing issues](https://github.com/bytedance/deer-flow/issues?q=is%3Aissue) and this is not a duplicate. ### Problem / motivation An MCP server configured in `extensions_config.json` has one credential: static `headers`, `oauth`, or per-user `user_auth`. Every",
+     "url": "https://github.com/bytedance/deer-flow/issues/8125",
+     "engagement": 7
+    },
+    {
+     "title": "[DOCS] governance and security guidance for MCP server adoption in teams",
+     "body": "### Documentation Type Other ### Documentation Location _No response_ ### Section/Topic MCP servers ### Current Documentation ## Summary The MCP documentation in Claude Code covers single-developer setup well, but there is no guidance for teams adopting MCP at scale. As Claude Code moves from indivi",
+     "url": "https://github.com/anthropics/claude-code/issues/60246",
+     "engagement": 7
+    },
+    {
+     "title": "MCP Conformance Testing + Auth \u2014 Feedback from 12 Production Servers",
+     "body": "## MCP Conformance Testing + Auth \u2014 Feedback from Running 12 MCP Servers in Production **Feedback from**: A multi-agent AI system running 12 MCP servers in production (TypeScript + Python fastmcp). All open-source, MIT. ### Background I caught Paul Carleton's MCP Dev Summit talk on conformance testi",
+     "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2903",
+     "engagement": 6
+    },
+    {
+     "title": "SIEM-like tool for pcaps",
+     "body": "Is there any tool that accepts a packet capture file as input and displays all the network traffic in a similar way to how a SIEM displays log information? I'm looking for a summary of the ports and IPs to get a good overview of a packet capture.",
+     "url": "https://security.stackexchange.com/questions/248062/siem-like-tool-for-pcaps",
+     "engagement": 4
+    },
+    {
+     "title": "Capability audit: invoke_oci_api and run_instance_agent_command have no operation filtering, SQL tools accept arbitrary DDL/DML",
+     "body": "Hi Oracle MCP team, I ran a static capability audit of this repository using [reachscan](https://github.com/vinmay/reachscan), a static analysis CLI that maps what AI agent/MCP server codebases can do at the system level and traces reachability from LLM-callable entry points. This is part of an ongo",
+     "url": "https://github.com/oracle/mcp/issues/164",
+     "engagement": 4
+    },
+    {
+     "title": "[RFC] CPEX, a Composable Enforcement Framework for AI Security",
+     "body": "## Summary AI agents cross trust boundaries on every tool call, LLM completion, and resource fetch. No single chokepoint covers all of them, so every team ends up reimplementing interception, identity propagation, and content checks across LLM proxies, agent frameworks, and gateways, with subtle dri",
+     "url": "https://github.com/cosai-oasis/ws4-secure-design-agentic-systems/issues/94",
+     "engagement": 4
+    },
+    {
+     "title": "Webhook payload shape vs. third-party SIEM parsers (Google SecOps), is this a known issue or is there any payload customization?",
+     "body": "We're using `ext-event-webhook` to send Keycloak events to Google SecOps (Chronicle), which has a built-in Keycloak parser. The events arrive fine and get tagged as Keycloak, but they all end up as `GENERIC_EVENT`, no user, session or IP fields get filled in. Digging into it, the parser is looking f",
+     "url": "https://github.com/p2-inc/keycloak-events/issues/129",
+     "engagement": 3
+    },
+    {
+     "title": "[RFC] Hardening MCP Tool Trust Boundaries (Sanitization, Output Caps & Dynamic Schema Drift)",
+     "body": "# [RFC] Hardening MCP Tool Trust Boundaries (Sanitization, Output Caps, Timeouts & Dynamic Schema Drift) **Applies to:** `langchain-ai/langchain-mcp-adapters` **Author disclosure:** This RFC and the accompanying implementation were prepared with AI assistance (Claude Code). The investigation, code, ",
+     "url": "https://github.com/langchain-ai/langchain/issues/40473",
+     "engagement": 3
+    },
+    {
+     "title": "\ud83d\ude80 mcp-chat: Tool-level Filtering for MCP Servers",
+     "body": "### Workspace mcp-chat ### \ud83d\udd16 Feature description The `mcp-chat` plugin supports connecting to MCP servers and importing the tools they expose. The MCP protocol doesn't allow to filter tools on the server side (some MCP servers [allow this](https://github.com/github/github-mcp-server?tab=readme-ov-fi",
+     "url": "https://github.com/backstage/community-plugins/issues/8307",
+     "engagement": 3
+    },
+    {
+     "title": "Add pre-execution trust verification hook for MCP tool calls",
+     "body": "## Problem When DocsGPT connects to an MCP server to execute a tool call, there is currently no framework-level hook to verify the server's trustworthiness before execution. This means a misconfigured or malicious MCP server could execute arbitrary operations without any pre-flight safety check. As ",
+     "url": "https://github.com/arc53/DocsGPT/issues/2501",
+     "engagement": 2
+    },
+    {
+     "title": "security(mcp): wildcard subagents inherit all 16 MCP servers incl. mail-send and file-delete, and every mcp__* call default-allows because mcp_security_validator does not exist",
+     "body": "## Summary Three agent types in this repo carry a wildcard tool config (`general-purpose`, `claude`, `Explore`). A subagent dispatched with a wildcard config inherits **every MCP server the parent session has connected** \u2014 not merely the one relevant to its task. A subagent asked to read code theref",
+     "url": "https://github.com/akaszubski/autonomous-dev/issues/1549",
+     "engagement": 2
+    },
+    {
+     "title": "Support per-tool authorization for MCP tools in Helidon MP",
+     "body": "We have an existing Helidon MP application secured with OIDC, where JAX-RS controllers use method-level ABAC authorization such as: ```java @PolicyValidator.PolicyStatement(\"...\") ``` For Helidon MCP, we would like to apply equivalent authorization to individual `@Mcp.Tool` methods and ideally reuse",
+     "url": "https://github.com/helidon-io/helidon-mcp/issues/201",
+     "engagement": 1
+    },
+    {
+     "title": "MCP server: scoping, security, tool gaps, resource inventory, scanner rationalization, latest-protocol conformance, sync/async parity",
+     "body": "# MCP server: scoping, security, tool gaps, resource inventory, scanner rationalization, latest-protocol conformance, sync/async parity ## Agent #clo-arsi ## Problem The platform's MCP server (`openaimp`, `https://agent.openaimp.com/mcp`) is the single surface through which chat, Copilot, and extern",
+     "url": "https://github.com/Qunsultant/cfagent/issues/3748",
+     "engagement": 1
+    },
+    {
+     "title": "Unclear Documentation: Do Plugin MCP Servers Automatically Receive Permissions?",
+     "body": "## Description The current documentation is unclear about whether plugins that include MCP servers automatically grant Claude permission to use those MCP server tools, or whether they go through the standard permission system. ## Problem When reading the documentation for plugins with MCP servers, i",
+     "url": "https://github.com/anthropics/claude-agent-sdk-python/issues/448",
+     "engagement": 1
+    },
+    {
+     "title": "Octocode - MemPalace Security Hardening",
+     "body": "# RFC: MemPalace Security Hardening --- ## Summary The MemPalace MCP server exposes 17 tools to AI agents with write access to ChromaDB, SQLite, and the local filesystem. A security audit found 9 issues across input validation, argument injection, concurrency safety, resource exhaustion, data leakag",
+     "url": "https://github.com/MemPalace/mempalace/issues/401",
+     "engagement": 1
+    },
+    {
+     "title": "JWT token verifier as an alternative to the shared token",
+     "body": "The shared bearer token is right for one operator and one client. Multi-tenant deployments issue JWTs. Where to look: typescript/src/http.ts, typescript/src/config.ts, typescript/test/http.test.ts, python/src/secure_mcp_server/auth.py, python/src/secure_mcp_server/config.py, python/src/secure_mcp_se",
+     "url": "https://github.com/basitalisandhu/mcp-server-template/issues/12",
+     "engagement": 1
+    },
+    {
+     "title": "Register the `in8` property namespace for agent-tool capability declarations (MCP servers and skills)",
+     "body": "I would like to propose registering a new property namespace, `in8`, and adopting an `in8:agent:capability:*` taxonomy for machine-readable, attestable capability declarations of **agent tools**: MCP (Model Context Protocol) servers and SKILL.md bundles. ### Why MCP servers and skills are installed ",
+     "url": "https://github.com/CycloneDX/cyclonedx-property-taxonomy/issues/180",
+     "engagement": 0
+    },
+    {
+     "title": "feat: eBPF file integrity monitoring \u2014 write, chmod, chown, mount hooks",
+     "body": "## Summary Expand eBPF file system hooks beyond the current open/delete/rename to provide full file integrity monitoring (FIM). Critical for security compliance frameworks (PCI-DSS, HIPAA, SOC 2) that require tracking all modifications to sensitive files. ## New hooks needed | Hook | Tracepoint/Kpro",
+     "url": "https://github.com/strawgate/fastforward/issues/1939",
+     "engagement": 0
+    },
+    {
+     "title": "[Security] Scope MCP tools per user and require authorization before tool execution",
+     "body": "### Summary The MCP manager maintains a process-wide/global tool registry. The AI route exposes `mcpManager.listTools()` to every authenticated chat and invokes `mcpManager.callTool()` when the model requests a tool. There is no per-user ownership or per-tool permission check in this path. ### Evide",
+     "url": "https://github.com/srinivas191206/MUCH/issues/4",
+     "engagement": 0
+    },
+    {
+     "title": "probe: agent steered into requesting cloud instance metadata endpoints",
+     "body": "## Summary ## Summary Add a probe and detector for the case where prompt injection makes an agent with a fetch or HTTP tool request a cloud instance metadata service (IMDS). On a cloud hosted agent this returns instance credentials. garak has no probe for this today. Related but distinct: #1949, #20",
+     "url": "https://github.com/NVIDIA/garak/issues/2502",
+     "engagement": 0
+    },
+    {
+     "title": "Gateway extension idea: source-rights evidence before URL-bearing MCP calls",
+     "body": "MintMCP\u2019s gateway positioning is directly about centralizing authentication, monitoring, security, telemetry and governance across MCP servers. For teams that expose public-web retrieval/search/ingestion tools through that gateway, there is a narrow additional context signal that could be useful bef",
+     "url": "https://github.com/mintmcp/servers/issues/3",
+     "engagement": 0
+    },
+    {
+     "title": "feat: MCP auto-registration from config and production MCP server validation",
+     "body": "## Problem MCP support exists (`McpClient`, `McpManager`, `McpToolWrapper`) but MCP servers are never auto-registered from config. Users must manually wire them. Additionally, there is no validation of MCP server tool descriptions \u2014 a malicious or misconfigured MCP server can inject arbitrary instru",
+     "url": "https://github.com/geeythree/agentcli/issues/10",
+     "engagement": 0
+    },
+    {
+     "title": "Security: user-registered MCP servers get blanket tool auto-approval in headless claude runs",
+     "body": "## Problem `getClaudeMcpArgs` (`electron/memory-sup.js:216-232`) builds `--allowedTools=mcp__ __*` for **all** `activeServers()`. That set includes user-added servers from settings, merged by `syncUserMcpServers` (memory-sup.js:156-190) into `extraServers` and written into the claude MCP config (`wr",
+     "url": "https://github.com/currentbits/solenta/issues/126",
+     "engagement": 0
+    },
+    {
+     "title": "Improper Access Control results in bypassing a \"read-only\" mode for mcp-dbutils MCP Server",
+     "body": "--> July 26 communication: > Hi, > Can you please enable Private Vulnerability Report in this repository settings so I can disclose a security issue for this project? --> September 20 update: # Improper Access Control results in bypassing a \"read-only\" mode for mcp-dbutils MCP Server The MCP Server ",
+     "url": "https://github.com/donghao1393/mcp-dbutils/issues/116",
+     "engagement": 0
+    },
+    {
+     "title": "Support environment variable for API key (-k / --twelve-data-apikey)",
+     "body": "## Problem The `-k` / `--twelve-data-apikey` CLI option is currently the only way to pass the API key when using `stdio` transport. This exposes the key in the process list (`ps aux` / `/proc/*/cmdline`), which is a security concern on shared machines. Other MCP servers (e.g. `mcp-grafana`) accept c",
+     "url": "https://github.com/twelvedata/mcp/issues/8",
+     "engagement": 0
+    },
+    {
+     "title": "Feature request: opt-in fatal mode for ambiguous terminal response delivery",
+     "body": "### Summary Would you consider an opt-in, default-off mode for security-sensitive MCP servers where any non-definitive delivery of a terminal MCP response makes the entire tunnel runtime fatal before another command-specific downstream action can begin? The normal availability-oriented behavior shou",
+     "url": "https://github.com/openai/tunnel-client/issues/52",
+     "engagement": 0
+    }
+   ],
+   "market_research": {
+    "theme_id": 0,
+    "vendors": [
+     {
+      "name": "Runlayer",
+      "url": "https://www.runlayer.com/",
+      "offering": "MCP gateway, shadow-AI discovery, agent identity, session traces and governance for enterprises",
+      "pricing": "not public (custom quote, no self-serve)",
+      "segment": "enterprise",
+      "source": "https://www.truefoundry.com/blog/runlayer-pricing"
+     },
+     {
+      "name": "MintMCP (Mintive)",
+      "url": "https://www.mintmcp.com/",
+      "offering": "MCP gateway with OAuth/SSO, team permissions, audit trail of every MCP interaction, SIEM export",
+      "pricing": "not public (per-user quote plus usage-based platform fee)",
+      "segment": "enterprise, mid-market",
+      "source": "https://www.mintmcp.com/pricing"
+     },
+     {
+      "name": "Permit MCP Gateway (Permit.io)",
+      "url": "https://docs.permit.io/permit-mcp-gateway/overview",
+      "offering": "Proxy authorizing each MCP tool call per agent and person, consent, trust levels, decision logs",
+      "pricing": "Permit Community tier free (14-day log retention); paid tier prices not public",
+      "segment": "developers, mid-market, enterprise",
+      "source": "https://www.permit.io/pricing"
+     },
+     {
+      "name": "Descope Agentic Identity Hub",
+      "url": "https://www.descope.com/",
+      "offering": "OAuth for MCP servers, agent consent and token vault (outbound app tokens)",
+      "pricing": "Free (2,000 consents/tokens); Pro from $249/mo; Growth from $799/mo; $0.05 per extra consent/token",
+      "segment": "developers, SMB to mid-market",
+      "source": "https://www.descope.com/pricing"
+     },
+     {
+      "name": "Auth0 for AI Agents",
+      "url": "https://auth0.com/pricing",
+      "offering": "Auth for MCP, Token Vault for agent credentials, human confirmation of agent actions",
+      "pricing": "Free plan includes Auth for MCP and Token Vault (limit 2); paid-tier add-on price not public",
+      "segment": "developers, SMB to enterprise",
+      "source": "https://auth0.com/pricing"
+     },
+     {
+      "name": "TrueFoundry MCP Gateway",
+      "url": "https://www.truefoundry.com/",
+      "offering": "AI and MCP gateway with RBAC, tool approvals, virtual MCPs and audit logs",
+      "pricing": "Free tier; Pro $25 per user/month incl. 20K requests, $20 per extra 100K",
+      "segment": "developers, mid-market",
+      "source": "https://www.truefoundry.com/pricing"
+     },
+     {
+      "name": "Docker MCP Enterprise Gateway",
+      "url": "https://docs.docker.com/ai/mcp-gateway/",
+      "offering": "Adds SSO, per-tool group policy and SIEM audit events to the free MIT gateway",
+      "pricing": "not public (priced on request)",
+      "segment": "enterprise",
+      "source": "https://geekflare.com/open-source/docker-mcp-gateway/"
+     },
+     {
+      "name": "Cloudflare MCP server portals",
+      "url": "https://developers.cloudflare.com/cloudflare-one/access-controls/ai-controls/mcp-portals/",
+      "offering": "Single Access-protected endpoint for approved MCP servers, per-portal tool curation, Logpush to SIEM",
+      "pricing": "included for all Cloudflare customers; no separate price published",
+      "segment": "SMB to enterprise",
+      "source": "https://developers.cloudflare.com/changelog/post/2026-09-24-mcp-portals-ga/"
+     }
+    ],
+    "crowdedness": 3,
+    "paid_market_gaps": [
+     {
+      "gap": "Leading MCP governance vendors (Runlayer, MintMCP) publish no prices and offer no self-serve; small teams cannot evaluate or buy",
+      "evidence": "https://www.truefoundry.com/blog/runlayer-pricing"
+     },
+     {
+      "gap": "Free Docker MCP Gateway has one shared token; per-user access, per-tool policy and audit require a separate enterprise contract",
+      "evidence": "https://geekflare.com/open-source/docker-mcp-gateway/"
+     },
+     {
+      "gap": "Azure APIM v2 tiers lack tool-level MCP control; dynamic tool lists cannot be governed by Agent 365",
+      "evidence": "https://learn.microsoft.com/azure/api-management/agent-365"
+     },
+     {
+      "gap": "External audit connectors and fine-grained authorization need Descope Growth ($799/mo); lower tiers keep audit 1 week-1 month",
+      "evidence": "https://www.descope.com/pricing"
+     }
+    ],
+    "willingness_to_pay": 2,
+    "wtp_evidence": "Public paid tiers (TrueFoundry $25/user/mo, Descope $249-$799/mo) and Runlayer raising a $30M Series A (total funding $42M) for enterprise MCP governance show buyers pay; post-purchase complaints not found.",
+    "wtp_sources": [
+     "https://www.truefoundry.com/pricing",
+     "https://www.descope.com/pricing",
+     "https://www.securityweek.com/runlayer-raises-30-million-in-series-a-funding/"
+    ],
+    "bundling_risk": "high",
+    "bundling_note": "AWS AgentCore includes Identity at no extra charge via Gateway (Policy billed per authorization), Cloudflare MCP portals are available to all customers, and Docker's gateway is free MIT.",
+    "summary": "Crowded and fast-bundling: funded gateways (Runlayer, MintMCP), identity incumbents (Auth0, Descope) and clouds (AWS, Cloudflare, Microsoft) all cover it. Only a narrow wedge remains, e.g. self-serve per-agent credentials and audit for mid-market teams across clouds."
+   },
+   "threat": {
+    "theme_id": 0,
+    "techniques": [
+     "T1528",
+     "T1550.001",
+     "T1078"
+    ],
+    "threat_relevance": 2,
+    "reason": "Scoped agent credentials and tool-call audit limit token theft and misuse; MCP abuse still emerging, not yet common."
+   },
+   "open_source_leaders": [
+    {
+     "name": "ory/hydra",
+     "url": "https://github.com/ory/hydra",
+     "stars": 17675,
+     "days_since_push": 116
+    },
+    {
+     "name": "golf-mcp/golf",
+     "url": "https://github.com/golf-mcp/golf",
+     "stars": 842,
+     "days_since_push": 74
+    },
+    {
+     "name": "NapthaAI/http-oauth-mcp-server",
+     "url": "https://github.com/NapthaAI/http-oauth-mcp-server",
+     "stars": 110,
+     "days_since_push": 564
+    },
+    {
+     "name": "26zl/cybersec-toolkit",
+     "url": "https://github.com/26zl/cybersec-toolkit",
+     "stars": 102,
+     "days_since_push": 0
+    },
+    {
+     "name": "AuthPlane/authserver",
+     "url": "https://github.com/AuthPlane/authserver",
+     "stars": 82,
+     "days_since_push": 3
+    }
+   ]
+  }
+ ],
+ "flagged_claims": [
+  {
+   "theme_id": 10,
+   "claim": "Vendor Pillar Security (Pillar for AI Coding Agents): discovers local coding agents, scans permissions/MCP configs; AWS Marketplace $175,000/12 months",
+   "issue": "The cited AWS listing describes the general Pillar Security Platform (AI apps, agents, MCP, red teaming, guardrails). It does not mention coding agents or local agent discovery. The $175,000/12 months is for the whole platform, not a coding-agent product."
+  }
+ ]
+}

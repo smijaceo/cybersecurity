@@ -38,6 +38,40 @@ def load_round(ideas_dir: Path, opening: str, rnd: int) -> dict[str, schemas.Cri
     return out
 
 
+def history_reference(path: Path) -> dict:
+    """Historical successes' and failures' panel means from the backtest (decision D20)."""
+    cal = json.loads(Path(path).read_text())["calibration"]
+    return {"successes": sorted(c["mean"] for c in cal["concepts"] if c["outcome"] == "success"),
+            "failures": sorted(c["mean"] for c in cal["concepts"] if c["outcome"] == "failure")}
+
+
+def decide_history(critiques: dict[str, schemas.Critique], cfg: dict, ref: dict) -> dict:
+    """STRONG / PROMISING / WEAK relative to scored historical companies (decision D20)."""
+    lenses = cfg["history"]["lenses"]
+    base = {"scores": {l: c.score for l, c in critiques.items()},
+            "fatal": [(l, o.objection) for l, c in critiques.items() for o in c.objections
+                      if o.severity == "fatal"],
+            "lenses": len(critiques)}
+    required = cfg.get("lenses", lenses)
+    if not set(required) <= set(critiques):
+        return {**base, "decision": "INCOMPLETE", "mean": None, "min": None}
+    m = round(mean(critiques[l].score for l in lenses), 2)
+    succ, fail = ref["successes"], ref["failures"]
+    median_success = sorted(succ)[len(succ) // 2] if len(succ) % 2 else \
+        (sorted(succ)[len(succ) // 2 - 1] + sorted(succ)[len(succ) // 2]) / 2
+    if m >= median_success:
+        decision = "STRONG"
+    elif m > max(fail):
+        decision = "PROMISING"
+    else:
+        decision = "WEAK"
+    return {**base, "decision": decision, "mean": m,
+            "min": min(critiques[l].score for l in lenses),
+            "above_successes": sum(m > x for x in succ), "above_failures": sum(m > x for x in fail),
+            "n_successes": len(succ), "n_failures": len(fail),
+            "founder_fit": critiques["founder-fit"].score if "founder-fit" in critiques else None}
+
+
 def decide(critiques: dict[str, schemas.Critique], cfg: dict) -> dict:
     scores = {l: c.score for l, c in critiques.items()}
     fatal = [(l, o.objection) for l, c in critiques.items() for o in c.objections
@@ -70,7 +104,10 @@ def render_concept(concept: schemas.Concept, rounds: dict[int, dict], decisions:
     d = decisions[final]
     L = [f"# Critic panel — {concept.name}", "", f"> {concept.one_liner}", "",
          f"**Decision (round {final}): {d['decision']}** · mean {d['mean']} · lowest lens "
-         f"{d['min']} · fatal objections {len(d['fatal'])}", ""]
+         f"{d['min']} · fatal objections {len(d['fatal'])}"
+         + (f" · above {d['above_successes']}/{d['n_successes']} historical successes and "
+            f"{d['above_failures']}/{d['n_failures']} failures · founder fit {d.get('founder_fit')}"
+            if "above_successes" in d else ""), ""]
     if len(rounds) > 1:
         L += ["| Lens | " + " | ".join(f"Round {r}" for r in sorted(rounds)) + " |",
               "|---|" + "---|" * len(rounds)]
@@ -112,7 +149,11 @@ def run(ideas_dir: Path, cfg: dict, report_path: Path) -> list[dict]:
                 rounds[rnd] = got
         if not rounds:
             continue
-        decisions = {r: decide(c, cfg) for r, c in rounds.items()}
+        if cfg.get("mode") == "history":
+            ref = history_reference(cfg["history"]["results"])
+            decisions = {r: decide_history(c, cfg, ref) for r, c in rounds.items()}
+        else:
+            decisions = {r: decide(c, cfg) for r, c in rounds.items()}
         (ideas_dir / f"{concept.slug}.critique.md").write_text(
             render_concept(concept, rounds, decisions))
         final = max(rounds)
@@ -125,8 +166,9 @@ def run(ideas_dir: Path, cfg: dict, report_path: Path) -> list[dict]:
                         "riskiest_assumption": concept.riskiest_assumption.model_dump(),
                         "change_my_mind": [(l, c.what_would_change_my_mind[0])
                                            for l, c in rounds[final].items()]})
-    order = {"GO": 0, "CONDITIONAL": 1, "NO-GO": 2, "INCOMPLETE": 3}
-    results.sort(key=lambda r: (order[r["decision"]], -r["mean"], -r["min"]))
+    order = {"GO": 0, "STRONG": 0, "CONDITIONAL": 1, "PROMISING": 1, "NO-GO": 2, "WEAK": 2,
+             "INCOMPLETE": 3}
+    results.sort(key=lambda r: (order[r["decision"]], -(r["mean"] or 0), -(r["min"] or 0)))
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(render_panel(results, cfg))
     (report_path.parent / "panel.json").write_text(json.dumps(results, indent=1))
@@ -134,6 +176,8 @@ def run(ideas_dir: Path, cfg: dict, report_path: Path) -> list[dict]:
 
 
 def render_panel(results: list[dict], cfg: dict) -> str:
+    if cfg.get("mode") == "history":
+        return render_panel_history(results, cfg)
     g, c = cfg["go"], cfg["conditional"]
     L = ["# Critic panel — ranked shortlist", "",
          f"Six independent critics per concept ({', '.join(schemas.LENSES)}), rubric "
@@ -147,6 +191,42 @@ def render_panel(results: list[dict], cfg: dict) -> str:
         L.append(f"| {i} | [{r['name']}](../../ideas/{r['slug']}.md) | **{r['decision']}** | "
                  f"{r['round1_mean']} → {r['mean']} | {r['min']} | {len(r['fatal'])} | "
                  f"{_cell(r['entry_price'])} |")
+    L.append("")
+    for i, r in enumerate(results, 1):
+        L += [f"## {i}. {r['name']} — {r['decision']}", "", f"> {r['one_liner']}", "",
+              "Scores: " + ", ".join(f"{l} {s}" for l, s in r["scores"].items()) + ". "
+              f"Full critique: [{r['slug']}.critique.md](../../ideas/{r['slug']}.critique.md).", ""]
+        if r["fatal"]:
+            L += ["**Fatal objections:**", *[f"- ({l}) {o}" for l, o in r["fatal"]], ""]
+        if r["majors"]:
+            L += ["**Major objections still open:**", *[f"- ({l}) {o}" for l, o in r["majors"]], ""]
+        ra = r["riskiest_assumption"]
+        L += ["**Next step — test the riskiest assumption:** " + ra["assumption"], "",
+              f"- Test: {ra['test']}", f"- Success: {ra['success_signal']}", "",
+              "**What would change the critics' minds:**",
+              *[f"- ({l}) {x}" for l, x in r["change_my_mind"]], ""]
+    return "\n".join(L) + "\n"
+
+
+def render_panel_history(results: list[dict], cfg: dict) -> str:
+    ref = history_reference(cfg["history"]["results"])
+    L = ["# Critic panel — ranked shortlist", "",
+         f"Nine independent critics per concept ([rubric](../../docs/rubrics/critics.md)). Verdicts are "
+         "**relative to history** (decision D20): the concept's mean over the eight calibration lenses "
+         "is compared with anonymised founding-stage pitches of real companies scored the same way "
+         f"([reports/backtest.md](../backtest.md)): successes {ref['successes']}, failures "
+         f"{ref['failures']}. **STRONG** = at or above the successes' median; **PROMISING** = above "
+         "every failure; **WEAK** = otherwise. Founder fit isn't part of the comparison (history "
+         "wasn't scored on it) and is shown separately. The calibration set is small (4 + 4; "
+         "AUC 0.78, p = 0.17), so treat verdicts as indicative.", "",
+         "| # | Concept | Verdict | Mean, 8 lenses (round 1 → final) | vs history | Founder fit | Fatal | Entry price |",
+         "|---|---|---|---|---|---|---|---|"]
+    for i, r in enumerate(results, 1):
+        vs = (f"above {r['above_successes']}/{r['n_successes']} successes, "
+              f"{r['above_failures']}/{r['n_failures']} failures") if r.get("mean") is not None else "—"
+        L.append(f"| {i} | [{r['name']}](../../ideas/{r['slug']}.md) | **{r['decision']}** | "
+                 f"{r['round1_mean']} → {r['mean']} | {vs} | {r.get('founder_fit', '—')} | "
+                 f"{len(r['fatal'])} | {_cell(r['entry_price'])} |")
     L.append("")
     for i, r in enumerate(results, 1):
         L += [f"## {i}. {r['name']} — {r['decision']}", "", f"> {r['one_liner']}", "",

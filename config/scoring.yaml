@@ -33,7 +33,19 @@ report:
   top_gaps: 10
   min_evidence: 5     # Phase 2 exit criterion: each top gap links >= 5 real signals
 
-panel:                # Phase 4 go/no-go, applied by code to the final round (gapfinder panel)
+panel:                # Phase 4 verdicts, applied by code to the final round (gapfinder panel)
+  mode: history       # decision D20: compare with scored historical companies ("threshold" = old rule)
+  history:
+    results: reports/backtest/results.json
+    lenses:           # the eight lenses the calibration set was scored on (no founder-fit)
+      - market-skeptic
+      - competitor-analyst
+      - security-practitioner
+      - technical-feasibility
+      - gtm-pricing
+      - legal-ethics
+      - economic-buyer
+      - defensibility
   lenses:             # lenses that must all have scored for a decision (D19 adds three)
     - market-skeptic
     - competitor-analyst
@@ -44,7 +56,7 @@ panel:                # Phase 4 go/no-go, applied by code to the final round (ga
     - economic-buyer     # D19 lenses: required from iteration 2 on; the six-lens baseline run
     - defensibility      # is kept in reports/phase4/panel.md as it was decided
     - founder-fit
-  go:                 # GO: strong across the board
+  go:                 # threshold mode only (six-lens baseline): GO strong across the board
     min_mean: 7.0
     min_lens: 5
     max_fatal: 0

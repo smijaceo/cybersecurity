@@ -24,8 +24,11 @@ python -m gapfinder evaluate --sample reports/phase1/roundN-sample.json \
 ```
 
 Phase 2 gap analysis runs end to end with the saved Claude Code workflow
-`.claude/workflows/gap-analysis.js` (ask Claude Code to "run the gap-analysis workflow from
-<stage>"). The individual steps, if you need them:
+`.claude/workflows/gap-analysis.js`. Ask Claude Code to "run the workflow at
+.claude/workflows/gap-analysis.js from <stage>", where stage is `collect`, `judge`, `themes`,
+`enrich`, `score`, `verify` or `revise` (revise fixes the claims in
+`reports/phase2/fact-check.json`, rescores and re-checks). Running it by file path always uses
+the current version; a name-based run can use a copy registered when the session started. The individual steps, if you need them:
 
 ```bash
 python -m gapfinder judge-prepare --out-dir reports/phase2/judge   # then: relevance judge per batch
@@ -34,6 +37,7 @@ python -m gapfinder themes            # then: theme namer -> reports/phase2/them
 python -m gapfinder threat-prepare    # then: threat mapper -> reports/phase2/threat-mapping.jsonl
 python -m gapfinder market-prepare    # then: market-researcher per theme -> reports/phase2/market-research-parts/
 python -m gapfinder market-merge
+python -m gapfinder fetch [--render] URL   # page text for agents (trafilatura / Playwright)
 python -m gapfinder gaps              # -> reports/gaps-<date>.md
 ```
 

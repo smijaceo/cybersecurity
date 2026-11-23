@@ -1,0 +1,150 @@
+{"id": "serverfault:serverfault:75502", "on_segment": "y", "need": "n", "reason": "apache proxy security implication question, no gap"}
+{"id": "serverfault:serverfault:941005", "on_segment": "y", "need": "y", "reason": "wants to automate manual audit of user access logs"}
+{"id": "serverfault:serverfault:851890", "on_segment": "y", "need": "y", "reason": "DMARC failures from marketing platform, compliance problem"}
+{"id": "serverfault:serverfault:203434", "on_segment": "n", "need": "n", "reason": "software license compliance, not cybersecurity"}
+{"id": "github:432677302", "on_segment": "y", "need": "y", "reason": "confusing permission model in DefectDojo security tool"}
+{"id": "github:346372863", "on_segment": "y", "need": "n", "reason": "conference session proposal, not a need"}
+{"id": "github:440539623", "on_segment": "n", "need": "n", "reason": "bioinformatics plugin error, not security"}
+{"id": "github:368901576", "on_segment": "n", "need": "n", "reason": "fastlane build exit code bug"}
+{"id": "hn:5397744", "on_segment": "y", "need": "y", "reason": "wants easy mainstream encrypted email solution"}
+{"id": "hn:12492421", "on_segment": "y", "need": "n", "reason": "Bluetooth eavesdropping how-it-works questions"}
+{"id": "hn:8792471", "on_segment": "y", "need": "n", "reason": "bug bounty reward advice, no tool gap"}
+{"id": "hn:4309223", "on_segment": "y", "need": "n", "reason": "conceptual password security question"}
+{"id": "hn:1247547", "on_segment": "y", "need": "y", "reason": "non-sysadmin needs server hardening without expertise"}
+{"id": "stackexchange:security:165003", "on_segment": "y", "need": "n", "reason": "suspected compromise troubleshooting how-to"}
+{"id": "stackexchange:security:108293", "on_segment": "y", "need": "n", "reason": "how code signing works"}
+{"id": "stackexchange:security:94771", "on_segment": "y", "need": "y", "reason": "looking for lost IDS testing tool"}
+{"id": "stackexchange:security:128275", "on_segment": "y", "need": "y", "reason": "asks for better scan detection tool than Snort"}
+{"id": "stackexchange:security:10967", "on_segment": "y", "need": "n", "reason": "PCI level guidance question"}
+{"id": "stackexchange:security:51535", "on_segment": "y", "need": "n", "reason": "PCI scoping question for legacy system"}
+{"id": "stackexchange:security:9169", "on_segment": "y", "need": "y", "reason": "seeks tooling for PCI event logging upgrade"}
+{"id": "stackexchange:security:63964", "on_segment": "y", "need": "n", "reason": "PCI interpretation question"}
+{"id": "stackexchange:security:202680", "on_segment": "y", "need": "y", "reason": "TheHive lacks incident response automation"}
+{"id": "stackexchange:security:121197", "on_segment": "y", "need": "y", "reason": "wants to automate abuse reporting for attacks"}
+{"id": "serverfault:serverfault:684608", "on_segment": "y", "need": "y", "reason": "deleted sensitive data persists in replication oplog"}
+{"id": "serverfault:serverfault:300759", "on_segment": "y", "need": "y", "reason": "PCI scan flags patched PHP, dispute rejected"}
+{"id": "serverfault:serverfault:609240", "on_segment": "y", "need": "n", "reason": "troubleshooting PCI scan finding, no gap"}
+{"id": "serverfault:serverfault:547708", "on_segment": "y", "need": "n", "reason": "compromised VPS phishing incident how-to"}
+{"id": "serverfault:serverfault:507309", "on_segment": "y", "need": "y", "reason": "spoofed display-name phishing bypassing filters"}
+{"id": "serverfault:serverfault:516962", "on_segment": "n", "need": "n", "reason": "email deliverability configuration"}
+{"id": "github:279384844", "on_segment": "n", "need": "n", "reason": "platform support feature, security not evident"}
+{"id": "github:167247968", "on_segment": "n", "need": "n", "reason": "parental guidance session proposal, not security need"}
+{"id": "hn:6338017", "on_segment": "y", "need": "n", "reason": "general crypto knowledge question"}
+{"id": "stackexchange:security:193363", "on_segment": "y", "need": "n", "reason": "asks which standards regulate data storage"}
+{"id": "stackexchange:security:92237", "on_segment": "y", "need": "n", "reason": "Nessus custom audit bug report"}
+{"id": "serverfault:serverfault:105778", "on_segment": "y", "need": "n", "reason": "SSH security best practice question"}
+{"id": "serverfault:serverfault:875033", "on_segment": "y", "need": "y", "reason": "ASV scan false positive from banner version"}
+{"id": "serverfault:serverfault:63132", "on_segment": "y", "need": "n", "reason": "handling residual phishing traffic how-to"}
+{"id": "serverfault:serverfault:454248", "on_segment": "n", "need": "n", "reason": "Apache error logging issue"}
+{"id": "serverfault:serverfault:119271", "on_segment": "n", "need": "n", "reason": "application server logging config"}
+{"id": "serverfault:serverfault:56235", "on_segment": "n", "need": "n", "reason": "log retention question, not security"}
+{"id": "github:398725450", "on_segment": "y", "need": "y", "reason": "MSan unusable, no reliable alternative tool"}
+{"id": "github:345479036", "on_segment": "y", "need": "n", "reason": "how to add SSN tagging rule"}
+{"id": "github:520375344", "on_segment": "n", "need": "n", "reason": "CMS hook bug"}
+{"id": "github:477182706", "on_segment": "n", "need": "n", "reason": "storage protocol design"}
+{"id": "hn:531283", "on_segment": "n", "need": "n", "reason": "developer job posting"}
+{"id": "hn:9078870", "on_segment": "n", "need": "n", "reason": "physical security camera recommendations"}
+{"id": "hn:3700453", "on_segment": "y", "need": "y", "reason": "recurring malware injections, wants secure hosting"}
+{"id": "stackexchange:security:194705", "on_segment": "y", "need": "y", "reason": "AV missed ransomware, tool selection problem"}
+{"id": "stackexchange:security:32489", "on_segment": "y", "need": "y", "reason": "asks whether key recovery tool exists"}
+{"id": "stackexchange:security:54696", "on_segment": "y", "need": "n", "reason": "PCI scope question"}
+{"id": "stackexchange:security:74333", "on_segment": "y", "need": "n", "reason": "FIPS implementation question"}
+{"id": "stackexchange:security:142674", "on_segment": "y", "need": "n", "reason": "PCI requirement question"}
+{"id": "stackexchange:security:69183", "on_segment": "y", "need": "n", "reason": "PCI requirement question"}
+{"id": "stackexchange:security:201521", "on_segment": "y", "need": "y", "reason": "wants automated ZAP fuzzing test suites"}
+{"id": "serverfault:serverfault:234427", "on_segment": "y", "need": "n", "reason": "Windows hardening tools comparison question"}
+{"id": "serverfault:serverfault:320563", "on_segment": "y", "need": "y", "reason": "no easy cross-reference of policies to groups"}
+{"id": "serverfault:serverfault:512503", "on_segment": "y", "need": "n", "reason": "MySQL audit configuration error"}
+{"id": "serverfault:serverfault:355605", "on_segment": "y", "need": "n", "reason": "PCI scan remediation how-to"}
+{"id": "serverfault:serverfault:375291", "on_segment": "y", "need": "y", "reason": "PCI scan false positive for Shiro"}
+{"id": "serverfault:serverfault:51831", "on_segment": "n", "need": "n", "reason": "software licensing question"}
+{"id": "serverfault:serverfault:671954", "on_segment": "y", "need": "n", "reason": "ransomware cleanup how-to"}
+{"id": "serverfault:serverfault:882520", "on_segment": "y", "need": "n", "reason": "backup design question"}
+{"id": "github:117487797", "on_segment": "n", "need": "n", "reason": "offline build feature, security incidental"}
+{"id": "github:320218032", "on_segment": "y", "need": "n", "reason": "dependency vulnerability update request"}
+{"id": "github:539651916", "on_segment": "n", "need": "n", "reason": "debug tool registry support, not security"}
+{"id": "github:483629017", "on_segment": "n", "need": "n", "reason": "deployment script complaint, not security"}
+{"id": "hn:2509955", "on_segment": "y", "need": "n", "reason": "opinion on security market"}
+{"id": "hn:2139909", "on_segment": "y", "need": "n", "reason": "opinion on security questions"}
+{"id": "hn:4029119", "on_segment": "y", "need": "n", "reason": "breach letter question"}
+{"id": "stackexchange:security:36971", "on_segment": "y", "need": "y", "reason": "needs login monitoring tool under constraints"}
+{"id": "stackexchange:security:17796", "on_segment": "y", "need": "y", "reason": "wants automated security policy analysis tool"}
+{"id": "stackexchange:security:187778", "on_segment": "y", "need": "n", "reason": "sniffing methods question"}
+{"id": "stackexchange:security:151565", "on_segment": "y", "need": "y", "reason": "needs free bulk TLS weakness scanner"}
+{"id": "stackexchange:security:221219", "on_segment": "y", "need": "n", "reason": "PCI third-party question"}
+{"id": "stackexchange:security:161359", "on_segment": "y", "need": "y", "reason": "firewall analyzer failed, logs lost, compliance gap"}
+{"id": "stackexchange:security:44352", "on_segment": "y", "need": "n", "reason": "regulation question"}
+{"id": "stackexchange:security:56025", "on_segment": "y", "need": "n", "reason": "PCI requirement question"}
+{"id": "stackexchange:security:185852", "on_segment": "y", "need": "y", "reason": "small business lacks credential continuity solution"}
+{"id": "serverfault:serverfault:514360", "on_segment": "y", "need": "n", "reason": "AD permissions question"}
+{"id": "serverfault:serverfault:245498", "on_segment": "y", "need": "n", "reason": "database security best practices"}
+{"id": "serverfault:serverfault:317248", "on_segment": "y", "need": "n", "reason": "AWS security group how-to"}
+{"id": "serverfault:serverfault:685607", "on_segment": "y", "need": "n", "reason": "RDP monitoring question"}
+{"id": "serverfault:serverfault:81737", "on_segment": "y", "need": "n", "reason": "SCOM alert setup how-to"}
+{"id": "serverfault:serverfault:724389", "on_segment": "y", "need": "y", "reason": "no central logging, manual logon aggregation across DCs"}
+{"id": "serverfault:serverfault:117218", "on_segment": "y", "need": "y", "reason": "needs record-view auditing missing natively"}
+{"id": "serverfault:serverfault:537528", "on_segment": "y", "need": "n", "reason": "PCI scope question"}
+{"id": "serverfault:serverfault:365633", "on_segment": "n", "need": "n", "reason": "shell scripting question"}
+{"id": "github:127681123", "on_segment": "n", "need": "n", "reason": "non-security app bug"}
+{"id": "github:287884170", "on_segment": "n", "need": "n", "reason": "editor plugin update"}
+{"id": "hn:15733386", "on_segment": "n", "need": "n", "reason": "web dev learning resource"}
+{"id": "hn:14009655", "on_segment": "y", "need": "y", "reason": "wants automated server security basics"}
+{"id": "hn:19981035", "on_segment": "y", "need": "n", "reason": "asks for best practice resources"}
+{"id": "hn:18923532", "on_segment": "y", "need": "n", "reason": "device hardening best practices question"}
+{"id": "hn:19528905", "on_segment": "y", "need": "n", "reason": "IP confidentiality question"}
+{"id": "hn:20716524", "on_segment": "n", "need": "n", "reason": "startup validation question"}
+{"id": "stackexchange:security:202332", "on_segment": "y", "need": "n", "reason": "PCI scope question"}
+{"id": "stackexchange:security:190402", "on_segment": "y", "need": "n", "reason": "PCI CI/CD scope question"}
+{"id": "stackexchange:security:69159", "on_segment": "y", "need": "y", "reason": "audit flagged unencrypted cardholder data handling"}
+{"id": "stackexchange:security:184805", "on_segment": "y", "need": "n", "reason": "asks for GDPR checklist resources"}
+{"id": "stackexchange:security:136746", "on_segment": "y", "need": "n", "reason": "asks for policy resources"}
+{"id": "stackexchange:security:99937", "on_segment": "y", "need": "y", "reason": "small org lacks security staff for testing"}
+{"id": "stackexchange:security:172592", "on_segment": "y", "need": "n", "reason": "policy review request"}
+{"id": "stackexchange:security:170341", "on_segment": "y", "need": "y", "reason": "wants Nikto findings-only output"}
+{"id": "stackexchange:security:59351", "on_segment": "y", "need": "n", "reason": "encryption key recovery design"}
+{"id": "serverfault:serverfault:344279", "on_segment": "y", "need": "n", "reason": "Apache file layout security question"}
+{"id": "serverfault:serverfault:132301", "on_segment": "y", "need": "n", "reason": "server hardening recommendations"}
+{"id": "serverfault:serverfault:455353", "on_segment": "y", "need": "n", "reason": "sudoers configuration question"}
+{"id": "serverfault:serverfault:396230", "on_segment": "y", "need": "n", "reason": "homework question"}
+{"id": "serverfault:serverfault:260783", "on_segment": "y", "need": "n", "reason": "audit warning explanation"}
+{"id": "serverfault:serverfault:200078", "on_segment": "y", "need": "n", "reason": "process audit how-to"}
+{"id": "serverfault:serverfault:448344", "on_segment": "y", "need": "n", "reason": "Exchange audit how-to"}
+{"id": "serverfault:serverfault:713534", "on_segment": "y", "need": "n", "reason": "LDAP audit how-to"}
+{"id": "serverfault:serverfault:709737", "on_segment": "y", "need": "n", "reason": "HIPAA requirement question"}
+{"id": "serverfault:serverfault:765496", "on_segment": "y", "need": "y", "reason": "no guidance on containers under PCI"}
+{"id": "serverfault:serverfault:490466", "on_segment": "y", "need": "n", "reason": "phishing complaint investigation"}
+{"id": "serverfault:serverfault:965981", "on_segment": "y", "need": "y", "reason": "phishers bypass Mimecast via old MX"}
+{"id": "serverfault:serverfault:849984", "on_segment": "y", "need": "y", "reason": "wants air-gapped backup against ransomware"}
+{"id": "serverfault:serverfault:504446", "on_segment": "n", "need": "n", "reason": "centralized logging, security not stated"}
+{"id": "github:480366116", "on_segment": "y", "need": "y", "reason": "MooseFS lacks encryption at rest/transit"}
+{"id": "github:279128898", "on_segment": "y", "need": "y", "reason": "wants automation for security alert publishing"}
+{"id": "github:374269515", "on_segment": "n", "need": "n", "reason": "linter scope question"}
+{"id": "github:391501271", "on_segment": "n", "need": "n", "reason": "firmware compile error"}
+{"id": "hn:9577257", "on_segment": "n", "need": "n", "reason": "job posting"}
+{"id": "hn:1840640", "on_segment": "n", "need": "n", "reason": "relocation question"}
+{"id": "hn:2786997", "on_segment": "y", "need": "y", "reason": "seeks central authorization tool for webapps"}
+{"id": "hn:448596", "on_segment": "y", "need": "n", "reason": "home security best practices"}
+{"id": "hn:17870804", "on_segment": "y", "need": "n", "reason": "privacy on managed workstation question"}
+{"id": "hn:13554882", "on_segment": "n", "need": "n", "reason": "security clearance process"}
+{"id": "hn:12173576", "on_segment": "y", "need": "n", "reason": "vulnerability disclosure advice"}
+{"id": "hn:12009959", "on_segment": "y", "need": "y", "reason": "needs security audit/certification for enterprise sale"}
+{"id": "hn:7590020", "on_segment": "y", "need": "n", "reason": "security concept opinion"}
+{"id": "hn:2449938", "on_segment": "y", "need": "n", "reason": "where to start security strategy"}
+{"id": "hn:21523159", "on_segment": "y", "need": "n", "reason": "strategy discussion"}
+{"id": "hn:20754097", "on_segment": "y", "need": "n", "reason": "credential compromise advice"}
+{"id": "hn:15225123", "on_segment": "n", "need": "n", "reason": "career question"}
+{"id": "stackexchange:security:167508", "on_segment": "y", "need": "n", "reason": "RDP risk question"}
+{"id": "stackexchange:security:161636", "on_segment": "y", "need": "n", "reason": "conceptual IR trust question"}
+{"id": "stackexchange:security:79125", "on_segment": "y", "need": "n", "reason": "pentest tool usage question"}
+{"id": "stackexchange:security:197571", "on_segment": "y", "need": "n", "reason": "identify encryption tool how-to"}
+{"id": "stackexchange:security:154254", "on_segment": "n", "need": "n", "reason": "financial regulation, not security"}
+{"id": "stackexchange:security:210781", "on_segment": "y", "need": "n", "reason": "password storage best practice"}
+{"id": "serverfault:serverfault:832648", "on_segment": "y", "need": "n", "reason": "project maintenance status question"}
+{"id": "serverfault:serverfault:329692", "on_segment": "y", "need": "y", "reason": "unmaintained bouncer, asks for alternative"}
+{"id": "serverfault:serverfault:244477", "on_segment": "n", "need": "n", "reason": "package update cert error"}
+{"id": "serverfault:serverfault:966752", "on_segment": "y", "need": "y", "reason": "O365 audit log 90-day retention limit"}
+{"id": "serverfault:serverfault:724781", "on_segment": "y", "need": "n", "reason": "audit log filtering how-to"}
+{"id": "serverfault:serverfault:155854", "on_segment": "n", "need": "n", "reason": "mailbox access admin task"}
+{"id": "serverfault:serverfault:878848", "on_segment": "y", "need": "n", "reason": "HIPAA RDP question"}
+{"id": "serverfault:serverfault:415027", "on_segment": "y", "need": "y", "reason": "PCI scan fails, no backported package available"}
+{"id": "serverfault:serverfault:398733", "on_segment": "y", "need": "n", "reason": "abuse report troubleshooting"}

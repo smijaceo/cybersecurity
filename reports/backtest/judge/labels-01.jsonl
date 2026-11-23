@@ -1,0 +1,150 @@
+{"id": "github:460208388", "on_segment": "n", "need": "n", "reason": "badge request for package registry, not security"}
+{"id": "stackexchange:security:9761", "on_segment": "y", "need": "n", "reason": "HIPAA applicability question"}
+{"id": "stackexchange:security:43009", "on_segment": "y", "need": "n", "reason": "PCI same-origin design question"}
+{"id": "serverfault:serverfault:887548", "on_segment": "y", "need": "n", "reason": "how-to: Ansible audit logging of user"}
+{"id": "stackexchange:security:173062", "on_segment": "y", "need": "n", "reason": "BloodHound concept question"}
+{"id": "stackexchange:security:72764", "on_segment": "y", "need": "n", "reason": "PCI with PayPal applicability question"}
+{"id": "serverfault:serverfault:208951", "on_segment": "y", "need": "n", "reason": "iptables logging config question"}
+{"id": "hn:12801974", "on_segment": "y", "need": "n", "reason": "learning resources request"}
+{"id": "hn:1812632", "on_segment": "y", "need": "n", "reason": "ethics of unauthorized testing"}
+{"id": "stackexchange:security:171131", "on_segment": "y", "need": "n", "reason": "whether online DH parameters are safe"}
+{"id": "stackexchange:security:45695", "on_segment": "y", "need": "n", "reason": "how-to: Selenium for XSS testing"}
+{"id": "stackexchange:security:22564", "on_segment": "y", "need": "y", "reason": "asks whether automated backdoor detection tool exists"}
+{"id": "serverfault:serverfault:303926", "on_segment": "y", "need": "y", "reason": "wants to limit PCI scope burden"}
+{"id": "serverfault:serverfault:737860", "on_segment": "y", "need": "y", "reason": "PCI scan fails on distro-backported Apache version"}
+{"id": "github:225717629", "on_segment": "y", "need": "n", "reason": "protocol security review write-up"}
+{"id": "hn:9279326", "on_segment": "y", "need": "n", "reason": "best-practices request"}
+{"id": "stackexchange:security:64795", "on_segment": "y", "need": "y", "reason": "Trustwave PCI scan failing on OpenSSH version"}
+{"id": "serverfault:serverfault:862261", "on_segment": "n", "need": "n", "reason": "spam score logging config"}
+{"id": "github:529076990", "on_segment": "n", "need": "n", "reason": "IMDS timeout performance, not security"}
+{"id": "hn:14637190", "on_segment": "y", "need": "n", "reason": "whether bug bounty is needed"}
+{"id": "stackexchange:security:86241", "on_segment": "y", "need": "n", "reason": "RNG standards compliance question"}
+{"id": "stackexchange:security:7965", "on_segment": "y", "need": "n", "reason": "HIPAA applicability for forums"}
+{"id": "stackexchange:security:38863", "on_segment": "y", "need": "y", "reason": "can't automate encrypted private key use safely"}
+{"id": "github:520520769", "on_segment": "n", "need": "n", "reason": "language feature proposal"}
+{"id": "stackexchange:security:49561", "on_segment": "y", "need": "y", "reason": "distributed IMAP brute force compromised account"}
+{"id": "stackexchange:security:172020", "on_segment": "y", "need": "y", "reason": "Metasploit AutoRunScript lacks non-meterpreter support"}
+{"id": "hn:17840003", "on_segment": "y", "need": "y", "reason": "poor company security, asks what to do"}
+{"id": "stackexchange:security:14613", "on_segment": "y", "need": "y", "reason": "commercial scanner misses SQLi, seeks alternative"}
+{"id": "stackexchange:security:16072", "on_segment": "y", "need": "y", "reason": "asks for tool harvesting secrets from command lines"}
+{"id": "serverfault:serverfault:9558", "on_segment": "y", "need": "n", "reason": "RDP security general question"}
+{"id": "serverfault:serverfault:579102", "on_segment": "y", "need": "y", "reason": "needs USB drive access auditing on workstations"}
+{"id": "serverfault:serverfault:785181", "on_segment": "y", "need": "n", "reason": "macOS audit config troubleshooting"}
+{"id": "serverfault:serverfault:103058", "on_segment": "y", "need": "n", "reason": "how-to disable weak ciphers for PCI"}
+{"id": "serverfault:serverfault:181892", "on_segment": "y", "need": "n", "reason": "how-to fix IIS scan finding"}
+{"id": "stackexchange:security:17357", "on_segment": "y", "need": "n", "reason": "PCI network scope question"}
+{"id": "stackexchange:security:25096", "on_segment": "y", "need": "n", "reason": "PCI applicability with Stripe"}
+{"id": "serverfault:serverfault:544448", "on_segment": "n", "need": "n", "reason": "printing usage audit script"}
+{"id": "github:177388457", "on_segment": "n", "need": "n", "reason": "database transaction engine proposal"}
+{"id": "stackexchange:security:14120", "on_segment": "y", "need": "y", "reason": "seeks free tool to block email attachments"}
+{"id": "stackexchange:security:18338", "on_segment": "y", "need": "y", "reason": "seeks unix config compliance scanner"}
+{"id": "serverfault:serverfault:502466", "on_segment": "y", "need": "n", "reason": "integrity checking vs audit conceptual question"}
+{"id": "serverfault:serverfault:169188", "on_segment": "n", "need": "n", "reason": "central Apache log collection"}
+{"id": "hn:19494700", "on_segment": "y", "need": "y", "reason": "needs unified laptop security platform"}
+{"id": "hn:12387694", "on_segment": "y", "need": "y", "reason": "wants vulnerability alerts, building own service"}
+{"id": "serverfault:serverfault:568256", "on_segment": "y", "need": "n", "reason": "how-to verify files against packages"}
+{"id": "serverfault:serverfault:564259", "on_segment": "y", "need": "y", "reason": "PCI scanner flags CVE distro ignores"}
+{"id": "hn:1844323", "on_segment": "y", "need": "n", "reason": "feedback on own security product idea"}
+{"id": "stackexchange:security:155780", "on_segment": "y", "need": "n", "reason": "regulation for storing scanned checks"}
+{"id": "serverfault:serverfault:232937", "on_segment": "y", "need": "n", "reason": "PCI steps question"}
+{"id": "serverfault:serverfault:901694", "on_segment": "y", "need": "n", "reason": "interpreting DMARC reports"}
+{"id": "github:344959190", "on_segment": "n", "need": "n", "reason": "token standard proposal"}
+{"id": "hn:5444402", "on_segment": "y", "need": "n", "reason": "vulnerability disclosure experience"}
+{"id": "hn:5053590", "on_segment": "y", "need": "n", "reason": "language exploit comparison opinion"}
+{"id": "stackexchange:security:86271", "on_segment": "y", "need": "y", "reason": "asks alternative to detectable honeypots"}
+{"id": "stackexchange:security:108469", "on_segment": "y", "need": "y", "reason": "honeypot tool abandoned, docs broken"}
+{"id": "stackexchange:security:179263", "on_segment": "y", "need": "n", "reason": "PCI ISP requirement question"}
+{"id": "stackexchange:security:104352", "on_segment": "y", "need": "y", "reason": "seeks automated certificate signing solution"}
+{"id": "serverfault:serverfault:331015", "on_segment": "n", "need": "n", "reason": "software license audit"}
+{"id": "serverfault:serverfault:294909", "on_segment": "y", "need": "y", "reason": "PCI Level 1 on AWS, provider uncooperative"}
+{"id": "github:1347254973", "on_segment": "y", "need": "n", "reason": "javadoc vulnerability fix"}
+{"id": "stackexchange:security:143347", "on_segment": "y", "need": "n", "reason": "identifying attack tool curiosity"}
+{"id": "stackexchange:security:33763", "on_segment": "y", "need": "y", "reason": "needs file change tracking for audit compliance"}
+{"id": "stackexchange:security:216211", "on_segment": "n", "need": "n", "reason": "data entry automation"}
+{"id": "serverfault:serverfault:237038", "on_segment": "y", "need": "n", "reason": "beginner log entry question"}
+{"id": "serverfault:serverfault:16259", "on_segment": "y", "need": "n", "reason": "how to secure hotspot access"}
+{"id": "serverfault:serverfault:96986", "on_segment": "y", "need": "n", "reason": "how-to list folder permissions"}
+{"id": "serverfault:serverfault:166123", "on_segment": "n", "need": "n", "reason": "server room temperature logging"}
+{"id": "hn:14666584", "on_segment": "y", "need": "y", "reason": "asks for AWS security testing tools"}
+{"id": "stackexchange:security:35578", "on_segment": "y", "need": "y", "reason": "failed PCI scan, provider controls server"}
+{"id": "stackexchange:security:44863", "on_segment": "y", "need": "y", "reason": "no adequate private phone for small business"}
+{"id": "stackexchange:security:140088", "on_segment": "y", "need": "y", "reason": "scanners fail to detect stored XSS"}
+{"id": "serverfault:serverfault:271000", "on_segment": "y", "need": "n", "reason": "how-to enable Exchange mailbox auditing"}
+{"id": "serverfault:serverfault:558994", "on_segment": "y", "need": "y", "reason": "PCI scan flags distro-patched PHP version"}
+{"id": "serverfault:serverfault:184230", "on_segment": "y", "need": "n", "reason": "mod_ssl cipher config how-to"}
+{"id": "serverfault:serverfault:276039", "on_segment": "y", "need": "y", "reason": "regulatory message archiving gap beyond email"}
+{"id": "serverfault:serverfault:422529", "on_segment": "y", "need": "n", "reason": "mod_security logging config issue"}
+{"id": "serverfault:serverfault:541054", "on_segment": "n", "need": "n", "reason": "IIS logging performance"}
+{"id": "github:473790395", "on_segment": "n", "need": "n", "reason": "install location enhancement"}
+{"id": "stackexchange:security:25550", "on_segment": "y", "need": "n", "reason": "PCI breach fines question"}
+{"id": "serverfault:serverfault:328968", "on_segment": "y", "need": "y", "reason": "must build AD change audit logging"}
+{"id": "serverfault:serverfault:929938", "on_segment": "y", "need": "y", "reason": "Solaris audit may not log password resets"}
+{"id": "serverfault:serverfault:731657", "on_segment": "y", "need": "y", "reason": "PCI scan flags distro Apache version"}
+{"id": "serverfault:serverfault:375183", "on_segment": "y", "need": "n", "reason": "how-to fix SSL scan finding"}
+{"id": "serverfault:serverfault:416207", "on_segment": "n", "need": "n", "reason": "HTTP 408 logging"}
+{"id": "hn:4687889", "on_segment": "y", "need": "y", "reason": "Dropbox shared links expose folders unexpectedly"}
+{"id": "serverfault:serverfault:348110", "on_segment": "y", "need": "n", "reason": "PCI architecture question"}
+{"id": "serverfault:serverfault:690378", "on_segment": "y", "need": "n", "reason": "GPO acceptable use how-to"}
+{"id": "serverfault:serverfault:993803", "on_segment": "y", "need": "n", "reason": "SSL and phishing conceptual question"}
+{"id": "serverfault:serverfault:874140", "on_segment": "y", "need": "y", "reason": "ransomware deleted shadow copies, needs recovery"}
+{"id": "serverfault:serverfault:25244", "on_segment": "n", "need": "n", "reason": "IIS logging troubleshooting"}
+{"id": "serverfault:serverfault:408461", "on_segment": "n", "need": "n", "reason": "MySQL binary logging config"}
+{"id": "github:491558523", "on_segment": "n", "need": "n", "reason": "kubelet performance on Windows"}
+{"id": "hn:2976216", "on_segment": "n", "need": "n", "reason": "cloud storage product pitch"}
+{"id": "hn:2873597", "on_segment": "y", "need": "n", "reason": "general Node.js security question"}
+{"id": "stackexchange:security:51062", "on_segment": "y", "need": "y", "reason": "seeks free Java code review tool"}
+{"id": "stackexchange:security:153346", "on_segment": "y", "need": "y", "reason": "PCI fails on backported OpenSSL version"}
+{"id": "stackexchange:security:194368", "on_segment": "y", "need": "y", "reason": "SOC 2 burden for tiny business"}
+{"id": "stackexchange:security:24849", "on_segment": "y", "need": "n", "reason": "router defaults research question"}
+{"id": "serverfault:serverfault:171918", "on_segment": "y", "need": "n", "reason": "how to fix deploy user privileges"}
+{"id": "serverfault:serverfault:385401", "on_segment": "y", "need": "y", "reason": "wants pre-ASV PCI scan software"}
+{"id": "serverfault:serverfault:64280", "on_segment": "y", "need": "y", "reason": "site hijacked for phishing, needs help"}
+{"id": "serverfault:serverfault:255186", "on_segment": "n", "need": "n", "reason": "network traffic logging, not security-focused"}
+{"id": "github:265145937", "on_segment": "n", "need": "n", "reason": "CI tooling sandbox idea"}
+{"id": "hn:16255598", "on_segment": "y", "need": "y", "reason": "needs security assessment for nonprofit"}
+{"id": "stackexchange:security:1539", "on_segment": "y", "need": "n", "reason": "IP reputation anecdote request"}
+{"id": "stackexchange:security:38754", "on_segment": "y", "need": "n", "reason": "PCI encryption scope question"}
+{"id": "stackexchange:security:71570", "on_segment": "y", "need": "n", "reason": "PCI shared DB scope question"}
+{"id": "serverfault:serverfault:457573", "on_segment": "y", "need": "y", "reason": "DNS provider lacks domain ownership verification"}
+{"id": "serverfault:serverfault:113129", "on_segment": "n", "need": "n", "reason": "sysprep imaging question"}
+{"id": "serverfault:serverfault:62878", "on_segment": "n", "need": "n", "reason": "seeks hosted logging service, not security"}
+{"id": "hn:15112084", "on_segment": "y", "need": "y", "reason": "no secure email with IMAP support"}
+{"id": "stackexchange:security:36413", "on_segment": "y", "need": "n", "reason": "WPA2 cracking tool advice"}
+{"id": "stackexchange:security:86298", "on_segment": "y", "need": "n", "reason": "Slowloris implementation question"}
+{"id": "stackexchange:security:93217", "on_segment": "y", "need": "n", "reason": "PCI fines question"}
+{"id": "stackexchange:security:195833", "on_segment": "y", "need": "n", "reason": "PCI SaaS scope question"}
+{"id": "stackexchange:security:197668", "on_segment": "y", "need": "n", "reason": "PCI legality question"}
+{"id": "serverfault:serverfault:379285", "on_segment": "y", "need": "n", "reason": "logrotate root security question"}
+{"id": "serverfault:serverfault:620032", "on_segment": "y", "need": "y", "reason": "no way to record Workspaces sessions for audit"}
+{"id": "serverfault:serverfault:889622", "on_segment": "y", "need": "n", "reason": "how-to GCP login failure logs"}
+{"id": "serverfault:serverfault:765368", "on_segment": "n", "need": "n", "reason": "Apache log level"}
+{"id": "serverfault:serverfault:54941", "on_segment": "y", "need": "n", "reason": "firewall logging behavior question"}
+{"id": "github:381362725", "on_segment": "y", "need": "y", "reason": "feature request: list RBAC-accessible namespaces"}
+{"id": "github:445416100", "on_segment": "y", "need": "y", "reason": "security plugin installs insecure demo config"}
+{"id": "hn:10657097", "on_segment": "y", "need": "n", "reason": "career question"}
+{"id": "hn:1115235", "on_segment": "y", "need": "n", "reason": "learning resources request"}
+{"id": "stackexchange:security:153420", "on_segment": "y", "need": "n", "reason": "whether spy tool exists, curiosity"}
+{"id": "stackexchange:security:25059", "on_segment": "y", "need": "y", "reason": "no compliant temporary card storage"}
+{"id": "stackexchange:security:46142", "on_segment": "y", "need": "y", "reason": "PCI scan finds many vulns on old distro"}
+{"id": "stackexchange:security:69033", "on_segment": "y", "need": "n", "reason": "PCI checklist confirmation"}
+{"id": "stackexchange:security:31246", "on_segment": "y", "need": "y", "reason": "needs NTFS permission policy enforcement"}
+{"id": "stackexchange:security:221186", "on_segment": "y", "need": "n", "reason": "PCI VPC scope question"}
+{"id": "serverfault:serverfault:70282", "on_segment": "y", "need": "n", "reason": "Mac vs Windows opinion"}
+{"id": "serverfault:serverfault:195570", "on_segment": "y", "need": "n", "reason": "htaccess config question"}
+{"id": "serverfault:serverfault:807154", "on_segment": "y", "need": "n", "reason": "sealert error"}
+{"id": "serverfault:serverfault:85907", "on_segment": "n", "need": "n", "reason": "SQL performance audit"}
+{"id": "serverfault:serverfault:704781", "on_segment": "y", "need": "y", "reason": "PCI isolation for call center terminals"}
+{"id": "serverfault:serverfault:349843", "on_segment": "y", "need": "n", "reason": "Xen isolation how-to for PCI"}
+{"id": "serverfault:serverfault:920349", "on_segment": "y", "need": "y", "reason": "no central phishing reporting place"}
+{"id": "serverfault:serverfault:545832", "on_segment": "y", "need": "n", "reason": "SPF effectiveness question"}
+{"id": "serverfault:serverfault:102449", "on_segment": "n", "need": "n", "reason": "Apache log parsing"}
+{"id": "github:148397581", "on_segment": "y", "need": "n", "reason": "Cuckoo dependency install bug"}
+{"id": "hn:1221341", "on_segment": "n", "need": "n", "reason": "document management tool"}
+{"id": "hn:3278791", "on_segment": "y", "need": "n", "reason": "career question"}
+{"id": "hn:91259", "on_segment": "n", "need": "n", "reason": "reseller hosting"}
+{"id": "stackexchange:security:83849", "on_segment": "y", "need": "n", "reason": "encryption command review"}
+{"id": "stackexchange:security:197022", "on_segment": "y", "need": "y", "reason": "hacked laptop, needs per-app network monitoring"}
+{"id": "stackexchange:security:31602", "on_segment": "y", "need": "n", "reason": "encoding tool learning question"}
+{"id": "stackexchange:security:211247", "on_segment": "y", "need": "n", "reason": "PCI with PayPal question"}
+{"id": "stackexchange:security:16690", "on_segment": "y", "need": "n", "reason": "FIPS drivers survey"}
+{"id": "stackexchange:security:175815", "on_segment": "y", "need": "y", "reason": "software lacks hosted form, PCI burden"}

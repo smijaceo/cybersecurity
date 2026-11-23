@@ -1,0 +1,91 @@
+{
+ "round": 1,
+ "checked": 24,
+ "problems": [
+  {
+   "theme_id": 0,
+   "claim": "Anchore Enterprise pricing: 'AWS Marketplace list cited ~$34,500/yr (cloud image)' (source: rfp.wiki Anchore vs Chainguard)",
+   "issue": "Not supported as stated. The source is a third-party aggregator; www.rfp.wiki would not resolve from this session, so it could not be opened. The AWS Marketplace listing itself (prodview-ilkug4gdyavdq) shows line items run together: 'Anchore Enterprise Hosts' and an 'Essential Customer Success Plan' at $19,500 and $15,000. $34,500 looks like the sum of a host line plus a support plan, not a single annual price for the cloud image. Anchore's own pricing page publishes no prices and says to contact sales."
+  },
+  {
+   "theme_id": 0,
+   "claim": "Docker Scout: 'free tier; Team $9 per repo/month (blocks of 5); Business via sales' (source: https://www.docker.com/?p=40309)",
+   "issue": "The cited URL returns HTTP 404 when fetched directly. Search snippets of the old page do show $9/repo in groups of 5, but the same page also shows a conflicting $12/repo yearly figure. Docker's November 2024 plan change moved Scout into the per-user Docker Team/Business subscriptions with unlimited Scout-enabled repos. The standalone per-repo Team price may no longer apply, and the cited page does not show it is current."
+  },
+  {
+   "theme_id": 2,
+   "claim": "Snyk Open Source: 'Free tier (200 OSS tests); Team $25/contributing dev/month, 5-dev minimum' (source: https://snyk.io/start/team)",
+   "issue": "Partly unsupported. The cited Team page supports the $25/dev/month price and the 5-dev minimum, and it adds a cap of 10 contributing developers that the claim leaves out. The 200 OSS-test figure for the Free plan comes only from a third-party Checkmarx comparison, not from the cited Snyk page."
+  },
+  {
+   "theme_id": 2,
+   "claim": "WTP: 'Many vendors publish $25-40/developer/month SCA prices and Mend lists $25k/yr Renovate deals'",
+   "issue": "The cited Mend source is a staging host (aws-stg.mend.io), not Mend's production site. It lists a $25,000/yr tier for 100 developers. That is a list price, about $250/dev/yr or roughly $21/dev/month, not 'deals'. The cited sources support $25 (Snyk) and $30 (GitHub Code Security). None of them shows a $40/dev/month price, so the upper end of the range is unsupported."
+  },
+  {
+   "theme_id": 3,
+   "claim": "Stytch: '5 SSO/SCIM connections free, then $125 per connection/month' (source: https://stytch.com/lp/scim)",
+   "issue": "The figures match Stytch's pricing page (stytch.com/pricing?vertical=B2B). However, the cited source is a SCIM landing page that could not be confirmed to carry the pricing. Stytch's AWS Marketplace listing also shows a $25,000/yr enterprise contract, so the 'Enterprise custom' framing is incomplete."
+  },
+  {
+   "theme_id": 3,
+   "claim": "WTP: 'SaaS developers pay published per-connection prices ($59-$125/mo) to WorkOS, Stytch, SSOJet; IT buyers pay enterprise upgrades or Okta's $4/user add-on'",
+   "issue": "The Okta $4/user add-on is not supported. The cited 1Password 'SSO tax' post (June 2024) contains no Okta $4/user figure, and no cited source gives one. SSOJet's $59 is only the annual-billing rate ($79 monthly), and other SSOJet pages give conflicting structures, such as a $99/mo base plus per-connection fees."
+  },
+  {
+   "theme_id": 7,
+   "claim": "WTP: '...IAM auth itself is a free AWS feature with free AWS client libraries; nobody sells per-client IAM plugins.'",
+   "issue": "'Nobody sells per-client IAM plugins' is a negative market claim that none of the cited sources supports. The cited sources are a Vendr StrongDM page, an AWS MSK (Kafka, not RDS) IAM blog, and a hoop.dev vendor blog. The 'free feature' point rests on a hoop.dev marketing post rather than AWS pricing documentation. The StrongDM median of ~$33k (Vendr: $33,093 across 58 purchases) is supported, but the claim leaves out Vendr's own buyer guide, which shows an average contract value of $71,450."
+  },
+  {
+   "theme_id": 7,
+   "claim": "Teleport: 'not public (quote-based Enterprise Standard/Premium; MWI billed per MWI)' (source: goteleport.com/pricing/guide/)",
+   "issue": "Likely outdated. Per-MWI add-on billing appears in the August 2025 pricing guide. The January 2026 and June 2026 revisions instead count machine identities (tbot instances) as Teleport Protected Resources and show no separate per-MWI price."
+  },
+  {
+   "theme_id": 8,
+   "claim": "DataBahn: 'Security data pipeline claiming ~65% average SIEM cost reduction' (source: guptadeepak.com top-5 pipelines)",
+   "issue": "No 65% figure could be found. DataBahn's own and press-reported claims are 'up to 60%' ingestion-cost reduction (TFiR/SecurityBrief), 'over 50%' (SourceForge) or 50-70% volume reduction. The cited third-party ranking page's DataBahn section could not be confirmed to state 65%, and its snippet appears to mix in Tenzir's description."
+  },
+  {
+   "theme_id": 8,
+   "claim": "WTP: 'Enterprises pay per-GB pipeline fees (Cribl ~$0.27-0.32/GB, ~$9.6K/mo at 1 TB/day) to cut SIEM bills; big acquisitions confirm value'",
+   "issue": "None of the three cited sources (Cribl pricing, the Motadata blog, the PeerSpot Cribl vs Stellar Cyber comparison) mentions acquisitions, so 'big acquisitions confirm value' is unsourced. The $9.6K/mo figure comes from Motadata, a competitor's blog, and covers data credits only. Cribl also advertises up to 1 TB/day free on Cribl.Cloud, which the claim omits and which undercuts the 1 TB/day cost example."
+  },
+  {
+   "theme_id": 10,
+   "claim": "Aembit: 'free Starter up to 10 workloads; paid tiers not confirmed publicly'",
+   "issue": "Wrong on paid tiers. Aembit's public FAQ and pricing say Teams starts at $20/workload/month (and $20/agent/month), so the paid pricing is public."
+  },
+  {
+   "theme_id": 10,
+   "claim": "WTP: 'HCP Vault ~$72.92/client/month, Infisical Pro $18/identity/month, Oasis $50k/year starter; ... (Defakto $30.75M)'",
+   "issue": "HCP Vault: the $72.92/client figure comes from third-party aggregators (Infisical, CostBench). HashiCorp's official pricing listing shows about $112.17/client/month for HCP Vault Dedicated Standard, and the cited IBM page does not support $72.92. Infisical Pro $18/identity/month has no source in wtp_sources at all. Oasis $50,000 per 12 months and Defakto $30.75M are supported, though Oasis now appears to be relisted as Cyera Identity."
+  },
+  {
+   "theme_id": 11,
+   "claim": "Anchore Enterprise: 'AWS Marketplace list cited ~$34,500/yr' (repeated in the WTP evidence: 'Anchore lists around $34.5k/yr on AWS Marketplace')",
+   "issue": "Same problem as in theme 0. The source is rfp.wiki, an aggregator that could not be opened. The AWS listing shows $34,500 as the apparent sum of a hosts line ($19,500) and an Essential Customer Success support plan ($15,000), not a single list price for the product."
+  },
+  {
+   "theme_id": 11,
+   "claim": "WTP: 'Manifest signed a multi-year SaaS SBOM deal with a public medical device maker and raised $15M'",
+   "issue": "Mostly supported: a three-year deal (May 2024) and a $15M Series A (April 2025; $23M total). However, the text of the press release describes only 'a leading medical device manufacturer'. 'Publicly traded' appears only in the URL slug and is not stated in the body. No customer is named and no deal value is disclosed, so the deal does not evidence a price point."
+  },
+  {
+   "theme_id": 11,
+   "claim": "Interlynk: 'free tier; paid tiers by active developers, price not public' (source: journalofcyberpolicy.com/?p=246924)",
+   "issue": "The cited source is a reposted September 2024 press release announcing the free tier. It says paid tiers exist, but it says nothing about pricing by active developers. The active-developer tiers (10/25/50/100) come from an AWS Marketplace listing that is not cited."
+  },
+  {
+   "theme_id": 14,
+   "claim": "WTP: '...CRA reporting duties live since Sept 2026 push manufacturers to buy [SBOM/VEX tools]...'",
+   "issue": "The CRA reporting duties that apply from 11 Sept 2026 cover reporting actively exploited vulnerabilities and severe incidents to ENISA. They do not require an SBOM or VEX. The CRA's SBOM requirement sits in the main obligations, which apply from 11 Dec 2027. The cited sources are vendor marketing (an ArmorCode release on Help Net Security and a FOSSA CRA page) and a Gartner review page, none of which shows buyers purchasing because of the September 2026 reporting duties."
+  },
+  {
+   "theme_id": 14,
+   "claim": "Manifest: segment 'enterprise, device makers'; pricing 'not public' (source: https://www.rfp.wiki/vendors/manifest-cyber)",
+   "issue": "Pricing 'not public' is confirmed by G2 and Stackpick. However, the cited source (rfp.wiki) could not be opened from this session, and the 'device makers' segment rests on one medical-device deal rather than on the cited page. This one is weakly supported, not shown to be wrong."
+  }
+ ]
+}

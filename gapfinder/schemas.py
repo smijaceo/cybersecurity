@@ -84,6 +84,18 @@ class MarketResearch(Strict):
         return self
 
 
+class FactCheckProblem(Strict):
+    theme_id: int
+    claim: str
+    issue: str
+
+
+class FactCheck(Strict):
+    round: int = Field(ge=1)
+    checked: int = Field(ge=0)
+    problems: list[FactCheckProblem]
+
+
 M = TypeVar("M", bound=BaseModel)
 
 

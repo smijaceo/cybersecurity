@@ -104,3 +104,12 @@ def test_merge_market_parts_orders_and_checks_coverage(tmp_path):
     write(parts / "c.jsonl", [market(2)])
     with pytest.raises(ValueError, match="researched twice"):
         analysis.merge_market_parts(parts, inp, out)
+
+
+def test_fact_check_schema():
+    from gapfinder import schemas
+    ok = schemas.FactCheck.model_validate({"round": 1, "checked": 2, "problems": [
+        {"theme_id": 3, "claim": "c", "issue": "i"}]})
+    assert ok.problems[0].theme_id == 3
+    with pytest.raises(Exception):
+        schemas.FactCheck.model_validate({"round": 0, "checked": 1, "problems": []})

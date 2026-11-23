@@ -17,8 +17,8 @@ segment_description, source, engagement, title, body, url) and an OUTPUT jsonl p
 3. Write one JSON object per item, in input order, to OUTPUT:
    `{"id": "...", "on_segment": "y"|"n", "need": "y"|"n", "reason": "<= 15 words"}`
    Work through large files in chunks so nothing is skipped.
-4. If your task says to import, run
-   `python -m gapfinder judge-import --batch INPUT --labels OUTPUT`
+4. If your task says to import, run the import command it gives (default:
+   `python -m gapfinder judge-import --batch INPUT --labels OUTPUT`)
    and fix your output until it succeeds (it checks coverage, order-independence, values).
 
 Be strict and consistent: news, launches, tutorials, opinion essays and best-practice guides

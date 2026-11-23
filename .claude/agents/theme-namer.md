@@ -12,8 +12,8 @@ You are the theme namer for gapfinder.
    only. Don't fetch URLs or research the market.
 4. Write one JSON object per theme, in input order, to `reports/phase2/theme-names.jsonl`
    (or the output path given), keys: theme_id, coherent, name, need, search_query, reason.
-5. Validate:
-   `python -c "import json;from pathlib import Path;from gapfinder.analysis import load_names;t=json.load(open('reports/phase2/themes.json'));print(len(load_names(Path('reports/phase2/theme-names.jsonl'),{x['theme_id'] for x in t['themes']})))"`
+5. Validate: `python -m gapfinder names-check` (add `--out-dir DIR` if your task uses another
+   directory).
    Fix the file until it passes.
 
 Be critical about coherence: coherent only if one product could plausibly address most

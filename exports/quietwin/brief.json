@@ -1,0 +1,848 @@
+{
+ "brief_version": 1,
+ "exported_at": "2026-11-23T17:03:04+00:00",
+ "gapfinder_commit": "3788cea387d2052a5fff6fadd097386f8bd72932",
+ "opening_id": "msp-windows-detection",
+ "concept": {
+  "opening_id": "msp-windows-detection",
+  "slug": "quietwin",
+  "name": "QuietWin",
+  "one_liner": "Verified Windows logging coverage for MSSPs on Wazuh: per-tenant audit-policy and Sysmon rollout, drift alerts and a monthly client evidence report.",
+  "buyer": {
+   "role": "Owner or security lead of a small MSSP / security-focused MSP",
+   "company_profile": "MSSP or security MSP with 2-15 analysts running self-hosted Wazuh or Wazuh Cloud for 10-150 SMB clients with Windows servers (DCs, file servers, RDS hosts); sells a monthly security service and must show clients what is monitored. Sentinel-based MSSPs are a second segment, added only on paid demand."
+  },
+  "user": "The MSSP's detection engineer or senior analyst who rolls packs out per tenant and watches coverage drift; account managers who hand the monthly per-client evidence report to the client.",
+  "problem": {
+   "summary": "Small MSSPs run Wazuh with default Windows collection: audit policy is often left at defaults, Sysmon is missing or unmanaged, and nobody notices when a GPO, agent update or full log overwrites coverage. Noisy channels flood the indexer while logon, RDP and admin-change evidence is missing when a client asks. Free configs exist, but rolling them out, verifying them per tenant and proving coverage to clients is unpaid manual work.",
+   "evidence": [
+    {
+     "claim": "Admins ask for a simple way to track terminal server logins, session durations, disconnections and failed logons and cannot find one (2009 question, still among the most-engaged).",
+     "url": "https://serverfault.com/questions/13451/terminal-server-logging"
+    },
+    {
+     "claim": "Windows file-server object auditing forwarded to Graylog floods the collector with noise from routine access, burying the events the admin wanted.",
+     "url": "https://serverfault.com/questions/1078821/windows-server-audit-logs"
+    },
+    {
+     "claim": "Teams are told to pre-filter logs before the SIEM to save money and ask what detection risk that creates.",
+     "url": "https://security.stackexchange.com/questions/41068/siem-log-pre-filtering-question"
+    },
+    {
+     "claim": "In a survey of senior IT leaders (not MSSP-specific), teams report dropping logs to control cost, creating blind spots.",
+     "url": "https://www.helpnetsecurity.com/2026/06/19/report-log-management-security-risk/"
+    },
+    {
+     "claim": "Admins running OSSEC (Wazuh's ancestor) across hundreds of servers want correlation and security value without a full SIEM.",
+     "url": "https://serverfault.com/questions/539342/ossec-as-a-siem"
+    },
+    {
+     "claim": "Admins are asked to produce domain-controller audit trails of who changed what and look for tooling to do it.",
+     "url": "https://serverfault.com/questions/328968/domain-controller-audit-log"
+    },
+    {
+     "claim": "An admin was asked by HR for a report of users exempt from a lockout GPO and had no automated way to produce it.",
+     "url": "https://serverfault.com/questions/981094/enterprise-wide-gpo-audit"
+    },
+    {
+     "claim": "MSP-focused vendor Huntress filters Windows events at the source to keep its SIEM affordable, showing the channel treats Windows volume as a real cost problem.",
+     "url": "https://www.huntress.com/blog/unlocking-siem-the-role-of-smart-filtering"
+    }
+   ]
+  },
+  "why_now": {
+   "summary": "Microsoft now ships Sysmon as a built-in optional feature of Windows 11 and Server 2025, serviced monthly and accepting custom configs, but it does not analyse its events, is off by default and cannot coexist with standalone Sysmon, which SMB servers on 2016-2022 still need. MSSPs therefore face a two-flavour Sysmon migration across client fleets over the next few years. Meanwhile independent pipeline vendors are being bought by SIEM/XDR vendors (SentinelOne-Observo), and Wazuh remains the free SIEM small MSSPs standardise on, with Windows collection that is configured per agent.",
+   "sources": [
+    "https://learn.microsoft.com/windows/security/operating-system-security/sysmon/overview",
+    "https://techcommunity.microsoft.com/blog/windows-itpro-blog/native-sysmon-functionality-coming-to-windows/4468112",
+    "https://www.securityweek.com/sentinelone-to-acquire-observo-ai-in-225-million-deal/",
+    "https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/configuration.html",
+    "https://wazuh.com/cloud/"
+   ]
+  },
+  "mvp": {
+   "features": [
+    {
+     "feature": "Wazuh-only role packs (DC, file server, RDS host, workstation): advanced audit policy GPO, Sysmon config built on sysmon-modular (MIT, credited) for standalone and built-in Sysmon, Wazuh agent eventchannel XPath queries and log-size settings",
+     "why": "Narrow scope one founder can test; reuses the best free baseline instead of competing with it; covers the Server 2016-2022 majority as well as built-in Sysmon."
+    },
+    {
+     "feature": "Coverage verifier run per host via RMM (local only, no data leaves the client): checks auditpol subcategories, Sysmon flavour/version/config hash, log sizes and Wazuh agent config, and emits a coverage-state event into the MSSP's own Wazuh",
+     "why": "Turns static configs into a per-tenant stateful service: drift (overwritten GPO, stopped Sysmon, tiny logs) raises a Wazuh alert. This is the monthly value free configs do not give."
+    },
+    {
+     "feature": "Wazuh decoders, rules and dashboards for per-tenant coverage and drift, plus a local report runner that queries the Wazuh indexer and renders a monthly client PDF: logons, RDP sessions, failed logons, privilege use, group and GPO changes, coverage status",
+     "why": "A client-facing deliverable the MSSP can resell per client; free Wazuh has no scheduled per-client evidence report."
+    },
+    {
+     "feature": "Coverage proof: CI lab replaying ~20 Atomic Red Team techniques per role pack, publishing which Sigma/Wazuh rules still fire, plus an IR-question checklist (lateral-movement timeline, logon/logoff, admin changes) each pack must answer",
+     "why": "Evidence MSSP owners need before trusting a solo vendor; IR questions, not just detections, guard against forensic gaps."
+    },
+    {
+     "feature": "Two profiles per role: 'Keep' (no source-side drops beyond documented noise) and 'Lean' (documented drops, each with rationale), with guidance to enable Wazuh compressed archives as a full-fidelity safety net",
+     "why": "Agent-side drops are unrecoverable, so drops are opt-in, documented and backed by a cheap archive rather than the default."
+    },
+    {
+     "feature": "Per-pack compliance mapping (PCI DSS Req. 10, HIPAA 164.312(b)) and an employee-monitoring notice / DPIA template shipped with the logon report",
+     "why": "Gives the evidence report a compliance reason to exist and keeps MSPs on the right side of GDPR and works-council rules."
+    },
+    {
+     "feature": "Fixed-fee onboarding: founder deploys and tunes packs for one MSSP's tenants; $500 single-tenant pilot credited toward the $2,500 multi-tenant engagement",
+     "why": "Revenue from month one and the field experience that builds credibility; one consistent price ladder."
+    }
+   ],
+   "out_of_scope": [
+    "Hosting, processing or receiving any customer logs (verifier and report runner run inside the MSSP's environment)",
+    "SIEMs other than Wazuh in v1 (Sentinel DCR/KQL port only after 3 paying Sentinel MSSPs ask)",
+    "Ransomware canary folders and active response (EDR already detects shadow-copy deletion; we keep only the mapped Sigma detections)",
+    "Volume simulator across SIEMs (v1 reports per-event-ID volume from Wazuh only)",
+    "General log pipeline for non-Windows sources",
+    "Running detections or a SOC"
+   ]
+  },
+  "competitors": [
+   {
+    "name": "sysmon-modular (free, MIT)",
+    "url": "https://github.com/olafhartong/sysmon-modular",
+    "how_we_differ": "Best maintained free Sysmon baseline, which we build on and credit. It ships configs, not per-tenant rollout, audit policy, Wazuh collection, drift alerts or client reports."
+   },
+   {
+    "name": "Yamato Security EnableWindowsLogSettings / WELA (free)",
+    "url": "https://github.com/Yamato-Security/EnableWindowsLogSettings",
+    "how_we_differ": "Excellent audit-policy guidance and a per-host auditor; we add fleet-wide RMM rollout, continuous drift monitoring in Wazuh and client-facing evidence."
+   },
+   {
+    "name": "Wazuh default Windows collection and ruleset (free)",
+    "url": "https://documentation.wazuh.com/current/user-manual/capabilities/log-data-collection/configuration.html",
+    "how_we_differ": "Provides the eventchannel mechanism and generic rules; leaves audit policy, Sysmon config, XPath tuning and per-client reporting to the MSSP."
+   },
+   {
+    "name": "Microsoft Sentinel Windows Security Events (Common/Minimal sets)",
+    "url": "https://learn.microsoft.com/en-us/azure/sentinel/windows-security-event-id-reference",
+    "how_we_differ": "Free curated event sets inside Sentinel; this is why v1 does not target Sentinel. Wazuh MSSPs have no equivalent curated layer."
+   },
+   {
+    "name": "Huntress Managed SIEM (Smart Filtering)",
+    "url": "https://www.huntress.com/pricing/siem",
+    "how_we_differ": "Strongest MSP-channel competitor: filtering and SOC inside its own platform. We serve MSSPs who keep their own Wazuh stack and SOC margin."
+   },
+   {
+    "name": "Cribl Stream (free to 1TB/day, Windows packs)",
+    "url": "https://cribl.io/pricing/",
+    "how_we_differ": "Free pipeline with Windows event-size reduction packs, but a pipeline to run and route; it doesn't set audit policy or Sysmon, verify coverage or report to clients."
+   },
+   {
+    "name": "ManageEngine ADAudit Plus",
+    "url": "https://www.manageengine.com/products/active-directory-audit/",
+    "how_we_differ": "Turnkey AD/logon reports licensed per client estate; we ride on the Wazuh stack the MSSP already runs, under one per-tenant subscription."
+   },
+   {
+    "name": "LimaCharlie",
+    "url": "https://limacharlie.io/pricing",
+    "how_we_differ": "Per-endpoint security platform with MSSP tiers that replaces the stack; we suit MSSPs that have standardised on Wazuh and won't migrate."
+   }
+  ],
+  "differentiation": "Not a better config: free baselines (sysmon-modular, Yamato) are the starting point we credit. We sell what they leave to the MSSP: per-tenant RMM rollout of audit policy, both Sysmon flavours and Wazuh collection; continuous drift alerts; replay-tested proof that detections and IR questions still work; and a monthly client evidence report the MSSP can resell. Wazuh-native, no hosted logs, priced per client tenant.",
+  "build": {
+   "team": "1 technical founder (Windows detection engineering); no hires needed to first revenue",
+   "months_to_mvp": 3,
+   "hardest_parts": [
+    "Learning Wazuh decoders, rules, indexer queries and dashboards to a sellable standard (est. 3-5 weeks; free to run in a home lab)",
+    "Supporting standalone and built-in Sysmon, including per-host migration, with XML-field parsing because built-in messages are localized",
+    "Running a replay lab (DC, file server, RDS host, workstation, Wazuh) cheaply enough to re-test monthly",
+    "Keeping RMM rollout safe: signed packs, staged rings, preview of auditpol changes and per-tenant rollback",
+    "Making the verifier and report runner reliable across client estates without holding credentials or data"
+   ]
+  },
+  "pricing": {
+   "model": "Open baseline on GitHub; paid per-client-tenant subscription for maintained packs, drift monitoring content, report runner and support; fixed-fee onboarding",
+   "entry_price": "$9 per client tenant/month, minimum $149/month (e.g. $450/month at 50 tenants); onboarding $2,500 fixed, with a $500 single-tenant pilot credited toward it",
+   "rationale": "Value is per client (drift alerts and a monthly evidence report the MSSP can resell), so price grows with the MSSP's client count and gives a per-client SKU to mark up. It sits well under per-estate audit tools such as ADAudit Plus and Netwrix, and is a small add-on to Wazuh Cloud (from $571/month for 100 agents). The pitch is coverage and client evidence, not ingest savings, because Wazuh has no per-GB licence.",
+   "comparables": [
+    {
+     "vendor": "ManageEngine ADAudit Plus",
+     "price": "Annual: from $245 (100 workstations); 2 Windows file servers $495; 2 DCs $595 Standard / $945 Professional",
+     "source": "https://www.manageengine.com/products/active-directory-audit/pricing-details.html"
+    },
+    {
+     "vendor": "Netwrix Auditor",
+     "price": "Essentials self-service from $20 per enabled AD user",
+     "source": "https://netwrix.com/en/buy-now"
+    },
+    {
+     "vendor": "Blumira",
+     "price": "~$12-$21/employee/month, flat, no data limits (third-party estimate)",
+     "source": "https://www.capterra.com/p/208225/Blumira/pricing/"
+    },
+    {
+     "vendor": "Cribl Stream",
+     "price": "Free up to 1TB/day; self-managed Standard $4,800 for up to 100GB/day",
+     "source": "https://cribl.io/pricing/"
+    }
+   ]
+  },
+  "go_to_market": {
+   "first_customers": "Ten small MSSPs or security-led MSPs (2-15 analysts) already running Wazuh for Windows-heavy SMB clients, ideally with PCI, HIPAA or cyber-insurance-driven clients who ask for logon evidence; first from the founder's contacts, then from the Wazuh community and r/msp.",
+   "channel": "Founder-led: public repo with replay-tested coverage results and write-ups on built-in Sysmon migration for Wazuh; helpful answers in Wazuh community channels (no vendor spam); later a Wazuh partner/marketplace listing and RMM script-library listings for distribution.",
+   "wedge": "Free local 'Windows coverage check' run via RMM on one client: reports audit-policy gaps, Sysmon state, Sigma/IR coverage and noisiest event IDs in the MSSP's Wazuh, plus a sample client evidence report; then a $500 pilot to fix and monitor that tenant."
+  },
+  "risks": [
+   "Bundling and free substitutes: Wazuh, Microsoft (built-in Sysmon default config, Sentinel event sets) or Huntress could ship good Windows defaults; free sysmon-modular and Yamato already cover the config layer. Paid value rests on rollout, drift monitoring and reports, which Wazuh itself could add.",
+   "Weak moat: configs are copyable and customers can cancel and keep them. Defences are the drift/report layer, replay-test results, an opt-in cross-MSSP coverage benchmark, and founder trust; none is strong early.",
+   "Demand evidence is indirect and old: need statements come from in-house admins, many from 2009-2021, not MSSP owners; the Wazuh MSSP niche is likely low thousands of firms, a lifestyle-scale business unless a Wazuh or RMM partner distributes it.",
+   "Liability and forensic gaps: a dropped or missing event later needed in an incident lands on the MSSP and then on us; needs a lawyer-reviewed agreement with liability cap and no-completeness warranty, 'Keep' as default, archive guidance, and tech E&O cover.",
+   "Privacy and data custody: logon reports are employee monitoring (GDPR, works councils); onboarding touches client logs, so a DPA, local-only tooling and NDAs are required. Upstream licences (Sigma DRL, CC BY, Sysinternals terms) require attribution and no Sysmon binary redistribution.",
+   "Solo-founder capacity and credibility: onboarding engagements compete with pack maintenance, and without production MSSP history trust may take 3-6 months of public, replay-tested work to build."
+  ],
+  "riskiest_assumption": {
+   "assumption": "Small MSSPs on Wazuh will pay per client tenant for verified, monitored Windows coverage and a client evidence report, rather than deploying free configs themselves.",
+   "test": "Over two weeks, hold 15 short calls with Wazuh-running MSSPs from the founder's contacts and Wazuh/r/msp communities, showing a mock client evidence report and drift alert (slides, no product), asking what they use today and offering the $500 single-tenant pilot with payment up front.",
+   "success_signal": "At least 6 of 15 say they tried free configs (sysmon-modular, Yamato, Wazuh defaults) and still lack per-tenant verification or client reports, at least 4 say they would resell the report per client, and at least 2 pay the $500 pilot."
+  },
+  "open_questions": [
+   "How many small MSSPs run Wazuh for Windows-heavy clients, and how many would resell a per-client evidence report?",
+   "Do cyber-insurance questionnaires or SOC 2 / PCI audits of SMB clients ask for server logon evidence or audit-policy baselines?",
+   "Will Wazuh (or an RMM vendor) partner, list or OEM the packs, or build the same feature?",
+   "Do pilot customers renew at month 3 once packs are deployed, i.e. is drift monitoring felt as monthly value?",
+   "When will SMB fleets move to Server 2025/Windows 11 built-in Sysmon, and how painful is the migration?",
+   "Is there enough paid demand from Sentinel MSSPs (where ingest savings are real but often billed to the client) to justify a second SIEM?"
+  ],
+  "revision_log": [
+   "[variant v1] Added logon evidence pack (curated logon/RDP/admin-change event set and per-client monthly access-review report queries), terminal-server evidence, user line, wedge sample report and insurer open question",
+   "[variant v1] Added RMM deployment scripts feature, ManageEngine ADAudit Plus as competitor and pricing comparable",
+   "[variant v3] Added ransomware-precursor pack (shadow-copy deletion detections and audited canary folders, T1490/T1486) and shadow-copy evidence",
+   "[competitor-analyst] Free maintained configs (sysmon-modular, Yamato) already cover the baseline → repositioned: build on and credit sysmon-modular; paid value moved to per-tenant rollout, drift monitoring, replay-tested proof and client reports; both added as named competitors",
+   "[competitor-analyst] Sentinel Common/Minimal event sets give Sentinel users a free log diet → dropped Sentinel from v1; Wazuh-only, Sentinel added only on paid demand",
+   "[competitor-analyst] Cribl free to 1TB/day with Windows reduction packs → added as free competitor; pitch no longer rests on volume reduction or 'no pipeline'",
+   "[competitor-analyst] Flat/per-sensor MSP SIEMs (Huntress, Blumira, LimaCharlie) remove volume pain → target narrowed to MSSPs who keep their own Wazuh stack; Huntress named strongest channel competitor, LimaCharlie added",
+   "[competitor-analyst] SOC Prime Data Audit could add collection recommendations → not changed: different buyer (detection content); noted under bundling risk generally",
+   "[competitor-analyst] Logon pack competes with ADAudit Plus → kept as competitor with corrected starting price $245/yr; we compete on riding the MSSP's Wazuh with per-tenant pricing",
+   "[defensibility] Product is copyable text files → added stateful layer (local coverage verifier + Wazuh drift alerts + monthly report runner) and opt-in cross-MSSP coverage benchmark; moat still weak, stated in risks",
+   "[defensibility] Microsoft is the likely copier → removed Sentinel from v1 and made built-in vs standalone Sysmon migration support part of the value; risk kept",
+   "[defensibility] MSP channel held by bundled players → seek Wazuh partner/marketplace and RMM script-library listings as distribution",
+   "[defensibility] Price too low to fund a lead → moved to per-tenant pricing ($9/tenant/month, $149 minimum) so revenue scales with clients",
+   "[economic-buyer] Savings don't land on the MSSP's P&L (Wazuh/Graylog Open free; Sentinel ingest billed to client) → dropped ingest-savings as the core pitch; value is coverage, drift alerts and a resellable client evidence report",
+   "[economic-buyer] Nice-to-have with no forcing function → added PCI DSS 10 / HIPAA 164.312(b) mapping and targeted compliance-driven clients; insurer question kept open",
+   "[economic-buyer] Liability and bus-factor risk → 'Keep' profile as default, archive guidance, liability-capped agreement and E&O in risks; configs stay usable if vendor disappears (open baseline)",
+   "[economic-buyer] Price signals 'config with support plan' → paid tier now holds verifier, drift rules, dashboards and report runner, not just configs",
+   "[founder-fit] Four SIEMs + RMM + lab too much solo → cut v1 to Wazuh only; months_to_mvp 2 → 3; Wazuh learning time listed in hardest parts",
+   "[founder-fit] Credibility gap with MSSP owners → replay-tested public coverage results, IR checklist and paid onboarding to gain field experience; 3-6 month trust-building in risks",
+   "[founder-fit] Two-week success signal assumes an audience → test changed to 15 interviews from contacts plus communities with lower pilot threshold (2 paid)",
+   "[founder-fit] Services compete with maintenance → onboarding kept as revenue but noted in risks",
+   "[founder-fit] Built-in Sysmon only on Win11/Server 2025 → packs support standalone and built-in Sysmon plus migration",
+   "[gtm-pricing] Dollar ROI applies to a minority (per-GB SIEMs) → pitch changed to coverage and client evidence; Wazuh Cloud $571/month cited as context",
+   "[gtm-pricing] Real price anchor is free Cribl → acknowledged; price justified by per-tenant monitoring and reports, not filtering",
+   "[gtm-pricing] Flat $249 for 50 tenants has no expansion path → per-tenant pricing with minimum; per-client SKU for MSP markup",
+   "[gtm-pricing] Structural churn once configs are deployed → recurring deliverables defined: drift alerts and monthly client report; renewal at month 3 added as open question",
+   "[gtm-pricing] Pilot $500 vs tuning $2,500 inconsistent → $500 single-tenant pilot credited toward $2,500 multi-tenant onboarding",
+   "[gtm-pricing] Liability terms a $249 subscription can't carry → standard liability-capped agreement, no custom indemnity; in risks",
+   "[legal-ethics] Volume reduction can breach clients' logging duties → 'Keep' default, opt-in documented drops, archive guidance, PCI/HIPAA mapping per pack",
+   "[legal-ethics] Logon reports are employee monitoring → ship monitoring notice and DPIA template with the report; GDPR/works council in risks",
+   "[legal-ethics] Data custody in tuning and log-diet script → verifier and report runner run locally inside MSSP environment; DPA and NDA for onboarding",
+   "[legal-ethics] Upstream licence duties (Sigma DRL, CC BY, MIT) → credit sysmon-modular and Sigma authors in packs and outputs; in risks",
+   "[legal-ethics] Sysinternals licence forbids redistributing Sysmon → RMM scripts fetch Sysmon from Microsoft; in risks",
+   "[legal-ethics] Public drop list aids attackers → drop rationale for 'Lean' profiles kept in the paid tier; baseline is the 'Keep' profile",
+   "[market-skeptic] Complainers are in-house admins, not MSSP buyers → not changed in evidence (input has no MSSP-owner signal); riskiest-assumption test now interviews MSSPs directly; stated in risks",
+   "[market-skeptic] Evidence is old → acknowledged in evidence wording and risks; test seeks current MSSP demand",
+   "[market-skeptic] Cost evidence describes wrong segment → Help Net claim reworded as not MSSP-specific; cost no longer the core pitch",
+   "[market-skeptic] Free alternatives cover the core need → repositioned on top of them (see competitor-analyst)",
+   "[market-skeptic] Market is small → stated as lifestyle-scale unless partner distribution; first open question sizes it",
+   "[market-skeptic] Logon/ransomware packs' demand equally anecdotal → ransomware canary pack dropped; logon report tied to compliance and MSP resale",
+   "[security-practitioner] Built-in Sysmon covers a minority of SMB servers → standalone + built-in support and migration, XML-field parsing",
+   "[security-practitioner] Source-side drops are unrecoverable → 'Keep' default, opt-in drops, Wazuh compressed archives as full-fidelity safety net, IR-question checklist in tests",
+   "[security-practitioner] Sentinel and Wazuh defaults may already suffice → Sentinel dropped; for Wazuh the delta is audit policy, Sysmon, XPath, drift and reports; to be measured in pilots",
+   "[security-practitioner] Ransomware-precursor pack duplicates EDR, canaries slow and noisy → canary folders removed from scope; shadow-copy Sigma mappings kept only as baseline detections",
+   "[security-practitioner] RMM push is change and supply-chain risk → signed packs, staged rings, auditpol preview and per-tenant rollback in hardest parts",
+   "[security-practitioner] Logon evidence needs high-volume events on RDS hosts → RDS 'Keep' profile retains 4624/4634/4778/4779; volume reduction not promised for RDS",
+   "[technical-feasibility] Scope vs schedule → v1 is Wazuh only, 4 role packs, verifier and report runner; 3 months",
+   "[technical-feasibility] Cross-SIEM coverage-vs-volume simulator is the hardest feature → removed; v1 reports per-event-ID volume from Wazuh only and coverage via replay lab",
+   "[technical-feasibility] Built-in Sysmon minority → handled (see security-practitioner)",
+   "[technical-feasibility] Maintenance load underestimated → lab limited to one SIEM; in hardest parts",
+   "[technical-feasibility] No report engine in free SIEMs → added a small local report runner querying the Wazuh indexer (design no longer 'content only')",
+   "[technical-feasibility] Canary SACL tuning per client → canary folders removed from scope"
+  ]
+ },
+ "panel": {
+  "decision": "WEAK",
+  "mean": 5.5,
+  "min": 4,
+  "scores": {
+   "market-skeptic": 4,
+   "competitor-analyst": 5,
+   "security-practitioner": 6,
+   "technical-feasibility": 6,
+   "gtm-pricing": 6,
+   "legal-ethics": 7,
+   "economic-buyer": 6,
+   "defensibility": 4,
+   "founder-fit": 7
+  },
+  "founder_fit": 7,
+  "above_successes": 1,
+  "n_successes": 4,
+  "above_failures": 2,
+  "n_failures": 4,
+  "final_round": 2,
+  "fatal_count": 0
+ },
+ "open_objections": [
+  {
+   "lens": "market-skeptic",
+   "severity": "major",
+   "objection": "There is still no buyer-side demand signal. All eight problem.evidence items come from in-house admins, a vendor blog or an enterprise survey, and most date from 2009-2021. The concept's own risks admit this. The new value claims (per-tenant drift alerts, a resellable client evidence report) have no evidence at all that any MSSP or SMB client asked for them.",
+   "evidence": "concept:problem.evidence; concept:risks[2]; https://serverfault.com/questions/13451/terminal-server-logging"
+  },
+  {
+   "lens": "market-skeptic",
+   "severity": "major",
+   "objection": "Narrowing the target makes the market smaller. The target is now MSSPs with 2-15 analysts that run their own Wazuh for Windows-heavy SMB clients and will not use Huntress, Blumira or LimaCharlie. That is a subset of a niche already estimated at low thousands. At $9 per tenant ($450/month at 50 tenants, about $5.4k/year), even 200 customers is roughly $1M ARR. The concept still gives no count. Its only route to scale is a Wazuh or RMM partner, and that is an open question.",
+   "evidence": "concept:buyer.company_profile; concept:pricing.entry_price; concept:open_questions[0]; concept:open_questions[2]"
+  },
+  {
+   "lens": "market-skeptic",
+   "severity": "major",
+   "objection": "The forcing function is assumed, not shown. The pitch now depends on PCI DSS 10, HIPAA and cyber-insurance clients asking their MSSP for server logon evidence. The concept lists whether insurers or auditors actually ask for this as an open question. If they don't, the client report is a nice-to-have, and the MSSP cannot easily resell it per client.",
+   "evidence": "concept:open_questions[1]; concept:go_to_market.first_customers"
+  },
+  {
+   "lens": "competitor-analyst",
+   "severity": "major",
+   "objection": "The coverage verifier and drift alerts largely duplicate Wazuh Security Configuration Assessment (SCA). Wazuh ships CIS SCA policies that already run auditpol checks per agent, for example 'Audit Logon' Success and Failure, 'Audit Process Creation' and 'Audit Security Group Management'. Custom SCA YAML can check registry values (log sizes), running processes (Sysmon) and command output, and results show in the dashboard and alert when a check changes state. Per-tenant rollout of eventchannel collection and SCA policies is native through agent groups and agent.conf. An MSSP engineer can rebuild most of the 'stateful layer' with free features and no extra agent-side script, and Wazuh could ship a 'Windows logging coverage' SCA policy in a point release.",
+   "evidence": "https://raw.githubusercontent.com/wazuh/wazuh/v4.9.0/ruleset/sca/windows/cis_win2022.yml ; https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/index.html ; https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/creating-custom-policies.html ; https://documentation.wazuh.com/current/user-manual/reference/centralized-configuration.html ; concept:mvp.features[1]"
+  },
+  {
+   "lens": "competitor-analyst",
+   "severity": "major",
+   "objection": "The concept says 'free Wazuh has no scheduled per-client evidence report', but the Wazuh 5.0 Reporting module supports scheduled and on-demand reports from saved dashboards, visualizations and searches, delivered by email under indexer RBAC. With a saved per-agent-group dashboard, a free monthly client PDF is a configuration task. The report runner's uniqueness shrinks to report content, such as logon and RDP narratives and coverage status, rather than the ability to produce and schedule a report.",
+   "evidence": "https://documentation.wazuh.com/5.0-beta/user-manual/wazuh-indexer/modules/reporting.html ; concept:mvp.features[2].why"
+  },
+  {
+   "lens": "competitor-analyst",
+   "severity": "major",
+   "objection": "Huntress remains the most dangerous channel competitor, with Wazuh close behind. Narrowing to MSSPs that 'keep their own Wazuh stack' avoids competing on volume, but it targets the segment that managed SIEMs bundling a SOC (Huntress, Blumira, LimaCharlie MSSP tiers) are pulling away. The addressable base shrinks while the product is being built, and the concept already calls it lifestyle-scale.",
+   "evidence": "concept:risks[2] ; concept:buyer.company_profile ; concept:competitors[4] ; round-1 sources (huntress.com smart-filtering blog, limacharlie.io/pricing)"
+  },
+  {
+   "lens": "security-practitioner",
+   "severity": "major",
+   "objection": "The 'Lean' profile drops events in Wazuh agent eventchannel XPath queries, and the concept names Wazuh compressed archives as the full-fidelity safety net. Wazuh archives only hold events that the manager received, so events filtered at the agent never reach archives.json. The safety net does not cover the drops it is meant to back. An IR lead who reads the docs will catch this, and the drops stay unrecoverable. Real options: keep full collection and filter with manager-side rules (archive everything, alert on less), or keep a local full-size Windows log retention window on each host.",
+   "evidence": "https://documentation.wazuh.com/current/user-manual/manager/event-logging.html; concept:mvp.features (Two profiles per role)"
+  },
+  {
+   "lens": "security-practitioner",
+   "severity": "major",
+   "objection": "The paid 'stateful layer' is a custom verifier pushed through RMM, but Wazuh already does this natively. SCA policies run scheduled per-agent command and registry checks (auditpol output, Sysmon service and config hash, EventLog MaxSize) and report pass/fail changes into Wazuh. Agent groups (agent.conf) push localfile/eventchannel config per tenant. A practitioner would rather run vendor-native SCA YAML than grant a solo vendor's signed scripts execution on 50 tenants through RMM. Rebuild the verifier as SCA policies plus group config, and keep RMM only for GPO and Sysmon install. That cuts both the trust burden and the 'Wazuh could add it' gap to a thin layer.",
+   "evidence": "https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/creating-custom-policies.html; https://documentation.wazuh.com/current/user-manual/reference/centralized-configuration.html; concept:mvp.features (Coverage verifier run per host via RMM)"
+  },
+  {
+   "lens": "security-practitioner",
+   "severity": "major",
+   "objection": "Configuration state is not delivery. Correct auditpol and Sysmon settings still lose events when the agent's client buffer overflows, when EPS limits are hit, when channels are disabled, or when an agent goes silent. A monthly client report that says 'covered' on config checks alone gives false assurance, and that report is a liability for the MSSP. Drift checks need an end-to-end heartbeat: generate a known test event per channel on each host and alert when it does not land in the indexer.",
+   "evidence": "concept:mvp.features (Wazuh decoders, rules and dashboards ... coverage status)"
+  },
+  {
+   "lens": "technical-feasibility",
+   "severity": "major",
+   "objection": "Schedule is still optimistic. Thirteen weeks have to cover: 3-5 weeks learning Wazuh (the concept's own estimate); 4 role packs x Keep/Lean x standalone/built-in Sysmon; a verifier; decoders, rules and dashboards; a PDF report runner; signed RMM rollout with rings and rollback; compliance and DPIA templates; and a replay lab of ~20 techniques per role (~80 tests). Paid onboarding also starts in month one. A realistic figure is 4-5 months, or 3 months with the lab and Lean profiles deferred.",
+   "evidence": "concept:build.months_to_mvp; concept:build.hardest_parts; concept:mvp.features"
+  },
+  {
+   "lens": "technical-feasibility",
+   "severity": "major",
+   "objection": "Wazuh indexes alerts, not events. Archives are off by default and need logall_json plus extra index storage before raw events can be searched. Per-event-ID volume and a complete logon/RDP/logoff report therefore only work in one of two ways. Either the packs ship rules that raise every 4624/4634/4778/4779/4672 event to an indexed alert level, which adds the indexer volume the product is meant to tame, or the MSSP indexes archives. Wazuh Cloud has no shell on the manager, so the runner can only use APIs. The concept doesn't choose between these designs.",
+   "evidence": "https://documentation.wazuh.com/current/user-manual/manager/event-logging.html; concept:mvp.features"
+  },
+  {
+   "lens": "gtm-pricing",
+   "severity": "major",
+   "objection": "Cancel-and-keep is still structural. The verifier, drift rules, dashboards and report runner all run inside the MSSP's environment with no hosted component or licence check, so after onboarding an MSSP can stop paying and keep drift alerts and monthly reports running. The subscription then sells only future updates and support, which change slowly (audit-policy and Sysmon schemas are stable).",
+   "evidence": "concept:mvp.out_of_scope[0] ; concept:pricing.model ; concept:open_questions[3]"
+  },
+  {
+   "lens": "gtm-pricing",
+   "severity": "major",
+   "objection": "The planned scalable channel is weak. Wazuh's partner program has Gold and Platinum tiers for resellers and MSSPs who pay Wazuh to join (search results put the first-year cost at about $3.2k-$9.9k). It offers Wazuh Cloud, multi-tenancy and listing as a certified service partner, not a marketplace for third-party content. Without it, distribution is founder-led community work into a niche of low-thousands firms.",
+   "evidence": "https://wazuh.com/partners/ ; concept:go_to_market.channel"
+  },
+  {
+   "lens": "gtm-pricing",
+   "severity": "major",
+   "objection": "The revenue ceiling is set by founder time. At $9/tenant and 20-60 tenants, a typical MSSP pays $149-$540/month (about $1.8k-$6.5k ARR) plus a one-off $2,500 onboarding the founder delivers personally. One person can probably run 1-2 onboardings a month alongside pack maintenance and the replay lab, so 12-month ARR is likely $50-100k. The concept already calls this lifestyle-scale.",
+   "evidence": "concept:pricing.entry_price ; concept:build.team ; concept:risks[5] ; concept:risks[2]"
+  },
+  {
+   "lens": "legal-ethics",
+   "severity": "major",
+   "objection": "The product now issues client-facing evidence: a monthly PDF with 'coverage status' and per-pack PCI DSS 10 / HIPAA 164.312(b) mapping. MSSP clients will attach it to audit evidence or cyber-insurance questionnaires. If drift went undetected or the mapping is read as 'compliant', a misstatement to an insurer can jeopardise cover, and the claim chain runs MSSP to QuietWin. The lawyer-reviewed agreement with liability cap, no-completeness warranty and E&O cover is still listed as a need, not done, and the report needs explicit 'not a compliance attestation' wording and a stated verification time window.",
+   "evidence": "concept:mvp.features[2]; concept:mvp.features[5]; concept:risks[3]; concept:open_questions[1]"
+  },
+  {
+   "lens": "economic-buyer",
+   "severity": "major",
+   "objection": "The new forcing function is weak. PCI DSS Req. 10 and HIPAA 164.312(b) require that audit logs exist and are reviewed. They don't require this product. Free Wazuh already ships regulatory-compliance tagging and dashboards (PCI DSS, HIPAA, GDPR, NIST) in its ruleset, so the compliance reason is claimed by what I already run. Most SMB card merchants are SAQ-level, and the HIPAA rule is non-prescriptive. No auditor finding or insurer clause yet makes me buy, and the insurer question is still open.",
+   "evidence": "concept:mvp.features[5]; concept:open_questions[1]; concept:riskiest_assumption"
+  },
+  {
+   "lens": "economic-buyer",
+   "severity": "major",
+   "objection": "The economics rest on reselling the report, which is untested. If clients won't pay a separate line for a 'monthly evidence report', the fee is pure cost and I expect monthly reporting to be part of the managed-security fee I already charge. The concept's own success signal (4 of 15 would resell) is an intention, not a price clients have accepted.",
+   "evidence": "concept:pricing.rationale; concept:riskiest_assumption.success_signal; concept:open_questions[0]"
+  },
+  {
+   "lens": "economic-buyer",
+   "severity": "major",
+   "objection": "Build versus buy. The named user is my own detection engineer. sysmon-modular and Yamato give the configs for free. A PowerShell verifier plus a few Wazuh rules and an indexer query for a PDF is a few weeks of in-house work that I own forever. At $9/tenant I'd pay only if the replay-tested maintenance and Sysmon-migration support clearly beat that one-off effort. I'd want the pilot to show hours saved per tenant.",
+   "evidence": "concept:user; concept:competitors[0]; concept:competitors[1]; concept:differentiation"
+  },
+  {
+   "lens": "economic-buyer",
+   "severity": "major",
+   "objection": "Vendor risk now sits on my clients' domain controllers. The product pushes auditpol, Sysmon and scripts via RMM from a one-person vendor with no SOC 2 or security attestation. My clients' vendor-risk questionnaires and my own E&O carrier will ask about that supply chain. Signed packs and staged rings help, but I'd need attestation-grade evidence and a code-review right before rollout to every client DC.",
+   "evidence": "concept:build.team; concept:mvp.features[1]; concept:build.hardest_parts[3]"
+  },
+  {
+   "lens": "defensibility",
+   "severity": "major",
+   "objection": "Wazuh itself is the most likely copier, and it could ship this within a quarter. Its SCA module runs YAML policies with registry and command checks (for example auditpol output, the Sysmon service and log-size keys) and raises alerts whenever a check changes status. Its agent groups push one agent.conf per group to that group's agents. The 'coverage verifier + drift alert' is therefore one SCA policy plus group configs, and Wazuh already ships CIS-based Windows policies. A 'Windows logging coverage' policy would be a small release item.",
+   "evidence": "https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/how-it-works.html ; https://documentation.wazuh.com/current/user-manual/capabilities/sec-config-assessment/creating-custom-policies.html ; https://documentation.wazuh.com/current/user-manual/reference/centralized-configuration.html ; concept:mvp.features[1]"
+  },
+  {
+   "lens": "defensibility",
+   "severity": "major",
+   "objection": "The stateful layer is still copyable files on the customer's side. The verifier, decoders, rules, dashboards and report runner all run inside the MSSP environment with no hosted service, so a customer can cancel and keep running the last version. A Wazuh partner or consultant can also repackage it for their own clients. The state (per-tenant drift history) lives in the MSSP's indexer, not with QuietWin.",
+   "evidence": "concept:mvp.out_of_scope[0]; concept:mvp.features[2]; concept:risks[1]"
+  },
+  {
+   "lens": "defensibility",
+   "severity": "major",
+   "objection": "The only real moat named in the revision log, an opt-in cross-MSSP coverage benchmark, is missing from the MVP features and appears only as a hope in risks. Local-only tooling with no data leaving the MSSP makes it hard to build. Without it there are no data or network effects.",
+   "evidence": "concept:revision_log ('added ... opt-in cross-MSSP coverage benchmark'); concept:mvp.features; concept:risks[1]"
+  },
+  {
+   "lens": "founder-fit",
+   "severity": "major",
+   "objection": "Scope is narrower but still heavy for one person in 3 months: 4 role packs x 2 Sysmon flavours x Keep/Lean profiles, a verifier deployed 'via RMM' without naming which RMM (NinjaOne, Datto, N-able, ConnectWise each need their own script packaging and test tenant), a PDF report runner against the Wazuh indexer, a ~20-technique replay CI lab, compliance mappings and DPIA templates, plus 3-5 weeks learning Wazuh decoders and dashboards. Realistic first sellable cut is 4-5 months unless v1 is DC + workstation packs, one RMM and a simple HTML report.",
+   "evidence": "concept:mvp.features ; concept:build.months_to_mvp ; concept:build.hardest_parts[0]"
+  },
+  {
+   "lens": "founder-fit",
+   "severity": "major",
+   "objection": "Credibility with MSSP owners is addressed only by plan, not proof: the founder still has no production SOC/MSSP history, and the concept itself budgets 3-6 months of public replay-tested work before trust. Combined with 3 months to MVP, realistic recurring revenue starts at month 6-9; until then income depends on $500 pilots and $2,500 onboardings closed from a few contacts.",
+   "evidence": "concept:risks[5] ; config/founder.yaml:background ; config/founder.yaml:constraints.network"
+  }
+ ],
+ "change_my_mind": [
+  {
+   "lens": "market-skeptic",
+   "evidence_needed": "The riskiest-assumption test passes: at least 6 of 15 Wazuh MSSPs lack per-tenant verification or reports, at least 4 would resell the report, and at least 2 pay the $500 pilot"
+  },
+  {
+   "lens": "market-skeptic",
+   "evidence_needed": "A count of small MSSPs running Wazuh for clients, for example from Wazuh's partner directory or community, of 1,500 or more firms"
+  },
+  {
+   "lens": "market-skeptic",
+   "evidence_needed": "Two or more SMB cyber-insurance questionnaires or PCI/HIPAA assessor requests that ask for server logon evidence or an audit-policy baseline"
+  },
+  {
+   "lens": "market-skeptic",
+   "evidence_needed": "Pilot MSSPs renewing at month 3 and charging their clients for the evidence report"
+  },
+  {
+   "lens": "market-skeptic",
+   "evidence_needed": "A signed or LOI-level distribution deal with Wazuh (whose partner program already exists at $3,200-$9,900/year) or an RMM vendor"
+  },
+  {
+   "lens": "competitor-analyst",
+   "evidence_needed": "In 15 interviews, at least 6 Wazuh MSSPs say they know SCA and Wazuh reporting but still would not build per-tenant coverage checks and client reports themselves"
+  },
+  {
+   "lens": "competitor-analyst",
+   "evidence_needed": "A side-by-side showing QuietWin catches drift (stopped Sysmon, overwritten GPO, shrunk logs) and IR-question gaps that stock CIS SCA policies miss on the same lab hosts"
+  },
+  {
+   "lens": "competitor-analyst",
+   "evidence_needed": "Wazuh Inc. agreeing to list or partner on the packs, which turns the most likely copier into a channel"
+  },
+  {
+   "lens": "competitor-analyst",
+   "evidence_needed": "Pilot renewals at month 3 showing that the monthly report and drift monitoring are valued beyond the one-off deployment"
+  },
+  {
+   "lens": "security-practitioner",
+   "evidence_needed": "The 'Lean' profile is redesigned so that every drop can be recovered (manager-side filtering with archives on, or a documented local retention window), and an IR tabletop at a pilot answers lateral-movement and logon-timeline questions."
+  },
+  {
+   "lens": "security-practitioner",
+   "evidence_needed": "The verifier ships as Wazuh SCA policies plus agent-group config, with RMM used only for GPO and Sysmon install, and 3 pilot MSSPs accept it after a security review."
+  },
+  {
+   "lens": "security-practitioner",
+   "evidence_needed": "An end-to-end per-channel heartbeat test event goes into the report, and at least one pilot shows it catching a real delivery gap (buffer drop, silent agent) that the config checks missed."
+  },
+  {
+   "lens": "security-practitioner",
+   "evidence_needed": "A pilot rollout to 20 or more tenants with a pre-change auditpol backup, staged rings and at least one tested rollback, with no EDR or audit conflicts."
+  },
+  {
+   "lens": "technical-feasibility",
+   "evidence_needed": "A written design choice for logon and volume data (custom alert rules versus an indexed archives index), with the measured indexer-volume cost on one real tenant."
+  },
+  {
+   "lens": "technical-feasibility",
+   "evidence_needed": "A cut plan: 4 role packs in Keep profile, a verifier built on Wazuh SCA, the report runner, and a lab of 20 techniques in total (not per role), shipped in 12 weeks, with Lean profiles and the full lab in months 4-5."
+  },
+  {
+   "lens": "technical-feasibility",
+   "evidence_needed": "A working lab pipeline (e.g. a Ludus- or Proxmox-based snapshot lab plus Hayabusa over EVTX) that re-runs nightly without manual steps."
+  },
+  {
+   "lens": "technical-feasibility",
+   "evidence_needed": "Confirmation that the report runner works on Wazuh Cloud through its indexer/API access, not only on self-hosted Wazuh."
+  },
+  {
+   "lens": "gtm-pricing",
+   "evidence_needed": "2 of 3 pilot MSSPs renew past month 3 and at least one resells the evidence report to a client at a markup"
+  },
+  {
+   "lens": "gtm-pricing",
+   "evidence_needed": "A hosted or licence-keyed component (e.g. cross-MSSP coverage benchmark, signed pack feed with expiry) that stops working on cancel without holding customer logs"
+  },
+  {
+   "lens": "gtm-pricing",
+   "evidence_needed": "An RMM vendor script library or a Wazuh partner agreeing to distribute or bundle the packs"
+  },
+  {
+   "lens": "gtm-pricing",
+   "evidence_needed": "Onboarding shown to take 3 founder-days or less per MSSP, so services don't cap growth"
+  },
+  {
+   "lens": "legal-ethics",
+   "evidence_needed": "A signed, lawyer-reviewed subscription agreement with liability cap, no-completeness warranty and MSSP-owned change approval"
+  },
+  {
+   "lens": "legal-ethics",
+   "evidence_needed": "A sample client report with 'not a compliance attestation' wording and a dated coverage-verification window"
+  },
+  {
+   "lens": "legal-ethics",
+   "evidence_needed": "Tech E&O quote under $2k/year bound before the first paid pilot"
+  },
+  {
+   "lens": "legal-ethics",
+   "evidence_needed": "A written benchmark data-use policy requiring end-client consent and aggregation thresholds"
+  },
+  {
+   "lens": "legal-ethics",
+   "evidence_needed": "Per-framework retention guidance (PCI 12/3 months) included in the mapping"
+  },
+  {
+   "lens": "legal-ethics",
+   "evidence_needed": "Confirmation that paid Wazuh rules and decoders are original work, not modified stock rules"
+  },
+  {
+   "lens": "economic-buyer",
+   "evidence_needed": "At least 3 pilot MSSPs that bill clients for the monthly evidence report (e.g. $20+/client/month) and renew at month 3"
+  },
+  {
+   "lens": "economic-buyer",
+   "evidence_needed": "A cyber-insurance application, PCI QSA or HIPAA auditor finding that names Windows logon/audit-policy evidence, in which the QuietWin report closed the finding"
+  },
+  {
+   "lens": "economic-buyer",
+   "evidence_needed": "Pilot time logs showing the vendor saves more analyst hours per tenant per month than the fee, versus building in-house with sysmon-modular and Yamato"
+  },
+  {
+   "lens": "economic-buyer",
+   "evidence_needed": "A vendor-security package (code signing, reproducible builds, third-party review or SOC 2 roadmap) plus source escrow or a perpetual licence for the verifier and report runner"
+  },
+  {
+   "lens": "defensibility",
+   "evidence_needed": "The cross-MSSP coverage benchmark built into the MVP (opt-in anonymized coverage and volume metrics from 20+ MSSPs) and shown in client reports that free SCA policies cannot match"
+  },
+  {
+   "lens": "defensibility",
+   "evidence_needed": "A signed Wazuh technology-partner, marketplace or OEM deal, or an RMM vendor bundling the packs, rather than a paid partner listing"
+  },
+  {
+   "lens": "defensibility",
+   "evidence_needed": "A licence-enforced or hosted component (for example signed pack updates or a report service) whose absence breaks monthly value when a customer cancels"
+  },
+  {
+   "lens": "defensibility",
+   "evidence_needed": "Pilot evidence that 3 of 5 MSSPs renew at month 3 and say they would not rebuild the layer from Wazuh SCA themselves"
+  },
+  {
+   "lens": "founder-fit",
+   "evidence_needed": "v1 cut to DC + workstation packs, one named RMM and a simple report, shipped in 8-10 weeks with replay-test results public on GitHub."
+  },
+  {
+   "lens": "founder-fit",
+   "evidence_needed": "2 paid $500 pilots (or one $2,500 onboarding) closed within 60 days, funding the agreement template and E&O cover."
+  },
+  {
+   "lens": "founder-fit",
+   "evidence_needed": "One MSSP willing to be a named reference after a pilot, and month-3 renewal of the per-tenant subscription by at least one pilot customer."
+  },
+  {
+   "lens": "founder-fit",
+   "evidence_needed": "Better-fitting variant: lead as 'Windows coverage and drift checks for Wazuh MSSPs' consulting with a free open baseline repo, productise the verifier and report runner only after 3-5 engagements, and target Wazuh reseller partners and RMM script libraries as prospects rather than as paid channels."
+  }
+ ],
+ "evidence_signals": [
+  {
+   "title": "Terminal Server Logging",
+   "url": "https://serverfault.com/questions/13451/terminal-server-logging",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "SIEM system, what are the benefits?",
+   "url": "https://security.stackexchange.com/questions/9684/siem-system-what-are-the-benefits",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "SSH session logging",
+   "url": "https://serverfault.com/questions/313234/ssh-session-logging",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "local mysql was hacked with ransomware hack. How to check if database data was downloaded?",
+   "url": "https://serverfault.com/questions/946620/local-mysql-was-hacked-with-ransomware-hack-how-to-check-if-database-data-was-d",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Ask HN: Running legacy IE/ActiveX clients without local admin rights?",
+   "url": "https://news.ycombinator.com/item?id=47486365",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Ansible enable audit logging",
+   "url": "https://serverfault.com/questions/887548/ansible-enable-audit-logging",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "rancid like tool for config files",
+   "url": "https://security.stackexchange.com/questions/33763/rancid-like-tool-for-config-files",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Domain controller audit log",
+   "url": "https://serverfault.com/questions/328968/domain-controller-audit-log",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Amazon Workspaces - Audit",
+   "url": "https://serverfault.com/questions/620032/amazon-workspaces-audit",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Windows Server Audit Logs",
+   "url": "https://serverfault.com/questions/1078821/windows-server-audit-logs",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "User login monitoring tool",
+   "url": "https://security.stackexchange.com/questions/36971/user-login-monitoring-tool",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Office365 Audit Log",
+   "url": "https://serverfault.com/questions/966752/office365-audit-log",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Feature Request - Diagnostic Settings to Event Hub / Questions",
+   "url": "https://github.com/Azure/Azure-Landing-Zones/issues/1844",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Exchange Admin Audit log",
+   "url": "https://serverfault.com/questions/426517/exchange-admin-audit-log",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "OpenShift action audit log",
+   "url": "https://serverfault.com/questions/1147510/openshift-action-audit-log",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Network Change Control & Compliance",
+   "url": "https://serverfault.com/questions/314713/network-change-control-compliance",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Report accessible to view users",
+   "url": "https://github.com/ucdavis/finjector/issues/371",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Stealth Health-Tech Startup",
+   "url": "https://news.ycombinator.com/item?id=50429861",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Audit trasspasing information",
+   "url": "https://serverfault.com/questions/1156997/audit-trasspasing-information",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Enterprise Wide GPO Audit",
+   "url": "https://serverfault.com/questions/981094/enterprise-wide-gpo-audit",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Audit logging for compliance",
+   "url": "https://github.com/cuzic/bunterm/issues/5",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "Audit Group Object Use?",
+   "url": "https://serverfault.com/questions/721597/audit-group-object-use",
+   "theme": "User activity audit logging on servers"
+  },
+  {
+   "title": "SIEM log pre-filtering question",
+   "url": "https://security.stackexchange.com/questions/41068/siem-log-pre-filtering-question",
+   "theme": "SIEM log collection and noise filtering"
+  },
+  {
+   "title": "Are SIEM and NIDS/HIDS complementary?",
+   "url": "https://security.stackexchange.com/questions/133218/are-siem-and-nids-hids-complementary",
+   "theme": "SIEM log collection and noise filtering"
+  },
+  {
+   "title": "DNS Processor for Ingest Pipelines",
+   "url": "https://github.com/elastic/elasticsearch/issues/91624",
+   "theme": "SIEM log collection and noise filtering"
+  },
+  {
+   "title": "SIEM Alien Vault recommended method for muting noise",
+   "url": "https://security.stackexchange.com/questions/161782/siem-alien-vault-recommended-method-for-muting-noise",
+   "theme": "SIEM log collection and noise filtering"
+  },
+  {
+   "title": "Feature request: Support for heartbeat messages for outputs",
+   "url": "https://github.com/falcosecurity/falcosidekick/issues/278",
+   "theme": "SIEM log collection and noise filtering"
+  },
+  {
+   "title": "OSSEC as a SIEM",
+   "url": "https://serverfault.com/questions/539342/ossec-as-a-siem",
+   "theme": "SIEM log collection and noise filtering"
+  },
+  {
+   "title": "Product recommendation for SIEM/log management",
+   "url": "https://serverfault.com/questions/145626/product-recommendation-for-siem-log-management",
+   "theme": "SIEM log collection and noise filtering"
+  },
+  {
+   "title": "Is it possible to automatically collect chromebook system logs for SIEM ingestion?",
+   "url": "https://serverfault.com/questions/1002822/is-it-possible-to-automatically-collect-chromebook-system-logs-for-siem-ingestio",
+   "theme": "SIEM log collection and noise filtering"
+  },
+  {
+   "title": "Tender No 20 SIEM-SOC Solution 2026",
+   "url": "https://ted.europa.eu/en/notice/-/detail/766413-2026",
+   "theme": "SIEM log collection and noise filtering"
+  },
+  {
+   "title": "Collecting Attacker Feeds",
+   "url": "https://github.com/telekom-security/tpotce/issues/1545",
+   "theme": "SIEM log collection and noise filtering"
+  },
+  {
+   "title": "[FEATURE] Real-time SIEM integration with automatic alert processing",
+   "url": "https://github.com/ZainGuard/InvestigAI/issues/4",
+   "theme": "SIEM log collection and noise filtering"
+  },
+  {
+   "title": "Restore Shadow Copy Deleted by Ransomware",
+   "url": "https://serverfault.com/questions/874140/restore-shadow-copy-deleted-by-ransomware",
+   "theme": "Ransomware detection and recovery for file servers"
+  },
+  {
+   "title": "How to remove crypto-ransomware on my network domain",
+   "url": "https://serverfault.com/questions/671954/how-to-remove-crypto-ransomware-on-my-network-domain",
+   "theme": "Ransomware detection and recovery for file servers"
+  },
+  {
+   "title": "AWS Glacier and Ransomware",
+   "url": "https://serverfault.com/questions/1062989/aws-glacier-and-ransomware",
+   "theme": "Ransomware detection and recovery for file servers"
+  },
+  {
+   "title": "Prevent Network Ransomware Malware Attack?",
+   "url": "https://serverfault.com/questions/849984/prevent-network-ransomware-malware-attack",
+   "theme": "Ransomware detection and recovery for file servers"
+  },
+  {
+   "title": "Ransomware infection: What to do",
+   "url": "https://serverfault.com/questions/790394/ransomware-infection-what-to-do",
+   "theme": "Ransomware detection and recovery for file servers"
+  },
+  {
+   "title": "Detecting .Money Ransomware on Windows Server 2019",
+   "url": "https://serverfault.com/questions/995772/detecting-money-ransomware-on-windows-server-2019",
+   "theme": "Ransomware detection and recovery for file servers"
+  },
+  {
+   "title": "Sage2.0 Ransomware and Tomcat 7",
+   "url": "https://serverfault.com/questions/840511/sage2-0-ransomware-and-tomcat-7",
+   "theme": "Ransomware detection and recovery for file servers"
+  }
+ ],
+ "flagged_claims": [
+  {
+   "theme_id": 4,
+   "claim": "WTP: ADAudit Plus from $595/yr",
+   "issue": "The ManageEngine page shows cheaper plans than $595: $245/year for 100 workstations and $495/year for 2 Windows file servers. $595 is the 2-domain-controller Standard plan, not the starting price."
+  },
+  {
+   "theme_id": 16,
+   "claim": "WTP: Large enterprises spend ~$2.5M/yr on logging and 67% say cost outweighs value",
+   "issue": "Dynatrace gives ~$2.5M as the average annual spend of its survey respondents. It does not describe them as large enterprises. The 67% figure is supported."
+  },
+  {
+   "theme_id": 33,
+   "claim": "WTP: paid backup and file-security products with public per-device and per-server prices (Acronis, Veeam, ManageEngine) sell widely",
+   "issue": "None of the WTP sources is a ManageEngine page, so the ManageEngine part has no source. No source shows that these products 'sell widely'."
+  }
+ ],
+ "founder": {
+  "background": {
+   "education": "MS in cybersecurity",
+   "certifications": [
+    "CompTIA A+",
+    "Network+",
+    "Security+",
+    "PenTest+",
+    "CySA+",
+    "Project+"
+   ],
+   "hands_on": [
+    "CTF competitions (offensive and defensive)",
+    "Windows administration and internals",
+    "Kali Linux / penetration testing tooling",
+    "Python and automation",
+    "Windows detection engineering (Windows Event Forwarding + Sysmon detection for logons)"
+   ],
+   "strengths_inferred": [
+    "Can build security tooling and detections without hiring engineers",
+    "Credible with practitioners (SOC analysts, sysadmins, pentesters)"
+   ]
+  },
+  "constraints": {
+   "capital": "none",
+   "time": "plenty",
+   "network": "a few industry contacts",
+   "team": "solo technical founder"
+  },
+  "implications": [
+   "Prefer time to first revenue in months, not years; services-first or paid pilots are fine.",
+   "Prefer sales motions one technical founder can run (self-serve, community, MSP/partner channels, marketplaces) over long enterprise procurement cycles.",
+   "Prefer low running costs (no heavy data processing or 24/7 managed service on day one).",
+   "Prefer domains where existing skills give credibility (Windows, detection, offensive testing, automation) — or say what must be learned and how long that takes."
+  ]
+ },
+ "status": "unvalidated"
+}

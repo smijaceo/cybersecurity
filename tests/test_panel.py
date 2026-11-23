@@ -119,3 +119,32 @@ def test_history_reference(tmp_path):
     f.write_text(json.dumps({"calibration": {"concepts": [
         {"outcome": "success", "mean": 6}, {"outcome": "failure", "mean": 5}]}}))
     assert panel.history_reference(f) == {"successes": [6], "failures": [5]}
+
+
+def test_export_brief(tmp_path):
+    import yaml
+
+    from gapfinder import export
+
+    root = tmp_path
+    ideas = root / "ideas"
+    ideas.mkdir()
+    (root / "config").mkdir()
+    (root / "config" / "founder.yaml").write_text(yaml.safe_dump({"constraints": {"capital": "none"}}))
+    (ideas / "op.input.json").write_text(json.dumps(INPUT))
+    (ideas / "op.json").write_text(concept().model_dump_json())
+    for lens in schemas.LENSES:
+        p = panel.critique_path(ideas, "op", 1, lens)
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(crit(lens, 6).model_dump_json())
+    ref = root / "r.json"
+    ref.write_text(json.dumps({"calibration": {"concepts": [{"outcome": "success", "mean": 5.88},
+                                                            {"outcome": "failure", "mean": 5.5}]}}))
+    cfg = {"mode": "history", "lenses": list(schemas.LENSES),
+           "history": {"lenses": list(schemas.LENSES[:8]), "results": str(ref)}}
+    brief = export.build_brief(root, "op", cfg)
+    assert brief.status == "unvalidated" and brief.panel["decision"] == "STRONG"
+    assert len(brief.open_objections) == 9 and len(brief.evidence_signals) == 4
+    out = export.write(root, brief, root / "exports")
+    again = schemas.LaunchBrief.model_validate_json((out / "brief.json").read_text())
+    assert again.concept.slug == "scim-bridge" and (out / "README.md").exists()

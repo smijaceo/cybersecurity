@@ -322,6 +322,24 @@ class Critique(Strict):
         return self
 
 
+# ---------------------------------------------------------------- launch handoff
+
+class LaunchBrief(Strict):
+    """Everything a downstream launch repo needs about one concept (exported by gapfinder)."""
+    brief_version: Literal[1] = 1
+    exported_at: str
+    gapfinder_commit: str
+    opening_id: str
+    concept: Concept
+    panel: dict                      # verdict, mean, per-lens scores, vs-history position
+    open_objections: list[dict]      # fatal + major objections from the final round
+    change_my_mind: list[dict]       # what evidence would raise critics' scores
+    evidence_signals: list[dict]     # need statements behind the themes (title, url, source)
+    flagged_claims: list[dict]       # claims the fact-checker found unsupported: never reuse
+    founder: dict                    # config/founder.yaml (summarised, no name)
+    status: Literal["unvalidated", "validated", "rejected"] = "unvalidated"
+
+
 M = TypeVar("M", bound=BaseModel)
 
 

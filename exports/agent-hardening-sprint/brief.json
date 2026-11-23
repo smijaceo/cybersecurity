@@ -1,0 +1,868 @@
+{
+ "brief_version": 1,
+ "exported_at": "2026-11-23T17:03:04+00:00",
+ "gapfinder_commit": "3788cea387d2052a5fff6fadd097386f8bd72932",
+ "opening_id": "ai-agent-access-control",
+ "concept": {
+  "opening_id": "ai-agent-access-control",
+  "slug": "agent-hardening-sprint",
+  "name": "Agent Hardening Sprint",
+  "one_liner": "Fixed-fee red team of a small company's coding agents, MCP servers and CI agent jobs, then hardening through vendor-native managed settings, sandboxing and tested guardrails.",
+  "buyer": {
+   "role": "CTO / VP Engineering; co-signed by the SOC 2 or ISO 27001 evidence owner when a customer questionnaire or auditor has asked about AI coding tools",
+   "company_profile": "B2B SaaS company with 15-150 employees whose developers use Claude Code, Cursor or Copilot with MCP servers wired to GitHub, cloud and production data, and that runs agents in CI on issue/PR events; selling to enterprises and receiving security questionnaires about AI tooling; no in-house AppSec engineer. Best fit: already on Claude Teams/Enterprise, Cursor Enterprise or an MDM, so controls can be delivered centrally."
+  },
+  "user": "Engineering leads and the platform/DevOps owner who receive the reproducible findings and apply the hardening; developers who work under the managed settings; the compliance owner who files the findings, the control description and the re-test results.",
+  "problem": {
+   "summary": "Small companies adopted coding agents, MCP servers and CI agent jobs faster than they set rules for them. MCP tools are auto-approved, headless runs approve everything, secrets reach tool inputs, and nobody has tested whether a poisoned issue or tool output can make their agents act. Enterprise platforms sell through large annual commits and leading MCP governance vendors offer no self-serve. These companies need their real exposure shown and the cheap native controls set up correctly.",
+   "evidence": [
+    {
+     "claim": "A desktop app passed blanket --allowedTools for all user-registered MCP servers, so user-added servers got tool auto-approval in headless Claude runs.",
+     "url": "https://github.com/currentbits/solenta/issues/126"
+    },
+    {
+     "claim": "Wildcard subagents inherited all 16 MCP servers including mail-send and file-delete, and every MCP call default-allowed because the validator did not exist.",
+     "url": "https://github.com/akaszubski/autonomous-dev/issues/1549"
+    },
+    {
+     "claim": "Passing secrets as raw input to an MCP tool is a security anti-pattern found in a widely used developer platform.",
+     "url": "https://github.com/backstage/backstage/issues/34728"
+    },
+    {
+     "claim": "An MCP database server's 'read-only' mode could be bypassed (improper access control), so a configured safety mode did not hold.",
+     "url": "https://github.com/donghao1393/mcp-dbutils/issues/116"
+    },
+    {
+     "claim": "Users want hooks to stop secrets leaving the machine to the LLM provider and to attackers.",
+     "url": "https://github.com/anthropics/claude-code/issues/39882"
+    },
+    {
+     "claim": "A static capability audit of an MCP server found tools with no operation filtering and SQL tools accepting arbitrary DDL/DML.",
+     "url": "https://github.com/oracle/mcp/issues/164"
+    },
+    {
+     "claim": "Leading MCP governance vendors (Runlayer, MintMCP) publish no prices and offer no self-serve, so small teams cannot evaluate or buy.",
+     "url": "https://www.truefoundry.com/blog/runlayer-pricing"
+    },
+    {
+     "claim": "External audit connectors and fine-grained authorization require Descope Growth at $799/mo; lower tiers keep audit for 1 week to 1 month.",
+     "url": "https://www.descope.com/pricing"
+    }
+   ]
+  },
+  "why_now": {
+   "summary": "Coding agents now ship enforceable building blocks that small companies leave unconfigured: Claude Code server-managed settings (Teams/Enterprise) and MDM-delivered endpoint settings, native sandboxing, and blocking pre-tool hooks in Cursor, Copilot and Gemini CLI. GitHub Agentic Workflows makes read-only CI agents a documented pattern. OWASP's Top 10 for Agentic Applications (Dec 2025) gives buyers a reference list, and compliance platforms (Vanta AI governance, Drata AI Agent Governance, Aug 2026) are teaching SOC 2 buyers to ask about agents. SOC 2 still has no AI criteria, so this is customer-questionnaire pull, not a mandate.",
+   "sources": [
+    "https://code.claude.com/docs/en/server-managed-settings",
+    "https://cursor.com/docs/agent/hooks",
+    "https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-hooks",
+    "https://geminicli.com/docs/core/policy-engine/",
+    "https://github.github.com/gh-aw/introduction/overview/",
+    "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+    "https://www.vanta.com/products/ai-governance",
+    "https://securitybrief.co.uk/story/drata-launches-ai-agent-governance-for-anthropic-users",
+    "https://labs.cloudsecurityalliance.org/research/csa-research-note-soc2-ai-controls-gap-20260830-csa-styled/"
+   ]
+  },
+  "mvp": {
+   "features": [
+    {
+     "feature": "Client-run inventory script that reports which agents, permission modes, hooks, MCP servers and CI agent jobs are in use, emitting only a summary (server names, permission modes, trigger types; no env values, tokens or code) that the client reviews before sharing; CI workflows also checked with zizmor",
+     "why": "Scopes the engagement in a day without the founder ever holding client secrets; reuses a maintained scanner for workflow risks (D7)."
+    },
+    {
+     "feature": "Prompt-injection red team run in a disposable environment: a fork of a real repo, scoped test tokens and the client's real MCP server versions or mock MCP servers, using a versioned private suite of 30+ injection cases (planted issues, poisoned files, malicious tool output, interpreter and script-file indirection). Production credentials only with written approval and least-privilege tokens",
+     "why": "The part no platform bundles and the founder's offensive skills fit; the disposable setup keeps liability and access requests manageable while reproducing the real agent configuration."
+    },
+    {
+     "feature": "CI agent hardening: least-privilege GITHUB_TOKEN, no secrets on untrusted triggers, read-only agent jobs with writes through a separate gated step (GitHub Agentic Workflows pattern), plus a canary secret as a tripwire only",
+     "why": "The deterministic, low-liability fix for the main injection path; the canary is described as catching verbatim leaks only."
+    },
+    {
+     "feature": "Hardening through vendor-native central controls: managed settings via Claude Teams/Enterprise or MDM (allowManagedHooksOnly, managed MCP allowlist), native sandbox with network egress allowlist, and fail-closed hooks using a maintained open-source command guard where the native rules fall short; no custom policy compiler",
+     "why": "Central, fail-closed delivery is what makes controls hold; native and maintained tools cut the upkeep a solo founder cannot carry across four agents."
+    },
+    {
+     "feature": "Findings report with re-test results, a stated-bypass list for every guardrail, and a control description mapped to OWASP agentic risks that the client's auditor can evaluate; agent logs shipped to the client's own central store where one exists",
+     "why": "Gives the compliance owner an honest artefact for questionnaires without claiming a SOC 2 criterion or calling bypassable controls 'enforced'."
+    },
+    {
+     "feature": "Quarterly re-test: re-run the injection suite against the client's setup after agent, MCP or workflow changes, with a short delta report",
+     "why": "Recurring revenue tied to testing, which a $15/user policy tool does not do, instead of selling policy upkeep that native settings and Kirin cover."
+    }
+   ],
+   "out_of_scope": [
+    "Building a hosted SaaS platform or a cross-agent policy compiler in year one",
+    "Continuous runtime enforcement or dashboards (recommend Kirin, Vanta or the vendor's managed settings)",
+    "Holding or reviewing client logs; 24/7 monitoring or incident response",
+    "Testing third-party MCP servers or SaaS APIs the client cannot authorise",
+    "Security of the client's own AI product (LLM app pentests)",
+    "Formal SOC 2 audit, attestation or a statement that a criterion is met",
+    "Unsolicited scanning of or outreach about other companies' public repositories"
+   ]
+  },
+  "competitors": [
+   {
+    "name": "Vanta AI governance (and the free agentic controls it publishes)",
+    "url": "https://www.vanta.com/products/ai-governance",
+    "how_we_differ": "Discovery, guardrails and evidence inside the SOC 2 platform the buyer already pays for; we do not compete on that. We red-team the client's real agent and CI setup and configure the native controls, and work as an implementation partner where Vanta is in place."
+   },
+   {
+    "name": "Drata AI Agent Governance",
+    "url": "https://securitybrief.co.uk/story/drata-launches-ai-agent-governance-for-anthropic-users",
+    "how_we_differ": "Limited-availability proxy and evidence feed aimed at enterprises running Anthropic agents; no hands-on injection testing of developer toolchains or CI jobs."
+   },
+   {
+    "name": "Knostic Kirin",
+    "url": "https://www.knostic.ai/pricing",
+    "how_we_differ": "Self-serve continuous policy and audit at $15/user/month; we recommend it for ongoing enforcement and sell what it does not do: adversarial testing, CI hardening and periodic re-tests."
+   },
+   {
+    "name": "Coding-agent security boutiques (Christian Schneider assessment, Appsecco MCP pentests)",
+    "url": "https://christian-schneider.net/consulting/coding-agent-security/",
+    "how_we_differ": "Schneider's is an interview-based assessment and roadmap; Appsecco tests MCP servers. We run hands-on injection tests against the client's own agent, MCP and CI setup and install the fixes, at a published fixed price for small companies."
+   },
+   {
+    "name": "Native managed settings plus free tools (zizmor, GitHub Agentic Workflows, open-source command guards)",
+    "url": "https://code.claude.com/docs/en/server-managed-settings",
+    "how_we_differ": "Free but someone has to choose, configure and test them against the client's real setup; we use them rather than replace them."
+   },
+   {
+    "name": "Pillar Security / Lasso Security",
+    "url": "https://www.lasso.security/use-cases/ai-coding-assistants",
+    "how_we_differ": "Enterprise platforms bought through annual commits; we are a fixed-fee engagement priced for small companies."
+   },
+   {
+    "name": "Runlayer / MintMCP",
+    "url": "https://www.mintmcp.com/pricing",
+    "how_we_differ": "Enterprise MCP gateways with quote-only pricing; we harden the setup without adding a gateway."
+   }
+  ],
+  "differentiation": "A hands-on prompt-injection red team of the client's own coding agents, MCP servers and CI jobs, followed by hardening with vendor-native central controls and re-tests, at a published fixed price. Platforms (Vanta, Drata, Kirin) discover and enforce but do not attack your setup; boutiques interview or test MCP servers in isolation. We complement the platform the buyer already has. The asset is a private, growing injection-test suite and public research, not a policy kit.",
+  "build": {
+   "team": "1 technical founder (solo, bootstrapped); white-label partners do their own selling; subcontract a tester only above 2 sprints per month",
+   "months_to_mvp": 3,
+   "hardest_parts": [
+    "Building credibility first: 2-3 public reproducible write-ups on coding-agent or CI-agent injection (ideally vendor-acknowledged findings) before selling, since the founder's track record is Windows detection and CTFs",
+    "Building the disposable test environment and the versioned injection suite (including interpreter and script-file indirection) so red teams are reproducible and safe in a 2-week sprint",
+    "Keeping hardening guidance and the test suite current as four agents change managed-settings, sandbox and hook semantics, including cloud and CI agent limitations",
+    "Engagement paperwork and cover: rules of engagement, authorisation letter, liability cap, DPA, and E&O/cyber insurance before the first sprint",
+    "Finding buyers without paid ads or an existing client base"
+   ]
+  },
+  "pricing": {
+   "model": "Fixed-fee red team and hardening sprint, then optional quarterly re-test; wholesale price for partner firms that resell it",
+   "entry_price": "$6,500 fixed fee for up to 25 developers and 3 CI repositories (2-week sprint: inventory, red team, CI hardening, native-control setup, re-test); quarterly re-test $1,800; partners buy at $5,000",
+   "rationale": "Priced as a scoped assessment rather than a tool: well under enterprise annual commits (Lasso $20k+), about a year of Descope Growth, and in a different category from $15-25/user tools, which the concept recommends rather than undercuts. At about 2 sprints a month (realistic solo capacity) this grosses about $13k/month and covers insurance and a partner margin. Re-tests are priced on testing, not policy upkeep, so they do not compete with Kirin.",
+   "comparables": [
+    {
+     "vendor": "Lasso Security",
+     "price": "AWS Marketplace annual commit $20,000 (GenAI Chatbots), $50,000 (LLM gateway)",
+     "source": "https://aws.amazon.com/marketplace/pp/prodview-7ygm7pa3k5agg"
+    },
+    {
+     "vendor": "Descope Agentic Identity Hub",
+     "price": "Pro from $249/mo; Growth from $799/mo",
+     "source": "https://www.descope.com/pricing"
+    },
+    {
+     "vendor": "Knostic Kirin",
+     "price": "Team $15/user/month",
+     "source": "https://www.knostic.ai/pricing"
+    },
+    {
+     "vendor": "TrueFoundry MCP Gateway",
+     "price": "Pro $25 per user/month incl. 20K requests",
+     "source": "https://www.truefoundry.com/pricing"
+    }
+   ]
+  },
+  "go_to_market": {
+   "first_customers": "Ten 15-150 person B2B SaaS companies using coding agents with MCP servers and CI agent jobs that have a concrete trigger: an enterprise customer questionnaire item on AI coding tools, an auditor question, or an internal near-miss. Reached through the founder's contacts, readers of the public research, and two or three SOC 2 readiness, vCISO or small pentest firms that add the sprint as their 'AI coding tools' line item.",
+   "channel": "Research-led and partner-led: public write-ups, a self-scan-only release of the inventory tool and BSides/meetup talks build credibility; small pentest, SOC 2 readiness and vCISO firms resell the sprint at the wholesale price (their margin about $1.5k); listing in compliance-platform partner directories where available. Vulnerabilities found in public projects during research go through a published, no-pitch private disclosure policy, never into sales.",
+   "wedge": "A free, client-run self-scan plus a 30-minute walkthrough of its summary, ending with a fixed quote; or a one-repository CI-agent injection test as the first paid step for buyers unsure about granting red-team access."
+  },
+  "risks": [
+   "Demand: SOC 2 has no AI criteria, so purchases depend on customer questionnaires, auditor questions or incidents; without them, small CTOs defer and deal flow is uneven.",
+   "Bundling: Vanta, Drata and Kirin bundle discovery, guardrails and evidence, and agent vendors expand managed settings; the configuration part shrinks, leaving the red team and re-tests as the defensible core. No technical moat; reputation and the private test suite are the only assets.",
+   "Credibility and capacity: an unknown solo founder competes with boutiques that already publish research; about 2 sprints a month caps revenue until partners or a second tester are added.",
+   "Liability and data: injection tests can cause damage if production credentials are used; needs written authorisation, third-party exclusions, a liability cap, insurance, and testing in disposable environments by default. The founder must stay out of client logs, and command logging is employee monitoring that needs notice.",
+   "Misrepresentation: guardrails are client-side and partly fail-open; they must be described with stated bypasses, never as 'enforced' or as meeting a SOC 2 criterion, or a client incident becomes a claim against the founder.",
+   "Technical: hooks and command parsing do not stop interpreter or script indirection; real containment depends on sandboxing, egress limits and least-privilege tokens, which some clients will not adopt."
+  ],
+  "riskiest_assumption": {
+   "assumption": "Enough 15-150 person SaaS companies have a concrete trigger (a customer questionnaire item, auditor question or near-miss about coding agents) to pay about $6,500 for a red team and hardening now, directly or through a partner firm.",
+   "test": "In two weeks: interview 10 SOC 2 readiness, vCISO or small pentest firms about how often clients get coding-agent or MCP questions and offer them the wholesale sprint; contact 20 CTOs from the founder's network and research readers, ask whether they have such a request in writing, and offer a pre-sold sprint with a $1,000 deposit.",
+   "success_signal": "At least 3 of 10 partner firms report clients with written coding-agent questions and 2 agree in writing to refer or resell, and at least 1 CTO pays a deposit at $6,500 (or 2 at the one-repository CI test)."
+  },
+  "open_questions": [
+   "How fast will questionnaire and auditor questions about coding agents become routine, and in which customer segments first?",
+   "Will Vanta or Drata partner programmes accept a solo implementation partner, or build their own red-team service?",
+   "What share of target companies already have Claude Teams/Enterprise, Cursor Enterprise or MDM, so controls can be delivered centrally?",
+   "Can E&O and cyber cover be bought at a cost the sprint price absorbs for a new solo firm?",
+   "Can a later detection add-on (alerts on agent-spawned shells and MCP processes) use the founder's detection-engineering strength on mostly macOS/Linux fleets?",
+   "Which repeated work, such as the injection suite, could become a self-serve product?"
+  ],
+  "revision_log": [
+   "[variant v2] Headless/CI coverage in the policy pack: read-only default for CI agent runs, automatic downgrade when the job input is untrusted issue/PR text, and a planted canary secret that fails the run if it appears in tool input or output",
+   "[variant v2] Agent-workflow scanner: reads .github/workflows and flags agent steps triggered by untrusted events with write permissions or secrets; used in the inventory and, on public repos, as an outbound lead source",
+   "[variant v1] Hook scripts evaluate commands by parsing them (shell AST) instead of string patterns, and the kit keeps one YAML policy compiled into each agent's native hook/policy format as the path to a later product",
+   "[judge] Dropped the Pillar $175,000 comparable and its mention in the rationale: the fact-checker flagged it as a whole-platform price, not a coding-agent product price",
+   "[competitor-analyst] Vanta (acquiring Pillar) and Drata bundle agent discovery, guardrails and evidence → repositioned as a red-team and hardening service that complements these platforms and acts as their implementation partner; both added to competitors and why_now; continuous enforcement moved out of scope",
+   "[competitor-analyst] Knostic Kirin at ~$375/month matches the $400 retainer → policy-upkeep retainer dropped; replaced by a quarterly re-test ($1,800) that Kirin does not offer; Kirin recommended for ongoing enforcement",
+   "[competitor-analyst] Boutiques (Christian Schneider, Appsecco) already sell coding-agent/MCP assessments → added to competitors; differentiation narrowed to hands-on injection testing of the client's own agent, MCP and CI setup plus installed fixes at a published small-company price",
+   "[competitor-analyst] zizmor and GitHub Agentic Workflows cover CI scanning and read-only agent jobs → custom workflow scanner replaced by zizmor and the gh-aw pattern; CI value now in configuring and testing them",
+   "[defensibility] Fatal: platform owners keep bundling the configuration work → partly accepted: configuration is no longer the core; the red team and re-tests are. Not changed on 'no-go': a solo services business needs paying clients, not a technical moat, and bundled controls still need someone to attack and verify them; risk stated plainly",
+   "[defensibility] Shell-AST hook scripts already exist free (open-source command guards) → custom parser and policy compiler dropped; maintained OSS guards and native controls used instead (D7)",
+   "[defensibility] Open-source kit gives away the only asset → injection test suite kept private and versioned; only the self-scan inventory tool is released",
+   "[defensibility] Channel partners are likeliest copiers → partners now resell at a wholesale price ($5,000) so the sprint is their line item rather than a competitor's",
+   "[economic-buyer] No must-have trigger; SOC 2 has no AI criteria → buyer narrowed to companies with a written questionnaire item, auditor question or near-miss; riskiest assumption and test now target the trigger; CSA source added to why_now",
+   "[economic-buyer] No budget line; buyers prefer existing pentest or compliance vendors → channel shifted to those vendors as resellers",
+   "[economic-buyer] Red-team approval friction exceeds price → disposable-environment testing by default, a one-repository CI test as a lower-friction first step, and engagement paperwork plus insurance listed as pre-launch work",
+   "[founder-fit] Credibility gap and three new domains; 1-month MVP unrealistic → months_to_mvp raised to 3 with 2-3 public write-ups before selling",
+   "[founder-fit] First-customer plan exceeds solo reach → success signal reset to partner commitments and one deposit; first revenue expected around month 3-5",
+   "[founder-fit] Capacity is ~2 sprints a month, not 3-4 → pricing rationale now assumes 2 per month",
+   "[founder-fit] Windows detection strengths unused → not changed in v1 (target fleets are mostly macOS/Linux); a detection add-on kept as an open question",
+   "[gtm-pricing] $3,500 below pentest floor and unit economics don't close → entry price raised to $6,500 for a defined scope; partners at $5,000",
+   "[gtm-pricing] Retainer will churn against Kirin and free managed settings → retainer replaced by quarterly re-test",
+   "[gtm-pricing] Cold exposure notes convert poorly and a stranger's inventory script is a trust ask → exposure notes removed; inventory runs client-side and emits a reviewed summary only",
+   "[gtm-pricing] Little room to expand → not changed beyond re-tests and partner volume; expansion via a later product left as an open question",
+   "[legal-ethics] Outbound exposure notes look like vulnerability-for-sale → channel dropped; replaced by a published no-pitch disclosure policy; unsolicited scanning listed out of scope",
+   "[legal-ethics] Injection testing against production-credentialed agents → disposable fork, scoped test tokens and mock MCP servers by default; production only with written approval; authorisation letter, third-party exclusion, liability cap and insurance in hardest_parts and risks; third-party MCP/SaaS testing out of scope",
+   "[legal-ethics] Data custody and employee monitoring → founder never holds client logs (out of scope); inventory emits a summary without env values; logs stay in the client's store; DPA and employee notice in risks",
+   "[legal-ethics] 'Enforced' and SOC 2 wording is misrepresentation → one-liner and features now say guardrails with a stated-bypass list and a control description the auditor evaluates; formal attestation and criterion claims out of scope",
+   "[legal-ethics] Dual-use workflow scanner → only a self-scan mode is released; CI scanning uses zizmor",
+   "[market-skeptic] Evidence from the wrong people; #60246 filed by an MCP-governance vendor → removed #60246 from problem.evidence and added two incident-style issues (headless MCP auto-approval, MCP read-only bypass); buyer-side demand still unproven and tested by the riskiest assumption",
+   "[market-skeptic] Buyers' budgeted pain is insecure generated code → not changed: that budget belongs to SAST/SCA incumbents; this concept targets the narrower questionnaire-triggered segment and says demand is secondary in risks",
+   "[market-skeptic] Reachable slice is narrow → not changed: low thousands of companies is enough for a solo services firm doing ~24 sprints a year",
+   "[security-practitioner] Per-laptop hooks are client-side and bypassable → controls delivered through server-managed settings (Teams/Enterprise) or MDM endpoint settings; best-fit buyers are those with central delivery; others told their guardrails are advisory",
+   "[security-practitioner] Hooks fail open and miss script/interpreter indirection → fail-closed hooks only where needed, native sandbox with egress allowlist added, indirection cases added to the injection suite and re-test",
+   "[security-practitioner] Access request hard to grant → disposable environment by default and client-run inventory without secrets",
+   "[security-practitioner] Canary catches only verbatim leaks → canary demoted to a tripwire; least-privilege tokens and no secrets on untrusted triggers are the primary CI fix",
+   "[security-practitioner] Local logs are tamper-prone → logs shipped to the client's central store where one exists; no claim of tamper-resistant evidence otherwise",
+   "[technical-feasibility] Policy compiler across four agents is a maintenance burden with silent holes → compiler dropped; per-agent native controls documented with a coverage matrix and stated gaps (cloud/CI agent limitations)",
+   "[technical-feasibility] Disposable test environment not budgeted → added as an MVP feature and a hardest part; months_to_mvp raised to 3"
+  ]
+ },
+ "panel": {
+  "decision": "PROMISING",
+  "mean": 5.75,
+  "min": 4,
+  "scores": {
+   "market-skeptic": 5,
+   "competitor-analyst": 5,
+   "security-practitioner": 7,
+   "technical-feasibility": 7,
+   "gtm-pricing": 6,
+   "legal-ethics": 7,
+   "economic-buyer": 5,
+   "defensibility": 4,
+   "founder-fit": 6
+  },
+  "founder_fit": 6,
+  "above_successes": 1,
+  "n_successes": 4,
+  "above_failures": 4,
+  "n_failures": 4,
+  "final_round": 2,
+  "fatal_count": 0
+ },
+ "open_objections": [
+  {
+   "lens": "market-skeptic",
+   "severity": "major",
+   "objection": "The whole concept now rests on the trigger, and no evidence shows that it exists. The buyer is a CTO with a written customer-questionnaire item, auditor question or near-miss about coding agents. Published AI vendor questionnaire guidance (Vanta, GRC templates) asks about training on customer data, prompt retention, sub-processors and shadow AI. It does not ask for adversarial testing of developers' agents, MCP permissions or CI agent jobs. The concept cites no questionnaire, auditor or customer that asks for this. SOC 2 has no AI criteria (CSA). Without such a document, a red team is a discretionary $6,500.",
+   "evidence": "https://www.vanta.com/resources/questions-to-ask-ai-vendors; concept:riskiest_assumption; concept:risks[0]"
+  },
+  {
+   "lens": "market-skeptic",
+   "severity": "major",
+   "objection": "The problem evidence still comes from developers and tool authors. The new items (headless MCP auto-approval, an MCP read-only bypass, a missing subagent validator) are bugs in agent and MCP projects, reported by their own maintainers or users. They show that the risk is technically real. They do not show that a small-company CTO will pay an outsider to find it. None of them involves a target-profile company that was harmed, or one that asked for help.",
+   "evidence": "concept:problem.evidence; input:themes[0].need_statements"
+  },
+  {
+   "lens": "competitor-analyst",
+   "severity": "major",
+   "objection": "Most dangerous competitor is still Vanta, and the threat now hits the core. Vanta's Pillar roadmap lists AI inventory and runtime monitoring for January 2027, red teaming ('adversarial testing tailored to your business context') for Spring 2027 and runtime enforcement for Summer 2027, sold inside the SOC 2 platform the named co-buyer already pays for. Pillar's catalogue includes coding agents and MCP servers. The concept's strongest claim, red teaming that platforms do not bundle, has a public expiry date. The implementation-partner role also depends on a Vanta partner track for AI services, and none has been published.",
+   "evidence": "https://www.vanta.com/resources/vanta-acquires-pillar"
+  },
+  {
+   "lens": "competitor-analyst",
+   "severity": "major",
+   "objection": "The claimed asset, a private injection suite of 30+ cases, is being commoditised. Promptfoo ships free, open coding-agent red-team plugins for repo-text injection, terminal-output injection, secret env and file reads, sandbox read and write escape, network egress bypass, delayed CI exfiltration and automation poisoning, run against an isolated repo copy. That is most of the concept's suite and test method. GitInject (live GitHub workflow injection) and SuperClaw add open tooling. An in-house platform engineer, or any pentest firm, can run this, so the work shifts from owning a suite to delivery and judgment.",
+   "evidence": "https://www.promptfoo.dev/docs/red-team/coding-agents/"
+  },
+  {
+   "lens": "competitor-analyst",
+   "severity": "major",
+   "objection": "The concept understates the boutique overlap. Its table says Appsecco 'tests MCP servers', but Appsecco sells fixed-price product security testing for agent workflows, MCP tools and connected data sources, with a 48-hour quote and a retest within 30 days. That is the same fixed-fee, retest-included structure, from a firm with published research and a client base. The differentiation from Christian Schneider holds, since his offer is an interview-based assessment and explicitly 'not a pentest'.",
+   "evidence": "https://appsecco.com/mcp-pentesting"
+  },
+  {
+   "lens": "security-practitioner",
+   "severity": "major",
+   "objection": "The hardening leans on the native sandbox with an egress allowlist, but Claude Code's sandbox covers shell commands only. File tools, MCP servers and hooks run outside it. The concept's headline exposure is MCP servers wired to GitHub, cloud and production data, so a poisoned issue that makes the agent call a write-capable MCP tool is not contained by the sandbox. MCP risk has to be cut at the server: an allowlist (allowedMcpServers/managed-mcp.json), per-tool deny rules, least-privilege tokens for each MCP server, and read-only database roles. None of these is named as a deliverable.",
+   "evidence": "https://code.claude.com/docs/en/sandboxing (sandbox covers shell commands only; MCP servers and hooks run outside it); concept:mvp.features[3]; concept:problem.evidence"
+  },
+  {
+   "lens": "technical-feasibility",
+   "severity": "major",
+   "objection": "The new containment layer does not cover the main attack surface. Claude Code's sandbox covers shell commands only. Local MCP servers, hooks and the built-in file and web tools run outside it with full user access, and allowedDomains does not limit WebFetch. A poisoned issue that drives an MCP tool such as GitHub, a database or mail is limited only by the MCP allowlist, permission rules and token scope, not by the sandbox or the egress allowlist. The hardening must add per-server least-privilege tokens, deny rules on MCP write tools and possibly containerised MCP servers. The bypass list must say plainly that the sandbox does not cover MCP.",
+   "evidence": "https://code.claude.com/docs/en/sandboxing.md ('The sandbox covers shell commands only. Claude's file tools, MCP servers, and hooks run outside it'; local MCP servers 'run with your full access'); concept:mvp.features[3]"
+  },
+  {
+   "lens": "gtm-pricing",
+   "severity": "major",
+   "objection": "Demand still depends on a trigger and has no budget line. Narrowing the buyer to companies with a written questionnaire item, an auditor question or a near-miss is honest, but it shrinks the funnel to a segment nobody has sized. It also makes deal flow follow the slow, uneven questionnaire cycle. No evidence yet shows partners or CTOs actually have such requests in hand.",
+   "evidence": "concept:riskiest_assumption; concept:buyer.role; concept:risks[0]; concept:open_questions[0]"
+  },
+  {
+   "lens": "gtm-pricing",
+   "severity": "major",
+   "objection": "Two sprints a month is optimistic for one person who must also write 2-3 public research pieces, keep a 30+ case injection suite current across four agents, run free self-scan walkthroughs, manage partners and handle engagement paperwork. Early utilisation is more likely 1-1.5 sprints a month, so $6.5-10k gross before insurance and partner discounts. First revenue is expected around month 3-5, so year one may bring in well under $100k.",
+   "evidence": "concept:pricing.rationale; concept:build.hardest_parts; concept:build.team; concept:revision_log[founder-fit]"
+  },
+  {
+   "lens": "legal-ethics",
+   "severity": "major",
+   "objection": "The red team runs on 'a fork of a real repo' with the client's real MCP server versions in a disposable environment. Unless that environment runs in the client's own cloud account, with the client's own agent licences, the founder now holds the client's private source code. Every injection run also sends that code to an LLM provider under the founder's API account and data terms, not the client's. This contradicts the claim that 'the founder never holds client data'. It also makes the founder a sub-processor that the client's SOC 2 vendor review and its customers' DPAs have to cover. The concept needs a custody design before the first sprint. The default should be an environment in the client's tenant, using the client's agent accounts, destroyed at the end of the sprint with written confirmation. Otherwise it needs a DPA, a named LLM provider with zero-retention terms, encryption, and deletion on close.",
+   "evidence": "concept:mvp.features[1] ('a fork of a real repo, scoped test tokens and the client's real MCP server versions'); concept:mvp.out_of_scope[2]; concept:risks[3]"
+  },
+  {
+   "lens": "legal-ethics",
+   "severity": "major",
+   "objection": "The liability controls are listed but not yet contracted or priced. 'Production credentials only with written approval' leaves a door open that a client under deadline pressure will push through, and a successful injection with a production token can delete or exfiltrate data. E&O and cyber cover for a new solo firm doing offensive testing remains an open question. The rationale says the price 'covers insurance', but gives no quote. Before selling, the founder needs three things: a signed engagement template with an authorisation letter, a third-party exclusion and a liability cap at or near the fee; a written rule that production testing uses read-only or single-resource tokens and has a rollback plan; and a bound policy.",
+   "evidence": "concept:mvp.features[1] ('Production credentials only with written approval'); concept:open_questions[3]; concept:pricing.rationale; concept:build.hardest_parts[3]"
+  },
+  {
+   "lens": "economic-buyer",
+   "severity": "major",
+   "objection": "The new price puts the sprint head-to-head with the security spend I already have. $6,500 is about what a small SaaS pays for its whole annual pentest: fixed-price vendors quote $4,000 for web app and API plus $2,400 for cloud, $6,400 in total. That pentest is what customers and SOC 2 auditors actually ask for. At $3,500 I could put it on a card; at $6,500 it needs a budget conversation, and the CFO will ask why a coding-agent test costs as much as the test of our product. Without a written trigger, I defer it to next year's budget.",
+   "evidence": "https://www.redfoxsec.com/blog/how-much-does-a-penetration-test-cost-for-a-saas-company-in-2026; concept:pricing.entry_price"
+  },
+  {
+   "lens": "economic-buyer",
+   "severity": "major",
+   "objection": "The must-have trigger is still an assumption, not evidence. The revision narrows the buyer to companies with a written questionnaire item or auditor question about coding agents, but the concept shows none. The enterprise AI questionnaires I can find ask about the vendor's AI product (model behaviour, refusals, retention, training, guardrails), not about how its developers configure Claude Code or MCP. The concept itself says SOC 2 has no AI criteria. The segment that has a real trigger may be very small.",
+   "evidence": "https://tianpan.co/blog/2026-04-27-80-question-wall-enterprise-ai-security-questionnaire; concept:riskiest_assumption.assumption; concept:why_now.summary"
+  },
+  {
+   "lens": "defensibility",
+   "severity": "major",
+   "objection": "The 'private, growing injection-test suite' the differentiation names as the asset is already free and maintained. Promptfoo's coding-agent collection covers repo prompt injection, terminal-output injection, secret env/file reads, sandbox read/write escape, egress bypass, delayed CI exfil, automation poisoning and verifier sabotage, with MCP plugins and disposable-checkout guidance. That is a superset of the planned 30+ cases, backed by a vendor that is part of OpenAI.",
+   "evidence": "https://www.promptfoo.dev/docs/red-team/coding-agents/; concept:differentiation; concept:mvp.features[1]"
+  },
+  {
+   "lens": "defensibility",
+   "severity": "major",
+   "objection": "The likeliest copier is still the small pentest, vCISO and SOC 2 readiness firm, now invited in as a reseller. Wholesale resale at $5,000 is not exclusive and teaches the method: after a few sprints a partner can run Promptfoo plus native managed settings itself and keep the whole $6,500. Established boutiques that already sell coding-agent or MCP assessments (listed in competitors) can add a fixed price within a quarter.",
+   "evidence": "concept:pricing.entry_price; concept:go_to_market.channel; concept:competitors[3]"
+  },
+  {
+   "lens": "defensibility",
+   "severity": "major",
+   "objection": "There are no switching costs. Fixes live in the client's native managed settings, sandbox config and log store by design, and the quarterly re-test ($1,800) can go to any tester. Compliance platforms (Vanta, Drata) that own the buyer relationship could add an automated red-team check or a partner service and pull re-tests away.",
+   "evidence": "concept:mvp.features[3]; concept:mvp.features[5]; concept:competitors[0]"
+  },
+  {
+   "lens": "founder-fit",
+   "severity": "major",
+   "objection": "Credibility is still unproven and everything depends on it. The plan now puts 2-3 write-ups before selling, but the direct and partner channels both need the founder to look like a coding-agent security expert. Established boutiques already publish deep coding-agent work, such as Christian Schneider's ten-domain assessment and cheat sheet. Pentest and vCISO firms will not resell an unknown solo tester's red team until they see a finding or a reference client.",
+   "evidence": "concept:build.hardest_parts[0]; concept:go_to_market.channel; https://christian-schneider.net/consulting/coding-agent-security/"
+  },
+  {
+   "lens": "founder-fit",
+   "severity": "major",
+   "objection": "Time to first revenue is long for a founder with no capital. The plan needs 3 months to build the test environment, the 30+ case suite and the write-ups, plus about a month to learn agent managed settings, sandbox and hook semantics, GitHub Actions attack paths and SOC 2 control wording. With the 2-week test after that and a typical first-deal cycle, the first $6,500 arrives around month 4-6. The founder has plenty of time, so this is survivable but not fast. A paid one-repository CI test could close earlier.",
+   "evidence": "concept:build.months_to_mvp; concept:riskiest_assumption.test; config/founder.yaml constraints.capital"
+  }
+ ],
+ "change_my_mind": [
+  {
+   "lens": "market-skeptic",
+   "evidence_needed": "3 of 10 SOC 2 readiness, vCISO or pentest firms show redacted client questionnaires or audit requests that ask about coding-agent, MCP or CI-agent controls"
+  },
+  {
+   "lens": "market-skeptic",
+   "evidence_needed": "At least 1 CTO deposit of $1,000 toward a $6,500 sprint, or 2 paid one-repository CI tests, within the 2-week test"
+  },
+  {
+   "lens": "market-skeptic",
+   "evidence_needed": "A major questionnaire standard (SIG, CAIQ) or a large enterprise buyer's vendor-security template adds explicit coding-agent or MCP tool-permission questions"
+  },
+  {
+   "lens": "competitor-analyst",
+   "evidence_needed": "Vanta/Pillar red teaming ships for AI apps only, or at enterprise tiers only, and leaves developer coding agents and CI agent jobs out of scope through 2027"
+  },
+  {
+   "lens": "competitor-analyst",
+   "evidence_needed": "Vanta or Drata publishes a services/implementation partner track for AI governance and accepts a solo firm into it"
+  },
+  {
+   "lens": "competitor-analyst",
+   "evidence_needed": "The private suite finds, in 3 pilot clients, exploitable paths that a default Promptfoo coding-agent:all run misses"
+  },
+  {
+   "lens": "competitor-analyst",
+   "evidence_needed": "2 or more pentest or vCISO firms sign wholesale agreements rather than building the service in-house"
+  },
+  {
+   "lens": "competitor-analyst",
+   "evidence_needed": "3 of 10 prospects who were quoted by Appsecco or a similar boutique choose the sprint"
+  },
+  {
+   "lens": "security-practitioner",
+   "evidence_needed": "MCP-specific hardening added as a deliverable: allowlist plus per-server least-privilege tokens or read-only roles, and a re-test showing a poisoned issue can no longer trigger a write-capable MCP tool."
+  },
+  {
+   "lens": "security-practitioner",
+   "evidence_needed": "Inventory data from 10 prospects showing at least half have Claude Teams/Enterprise, Cursor Enterprise or MDM, so central delivery is the common case."
+  },
+  {
+   "lens": "security-practitioner",
+   "evidence_needed": "One pilot report where a blast-radius section built from the client's real token scopes changed what the client fixed."
+  },
+  {
+   "lens": "technical-feasibility",
+   "evidence_needed": "A pilot client where an MCP-driven injection case (poisoned issue to a GitHub or database MCP write) is blocked by token scope or deny rules, not only shell cases by the sandbox."
+  },
+  {
+   "lens": "technical-feasibility",
+   "evidence_needed": "A managed-settings template with failIfUnavailable, allowUnsandboxedCommands: false and allowManagedDomainsOnly, rolled out to 20+ developers with under a day of allowlist tuning."
+  },
+  {
+   "lens": "technical-feasibility",
+   "evidence_needed": "A coverage matrix for the four agents, kept current through two release cycles in under one day a month."
+  },
+  {
+   "lens": "gtm-pricing",
+   "evidence_needed": "At least 3 of 10 interviewed SOC 2 readiness, vCISO or pentest firms show client questionnaires with coding-agent or MCP items, and 2 sign a resale agreement at $5,000 wholesale"
+  },
+  {
+   "lens": "gtm-pricing",
+   "evidence_needed": "At least 1 CTO pays a $1,000 deposit at $6,500, or 2 pay for a priced one-repository CI test, within the two-week test"
+  },
+  {
+   "lens": "gtm-pricing",
+   "evidence_needed": "A priced one-repository CI test that is credited toward the sprint, plus overage pricing per extra 25 developers or extra repository"
+  },
+  {
+   "lens": "gtm-pricing",
+   "evidence_needed": "At least half of the first five sprint customers buy a re-test within 6 months"
+  },
+  {
+   "lens": "legal-ethics",
+   "evidence_needed": "A custody design where the disposable test environment runs in the client's tenant with the client's agent accounts, or a signed DPA with named zero-retention LLM terms and deletion on close."
+  },
+  {
+   "lens": "legal-ethics",
+   "evidence_needed": "A bound E&O and cyber policy quote for offensive-testing work by a solo firm, shown to fit the $6,500 and $5,000 wholesale margins."
+  },
+  {
+   "lens": "legal-ethics",
+   "evidence_needed": "An engagement template with a liability cap, a third-party exclusion and a production-token rule, plus a flow-down clause for partner resale."
+  },
+  {
+   "lens": "legal-ethics",
+   "evidence_needed": "A sample control description whose stated-bypass list includes managed-settings fetch failure and the sandbox retry escape hatch."
+  },
+  {
+   "lens": "economic-buyer",
+   "evidence_needed": "3 of 10 partner firms show redacted client questionnaires or auditor requests that name coding agents, MCP or CI agent jobs."
+  },
+  {
+   "lens": "economic-buyer",
+   "evidence_needed": "At least 1 CTO pays the $1,000 deposit at $6,500 and cites a specific deal or audit as the reason."
+  },
+  {
+   "lens": "economic-buyer",
+   "evidence_needed": "A pentest firm sells the sprint at $6,500 or more as a separate line next to its normal pentest rather than folding it into its own scope."
+  },
+  {
+   "lens": "economic-buyer",
+   "evidence_needed": "Evidence that the one-repository CI test (priced well under $5,000) converts to the full sprint in at least 1 of 3 cases."
+  },
+  {
+   "lens": "defensibility",
+   "evidence_needed": "Within 6 months, 2 or more vendor-acknowledged findings or CVEs in coding agents or popular MCP servers published under the founder's name"
+  },
+  {
+   "lens": "defensibility",
+   "evidence_needed": "A documented test set that, across 5 client engagements, finds exploitable issues that a default Promptfoo coding-agent:all run misses in at least 30% of them"
+  },
+  {
+   "lens": "defensibility",
+   "evidence_needed": "A partner agreement with exclusivity or a referral fee on re-tests, plus partner retention over 12 months"
+  },
+  {
+   "lens": "defensibility",
+   "evidence_needed": "Re-test renewal of at least 60% of clients after the first year"
+  },
+  {
+   "lens": "defensibility",
+   "evidence_needed": "Listing as a named implementation or red-team partner in the Vanta or Drata partner directory"
+  },
+  {
+   "lens": "founder-fit",
+   "evidence_needed": "Within 3 months, 2-3 public reproducible coding-agent or CI-agent injection write-ups, at least one acknowledged by a vendor or maintainer, plus a talk accepted at a BSides or similar event."
+  },
+  {
+   "lens": "founder-fit",
+   "evidence_needed": "2 of 10 interviewed pentest, SOC 2 readiness or vCISO firms sign a written referral or resale agreement, and 1 paid deposit or one-repository CI test closes by month 4."
+  },
+  {
+   "lens": "founder-fit",
+   "evidence_needed": "An insurance quote for E&O and cyber cover under about $3k a year for a new solo firm."
+  },
+  {
+   "lens": "founder-fit",
+   "evidence_needed": "Fit would improve with a Windows-fleet variant: MDM- or registry-delivered managed settings plus Sysmon or EDR rules for agent-spawned shells and MCP processes, sold through MSPs that manage Windows developer fleets."
+  }
+ ],
+ "evidence_signals": [
+  {
+   "title": "Curated memory roots (`MEMORY.md` / `USER.md`) are silently and permanently excluded from bootstrap injection by the provenance ratchet — including after ordinary agent behavior (a web-search turn), with no diagnostics, no CLI, and no recovery",
+   "url": "https://github.com/openclaw/openclaw/issues/153426",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "Background task notifications trigger autonomous API calls — model responds as if it were the user",
+   "url": "https://github.com/anthropics/claude-code/issues/39027",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "Proposal: Untrusted Annotation for Tool Responses",
+   "url": "https://github.com/webmachinelearning/webmcp/issues/136",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "Feature request: read-only / plan-mode equivalent for non-interactive `-p` runs",
+   "url": "https://github.com/google-antigravity/antigravity-cli/issues/45",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "[RFC] Architecture for Robust Agents: Implementing a \"Discriminator Layer\" Middleware",
+   "url": "https://github.com/openclaw/openclaw/issues/9030",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "Detect remote administration tool (rat)",
+   "url": "https://security.stackexchange.com/questions/165003/detect-remote-administration-tool-rat",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "Which tool to use to automate REST API pentest",
+   "url": "https://security.stackexchange.com/questions/277069/which-tool-to-use-to-automate-rest-api-pentest",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "feat: Tool Permission Gating System (per-tool rules + mode-based fallback)",
+   "url": "https://github.com/NousResearch/hermes-agent/issues/21849",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "CLI Schema - enforcing a security policy for AI agents",
+   "url": "https://github.com/cli/cli/issues/12912",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "[REVIEW] agent-security: bind approvals to exact tool artifacts and MCP provenance",
+   "url": "https://github.com/UnitOneAI/SecuritySkills/issues/1595",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "Feature Request: Granular Permissions Control for Agent Tools",
+   "url": "https://github.com/Trae-AI/TRAE/issues/1051",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "feat: Add tool-call authorization hook and prompt injection guidance",
+   "url": "https://github.com/prajwalsuryawanshi/agentapi/issues/88",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "[Bug]: Provider content-blocks (prompt injection / secret detection) leave sessions unrecoverable — harness should rewrite around the block instead of replaying the identical request",
+   "url": "https://github.com/OpenHands/OpenHands/issues/19018",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "Feature: Native secret redaction to prevent credential leakage to LLM",
+   "url": "https://github.com/anomalyco/opencode/issues/39512",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "Agent Governance Control Plane",
+   "url": "https://github.com/awiseguy88/AgentWiseAI/issues/110",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "feat: governance guard for tool calls — deterministic policy evaluation, cost tracking, and audit",
+   "url": "https://github.com/pydantic/pydantic-ai/issues/5789",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "[Feature]: Let a CLI-backend harness redact tool output before the backend writes its own native transcript",
+   "url": "https://github.com/openclaw/openclaw/issues/185518",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "Add a redaction system for tool output",
+   "url": "https://github.com/rhel-lightspeed/linux-mcp-server/issues/626",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "[Idea] MCP Transcript Commitment Ledger for Tamper-Evident AI Agent Actions in DAO Treasury Ops",
+   "url": "https://github.com/MosslandOpenDevs/agentic-orchestrator/issues/5005",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "[Idea] Cloudflare Zero Trust Ephemeral Agent Relay for Mossland Web3 Signoffs",
+   "url": "https://github.com/MosslandOpenDevs/agentic-orchestrator/issues/5008",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "[Feature] Support LiteLLM routing natively inside the Policy Engine",
+   "url": "https://github.com/aegisora-ai/aegisora/issues/19",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "Add Domain whitelisting for a stagehand session",
+   "url": "https://github.com/browserbase/stagehand/issues/2272",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "feat(security): prompt-injection detector (input + ingestion-time) (placeholder)",
+   "url": "https://github.com/andrelair-platform/retrieva/issues/220",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "factory: prompt-injection screening at triage + secrets canary in the gate",
+   "url": "https://github.com/mikeroySoft/ideas/issues/118",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "feat(runner): add OpenShell sandbox backend as alternative to Docker",
+   "url": "https://github.com/rtzll/rascal/issues/195",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "[Gateway/Bot] No model-isolated in-turn credential prompt — an agent needing a secret/sudo password/one-time code must leak it into context or fail",
+   "url": "https://github.com/MervinPraison/PraisonAI/issues/6223",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "[Feature] Make live attacks realistic: tool-result injection, interception, corroborated findings",
+   "url": "https://github.com/taoq-ai/ziran/issues/535",
+   "theme": "Permission gating for AI agent tool calls"
+  },
+  {
+   "title": "SEP-1299: Server-Side Authorization Management with Client Session Binding",
+   "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1299",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Feature Request: Add wildcard support for MCP tool permissions",
+   "url": "https://github.com/anthropics/claude-code/issues/6010",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "SEP-1708: MCP Client-Brokered Filesystem Access",
+   "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/1708",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "MCP Actions Backend Audit Logging",
+   "url": "https://github.com/backstage/backstage/issues/32104",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "feat(scaffolder): passing secrets as raw input to the execute-template MCP tool is a security anti-pattern",
+   "url": "https://github.com/backstage/backstage/issues/34728",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "[FEATURE] PreApiCall / PostApiCall hooks to prevent secret exfiltration to API providers and attackers",
+   "url": "https://github.com/anthropics/claude-code/issues/39882",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "[Feature]: propagate per-run metadata from POST /v1/runs to MCP tools/call requests",
+   "url": "https://github.com/NousResearch/hermes-agent/issues/64890",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "[feat] Per-agent MCP credentials: let each custom agent call an MCP server under its own identity",
+   "url": "https://github.com/bytedance/deer-flow/issues/8125",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "[DOCS] governance and security guidance for MCP server adoption in teams",
+   "url": "https://github.com/anthropics/claude-code/issues/60246",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "MCP Conformance Testing + Auth — Feedback from 12 Production Servers",
+   "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/2903",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "SIEM-like tool for pcaps",
+   "url": "https://security.stackexchange.com/questions/248062/siem-like-tool-for-pcaps",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Capability audit: invoke_oci_api and run_instance_agent_command have no operation filtering, SQL tools accept arbitrary DDL/DML",
+   "url": "https://github.com/oracle/mcp/issues/164",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "[RFC] CPEX, a Composable Enforcement Framework for AI Security",
+   "url": "https://github.com/cosai-oasis/ws4-secure-design-agentic-systems/issues/94",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Webhook payload shape vs. third-party SIEM parsers (Google SecOps), is this a known issue or is there any payload customization?",
+   "url": "https://github.com/p2-inc/keycloak-events/issues/129",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "[RFC] Hardening MCP Tool Trust Boundaries (Sanitization, Output Caps & Dynamic Schema Drift)",
+   "url": "https://github.com/langchain-ai/langchain/issues/40473",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "🚀 mcp-chat: Tool-level Filtering for MCP Servers",
+   "url": "https://github.com/backstage/community-plugins/issues/8307",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Add pre-execution trust verification hook for MCP tool calls",
+   "url": "https://github.com/arc53/DocsGPT/issues/2501",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "security(mcp): wildcard subagents inherit all 16 MCP servers incl. mail-send and file-delete, and every mcp__* call default-allows because mcp_security_validator does not exist",
+   "url": "https://github.com/akaszubski/autonomous-dev/issues/1549",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Support per-tool authorization for MCP tools in Helidon MP",
+   "url": "https://github.com/helidon-io/helidon-mcp/issues/201",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "MCP server: scoping, security, tool gaps, resource inventory, scanner rationalization, latest-protocol conformance, sync/async parity",
+   "url": "https://github.com/Qunsultant/cfagent/issues/3748",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Unclear Documentation: Do Plugin MCP Servers Automatically Receive Permissions?",
+   "url": "https://github.com/anthropics/claude-agent-sdk-python/issues/448",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Octocode - MemPalace Security Hardening",
+   "url": "https://github.com/MemPalace/mempalace/issues/401",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "JWT token verifier as an alternative to the shared token",
+   "url": "https://github.com/basitalisandhu/mcp-server-template/issues/12",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Register the `in8` property namespace for agent-tool capability declarations (MCP servers and skills)",
+   "url": "https://github.com/CycloneDX/cyclonedx-property-taxonomy/issues/180",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "feat: eBPF file integrity monitoring — write, chmod, chown, mount hooks",
+   "url": "https://github.com/strawgate/fastforward/issues/1939",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "[Security] Scope MCP tools per user and require authorization before tool execution",
+   "url": "https://github.com/srinivas191206/MUCH/issues/4",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "probe: agent steered into requesting cloud instance metadata endpoints",
+   "url": "https://github.com/NVIDIA/garak/issues/2502",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Gateway extension idea: source-rights evidence before URL-bearing MCP calls",
+   "url": "https://github.com/mintmcp/servers/issues/3",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "feat: MCP auto-registration from config and production MCP server validation",
+   "url": "https://github.com/geeythree/agentcli/issues/10",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Security: user-registered MCP servers get blanket tool auto-approval in headless claude runs",
+   "url": "https://github.com/currentbits/solenta/issues/126",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Improper Access Control results in bypassing a \"read-only\" mode for mcp-dbutils MCP Server",
+   "url": "https://github.com/donghao1393/mcp-dbutils/issues/116",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Support environment variable for API key (-k / --twelve-data-apikey)",
+   "url": "https://github.com/twelvedata/mcp/issues/8",
+   "theme": "Authorization and auditing for MCP tool access"
+  },
+  {
+   "title": "Feature request: opt-in fatal mode for ambiguous terminal response delivery",
+   "url": "https://github.com/openai/tunnel-client/issues/52",
+   "theme": "Authorization and auditing for MCP tool access"
+  }
+ ],
+ "flagged_claims": [
+  {
+   "theme_id": 10,
+   "claim": "Vendor Pillar Security (Pillar for AI Coding Agents): discovers local coding agents, scans permissions/MCP configs; AWS Marketplace $175,000/12 months",
+   "issue": "The cited AWS listing describes the general Pillar Security Platform (AI apps, agents, MCP, red teaming, guardrails). It does not mention coding agents or local agent discovery. The $175,000/12 months is for the whole platform, not a coding-agent product."
+  }
+ ],
+ "founder": {
+  "background": {
+   "education": "MS in cybersecurity",
+   "certifications": [
+    "CompTIA A+",
+    "Network+",
+    "Security+",
+    "PenTest+",
+    "CySA+",
+    "Project+"
+   ],
+   "hands_on": [
+    "CTF competitions (offensive and defensive)",
+    "Windows administration and internals",
+    "Kali Linux / penetration testing tooling",
+    "Python and automation",
+    "Windows detection engineering (Windows Event Forwarding + Sysmon detection for logons)"
+   ],
+   "strengths_inferred": [
+    "Can build security tooling and detections without hiring engineers",
+    "Credible with practitioners (SOC analysts, sysadmins, pentesters)"
+   ]
+  },
+  "constraints": {
+   "capital": "none",
+   "time": "plenty",
+   "network": "a few industry contacts",
+   "team": "solo technical founder"
+  },
+  "implications": [
+   "Prefer time to first revenue in months, not years; services-first or paid pilots are fine.",
+   "Prefer sales motions one technical founder can run (self-serve, community, MSP/partner channels, marketplaces) over long enterprise procurement cycles.",
+   "Prefer low running costs (no heavy data processing or 24/7 managed service on day one).",
+   "Prefer domains where existing skills give credibility (Windows, detection, offensive testing, automation) — or say what must be learned and how long that takes."
+  ]
+ },
+ "status": "unvalidated"
+}

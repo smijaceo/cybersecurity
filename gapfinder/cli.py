@@ -428,6 +428,22 @@ def cmd_backtest(args) -> int:
     return 0
 
 
+def cmd_export(args) -> int:
+    from . import export
+
+    cfg = load_config(args.scoring)["panel"]
+    if cfg.get("mode") == "history":
+        cfg["history"]["results"] = str(ROOT / cfg["history"]["results"])
+    try:
+        brief = export.build_brief(ROOT, args.opening, cfg)
+    except (ValueError, FileNotFoundError) as exc:
+        log.error("export: %s", exc)
+        return 2
+    out = export.write(ROOT, brief, args.out_dir)
+    print(f"{brief.concept.name}: {brief.panel['decision']} -> {out}/brief.json")
+    return 0
+
+
 def cmd_fetch(args) -> int:
     from .fetch import fetch_text
 
@@ -559,6 +575,12 @@ def main(argv: list[str] | None = None) -> int:
     bt.add_argument("--scoring", type=Path, default=DEFAULT_SCORING)
     bt.add_argument("--backtest-config", type=Path, default=ROOT / "config" / "backtest.yaml")
     bt.set_defaults(func=cmd_backtest)
+
+    ex = sub.add_parser("export-brief", help="export one concept as a launch brief (exports/<slug>/)")
+    ex.add_argument("opening")
+    ex.add_argument("--out-dir", type=Path, default=ROOT / "exports")
+    ex.add_argument("--scoring", type=Path, default=DEFAULT_SCORING)
+    ex.set_defaults(func=cmd_export)
 
     fp = sub.add_parser("fetch", help="print a web page's main text (for agents)")
     fp.add_argument("url")

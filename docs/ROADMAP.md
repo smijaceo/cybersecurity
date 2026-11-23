@@ -315,6 +315,15 @@ themes are near-duplicates (clustering split them). Fact-check of revised claims
 still not fully supported by their cited source. Job postings produced almost no need
 statements under the relevance rubric; keep them as a source of context, not demand.
 
+## Handoff to a launch repository · `ready` (2026-11-23)
+
+`gapfinder export-brief <opening_id>` writes `exports/<slug>/brief.json` (schema
+`LaunchBrief`): concept, panel verdict, open objections, evidence, flagged claims and founder
+profile. [docs/HANDOFF-launch-repo.md](HANDOFF-launch-repo.md) briefs the agent that will run
+a separate launch repo (brand, copy, website, validation assets). Briefs exported:
+safeguards-desk, agent-hardening-sprint, quietwin. Phase 5 validation is expected to run from
+the launch repo, with results returned here.
+
 ## Phase 5 — Validation loop · `not started`
 
 Scheduled re-collection to track trends; compare critic predictions with real-world signals

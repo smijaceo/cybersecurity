@@ -41,6 +41,9 @@ python -m gapfinder fetch [--render] URL   # page text for agents (trafilatura /
 python -m gapfinder gaps              # -> reports/gaps-<date>.md
 ```
 
+Hand a concept to a launch repository: `python -m gapfinder export-brief <opening_id>` →
+`exports/<slug>/brief.json`; see [docs/HANDOFF-launch-repo.md](docs/HANDOFF-launch-repo.md).
+
 `collect --fresh` clears a segment before re-collecting (use it after changing its search terms).
 
 Segments and search terms live in [`config/segments.yaml`](config/segments.yaml). Signals are

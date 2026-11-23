@@ -1,10 +1,11 @@
 export const meta = {
   name: 'concepts',
-  description: 'gapfinder Phase 3: write one validated startup concept per shortlisted opening',
+  description: 'gapfinder Phase 3: three competing variants per opening, a judge picks and grafts, validated concept',
   whenToUse: 'Generate or regenerate Phase 3 concepts (docs/ROADMAP.md) after the shortlist in config/shortlist.yaml or the Phase 2 data changes. args.only: an opening id to (re)write just that one.',
   phases: [
     { title: 'Prepare', detail: 'gapfinder concept-prepare' },
-    { title: 'Write', detail: 'concept-writer per opening, self-validated' },
+    { title: 'Write', detail: 'concept-writer writes 3 variants per opening (D19)' },
+    { title: 'Judge', detail: 'variant-judge picks a winner, grafts, writes the concept' },
     { title: 'Render', detail: 'gapfinder concept-render: schema + grounding, ideas/<slug>.md' },
   ],
 }
@@ -39,12 +40,15 @@ if (args && args.only) ids = ids.filter((i) => i === args.only)
 if (!ids.length) throw new Error('no openings to write')
 log(`writing ${ids.length} concept(s): ${ids.join(', ')}`)
 
-phase('Write')
-const written = await pipeline(ids, (id) => agent(
-  `Read .claude/agents/concept-writer.md and follow it exactly. It is your full instruction set.\n\nOPENING ID: ${id}`,
-  { phase: 'Write', label: `concept-writer ${id}` }))
-const failed = ids.filter((_, i) => written[i] === null)
-if (failed.length) throw new Error(`concept writers failed: ${failed.join(', ')}; re-run with args.only`)
+const written = await pipeline(ids,
+  (id) => agent(
+    `Read .claude/agents/concept-writer.md and follow it exactly. It is your full instruction set.\n\nOPENING ID: ${id}\nVARIANTS`,
+    { phase: 'Write', label: `variants ${id}` }),
+  (w, id) => w && agent(
+    `Read .claude/agents/variant-judge.md and follow it exactly. It is your full instruction set.\n\nOPENING ID: ${id}`,
+    { phase: 'Judge', label: `judge ${id}` }))
+const failed = ids.filter((_, i) => !written[i])
+if (failed.length) throw new Error(`variants or judging failed: ${failed.join(', ')}; re-run with args.only`)
 
 phase('Render')
 const out = await sh(args && args.only ? `python -m gapfinder concept-render --only ${args.only}`

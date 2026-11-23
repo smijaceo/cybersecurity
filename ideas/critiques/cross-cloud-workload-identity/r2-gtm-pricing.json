@@ -1,0 +1,79 @@
+{
+  "concept_id": "cross-cloud-workload-identity",
+  "lens": "gtm-pricing",
+  "round": 2,
+  "score": 5,
+  "verdict": "conditional",
+  "summary": "The revision fixes the pricing shape: a fixed migration fee, a flat estate band and an honest DIY anchor. But this is now a one-off, services-like sale worth about $7.8k in year one and $1.8k after that. It depends on consultancies reselling and on self-serve conversion, and neither is shown. The $6k fee is also thin against DIY for a 10-key estate.",
+  "objections": [
+    {
+      "objection": "Revenue is mostly non-recurring. Year one is about $7,800 and year two is $1,800 (Monitor at $150/month), and the concept itself doubts that monitoring will be renewed. To reach $1M in new revenue a year, the company has to close about 130 migrations a year, each needing attribution review and merged PRs across repos it doesn't own. That is a productised-services business with a SaaS cost base (2 engineers plus SOC 2 Type I), not a recurring-revenue one. Nothing in the plan expands an account after the first migration.",
+      "severity": "major",
+      "evidence": "concept:pricing.entry_price; concept:pricing.rationale; concept:risks[2]; concept:open_questions[3]"
+    },
+    {
+      "objection": "The channel rests on two unproven bets. One is self-serve conversion of a $6k one-off buy, which still needs a GitHub App install with org Secrets read plus a security sign-off, so it is not a credit-card purchase. The other is consultancies reselling, which the concept itself lists as an open question because they may prefer to bill by the hour. With one founder-seller and both bets unproven, the motion defaults to founder-led selling, which the concept admits this ACV can't fund.",
+      "severity": "major",
+      "evidence": "concept:go_to_market.channel; concept:open_questions[2]; concept:mvp.features[1]; concept:risks[2]; concept:build.team"
+    },
+    {
+      "objection": "The DIY anchor is the vendor's own estimate and is weak at the expected estate size. The success signal expects a median of about 10 in-use keys. At 'one engineer-day per key' that is two engineer-weeks, so a $6,000 fee saves little. It saves even less once the free report has already named each key's consumer, which is the hardest part (attribution). The free tier may hand over enough for teams to finish the job themselves, perhaps with AI coding assistants and the clouds' published docs.",
+      "severity": "major",
+      "evidence": "concept:pricing.rationale; concept:riskiest_assumption.success_signal; concept:go_to_market.wedge"
+    },
+    {
+      "objection": "The ICP is narrow and still unsized: AWS-primary companies with 50-1,000 staff, GCP for one or two services, an org created before May 2024, GitHub Actions, and no Vault or Teleport. With no bottom-up count, nobody can say whether there are enough $6k migrations to support a company, and GCP's secure-by-default change shrinks the pool every year.",
+      "severity": "minor",
+      "evidence": "concept:buyer.company_profile; concept:open_questions[1]"
+    },
+    {
+      "objection": "Fixed-price migration carries a cost-overrun risk. When attribution is 'unknown' or consumer changes break, support time per estate can exceed what $6k covers. The pricing has no line for remediation support or a cap on scope beyond the key count.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts[0]; concept:build.hardest_parts[1]"
+    }
+  ],
+  "strongest_point": "Pricing now matches the job: a fixed migration fee below DIY cost, a flat estate band, a free self-hosted report as the wedge, and no misleading enterprise anchor.",
+  "what_would_change_my_mind": [
+    "At least 3 of the 40 test prospects pay the $6,000 deposit or sign an LOI after seeing their free report, and their reports median 15+ in-use boundary-crossing keys.",
+    "Two DevOps consultancies sign a resale or referral agreement and each brings at least one paid migration in the first quarter.",
+    "An expansion path with evidence, such as Azure/GitLab paths or new-workload onboarding, showing net revenue retention above 100% or year-two revenue per customer of at least $5k.",
+    "A bottom-up count showing at least 3,000 qualifying companies in the ICP."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Core job is a one-off migration and renewal at $4.8k is fragile; no pricing answer.",
+      "resolved": true,
+      "note": "Pricing is now a $6k migration fee plus $150/month flat monitoring. That fixes the pricing mismatch, but it confirms the business is mostly non-recurring (new objection 1)."
+    },
+    {
+      "objection": "Sales motion doesn't fit the contract value: vendor security review and founder selling for a $4.8k ACV.",
+      "resolved": false,
+      "note": "Self-hosting cuts the security-review burden and consultancy resale has been added. But the GitHub App still needs org Secrets read, resale is unproven, and one founder-seller is still the default motion."
+    },
+    {
+      "objection": "Price anchor against Aembit's 500-workload bill is misleading.",
+      "resolved": true,
+      "note": "The price is now anchored on DIY engineer time, stated as the vendor's own estimate, and on Aembit's cost for about 25 workloads. The DIY estimate is still unvalidated and thin for 10-key estates."
+    },
+    {
+      "objection": "Open-source helper and modules give away the remediation value.",
+      "resolved": true,
+      "note": "The helper is dropped and migration PRs are paid. The free report still reveals each key's consumer, so DIY leakage remains, but it is smaller."
+    },
+    {
+      "objection": "Per-account pricing penalises AWS Organizations.",
+      "resolved": true,
+      "note": "Replaced by a flat band of up to 100 accounts and projects."
+    },
+    {
+      "objection": "Marketplace listings don't fit this ACV.",
+      "resolved": true,
+      "note": "Marketplace removed from the year-one channel."
+    }
+  ],
+  "sources": [
+    "https://aembit.io/faq/",
+    "https://infisical.com/pricing.md",
+    "https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/"
+  ]
+}

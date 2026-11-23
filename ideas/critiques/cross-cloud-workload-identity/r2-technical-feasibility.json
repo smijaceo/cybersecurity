@@ -1,0 +1,74 @@
+{
+  "concept_id": "cross-cloud-workload-identity",
+  "lens": "technical-feasibility",
+  "round": 2,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "The revision fixed scope: three paths, imported detection, log-based attribution with confidence labels, consumer-side changes and 5 months. Building it is now credible. Gaps remain: 'AWS to GCP' is really three different mechanisms depending on compute type, the GitHub App permissions can't open PRs, IaC outside Terraform isn't handled, and attribution misses keys used only for data events.",
+  "objections": [
+    {
+      "objection": "'AWS workload to GCP' counts as one path, but GCP documents three different mechanisms. The AWS provider and its credential config cover only EC2 VMs. EKS goes through the Kubernetes OIDC issuer setup with projected service-account tokens. Lambda and ECS need either env-var credentials or AWS outbound federation through a generic OIDC provider, plus an executable- or file-sourced credential config. The concept rules out shipping its own helper, but no maintained helper exists for that last case. So there are about five templates with their own consumer changes and test rigs, not three.",
+      "severity": "major",
+      "evidence": "https://docs.cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds ('This page covers only configuring Workload Identity Federation for AWS and Azure VMs'; EKS sent to the Kubernetes page; outbound federation sent to the generic OIDC setup); concept:mvp.features[2]; concept:mvp.out_of_scope[1]"
+    },
+    {
+      "objection": "The access model doesn't match the feature. With only 'Secrets read' and 'Contents read', a GitHub App can't push a branch or open a PR. It also needs Contents write and Pull requests write on every consumer repo, and probably Workflows write, because the change edits .github/workflows files. Also, if Keybridge hosts the App, its private key and installation tokens sit with the vendor, which contradicts 'nothing leaves the customer's environment'. Each customer has to register their own App, or the tool has to run as an Action with a scoped token. That is install friction against the one-hour target.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[1] (GitHub App with org Secrets read and Contents read); concept:mvp.features[2]; concept:build.hardest_parts[3]; https://docs.github.com/en/rest/pulls/pulls"
+    },
+    {
+      "objection": "Attribution still has blind spots that the confidence label hides rather than fixes. CloudTrail LookupEvents covers only management events for 90 days, one region per call, at 2 requests per second per account per region. A key used only for S3 Get/PutObject (the typical CI artifact upload) leaves no trace there. GitHub-hosted runners come from large shared IP ranges, so matching depends on secret names in workflows plus run timestamps. Expect a large 'unknown' share. That shrinks the set of keys you can sell a migration for, and it needs the customer to enable data-event trails first.",
+      "severity": "major",
+      "evidence": "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html ('Looks up management events or CloudTrail Insights events... within the last 90 days'; 'limited to two per second, per account, per Region'); concept:build.hardest_parts[0]"
+    },
+    {
+      "objection": "The trust-side change is generated as Terraform/OpenTofu, but many targets manage IAM through CloudFormation, CDK, Pulumi or the console, and keys created by hand are rarely in code. Editing a customer's existing Terraform (modules, state, naming) is much harder than writing a standalone module. Pick one: a standalone module and a runbook, or IaC detection with a fallback.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[2]"
+    },
+    {
+      "objection": "Five months for 2 engineers is tight once SOC 2 Type I prep, signed reproducible releases, a lint test corpus and shadow-mode monitoring are added. Each takes ongoing work after launch as AWS and GCP change federation (for example new STS condition keys). There's little slack for the extra sub-paths above.",
+      "severity": "minor",
+      "evidence": "concept:build.team; concept:build.months_to_mvp; concept:risks[4]"
+    }
+  ],
+  "strongest_point": "No runtime component: it only configures free native federation and runs in the customer's account, so after merge there is no availability or scaling burden on the startup.",
+  "what_would_change_my_mind": [
+    "A prototype on 3 real AWS+GCP+GitHub estates where at least 70% of in-use boundary-crossing keys get high-confidence attribution from default-on logs plus workflow-run timing.",
+    "A published support matrix per compute type (EC2, EKS, ECS, Lambda, GitHub Actions) with an end-to-end tested template for each, and the 5-month plan re-estimated against it.",
+    "An install flow (customer-registered GitHub App or Action with a scoped token) that a pilot team completes in under an hour, with a documented least-privilege permission set that can actually open PRs.",
+    "One merged two-sided migration in a pilot that runs in shadow mode with no incident."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Usage attribution isn't available from read-only APIs (GetAccessKeyLastUsed, Activity Analyzer, GitHub secret values).",
+      "resolved": true,
+      "note": "Attribution now comes from CloudTrail and GCP audit logs plus workflow files, with confidence labels, and unknown keys get no PR. Coverage gaps remain (data events, shared runner IPs); those are raised as a new objection."
+    },
+    {
+      "objection": "A Terraform PR covers only the IAM side; consumer changes are needed.",
+      "resolved": true,
+      "note": "PRs now cover both sides (workflow YAML, K8s annotation, credential config, env var removal). The access model needed to write those PRs is now wrong (new objection)."
+    },
+    {
+      "objection": "Scope too big for 2 engineers in 4 months across three clouds.",
+      "resolved": true,
+      "note": "Cut to GitHub->AWS, GitHub->GCP and AWS->GCP, with Azure, GitLab and on-prem out of scope and 5 months. But AWS->GCP hides several sub-paths, so the plan is still somewhat tight."
+    },
+    {
+      "objection": "Credential helper adds less than claimed.",
+      "resolved": true,
+      "note": "Helper dropped. The flip side is that Lambda/ECS via outbound federation have no maintained helper."
+    },
+    {
+      "objection": "IAM Roles Anywhere needs customer PKI.",
+      "resolved": true,
+      "note": "On-prem and Roles Anywhere moved out of scope."
+    }
+  ],
+  "sources": [
+    "https://docs.cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds",
+    "https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_LookupEvents.html",
+    "https://docs.github.com/en/rest/pulls/pulls"
+  ]
+}

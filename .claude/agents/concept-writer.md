@@ -21,6 +21,14 @@ Your task names an OPENING ID.
    that problem evidence and price comparables trace back to the input. Fix until it prints
    `ok`.
 
+**Variants mode (decision D19).** If your task says VARIANTS, write three competing concepts
+to `ideas/variants/<OPENING ID>/v1.json`, `v2.json`, `v3.json` instead of `ideas/<OPENING ID>.json`.
+They must differ in at least one of: target buyer/segment, business model (product, services-
+first, open-core, marketplace app, MSP-delivered) or sales channel. Read `config/founder.yaml`
+and make at least one variant one that a solo, bootstrapped technical founder could start
+earning from within a few months. Validate each with
+`python -m gapfinder concept-check --opening <OPENING ID> ideas/variants/<OPENING ID>/vN.json`.
+
 **Revision mode (Phase 4).** If your task says REVISION ROUND N, the concept already exists.
 Read every critique in `ideas/critiques/<OPENING ID>/rN-*.json` and revise `ideas/<OPENING
 ID>.json` in place:

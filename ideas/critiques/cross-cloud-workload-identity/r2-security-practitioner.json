@@ -1,0 +1,74 @@
+{
+  "concept_id": "cross-cloud-workload-identity",
+  "lens": "security-practitioner",
+  "round": 2,
+  "score": 6,
+  "verdict": "conditional",
+  "summary": "The revision fixes the core trust problems: the scanner is self-hosted, attribution comes from logs with confidence labels, there is a tested lint gate with no auto-merge, and keys go through shadow-mode deactivation. What remains is the GitHub App's write path, which is undefined and sensitive, attribution gaps for S3 data-plane use and GCP Data Access logs, and supply-chain assurances that are listed but not yet built.",
+  "objections": [
+    {
+      "objection": "The PR path's permissions and hosting are not specified. The listed GitHub App scopes are org Secrets read and Contents read, and those cannot open PRs. Opening PRs needs Contents write and Pull requests write, and editing .github/workflows files needs the Workflows write permission. That last one lets the app change CI jobs that already hold cloud credentials. The concept doesn't say whether the App and its private key are hosted by the vendor or the customer. A vendor-hosted App with org-wide workflow write is exactly the custody the revision set out to remove. Security reviewers will ask for the App to be self-hosted or per-repo, or for PRs to be pushed from the customer's own runner.",
+      "severity": "major",
+      "evidence": "concept:mvp.features[1]; concept:mvp.features[2]; concept:mvp.out_of_scope[4]"
+    },
+    {
+      "objection": "Attribution coverage will be partial for the most common consumers. CloudTrail management events record the access key ID, source IP and user agent. But S3 object reads and writes are data events and are not logged unless the customer enabled them, and many cross-cloud keys exist only to move data into or out of S3. On GCP, Data Access audit logs are off by default except for some BigQuery services, so GKE or Vertex consumers of JSON keys may show no data-plane trail. The 'unknown, no PR' rule is honest. It also means a sizable share of keys may get no remediation, and the share-attributed rate is the product's real efficacy number.",
+      "severity": "major",
+      "evidence": "https://docs.cloud.google.com/logging/docs/audit/configure-data-access; concept:build.hardest_parts[0]; concept:open_questions[0]"
+    },
+    {
+      "objection": "Consumer-side changes in repos the product does not own are the main source of outages. Examples are an auth step swapped in a workflow, a Kubernetes service-account annotation, and a credential-config file. Shadow mode covers deactivation, but not a broken deploy right after merge, such as a missing id-token: write permission, a reusable workflow, a fork PR with no OIDC token, or an environment-scoped secret. Teams will want a dry-run job in a branch before merge.",
+      "severity": "minor",
+      "evidence": "concept:build.hardest_parts[1]"
+    },
+    {
+      "objection": "The supply-chain controls are listed as risks, not built as features. Signed, reproducible releases, minimal-permission manifests and SOC 2 Type I are named but not scheduled in the MVP. A self-hosted scanner that reads the IAM credential report, CloudTrail and GCP audit logs is still a privileged component. Without provenance (for example, Sigstore/SLSA attestations), a careful team will vendor and audit the code before running it, which slows the one-hour install target.",
+      "severity": "minor",
+      "evidence": "concept:risks[4]; concept:build.hardest_parts[3]"
+    },
+    {
+      "objection": "The scanner needs read access to the log-archive account. In an AWS Organization, CloudTrail usually lands in a separate log-archive or security account. The scanner therefore needs cross-account read into the most protected account, even though it is self-hosted. Many security teams will grant that only to their own tooling, which pushes deployment ownership to security rather than platform.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features[0]"
+    }
+  ],
+  "strongest_point": "It removes the credential instead of brokering it: there is no runtime dependency on the vendor, PRs are linted and never auto-merged, and deactivation waits for log-verified idleness. That is a safety case a practitioner can check.",
+  "what_would_change_my_mind": [
+    "A documented GitHub App manifest and deployment model in which the App is customer-hosted or PRs are pushed from the customer's runner, with no vendor-held token that has workflow write.",
+    "On 5 real AWS+GCP estates, at least 70% of in-use boundary-crossing keys attributed at high confidence from default-on logs, confirmed by the platform team.",
+    "Zero production breaks across the first 50 merged migration PRs, using a pre-merge dry-run job that exercises the federated path.",
+    "Signed releases with SLSA provenance shipped in the MVP, and 3 or more security leads approving the access model without escalation."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Usage attribution is weaker than claimed (AccessKeyLastUsed gives only the date, service and region).",
+      "resolved": true,
+      "note": "Mostly resolved. Attribution now comes from CloudTrail, GCP audit logs and workflow files, with confidence labels, and 'unknown' keys get no PR. Coverage gaps from data events and Data Access logs that are off by default remain (objection 2)."
+    },
+    {
+      "objection": "Federation can move risk instead of removing it (wildcard sub, unconditioned GCP pools, missing audience).",
+      "resolved": true,
+      "note": "A mandatory lint gate with published tests, IAM Access Analyzer validation and no auto-merge address it directly."
+    },
+    {
+      "objection": "The access request is a hard sell (vendor custody of the key map; helper in the credential path).",
+      "resolved": false,
+      "note": "Largely resolved. The scanner is self-hosted, there is no log ingestion and the helper is dropped. The GitHub App write path and where it is hosted are still undefined, and supply-chain controls are not yet built (objections 1 and 4)."
+    },
+    {
+      "objection": "Detection is already covered by existing tools; many keys sit outside Terraform or with SaaS.",
+      "resolved": true,
+      "note": "Detection is now imported rather than rebuilt, and SaaS keys that cannot federate are flagged and out of scope."
+    },
+    {
+      "objection": "Some cross-cloud cases are already simple and well documented.",
+      "resolved": false,
+      "note": "Not changed, which is acceptable. The value is in executing the change in both sides plus the consumer, which the riskiest-assumption test checks."
+    }
+  ],
+  "sources": [
+    "https://docs.cloud.google.com/logging/docs/audit/configure-data-access",
+    "https://docs.aws.amazon.com/IAM/latest/APIReference/API_AccessKeyLastUsed.html",
+    "https://docs.cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds"
+  ]
+}

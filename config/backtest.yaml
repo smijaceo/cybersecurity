@@ -1,0 +1,57 @@
+# Backtest configuration (decision D18). PRE-REGISTERED 2026-11-23, before any backtest run.
+# Do not edit categories, criteria or metrics after seeing results; log changes in DECISIONS.md.
+
+gap_finder:
+  cutoff: "2020-01-01"            # only signals created before this date
+  segments: [open-discovery]      # no hindsight-chosen segment terms
+  sources: [github, hn, stackexchange, serverfault, ted, jobs]
+  top_k: 10                       # themes ranked by demand; a category is "found" if it matches one
+  # Categories that became venture-backed businesses mostly AFTER the cutoff. Example companies
+  # are for date verification only — the matcher never sees them. A verification step drops any
+  # category whose cited founding/first-major-funding evidence is before the cutoff year.
+  categories:
+    - id: compliance-automation
+      definition: Automating evidence collection and readiness for SOC 2 / ISO 27001 audits.
+      examples: [Drata, Secureframe, Vanta]
+    - id: cloud-posture-agentless
+      definition: Agentless scanning of cloud accounts for misconfigurations, vulnerabilities and risky exposure.
+      examples: [Wiz, Orca Security, Lacework]
+    - id: software-supply-chain
+      definition: Securing the software supply chain — SBOMs, signed builds, malicious package detection.
+      examples: [Chainguard, Socket, Endor Labs]
+    - id: secrets-in-code
+      definition: Detecting and remediating secrets (keys, tokens) leaked in code and CI.
+      examples: [GitGuardian, Cycode]
+    - id: browser-security
+      definition: Securing work done in the browser — enterprise browsers, browser extensions for DLP and policy.
+      examples: [Island, Talon, LayerX]
+    - id: data-security-posture
+      definition: Discovering and classifying sensitive data across cloud stores and controlling exposure (DSPM).
+      examples: [Cyera, Sentra, Dig Security]
+    - id: non-human-identity
+      definition: Managing and securing machine/workload identities, API keys and service accounts.
+      examples: [Astrix, Aembit, Oasis Security]
+    - id: identity-threat-detection
+      definition: Detecting attacks on identity infrastructure (AD, IdPs) and session/token theft (ITDR).
+      examples: [Silverfort, Authomize, Push Security]
+    - id: zero-trust-mesh-vpn
+      definition: Replacing VPNs with identity-based, peer-to-peer or zero-trust network access for small teams.
+      examples: [Tailscale, Twingate, NetBird]
+    - id: api-security
+      definition: Discovering and protecting APIs (inventory, abuse and business-logic attack detection).
+      examples: [Salt Security, Noname Security, Traceable]
+  metrics:
+    recall_at_k: share of verified categories matched by a top-k theme
+    precision_at_k: share of top-k themes that match any verified category
+
+panel_calibration:
+  lenses: [market-skeptic, competitor-analyst, security-practitioner, technical-feasibility,
+           gtm-pricing, legal-ethics, economic-buyer, defensibility]   # founder-fit doesn't apply
+  selection:                      # applied by the calibration builder agent, before critique
+    founded_between: ["2015-01-01", "2020-12-31"]
+    successes: 4                  # acquired for >= $100M or raised Series C+, with a cited source
+    failures: 4                   # shut down or sold for parts by 2025, with a cited source
+    pitch: founding-stage description only (launch post, early website via the Wayback Machine,
+      seed announcement). No later facts. Company and product names replaced with neutral ones.
+  metric: AUC of the panel mean score, successes vs failures (0.5 = no better than chance)
+  limitation: the model may recognise well-known companies despite anonymisation; report it.

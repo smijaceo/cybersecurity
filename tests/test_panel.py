@@ -7,7 +7,7 @@ import pytest
 from gapfinder import panel, schemas
 from tests.test_concepts import INPUT, concept
 
-CFG = {"go": {"min_mean": 7.0, "min_lens": 5, "max_fatal": 0},
+CFG = {"lenses": list(schemas.LENSES), "go": {"min_mean": 7.0, "min_lens": 5, "max_fatal": 0},
        "conditional": {"min_mean": 5.5, "min_lens": 3}}
 
 
@@ -27,12 +27,12 @@ def panel_of(scores, **kw):
 
 
 @pytest.mark.parametrize("scores, severity, expected", [
-    ([8, 8, 7, 7, 8, 7], "major", "GO"),
-    ([8, 8, 7, 7, 8, 7], "fatal", "CONDITIONAL"),   # fatal objection blocks GO
-    ([9, 9, 9, 9, 9, 4], "major", "CONDITIONAL"),   # one weak lens blocks GO
-    ([6, 6, 5, 6, 6, 5], "major", "CONDITIONAL"),
-    ([7, 7, 7, 7, 7, 2], "major", "NO-GO"),         # a lens at 2 rules out conditional
-    ([5, 5, 5, 5, 5, 5], "minor", "NO-GO"),
+    ([8, 8, 7, 7, 8, 7, 7, 8, 7], "major", "GO"),
+    ([8, 8, 7, 7, 8, 7, 7, 8, 7], "fatal", "CONDITIONAL"),   # fatal objection blocks GO
+    ([9, 9, 9, 9, 9, 9, 9, 9, 4], "major", "CONDITIONAL"),   # one weak lens blocks GO
+    ([6, 6, 5, 6, 6, 5, 6, 6, 6], "major", "CONDITIONAL"),
+    ([7, 7, 7, 7, 7, 7, 7, 7, 2], "major", "NO-GO"),         # a lens at 2 rules out conditional
+    ([5, 5, 5, 5, 5, 5, 5, 5, 5], "minor", "NO-GO"),
 ])
 def test_decide(scores, severity, expected):
     assert panel.decide(panel_of(scores, severity=severity), CFG)["decision"] == expected
@@ -76,7 +76,7 @@ def test_load_critique_checks_path(tmp_path):
 def test_run_two_rounds_renders_reports(tmp_path):
     (tmp_path / "op.input.json").write_text(json.dumps(INPUT))
     (tmp_path / "op.json").write_text(concept(revision_log=["cut price to $99"]).model_dump_json())
-    for rnd, scores in ((1, [5, 5, 5, 5, 5, 5]), (2, [8, 7, 7, 8, 7, 7])):
+    for rnd, scores in ((1, [5] * 9), (2, [8, 7, 7, 8, 7, 7, 8, 7, 7])):
         for lens, sc in zip(schemas.LENSES, scores):
             p = panel.critique_path(tmp_path, "op", rnd, lens)
             p.parent.mkdir(parents=True, exist_ok=True)
@@ -92,3 +92,10 @@ def test_run_two_rounds_renders_reports(tmp_path):
 def test_score_out_of_range():
     with pytest.raises(Exception, match="score"):
         crit("gtm-pricing", 11)
+
+
+def test_decide_uses_configured_lenses():
+    six = {"lenses": list(schemas.LENSES[:6]), **{k: v for k, v in CFG.items() if k != "lenses"}}
+    p = panel_of([8, 8, 8, 8, 8, 8])          # only the original six lenses
+    assert panel.decide(p, six)["decision"] == "GO"
+    assert panel.decide(p, CFG)["decision"] == "INCOMPLETE"

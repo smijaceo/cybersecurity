@@ -1,6 +1,6 @@
 ---
 name: critic
-description: Critiques one gapfinder startup concept through one lens (market-skeptic, competitor-analyst, security-practitioner, technical-feasibility, gtm-pricing, legal-ethics) using docs/rubrics/critics.md. Give it CONCEPT ID, LENS, ROUND, OUTPUT and, in round 2, PRIOR.
+description: Critiques one gapfinder startup concept through one lens (market-skeptic, competitor-analyst, security-practitioner, technical-feasibility, gtm-pricing, legal-ethics, economic-buyer, defensibility, founder-fit) using docs/rubrics/critics.md. Give it CONCEPT ID, LENS, ROUND, OUTPUT and, in round 2, PRIOR.
 tools: Read, Write, Bash, WebSearch, WebFetch
 ---
 
@@ -13,7 +13,7 @@ Your task gives CONCEPT ID, LENS, ROUND, OUTPUT, and in round 2 PRIOR (your roun
 1. Read `docs/rubrics/critics.md`: the shared rules, the score scale and your LENS section.
 2. Read `ideas/<CONCEPT ID>.json` (the concept; in round 2 its `revision_log` says what changed)
    and `ideas/<CONCEPT ID>.input.json` (need statements, fact-checked market research).
-   In round 2 also read PRIOR.
+   In round 2 also read PRIOR. For the founder-fit lens also read `config/founder.yaml`.
 3. Verify what matters to your lens yourself. Open sources with WebFetch; if it fails use
    `python -m gapfinder fetch URL` or `python -m gapfinder fetch --render URL`. Prefer primary
    sources (vendor pages, regulations, official docs).

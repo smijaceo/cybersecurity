@@ -91,3 +91,36 @@ def test_render_all_reports_missing_and_invalid(tmp_path):
     (tmp_path / "op.json").write_text(concept().model_dump_json())
     assert concepts.render_all(tmp_path) == [("op", [])]
     assert (tmp_path / "scim-bridge.md").exists()
+
+
+def _variants(tmp_path, buyers=("IT lead", "MSP owner", "CISO")):
+    (tmp_path / "op.input.json").write_text(json.dumps(INPUT))
+    vdir = tmp_path / "variants" / "op"
+    vdir.mkdir(parents=True)
+    for i, b in enumerate(buyers, 1):
+        c = concept(buyer={"role": b, "company_profile": "x"})
+        (vdir / f"v{i}.json").write_text(c.model_dump_json())
+    return vdir
+
+
+JUDGMENT = {"opening_id": "op", "winner": "v2", "grafted": ["v1 pricing"], "reasoning": "r",
+            "scores": [{"variant": v, "angle": "a", "buyer_budget": 3, "defensibility": 2,
+                        "founder_fit": 4, "time_to_revenue": 3, "risk": 3, "note": "n"}
+                       for v in ("v1", "v2", "v3")]}
+
+
+def test_check_variants_ok_and_failures(tmp_path):
+    vdir = _variants(tmp_path)
+    assert concepts.check_variants(tmp_path, "op") == ["judgment.json: missing"]
+    (vdir / "judgment.json").write_text(json.dumps(JUDGMENT))
+    assert concepts.check_variants(tmp_path, "op") == []
+    bad = dict(JUDGMENT, scores=JUDGMENT["scores"][:2] + [dict(JUDGMENT["scores"][0])])
+    (vdir / "judgment.json").write_text(json.dumps(bad))
+    assert any("v1, v2, v3" in p for p in concepts.check_variants(tmp_path, "op"))
+
+
+def test_variants_must_differ(tmp_path):
+    vdir = _variants(tmp_path, buyers=("IT lead", "IT lead", "IT lead"))
+    (vdir / "judgment.json").write_text(json.dumps(JUDGMENT))
+    assert concepts.check_variants(tmp_path, "op") == [
+        "variants must differ in buyer, business model or channel"]

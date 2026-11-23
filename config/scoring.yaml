@@ -34,6 +34,13 @@ report:
   min_evidence: 5     # Phase 2 exit criterion: each top gap links >= 5 real signals
 
 panel:                # Phase 4 go/no-go, applied by code to the final round (gapfinder panel)
+  lenses:             # lenses that must all have scored for a decision (D19 adds three)
+    - market-skeptic
+    - competitor-analyst
+    - security-practitioner
+    - technical-feasibility
+    - gtm-pricing
+    - legal-ethics
   go:                 # GO: strong across the board
     min_mean: 7.0
     min_lens: 5

@@ -44,7 +44,8 @@ def decide(critiques: dict[str, schemas.Critique], cfg: dict) -> dict:
              if o.severity == "fatal"]
     m, lo = mean(scores.values()), min(scores.values())
     g, cond = cfg["go"], cfg["conditional"]
-    if len(critiques) < len(schemas.LENSES):
+    required = cfg.get("lenses", list(schemas.LENSES))
+    if not set(required) <= set(critiques):
         decision = "INCOMPLETE"
     elif m >= g["min_mean"] and lo >= g["min_lens"] and len(fatal) <= g["max_fatal"]:
         decision = "GO"

@@ -206,12 +206,45 @@ class Concept(Strict):
         return self
 
 
+class VariantScore(Strict):
+    variant: Literal["v1", "v2", "v3"]
+    angle: str                       # what makes this variant different
+    buyer_budget: int = Field(ge=1, le=5)
+    defensibility: int = Field(ge=1, le=5)
+    founder_fit: int = Field(ge=1, le=5)
+    time_to_revenue: int = Field(ge=1, le=5)
+    risk: int = Field(ge=1, le=5)    # 5 = lowest risk
+    note: str
+
+    @property
+    def total(self) -> int:
+        return (self.buyer_budget + self.defensibility + self.founder_fit
+                + self.time_to_revenue + self.risk)
+
+
+class VariantJudgment(Strict):
+    opening_id: str
+    scores: list[VariantScore] = Field(min_length=3, max_length=3)
+    winner: Literal["v1", "v2", "v3"]
+    grafted: list[str] = Field(default_factory=list)   # ideas taken from the other variants
+    reasoning: str
+
+    @model_validator(mode="after")
+    def winner_is_scored_and_variants_distinct(self):
+        names = [v.variant for v in self.scores]
+        if sorted(names) != ["v1", "v2", "v3"]:
+            raise ValueError("score each of v1, v2, v3 exactly once")
+        return self
+
+
 # ---------------------------------------------------------------- Phase 4 critics
 
 LENSES = ("market-skeptic", "competitor-analyst", "security-practitioner",
-          "technical-feasibility", "gtm-pricing", "legal-ethics")
+          "technical-feasibility", "gtm-pricing", "legal-ethics",
+          "economic-buyer", "defensibility", "founder-fit")   # last three: decision D19
 Lens = Literal["market-skeptic", "competitor-analyst", "security-practitioner",
-               "technical-feasibility", "gtm-pricing", "legal-ethics"]
+               "technical-feasibility", "gtm-pricing", "legal-ethics",
+               "economic-buyer", "defensibility", "founder-fit"]
 
 
 class Objection(Strict):

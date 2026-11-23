@@ -1,6 +1,6 @@
 export const meta = {
   name: 'critic-panel',
-  description: 'gapfinder Phase 4: six independent critics per concept, one revision, re-critique, go/no-go by code',
+  description: 'gapfinder Phase 4: nine independent critics per concept, one revision, re-critique, go/no-go by code',
   whenToUse: 'Run or re-run the Phase 4 critic panel (docs/ROADMAP.md) over the concepts in ideas/. args.only: one opening id. args.from: "round1" (default), "revise" or "round2" to resume a stage.',
   phases: [
     { title: 'Prepare', detail: 'list concepts and validate them' },
@@ -13,8 +13,10 @@ export const meta = {
 
 // Deterministic steps are `python -m gapfinder ...`; agents follow .claude/agents/critic.md and
 // .claude/agents/concept-writer.md. Each concept moves through its stages independently.
-const LENSES = ['market-skeptic', 'competitor-analyst', 'security-practitioner',
-  'technical-feasibility', 'gtm-pricing', 'legal-ethics']
+// Lenses come from args.lenses or default to all nine (decision D19).
+const LENSES = (args && args.lenses) || ['market-skeptic', 'competitor-analyst',
+  'security-practitioner', 'technical-feasibility', 'gtm-pricing', 'legal-ethics',
+  'economic-buyer', 'defensibility', 'founder-fit']
 const STAGES = ['round1', 'revise', 'round2']
 const from = (args && args.from) || 'round1'
 if (!STAGES.includes(from)) throw new Error(`args.from must be one of ${STAGES.join(', ')}`)

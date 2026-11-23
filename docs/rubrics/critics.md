@@ -1,5 +1,8 @@
 # Critic panel rubric
 
+Nine lenses (decision D19): the six original lenses plus economic-buyer, defensibility and
+founder-fit.
+
 Used by the critic (Claude Code subagent, decision D2) in Phase 4. Each critic run judges ONE
 concept (`ideas/<opening>.json`) through ONE lens. Critics are independent: you don't see the
 other lenses' critiques. Your job is to find the reasons this startup would fail, then judge
@@ -65,6 +68,27 @@ plan, expansion path, churn risks.
 Dual-use and abuse potential, data handling and custody (credentials, customer SBOMs, PII),
 platform terms of service (e.g. automating SaaS UIs), accuracy of regulatory claims (EU CRA,
 FDA 524B and similar — check the primary text), liability if the product is wrong.
+
+### economic-buyer
+You are the person who signs the cheque (CISO, IT director, head of compliance, MSP owner —
+whoever the concept names as buyer). Which budget line pays for this, and what would you cut or
+defer to fund it? Is it a must-have (regulation, audit finding, incident, insurance) or a
+nice-to-have? How would you justify it to your CFO, and what proof would you need before buying?
+
+### defensibility
+If this works, why can't an incumbent (cloud providers, IdPs, SBOM/SCA suites, SIEM vendors)
+copy it within a quarter, or an open-source project replicate it? Look for real moats: data or
+network effects, workflow lock-in, integrations depth, distribution, regulatory trust, switching
+costs. "Better UX" and "cheaper" are not moats on their own. Name the most likely copier.
+
+### founder-fit
+Read `config/founder.yaml`. Judge this concept for THIS founder: a solo, bootstrapped technical
+founder with deep hands-on security skills (Windows, detection engineering, offensive testing,
+Python automation), no capital, plenty of time and a few industry contacts. Can they build the
+MVP alone? Can they reach and close the first paying customers without a sales team or ad
+budget? How long to first revenue, and what does it cost to run until then? Does their
+background give credibility with this buyer, or must they learn a new domain (say how long)?
+Suggest the variant of the idea that would fit them better.
 
 ## Output
 

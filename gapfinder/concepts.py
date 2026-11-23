@@ -160,3 +160,49 @@ def render_all(ideas_dir: Path, only: str | None = None) -> list[tuple[str, list
             (ideas_dir / f"{concept.slug}.md").write_text(render(concept, concept_input))
         results.append((oid, problems))
     return results
+
+
+# ---------------------------------------------------------------- variants (decision D19)
+
+VARIANTS = "variants"
+
+
+def check_file(path: Path, ideas_dir: Path, opening: str) -> list[str]:
+    """Schema + grounding check of any concept file (final concept or a variant)."""
+    concept_input = json.loads((ideas_dir / f"{opening}.input.json").read_text())
+    try:
+        concept = schemas.Concept.model_validate_json(path.read_text())
+    except ValidationError as exc:
+        return [f"schema: {e['loc']}: {e['msg']}" for e in exc.errors()[:5]]
+    return check_grounding(concept, concept_input)
+
+
+def check_variants(ideas_dir: Path, opening: str) -> list[str]:
+    """All three variants valid and genuinely different; judgment valid and consistent."""
+    vdir = ideas_dir / VARIANTS / opening
+    problems, concepts = [], {}
+    for v in ("v1", "v2", "v3"):
+        p = vdir / f"{v}.json"
+        if not p.exists():
+            problems.append(f"{v}: missing")
+            continue
+        errs = check_file(p, ideas_dir, opening)
+        problems += [f"{v}: {e}" for e in errs]
+        if not errs:
+            concepts[v] = schemas.Concept.model_validate_json(p.read_text())
+    if len(concepts) == 3:
+        keys = {v: (c.buyer.role.lower(), c.pricing.model.lower(), c.go_to_market.channel.lower())
+                for v, c in concepts.items()}
+        if len(set(keys.values())) < 3:
+            problems.append("variants must differ in buyer, business model or channel")
+    jp = vdir / "judgment.json"
+    if jp.exists():
+        try:
+            j = schemas.VariantJudgment.model_validate_json(jp.read_text())
+            if j.opening_id != opening:
+                problems.append(f"judgment opening_id {j.opening_id!r} != {opening!r}")
+        except ValidationError as exc:
+            problems += [f"judgment: {e['loc']}: {e['msg']}" for e in exc.errors()[:3]]
+    else:
+        problems.append("judgment.json: missing")
+    return problems

@@ -306,6 +306,17 @@ def cmd_concept_render(args) -> int:
     return 0 if ok and results else 1
 
 
+def cmd_concept_check(args) -> int:
+    from . import concepts
+
+    problems = (concepts.check_variants(args.ideas_dir, args.opening) if args.variants
+                else concepts.check_file(args.path, args.ideas_dir, args.opening))
+    for p in problems:
+        print(f"- {p}")
+    print("ok" if not problems else f"{len(problems)} problem(s)")
+    return 0 if not problems else 1
+
+
 def cmd_critique_check(args) -> int:
     from . import panel
 
@@ -462,6 +473,14 @@ def main(argv: list[str] | None = None) -> int:
     cr.add_argument("--ideas-dir", type=Path, default=ROOT / "ideas")
     cr.add_argument("--only", help="validate/render just this opening id")
     cr.set_defaults(func=cmd_concept_render)
+
+    ck = sub.add_parser("concept-check",
+                        help="validate one concept/variant file, or --variants for an opening")
+    ck.add_argument("--opening", required=True)
+    ck.add_argument("path", type=Path, nargs="?")
+    ck.add_argument("--variants", action="store_true")
+    ck.add_argument("--ideas-dir", type=Path, default=ROOT / "ideas")
+    ck.set_defaults(func=cmd_concept_check)
 
     cc = sub.add_parser("critique-check", help="Phase 4: validate one critique file")
     cc.add_argument("path", type=Path)

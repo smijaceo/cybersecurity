@@ -1,0 +1,80 @@
+{
+  "concept_id": "cross-cloud-workload-identity",
+  "lens": "competitor-analyst",
+  "round": 2,
+  "score": 4,
+  "verdict": "no-go",
+  "summary": "Keybridge was rightly cut to remediation only, but that slot is now taken too. Wiz's Green Agent maps findings to owners via cloud logs and commits, then opens fix PRs or hands off to coding agents. Clutch gives away Federator, Terraform templates for GitHub Actions-to-cloud and cloud-to-cloud federation. GitGuardian sells itself as the migration scoreboard. Self-hosting and lint gates are thin moats.",
+  "objections": [
+    {
+      "objection": "Most dangerous competitor is still Wiz, and its threat is no longer hypothetical. Wiz Code's Green Agent already does Keybridge's two paid steps for findings in general. It maps a cloud finding to its owner by correlating cloud logs, tags, commit history and service catalogs, then 'generates the exact code fix and opens a Pull Request', or passes the plan to a coding agent such as Claude Code. Wiz already sees in-use access keys across AWS and GCP in many target accounts. A key-to-federation fix is therefore a remediation template inside a shipping agent, not a new product. The concept still says Wiz 'stops at the finding'.",
+      "severity": "major",
+      "evidence": "https://www.wiz.io/blog/aspm-ai-era-pt-3-fixing-risk-code-speed ; concept:competitors (Wiz how_we_differ) ; concept:risks"
+    },
+    {
+      "objection": "The IAM half of the paid migration is already free from an NHI vendor. Clutch Security publishes Federator under GPL-3.0, with Terraform templates for CI/CD-to-cloud federation (including GitHub Actions) and cloud-to-cloud IAM federation between AWS, Azure and GCP. These are Keybridge's three supported paths. Clutch's own process ends in a 'Protect' stage where static credentials are migrated to federation. The concept's Clutch row ('sold to enterprises; we do one narrow remediation job') misses that Clutch gives away the templates and owns the remediation story.",
+      "severity": "major",
+      "evidence": "https://github.com/clutchsecurity/federator ; https://nhimg.org/understanding-clutch-security ; concept:competitors (Clutch how_we_differ) ; concept:mvp.features"
+    },
+    {
+      "objection": "The consumer-side change is the new claimed moat (workflow YAML, Kubernetes annotation, credential-config file, removing env vars). Coding agents already produce exactly this kind of change, and Wiz now routes findings to them. Once a buyer has a key finding plus the free Federator templates and the cloud docs, Claude Code or Copilot can write the two-sided PR. The fixed $6,000 fee competes with an afternoon of agent-assisted work, not with five engineer-weeks. The concept's DIY anchor assumes manual work and is not evidenced.",
+      "severity": "major",
+      "evidence": "concept:pricing.rationale ; concept:differentiation ; https://www.wiz.io/blog/aspm-ai-era-pt-3-fixing-risk-code-speed"
+    },
+    {
+      "objection": "The Monitor tier ($150/month for new-key alerts and a progress record) overlaps GitGuardian. GitGuardian markets its NHI Governance platform as the 'migration scoreboard' for moving to AWS outbound federation: it tracks hardcoded and vaulted secrets, rotation, and whether long-lived credentials are retiring. CSPMs already alert on new keys. After the one-off migration, the recurring revenue line has no distinct job.",
+      "severity": "minor",
+      "evidence": "https://blog.gitguardian.com/aws-iam-outbound-identity-federation-with-gitguardian/"
+    },
+    {
+      "objection": "The remaining differentiators are real but small and easy to copy. Running self-hosted in the customer's account, the lint gate (sub/audience/attribute-condition checks plus IAM Access Analyzer validation) and shadow-mode cutover each take incumbents weeks to match, not quarters. A published, fixed mid-market price helps only buyers outside Wiz/Clutch/GitGuardian, and the concept has not sized them.",
+      "severity": "minor",
+      "evidence": "concept:mvp.features ; concept:open_questions"
+    }
+  ],
+  "strongest_point": "The re-scope to self-hosted, in-use-key-only remediation with honest attribution confidence, lint gates and shadow cutover is a real gap below enterprise NHI platforms.",
+  "what_would_change_my_mind": [
+    "Wiz Green Agent and Clutch, tested on a real estate, do not produce a working two-sided federation change for an in-use AWS key or GCP JSON key used by GitHub Actions or EKS.",
+    "In 15 mid-market AWS+GCP companies without Wiz or Clutch, at least 8 still have 10 or more in-use boundary-crossing keys open for more than 3 months after a finding.",
+    "At least 3 of them pay the $6,000 migration after first trying Federator templates or a coding agent themselves.",
+    "Keybridge's attribution resolves at least 70% of in-use keys from default-on logs, where Wiz ownership mapping alone does not identify the consumer."
+  ],
+  "resolved_prior": [
+    {
+      "objection": "Inventory and drift alerts are already free or bundled (Access Analyzer, Prowler, Wiz, GitGuardian).",
+      "resolved": true,
+      "note": "Own discovery dropped; v1 imports existing findings and keeps only in-use boundary-crossing keys. Some overlap remains for the Monitor tier (GitGuardian 'migration scoreboard'), now a minor issue."
+    },
+    {
+      "objection": "The competitor table leaves out the NHI vendors (Clutch, Astrix/Cisco, Entro/SailPoint), which are consolidating into platforms that can add a migration playbook.",
+      "resolved": false,
+      "note": "Clutch and Cyera are now in the table and the bundling risk is named, but this acknowledges the threat rather than answering it. Clutch already ships free Federator templates for Keybridge's paths plus a Protect/migration stage, which the concept misses."
+    },
+    {
+      "objection": "GCP blocks service-account key creation by default; AWS adds friction; clouds are shrinking the problem.",
+      "resolved": true,
+      "note": "Handled honestly: buyer narrowed to GCP organisations created before May 2024 and the shrinking-problem risk is stated. The smaller segment is a sizing concern for the market lens, not a competitor gap."
+    },
+    {
+      "objection": "Most dangerous competitor is Wiz: adding 'generate the federation fix' is one feature for Wiz and the whole product for Keybridge.",
+      "resolved": false,
+      "note": "Worse than in round 1. Wiz's Green Agent now ships ownership mapping from cloud logs and commits, plus fix PRs and coding-agent handoff. 'Complement to Wiz customers' gives no reason for them to pay twice."
+    },
+    {
+      "objection": "Terraform trust-policy PRs are easy to reproduce (HCP Terraform, Teleport, modules, AI assistants); one-off job done in a sprint.",
+      "resolved": false,
+      "note": "Value moved to attribution, consumer-side changes and linting, which is the right move. But Clutch's free Federator covers the IAM side and coding agents cover the consumer side, so the DIY cost the pricing anchors on is overstated."
+    },
+    {
+      "objection": "The open-source credential helper overlaps maintained helpers; Aembit's free tier covers small estates.",
+      "resolved": true,
+      "note": "Helper dropped from v1; v1 uses the clouds' maintained helpers. Aembit's broker model is clearly separated from Keybridge's."
+    }
+  ],
+  "sources": [
+    "https://www.wiz.io/blog/aspm-ai-era-pt-3-fixing-risk-code-speed",
+    "https://blog.gitguardian.com/aws-iam-outbound-identity-federation-with-gitguardian/",
+    "https://nhimg.org/understanding-clutch-security",
+    "https://github.com/clutchsecurity/federator"
+  ]
+}
